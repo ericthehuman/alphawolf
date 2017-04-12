@@ -25,7 +25,7 @@ The first time you do this you'll get a whole bunch of errors because you don't 
 
 ### imports/ui/App.jsx
 
-* the top level UI component. This UI component gets all 
+* the top level UI component. This UI component gets all its data from the monogoDB, which is initially defined in imports/api/data.js. 
 
 ### imports/ui/Tile.jsx
 

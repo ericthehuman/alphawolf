@@ -1,0 +1,100 @@
+/* CSS declarations go here */
+.stylethis {
+	font-size: 13px;
+}
+
+body {
+	margin: auto;
+	width: 33%;
+}
+
+/*title*/
+
+header {
+	font-family: 'Pavanam', sans-serif;
+	margin-top: 0px;
+}
+
+/*info*/ 
+
+.font {
+	font-family: 'Pavanam', sans-serif;
+}
+
+.info {
+	margin-bottom: 10px;
+}
+
+
+/*tile styling*/
+
+.tile {
+	background-color: white;
+	height: 300px;
+	width: 500px;
+	border-radius: 5px;
+	border: 2px solid black;
+	margin-top: 10px;
+	font-family: 'Pavanam', sans-serif;
+}
+
+.inner {
+	margin-left: 20px;
+	margin-top: 20px;
+}
+
+.big {
+	font-family: 'Pavanam', sans-serif;
+	font-size: 70px;
+}
+
+
+/*defining style for radio buttons and submit button*/
+
+.radio {
+	display: inline-block;
+	margin-right: 10px;
+}
+
+.label-for-submit {
+	color: white;
+	font-family: 'Pavanam', sans-serif;
+	background-color: black;
+	width: 100px;
+	display: inline-block;
+	text-align: center;
+	vertical-align: middle;
+	border-radius: 4px;
+	border: 4px solid black;
+}
+
+.label-for-submit:active{
+	background-color: white;
+	border: 4px solid black;
+	color: black;
+}
+
+.label-for-radio {
+	color: black;
+	font-family: 'Pavanam', sans-serif;
+	border: 2px solid black;
+	margin-bottom: 10px;
+	display: inline-block;
+}
+
+#submit {
+	display: none;
+}
+
+.radio-with-label {
+	display: none;
+}
+
+.radio-with-label:checked + .label-for-radio {
+	color: white;
+	background-color: black;
+}
+
+label:hover {
+	cursor: pointer;
+}

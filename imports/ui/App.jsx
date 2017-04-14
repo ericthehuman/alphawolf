@@ -5,8 +5,7 @@ import { createContainer } from 'meteor/react-meteor-data';
 import { Data, Companies } from '../api/data.js';
 import Tile from './Tile.jsx';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend} from 'recharts';
-
-
+import AccountsUIWrapper from './AccountsUIWrapper.jsx';
  
 // App component - represents the whole app
 class App extends Component {
@@ -21,17 +20,17 @@ constructor(props){
   };
 }
 
-  renderData() {
+renderData() {
 
-    //the first thing
-    console.log(this.props.ddata[0]);
-    if(this.props.ddata[0] != undefined){
-      return this.props.ddata[0].content;
-    }
-//    return this.props.ddata.map((n) =>(
-  //    'content:' + n.content
-    //  ));
+  //the first thing
+  console.log(this.props.ddata[0]);
+  if(this.props.ddata[0] != undefined){
+    return this.props.ddata[0].content;
   }
+//    return this.props.ddata.map((n) =>(
+//    'content:' + n.content
+  //  ));
+}
 
 handleOptionChange(changeEvent) {
   this.setState({
@@ -46,6 +45,7 @@ handleSubmit(event){
   this.setState({
     submitted: true,
   });
+  var test = "world";
   Meteor.call('getData', this.state.selected, function(error, result){
     if(error){
       console.log(error);
@@ -58,29 +58,29 @@ handleSubmit(event){
       var ave_ret_rounded = cum_return.toFixed(4);
       console.log(cum_return.toFixed(4));
       console.log(ave_ret_rounded);
-
-      Data.update(1, {$set: {content: JSON.stringify(ave_ret_rounded)}});
+      test = "hello";
+      Data.update(0, {$set: {content: JSON.stringify(ave_ret_rounded)}});
     }
   })
-
 }
 //we can populate the radio button selection with a function later
 
   render() {
     var graphData = [
-      {name: 'Page A', uv: 4000, pv: 2400, amt: 2400},
-      {name: 'Page B', uv: 3000, pv: 1398, amt: 2210},
-      {name: 'Page C', uv: 2000, pv: 9800, amt: 2290},
-      {name: 'Page D', uv: 2780, pv: 3908, amt: 2000},
-      {name: 'Page E', uv: 1890, pv: 4800, amt: 2181},
-      {name: 'Page F', uv: 2390, pv: 3800, amt: 2500},
-      {name: 'Page G', uv: 3490, pv: 4300, amt: 2100},
+      {name: 'Page A', cm: 4000, am: 2400, amt: 2400},
+      {name: 'Page B', cm: 3000, am: 1398, amt: 2210},
+      {name: 'Page C', cm: 2000, am: 9800, amt: 2290},
+      {name: 'Page D', cm: 2780, am: 3908, amt: 2000},
+      {name: 'Page E', cm: 1890, am: 4800, amt: 2181},
+      {name: 'Page F', cm: 2390, am: 3800, amt: 2500},
+      {name: 'Page G', cm: 3490, am: 4300, amt: 2100},
 ];
     return (
       <div className="container">
         <header>
           <h1>cubs of wall street</h1>
         </header>
+        <AccountsUIWrapper />
         <div className="info font">
           Choose a company from the list below to look at relevant statistics
         </div> 
@@ -113,8 +113,6 @@ handleSubmit(event){
         <label className="label-for-submit" htmlFor="submit">Go</label>
         </form>
          <Tile someData={this.renderData()}/>
-
-
       <LineChart width={600} height={300} data={graphData}
             margin={{top: 5, right: 30, left: 20, bottom: 5}}>
        <XAxis dataKey="name"/>
@@ -122,19 +120,12 @@ handleSubmit(event){
        <CartesianGrid strokeDasharray="3 3"/>
        <Tooltip/>
        <Legend />
-       <Line type="monotone" dataKey="pv" stroke="#8884d8" activeDot={{r: 8}}/>
-       <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
+       <Line type="monotone" dataKey="am" stroke="#8884d8" activeDot={{r: 8}}/>
+       <Line type="monotone" dataKey="cm" stroke="#82ca9d" />
       </LineChart>
 
 
       </div>
-
-
-
-
-
-
-    
     );
   }
 }
@@ -150,4 +141,3 @@ export default createContainer(() => {
     comps: Companies.find({}).fetch()
   };
 }, App);
-

@@ -9,14 +9,14 @@ import { Companies} from '../api/data.js';
 export default class Tile extends Component {
 	render() {
 		return (
-			<div className="tile"> 
-				<div className="inner">
+			<div> 
+				<div>
 				AVERAGE RETURN
-					<div className="big">
+					<div>
 						{this.props.someData} 
 					</div>	
 				CUMULATIVE RETURN
-					<div className="big">
+					<div>
 					</div>
 				</div>
 			</div>

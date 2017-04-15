@@ -43,3 +43,12 @@ Template.login.events({
         Meteor.loginWithPassword(email, password);
     }
 });
+
+// logout event handler
+Template.navigation.events({
+    'click .logout': function(event){
+        event.preventDefault();
+        Meteor.logout();
+        Router.go('login');
+    }
+});

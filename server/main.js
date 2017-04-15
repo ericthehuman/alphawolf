@@ -5,6 +5,7 @@ import '../imports/api/data.js';
 import { Data } from '../imports/api/data.js';
 
 //stuff happening on the server side ... 
+Router.route('/register');
 
 Meteor.startup(() => {
   // code to run on server at startup

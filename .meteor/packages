@@ -25,3 +25,4 @@ react-meteor-data
 session
 accounts-ui
 accounts-password
+iron:router

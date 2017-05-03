@@ -63,8 +63,11 @@ class App extends Component {
             }
         });
 
+        // select company code of the selected radio button
+        var companyID = this.state.selected;
+        console.log("Returning articles on "+companyID);
         Meteor.http.call('GET',
-            'https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=591e19bb7d974693b30e645f3288102d&q=MSFT',
+            'https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=591e19bb7d974693b30e645f3288102d&q='+companyID,
             function (error,result) {
             if (error) {
                 console.log(error);

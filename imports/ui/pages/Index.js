@@ -1,5 +1,6 @@
 import React from 'react';
 import { Jumbotron } from 'react-bootstrap';
+import Chart from '../../ui/App.jsx';
 
 const Index = () => (
   <div className="Index">
@@ -9,6 +10,7 @@ const Index = () => (
       <p><a className="btn btn-success" href="https://themeteorchef.com/base" role="button">Read the Documentation</a></p>
       <p style={ { fontSize: '16px', color: '#aaa' } }>Currently at v4.15.0</p>
     </Jumbotron>
+    <Chart />
   </div>
 );
 

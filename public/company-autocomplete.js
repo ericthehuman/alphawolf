@@ -1,9581 +1,5395 @@
 $('#magicsuggest').magicSuggest({
-  data: [
-    {
-      'id': 0,
-      'name': '1347 Property Insurance Holdings (PIH)'
-    }, {
-      'id': 1,
-      'name': '180 Degree Capital Corp. (TURN)'
-    }, {
-      'id': 2,
-      'name': '1-800 FLOWERS.COM (FLWS)'
-    }, {
-      'id': 3,
-      'name': '1st Constitution Bancorp (NJ) (FCCY)'
-    }, {
-      'id': 4,
-      'name': '1st Source Corporation (SRCE)'
-    }, {
-      'id': 5,
-      'name': '21Vianet Group (VNET)'
-    }, {
-      'id': 6,
-      'name': '2U (TWOU)'
-    }, {
-      'id': 7,
-      'name': '51job (JOBS)'
-    }, {
-      'id': 8,
-      'name': '8point3 Energy Partners LP (CAFD)'
-    }, {
-      'id': 9,
-      'name': '8x8 Inc (EGHT)'
-    }, {
-      'id': 10,
-      'name': 'A V Homes (AVHI)'
-    }, {
-      'id': 11,
-      'name': 'A. Schulman (SHLM)'
-    }, {
-      'id': 12,
-      'name': 'AAON (AAON)'
-    }, {
-      'id': 13,
-      'name': 'ABAXIS (ABAX)'
-    }, {
-      'id': 14,
-      'name': 'Abeona Therapeutics Inc. (ABEO)'
-    }, {
-      'id': 15,
-      'name': 'Abeona Therapeutics Inc. (ABEOW)'
-    }, {
-      'id': 16,
-      'name': 'Ability Inc. (ABIL)'
-    }, {
-      'id': 17,
-      'name': 'ABIOMED (ABMD)'
-    }, {
-      'id': 18,
-      'name': 'Abraxas Petroleum Corporation (AXAS)'
-    }, {
-      'id': 19,
-      'name': 'AC Immune SA (ACIU)'
-    }, {
-      'id': 20,
-      'name': 'Acacia Communications (ACIA)'
-    }, {
-      'id': 21,
-      'name': 'Acacia Research Corporation (ACTG)'
-    }, {
-      'id': 22,
-      'name': 'Acadia Healthcare Company (ACHC)'
-    }, {
-      'id': 23,
-      'name': 'ACADIA Pharmaceuticals Inc. (ACAD)'
-    }, {
-      'id': 24,
-      'name': 'Acasti Pharma (ACST)'
-    }, {
-      'id': 25,
-      'name': 'Accelerate Diagnostics (AXDX)'
-    }, {
-      'id': 26,
-      'name': 'Accelerated Pharma (ACCP)'
-    }, {
-      'id': 27,
-      'name': 'Acceleron Pharma Inc. (XLRN)'
-    }, {
-      'id': 28,
-      'name': 'Access National Corporation (ANCX)'
-    }, {
-      'id': 29,
-      'name': 'Accuray Incorporated (ARAY)'
-    }, {
-      'id': 30,
-      'name': 'AcelRx Pharmaceuticals (ACRX)'
-    }, {
-      'id': 31,
-      'name': 'Aceto Corporation (ACET)'
-    }, {
-      'id': 32,
-      'name': 'Achaogen (AKAO)'
-    }, {
-      'id': 33,
-      'name': 'Achillion Pharmaceuticals (ACHN)'
-    }, {
-      'id': 34,
-      'name': 'ACI Worldwide (ACIW)'
-    }, {
-      'id': 35,
-      'name': 'Aclaris Therapeutics (ACRS)'
-    }, {
-      'id': 36,
-      'name': 'ACNB Corporation (ACNB)'
-    }, {
-      'id': 37,
-      'name': 'Acorda Therapeutics (ACOR)'
-    }, {
-      'id': 38,
-      'name': 'Active Alts Contrarian ETF (SQZZ)'
-    }, {
-      'id': 39,
-      'name': 'Activision Blizzard (ATVI)'
-    }, {
-      'id': 40,
-      'name': 'Actua Corporation (ACTA)'
-    }, {
-      'id': 41,
-      'name': 'Acxiom Corporation (ACXM)'
-    }, {
-      'id': 42,
-      'name': 'Adamas Pharmaceuticals (ADMS)'
-    }, {
-      'id': 43,
-      'name': 'Adamis Pharmaceuticals Corporation (ADMP)'
-    }, {
-      'id': 44,
-      'name': 'Adaptimmune Therapeutics plc (ADAP)'
-    }, {
-      'id': 45,
-      'name': 'Addus HomeCare Corporation (ADUS)'
-    }, {
-      'id': 46,
-      'name': 'ADDvantage Technologies Group (AEY)'
-    }, {
-      'id': 47,
-      'name': 'Adesto Technologies Corporation (IOTS)'
-    }, {
-      'id': 48,
-      'name': 'ADMA Biologics Inc (ADMA)'
-    }, {
-      'id': 49,
-      'name': 'Adobe Systems Incorporated (ADBE)'
-    }, {
-      'id': 50,
-      'name': 'ADTRAN (ADTN)'
-    }, {
-      'id': 51,
-      'name': 'Aduro Biotech (ADRO)'
-    }, {
-      'id': 52,
-      'name': 'Advanced Accelerator Applications S.A. (AAAP)'
-    }, {
-      'id': 53,
-      'name': 'Advanced Emissions Solutions (ADES)'
-    }, {
-      'id': 54,
-      'name': 'Advanced Energy Industries (AEIS)'
-    }, {
-      'id': 55,
-      'name': 'Advanced Micro Devices (AMD)'
-    }, {
-      'id': 56,
-      'name': 'Advaxis (ADXS)'
-    }, {
-      'id': 57,
-      'name': 'Advaxis (ADXSW)'
-    }, {
-      'id': 58,
-      'name': 'Adverum Biotechnologies (ADVM)'
-    }, {
-      'id': 59,
-      'name': 'AdvisorShares Market Adaptive Unconstrained Income ETF (MAUI)'
-    }, {
-      'id': 60,
-      'name': 'Aegion Corp (AEGN)'
-    }, {
-      'id': 61,
-      'name': 'Aeglea BioTherapeutics (AGLE)'
-    }, {
-      'id': 62,
-      'name': 'Aehr Test Systems (AEHR)'
-    }, {
-      'id': 63,
-      'name': 'Aemetis (AMTX)'
-    }, {
-      'id': 64,
-      'name': 'Aerie Pharmaceuticals (AERI)'
-    }, {
-      'id': 65,
-      'name': 'AeroVironment (AVAV)'
-    }, {
-      'id': 66,
-      'name': 'AEterna Zentaris Inc. (AEZS)'
-    }, {
-      'id': 67,
-      'name': 'Aethlon Medical (AEMD)'
-    }, {
-      'id': 68,
-      'name': 'Aevi Genomic Medicine (GNMX)'
-    }, {
-      'id': 69,
-      'name': 'Affimed N.V. (AFMD)'
-    }, {
-      'id': 70,
-      'name': 'Agenus Inc. (AGEN)'
-    }, {
-      'id': 71,
-      'name': 'Agile Therapeutics (AGRX)'
-    }, {
-      'id': 72,
-      'name': 'Agilysys (AGYS)'
-    }, {
-      'id': 73,
-      'name': 'Agios Pharmaceuticals (AGIO)'
-    }, {
-      'id': 74,
-      'name': 'AGNC Investment Corp. (AGNC)'
-    }, {
-      'id': 75,
-      'name': 'AGNC Investment Corp. (AGNCB)'
-    }, {
-      'id': 76,
-      'name': 'AGNC Investment Corp. (AGNCP)'
-    }, {
-      'id': 77,
-      'name': 'AgroFresh Solutions (AGFS)'
-    }, {
-      'id': 78,
-      'name': 'AgroFresh Solutions (AGFSW)'
-    }, {
-      'id': 79,
-      'name': 'Aimmune Therapeutics (AIMT)'
-    }, {
-      'id': 80,
-      'name': 'Air Methods Corporation (AIRM)'
-    }, {
-      'id': 81,
-      'name': 'Air T (AIRT)'
-    }, {
-      'id': 82,
-      'name': 'Air Transport Services Group (ATSG)'
-    }, {
-      'id': 83,
-      'name': 'Airgain (AIRG)'
-    }, {
-      'id': 84,
-      'name': 'AirMedia Group Inc (AMCN)'
-    }, {
-      'id': 85,
-      'name': 'Akamai Technologies (AKAM)'
-    }, {
-      'id': 86,
-      'name': 'Akari Therapeutics Plc (AKTX)'
-    }, {
-      'id': 87,
-      'name': 'Akebia Therapeutics (AKBA)'
-    }, {
-      'id': 88,
-      'name': 'Akers Biosciences Inc (AKER)'
-    }, {
-      'id': 89,
-      'name': 'Akorn (AKRX)'
-    }, {
-      'id': 90,
-      'name': 'Akoustis Technologies (AKTS)'
-    }, {
-      'id': 91,
-      'name': 'Alarm.com Holdings (ALRM)'
-    }, {
-      'id': 92,
-      'name': 'Alaska Communications Systems Group (ALSK)'
-    }, {
-      'id': 93,
-      'name': 'Albany Molecular Research (AMRI)'
-    }, {
-      'id': 94,
-      'name': 'Albireo Pharma (ALBO)'
-    }, {
-      'id': 95,
-      'name': 'Alcentra Capital Corp. (ABDC)'
-    }, {
-      'id': 96,
-      'name': 'Alcobra Ltd. (ADHD)'
-    }, {
-      'id': 97,
-      'name': 'Alder BioPharmaceuticals (ALDR)'
-    }, {
-      'id': 98,
-      'name': 'Aldeyra Therapeutics (ALDX)'
-    }, {
-      'id': 99,
-      'name': 'Alexion Pharmaceuticals (ALXN)'
-    }, {
-      'id': 100,
-      'name': 'Alico (ALCO)'
-    }, {
-      'id': 101,
-      'name': 'Align Technology (ALGN)'
-    }, {
-      'id': 102,
-      'name': 'Alimera Sciences (ALIM)'
-    }, {
-      'id': 103,
-      'name': 'ALJ Regional Holdings (ALJJ)'
-    }, {
-      'id': 104,
-      'name': 'Alkermes plc (ALKS)'
-    }, {
-      'id': 105,
-      'name': 'Allegiance Bancshares (ABTX)'
-    }, {
-      'id': 106,
-      'name': 'Allegiant Travel Company (ALGT)'
-    }, {
-      'id': 107,
-      'name': 'Alliance HealthCare Services (AIQ)'
-    }, {
-      'id': 108,
-      'name': 'Alliance Holdings GP (AHGP)'
-    }, {
-      'id': 109,
-      'name': 'Alliance MMA (AMMA)'
-    }, {
-      'id': 110,
-      'name': 'Alliance Resource Partners (ARLP)'
-    }, {
-      'id': 111,
-      'name': 'Allied Healthcare Products (AHPI)'
-    }, {
-      'id': 112,
-      'name': 'Allied Motion Technologies (AMOT)'
-    }, {
-      'id': 113,
-      'name': 'Alliqua BioMedical (ALQA)'
-    }, {
-      'id': 114,
-      'name': 'Allot Communications Ltd. (ALLT)'
-    }, {
-      'id': 115,
-      'name': 'Allscripts Healthcare Solutions (MDRX)'
-    }, {
-      'id': 116,
-      'name': 'Almost Family Inc (AFAM)'
-    }, {
-      'id': 117,
-      'name': 'Alnylam Pharmaceuticals (ALNY)'
-    }, {
-      'id': 118,
-      'name': 'Alpha and Omega Semiconductor Limited (AOSL)'
-    }, {
-      'id': 119,
-      'name': 'Alphabet Inc. (GOOG)'
-    }, {
-      'id': 120,
-      'name': 'Alphabet Inc. (GOOGL)'
-    }, {
-      'id': 121,
-      'name': 'AlphaMark Actively Managed Small Cap ETF (SMCP)'
-    }, {
-      'id': 122,
-      'name': 'Alphatec Holdings (ATEC)'
-    }, {
-      'id': 123,
-      'name': 'ALPS/Dorsey Wright Sector Momentum ETF (SWIN)'
-    }, {
-      'id': 124,
-      'name': 'Altisource Portfolio Solutions S.A. (ASPS)'
-    }, {
-      'id': 125,
-      'name': 'Altra Industrial Motion Corp. (AIMC)'
-    }, {
-      'id': 126,
-      'name': 'AMAG Pharmaceuticals (AMAG)'
-    }, {
-      'id': 127,
-      'name': 'Amarin Corporation plc (AMRN)'
-    }, {
-      'id': 128,
-      'name': 'A-Mark Precious Metals (AMRK)'
-    }, {
-      'id': 129,
-      'name': 'Amaya Inc. (AYA)'
-    }, {
-      'id': 130,
-      'name': 'Amazon.com (AMZN)'
-    }, {
-      'id': 131,
-      'name': 'Ambac Financial Group (AMBC)'
-    }, {
-      'id': 132,
-      'name': 'Ambac Financial Group (AMBCW)'
-    }, {
-      'id': 133,
-      'name': 'Ambarella (AMBA)'
-    }, {
-      'id': 134,
-      'name': 'AMC Networks Inc. (AMCX)'
-    }, {
-      'id': 135,
-      'name': 'Amdocs Limited (DOX)'
-    }, {
-      'id': 136,
-      'name': 'Amedica Corporation (AMDA)'
-    }, {
-      'id': 137,
-      'name': 'Amedisys Inc (AMED)'
-    }, {
-      'id': 138,
-      'name': 'Amerco (UHAL)'
-    }, {
-      'id': 139,
-      'name': 'America First Multifamily Investors (ATAX)'
-    }, {
-      'id': 140,
-      'name': 'America Movil (AMOV)'
-    }, {
-      'id': 141,
-      'name': 'American Airlines Group (AAL)'
-    }, {
-      'id': 142,
-      'name': 'American Capital Senior Floating (ACSF)'
-    }, {
-      'id': 143,
-      'name': 'American Electric Technologies (AETI)'
-    }, {
-      'id': 144,
-      'name': 'American National Bankshares (AMNB)'
-    }, {
-      'id': 145,
-      'name': 'American National Insurance Company (ANAT)'
-    }, {
-      'id': 146,
-      'name': 'American Outdoor Brands Corporation (AOBC)'
-    }, {
-      'id': 147,
-      'name': 'American Public Education (APEI)'
-    }, {
-      'id': 148,
-      'name': 'American Railcar Industries (ARII)'
-    }, {
-      'id': 149,
-      'name': 'American River Bankshares (AMRB)'
-    }, {
-      'id': 150,
-      'name': 'American Software (AMSWA)'
-    }, {
-      'id': 151,
-      'name': 'American Superconductor Corporation (AMSC)'
-    }, {
-      'id': 152,
-      'name': 'American Woodmark Corporation (AMWD)'
-    }, {
-      'id': 153,
-      'name': 'America&#39;s Car-Mart (CRMT)'
-    }, {
-      'id': 154,
-      'name': 'Ameris Bancorp (ABCB)'
-    }, {
-      'id': 155,
-      'name': 'AMERISAFE (AMSF)'
-    }, {
-      'id': 156,
-      'name': 'AmeriServ Financial Inc. (ASRV)'
-    }, {
-      'id': 157,
-      'name': 'AmeriServ Financial Inc. (ASRVP)'
-    }, {
-      'id': 158,
-      'name': 'Ames National Corporation (ATLO)'
-    }, {
-      'id': 159,
-      'name': 'Amgen Inc. (AMGN)'
-    }, {
-      'id': 160,
-      'name': 'Amicus Therapeutics (FOLD)'
-    }, {
-      'id': 161,
-      'name': 'Amkor Technology (AMKR)'
-    }, {
-      'id': 162,
-      'name': 'Amphastar Pharmaceuticals (AMPH)'
-    }, {
-      'id': 163,
-      'name': 'Amplify Online Retail ETF (IBUY)'
-    }, {
-      'id': 164,
-      'name': 'Amtech Systems (ASYS)'
-    }, {
-      'id': 165,
-      'name': 'AmTrust Financial Services (AFSI)'
-    }, {
-      'id': 166,
-      'name': 'Amyris (AMRS)'
-    }, {
-      'id': 167,
-      'name': 'Analog Devices (ADI)'
-    }, {
-      'id': 168,
-      'name': 'Analogic Corporation (ALOG)'
-    }, {
-      'id': 169,
-      'name': 'AnaptysBio (ANAB)'
-    }, {
-      'id': 170,
-      'name': 'Anavex Life Sciences Corp. (AVXL)'
-    }, {
-      'id': 171,
-      'name': 'Anchor Bancorp (ANCB)'
-    }, {
-      'id': 172,
-      'name': 'Andina Acquisition Corp. II (ANDA)'
-    }, {
-      'id': 173,
-      'name': 'Andina Acquisition Corp. II (ANDAR)'
-    }, {
-      'id': 174,
-      'name': 'Andina Acquisition Corp. II (ANDAU)'
-    }, {
-      'id': 175,
-      'name': 'Andina Acquisition Corp. II (ANDAW)'
-    }, {
-      'id': 176,
-      'name': 'Angie&#39;s List (ANGI)'
-    }, {
-      'id': 177,
-      'name': 'AngioDynamics (ANGO)'
-    }, {
-      'id': 178,
-      'name': 'ANI Pharmaceuticals (ANIP)'
-    }, {
-      'id': 179,
-      'name': 'Anika Therapeutics Inc. (ANIK)'
-    }, {
-      'id': 180,
-      'name': 'ANSYS (ANSS)'
-    }, {
-      'id': 181,
-      'name': 'Antares Pharma (ATRS)'
-    }, {
-      'id': 182,
-      'name': 'Anthera Pharmaceuticals (ANTH)'
-    }, {
-      'id': 183,
-      'name': 'Aoxin Tianli Group (ABAC)'
-    }, {
-      'id': 184,
-      'name': 'Apogee Enterprises (APOG)'
-    }, {
-      'id': 185,
-      'name': 'Apollo Endosurgery (APEN)'
-    }, {
-      'id': 186,
-      'name': 'Apollo Investment Corporation (AINV)'
-    }, {
-      'id': 187,
-      'name': 'Apollo Medical Holdings (AMEH)'
-    }, {
-      'id': 188,
-      'name': 'AppFolio (APPF)'
-    }, {
-      'id': 189,
-      'name': 'Apple Inc. (AAPL)'
-    }, {
-      'id': 190,
-      'name': 'Appliance Recycling Centers of America (ARCI)'
-    }, {
-      'id': 191,
-      'name': 'Applied DNA Sciences Inc (APDN)'
-    }, {
-      'id': 192,
-      'name': 'Applied DNA Sciences Inc (APDNW)'
-    }, {
-      'id': 193,
-      'name': 'Applied Genetic Technologies Corporation (AGTC)'
-    }, {
-      'id': 194,
-      'name': 'Applied Materials (AMAT)'
-    }, {
-      'id': 195,
-      'name': 'Applied Optoelectronics (AAOI)'
-    }, {
-      'id': 196,
-      'name': 'Approach Resources Inc. (AREX)'
-    }, {
-      'id': 197,
-      'name': 'Apptio (APTI)'
-    }, {
-      'id': 198,
-      'name': 'Apricus Biosciences (APRI)'
-    }, {
-      'id': 199,
-      'name': 'Aptevo Therapeutics Inc. (APVO)'
-    }, {
-      'id': 200,
-      'name': 'Aptose Biosciences (APTO)'
-    }, {
-      'id': 201,
-      'name': 'Aqua Metals (AQMS)'
-    }, {
-      'id': 202,
-      'name': 'AquaBounty Technologies (AQB)'
-    }, {
-      'id': 203,
-      'name': 'Aquinox Pharmaceuticals (AQXP)'
-    }, {
-      'id': 204,
-      'name': 'Aradigm Corporation (ARDM)'
-    }, {
-      'id': 205,
-      'name': 'Aralez Pharmaceuticals Inc. (ARLZ)'
-    }, {
-      'id': 206,
-      'name': 'Aratana Therapeutics (PETX)'
-    }, {
-      'id': 207,
-      'name': 'Arbutus Biopharma Corporation (ABUS)'
-    }, {
-      'id': 208,
-      'name': 'ARC Group Worldwide (ARCW)'
-    }, {
-      'id': 209,
-      'name': 'ARCA biopharma (ABIO)'
-    }, {
-      'id': 210,
-      'name': 'Arcadia Biosciences (RKDA)'
-    }, {
-      'id': 211,
-      'name': 'ArcBest Corporation (ARCB)'
-    }, {
-      'id': 212,
-      'name': 'Arch Capital Group Ltd. (ACGL)'
-    }, {
-      'id': 213,
-      'name': 'Arch Capital Group Ltd. (ACGLP)'
-    }, {
-      'id': 214,
-      'name': 'Archrock Partners (APLP)'
-    }, {
-      'id': 215,
-      'name': 'Ardelyx (ARDX)'
-    }, {
-      'id': 216,
-      'name': 'Arena Pharmaceuticals (ARNA)'
-    }, {
-      'id': 217,
-      'name': 'Ares Capital Corporation (ARCC)'
-    }, {
-      'id': 218,
-      'name': 'Argo Group International Holdings (AGII)'
-    }, {
-      'id': 219,
-      'name': 'Argo Group International Holdings (AGIIL)'
-    }, {
-      'id': 220,
-      'name': 'Argos Therapeutics (ARGS)'
-    }, {
-      'id': 221,
-      'name': 'ARI Network Services (ARIS)'
-    }, {
-      'id': 222,
-      'name': 'Ark Restaurants Corp. (ARKR)'
-    }, {
-      'id': 223,
-      'name': 'Arotech Corporation (ARTX)'
-    }, {
-      'id': 224,
-      'name': 'ArQule (ARQL)'
-    }, {
-      'id': 225,
-      'name': 'Array BioPharma Inc. (ARRY)'
-    }, {
-      'id': 226,
-      'name': 'ARRIS International plc (ARRS)'
-    }, {
-      'id': 227,
-      'name': 'Arrow DWA Tactical ETF (DWAT)'
-    }, {
-      'id': 228,
-      'name': 'Arrow Financial Corporation (AROW)'
-    }, {
-      'id': 229,
-      'name': 'Arrowhead Pharmaceuticals (ARWR)'
-    }, {
-      'id': 230,
-      'name': 'Artesian Resources Corporation (ARTNA)'
-    }, {
-      'id': 231,
-      'name': 'Art&#39;s-Way Manufacturing Co. (ARTW)'
-    }, {
-      'id': 232,
-      'name': 'ASB Bancorp (ASBB)'
-    }, {
-      'id': 233,
-      'name': 'Ascena Retail Group (ASNA)'
-    }, {
-      'id': 234,
-      'name': 'Ascendis Pharma A/S (ASND)'
-    }, {
-      'id': 235,
-      'name': 'Ascent Capital Group (ASCMA)'
-    }, {
-      'id': 236,
-      'name': 'Asia Pacific Wire & Cable Corporation Limited (APWC)'
-    }, {
-      'id': 237,
-      'name': 'ASML Holding N.V. (ASML)'
-    }, {
-      'id': 238,
-      'name': 'Aspen Technology (AZPN)'
-    }, {
-      'id': 239,
-      'name': 'Assembly Biosciences (ASMB)'
-    }, {
-      'id': 240,
-      'name': 'Asta Funding (ASFI)'
-    }, {
-      'id': 241,
-      'name': 'Astec Industries (ASTE)'
-    }, {
-      'id': 242,
-      'name': 'Astronics Corporation (ATRO)'
-    }, {
-      'id': 243,
-      'name': 'AstroNova (ALOT)'
-    }, {
-      'id': 244,
-      'name': 'Astrotech Corporation (ASTC)'
-    }, {
-      'id': 245,
-      'name': 'Asure Software Inc (ASUR)'
-    }, {
-      'id': 246,
-      'name': 'ATA Inc. (ATAI)'
-    }, {
-      'id': 247,
-      'name': 'Atara Biotherapeutics (ATRA)'
-    }, {
-      'id': 248,
-      'name': 'athenahealth (ATHN)'
-    }, {
-      'id': 249,
-      'name': 'Athersys (ATHX)'
-    }, {
-      'id': 250,
-      'name': 'Atlantic Alliance Partnership Corp. (AAPC)'
-    }, {
-      'id': 251,
-      'name': 'Atlantic American Corporation (AAME)'
-    }, {
-      'id': 252,
-      'name': 'Atlantic Capital Bancshares (ACBI)'
-    }, {
-      'id': 253,
-      'name': 'Atlantic Coast Financial Corporation (ACFC)'
-    }, {
-      'id': 254,
-      'name': 'Atlantica Yield plc (ABY)'
-    }, {
-      'id': 255,
-      'name': 'Atlanticus Holdings Corporation (ATLC)'
-    }, {
-      'id': 256,
-      'name': 'Atlas Air Worldwide Holdings (AAWW)'
-    }, {
-      'id': 257,
-      'name': 'Atlas Financial Holdings (AFH)'
-    }, {
-      'id': 258,
-      'name': 'Atlassian Corporation Plc (TEAM)'
-    }, {
-      'id': 259,
-      'name': 'ATN International (ATNI)'
-    }, {
-      'id': 260,
-      'name': 'Atomera Incorporated (ATOM)'
-    }, {
-      'id': 261,
-      'name': 'Atossa Genetics Inc. (ATOS)'
-    }, {
-      'id': 262,
-      'name': 'AtriCure (ATRC)'
-    }, {
-      'id': 263,
-      'name': 'Atrion Corporation (ATRI)'
-    }, {
-      'id': 264,
-      'name': 'Attunity Ltd. (ATTU)'
-    }, {
-      'id': 265,
-      'name': 'aTyr Pharma (LIFE)'
-    }, {
-      'id': 266,
-      'name': 'Auburn National Bancorporation (AUBN)'
-    }, {
-      'id': 267,
-      'name': 'Audentes Therapeutics (BOLD)'
-    }, {
-      'id': 268,
-      'name': 'AudioCodes Ltd. (AUDC)'
-    }, {
-      'id': 269,
-      'name': 'Aurinia Pharmaceuticals Inc (AUPH)'
-    }, {
-      'id': 270,
-      'name': 'Auris Medical Holding AG (EARS)'
-    }, {
-      'id': 271,
-      'name': 'Autobytel Inc. (ABTL)'
-    }, {
-      'id': 272,
-      'name': 'Autodesk (ADSK)'
-    }, {
-      'id': 273,
-      'name': 'Automatic Data Processing (ADP)'
-    }, {
-      'id': 274,
-      'name': 'Avadel Pharmaceuticals plc (AVDL)'
-    }, {
-      'id': 275,
-      'name': 'AVEO Pharmaceuticals (AVEO)'
-    }, {
-      'id': 276,
-      'name': 'AveXis (AVXS)'
-    }, {
-      'id': 277,
-      'name': 'Aviat Networks (AVNW)'
-    }, {
-      'id': 278,
-      'name': 'Avid Technology (AVID)'
-    }, {
-      'id': 279,
-      'name': 'Avinger (AVGR)'
-    }, {
-      'id': 280,
-      'name': 'Aviragen Therapeutics (AVIR)'
-    }, {
-      'id': 281,
-      'name': 'Avis Budget Group (CAR)'
-    }, {
-      'id': 282,
-      'name': 'Avista Healthcare Public Acquisition Corp. (AHPA)'
-    }, {
-      'id': 283,
-      'name': 'Avista Healthcare Public Acquisition Corp. (AHPAU)'
-    }, {
-      'id': 284,
-      'name': 'Avista Healthcare Public Acquisition Corp. (AHPAW)'
-    }, {
-      'id': 285,
-      'name': 'Aware (AWRE)'
-    }, {
-      'id': 286,
-      'name': 'Axar Acquisition Corp. (AXAR)'
-    }, {
-      'id': 287,
-      'name': 'Axar Acquisition Corp. (AXARU)'
-    }, {
-      'id': 288,
-      'name': 'Axar Acquisition Corp. (AXARW)'
-    }, {
-      'id': 289,
-      'name': 'Axcelis Technologies (ACLS)'
-    }, {
-      'id': 290,
-      'name': 'AxoGen (AXGN)'
-    }, {
-      'id': 291,
-      'name': 'Axon Enterprise (AAXN)'
-    }, {
-      'id': 292,
-      'name': 'Axsome Therapeutics (AXSM)'
-    }, {
-      'id': 293,
-      'name': 'AXT Inc (AXTI)'
-    }, {
-      'id': 294,
-      'name': 'AzurRx BioPharma (AZRX)'
-    }, {
-      'id': 295,
-      'name': 'B Communications Ltd. (BCOM)'
-    }, {
-      'id': 296,
-      'name': 'B. Riley Financial (RILY)'
-    }, {
-      'id': 297,
-      'name': 'B. Riley Financial (RILYL)'
-    }, {
-      'id': 298,
-      'name': 'B.O.S. Better Online Solutions (BOSC)'
-    }, {
-      'id': 299,
-      'name': 'B/E Aerospace (BEAV)'
-    }, {
-      'id': 300,
-      'name': 'Baidu (BIDU)'
-    }, {
-      'id': 301,
-      'name': 'Balchem Corporation (BCPC)'
-    }, {
-      'id': 302,
-      'name': 'Baldwin & Lyons (BWINA)'
-    }, {
-      'id': 303,
-      'name': 'Baldwin & Lyons (BWINB)'
-    }, {
-      'id': 304,
-      'name': 'Ballard Power Systems (BLDP)'
-    }, {
-      'id': 305,
-      'name': 'BancFirst Corporation (BANF)'
-    }, {
-      'id': 306,
-      'name': 'BancFirst Corporation (BANFP)'
-    }, {
-      'id': 307,
-      'name': 'Bancorp 34 (BCTF)'
-    }, {
-      'id': 308,
-      'name': 'Bank Mutual Corporation (BKMU)'
-    }, {
-      'id': 309,
-      'name': 'Bank of Commerce Holdings (CA) (BOCH)'
-    }, {
-      'id': 310,
-      'name': 'Bank of Marin Bancorp (BMRC)'
-    }, {
-      'id': 311,
-      'name': 'Bank Of Montreal (BMLP)'
-    }, {
-      'id': 312,
-      'name': 'Bank of South Carolina Corp. (BKSC)'
-    }, {
-      'id': 313,
-      'name': 'Bank of the James Financial Group (BOTJ)'
-    }, {
-      'id': 314,
-      'name': 'Bank of the Ozarks (OZRK)'
-    }, {
-      'id': 315,
-      'name': 'BankFinancial Corporation (BFIN)'
-    }, {
-      'id': 316,
-      'name': 'Bankwell Financial Group (BWFG)'
-    }, {
-      'id': 317,
-      'name': 'Banner Corporation (BANR)'
-    }, {
-      'id': 318,
-      'name': 'Baozun Inc. (BZUN)'
-    }, {
-      'id': 319,
-      'name': 'Barclays Inverse US Treasury Composite ETN (TAPR)'
-    }, {
-      'id': 320,
-      'name': 'Barington/Hilco Acquisition Corp. (BHAC)'
-    }, {
-      'id': 321,
-      'name': 'Barington/Hilco Acquisition Corp. (BHACR)'
-    }, {
-      'id': 322,
-      'name': 'Barington/Hilco Acquisition Corp. (BHACU)'
-    }, {
-      'id': 323,
-      'name': 'Barington/Hilco Acquisition Corp. (BHACW)'
-    }, {
-      'id': 324,
-      'name': 'Barrett Business Services (BBSI)'
-    }, {
-      'id': 325,
-      'name': 'Bassett Furniture Industries (BSET)'
-    }, {
-      'id': 326,
-      'name': 'Bay Bancorp (BYBK)'
-    }, {
-      'id': 327,
-      'name': 'Bazaarvoice (BV)'
-    }, {
-      'id': 328,
-      'name': 'BCB Bancorp (BCBP)'
-    }, {
-      'id': 329,
-      'name': 'Beacon Roofing Supply (BECN)'
-    }, {
-      'id': 330,
-      'name': 'Bear State Financial (BSF)'
-    }, {
-      'id': 331,
-      'name': 'Beasley Broadcast Group (BBGI)'
-    }, {
-      'id': 332,
-      'name': 'bebe stores (BEBE)'
-    }, {
-      'id': 333,
-      'name': 'Bed Bath & Beyond Inc. (BBBY)'
-    }, {
-      'id': 334,
-      'name': 'BeiGene (BGNE)'
-    }, {
-      'id': 335,
-      'name': 'Bel Fuse Inc. (BELFA)'
-    }, {
-      'id': 336,
-      'name': 'Bel Fuse Inc. (BELFB)'
-    }, {
-      'id': 337,
-      'name': 'Bellerophon Therapeutics (BLPH)'
-    }, {
-      'id': 338,
-      'name': 'Bellicum Pharmaceuticals (BLCM)'
-    }, {
-      'id': 339,
-      'name': 'Beneficial Bancorp (BNCL)'
-    }, {
-      'id': 340,
-      'name': 'Benefitfocus (BNFT)'
-    }, {
-      'id': 341,
-      'name': 'Benitec Biopharma Limited (BNTC)'
-    }, {
-      'id': 342,
-      'name': 'Benitec Biopharma Limited (BNTCW)'
-    }, {
-      'id': 343,
-      'name': 'BeyondSpring (BYSI)'
-    }, {
-      'id': 344,
-      'name': 'BGC Partners (BGCP)'
-    }, {
-      'id': 345,
-      'name': 'Big 5 Sporting Goods Corporation (BGFV)'
-    }, {
-      'id': 346,
-      'name': 'Bioanalytical Systems (BASI)'
-    }, {
-      'id': 347,
-      'name': 'Bioblast Pharma Ltd. (ORPN)'
-    }, {
-      'id': 348,
-      'name': 'Biocept (BIOC)'
-    }, {
-      'id': 349,
-      'name': 'BioCryst Pharmaceuticals (BCRX)'
-    }, {
-      'id': 350,
-      'name': 'BioDelivery Sciences International (BDSI)'
-    }, {
-      'id': 351,
-      'name': 'Biogen Inc. (BIIB)'
-    }, {
-      'id': 352,
-      'name': 'Biolase (BIOL)'
-    }, {
-      'id': 353,
-      'name': 'BioLife Solutions (BLFS)'
-    }, {
-      'id': 354,
-      'name': 'BioLight Life Sciences Ltd. (BOLT)'
-    }, {
-      'id': 355,
-      'name': 'BioLineRx Ltd. (BLRX)'
-    }, {
-      'id': 356,
-      'name': 'BioMarin Pharmaceutical Inc. (BMRN)'
-    }, {
-      'id': 357,
-      'name': 'Biomerica (BMRA)'
-    }, {
-      'id': 358,
-      'name': 'BiondVax Pharmaceuticals Ltd. (BVXV)'
-    }, {
-      'id': 359,
-      'name': 'BiondVax Pharmaceuticals Ltd. (BVXVW)'
-    }, {
-      'id': 360,
-      'name': 'Bio-Path Holdings (BPTH)'
-    }, {
-      'id': 361,
-      'name': 'Bioptix (BIOP)'
-    }, {
-      'id': 362,
-      'name': 'BioScrip (BIOS)'
-    }, {
-      'id': 363,
-      'name': 'BioShares Biotechnology Clinical Trials Fund (BBC)'
-    }, {
-      'id': 364,
-      'name': 'BioShares Biotechnology Products Fund (BBP)'
-    }, {
-      'id': 365,
-      'name': 'BioSpecifics Technologies Corp (BSTC)'
-    }, {
-      'id': 366,
-      'name': 'Biostage (BSTG)'
-    }, {
-      'id': 367,
-      'name': 'Biostar Pharmaceuticals (BSPM)'
-    }, {
-      'id': 368,
-      'name': 'Bio-Techne Corp (TECH)'
-    }, {
-      'id': 369,
-      'name': 'BioTelemetry (BEAT)'
-    }, {
-      'id': 370,
-      'name': 'Bioverativ Inc. (BIVV)'
-    }, {
-      'id': 371,
-      'name': 'BJ&#39;s Restaurants (BJRI)'
-    }, {
-      'id': 372,
-      'name': 'Black Box Corporation (BBOX)'
-    }, {
-      'id': 373,
-      'name': 'Black Diamond (BDE)'
-    }, {
-      'id': 374,
-      'name': 'Blackbaud (BLKB)'
-    }, {
-      'id': 375,
-      'name': 'BlackBerry Limited (BBRY)'
-    }, {
-      'id': 376,
-      'name': 'Blackhawk Network Holdings (HAWK)'
-    }, {
-      'id': 377,
-      'name': 'BlackLine (BL)'
-    }, {
-      'id': 378,
-      'name': 'BlackRock Capital Investment Corporation (BKCC)'
-    }, {
-      'id': 379,
-      'name': 'BLDRS Asia 50 ADR Index Fund (ADRA)'
-    }, {
-      'id': 380,
-      'name': 'BLDRS Developed Markets 100 ADR Index Fund (ADRD)'
-    }, {
-      'id': 381,
-      'name': 'BLDRS Emerging Markets 50 ADR Index Fund (ADRE)'
-    }, {
-      'id': 382,
-      'name': 'BLDRS Europe 100 ADR Index Fund (ADRU)'
-    }, {
-      'id': 383,
-      'name': 'Bloomin&#39; Brands (BLMN)'
-    }, {
-      'id': 384,
-      'name': 'Blucora (BCOR)'
-    }, {
-      'id': 385,
-      'name': 'Blue Bird Corporation (BLBD)'
-    }, {
-      'id': 386,
-      'name': 'Blue Buffalo Pet Products (BUFF)'
-    }, {
-      'id': 387,
-      'name': 'Blue Hills Bancorp (BHBK)'
-    }, {
-      'id': 388,
-      'name': 'bluebird bio (BLUE)'
-    }, {
-      'id': 389,
-      'name': 'Blueknight Energy Partners L.P. (BKEP)'
-    }, {
-      'id': 390,
-      'name': 'Blueknight Energy Partners L.P. (BKEPP)'
-    }, {
-      'id': 391,
-      'name': 'Blueprint Medicines Corporation (BPMC)'
-    }, {
-      'id': 392,
-      'name': 'BlueStar TA-BIGITech Israel Technology ETF (ITEQ)'
-    }, {
-      'id': 393,
-      'name': 'BMC Stock Holdings (BMCH)'
-    }, {
-      'id': 394,
-      'name': 'BNC Bancorp (BNCN)'
-    }, {
-      'id': 395,
-      'name': 'Bob Evans Farms (BOBE)'
-    }, {
-      'id': 396,
-      'name': 'BofI Holding (BOFI)'
-    }, {
-      'id': 397,
-      'name': 'BofI Holding (BOFIL)'
-    }, {
-      'id': 398,
-      'name': 'Boingo Wireless (WIFI)'
-    }, {
-      'id': 399,
-      'name': 'Bojangles&#39; (BOJA)'
-    }, {
-      'id': 400,
-      'name': 'BOK Financial Corporation (BOKF)'
-    }, {
-      'id': 401,
-      'name': 'BOK Financial Corporation (BOKFL)'
-    }, {
-      'id': 402,
-      'name': 'Bonso Electronics International (BNSO)'
-    }, {
-      'id': 403,
-      'name': 'Boston Private Financial Holdings (BPFH)'
-    }, {
-      'id': 404,
-      'name': 'Boston Private Financial Holdings (BPFHP)'
-    }, {
-      'id': 405,
-      'name': 'Boston Private Financial Holdings (BPFHW)'
-    }, {
-      'id': 406,
-      'name': 'Bottomline Technologies (EPAY)'
-    }, {
-      'id': 407,
-      'name': 'Boulevard Acquisition Corp. II (BLVD)'
-    }, {
-      'id': 408,
-      'name': 'Boulevard Acquisition Corp. II (BLVDU)'
-    }, {
-      'id': 409,
-      'name': 'Boulevard Acquisition Corp. II (BLVDW)'
-    }, {
-      'id': 410,
-      'name': 'Boxlight Corporation (BOXL)'
-    }, {
-      'id': 411,
-      'name': 'Braeburn Pharmaceuticals (BBRX)'
-    }, {
-      'id': 412,
-      'name': 'Brainstorm Cell Therapeutics Inc. (BCLI)'
-    }, {
-      'id': 413,
-      'name': 'Bravo Brio Restaurant Group (BBRG)'
-    }, {
-      'id': 414,
-      'name': 'Bridge Bancorp (BDGE)'
-    }, {
-      'id': 415,
-      'name': 'Bridgeline Digital (BLIN          )'
-    }, {
-      'id': 416,
-      'name': 'Bridgford Foods Corporation (BRID)'
-    }, {
-      'id': 417,
-      'name': 'Brightcove Inc. (BCOV)'
-    }, {
-      'id': 418,
-      'name': 'Broadcom Limited (AVGO)'
-    }, {
-      'id': 419,
-      'name': 'BroadSoft (BSFT)'
-    }, {
-      'id': 420,
-      'name': 'BroadVision (BVSN)'
-    }, {
-      'id': 421,
-      'name': 'Broadway Financial Corporation (BYFC)'
-    }, {
-      'id': 422,
-      'name': 'Broadwind Energy (BWEN)'
-    }, {
-      'id': 423,
-      'name': 'Brocade Communications Systems (BRCD)'
-    }, {
-      'id': 424,
-      'name': 'Brookline Bancorp (BRKL)'
-    }, {
-      'id': 425,
-      'name': 'Brooks Automation (BRKS)'
-    }, {
-      'id': 426,
-      'name': 'Bruker Corporation (BRKR)'
-    }, {
-      'id': 427,
-      'name': 'Bryn Mawr Bank Corporation (BMTC)'
-    }, {
-      'id': 428,
-      'name': 'BSB Bancorp (BLMT)'
-    }, {
-      'id': 429,
-      'name': 'BSQUARE Corporation (BSQR)'
-    }, {
-      'id': 430,
-      'name': 'Buffalo Wild Wings (BWLD)'
-    }, {
-      'id': 431,
-      'name': 'Builders FirstSource (BLDR)'
-    }, {
-      'id': 432,
-      'name': 'BullMark LatAm Select Leaders ETF (BMLA)'
-    }, {
-      'id': 433,
-      'name': 'Burcon NutraScience Corp (BUR)'
-    }, {
-      'id': 434,
-      'name': 'C&F Financial Corporation (CFFI)'
-    }, {
-      'id': 435,
-      'name': 'C.H. Robinson Worldwide (CHRW)'
-    }, {
-      'id': 436,
-      'name': 'CA Inc. (CA)'
-    }, {
-      'id': 437,
-      'name': 'Cabot Microelectronics Corporation (CCMP)'
-    }, {
-      'id': 438,
-      'name': 'Cachet Financial Solutions (CAFN)'
-    }, {
-      'id': 439,
-      'name': 'Cadence Design Systems (CDNS)'
-    }, {
-      'id': 440,
-      'name': 'Cadiz (CDZI)'
-    }, {
-      'id': 441,
-      'name': 'Caesars Acquisition Company (CACQ)'
-    }, {
-      'id': 442,
-      'name': 'Caesars Entertainment Corporation (CZR)'
-    }, {
-      'id': 443,
-      'name': 'Caesarstone Ltd. (CSTE)'
-    }, {
-      'id': 444,
-      'name': 'CafePress Inc. (PRSS)'
-    }, {
-      'id': 445,
-      'name': 'Caladrius Biosciences (CLBS)'
-    }, {
-      'id': 446,
-      'name': 'Calamos Convertible and High Income Fund (CHY)'
-    }, {
-      'id': 447,
-      'name': 'Calamos Convertible Opportunities and Income Fund (CHI)'
-    }, {
-      'id': 448,
-      'name': 'Calamos Dynamic Convertible & Income Fund (CCD)'
-    }, {
-      'id': 449,
-      'name': 'Calamos Global Dynamic Income Fund (CHW)'
-    }, {
-      'id': 450,
-      'name': 'Calamos Global Total Return Fund (CGO)'
-    }, {
-      'id': 451,
-      'name': 'Calamos Strategic Total Return Fund (CSQ)'
-    }, {
-      'id': 452,
-      'name': 'CalAmp Corp. (CAMP)'
-    }, {
-      'id': 453,
-      'name': 'Calavo Growers (CVGW)'
-    }, {
-      'id': 454,
-      'name': 'California First National Bancorp (CFNB)'
-    }, {
-      'id': 455,
-      'name': 'Calithera Biosciences (CALA)'
-    }, {
-      'id': 456,
-      'name': 'Callidus Software (CALD)'
-    }, {
-      'id': 457,
-      'name': 'Cal-Maine Foods (CALM)'
-    }, {
-      'id': 458,
-      'name': 'Calumet Specialty Products Partners (CLMT)'
-    }, {
-      'id': 459,
-      'name': 'Cambium Learning Group (ABCD)'
-    }, {
-      'id': 460,
-      'name': 'Camden National Corporation (CAC)'
-    }, {
-      'id': 461,
-      'name': 'Camtek Ltd. (CAMT)'
-    }, {
-      'id': 462,
-      'name': 'Canadian Solar Inc. (CSIQ)'
-    }, {
-      'id': 463,
-      'name': 'Cancer Genetics (CGIX)'
-    }, {
-      'id': 464,
-      'name': 'Canterbury Park Holding Corporation (CPHC)'
-    }, {
-      'id': 465,
-      'name': 'Capella Education Company (CPLA)'
-    }, {
-      'id': 466,
-      'name': 'Capital Bank Financial Corp. (CBF)'
-    }, {
-      'id': 467,
-      'name': 'Capital City Bank Group (CCBG)'
-    }, {
-      'id': 468,
-      'name': 'Capital Product Partners L.P. (CPLP)'
-    }, {
-      'id': 469,
-      'name': 'Capital Southwest Corporation (CSWC)'
-    }, {
-      'id': 470,
-      'name': 'Capitala Finance Corp. (CPTA)'
-    }, {
-      'id': 471,
-      'name': 'Capitol Acquisition Corp. III (CLAC)'
-    }, {
-      'id': 472,
-      'name': 'Capitol Acquisition Corp. III (CLACU)'
-    }, {
-      'id': 473,
-      'name': 'Capitol Acquisition Corp. III (CLACW)'
-    }, {
-      'id': 474,
-      'name': 'Capitol Federal Financial (CFFN)'
-    }, {
-      'id': 475,
-      'name': 'Capnia (CAPN)'
-    }, {
-      'id': 476,
-      'name': 'Capnia (CAPNW)'
-    }, {
-      'id': 477,
-      'name': 'Capricor Therapeutics (CAPR)'
-    }, {
-      'id': 478,
-      'name': 'CapStar Financial Holdings (CSTR)'
-    }, {
-      'id': 479,
-      'name': 'Capstone Turbine Corporation (CPST)'
-    }, {
-      'id': 480,
-      'name': 'Cara Therapeutics (CARA)'
-    }, {
-      'id': 481,
-      'name': 'Carbonite (CARB)'
-    }, {
-      'id': 482,
-      'name': 'CardConnect Corp. (CCN)'
-    }, {
-      'id': 483,
-      'name': 'Cardinal Financial Corporation (CFNL)'
-    }, {
-      'id': 484,
-      'name': 'Cardiome Pharma Corporation (CRME)'
-    }, {
-      'id': 485,
-      'name': 'Cardiovascular Systems (CSII)'
-    }, {
-      'id': 486,
-      'name': 'Cardtronics plc (CATM)'
-    }, {
-      'id': 487,
-      'name': 'CareDx (CDNA)'
-    }, {
-      'id': 488,
-      'name': 'Career Education Corporation (CECO)'
-    }, {
-      'id': 489,
-      'name': 'CareTrust REIT (CTRE)'
-    }, {
-      'id': 490,
-      'name': 'Carolina Financial Corporation (CARO)'
-    }, {
-      'id': 491,
-      'name': 'Carolina Trust BancShares (CART)'
-    }, {
-      'id': 492,
-      'name': 'Carrizo Oil & Gas (CRZO)'
-    }, {
-      'id': 493,
-      'name': 'Carrols Restaurant Group (TAST)'
-    }, {
-      'id': 494,
-      'name': 'Cartesian (CRTN)'
-    }, {
-      'id': 495,
-      'name': 'Carver Bancorp (CARV)'
-    }, {
-      'id': 496,
-      'name': 'CAS Medical Systems (CASM)'
-    }, {
-      'id': 497,
-      'name': 'Cascade Bancorp (CACB)'
-    }, {
-      'id': 498,
-      'name': 'Cascadian Therapeutics (CASC)'
-    }, {
-      'id': 499,
-      'name': 'Casella Waste Systems (CWST)'
-    }, {
-      'id': 500,
-      'name': 'Caseys General Stores (CASY)'
-    }, {
-      'id': 501,
-      'name': 'CASI Pharmaceuticals (CASI)'
-    }, {
-      'id': 502,
-      'name': 'Cass Information Systems (CASS)'
-    }, {
-      'id': 503,
-      'name': 'Catabasis Pharmaceuticals (CATB)'
-    }, {
-      'id': 504,
-      'name': 'Catalyst Biosciences (CBIO)'
-    }, {
-      'id': 505,
-      'name': 'Catalyst Pharmaceuticals (CPRX)'
-    }, {
-      'id': 506,
-      'name': 'Cathay General Bancorp (CATY)'
-    }, {
-      'id': 507,
-      'name': 'Cathay General Bancorp (CATYW)'
-    }, {
-      'id': 508,
-      'name': 'Cavco Industries (CVCO)'
-    }, {
-      'id': 509,
-      'name': 'Cavium (CAVM)'
-    }, {
-      'id': 510,
-      'name': 'CB Financial Services (CBFV)'
-    }, {
-      'id': 511,
-      'name': 'CBAK Energy Technology (CBAK)'
-    }, {
-      'id': 512,
-      'name': 'CBOE Holdings (CBOE)'
-    }, {
-      'id': 513,
-      'name': 'CDK Global (CDK)'
-    }, {
-      'id': 514,
-      'name': 'CDW Corporation (CDW)'
-    }, {
-      'id': 515,
-      'name': 'CECO Environmental Corp. (CECE)'
-    }, {
-      'id': 516,
-      'name': 'Celgene Corporation (CELG)'
-    }, {
-      'id': 517,
-      'name': 'Celgene Corporation (CELGZ)'
-    }, {
-      'id': 518,
-      'name': 'Celldex Therapeutics (CLDX)'
-    }, {
-      'id': 519,
-      'name': 'Cellect Biotechnology Ltd. (APOP)'
-    }, {
-      'id': 520,
-      'name': 'Cellect Biotechnology Ltd. (APOPW)'
-    }, {
-      'id': 521,
-      'name': 'Cellectar Biosciences (CLRB)'
-    }, {
-      'id': 522,
-      'name': 'Cellectar Biosciences (CLRBW)'
-    }, {
-      'id': 523,
-      'name': 'Cellectar Biosciences (CLRBZ)'
-    }, {
-      'id': 524,
-      'name': 'Cellectis S.A. (CLLS)'
-    }, {
-      'id': 525,
-      'name': 'Cellular Biomedicine Group (CBMG)'
-    }, {
-      'id': 526,
-      'name': 'Celsion Corporation (CLSN)'
-    }, {
-      'id': 527,
-      'name': 'Celyad SA (CYAD)'
-    }, {
-      'id': 528,
-      'name': 'Cempra (CEMP)'
-    }, {
-      'id': 529,
-      'name': 'Cemtrex Inc. (CETX)'
-    }, {
-      'id': 530,
-      'name': 'Cemtrex Inc. (CETXP)'
-    }, {
-      'id': 531,
-      'name': 'Cemtrex Inc. (CETXW)'
-    }, {
-      'id': 532,
-      'name': 'Centennial Resource Development (CDEV)'
-    }, {
-      'id': 533,
-      'name': 'CenterState Banks (CSFL)'
-    }, {
-      'id': 534,
-      'name': 'Central European Media Enterprises Ltd. (CETV)'
-    }, {
-      'id': 535,
-      'name': 'Central Federal Corporation (CFBK)'
-    }, {
-      'id': 536,
-      'name': 'Central Garden & Pet Company (CENT)'
-    }, {
-      'id': 537,
-      'name': 'Central Garden & Pet Company (CENTA)'
-    }, {
-      'id': 538,
-      'name': 'Central Valley Community Bancorp (CVCY)'
-    }, {
-      'id': 539,
-      'name': 'Centrue Financial Corporation (CFCB)'
-    }, {
-      'id': 540,
-      'name': 'Century Aluminum Company (CENX)'
-    }, {
-      'id': 541,
-      'name': 'Century Bancorp (CNBKA)'
-    }, {
-      'id': 542,
-      'name': 'Century Casinos (CNTY)'
-    }, {
-      'id': 543,
-      'name': 'Ceragon Networks Ltd. (CRNT)'
-    }, {
-      'id': 544,
-      'name': 'Cerecor Inc. (CERC)'
-    }, {
-      'id': 545,
-      'name': 'Cerecor Inc. (CERCW)'
-    }, {
-      'id': 546,
-      'name': 'Cerecor Inc. (CERCZ)'
-    }, {
-      'id': 547,
-      'name': 'Cerner Corporation (CERN)'
-    }, {
-      'id': 548,
-      'name': 'Cerulean Pharma Inc. (CERU)'
-    }, {
-      'id': 549,
-      'name': 'Cerus Corporation (CERS)'
-    }, {
-      'id': 550,
-      'name': 'Cesca Therapeutics Inc. (KOOL)'
-    }, {
-      'id': 551,
-      'name': 'CEVA (CEVA)'
-    }, {
-      'id': 552,
-      'name': 'CF Corporation (CFCO)'
-    }, {
-      'id': 553,
-      'name': 'CF Corporation (CFCOU)'
-    }, {
-      'id': 554,
-      'name': 'CF Corporation (CFCOW)'
-    }, {
-      'id': 555,
-      'name': 'Champions Oncology (CSBR)'
-    }, {
-      'id': 556,
-      'name': 'Changyou.com Limited (CYOU)'
-    }, {
-      'id': 557,
-      'name': 'Chanticleer Holdings (HOTR)'
-    }, {
-      'id': 558,
-      'name': 'Chanticleer Holdings (HOTRW)'
-    }, {
-      'id': 559,
-      'name': 'Charles & Colvard Ltd (CTHR)'
-    }, {
-      'id': 560,
-      'name': 'Chart Industries (GTLS)'
-    }, {
-      'id': 561,
-      'name': 'Charter Communications (CHTR)'
-    }, {
-      'id': 562,
-      'name': 'Charter Financial Corp. (CHFN)'
-    }, {
-      'id': 563,
-      'name': 'Check Point Software Technologies Ltd. (CHKP)'
-    }, {
-      'id': 564,
-      'name': 'Check-Cap Ltd. (CHEK)'
-    }, {
-      'id': 565,
-      'name': 'Check-Cap Ltd. (CHEKW)'
-    }, {
-      'id': 566,
-      'name': 'Chembio Diagnostics (CEMI)'
-    }, {
-      'id': 567,
-      'name': 'Chemical Financial Corporation (CHFC)'
-    }, {
-      'id': 568,
-      'name': 'ChemoCentryx (CCXI)'
-    }, {
-      'id': 569,
-      'name': 'Chemung Financial Corp (CHMG)'
-    }, {
-      'id': 570,
-      'name': 'Cherokee Inc. (CHKE)'
-    }, {
-      'id': 571,
-      'name': 'Chiasma (CHMA)'
-    }, {
-      'id': 572,
-      'name': 'Children&#39;s Place (PLCE)'
-    }, {
-      'id': 573,
-      'name': 'Chimerix (CMRX)'
-    }, {
-      'id': 574,
-      'name': 'China Advanced Construction Materials Group (CADC)'
-    }, {
-      'id': 575,
-      'name': 'China Auto Logistics Inc. (CALI)'
-    }, {
-      'id': 576,
-      'name': 'China Automotive Systems (CAAS)'
-    }, {
-      'id': 577,
-      'name': 'China Biologic Products (CBPO)'
-    }, {
-      'id': 578,
-      'name': 'China Ceramics Co. (CCCL)'
-    }, {
-      'id': 579,
-      'name': 'China Commercial Credit (CCCR)'
-    }, {
-      'id': 580,
-      'name': 'China Customer Relations Centers (CCRC)'
-    }, {
-      'id': 581,
-      'name': 'China Finance Online Co. Limited (JRJC)'
-    }, {
-      'id': 582,
-      'name': 'China HGS Real Estate (HGSH)'
-    }, {
-      'id': 583,
-      'name': 'China Information Technology (CNIT)'
-    }, {
-      'id': 584,
-      'name': 'China Jo-Jo Drugstores (CJJD)'
-    }, {
-      'id': 585,
-      'name': 'China Lending Corporation (CLDC)'
-    }, {
-      'id': 586,
-      'name': 'China Lodging Group (HTHT)'
-    }, {
-      'id': 587,
-      'name': 'China Natural Resources (CHNR)'
-    }, {
-      'id': 588,
-      'name': 'China Recycling Energy Corporation (CREG)'
-    }, {
-      'id': 589,
-      'name': 'China TechFaith Wireless Communication Technology Limited (CNTF)'
-    }, {
-      'id': 590,
-      'name': 'China XD Plastics Company Limited (CXDC)'
-    }, {
-      'id': 591,
-      'name': 'ChinaCache International Holdings Ltd. (CCIH)'
-    }, {
-      'id': 592,
-      'name': 'ChinaNet Online Holdings (CNET)'
-    }, {
-      'id': 593,
-      'name': 'ChipMOS TECHNOLOGIES INC. (IMOS)'
-    }, {
-      'id': 594,
-      'name': 'ChromaDex Corporation (CDXC)'
-    }, {
-      'id': 595,
-      'name': 'CHS Inc (CHSCL)'
-    }, {
-      'id': 596,
-      'name': 'CHS Inc (CHSCM)'
-    }, {
-      'id': 597,
-      'name': 'CHS Inc (CHSCN)'
-    }, {
-      'id': 598,
-      'name': 'CHS Inc (CHSCO)'
-    }, {
-      'id': 599,
-      'name': 'CHS Inc (CHSCP)'
-    }, {
-      'id': 600,
-      'name': 'Churchill Downs (CHDN)'
-    }, {
-      'id': 601,
-      'name': 'Chuy&#39;s Holdings (CHUY)'
-    }, {
-      'id': 602,
-      'name': 'Cidara Therapeutics (CDTX)'
-    }, {
-      'id': 603,
-      'name': 'CIM Commercial Trust Corporation (CMCT)'
-    }, {
-      'id': 604,
-      'name': 'Cimpress N.V (CMPR)'
-    }, {
-      'id': 605,
-      'name': 'Cincinnati Financial Corporation (CINF)'
-    }, {
-      'id': 606,
-      'name': 'Cinedigm Corp (CIDM)'
-    }, {
-      'id': 607,
-      'name': 'Cintas Corporation (CTAS)'
-    }, {
-      'id': 608,
-      'name': 'Cirrus Logic (CRUS)'
-    }, {
-      'id': 609,
-      'name': 'Cisco Systems (CSCO)'
-    }, {
-      'id': 610,
-      'name': 'Citi Trends (CTRN)'
-    }, {
-      'id': 611,
-      'name': 'Citizens & Northern Corp (CZNC)'
-    }, {
-      'id': 612,
-      'name': 'Citizens Community Bancorp (CZWI)'
-    }, {
-      'id': 613,
-      'name': 'Citizens First Corporation (CZFC)'
-    }, {
-      'id': 614,
-      'name': 'Citizens Holding Company (CIZN)'
-    }, {
-      'id': 615,
-      'name': 'Citrix Systems (CTXS)'
-    }, {
-      'id': 616,
-      'name': 'City Holding Company (CHCO)'
-    }, {
-      'id': 617,
-      'name': 'Civista Bancshares (CIVB)'
-    }, {
-      'id': 618,
-      'name': 'Civista Bancshares (CIVBP)'
-    }, {
-      'id': 619,
-      'name': 'Clean Diesel Technologies (CDTI)'
-    }, {
-      'id': 620,
-      'name': 'Clean Energy Fuels Corp. (CLNE)'
-    }, {
-      'id': 621,
-      'name': 'Cleantech Solutions International (CLNT)'
-    }, {
-      'id': 622,
-      'name': 'Clearfield (CLFD)'
-    }, {
-      'id': 623,
-      'name': 'ClearOne (CLRO)'
-    }, {
-      'id': 624,
-      'name': 'Clearside Biomedical (CLSD)'
-    }, {
-      'id': 625,
-      'name': 'ClearSign Combustion Corporation (CLIR)'
-    }, {
-      'id': 626,
-      'name': 'ClearSign Combustion Corporation (CLIRW)'
-    }, {
-      'id': 627,
-      'name': 'Cleveland BioLabs (CBLI)'
-    }, {
-      'id': 628,
-      'name': 'Clifton Bancorp Inc. (CSBK)'
-    }, {
-      'id': 629,
-      'name': 'Clovis Oncology (CLVS)'
-    }, {
-      'id': 630,
-      'name': 'CM Finance Inc (CMFN)'
-    }, {
-      'id': 631,
-      'name': 'CME Group Inc. (CME)'
-    }, {
-      'id': 632,
-      'name': 'CNB Financial Corporation (CCNE)'
-    }, {
-      'id': 633,
-      'name': 'Coastway Bancorp (CWAY)'
-    }, {
-      'id': 634,
-      'name': 'CoBiz Financial Inc. (COBZ)'
-    }, {
-      'id': 635,
-      'name': 'Coca-Cola Bottling Co. Consolidated (COKE)'
-    }, {
-      'id': 636,
-      'name': 'Codexis (CDXS)'
-    }, {
-      'id': 637,
-      'name': 'Codorus Valley Bancorp (CVLY)'
-    }, {
-      'id': 638,
-      'name': 'Coffee Holding Co. (JVA)'
-    }, {
-      'id': 639,
-      'name': 'Cogent Communications Holdings (CCOI)'
-    }, {
-      'id': 640,
-      'name': 'Cogentix Medical (CGNT)'
-    }, {
-      'id': 641,
-      'name': 'Cogint (COGT)'
-    }, {
-      'id': 642,
-      'name': 'Cognex Corporation (CGNX)'
-    }, {
-      'id': 643,
-      'name': 'Cognizant Technology Solutions Corporation (CTSH)'
-    }, {
-      'id': 644,
-      'name': 'Coherent (COHR)'
-    }, {
-      'id': 645,
-      'name': 'Coherus BioSciences (CHRS)'
-    }, {
-      'id': 646,
-      'name': 'Cohu (COHU)'
-    }, {
-      'id': 647,
-      'name': 'Collectors Universe (CLCT)'
-    }, {
-      'id': 648,
-      'name': 'Collegium Pharmaceutical (COLL)'
-    }, {
-      'id': 649,
-      'name': 'Colliers International Group Inc.  (CIGI)'
-    }, {
-      'id': 650,
-      'name': 'Colony Bankcorp (CBAN)'
-    }, {
-      'id': 651,
-      'name': 'Columbia Banking System (COLB)'
-    }, {
-      'id': 652,
-      'name': 'Columbia Sportswear Company (COLM)'
-    }, {
-      'id': 653,
-      'name': 'Columbus McKinnon Corporation (CMCO)'
-    }, {
-      'id': 654,
-      'name': 'CombiMatrix Corporation (CBMX)'
-    }, {
-      'id': 655,
-      'name': 'CombiMatrix Corporation (CBMXW)'
-    }, {
-      'id': 656,
-      'name': 'Comcast Corporation (CMCSA)'
-    }, {
-      'id': 657,
-      'name': 'Commerce Bancshares (CBSH)'
-    }, {
-      'id': 658,
-      'name': 'Commerce Bancshares (CBSHP)'
-    }, {
-      'id': 659,
-      'name': 'Commerce Union Bancshares (CUBN)'
-    }, {
-      'id': 660,
-      'name': 'CommerceHub (CHUBA)'
-    }, {
-      'id': 661,
-      'name': 'CommerceHub (CHUBK)'
-    }, {
-      'id': 662,
-      'name': 'Commercial Vehicle Group (CVGI)'
-    }, {
-      'id': 663,
-      'name': 'CommScope Holding Company (COMM)'
-    }, {
-      'id': 664,
-      'name': 'Communications Systems (JCS)'
-    }, {
-      'id': 665,
-      'name': 'Community Bankers Trust Corporation. (ESXB)'
-    }, {
-      'id': 666,
-      'name': 'Community Choice Financial Inc. (CCFI)'
-    }, {
-      'id': 667,
-      'name': 'Community Health Systems (CYHHZ)'
-    }, {
-      'id': 668,
-      'name': 'Community Trust Bancorp (CTBI)'
-    }, {
-      'id': 669,
-      'name': 'Community West Bancshares (CWBC)'
-    }, {
-      'id': 670,
-      'name': 'Commvault Systems (CVLT)'
-    }, {
-      'id': 671,
-      'name': 'Compugen Ltd. (CGEN)'
-    }, {
-      'id': 672,
-      'name': 'Computer Programs and Systems (CPSI)'
-    }, {
-      'id': 673,
-      'name': 'Computer Task Group (CTG)'
-    }, {
-      'id': 674,
-      'name': 'Comstock Holding Companies (CHCI)'
-    }, {
-      'id': 675,
-      'name': 'Comtech Telecommunications Corp. (CMTL)'
-    }, {
-      'id': 676,
-      'name': 'Conatus Pharmaceuticals Inc. (CNAT)'
-    }, {
-      'id': 677,
-      'name': 'Concert Pharmaceuticals (CNCE)'
-    }, {
-      'id': 678,
-      'name': 'Concordia International Corp. (CXRX)'
-    }, {
-      'id': 679,
-      'name': 'Concurrent Computer Corporation (CCUR)'
-    }, {
-      'id': 680,
-      'name': 'Condor Hospitality Trust (CDOR)'
-    }, {
-      'id': 681,
-      'name': 'ConforMIS (CFMS)'
-    }, {
-      'id': 682,
-      'name': 'Conifer Holdings (CNFR)'
-    }, {
-      'id': 683,
-      'name': 'CONMED Corporation (CNMD)'
-    }, {
-      'id': 684,
-      'name': 'Connecticut Water Service (CTWS)'
-    }, {
-      'id': 685,
-      'name': 'ConnectOne Bancorp (CNOB)'
-    }, {
-      'id': 686,
-      'name': 'Connecture (CNXR)'
-    }, {
-      'id': 687,
-      'name': 'Conn&#39;s (CONN)'
-    }, {
-      'id': 688,
-      'name': 'Consolidated Communications Holdings (CNSL)'
-    }, {
-      'id': 689,
-      'name': 'Consolidated Water Co. Ltd. (CWCO)'
-    }, {
-      'id': 690,
-      'name': 'Consumer Portfolio Services (CPSS)'
-    }, {
-      'id': 691,
-      'name': 'ContraFect Corporation (CFRX)'
-    }, {
-      'id': 692,
-      'name': 'ContraVir Pharmaceuticals Inc (CTRV)'
-    }, {
-      'id': 693,
-      'name': 'Control4 Corporation (CTRL)'
-    }, {
-      'id': 694,
-      'name': 'Conyers Park Acquisition Corp. (CPAA)'
-    }, {
-      'id': 695,
-      'name': 'Conyers Park Acquisition Corp. (CPAAU)'
-    }, {
-      'id': 696,
-      'name': 'Conyers Park Acquisition Corp. (CPAAW)'
-    }, {
-      'id': 697,
-      'name': 'Copart (CPRT)'
-    }, {
-      'id': 698,
-      'name': 'Corbus Pharmaceuticals Holdings (CRBP)'
-    }, {
-      'id': 699,
-      'name': 'Corcept Therapeutics Incorporated (CORT)'
-    }, {
-      'id': 700,
-      'name': 'Core-Mark Holding Company (CORE)'
-    }, {
-      'id': 701,
-      'name': 'Corium International (CORI)'
-    }, {
-      'id': 702,
-      'name': 'Cornerstone OnDemand (CSOD)'
-    }, {
-      'id': 703,
-      'name': 'CorVel Corp. (CRVL)'
-    }, {
-      'id': 704,
-      'name': 'Corvus Pharmaceuticals (CRVS)'
-    }, {
-      'id': 705,
-      'name': 'CoStar Group (CSGP)'
-    }, {
-      'id': 706,
-      'name': 'Costco Wholesale Corporation (COST)'
-    }, {
-      'id': 707,
-      'name': 'CounterPath Corporation (CPAH)'
-    }, {
-      'id': 708,
-      'name': 'County Bancorp (ICBK)'
-    }, {
-      'id': 709,
-      'name': 'Coupa Software Incorporated (COUP)'
-    }, {
-      'id': 710,
-      'name': 'Covenant Transportation Group (CVTI)'
-    }, {
-      'id': 711,
-      'name': 'Covisint Corporation (COVS)'
-    }, {
-      'id': 712,
-      'name': 'Cowen Group (COWN)'
-    }, {
-      'id': 713,
-      'name': 'Cowen Group (COWNL)'
-    }, {
-      'id': 714,
-      'name': 'CPI Card Group Inc. (PMTS)'
-    }, {
-      'id': 715,
-      'name': 'CPS Technologies Corp. (CPSH)'
-    }, {
-      'id': 716,
-      'name': 'CRA International (CRAI)'
-    }, {
-      'id': 717,
-      'name': 'Cracker Barrel Old Country Store (CBRL)'
-    }, {
-      'id': 718,
-      'name': 'Craft Brew Alliance (BREW)'
-    }, {
-      'id': 719,
-      'name': 'Cray Inc (CRAY)'
-    }, {
-      'id': 720,
-      'name': 'Credit Acceptance Corporation (CACC)'
-    }, {
-      'id': 721,
-      'name': 'Credit Suisse Gold Shares Covered Calls ETN (GLDI)'
-    }, {
-      'id': 722,
-      'name': 'Credit Suisse Silver Shares Covered Call ETN (SLVO)'
-    }, {
-      'id': 723,
-      'name': 'Cree (CREE)'
-    }, {
-      'id': 724,
-      'name': 'Cresud S.A.C.I.F. y A. (CRESY)'
-    }, {
-      'id': 725,
-      'name': 'CRISPR Therapeutics AG (CRSP)'
-    }, {
-      'id': 726,
-      'name': 'Criteo S.A. (CRTO)'
-    }, {
-      'id': 727,
-      'name': 'Crocs (CROX)'
-    }, {
-      'id': 728,
-      'name': 'Cross Country Healthcare (CCRN)'
-    }, {
-      'id': 729,
-      'name': 'Crossroads Capital (XRDC)'
-    }, {
-      'id': 730,
-      'name': 'Crossroads Systems (CRDS)'
-    }, {
-      'id': 731,
-      'name': 'Crown Crafts (CRWS)'
-    }, {
-      'id': 732,
-      'name': 'CryoPort (CYRX)'
-    }, {
-      'id': 733,
-      'name': 'CryoPort (CYRXW)'
-    }, {
-      'id': 734,
-      'name': 'CSG Systems International (CSGS)'
-    }, {
-      'id': 735,
-      'name': 'CSI Compressco LP (CCLP)'
-    }, {
-      'id': 736,
-      'name': 'CSP Inc. (CSPI)'
-    }, {
-      'id': 737,
-      'name': 'CSW Industrials (CSWI)'
-    }, {
-      'id': 738,
-      'name': 'CSX Corporation (CSX)'
-    }, {
-      'id': 739,
-      'name': 'CTI BioPharma Corp. (CTIC)'
-    }, {
-      'id': 740,
-      'name': 'CTI Industries Corporation (CTIB)'
-    }, {
-      'id': 741,
-      'name': 'Ctrip.com International (CTRP)'
-    }, {
-      'id': 742,
-      'name': 'CU Bancorp (CA) (CUNB)'
-    }, {
-      'id': 743,
-      'name': 'CUI Global (CUI)'
-    }, {
-      'id': 744,
-      'name': 'Cumberland Pharmaceuticals Inc. (CPIX)'
-    }, {
-      'id': 745,
-      'name': 'Cumulus Media Inc. (CMLS)'
-    }, {
-      'id': 746,
-      'name': 'Curis (CRIS)'
-    }, {
-      'id': 747,
-      'name': 'Cutera (CUTR)'
-    }, {
-      'id': 748,
-      'name': 'CVB Financial Corporation (CVBF)'
-    }, {
-      'id': 749,
-      'name': 'CVD Equipment Corporation (CVV)'
-    }, {
-      'id': 750,
-      'name': 'Cyanotech Corporation (CYAN)'
-    }, {
-      'id': 751,
-      'name': 'CyberArk Software Ltd. (CYBR)'
-    }, {
-      'id': 752,
-      'name': 'CyberOptics Corporation (CYBE)'
-    }, {
-      'id': 753,
-      'name': 'Cyclacel Pharmaceuticals (CYCC)'
-    }, {
-      'id': 754,
-      'name': 'Cyclacel Pharmaceuticals (CYCCP)'
-    }, {
-      'id': 755,
-      'name': 'CymaBay Therapeutics Inc. (CBAY)'
-    }, {
-      'id': 756,
-      'name': 'Cypress Semiconductor Corporation (CY)'
-    }, {
-      'id': 757,
-      'name': 'CYREN Ltd. (CYRN)'
-    }, {
-      'id': 758,
-      'name': 'CyrusOne Inc (CONE)'
-    }, {
-      'id': 759,
-      'name': 'Cytokinetics (CYTK)'
-    }, {
-      'id': 760,
-      'name': 'CytomX Therapeutics (CTMX)'
-    }, {
-      'id': 761,
-      'name': 'Cytori Therapeutics Inc (CYTX)'
-    }, {
-      'id': 762,
-      'name': 'Cytori Therapeutics Inc (CYTXW)'
-    }, {
-      'id': 763,
-      'name': 'Cytosorbents Corporation (CTSO)'
-    }, {
-      'id': 764,
-      'name': 'CytRx Corporation (CYTR)'
-    }, {
-      'id': 765,
-      'name': 'Daily Journal Corp. (S.C.) (DJCO)'
-    }, {
-      'id': 766,
-      'name': 'Daktronics (DAKT)'
-    }, {
-      'id': 767,
-      'name': 'DarioHealth Corp. (DRIO)'
-    }, {
-      'id': 768,
-      'name': 'DarioHealth Corp. (DRIOW)'
-    }, {
-      'id': 769,
-      'name': 'DASAN Zhone Solutions (DZSI)'
-    }, {
-      'id': 770,
-      'name': 'Daseke (DSKE)'
-    }, {
-      'id': 771,
-      'name': 'Daseke (DSKEW)'
-    }, {
-      'id': 772,
-      'name': 'Data I/O Corporation (DAIO)'
-    }, {
-      'id': 773,
-      'name': 'Dataram Corporation (DRAM)'
-    }, {
-      'id': 774,
-      'name': 'Datawatch Corporation (DWCH)'
-    }, {
-      'id': 775,
-      'name': 'Dave & Buster&#39;s Entertainment (PLAY)'
-    }, {
-      'id': 776,
-      'name': 'DAVIDsTEA Inc. (DTEA)'
-    }, {
-      'id': 777,
-      'name': 'Davis Select Financial ETF (DFNL)'
-    }, {
-      'id': 778,
-      'name': 'Davis Select U.S. Equity ETF (DUSA)'
-    }, {
-      'id': 779,
-      'name': 'Davis Select Worldwide ETF (DWLD)'
-    }, {
-      'id': 780,
-      'name': 'Dawson Geophysical Company (DWSN)'
-    }, {
-      'id': 781,
-      'name': 'DBV Technologies S.A. (DBVT)'
-    }, {
-      'id': 782,
-      'name': 'Del Frisco&#39;s Restaurant Group (DFRG)'
-    }, {
-      'id': 783,
-      'name': 'Del Taco Restaurants (TACO)'
-    }, {
-      'id': 784,
-      'name': 'Del Taco Restaurants (TACOW)'
-    }, {
-      'id': 785,
-      'name': 'Delcath Systems (DCTH)'
-    }, {
-      'id': 786,
-      'name': 'DelMar Pharmaceuticals (DMPI)'
-    }, {
-      'id': 787,
-      'name': 'Delta Natural Gas Company (DGAS)'
-    }, {
-      'id': 788,
-      'name': 'Delta Technology Holdings Limited (DELT)'
-    }, {
-      'id': 789,
-      'name': 'Delta Technology Holdings Limited (DELTW)'
-    }, {
-      'id': 790,
-      'name': 'Denny&#39;s Corporation (DENN)'
-    }, {
-      'id': 791,
-      'name': 'DENTSPLY SIRONA Inc. (XRAY)'
-    }, {
-      'id': 792,
-      'name': 'Depomed (DEPO)'
-    }, {
-      'id': 793,
-      'name': 'Dermira (DERM)'
-    }, {
-      'id': 794,
-      'name': 'Destination Maternity Corporation (DEST)'
-    }, {
-      'id': 795,
-      'name': 'Destination XL Group (DXLG)'
-    }, {
-      'id': 796,
-      'name': 'Deswell Industries (DSWL)'
-    }, {
-      'id': 797,
-      'name': 'Determine (DTRM)'
-    }, {
-      'id': 798,
-      'name': 'DexCom (DXCM)'
-    }, {
-      'id': 799,
-      'name': 'Dextera Surgical Inc. (DXTR)'
-    }, {
-      'id': 800,
-      'name': 'DHX Media Ltd. (DHXM)'
-    }, {
-      'id': 801,
-      'name': 'Diamond Hill Investment Group (DHIL)'
-    }, {
-      'id': 802,
-      'name': 'Diamondback Energy (FANG)'
-    }, {
-      'id': 803,
-      'name': 'Diana Containerships Inc. (DCIX)'
-    }, {
-      'id': 804,
-      'name': 'Dicerna Pharmaceuticals (DRNA)'
-    }, {
-      'id': 805,
-      'name': 'Differential Brands Group Inc. (DFBG)'
-    }, {
-      'id': 806,
-      'name': 'Diffusion Pharmaceuticals Inc. (DFFN)'
-    }, {
-      'id': 807,
-      'name': 'Digi International Inc. (DGII)'
-    }, {
-      'id': 808,
-      'name': 'Digimarc Corporation (DMRC)'
-    }, {
-      'id': 809,
-      'name': 'Digirad Corporation (DRAD)'
-    }, {
-      'id': 810,
-      'name': 'Digital Ally (DGLY)'
-    }, {
-      'id': 811,
-      'name': 'Digital Turbine (APPS)'
-    }, {
-      'id': 812,
-      'name': 'Dime Community Bancshares (DCOM)'
-    }, {
-      'id': 813,
-      'name': 'Dimension Therapeutics (DMTX)'
-    }, {
-      'id': 814,
-      'name': 'Diodes Incorporated (DIOD)'
-    }, {
-      'id': 815,
-      'name': 'Dipexium Pharmaceuticals (DPRX)'
-    }, {
-      'id': 816,
-      'name': 'Discovery Communications (DISCA)'
-    }, {
-      'id': 817,
-      'name': 'Discovery Communications (DISCB)'
-    }, {
-      'id': 818,
-      'name': 'Discovery Communications (DISCK)'
-    }, {
-      'id': 819,
-      'name': 'DISH Network Corporation (DISH)'
-    }, {
-      'id': 820,
-      'name': 'Diversicare Healthcare Services Inc. (DVCR)'
-    }, {
-      'id': 821,
-      'name': 'Diversified Restaurant Holdings (SAUC)'
-    }, {
-      'id': 822,
-      'name': 'DLH Holdings Corp. (DLHC)'
-    }, {
-      'id': 823,
-      'name': 'DMC Global Inc. (BOOM)'
-    }, {
-      'id': 824,
-      'name': 'DNB Financial Corp (DNBF)'
-    }, {
-      'id': 825,
-      'name': 'Dollar Tree (DLTR)'
-    }, {
-      'id': 826,
-      'name': 'Donegal Group (DGICA)'
-    }, {
-      'id': 827,
-      'name': 'Donegal Group (DGICB)'
-    }, {
-      'id': 828,
-      'name': 'Dorchester Minerals (DMLP)'
-    }, {
-      'id': 829,
-      'name': 'Dorman Products (DORM)'
-    }, {
-      'id': 830,
-      'name': 'Double Eagle Acquisition Corp. (EAGL)'
-    }, {
-      'id': 831,
-      'name': 'Double Eagle Acquisition Corp. (EAGLU)'
-    }, {
-      'id': 832,
-      'name': 'Double Eagle Acquisition Corp. (EAGLW)'
-    }, {
-      'id': 833,
-      'name': 'DragonWave Inc (DRWI)'
-    }, {
-      'id': 834,
-      'name': 'DryShips Inc. (DRYS)'
-    }, {
-      'id': 835,
-      'name': 'DSP Group (DSPG)'
-    }, {
-      'id': 836,
-      'name': 'Duluth Holdings Inc. (DLTH)'
-    }, {
-      'id': 837,
-      'name': 'Dunkin&#39; Brands Group (DNKN)'
-    }, {
-      'id': 838,
-      'name': 'DURECT Corporation (DRRX)'
-    }, {
-      'id': 839,
-      'name': 'DXP Enterprises (DXPE)'
-    }, {
-      'id': 840,
-      'name': 'Dynasil Corporation of America (DYSL)'
-    }, {
-      'id': 841,
-      'name': 'Dynatronics Corporation (DYNT)'
-    }, {
-      'id': 842,
-      'name': 'Dynavax Technologies Corporation (DVAX)'
-    }, {
-      'id': 843,
-      'name': 'E*TRADE Financial Corporation (ETFC)'
-    }, {
-      'id': 844,
-      'name': 'Eagle Bancorp Montana (EBMT)'
-    }, {
-      'id': 845,
-      'name': 'Eagle Bancorp (EGBN)'
-    }, {
-      'id': 846,
-      'name': 'Eagle Bulk Shipping Inc. (EGLE)'
-    }, {
-      'id': 847,
-      'name': 'Eagle Pharmaceuticals (EGRX)'
-    }, {
-      'id': 848,
-      'name': 'Eagleline Acquisition Corp. (IGLE)'
-    }, {
-      'id': 849,
-      'name': 'East West Bancorp (EWBC)'
-    }, {
-      'id': 850,
-      'name': 'Easterly Acquisition Corp. (EACQ)'
-    }, {
-      'id': 851,
-      'name': 'Easterly Acquisition Corp. (EACQU)'
-    }, {
-      'id': 852,
-      'name': 'Easterly Acquisition Corp. (EACQW)'
-    }, {
-      'id': 853,
-      'name': 'Eastern Company (The) (EML)'
-    }, {
-      'id': 854,
-      'name': 'Eastern Virginia Bankshares (EVBS)'
-    }, {
-      'id': 855,
-      'name': 'Eaton Vance NextShares Trust (EVGBC)'
-    }, {
-      'id': 856,
-      'name': 'Eaton Vance NextShares Trust (EVSTC)'
-    }, {
-      'id': 857,
-      'name': 'Eaton Vance NextShares Trust II (EVLMC)'
-    }, {
-      'id': 858,
-      'name': 'eBay Inc. (EBAY)'
-    }, {
-      'id': 859,
-      'name': 'eBay Inc. (EBAYL)'
-    }, {
-      'id': 860,
-      'name': 'Ebix (EBIX)'
-    }, {
-      'id': 861,
-      'name': 'Echelon Corporation (ELON)'
-    }, {
-      'id': 862,
-      'name': 'Echo Global Logistics (ECHO)'
-    }, {
-      'id': 863,
-      'name': 'EchoStar Corporation (SATS)'
-    }, {
-      'id': 864,
-      'name': 'Ecology and Environment (EEI)'
-    }, {
-      'id': 865,
-      'name': 'Eco-Stim Energy Solutions (ESES)'
-    }, {
-      'id': 866,
-      'name': 'EDAP TMS S.A. (EDAP)'
-    }, {
-      'id': 867,
-      'name': 'Edge Therapeutics (EDGE)'
-    }, {
-      'id': 868,
-      'name': 'Edgewater Technology (EDGW)'
-    }, {
-      'id': 869,
-      'name': 'Editas Medicine (EDIT)'
-    }, {
-      'id': 870,
-      'name': 'Educational Development Corporation (EDUC)'
-    }, {
-      'id': 871,
-      'name': 'eGain Corporation (EGAN)'
-    }, {
-      'id': 872,
-      'name': 'Egalet Corporation (EGLT)'
-    }, {
-      'id': 873,
-      'name': 'eHealth (EHTH)'
-    }, {
-      'id': 874,
-      'name': 'Eiger BioPharmaceuticals (EIGR)'
-    }, {
-      'id': 875,
-      'name': 'Ekso Bionics Holdings (EKSO)'
-    }, {
-      'id': 876,
-      'name': 'El Pollo Loco Holdings (LOCO)'
-    }, {
-      'id': 877,
-      'name': 'Elbit Imaging Ltd. (EMITF)'
-    }, {
-      'id': 878,
-      'name': 'Elbit Systems Ltd. (ESLT)'
-    }, {
-      'id': 879,
-      'name': 'Eldorado Resorts (ERI)'
-    }, {
-      'id': 880,
-      'name': 'Electro Scientific Industries (ESIO)'
-    }, {
-      'id': 881,
-      'name': 'Electronic Arts Inc. (EA)'
-    }, {
-      'id': 882,
-      'name': 'Electronics for Imaging (EFII)'
-    }, {
-      'id': 883,
-      'name': 'Electro-Sensors (ELSE)'
-    }, {
-      'id': 884,
-      'name': 'Electrum Special Acquisition Corporation (ELEC)'
-    }, {
-      'id': 885,
-      'name': 'Electrum Special Acquisition Corporation (ELECU)'
-    }, {
-      'id': 886,
-      'name': 'Electrum Special Acquisition Corporation (ELECW)'
-    }, {
-      'id': 887,
-      'name': 'Eleven Biotherapeutics (EBIO)'
-    }, {
-      'id': 888,
-      'name': 'Elkhorn Commodity Rotation Strategy ETF (DWAC)'
-    }, {
-      'id': 889,
-      'name': 'Elmira Savings Bank NY (The) (ESBK)'
-    }, {
-      'id': 890,
-      'name': 'Eltek Ltd. (ELTK)'
-    }, {
-      'id': 891,
-      'name': 'EMC Insurance Group Inc. (EMCI)'
-    }, {
-      'id': 892,
-      'name': 'Emclaire Financial Corp (EMCF)'
-    }, {
-      'id': 893,
-      'name': 'EMCORE Corporation (EMKR)'
-    }, {
-      'id': 894,
-      'name': 'Emmis Communications Corporation (EMMS)'
-    }, {
-      'id': 895,
-      'name': 'Empire Resorts (NYNY)'
-    }, {
-      'id': 896,
-      'name': 'Empire Resources (ERS)'
-    }, {
-      'id': 897,
-      'name': 'Enanta Pharmaceuticals (ENTA)'
-    }, {
-      'id': 898,
-      'name': 'Encore Capital Group Inc (ECPG)'
-    }, {
-      'id': 899,
-      'name': 'Encore Wire Corporation (WIRE)'
-    }, {
-      'id': 900,
-      'name': 'Endo International plc (ENDP)'
-    }, {
-      'id': 901,
-      'name': 'Endocyte (ECYT)'
-    }, {
-      'id': 902,
-      'name': 'Endologix (ELGX)'
-    }, {
-      'id': 903,
-      'name': 'ENDRA Life Sciences Inc. (NDRA)'
-    }, {
-      'id': 904,
-      'name': 'Endurance International Group Holdings (EIGI)'
-    }, {
-      'id': 905,
-      'name': 'Energous Corporation (WATT)'
-    }, {
-      'id': 906,
-      'name': 'Energy Focus (EFOI)'
-    }, {
-      'id': 907,
-      'name': 'Energy Hunter Resources (EHR)'
-    }, {
-      'id': 908,
-      'name': 'Energy Recovery (ERII)'
-    }, {
-      'id': 909,
-      'name': 'Energy XXI Gulf Coast (EXXI)'
-    }, {
-      'id': 910,
-      'name': 'EnerNOC (ENOC)'
-    }, {
-      'id': 911,
-      'name': 'ENGlobal Corporation (ENG)'
-    }, {
-      'id': 912,
-      'name': 'Enphase Energy (ENPH)'
-    }, {
-      'id': 913,
-      'name': 'Enstar Group Limited (ESGR)'
-    }, {
-      'id': 914,
-      'name': 'Entegra Financial Corp. (ENFC)'
-    }, {
-      'id': 915,
-      'name': 'Entegris (ENTG)'
-    }, {
-      'id': 916,
-      'name': 'Entellus Medical (ENTL)'
-    }, {
-      'id': 917,
-      'name': 'EnteroMedics Inc. (ETRM)'
-    }, {
-      'id': 918,
-      'name': 'Enterprise Bancorp Inc (EBTC)'
-    }, {
-      'id': 919,
-      'name': 'Enterprise Financial Services Corporation (EFSC)'
-    }, {
-      'id': 920,
-      'name': 'Entertainment Gaming Asia Incorporated (EGT)'
-    }, {
-      'id': 921,
-      'name': 'Enzymotec Ltd. (ENZY          )'
-    }, {
-      'id': 922,
-      'name': 'Epizyme (EPZM)'
-    }, {
-      'id': 923,
-      'name': 'ePlus inc. (PLUS)'
-    }, {
-      'id': 924,
-      'name': 'Equinix (EQIX)'
-    }, {
-      'id': 925,
-      'name': 'Equitable Financial Corp. (EQFN)'
-    }, {
-      'id': 926,
-      'name': 'Equity Bancshares (EQBK)'
-    }, {
-      'id': 927,
-      'name': 'Ericsson (ERIC)'
-    }, {
-      'id': 928,
-      'name': 'Erie Indemnity Company (ERIE)'
-    }, {
-      'id': 929,
-      'name': 'Escalade (ESCA)'
-    }, {
-      'id': 930,
-      'name': 'Esperion Therapeutics (ESPR)'
-    }, {
-      'id': 931,
-      'name': 'ESSA Bancorp (ESSA)'
-    }, {
-      'id': 932,
-      'name': 'ESSA Pharma Inc. (EPIX)'
-    }, {
-      'id': 933,
-      'name': 'Essendant Inc. (ESND)'
-    }, {
-      'id': 934,
-      'name': 'Etsy (ETSY)'
-    }, {
-      'id': 935,
-      'name': 'Euro Tech Holdings Company Limited (CLWT)'
-    }, {
-      'id': 936,
-      'name': 'Euronet Worldwide (EEFT)'
-    }, {
-      'id': 937,
-      'name': 'Euroseas Ltd. (ESEA)'
-    }, {
-      'id': 938,
-      'name': 'EV Energy Partners (EVEP)'
-    }, {
-      'id': 939,
-      'name': 'Everbridge (EVBG)'
-    }, {
-      'id': 940,
-      'name': 'Ever-Glory International Group (EVK)'
-    }, {
-      'id': 941,
-      'name': 'Everspin Technologies (MRAM)'
-    }, {
-      'id': 942,
-      'name': 'EVINE Live Inc. (EVLV)'
-    }, {
-      'id': 943,
-      'name': 'Evogene Ltd. (EVGN)'
-    }, {
-      'id': 944,
-      'name': 'Evoke Pharma (EVOK)'
-    }, {
-      'id': 945,
-      'name': 'Evolving Systems (EVOL)'
-    }, {
-      'id': 946,
-      'name': 'Exa Corporation (EXA)'
-    }, {
-      'id': 947,
-      'name': 'Exact Sciences Corporation (EXAS)'
-    }, {
-      'id': 948,
-      'name': 'Exactech (EXAC)'
-    }, {
-      'id': 949,
-      'name': 'Exelixis (EXEL)'
-    }, {
-      'id': 950,
-      'name': 'EXFO Inc (EXFO)'
-    }, {
-      'id': 951,
-      'name': 'ExlService Holdings (EXLS)'
-    }, {
-      'id': 952,
-      'name': 'Expedia (EXPE)'
-    }, {
-      'id': 953,
-      'name': 'Expeditors International of Washington (EXPD)'
-    }, {
-      'id': 954,
-      'name': 'Exponent (EXPO)'
-    }, {
-      'id': 955,
-      'name': 'Express Scripts Holding Company (ESRX)'
-    }, {
-      'id': 956,
-      'name': 'Extraction Oil & Gas (XOG)'
-    }, {
-      'id': 957,
-      'name': 'Extreme Networks (EXTR)'
-    }, {
-      'id': 958,
-      'name': 'Eyegate Pharmaceuticals (EYEG)'
-    }, {
-      'id': 959,
-      'name': 'Eyegate Pharmaceuticals (EYEGW)'
-    }, {
-      'id': 960,
-      'name': 'EZCORP (EZPW)'
-    }, {
-      'id': 961,
-      'name': 'F5 Networks (FFIV)'
-    }, {
-      'id': 962,
-      'name': 'Facebook (FB)'
-    }, {
-      'id': 963,
-      'name': 'FairPoint Communications (FRP)'
-    }, {
-      'id': 964,
-      'name': 'FalconStor Software (FALC)'
-    }, {
-      'id': 965,
-      'name': 'Famous Dave&#39;s of America (DAVE)'
-    }, {
-      'id': 966,
-      'name': 'Fanhua Inc. (FANH)'
-    }, {
-      'id': 967,
-      'name': 'Farmer Brothers Company (FARM)'
-    }, {
-      'id': 968,
-      'name': 'Farmers Capital Bank Corporation (FFKT)'
-    }, {
-      'id': 969,
-      'name': 'Farmers National Banc Corp. (FMNB)'
-    }, {
-      'id': 970,
-      'name': 'FARO Technologies (FARO)'
-    }, {
-      'id': 971,
-      'name': 'Fastenal Company (FAST)'
-    }, {
-      'id': 972,
-      'name': 'Fate Therapeutics (FATE)'
-    }, {
-      'id': 973,
-      'name': 'Fauquier Bankshares (FBSS)'
-    }, {
-      'id': 974,
-      'name': 'FBR & Co (FBRC)'
-    }, {
-      'id': 975,
-      'name': 'Federated National Holding Company (FNHC)'
-    }, {
-      'id': 976,
-      'name': 'Female Health Company (The) (FHCO)'
-    }, {
-      'id': 977,
-      'name': 'Fenix Parts (FENX)'
-    }, {
-      'id': 978,
-      'name': 'Ferroglobe PLC (GSM)'
-    }, {
-      'id': 979,
-      'name': 'Fibrocell Science Inc (FCSC)'
-    }, {
-      'id': 980,
-      'name': 'FibroGen (FGEN)'
-    }, {
-      'id': 981,
-      'name': 'Fidelity Nasdaq Composite Index Tracking Stock (ONEQ)'
-    }, {
-      'id': 982,
-      'name': 'Fidelity Southern Corporation (LION)'
-    }, {
-      'id': 983,
-      'name': 'Fidus Investment Corporation (FDUS)'
-    }, {
-      'id': 984,
-      'name': 'Fiesta Restaurant Group (FRGI)'
-    }, {
-      'id': 985,
-      'name': 'Fifth Street Asset Management Inc. (FSAM)'
-    }, {
-      'id': 986,
-      'name': 'Fifth Street Finance Corp. (FSC)'
-    }, {
-      'id': 987,
-      'name': 'Fifth Street Finance Corp. (FSCFL)'
-    }, {
-      'id': 988,
-      'name': 'Fifth Street Senior Floating Rate Corp. (FSFR)'
-    }, {
-      'id': 989,
-      'name': 'Fifth Third Bancorp (FITB)'
-    }, {
-      'id': 990,
-      'name': 'Fifth Third Bancorp (FITBI)'
-    }, {
-      'id': 991,
-      'name': 'Financial Engines (FNGN)'
-    }, {
-      'id': 992,
-      'name': 'Financial Institutions (FISI)'
-    }, {
-      'id': 993,
-      'name': 'Finisar Corporation (FNSR)'
-    }, {
-      'id': 994,
-      'name': 'Finjan Holdings (FNJN)'
-    }, {
-      'id': 995,
-      'name': 'FinTech Acquisition Corp. II (FNTE)'
-    }, {
-      'id': 996,
-      'name': 'FinTech Acquisition Corp. II (FNTEU)'
-    }, {
-      'id': 997,
-      'name': 'FinTech Acquisition Corp. II (FNTEW)'
-    }, {
-      'id': 998,
-      'name': 'FireEye (FEYE)'
-    }, {
-      'id': 999,
-      'name': 'First Bancorp (FBNC)'
-    }, {
-      'id': 1000,
-      'name': 'First Bancorp (FNLC)'
-    }, {
-      'id': 1001,
-      'name': 'First Bank (FRBA)'
-    }, {
-      'id': 1002,
-      'name': 'First Busey Corporation (BUSE)'
-    }, {
-      'id': 1003,
-      'name': 'First Business Financial Services (FBIZ)'
-    }, {
-      'id': 1004,
-      'name': 'First Capital (FCAP)'
-    }, {
-      'id': 1005,
-      'name': 'First Cash (FCFS)'
-    }, {
-      'id': 1006,
-      'name': 'First Citizens BancShares (FCNCA)'
-    }, {
-      'id': 1007,
-      'name': 'First Community Bancshares (FCBC)'
-    }, {
-      'id': 1008,
-      'name': 'First Community Corporation (FCCO)'
-    }, {
-      'id': 1009,
-      'name': 'First Community Financial Partners (FCFP)'
-    }, {
-      'id': 1010,
-      'name': 'First Connecticut Bancorp (FBNK)'
-    }, {
-      'id': 1011,
-      'name': 'First Defiance Financial Corp. (FDEF)'
-    }, {
-      'id': 1012,
-      'name': 'First Financial Bancorp. (FFBC)'
-    }, {
-      'id': 1013,
-      'name': 'First Financial Bancorp. (FFBCW)'
-    }, {
-      'id': 1014,
-      'name': 'First Financial Bankshares (FFIN)'
-    }, {
-      'id': 1015,
-      'name': 'First Financial Corporation Indiana (THFF)'
-    }, {
-      'id': 1016,
-      'name': 'First Financial Northwest (FFNW)'
-    }, {
-      'id': 1017,
-      'name': 'First Foundation Inc. (FFWM)'
-    }, {
-      'id': 1018,
-      'name': 'First Guaranty Bancshares (FGBI)'
-    }, {
-      'id': 1019,
-      'name': 'First Hawaiian (FHB)'
-    }, {
-      'id': 1020,
-      'name': 'First Internet Bancorp (INBK)'
-    }, {
-      'id': 1021,
-      'name': 'First Internet Bancorp (INBKL)'
-    }, {
-      'id': 1022,
-      'name': 'First Interstate BancSystem (FIBK)'
-    }, {
-      'id': 1023,
-      'name': 'First Merchants Corporation (FRME)'
-    }, {
-      'id': 1024,
-      'name': 'First Mid-Illinois Bancshares (FMBH)'
-    }, {
-      'id': 1025,
-      'name': 'First Midwest Bancorp (FMBI)'
-    }, {
-      'id': 1026,
-      'name': 'First NBC Bank Holding Company (FNBC)'
-    }, {
-      'id': 1027,
-      'name': 'First Northwest Bancorp (FNWB)'
-    }, {
-      'id': 1028,
-      'name': 'First Savings Financial Group (FSFG)'
-    }, {
-      'id': 1029,
-      'name': 'First Solar (FSLR)'
-    }, {
-      'id': 1030,
-      'name': 'First South Bancorp Inc (FSBK)'
-    }, {
-      'id': 1031,
-      'name': 'First Trust Alternative Absolute Return Strategy ETF (FAAR)'
-    }, {
-      'id': 1032,
-      'name': 'First Trust Asia Pacific Ex-Japan AlphaDEX Fund (FPA)'
-    }, {
-      'id': 1033,
-      'name': 'First Trust BICK Index Fund (BICK)'
-    }, {
-      'id': 1034,
-      'name': 'First Trust Brazil AlphaDEX Fund (FBZ)'
-    }, {
-      'id': 1035,
-      'name': 'First Trust Canada AlphaDEX Fund (FCAN)'
-    }, {
-      'id': 1036,
-      'name': 'First Trust Capital Strength ETF (FTCS)'
-    }, {
-      'id': 1037,
-      'name': 'First Trust CEF Income Opportunity ETF (FCEF)'
-    }, {
-      'id': 1038,
-      'name': 'First Trust China AlphaDEX Fund (FCA)'
-    }, {
-      'id': 1039,
-      'name': 'First Trust Cloud Computing ETF (SKYY)'
-    }, {
-      'id': 1040,
-      'name': 'First Trust Developed Markets Ex-US AlphaDEX Fund (FDT)'
-    }, {
-      'id': 1041,
-      'name': 'First Trust Developed Markets ex-US Small Cap AlphaDEX Fund (FDTS)'
-    }, {
-      'id': 1042,
-      'name': 'First Trust Dorsey Wright Dynamic Focus 5 ETF (FVC)'
-    }, {
-      'id': 1043,
-      'name': 'First Trust Dorsey Wright Focus 5 ETF (FV)'
-    }, {
-      'id': 1044,
-      'name': 'First Trust Dorsey Wright International Focus 5 ETF (IFV)'
-    }, {
-      'id': 1045,
-      'name': 'First Trust Emerging Markets AlphaDEX Fund (FEM)'
-    }, {
-      'id': 1046,
-      'name': 'First Trust Emerging Markets Local Currency Bond ETF (FEMB)'
-    }, {
-      'id': 1047,
-      'name': 'First Trust Emerging Markets Small Cap AlphaDEX Fund (FEMS)'
-    }, {
-      'id': 1048,
-      'name': 'First Trust Enhanced Short Maturity ETF (FTSM)'
-    }, {
-      'id': 1049,
-      'name': 'First Trust Europe AlphaDEX Fund (FEP)'
-    }, {
-      'id': 1050,
-      'name': 'First Trust Eurozone AlphaDEX ETF (FEUZ)'
-    }, {
-      'id': 1051,
-      'name': 'First Trust Germany AlphaDEX Fund (FGM)'
-    }, {
-      'id': 1052,
-      'name': 'First Trust Global Tactical Commodity Strategy Fund (FTGC)'
-    }, {
-      'id': 1053,
-      'name': 'First Trust High Income ETF (FTHI)'
-    }, {
-      'id': 1054,
-      'name': 'First Trust High Yield Long/Short ETF (HYLS)'
-    }, {
-      'id': 1055,
-      'name': 'First Trust Hong Kong AlphaDEX Fund (FHK)'
-    }, {
-      'id': 1056,
-      'name': 'First Trust Indxx Global Agriculture ETF (FTAG)'
-    }, {
-      'id': 1057,
-      'name': 'First Trust Indxx Global Natural Resources Income ETF (FTRI)'
-    }, {
-      'id': 1058,
-      'name': 'First Trust International IPO ETF (FPXI)'
-    }, {
-      'id': 1059,
-      'name': 'First Trust International Multi-Asset Diversified Income Index (YDIV)'
-    }, {
-      'id': 1060,
-      'name': 'First Trust Japan AlphaDEX Fund (FJP)'
-    }, {
-      'id': 1061,
-      'name': 'First Trust Large Cap Core AlphaDEX Fund (FEX)'
-    }, {
-      'id': 1062,
-      'name': 'First Trust Large Cap Growth AlphaDEX Fund (FTC)'
-    }, {
-      'id': 1063,
-      'name': 'First Trust Large Cap Value AlphaDEX Fund (FTA)'
-    }, {
-      'id': 1064,
-      'name': 'First Trust Latin America AlphaDEX Fund (FLN)'
-    }, {
-      'id': 1065,
-      'name': 'First Trust Low Beta Income ETF (FTLB)'
-    }, {
-      'id': 1066,
-      'name': 'First Trust Low Duration Opportunities ETF (LMBS)'
-    }, {
-      'id': 1067,
-      'name': 'First Trust Managed Municipal ETF (FMB)'
-    }, {
-      'id': 1068,
-      'name': 'First Trust Mega Cap AlphaDEX Fund (FMK)'
-    }, {
-      'id': 1069,
-      'name': 'First Trust Mid Cap Core AlphaDEX Fund (FNX)'
-    }, {
-      'id': 1070,
-      'name': 'First Trust Mid Cap Growth AlphaDEX Fund (FNY)'
-    }, {
-      'id': 1071,
-      'name': 'First Trust Mid Cap Value AlphaDEX Fund (FNK)'
-    }, {
-      'id': 1072,
-      'name': 'First Trust Multi Cap Growth AlphaDEX Fund (FAD)'
-    }, {
-      'id': 1073,
-      'name': 'First Trust Multi Cap Value AlphaDEX Fund (FAB)'
-    }, {
-      'id': 1074,
-      'name': 'First Trust Multi-Asset Diversified Income Index Fund (MDIV)'
-    }, {
-      'id': 1075,
-      'name': 'First Trust Municipal CEF Income Opportunity ETF (MCEF)'
-    }, {
-      'id': 1076,
-      'name': 'First Trust NASDAQ ABA Community Bank Index Fund (QABA)'
-    }, {
-      'id': 1077,
-      'name': 'First Trust Nasdaq Bank ETF (FTXO)'
-    }, {
-      'id': 1078,
-      'name': 'First Trust NASDAQ Clean Edge Green Energy Index Fund (QCLN)'
-    }, {
-      'id': 1079,
-      'name': 'First Trust NASDAQ Clean Edge Smart Grid Infrastructure Index  (GRID)'
-    }, {
-      'id': 1080,
-      'name': 'First Trust NASDAQ Cybersecurity ETF (CIBR)'
-    }, {
-      'id': 1081,
-      'name': 'First Trust Nasdaq Food & Beverage ETF (FTXG)'
-    }, {
-      'id': 1082,
-      'name': 'First Trust NASDAQ Global Auto Index Fund (CARZ)'
-    }, {
-      'id': 1083,
-      'name': 'First Trust Nasdaq Oil & Gas ETF (FTXN)'
-    }, {
-      'id': 1084,
-      'name': 'First Trust Nasdaq Pharmaceuticals ETF (FTXH)'
-    }, {
-      'id': 1085,
-      'name': 'First Trust Nasdaq Retail ETF (FTXD)'
-    }, {
-      'id': 1086,
-      'name': 'First Trust Nasdaq Semiconductor ETF (FTXL)'
-    }, {
-      'id': 1087,
-      'name': 'First Trust NASDAQ Smartphone Index Fund (FONE)'
-    }, {
-      'id': 1088,
-      'name': 'First Trust NASDAQ Technology Dividend Index Fund (TDIV)'
-    }, {
-      'id': 1089,
-      'name': 'First Trust Nasdaq Transportation ETF (FTXR)'
-    }, {
-      'id': 1090,
-      'name': 'First Trust NASDAQ-100 Equal Weighted Index Fund (QQEW)'
-    }, {
-      'id': 1091,
-      'name': 'First Trust NASDAQ-100 Ex-Technology Sector Index Fund (QQXT)'
-    }, {
-      'id': 1092,
-      'name': 'First Trust NASDAQ-100- Technology Index Fund (QTEC)'
-    }, {
-      'id': 1093,
-      'name': 'First Trust RBA American Industrial Renaissance ETF (AIRR)'
-    }, {
-      'id': 1094,
-      'name': 'First Trust RBA Quality Income ETF (QINC)'
-    }, {
-      'id': 1095,
-      'name': 'First Trust Rising Dividend Achievers ETF (RDVY)'
-    }, {
-      'id': 1096,
-      'name': 'First Trust RiverFront Dynamic Asia Pacific ETF (RFAP)'
-    }, {
-      'id': 1097,
-      'name': 'First Trust RiverFront Dynamic Developed International ETF (RFDI)'
-    }, {
-      'id': 1098,
-      'name': 'First Trust RiverFront Dynamic Emerging Markets ETF (RFEM)'
-    }, {
-      'id': 1099,
-      'name': 'First Trust RiverFront Dynamic Europe ETF (RFEU)'
-    }, {
-      'id': 1100,
-      'name': 'First Trust Senior Loan Fund ETF (FTSL)'
-    }, {
-      'id': 1101,
-      'name': 'First Trust Small Cap Core AlphaDEX Fund (FYX)'
-    }, {
-      'id': 1102,
-      'name': 'First Trust Small Cap Growth AlphaDEX Fund (FYC)'
-    }, {
-      'id': 1103,
-      'name': 'First Trust Small Cap Value AlphaDEX Fund (FYT)'
-    }, {
-      'id': 1104,
-      'name': 'First Trust South Korea AlphaDEX Fund (FKO)'
-    }, {
-      'id': 1105,
-      'name': 'First Trust SSI Strategic Convertible Securities ETF (FCVT)'
-    }, {
-      'id': 1106,
-      'name': 'First Trust Strategic Income ETF (FDIV)'
-    }, {
-      'id': 1107,
-      'name': 'First Trust Switzerland AlphaDEX Fund (FSZ)'
-    }, {
-      'id': 1108,
-      'name': 'First Trust Taiwan AlphaDEX Fund (FTW)'
-    }, {
-      'id': 1109,
-      'name': 'First Trust TCW Opportunistic Fixed Income ETF (FIXD)'
-    }, {
-      'id': 1110,
-      'name': 'First Trust Total US Market AlphaDEX ETF (TUSA)'
-    }, {
-      'id': 1111,
-      'name': 'First Trust United Kingdom AlphaDEX Fund (FKU)'
-    }, {
-      'id': 1112,
-      'name': 'First United Corporation (FUNC)'
-    }, {
-      'id': 1113,
-      'name': 'First US Bancshares (FUSB)'
-    }, {
-      'id': 1114,
-      'name': 'Firsthand Technology Value Fund (SVVC)'
-    }, {
-      'id': 1115,
-      'name': 'FirstService Corporation (FSV)'
-    }, {
-      'id': 1116,
-      'name': 'Fiserv (FISV)'
-    }, {
-      'id': 1117,
-      'name': 'Five Below (FIVE)'
-    }, {
-      'id': 1118,
-      'name': 'Five Prime Therapeutics (FPRX)'
-    }, {
-      'id': 1119,
-      'name': 'Five Star Senior Living Inc. (FVE)'
-    }, {
-      'id': 1120,
-      'name': 'Five9 (FIVN)'
-    }, {
-      'id': 1121,
-      'name': 'Flex Ltd. (FLEX)'
-    }, {
-      'id': 1122,
-      'name': 'Flex Pharma (FLKS)'
-    }, {
-      'id': 1123,
-      'name': 'Flexion Therapeutics (FLXN)'
-    }, {
-      'id': 1124,
-      'name': 'FlexShares Credit-Scored US Corporate Bond Index Fund (SKOR)'
-    }, {
-      'id': 1125,
-      'name': 'FlexShares Credit-Scored US Long Corporate Bond Index Fund (LKOR)'
-    }, {
-      'id': 1126,
-      'name': 'FlexShares Disciplined Duration MBS Index Fund (MBSD)'
-    }, {
-      'id': 1127,
-      'name': 'FlexShares Real Assets Allocation Index Fund (ASET)'
-    }, {
-      'id': 1128,
-      'name': 'FlexShares STOXX Global ESG Impact Index Fund (ESGG)'
-    }, {
-      'id': 1129,
-      'name': 'FlexShares STOXX US ESG Impact Index Fund (ESG)'
-    }, {
-      'id': 1130,
-      'name': 'FlexShares US Quality Large Cap Index Fund (QLC)'
-    }, {
-      'id': 1131,
-      'name': 'FlexShopper (FPAY)'
-    }, {
-      'id': 1132,
-      'name': 'Flexsteel Industries (FLXS)'
-    }, {
-      'id': 1133,
-      'name': 'FLIR Systems (FLIR)'
-    }, {
-      'id': 1134,
-      'name': 'Fluidigm Corporation (FLDM)'
-    }, {
-      'id': 1135,
-      'name': 'Flushing Financial Corporation (FFIC)'
-    }, {
-      'id': 1136,
-      'name': 'Foamix Pharmaceuticals Ltd. (FOMX)'
-    }, {
-      'id': 1137,
-      'name': 'Fogo de Chao (FOGO)'
-    }, {
-      'id': 1138,
-      'name': 'Fonar Corporation (FONR)'
-    }, {
-      'id': 1139,
-      'name': 'FORM Holdings Corp. (FH)'
-    }, {
-      'id': 1140,
-      'name': 'FormFactor (FORM)'
-    }, {
-      'id': 1141,
-      'name': 'Formula Systems (1985) Ltd. (FORTY)'
-    }, {
-      'id': 1142,
-      'name': 'Forrester Research (FORR)'
-    }, {
-      'id': 1143,
-      'name': 'Forterra (FRTA)'
-    }, {
-      'id': 1144,
-      'name': 'Fortinet (FTNT)'
-    }, {
-      'id': 1145,
-      'name': 'Fortress Biotech (FBIO)'
-    }, {
-      'id': 1146,
-      'name': 'Forum Merger Corporation (FMCI)'
-    }, {
-      'id': 1147,
-      'name': 'Forum Merger Corporation (FMCIU)'
-    }, {
-      'id': 1148,
-      'name': 'Forward Air Corporation (FWRD)'
-    }, {
-      'id': 1149,
-      'name': 'Forward Industries (FORD)'
-    }, {
-      'id': 1150,
-      'name': 'Forward Pharma A/S (FWP)'
-    }, {
-      'id': 1151,
-      'name': 'Fossil Group (FOSL)'
-    }, {
-      'id': 1152,
-      'name': 'Foundation Medicine (FMI)'
-    }, {
-      'id': 1153,
-      'name': 'Fox Factory Holding Corp. (FOXF)'
-    }, {
-      'id': 1154,
-      'name': 'Francesca&#39;s Holdings Corporation (FRAN)'
-    }, {
-      'id': 1155,
-      'name': 'Franklin Electric Co. (FELE)'
-    }, {
-      'id': 1156,
-      'name': 'Fred&#39;s (FRED)'
-    }, {
-      'id': 1157,
-      'name': 'Freightcar America (RAIL)'
-    }, {
-      'id': 1158,
-      'name': 'Frequency Electronics (FEIM)'
-    }, {
-      'id': 1159,
-      'name': 'Freshpet (FRPT)'
-    }, {
-      'id': 1160,
-      'name': 'FRONTEO (FTEO)'
-    }, {
-      'id': 1161,
-      'name': 'Frontier Communications Corporation (FTR)'
-    }, {
-      'id': 1162,
-      'name': 'Frontier Communications Corporation (FTRPR)'
-    }, {
-      'id': 1163,
-      'name': 'FRP Holdings (FRPH)'
-    }, {
-      'id': 1164,
-      'name': 'FS Bancorp (FSBW)'
-    }, {
-      'id': 1165,
-      'name': 'FSB Bancorp (FSBC)'
-    }, {
-      'id': 1166,
-      'name': 'FTD Companies (FTD)'
-    }, {
-      'id': 1167,
-      'name': 'Fuel Tech (FTEK)'
-    }, {
-      'id': 1168,
-      'name': 'FuelCell Energy (FCEL)'
-    }, {
-      'id': 1169,
-      'name': 'Fulgent Genetics (FLGT)'
-    }, {
-      'id': 1170,
-      'name': 'Fuling Global Inc. (FORK)'
-    }, {
-      'id': 1171,
-      'name': 'Full House Resorts (FLL)'
-    }, {
-      'id': 1172,
-      'name': 'Full Spectrum Inc. (FMAX)'
-    }, {
-      'id': 1173,
-      'name': 'Fulton Financial Corporation (FULT)'
-    }, {
-      'id': 1174,
-      'name': 'Function(x) Inc. (FNCX)'
-    }, {
-      'id': 1175,
-      'name': 'Fusion Telecommunications International (FSNN)'
-    }, {
-      'id': 1176,
-      'name': 'Fuwei Films (Holdings) Co. (FFHL)'
-    }, {
-      'id': 1177,
-      'name': 'G. Willi-Food International (WILC)'
-    }, {
-      'id': 1178,
-      'name': 'Gabelli NextShares Trust (FOANC)'
-    }, {
-      'id': 1179,
-      'name': 'Gabelli NextShares Trust (MOGLC)'
-    }, {
-      'id': 1180,
-      'name': 'Gaia (GAIA)'
-    }, {
-      'id': 1181,
-      'name': 'Galapagos NV (GLPG)'
-    }, {
-      'id': 1182,
-      'name': 'Galectin Therapeutics Inc. (GALT)'
-    }, {
-      'id': 1183,
-      'name': 'Galena Biopharma (GALE)'
-    }, {
-      'id': 1184,
-      'name': 'Galmed Pharmaceuticals Ltd. (GLMD)'
-    }, {
-      'id': 1185,
-      'name': 'Gaming and Leisure Properties (GLPI)'
-    }, {
-      'id': 1186,
-      'name': 'Gaming Partners International Corporation (GPIC)'
-    }, {
-      'id': 1187,
-      'name': 'Garmin Ltd. (GRMN)'
-    }, {
-      'id': 1188,
-      'name': 'Garrison Capital Inc. (GARS)'
-    }, {
-      'id': 1189,
-      'name': 'GDS Holdings Limited (GDS)'
-    }, {
-      'id': 1190,
-      'name': 'Gemphire Therapeutics Inc. (GEMP)'
-    }, {
-      'id': 1191,
-      'name': 'Gencor Industries Inc. (GENC)'
-    }, {
-      'id': 1192,
-      'name': 'General Communication (GNCMA)'
-    }, {
-      'id': 1193,
-      'name': 'General Finance Corporation (GFN)'
-    }, {
-      'id': 1194,
-      'name': 'General Finance Corporation (GFNCP)'
-    }, {
-      'id': 1195,
-      'name': 'General Finance Corporation (GFNSL)'
-    }, {
-      'id': 1196,
-      'name': 'Genetic Technologies Ltd (GENE)'
-    }, {
-      'id': 1197,
-      'name': 'Genius Brands International (GNUS)'
-    }, {
-      'id': 1198,
-      'name': 'GenMark Diagnostics (GNMK)'
-    }, {
-      'id': 1199,
-      'name': 'Genocea Biosciences (GNCA)'
-    }, {
-      'id': 1200,
-      'name': 'Genomic Health (GHDX)'
-    }, {
-      'id': 1201,
-      'name': 'GenSight Biologics S.A. (GNST)'
-    }, {
-      'id': 1202,
-      'name': 'Gentex Corporation (GNTX)'
-    }, {
-      'id': 1203,
-      'name': 'Gentherm Inc (THRM)'
-    }, {
-      'id': 1204,
-      'name': 'GenVec (GNVC)'
-    }, {
-      'id': 1205,
-      'name': 'Georgetown Bancorp (GTWN)'
-    }, {
-      'id': 1206,
-      'name': 'Geospace Technologies Corporation (GEOS)'
-    }, {
-      'id': 1207,
-      'name': 'German American Bancorp (GABC)'
-    }, {
-      'id': 1208,
-      'name': 'Geron Corporation (GERN)'
-    }, {
-      'id': 1209,
-      'name': 'Gevo (GEVO)'
-    }, {
-      'id': 1210,
-      'name': 'Gibraltar Industries (ROCK)'
-    }, {
-      'id': 1211,
-      'name': 'GigaMedia Limited (GIGM)'
-    }, {
-      'id': 1212,
-      'name': 'Giga-tronics Incorporated (GIGA)'
-    }, {
-      'id': 1213,
-      'name': 'G-III Apparel Group (GIII)'
-    }, {
-      'id': 1214,
-      'name': 'Gilat Satellite Networks Ltd. (GILT)'
-    }, {
-      'id': 1215,
-      'name': 'Gilead Sciences (GILD)'
-    }, {
-      'id': 1216,
-      'name': 'Glacier Bancorp (GBCI)'
-    }, {
-      'id': 1217,
-      'name': 'Gladstone Capital Corporation (GLAD)'
-    }, {
-      'id': 1218,
-      'name': 'Gladstone Capital Corporation (GLADO)'
-    }, {
-      'id': 1219,
-      'name': 'Gladstone Commercial Corporation (GOOD)'
-    }, {
-      'id': 1220,
-      'name': 'Gladstone Commercial Corporation (GOODM)'
-    }, {
-      'id': 1221,
-      'name': 'Gladstone Commercial Corporation (GOODO)'
-    }, {
-      'id': 1222,
-      'name': 'Gladstone Commercial Corporation (GOODP)'
-    }, {
-      'id': 1223,
-      'name': 'Gladstone Investment Corporation (GAIN)'
-    }, {
-      'id': 1224,
-      'name': 'Gladstone Investment Corporation (GAINM)'
-    }, {
-      'id': 1225,
-      'name': 'Gladstone Investment Corporation (GAINN)'
-    }, {
-      'id': 1226,
-      'name': 'Gladstone Investment Corporation (GAINO)'
-    }, {
-      'id': 1227,
-      'name': 'Gladstone Land Corporation (LAND)'
-    }, {
-      'id': 1228,
-      'name': 'Gladstone Land Corporation (LANDP)'
-    }, {
-      'id': 1229,
-      'name': 'Glen Burnie Bancorp (GLBZ)'
-    }, {
-      'id': 1230,
-      'name': 'Global Blood Therapeutics (GBT)'
-    }, {
-      'id': 1231,
-      'name': 'Global Brokerage (GLBR)'
-    }, {
-      'id': 1232,
-      'name': 'Global Eagle Entertainment Inc. (ENT)'
-    }, {
-      'id': 1233,
-      'name': 'Global Indemnity Limited (GBLI)'
-    }, {
-      'id': 1234,
-      'name': 'Global Indemnity Limited (GBLIZ)'
-    }, {
-      'id': 1235,
-      'name': 'Global Partner Acquisition Corp. (GPAC)'
-    }, {
-      'id': 1236,
-      'name': 'Global Partner Acquisition Corp. (GPACU)'
-    }, {
-      'id': 1237,
-      'name': 'Global Partner Acquisition Corp. (GPACW)'
-    }, {
-      'id': 1238,
-      'name': 'Global Self Storage (SELF)'
-    }, {
-      'id': 1239,
-      'name': 'Global Sources Ltd. (GSOL)'
-    }, {
-      'id': 1240,
-      'name': 'Global Water Resources (GWRS)'
-    }, {
-      'id': 1241,
-      'name': 'Global X Conscious Companies ETF (KRMA)'
-    }, {
-      'id': 1242,
-      'name': 'Global X FinTech ETF (FINX)'
-    }, {
-      'id': 1243,
-      'name': 'Global X Guru Activist ETF (ACTX)'
-    }, {
-      'id': 1244,
-      'name': 'Global X Health & Wellness Thematic ETF (BFIT)'
-    }, {
-      'id': 1245,
-      'name': 'Global X Internet of Things ETF (SNSR)'
-    }, {
-      'id': 1246,
-      'name': 'Global X Longevity Thematic ETF (LNGR)'
-    }, {
-      'id': 1247,
-      'name': 'Global X Millennials Thematic ETF (MILN)'
-    }, {
-      'id': 1248,
-      'name': 'Global X MSCI SuperDividend EAFE ETF (EFAS)'
-    }, {
-      'id': 1249,
-      'name': 'Global X NASDAQ China Technology ETF (QQQC)'
-    }, {
-      'id': 1250,
-      'name': 'Global X Robotics & Artificial Intelligence ETF (BOTZ)'
-    }, {
-      'id': 1251,
-      'name': 'Global X S&P 500 Catholic Values ETF (CATH)'
-    }, {
-      'id': 1252,
-      'name': 'Global X Social Media ETF (SOCL)'
-    }, {
-      'id': 1253,
-      'name': 'Global X SuperDividend Alternatives ETF (ALTY)'
-    }, {
-      'id': 1254,
-      'name': 'Global X SuperDividend REIT ETF (SRET)'
-    }, {
-      'id': 1255,
-      'name': 'Global X Yieldco Index ETF (YLCO)'
-    }, {
-      'id': 1256,
-      'name': 'Globus Maritime Limited (GLBS)'
-    }, {
-      'id': 1257,
-      'name': 'Glu Mobile Inc. (GLUU)'
-    }, {
-      'id': 1258,
-      'name': 'GlycoMimetics (GLYC)'
-    }, {
-      'id': 1259,
-      'name': 'Gogo Inc. (GOGO)'
-    }, {
-      'id': 1260,
-      'name': 'Golar LNG Limited (GLNG)'
-    }, {
-      'id': 1261,
-      'name': 'Golar LNG Partners LP (GMLP)'
-    }, {
-      'id': 1262,
-      'name': 'Golden Entertainment (GDEN)'
-    }, {
-      'id': 1263,
-      'name': 'Golden Ocean Group Limited (GOGL)'
-    }, {
-      'id': 1264,
-      'name': 'Golub Capital BDC (GBDC)'
-    }, {
-      'id': 1265,
-      'name': 'Good Times Restaurants Inc. (GTIM)'
-    }, {
-      'id': 1266,
-      'name': 'GoPro (GPRO)'
-    }, {
-      'id': 1267,
-      'name': 'Gores Holdings II (GSHT)'
-    }, {
-      'id': 1268,
-      'name': 'Gores Holdings II (GSHTU)'
-    }, {
-      'id': 1269,
-      'name': 'Gores Holdings II (GSHTW)'
-    }, {
-      'id': 1270,
-      'name': 'Government Properties Income Trust (GOV)'
-    }, {
-      'id': 1271,
-      'name': 'Government Properties Income Trust (GOVNI)'
-    }, {
-      'id': 1272,
-      'name': 'GP Investments Acquisition Corp. (GPIA)'
-    }, {
-      'id': 1273,
-      'name': 'GP Investments Acquisition Corp. (GPIAU)'
-    }, {
-      'id': 1274,
-      'name': 'GP Investments Acquisition Corp. (GPIAW)'
-    }, {
-      'id': 1275,
-      'name': 'Grand Canyon Education (LOPE)'
-    }, {
-      'id': 1276,
-      'name': 'GRAVITY Co. (GRVY)'
-    }, {
-      'id': 1277,
-      'name': 'Great Elm Capital Corp. (FULLL)'
-    }, {
-      'id': 1278,
-      'name': 'Great Elm Capital Corp. (GECC)'
-    }, {
-      'id': 1279,
-      'name': 'Great Elm Capital Group (GEC)'
-    }, {
-      'id': 1280,
-      'name': 'Great Lakes Dredge & Dock Corporation (GLDD)'
-    }, {
-      'id': 1281,
-      'name': 'Great Southern Bancorp (GSBC)'
-    }, {
-      'id': 1282,
-      'name': 'Green Bancorp (GNBC)'
-    }, {
-      'id': 1283,
-      'name': 'Green Brick Partners (GRBK)'
-    }, {
-      'id': 1284,
-      'name': 'Green Plains Partners LP (GPP)'
-    }, {
-      'id': 1285,
-      'name': 'Green Plains (GPRE)'
-    }, {
-      'id': 1286,
-      'name': 'Greene County Bancorp (GCBC)'
-    }, {
-      'id': 1287,
-      'name': 'Greenlight Reinsurance (GLRE)'
-    }, {
-      'id': 1288,
-      'name': 'Gridsum Holding Inc. (GSUM)'
-    }, {
-      'id': 1289,
-      'name': 'Griffin Industrial Realty (GRIF)'
-    }, {
-      'id': 1290,
-      'name': 'Grifols (GRFS)'
-    }, {
-      'id': 1291,
-      'name': 'Groupon (GRPN)'
-    }, {
-      'id': 1292,
-      'name': 'Grupo Aeroportuario del Centro Norte S.A.B. de C.V. (OMAB)'
-    }, {
-      'id': 1293,
-      'name': 'Grupo Financiero Galicia S.A. (GGAL)'
-    }, {
-      'id': 1294,
-      'name': 'GSI Technology (GSIT)'
-    }, {
-      'id': 1295,
-      'name': 'GSV Capital Corp (GSVC)'
-    }, {
-      'id': 1296,
-      'name': 'GTx (GTXI)'
-    }, {
-      'id': 1297,
-      'name': 'GTY Technology Holdings (GTYH)'
-    }, {
-      'id': 1298,
-      'name': 'GTY Technology Holdings (GTYHU)'
-    }, {
-      'id': 1299,
-      'name': 'GTY Technology Holdings (GTYHW)'
-    }, {
-      'id': 1300,
-      'name': 'Guaranty Bancorp (GBNK)'
-    }, {
-      'id': 1301,
-      'name': 'Guaranty Federal Bancshares (GFED)'
-    }, {
-      'id': 1302,
-      'name': 'Guidance Software (GUID)'
-    }, {
-      'id': 1303,
-      'name': 'Gulf Island Fabrication (GIFI)'
-    }, {
-      'id': 1304,
-      'name': 'Gulf Resources (GURE)'
-    }, {
-      'id': 1305,
-      'name': 'Gulfport Energy Corporation (GPOR)'
-    }, {
-      'id': 1306,
-      'name': 'GW Pharmaceuticals Plc (GWPH)'
-    }, {
-      'id': 1307,
-      'name': 'GWG Holdings (GWGH)'
-    }, {
-      'id': 1308,
-      'name': 'Gyrodyne  (GYRO)'
-    }, {
-      'id': 1309,
-      'name': 'H&E Equipment Services (HEES)'
-    }, {
-      'id': 1310,
-      'name': 'Hailiang Education Group Inc. (HLG)'
-    }, {
-      'id': 1311,
-      'name': 'Hallador Energy Company (HNRG)'
-    }, {
-      'id': 1312,
-      'name': 'Hallmark Financial Services (HALL)'
-    }, {
-      'id': 1313,
-      'name': 'Halozyme Therapeutics (HALO)'
-    }, {
-      'id': 1314,
-      'name': 'Hamilton Bancorp (HBK)'
-    }, {
-      'id': 1315,
-      'name': 'Hamilton Lane Incorporated (HLNE)'
-    }, {
-      'id': 1316,
-      'name': 'Hancock Holding Company (HBHC)'
-    }, {
-      'id': 1317,
-      'name': 'Hancock Holding Company (HBHCL)'
-    }, {
-      'id': 1318,
-      'name': 'Handy & Harman Ltd. (HNH)'
-    }, {
-      'id': 1319,
-      'name': 'Hanmi Financial Corporation (HAFC)'
-    }, {
-      'id': 1320,
-      'name': 'Hanwha Q CELLS Co. (HQCL)'
-    }, {
-      'id': 1321,
-      'name': 'HarborOne Bancorp (HONE)'
-    }, {
-      'id': 1322,
-      'name': 'Hardinge Inc. (HDNG)'
-    }, {
-      'id': 1323,
-      'name': 'Harmonic Inc. (HLIT)'
-    }, {
-      'id': 1324,
-      'name': 'Harmony Merger Corp. (HRMN)'
-    }, {
-      'id': 1325,
-      'name': 'Harmony Merger Corp. (HRMNU)'
-    }, {
-      'id': 1326,
-      'name': 'Harmony Merger Corp. (HRMNW)'
-    }, {
-      'id': 1327,
-      'name': 'Harvard Bioscience (HBIO)'
-    }, {
-      'id': 1328,
-      'name': 'Harvest Capital Credit Corporation (HCAP)'
-    }, {
-      'id': 1329,
-      'name': 'Harvest Capital Credit Corporation (HCAPL)'
-    }, {
-      'id': 1330,
-      'name': 'Hasbro (HAS)'
-    }, {
-      'id': 1331,
-      'name': 'Hawaiian Holdings (HA)'
-    }, {
-      'id': 1332,
-      'name': 'Hawaiian Telcom Holdco (HCOM)'
-    }, {
-      'id': 1333,
-      'name': 'Hawkins (HWKN)'
-    }, {
-      'id': 1334,
-      'name': 'Hawthorn Bancshares (HWBK)'
-    }, {
-      'id': 1335,
-      'name': 'Haynes International (HAYN)'
-    }, {
-      'id': 1336,
-      'name': 'HD Supply Holdings (HDS)'
-    }, {
-      'id': 1337,
-      'name': 'Health Insurance Innovations (HIIQ)'
-    }, {
-      'id': 1338,
-      'name': 'Healthcare Services Group (HCSG)'
-    }, {
-      'id': 1339,
-      'name': 'HealthEquity (HQY)'
-    }, {
-      'id': 1340,
-      'name': 'HealthStream (HSTM)'
-    }, {
-      'id': 1341,
-      'name': 'Heartland Express (HTLD)'
-    }, {
-      'id': 1342,
-      'name': 'Heartland Financial USA (HTLF)'
-    }, {
-      'id': 1343,
-      'name': 'Heat Biologics (HTBX)'
-    }, {
-      'id': 1344,
-      'name': 'Hebron Technology Co. (HEBT)'
-    }, {
-      'id': 1345,
-      'name': 'Heidrick & Struggles International (HSII)'
-    }, {
-      'id': 1346,
-      'name': 'Helen of Troy Limited (HELE)'
-    }, {
-      'id': 1347,
-      'name': 'Helios and Matheson Analytics Inc (HMNY)'
-    }, {
-      'id': 1348,
-      'name': 'Hemisphere Media Group (HMTV)'
-    }, {
-      'id': 1349,
-      'name': 'Hennessy Advisors (HNNA)'
-    }, {
-      'id': 1350,
-      'name': 'Henry Schein (HSIC)'
-    }, {
-      'id': 1351,
-      'name': 'Heritage Commerce Corp (HTBK)'
-    }, {
-      'id': 1352,
-      'name': 'Heritage Financial Corporation (HFWA)'
-    }, {
-      'id': 1353,
-      'name': 'Heritage-Crystal Clean (HCCI)'
-    }, {
-      'id': 1354,
-      'name': 'Herman Miller (MLHR)'
-    }, {
-      'id': 1355,
-      'name': 'Heron Therapeutics (HRTX)'
-    }, {
-      'id': 1356,
-      'name': 'Heska Corporation (HSKA)'
-    }, {
-      'id': 1357,
-      'name': 'Hibbett Sports (HIBB)'
-    }, {
-      'id': 1358,
-      'name': 'Highland/iBoxx Senior Loan ETF (SNLN)'
-    }, {
-      'id': 1359,
-      'name': 'Highpower International Inc (HPJ)'
-    }, {
-      'id': 1360,
-      'name': 'Highway Holdings Limited (HIHO)'
-    }, {
-      'id': 1361,
-      'name': 'Himax Technologies (HIMX)'
-    }, {
-      'id': 1362,
-      'name': 'Hingham Institution for Savings (HIFS)'
-    }, {
-      'id': 1363,
-      'name': 'Histogenics Corporation (HSGX)'
-    }, {
-      'id': 1364,
-      'name': 'HMN Financial (HMNF)'
-    }, {
-      'id': 1365,
-      'name': 'HMS Holdings Corp (HMSY)'
-    }, {
-      'id': 1366,
-      'name': 'Hollysys Automation Technologies (HOLI)'
-    }, {
-      'id': 1367,
-      'name': 'Hologic (HOLX)'
-    }, {
-      'id': 1368,
-      'name': 'Home Bancorp (HBCP)'
-    }, {
-      'id': 1369,
-      'name': 'Home BancShares (HOMB)'
-    }, {
-      'id': 1370,
-      'name': 'Home Federal Bancorp (HFBL)'
-    }, {
-      'id': 1371,
-      'name': 'HomeStreet (HMST)'
-    }, {
-      'id': 1372,
-      'name': 'HomeTown Bankshares Corporation (HMTA)'
-    }, {
-      'id': 1373,
-      'name': 'HomeTrust Bancshares (HTBI)'
-    }, {
-      'id': 1374,
-      'name': 'HomeUnion Holdings Inc. (HMU)'
-    }, {
-      'id': 1375,
-      'name': 'Hongli Clean Energy Technologies Corp. (CETC)'
-    }, {
-      'id': 1376,
-      'name': 'Hooker Furniture Corporation (HOFT)'
-    }, {
-      'id': 1377,
-      'name': 'Hope Bancorp (HOPE)'
-    }, {
-      'id': 1378,
-      'name': 'HopFed Bancorp (HFBC)'
-    }, {
-      'id': 1379,
-      'name': 'Horizon Bancorp (IN) (HBNC)'
-    }, {
-      'id': 1380,
-      'name': 'Horizon Pharma plc (HZNP)'
-    }, {
-      'id': 1381,
-      'name': 'Horizon Technology Finance Corporation (HRZN)'
-    }, {
-      'id': 1382,
-      'name': 'Horizons DAX Germany ETF (DAX)'
-    }, {
-      'id': 1383,
-      'name': 'Horizons NASDAQ-100 Covered Call ETF (QYLD)'
-    }, {
-      'id': 1384,
-      'name': 'Hortonworks (HDP)'
-    }, {
-      'id': 1385,
-      'name': 'Hospitality Properties Trust (HPT)'
-    }, {
-      'id': 1386,
-      'name': 'Hostess Brands (TWNK)'
-    }, {
-      'id': 1387,
-      'name': 'Hostess Brands (TWNKW)'
-    }, {
-      'id': 1388,
-      'name': 'Houghton Mifflin Harcourt Company (HMHC)'
-    }, {
-      'id': 1389,
-      'name': 'Houston Wire & Cable Company (HWCC)'
-    }, {
-      'id': 1390,
-      'name': 'Hovnanian Enterprises Inc (HOVNP)'
-    }, {
-      'id': 1391,
-      'name': 'Howard Bancorp (HBMD)'
-    }, {
-      'id': 1392,
-      'name': 'HSN (HSNI)'
-    }, {
-      'id': 1393,
-      'name': 'HTG Molecular Diagnostics (HTGM)'
-    }, {
-      'id': 1394,
-      'name': 'Hub Group (HUBG)'
-    }, {
-      'id': 1395,
-      'name': 'Hudson Global (HSON)'
-    }, {
-      'id': 1396,
-      'name': 'Hudson Technologies (HDSN)'
-    }, {
-      'id': 1397,
-      'name': 'Hunter Maritime Acquisition Corp. (HUNT)'
-    }, {
-      'id': 1398,
-      'name': 'Hunter Maritime Acquisition Corp. (HUNTU)'
-    }, {
-      'id': 1399,
-      'name': 'Hunter Maritime Acquisition Corp. (HUNTW)'
-    }, {
-      'id': 1400,
-      'name': 'Huntington Bancshares Incorporated (HBAN)'
-    }, {
-      'id': 1401,
-      'name': 'Huntington Bancshares Incorporated (HBANN)'
-    }, {
-      'id': 1402,
-      'name': 'Huntington Bancshares Incorporated (HBANO)'
-    }, {
-      'id': 1403,
-      'name': 'Huntington Bancshares Incorporated (HBANP)'
-    }, {
-      'id': 1404,
-      'name': 'Hurco Companies (HURC)'
-    }, {
-      'id': 1405,
-      'name': 'Huron Consulting Group Inc. (HURN)'
-    }, {
-      'id': 1406,
-      'name': 'Hutchison China MediTech Limited (HCM)'
-    }, {
-      'id': 1407,
-      'name': 'Huttig Building Products (HBP)'
-    }, {
-      'id': 1408,
-      'name': 'HV Bancorp (HVBC)'
-    }, {
-      'id': 1409,
-      'name': 'Hydrogenics Corporation (HYGS)'
-    }, {
-      'id': 1410,
-      'name': 'I.D. Systems (IDSY)'
-    }, {
-      'id': 1411,
-      'name': 'IAC/InterActiveCorp (IAC)'
-    }, {
-      'id': 1412,
-      'name': 'Iao Kun Group Holding Company Limited (IKGH)'
-    }, {
-      'id': 1413,
-      'name': 'IBERIABANK Corporation (IBKC)'
-    }, {
-      'id': 1414,
-      'name': 'IBERIABANK Corporation (IBKCO)'
-    }, {
-      'id': 1415,
-      'name': 'IBERIABANK Corporation (IBKCP)'
-    }, {
-      'id': 1416,
-      'name': 'icad inc. (ICAD)'
-    }, {
-      'id': 1417,
-      'name': 'Icahn Enterprises L.P. (IEP)'
-    }, {
-      'id': 1418,
-      'name': 'ICC Holdings (ICCH)'
-    }, {
-      'id': 1419,
-      'name': 'ICF International (ICFI)'
-    }, {
-      'id': 1420,
-      'name': 'Ichor Holdings (ICHR)'
-    }, {
-      'id': 1421,
-      'name': 'ICON plc (ICLR)'
-    }, {
-      'id': 1422,
-      'name': 'Iconix Brand Group (ICON)'
-    }, {
-      'id': 1423,
-      'name': 'ICU Medical (ICUI)'
-    }, {
-      'id': 1424,
-      'name': 'Ideal Power Inc. (IPWR)'
-    }, {
-      'id': 1425,
-      'name': 'Identiv (INVE)'
-    }, {
-      'id': 1426,
-      'name': 'Idera Pharmaceuticals (IDRA)'
-    }, {
-      'id': 1427,
-      'name': 'IDEXX Laboratories (IDXX)'
-    }, {
-      'id': 1428,
-      'name': 'IES Holdings (IESC)'
-    }, {
-      'id': 1429,
-      'name': 'IF Bancorp (IROQ)'
-    }, {
-      'id': 1430,
-      'name': 'iFresh Inc. (IFMK)'
-    }, {
-      'id': 1431,
-      'name': 'Ignyta (RXDX)'
-    }, {
-      'id': 1432,
-      'name': 'IHS Markit Ltd. (INFO)'
-    }, {
-      'id': 1433,
-      'name': 'II-VI Incorporated (IIVI)'
-    }, {
-      'id': 1434,
-      'name': 'iKang Healthcare Group (KANG)'
-    }, {
-      'id': 1435,
-      'name': 'Ikonics Corporation (IKNX)'
-    }, {
-      'id': 1436,
-      'name': 'ILG (ILG)'
-    }, {
-      'id': 1437,
-      'name': 'Illumina (ILMN)'
-    }, {
-      'id': 1438,
-      'name': 'Image Sensing Systems (ISNS)'
-    }, {
-      'id': 1439,
-      'name': 'Immersion Corporation (IMMR)'
-    }, {
-      'id': 1440,
-      'name': 'ImmuCell Corporation (ICCC)'
-    }, {
-      'id': 1441,
-      'name': 'Immune Design Corp. (IMDZ)'
-    }, {
-      'id': 1442,
-      'name': 'Immune Pharmaceuticals Inc. (IMNP          )'
-    }, {
-      'id': 1443,
-      'name': 'ImmunoGen (IMGN)'
-    }, {
-      'id': 1444,
-      'name': 'Immunomedics (IMMU)'
-    }, {
-      'id': 1445,
-      'name': 'Impax Laboratories (IPXL)'
-    }, {
-      'id': 1446,
-      'name': 'Imperva (IMPV)'
-    }, {
-      'id': 1447,
-      'name': 'Impinj (PI)'
-    }, {
-      'id': 1448,
-      'name': 'Imprimis Pharmaceuticals (IMMY)'
-    }, {
-      'id': 1449,
-      'name': 'INC Research Holdings (INCR)'
-    }, {
-      'id': 1450,
-      'name': 'Incyte Corporation (INCY)'
-    }, {
-      'id': 1451,
-      'name': 'Independent Bank Corp. (INDB)'
-    }, {
-      'id': 1452,
-      'name': 'Independent Bank Corporation (IBCP)'
-    }, {
-      'id': 1453,
-      'name': 'Independent Bank Group (IBTX)'
-    }, {
-      'id': 1454,
-      'name': 'Industrial Services of America (IDSA)'
-    }, {
-      'id': 1455,
-      'name': 'Infinera Corporation (INFN)'
-    }, {
-      'id': 1456,
-      'name': 'Infinity Pharmaceuticals (INFI)'
-    }, {
-      'id': 1457,
-      'name': 'Infinity Property and Casualty Corporation (IPCC)'
-    }, {
-      'id': 1458,
-      'name': 'Information Services Group (III)'
-    }, {
-      'id': 1459,
-      'name': 'InfoSonics Corp (IFON)'
-    }, {
-      'id': 1460,
-      'name': 'Ingles Markets (IMKTA)'
-    }, {
-      'id': 1461,
-      'name': 'InnerWorkings (INWK)'
-    }, {
-      'id': 1462,
-      'name': 'Innocoll Holdings (INNL)'
-    }, {
-      'id': 1463,
-      'name': 'Innodata Inc. (INOD)'
-    }, {
-      'id': 1464,
-      'name': 'Innophos Holdings (IPHS)'
-    }, {
-      'id': 1465,
-      'name': 'Innospec Inc. (IOSP)'
-    }, {
-      'id': 1466,
-      'name': 'Innovative Solutions and Support (ISSC)'
-    }, {
-      'id': 1467,
-      'name': 'Innoviva (INVA)'
-    }, {
-      'id': 1468,
-      'name': 'Inogen (INGN)'
-    }, {
-      'id': 1469,
-      'name': 'Inotek Pharmaceuticals Corporation (ITEK)'
-    }, {
-      'id': 1470,
-      'name': 'Inovalon Holdings (INOV)'
-    }, {
-      'id': 1471,
-      'name': 'Inovio Pharmaceuticals (INO)'
-    }, {
-      'id': 1472,
-      'name': 'Inpixon  (INPX)'
-    }, {
-      'id': 1473,
-      'name': 'Inseego Corp. (INSG)'
-    }, {
-      'id': 1474,
-      'name': 'Insight Enterprises (NSIT)'
-    }, {
-      'id': 1475,
-      'name': 'Insignia Systems (ISIG)'
-    }, {
-      'id': 1476,
-      'name': 'Insmed (INSM)'
-    }, {
-      'id': 1477,
-      'name': 'Inspired Entertainment (INSE)'
-    }, {
-      'id': 1478,
-      'name': 'Inspired Entertainment (INSEW)'
-    }, {
-      'id': 1479,
-      'name': 'Insteel Industries (IIIN)'
-    }, {
-      'id': 1480,
-      'name': 'Insulet Corporation (PODD)'
-    }, {
-      'id': 1481,
-      'name': 'Insys Therapeutics (INSY)'
-    }, {
-      'id': 1482,
-      'name': 'Intec Pharma Ltd. (NTEC)'
-    }, {
-      'id': 1483,
-      'name': 'Integra LifeSciences Holdings Corporation (IART)'
-    }, {
-      'id': 1484,
-      'name': 'Integrated Device Technology (IDTI)'
-    }, {
-      'id': 1485,
-      'name': 'Intel Corporation (INTC)'
-    }, {
-      'id': 1486,
-      'name': 'Intellia Therapeutics (NTLA)'
-    }, {
-      'id': 1487,
-      'name': 'Intellipharmaceutics International Inc. (IPCI)'
-    }, {
-      'id': 1488,
-      'name': 'Inter Parfums (IPAR)'
-    }, {
-      'id': 1489,
-      'name': 'Interactive Brokers Group (IBKR)'
-    }, {
-      'id': 1490,
-      'name': 'Intercept Pharmaceuticals (ICPT)'
-    }, {
-      'id': 1491,
-      'name': 'InterDigital (IDCC)'
-    }, {
-      'id': 1492,
-      'name': 'Interface (TILE)'
-    }, {
-      'id': 1493,
-      'name': 'Interlink Electronics (LINK)'
-    }, {
-      'id': 1494,
-      'name': 'Intermolecular (IMI)'
-    }, {
-      'id': 1495,
-      'name': 'Internap Corporation (INAP)'
-    }, {
-      'id': 1496,
-      'name': 'International Bancshares Corporation (IBOC)'
-    }, {
-      'id': 1497,
-      'name': 'International Speedway Corporation (ISCA)'
-    }, {
-      'id': 1498,
-      'name': 'Internet Gold Golden Lines Ltd. (IGLD)'
-    }, {
-      'id': 1499,
-      'name': 'Internet Initiative Japan (IIJI)'
-    }, {
-      'id': 1500,
-      'name': 'Interpace Diagnostics Group (IDXG)'
-    }, {
-      'id': 1501,
-      'name': 'Intersect ENT (XENT)'
-    }, {
-      'id': 1502,
-      'name': 'Intersections (INTX)'
-    }, {
-      'id': 1503,
-      'name': 'Intevac (IVAC)'
-    }, {
-      'id': 1504,
-      'name': 'INTL FCStone Inc. (INTL)'
-    }, {
-      'id': 1505,
-      'name': 'Intra-Cellular Therapies Inc. (ITCI)'
-    }, {
-      'id': 1506,
-      'name': 'IntriCon Corporation (IIN)'
-    }, {
-      'id': 1507,
-      'name': 'Intuit Inc. (INTU)'
-    }, {
-      'id': 1508,
-      'name': 'Intuitive Surgical (ISRG)'
-    }, {
-      'id': 1509,
-      'name': 'Inventergy Global (INVT)'
-    }, {
-      'id': 1510,
-      'name': 'Inventure Foods (SNAK)'
-    }, {
-      'id': 1511,
-      'name': 'Investar Holding Corporation (ISTR)'
-    }, {
-      'id': 1512,
-      'name': 'Investors Bancorp (ISBC)'
-    }, {
-      'id': 1513,
-      'name': 'Investors Title Company (ITIC)'
-    }, {
-      'id': 1514,
-      'name': 'InVivo Therapeutics Holdings Corp. (NVIV)'
-    }, {
-      'id': 1515,
-      'name': 'Invuity (IVTY)'
-    }, {
-      'id': 1516,
-      'name': 'Ionis Pharmaceuticals (IONS)'
-    }, {
-      'id': 1517,
-      'name': 'iPass Inc. (IPAS)'
-    }, {
-      'id': 1518,
-      'name': 'iPath US Treasury 10-year Bear ETN (DTYS)'
-    }, {
-      'id': 1519,
-      'name': 'iPath US Treasury 10-year Bull ETN (DTYL)'
-    }, {
-      'id': 1520,
-      'name': 'iPath US Treasury 2-year Bear ETN (DTUS)'
-    }, {
-      'id': 1521,
-      'name': 'iPath US Treasury 2-year Bull ETN (DTUL)'
-    }, {
-      'id': 1522,
-      'name': 'iPath US Treasury 5-year Bear Exchange Traded Note (DFVS)'
-    }, {
-      'id': 1523,
-      'name': 'iPath US Treasury 5-year Bull ETN (DFVL)'
-    }, {
-      'id': 1524,
-      'name': 'iPath US Treasury Flattener ETN (FLAT)'
-    }, {
-      'id': 1525,
-      'name': 'iPath US Treasury Long Bond Bear ETN (DLBS)'
-    }, {
-      'id': 1526,
-      'name': 'iPath US Treasury Long Bond Bull ETN (DLBL)'
-    }, {
-      'id': 1527,
-      'name': 'iPath US Treasury Steepener ETN (STPP)'
-    }, {
-      'id': 1528,
-      'name': 'IPG Photonics Corporation (IPGP)'
-    }, {
-      'id': 1529,
-      'name': 'iRadimed Corporation (IRMD)'
-    }, {
-      'id': 1530,
-      'name': 'iRhythm Technologies (IRTC)'
-    }, {
-      'id': 1531,
-      'name': 'IRIDEX Corporation (IRIX)'
-    }, {
-      'id': 1532,
-      'name': 'Iridium Communications Inc (IRDM)'
-    }, {
-      'id': 1533,
-      'name': 'Iridium Communications Inc (IRDMB)'
-    }, {
-      'id': 1534,
-      'name': 'iRobot Corporation (IRBT)'
-    }, {
-      'id': 1535,
-      'name': 'Ironwood Pharmaceuticals (IRWD)'
-    }, {
-      'id': 1536,
-      'name': 'IRSA Propiedades Comerciales S.A. (IRCP)'
-    }, {
-      'id': 1537,
-      'name': 'iSectors Post-MPT Growth ETF (PMPT)'
-    }, {
-      'id': 1538,
-      'name': 'iShares 0-5 Year Investment Grade Corporate Bond ETF (SLQD)'
-    }, {
-      'id': 1539,
-      'name': 'iShares 20+ Year Treasury Bond ETF (TLT)'
-    }, {
-      'id': 1540,
-      'name': 'iShares Asia 50 ETF (AIA)'
-    }, {
-      'id': 1541,
-      'name': 'iShares Commodities Select Strategy ETF (COMT)'
-    }, {
-      'id': 1542,
-      'name': 'iShares Core MSCI Total International Stock ETF (IXUS)'
-    }, {
-      'id': 1543,
-      'name': 'iShares Fallen Angels USD Bond ETF (FALN)'
-    }, {
-      'id': 1544,
-      'name': 'iShares FTSE EPRA/NAREIT Europe Index Fund (IFEU)'
-    }, {
-      'id': 1545,
-      'name': 'iShares FTSE EPRA/NAREIT Global Real Estate ex-U.S. Index Fund (IFGL)'
-    }, {
-      'id': 1546,
-      'name': 'iShares Global Infrastructure ETF (IGF)'
-    }, {
-      'id': 1547,
-      'name': 'iShares GNMA Bond ETF (GNMA)'
-    }, {
-      'id': 1548,
-      'name': 'iShares iBoxx $ High Yield ex Oil & Gas Corporate Bond ETF (HYXE)'
-    }, {
-      'id': 1549,
-      'name': 'iShares Morningstar Mid-Cap ETF (JKI)'
-    }, {
-      'id': 1550,
-      'name': 'iShares MSCI ACWI ex US Index Fund (ACWX)'
-    }, {
-      'id': 1551,
-      'name': 'iShares MSCI ACWI Index Fund (ACWI)'
-    }, {
-      'id': 1552,
-      'name': 'iShares MSCI All Country Asia ex Japan Index Fund (AAXJ)'
-    }, {
-      'id': 1553,
-      'name': 'iShares MSCI Brazil Small-Cap ETF (EWZS)'
-    }, {
-      'id': 1554,
-      'name': 'iShares MSCI China ETF (MCHI)'
-    }, {
-      'id': 1555,
-      'name': 'iShares MSCI EAFE ESG Optimized ETF (ESGD)'
-    }, {
-      'id': 1556,
-      'name': 'iShares MSCI EAFE Small-Cap ETF (SCZ)'
-    }, {
-      'id': 1557,
-      'name': 'iShares MSCI EM ESG Optimized ETF (ESGE)'
-    }, {
-      'id': 1558,
-      'name': 'iShares MSCI Emerging Markets Asia Index Fund (EEMA)'
-    }, {
-      'id': 1559,
-      'name': 'iShares MSCI Europe Financials Sector Index Fund (EUFN)'
-    }, {
-      'id': 1560,
-      'name': 'iShares MSCI Europe Small-Cap ETF (IEUS)'
-    }, {
-      'id': 1561,
-      'name': 'iShares MSCI Global Impact ETF (MPCT)'
-    }, {
-      'id': 1562,
-      'name': 'iShares MSCI New Zealand Capped ETF (ENZL)'
-    }, {
-      'id': 1563,
-      'name': 'iShares MSCI Qatar Capped ETF (QAT)'
-    }, {
-      'id': 1564,
-      'name': 'iShares MSCI UAE Capped ETF (UAE)'
-    }, {
-      'id': 1565,
-      'name': 'iShares MSCI USA ESG Optimized ETF (ESGU)'
-    }, {
-      'id': 1566,
-      'name': 'iShares Nasdaq Biotechnology Index Fund (IBB)'
-    }, {
-      'id': 1567,
-      'name': 'iShares PHLX SOX Semiconductor Sector Index Fund (SOXX)'
-    }, {
-      'id': 1568,
-      'name': 'iShares S&P Emerging Markets Infrastructure Index Fund (EMIF)'
-    }, {
-      'id': 1569,
-      'name': 'iShares S&P Global Clean Energy Index Fund (ICLN)'
-    }, {
-      'id': 1570,
-      'name': 'iShares S&P Global Timber & Forestry Index Fund (WOOD)'
-    }, {
-      'id': 1571,
-      'name': 'iShares S&P India Nifty 50 Index Fund (INDY)'
-    }, {
-      'id': 1572,
-      'name': 'iShares S&P/Citigroup 1-3 Year International Treasury Bond Fun (ISHG)'
-    }, {
-      'id': 1573,
-      'name': 'iShares S&P/Citigroup International Treasury Bond Fund (IGOV)'
-    }, {
-      'id': 1574,
-      'name': 'Isle of Capri Casinos (ISLE)'
-    }, {
-      'id': 1575,
-      'name': 'Isramco (ISRL)'
-    }, {
-      'id': 1576,
-      'name': 'Iteris (ITI)'
-    }, {
-      'id': 1577,
-      'name': 'Itron (ITRI)'
-    }, {
-      'id': 1578,
-      'name': 'Ituran Location and Control Ltd. (ITRN)'
-    }, {
-      'id': 1579,
-      'name': 'ITUS Corporation (ITUS)'
-    }, {
-      'id': 1580,
-      'name': 'Ivy NextShares (IVENC)'
-    }, {
-      'id': 1581,
-      'name': 'Ivy NextShares (IVFGC)'
-    }, {
-      'id': 1582,
-      'name': 'Ivy NextShares (IVFVC)'
-    }, {
-      'id': 1583,
-      'name': 'Ixia (XXIA)'
-    }, {
-      'id': 1584,
-      'name': 'IXYS Corporation (IXYS)'
-    }, {
-      'id': 1585,
-      'name': 'IZEA Inc. (IZEA)'
-    }, {
-      'id': 1586,
-      'name': 'J & J Snack Foods Corp. (JJSF)'
-    }, {
-      'id': 1587,
-      'name': 'J. W. Mays (MAYS)'
-    }, {
-      'id': 1588,
-      'name': 'J.B. Hunt Transport Services (JBHT)'
-    }, {
-      'id': 1589,
-      'name': 'j2 Global (JCOM)'
-    }, {
-      'id': 1590,
-      'name': 'JA Solar Holdings (JASO)'
-    }, {
-      'id': 1591,
-      'name': 'Jack Henry & Associates (JKHY)'
-    }, {
-      'id': 1592,
-      'name': 'Jack In The Box Inc. (JACK)'
-    }, {
-      'id': 1593,
-      'name': 'Jacksonville Bancorp Inc. (JXSB)'
-    }, {
-      'id': 1594,
-      'name': 'Jaguar Animal Health (JAGX)'
-    }, {
-      'id': 1595,
-      'name': 'JAKKS Pacific (JAKK)'
-    }, {
-      'id': 1596,
-      'name': 'Jamba (JMBA)'
-    }, {
-      'id': 1597,
-      'name': 'James River Group Holdings (JRVR)'
-    }, {
-      'id': 1598,
-      'name': 'Janus SG Global Quality Income ETF (SGQI)'
-    }, {
-      'id': 1599,
-      'name': 'Janus Small Cap Growth Alpha ETF (JSML)'
-    }, {
-      'id': 1600,
-      'name': 'Janus Small/Mid Cap Growth Alpha ETF (JSMD)'
-    }, {
-      'id': 1601,
-      'name': 'Jason Industries (JASN)'
-    }, {
-      'id': 1602,
-      'name': 'Jason Industries (JASNW)'
-    }, {
-      'id': 1603,
-      'name': 'Jazz Pharmaceuticals plc (JAZZ)'
-    }, {
-      'id': 1604,
-      'name': 'JD.com (JD)'
-    }, {
-      'id': 1605,
-      'name': 'Jensyn Acquistion Corp. (JSYN)'
-    }, {
-      'id': 1606,
-      'name': 'Jensyn Acquistion Corp. (JSYNR)'
-    }, {
-      'id': 1607,
-      'name': 'Jensyn Acquistion Corp. (JSYNU)'
-    }, {
-      'id': 1608,
-      'name': 'Jensyn Acquistion Corp. (JSYNW)'
-    }, {
-      'id': 1609,
-      'name': 'JetBlue Airways Corporation (JBLU)'
-    }, {
-      'id': 1610,
-      'name': 'JetPay Corporation (JTPY)'
-    }, {
-      'id': 1611,
-      'name': 'Jewett-Cameron Trading Company (JCTCF)'
-    }, {
-      'id': 1612,
-      'name': 'Jive Software (JIVE)'
-    }, {
-      'id': 1613,
-      'name': 'JM Global Holding Company (WYIG)'
-    }, {
-      'id': 1614,
-      'name': 'JM Global Holding Company (WYIGU)'
-    }, {
-      'id': 1615,
-      'name': 'JM Global Holding Company (WYIGW)'
-    }, {
-      'id': 1616,
-      'name': 'JMU Limited (JMU)'
-    }, {
-      'id': 1617,
-      'name': 'John B. Sanfilippo & Son (JBSS)'
-    }, {
-      'id': 1618,
-      'name': 'Johnson Outdoors Inc. (JOUT)'
-    }, {
-      'id': 1619,
-      'name': 'Jounce Therapeutics (JNCE)'
-    }, {
-      'id': 1620,
-      'name': 'Juniper Pharmaceuticals (JNP)'
-    }, {
-      'id': 1621,
-      'name': 'Juno Therapeutics (JUNO)'
-    }, {
-      'id': 1622,
-      'name': 'K2M Group Holdings (KTWO)'
-    }, {
-      'id': 1623,
-      'name': 'Kaiser Aluminum Corporation (KALU)'
-    }, {
-      'id': 1624,
-      'name': 'KalVista Pharmaceuticals (KALV)'
-    }, {
-      'id': 1625,
-      'name': 'Kamada Ltd. (KMDA)'
-    }, {
-      'id': 1626,
-      'name': 'Kandi Technologies Group (KNDI)'
-    }, {
-      'id': 1627,
-      'name': 'Karyopharm Therapeutics Inc. (KPTI)'
-    }, {
-      'id': 1628,
-      'name': 'Kayne Anderson Acquisition Corp. (KAACU)'
-    }, {
-      'id': 1629,
-      'name': 'KBS Fashion Group Limited (KBSF)'
-    }, {
-      'id': 1630,
-      'name': 'KCAP Financial (KCAP)'
-    }, {
-      'id': 1631,
-      'name': 'Kearny Financial (KRNY)'
-    }, {
-      'id': 1632,
-      'name': 'Kelly Services (KELYA)'
-    }, {
-      'id': 1633,
-      'name': 'Kelly Services (KELYB)'
-    }, {
-      'id': 1634,
-      'name': 'KemPharm (KMPH)'
-    }, {
-      'id': 1635,
-      'name': 'Kentucky First Federal Bancorp (KFFB)'
-    }, {
-      'id': 1636,
-      'name': 'Keryx Biopharmaceuticals (KERX)'
-    }, {
-      'id': 1637,
-      'name': 'Kewaunee Scientific Corporation (KEQU)'
-    }, {
-      'id': 1638,
-      'name': 'Key Technology (KTEC)'
-    }, {
-      'id': 1639,
-      'name': 'Key Tronic Corporation (KTCC)'
-    }, {
-      'id': 1640,
-      'name': 'Kforce (KFRC)'
-    }, {
-      'id': 1641,
-      'name': 'Kimball Electronics (KE)'
-    }, {
-      'id': 1642,
-      'name': 'Kimball International (KBAL)'
-    }, {
-      'id': 1643,
-      'name': 'Kindred Biosciences (KIN)'
-    }, {
-      'id': 1644,
-      'name': 'Kingold Jewelry Inc. (KGJI)'
-    }, {
-      'id': 1645,
-      'name': 'Kingstone Companies (KINS)'
-    }, {
-      'id': 1646,
-      'name': 'Kingtone Wirelessinfo Solution Holding Ltd (KONE)'
-    }, {
-      'id': 1647,
-      'name': 'Kinsale Capital Group (KNSL)'
-    }, {
-      'id': 1648,
-      'name': 'Kirkland&#39;s (KIRK)'
-    }, {
-      'id': 1649,
-      'name': 'Kite Pharma (KITE)'
-    }, {
-      'id': 1650,
-      'name': 'Kitov Pharmaceuticals Holdings Ltd. (KTOV)'
-    }, {
-      'id': 1651,
-      'name': 'Kitov Pharmaceuticals Holdings Ltd. (KTOVW)'
-    }, {
-      'id': 1652,
-      'name': 'KLA-Tencor Corporation (KLAC)'
-    }, {
-      'id': 1653,
-      'name': 'KLR Energy Acquisition Corp. (KLRE)'
-    }, {
-      'id': 1654,
-      'name': 'KLR Energy Acquisition Corp. (KLREU)'
-    }, {
-      'id': 1655,
-      'name': 'KLR Energy Acquisition Corp. (KLREW)'
-    }, {
-      'id': 1656,
-      'name': 'KLX Inc. (KLXI)'
-    }, {
-      'id': 1657,
-      'name': 'Kona Grill (KONA)'
-    }, {
-      'id': 1658,
-      'name': 'KongZhong Corporation (KZ)'
-    }, {
-      'id': 1659,
-      'name': 'Kopin Corporation (KOPN)'
-    }, {
-      'id': 1660,
-      'name': 'Kornit Digital Ltd. (KRNT)'
-    }, {
-      'id': 1661,
-      'name': 'Koss Corporation (KOSS)'
-    }, {
-      'id': 1662,
-      'name': 'KraneShares CSI China Internet ETF (KWEB)'
-    }, {
-      'id': 1663,
-      'name': 'Kratos Defense & Security Solutions (KTOS)'
-    }, {
-      'id': 1664,
-      'name': 'Kulicke and Soffa Industries (KLIC)'
-    }, {
-      'id': 1665,
-      'name': 'Kura Oncology (KURA)'
-    }, {
-      'id': 1666,
-      'name': 'KVH Industries (KVHI)'
-    }, {
-      'id': 1667,
-      'name': 'L.B. Foster Company (FSTR)'
-    }, {
-      'id': 1668,
-      'name': 'La Jolla Pharmaceutical Company (LJPC)'
-    }, {
-      'id': 1669,
-      'name': 'Lake Shore Bancorp (LSBK)'
-    }, {
-      'id': 1670,
-      'name': 'Lakeland Bancorp (LBAI)'
-    }, {
-      'id': 1671,
-      'name': 'Lakeland Financial Corporation (LKFN)'
-    }, {
-      'id': 1672,
-      'name': 'Lakeland Industries (LAKE)'
-    }, {
-      'id': 1673,
-      'name': 'Lam Research Corporation (LRCX)'
-    }, {
-      'id': 1674,
-      'name': 'Lamar Advertising Company (LAMR)'
-    }, {
-      'id': 1675,
-      'name': 'Lancaster Colony Corporation (LANC)'
-    }, {
-      'id': 1676,
-      'name': 'Landcadia Holdings (LCA)'
-    }, {
-      'id': 1677,
-      'name': 'Landcadia Holdings (LCAHU)'
-    }, {
-      'id': 1678,
-      'name': 'Landcadia Holdings (LCAHW)'
-    }, {
-      'id': 1679,
-      'name': 'Landec Corporation (LNDC)'
-    }, {
-      'id': 1680,
-      'name': 'Landmark Bancorp Inc. (LARK)'
-    }, {
-      'id': 1681,
-      'name': 'Landmark Infrastructure Partners LP (LMRK)'
-    }, {
-      'id': 1682,
-      'name': 'Landmark Infrastructure Partners LP (LMRKO)'
-    }, {
-      'id': 1683,
-      'name': 'Landmark Infrastructure Partners LP (LMRKP)'
-    }, {
-      'id': 1684,
-      'name': 'Lands&#39; End (LE)'
-    }, {
-      'id': 1685,
-      'name': 'Landstar System (LSTR)'
-    }, {
-      'id': 1686,
-      'name': 'Lantheus Holdings (LNTH)'
-    }, {
-      'id': 1687,
-      'name': 'Lantronix (LTRX)'
-    }, {
-      'id': 1688,
-      'name': 'Lattice Semiconductor Corporation (LSCC)'
-    }, {
-      'id': 1689,
-      'name': 'Laureate Education (LAUR)'
-    }, {
-      'id': 1690,
-      'name': 'Lawson Products (LAWS)'
-    }, {
-      'id': 1691,
-      'name': 'Layne Christensen Company (LAYN)'
-    }, {
-      'id': 1692,
-      'name': 'LCNB Corporation (LCNB)'
-    }, {
-      'id': 1693,
-      'name': 'Leading Brands Inc (LBIX)'
-    }, {
-      'id': 1694,
-      'name': 'LEAP THERAPEUTICS (LPTX)'
-    }, {
-      'id': 1695,
-      'name': 'Legacy Reserves LP (LGCY)'
-    }, {
-      'id': 1696,
-      'name': 'Legacy Reserves LP (LGCYO)'
-    }, {
-      'id': 1697,
-      'name': 'Legacy Reserves LP (LGCYP)'
-    }, {
-      'id': 1698,
-      'name': 'LegacyTexas Financial Group (LTXB)'
-    }, {
-      'id': 1699,
-      'name': 'Legg Mason Developed EX-US Diversified Core ETF (DDBI)'
-    }, {
-      'id': 1700,
-      'name': 'Legg Mason Emerging Markets Diversified Core ETF (EDBI)'
-    }, {
-      'id': 1701,
-      'name': 'Legg Mason Global Infrastructure ETF (INFR)'
-    }, {
-      'id': 1702,
-      'name': 'Legg Mason Low Volatility High Dividend ETF (LVHD)'
-    }, {
-      'id': 1703,
-      'name': 'Legg Mason US Diversified Core ETF (UDBI)'
-    }, {
-      'id': 1704,
-      'name': 'LeMaitre Vascular (LMAT)'
-    }, {
-      'id': 1705,
-      'name': 'LendingTree (TREE)'
-    }, {
-      'id': 1706,
-      'name': 'Lexicon Pharmaceuticals (LXRX)'
-    }, {
-      'id': 1707,
-      'name': 'LGI Homes (LGIH)'
-    }, {
-      'id': 1708,
-      'name': 'LHC Group (LHCG)'
-    }, {
-      'id': 1709,
-      'name': 'Lianluo Smart Limited (LLIT)'
-    }, {
-      'id': 1710,
-      'name': 'Liberty Broadband Corporation (LBRDA)'
-    }, {
-      'id': 1711,
-      'name': 'Liberty Broadband Corporation (LBRDK)'
-    }, {
-      'id': 1712,
-      'name': 'Liberty Expedia Holdings (LEXEA)'
-    }, {
-      'id': 1713,
-      'name': 'Liberty Expedia Holdings (LEXEB)'
-    }, {
-      'id': 1714,
-      'name': 'Liberty Global plc (LBTYA)'
-    }, {
-      'id': 1715,
-      'name': 'Liberty Global plc (LBTYB)'
-    }, {
-      'id': 1716,
-      'name': 'Liberty Global plc (LBTYK)'
-    }, {
-      'id': 1717,
-      'name': 'Liberty Global plc (LILA)'
-    }, {
-      'id': 1718,
-      'name': 'Liberty Global plc (LILAK)'
-    }, {
-      'id': 1719,
-      'name': 'Liberty Interactive Corporation (LVNTA)'
-    }, {
-      'id': 1720,
-      'name': 'Liberty Interactive Corporation (LVNTB)'
-    }, {
-      'id': 1721,
-      'name': 'Liberty Interactive Corporation (QVCA)'
-    }, {
-      'id': 1722,
-      'name': 'Liberty Interactive Corporation (QVCB)'
-    }, {
-      'id': 1723,
-      'name': 'Liberty Media Corporation (BATRA)'
-    }, {
-      'id': 1724,
-      'name': 'Liberty Media Corporation (BATRK)'
-    }, {
-      'id': 1725,
-      'name': 'Liberty Media Corporation (FWONA)'
-    }, {
-      'id': 1726,
-      'name': 'Liberty Media Corporation (FWONK)'
-    }, {
-      'id': 1727,
-      'name': 'Liberty Media Corporation (LSXMA)'
-    }, {
-      'id': 1728,
-      'name': 'Liberty Media Corporation (LSXMB)'
-    }, {
-      'id': 1729,
-      'name': 'Liberty Media Corporation (LSXMK)'
-    }, {
-      'id': 1730,
-      'name': 'Liberty Tax (TAX)'
-    }, {
-      'id': 1731,
-      'name': 'Liberty TripAdvisor Holdings (LTRPA)'
-    }, {
-      'id': 1732,
-      'name': 'Liberty TripAdvisor Holdings (LTRPB)'
-    }, {
-      'id': 1733,
-      'name': 'LifePoint Health (LPNT)'
-    }, {
-      'id': 1734,
-      'name': 'Lifetime Brands (LCUT)'
-    }, {
-      'id': 1735,
-      'name': 'Lifevantage Corporation (LFVN)'
-    }, {
-      'id': 1736,
-      'name': 'Lifeway Foods (LWAY)'
-    }, {
-      'id': 1737,
-      'name': 'Ligand Pharmaceuticals Incorporated (LGND)'
-    }, {
-      'id': 1738,
-      'name': 'Lightbridge Corporation (LTBR)'
-    }, {
-      'id': 1739,
-      'name': 'LightPath Technologies (LPTH)'
-    }, {
-      'id': 1740,
-      'name': 'Lilis Energy (LLEX)'
-    }, {
-      'id': 1741,
-      'name': 'Limbach Holdings (LMB)'
-    }, {
-      'id': 1742,
-      'name': 'Limelight Networks (LLNW)'
-    }, {
-      'id': 1743,
-      'name': 'Limoneira Co (LMNR)'
-    }, {
-      'id': 1744,
-      'name': 'Lincoln Educational Services Corporation (LINC)'
-    }, {
-      'id': 1745,
-      'name': 'Lincoln Electric Holdings (LECO)'
-    }, {
-      'id': 1746,
-      'name': 'Lindblad Expeditions Holdings Inc.  (LIND)'
-    }, {
-      'id': 1747,
-      'name': 'Lindblad Expeditions Holdings Inc.  (LINDW)'
-    }, {
-      'id': 1748,
-      'name': 'Lion Biotechnologies (LBIO)'
-    }, {
-      'id': 1749,
-      'name': 'Lipocine Inc. (LPCN)'
-    }, {
-      'id': 1750,
-      'name': 'Liquidity Services (LQDT)'
-    }, {
-      'id': 1751,
-      'name': 'Littelfuse (LFUS)'
-    }, {
-      'id': 1752,
-      'name': 'LivaNova PLC (LIVN)'
-    }, {
-      'id': 1753,
-      'name': 'Live Oak Bancshares (LOB)'
-    }, {
-      'id': 1754,
-      'name': 'Live Ventures Incorporated (LIVE)'
-    }, {
-      'id': 1755,
-      'name': 'LivePerson (LPSN)'
-    }, {
-      'id': 1756,
-      'name': 'LKQ Corporation (LKQ)'
-    }, {
-      'id': 1757,
-      'name': 'LM Funding America (LMFA)'
-    }, {
-      'id': 1758,
-      'name': 'LM Funding America (LMFAW)'
-    }, {
-      'id': 1759,
-      'name': 'LMI Aerospace (LMIA)'
-    }, {
-      'id': 1760,
-      'name': 'Logitech International S.A. (LOGI)'
-    }, {
-      'id': 1761,
-      'name': 'LogMein (LOGM)'
-    }, {
-      'id': 1762,
-      'name': 'Lombard Medical (EVAR)'
-    }, {
-      'id': 1763,
-      'name': 'Loncar Cancer Immunotherapy ETF (CNCR)'
-    }, {
-      'id': 1764,
-      'name': 'Lonestar Resources US Inc. (LONE)'
-    }, {
-      'id': 1765,
-      'name': 'Long Island Iced Tea Corp. (LTEA)'
-    }, {
-      'id': 1766,
-      'name': 'Loral Space and Communications (LORL)'
-    }, {
-      'id': 1767,
-      'name': 'Loxo Oncology (LOXO)'
-    }, {
-      'id': 1768,
-      'name': 'LPL Financial Holdings Inc. (LPLA)'
-    }, {
-      'id': 1769,
-      'name': 'LRAD Corporation (LRAD)'
-    }, {
-      'id': 1770,
-      'name': 'LSI Industries Inc. (LYTS)'
-    }, {
-      'id': 1771,
-      'name': 'lululemon athletica inc. (LULU)'
-    }, {
-      'id': 1772,
-      'name': 'Lumentum Holdings Inc. (LITE)'
-    }, {
-      'id': 1773,
-      'name': 'Luminex Corporation (LMNX)'
-    }, {
-      'id': 1774,
-      'name': 'Lumos Networks Corp. (LMOS)'
-    }, {
-      'id': 1775,
-      'name': 'Luna Innovations Incorporated (LUNA)'
-    }, {
-      'id': 1776,
-      'name': 'M B T Financial Corp (MBTF)'
-    }, {
-      'id': 1777,
-      'name': 'M I Acquisitions (MACQ)'
-    }, {
-      'id': 1778,
-      'name': 'M I Acquisitions (MACQU)'
-    }, {
-      'id': 1779,
-      'name': 'M I Acquisitions (MACQW)'
-    }, {
-      'id': 1780,
-      'name': 'M III Acquisition Corp. (MIII)'
-    }, {
-      'id': 1781,
-      'name': 'M III Acquisition Corp. (MIIIU)'
-    }, {
-      'id': 1782,
-      'name': 'M III Acquisition Corp. (MIIIW)'
-    }, {
-      'id': 1783,
-      'name': 'MabVax Therapeutics Holdings (MBVX)'
-    }, {
-      'id': 1784,
-      'name': 'Macatawa Bank Corporation (MCBC)'
-    }, {
-      'id': 1785,
-      'name': 'Mackinac Financial Corporation (MFNC)'
-    }, {
-      'id': 1786,
-      'name': 'MACOM Technology Solutions Holdings (MTSI)'
-    }, {
-      'id': 1787,
-      'name': 'MacroGenics (MGNX)'
-    }, {
-      'id': 1788,
-      'name': 'Madrigal Pharmaceuticals (MDGL)'
-    }, {
-      'id': 1789,
-      'name': 'Magal Security Systems Ltd. (MAGS)'
-    }, {
-      'id': 1790,
-      'name': 'Magellan Health (MGLN)'
-    }, {
-      'id': 1791,
-      'name': 'Magic Software Enterprises Ltd. (MGIC)'
-    }, {
-      'id': 1792,
-      'name': 'magicJack VocalTec Ltd (CALL)'
-    }, {
-      'id': 1793,
-      'name': 'MagneGas Corporation (MNGA)'
-    }, {
-      'id': 1794,
-      'name': 'Magyar Bancorp (MGYR)'
-    }, {
-      'id': 1795,
-      'name': 'Maiden Holdings (MHLD)'
-    }, {
-      'id': 1796,
-      'name': 'MainSource Financial Group (MSFG)'
-    }, {
-      'id': 1797,
-      'name': 'MakeMyTrip Limited (MMYT)'
-    }, {
-      'id': 1798,
-      'name': 'Malibu Boats (MBUU)'
-    }, {
-      'id': 1799,
-      'name': 'Malvern Bancorp (MLVF)'
-    }, {
-      'id': 1800,
-      'name': 'MAM Software Group (MAMS)'
-    }, {
-      'id': 1801,
-      'name': 'Mammoth Energy Services (TUSK)'
-    }, {
-      'id': 1802,
-      'name': 'Manhattan Associates (MANH)'
-    }, {
-      'id': 1803,
-      'name': 'Manhattan Bridge Capital (LOAN)'
-    }, {
-      'id': 1804,
-      'name': 'Manitex International (MNTX)'
-    }, {
-      'id': 1805,
-      'name': 'Mannatech (MTEX)'
-    }, {
-      'id': 1806,
-      'name': 'MannKind Corporation (MNKD)'
-    }, {
-      'id': 1807,
-      'name': 'ManTech International Corporation (MANT)'
-    }, {
-      'id': 1808,
-      'name': 'Mapi - Pharma Ltd. (MAPI)'
-    }, {
-      'id': 1809,
-      'name': 'Marathon Patent Group (MARA)'
-    }, {
-      'id': 1810,
-      'name': 'Marchex (MCHX)'
-    }, {
-      'id': 1811,
-      'name': 'Marine Petroleum Trust (MARPS)'
-    }, {
-      'id': 1812,
-      'name': 'Marinus Pharmaceuticals (MRNS)'
-    }, {
-      'id': 1813,
-      'name': 'MarketAxess Holdings (MKTX)'
-    }, {
-      'id': 1814,
-      'name': 'Marlin Business Services Corp. (MRLN)'
-    }, {
-      'id': 1815,
-      'name': 'Marriott International (MAR)'
-    }, {
-      'id': 1816,
-      'name': 'Marrone Bio Innovations (MBII)'
-    }, {
-      'id': 1817,
-      'name': 'Marten Transport (MRTN)'
-    }, {
-      'id': 1818,
-      'name': 'Martin Midstream Partners L.P. (MMLP)'
-    }, {
-      'id': 1819,
-      'name': 'Marvell Technology Group Ltd. (MRVL)'
-    }, {
-      'id': 1820,
-      'name': 'Masimo Corporation (MASI)'
-    }, {
-      'id': 1821,
-      'name': 'Match Group (MTCH)'
-    }, {
-      'id': 1822,
-      'name': 'Materialise NV (MTLS)'
-    }, {
-      'id': 1823,
-      'name': 'Matlin & Partners Acquisition Corporation (MPACU)'
-    }, {
-      'id': 1824,
-      'name': 'Matrix Service Company (MTRX)'
-    }, {
-      'id': 1825,
-      'name': 'Mattel (MAT)'
-    }, {
-      'id': 1826,
-      'name': 'Mattersight Corporation (MATR)'
-    }, {
-      'id': 1827,
-      'name': 'Matthews International Corporation (MATW)'
-    }, {
-      'id': 1828,
-      'name': 'Maxim Integrated Products (MXIM)'
-    }, {
-      'id': 1829,
-      'name': 'MaxPoint Interactive (MXPT)'
-    }, {
-      'id': 1830,
-      'name': 'Maxwell Technologies (MXWL)'
-    }, {
-      'id': 1831,
-      'name': 'Mazor Robotics Ltd. (MZOR)'
-    }, {
-      'id': 1832,
-      'name': 'MB Financial Inc. (MBFI)'
-    }, {
-      'id': 1833,
-      'name': 'MB Financial Inc. (MBFIP)'
-    }, {
-      'id': 1834,
-      'name': 'MCBC Holdings (MCFT)'
-    }, {
-      'id': 1835,
-      'name': 'McGrath RentCorp (MGRC)'
-    }, {
-      'id': 1836,
-      'name': 'MDC Partners Inc. (MDCA)'
-    }, {
-      'id': 1837,
-      'name': 'Medallion Financial Corp. (MFIN)'
-    }, {
-      'id': 1838,
-      'name': 'Medallion Financial Corp. (MFINL)'
-    }, {
-      'id': 1839,
-      'name': 'Medical Transcription Billing (MTBC)'
-    }, {
-      'id': 1840,
-      'name': 'Medical Transcription Billing (MTBCP)'
-    }, {
-      'id': 1841,
-      'name': 'MediciNova (MNOV)'
-    }, {
-      'id': 1842,
-      'name': 'Medidata Solutions (MDSO)'
-    }, {
-      'id': 1843,
-      'name': 'Medigus Ltd. (MDGS)'
-    }, {
-      'id': 1844,
-      'name': 'MediWound Ltd. (MDWD)'
-    }, {
-      'id': 1845,
-      'name': 'Medovex Corp. (MDVX)'
-    }, {
-      'id': 1846,
-      'name': 'Medovex Corp. (MDVXW)'
-    }, {
-      'id': 1847,
-      'name': 'Medpace Holdings (MEDP)'
-    }, {
-      'id': 1848,
-      'name': 'MEI Pharma (MEIP)'
-    }, {
-      'id': 1849,
-      'name': 'Melco Resorts & Entertainment Limited (MLCO)'
-    }, {
-      'id': 1850,
-      'name': 'Mellanox Technologies (MLNX)'
-    }, {
-      'id': 1851,
-      'name': 'Melrose Bancorp (MELR)'
-    }, {
-      'id': 1852,
-      'name': 'Memorial Production Partners LP (MEMP)'
-    }, {
-      'id': 1853,
-      'name': 'MER Telemanagement Solutions Ltd. (MTSL)'
-    }, {
-      'id': 1854,
-      'name': 'MercadoLibre (MELI)'
-    }, {
-      'id': 1855,
-      'name': 'Mercantile Bank Corporation (MBWM)'
-    }, {
-      'id': 1856,
-      'name': 'Mercer International Inc. (MERC)'
-    }, {
-      'id': 1857,
-      'name': 'Merchants Bancshares (MBVT)'
-    }, {
-      'id': 1858,
-      'name': 'Mercury Systems Inc (MRCY)'
-    }, {
-      'id': 1859,
-      'name': 'Meridian Bancorp (EBSB)'
-    }, {
-      'id': 1860,
-      'name': 'Meridian Bioscience Inc. (VIVO)'
-    }, {
-      'id': 1861,
-      'name': 'Meridian Waste Solutions (MRDN)'
-    }, {
-      'id': 1862,
-      'name': 'Meridian Waste Solutions (MRDNW)'
-    }, {
-      'id': 1863,
-      'name': 'Merit Medical Systems (MMSI)'
-    }, {
-      'id': 1864,
-      'name': 'Merrimack Pharmaceuticals (MACK)'
-    }, {
-      'id': 1865,
-      'name': 'Merus Labs International Inc. (MSLI)'
-    }, {
-      'id': 1866,
-      'name': 'Merus N.V. (MRUS)'
-    }, {
-      'id': 1867,
-      'name': 'Mesa Laboratories (MLAB)'
-    }, {
-      'id': 1868,
-      'name': 'Mesoblast Limited (MESO)'
-    }, {
-      'id': 1869,
-      'name': 'Meta Financial Group (CASH)'
-    }, {
-      'id': 1870,
-      'name': 'Methanex Corporation (MEOH)'
-    }, {
-      'id': 1871,
-      'name': 'MGC Diagnostics Corporation (MGCD)'
-    }, {
-      'id': 1872,
-      'name': 'MGE Energy Inc. (MGEE)'
-    }, {
-      'id': 1873,
-      'name': 'MGP Ingredients (MGPI)'
-    }, {
-      'id': 1874,
-      'name': 'Microbot Medical Inc.  (MBOT)'
-    }, {
-      'id': 1875,
-      'name': 'Microchip Technology Incorporated (MCHP)'
-    }, {
-      'id': 1876,
-      'name': 'Micron Technology (MU)'
-    }, {
-      'id': 1877,
-      'name': 'Micronet Enertec Technologies (MICT)'
-    }, {
-      'id': 1878,
-      'name': 'Micronet Enertec Technologies (MICTW)'
-    }, {
-      'id': 1879,
-      'name': 'Microsemi Corporation (MSCC)'
-    }, {
-      'id': 1880,
-      'name': 'Microsoft Corporation (MSFT)'
-    }, {
-      'id': 1881,
-      'name': 'MicroStrategy Incorporated (MSTR)'
-    }, {
-      'id': 1882,
-      'name': 'Microvision (MVIS)'
-    }, {
-      'id': 1883,
-      'name': 'Mid Penn Bancorp (MPB)'
-    }, {
-      'id': 1884,
-      'name': 'Midatech Pharma PLC (MTP)'
-    }, {
-      'id': 1885,
-      'name': 'Mid-Con Energy Partners (MCEP)'
-    }, {
-      'id': 1886,
-      'name': 'Middlefield Banc Corp. (MBCN)'
-    }, {
-      'id': 1887,
-      'name': 'Middlesex Water Company (MSEX)'
-    }, {
-      'id': 1888,
-      'name': 'Midland States Bancorp (MSBI)'
-    }, {
-      'id': 1889,
-      'name': 'MidWestOne Financial Group (MOFG)'
-    }, {
-      'id': 1890,
-      'name': 'Mimecast Limited (MIME)'
-    }, {
-      'id': 1891,
-      'name': 'MiMedx Group (MDXG)'
-    }, {
-      'id': 1892,
-      'name': 'MIND C.T.I. Ltd. (MNDO)'
-    }, {
-      'id': 1893,
-      'name': 'MINDBODY (MB)'
-    }, {
-      'id': 1894,
-      'name': 'Minerva Neurosciences (NERV)'
-    }, {
-      'id': 1895,
-      'name': 'Miragen Therapeutics (MGEN)'
-    }, {
-      'id': 1896,
-      'name': 'Mirati Therapeutics (MRTX)'
-    }, {
-      'id': 1897,
-      'name': 'Mirna Therapeutics (MIRN)'
-    }, {
-      'id': 1898,
-      'name': 'MISONIX (MSON)'
-    }, {
-      'id': 1899,
-      'name': 'Mitcham Industries (MIND)'
-    }, {
-      'id': 1900,
-      'name': 'Mitcham Industries (MINDP)'
-    }, {
-      'id': 1901,
-      'name': 'Mitek Systems (MITK)'
-    }, {
-      'id': 1902,
-      'name': 'Mitel Networks Corporation (MITL)'
-    }, {
-      'id': 1903,
-      'name': 'MKS Instruments (MKSI)'
-    }, {
-      'id': 1904,
-      'name': 'MMA Capital Management (MMAC)'
-    }, {
-      'id': 1905,
-      'name': 'Mobile Mini (MINI)'
-    }, {
-      'id': 1906,
-      'name': 'MobileIron (MOBL)'
-    }, {
-      'id': 1907,
-      'name': 'MOCON (MOCO)'
-    }, {
-      'id': 1908,
-      'name': 'Modern Media Acquisition Corp. (MMDM)'
-    }, {
-      'id': 1909,
-      'name': 'Modern Media Acquisition Corp. (MMDMU)'
-    }, {
-      'id': 1910,
-      'name': 'ModSys International Ltd. (MDSY)'
-    }, {
-      'id': 1911,
-      'name': 'ModusLink Global Solutions (MLNK)'
-    }, {
-      'id': 1912,
-      'name': 'Moleculin Biotech (MBRX)'
-    }, {
-      'id': 1913,
-      'name': 'Momenta Pharmaceuticals (MNTA)'
-    }, {
-      'id': 1914,
-      'name': 'Momo Inc. (MOMO)'
-    }, {
-      'id': 1915,
-      'name': 'Monarch Casino & Resort (MCRI)'
-    }, {
-      'id': 1916,
-      'name': 'Mondelez International (MDLZ)'
-    }, {
-      'id': 1917,
-      'name': 'Moneygram International (MGI)'
-    }, {
-      'id': 1918,
-      'name': 'Monolithic Power Systems (MPWR)'
-    }, {
-      'id': 1919,
-      'name': 'Monotype Imaging Holdings Inc. (TYPE)'
-    }, {
-      'id': 1920,
-      'name': 'Monro Muffler Brake (MNRO)'
-    }, {
-      'id': 1921,
-      'name': 'Monroe Capital Corporation (MRCC)'
-    }, {
-      'id': 1922,
-      'name': 'Monster Beverage Corporation (MNST)'
-    }, {
-      'id': 1923,
-      'name': 'Monster Digital (MSDI)'
-    }, {
-      'id': 1924,
-      'name': 'Monster Digital (MSDIW)'
-    }, {
-      'id': 1925,
-      'name': 'Morningstar (MORN)'
-    }, {
-      'id': 1926,
-      'name': 'MoSys (MOSY)'
-    }, {
-      'id': 1927,
-      'name': 'Motif Bio plc (MTFB)'
-    }, {
-      'id': 1928,
-      'name': 'Motif Bio plc (MTFBW)'
-    }, {
-      'id': 1929,
-      'name': 'Motorcar Parts of America (MPAA)'
-    }, {
-      'id': 1930,
-      'name': 'Mountain Province Diamonds Inc. (MPVD)'
-    }, {
-      'id': 1931,
-      'name': 'Moxian (MOXC)'
-    }, {
-      'id': 1932,
-      'name': 'MRI Interventions Inc (MRIC)'
-    }, {
-      'id': 1933,
-      'name': 'MRV Communications (MRVC)'
-    }, {
-      'id': 1934,
-      'name': 'MSB Financial Corp. (MSBF)'
-    }, {
-      'id': 1935,
-      'name': 'MSG Networks Inc. (MSG)'
-    }, {
-      'id': 1936,
-      'name': 'MTGE Investment Corp. (MTGE)'
-    }, {
-      'id': 1937,
-      'name': 'MTGE Investment Corp. (MTGEP)'
-    }, {
-      'id': 1938,
-      'name': 'MTS Systems Corporation (MTSC)'
-    }, {
-      'id': 1939,
-      'name': 'Multi-Color Corporation (LABL)'
-    }, {
-      'id': 1940,
-      'name': 'MutualFirst Financial Inc. (MFSF)'
-    }, {
-      'id': 1941,
-      'name': 'My Size (MYSZ)'
-    }, {
-      'id': 1942,
-      'name': 'Mylan N.V. (MYL)'
-    }, {
-      'id': 1943,
-      'name': 'MyoKardia (MYOK)'
-    }, {
-      'id': 1944,
-      'name': 'MYOS RENS Technology Inc. (MYOS)'
-    }, {
-      'id': 1945,
-      'name': 'MYR Group (MYRG)'
-    }, {
-      'id': 1946,
-      'name': 'Myriad Genetics (MYGN)'
-    }, {
-      'id': 1947,
-      'name': 'Nabriva Therapeutics AG (NBRV)'
-    }, {
-      'id': 1948,
-      'name': 'Naked Brand Group Inc. (NAKD)'
-    }, {
-      'id': 1949,
-      'name': 'Nano Dimension Ltd. (NNDM)'
-    }, {
-      'id': 1950,
-      'name': 'Nanometrics Incorporated (NANO)'
-    }, {
-      'id': 1951,
-      'name': 'NanoString Technologies (NSTG)'
-    }, {
-      'id': 1952,
-      'name': 'NantHealth (NH)'
-    }, {
-      'id': 1953,
-      'name': 'NantKwest (NK)'
-    }, {
-      'id': 1954,
-      'name': 'NAPCO Security Technologies (NSSC)'
-    }, {
-      'id': 1955,
-      'name': 'Nasdaq (NDAQ)'
-    }, {
-      'id': 1956,
-      'name': 'Natera (NTRA)'
-    }, {
-      'id': 1957,
-      'name': 'Nathan&#39;s Famous (NATH)'
-    }, {
-      'id': 1958,
-      'name': 'National American University Holdings (NAUH)'
-    }, {
-      'id': 1959,
-      'name': 'National Bankshares (NKSH)'
-    }, {
-      'id': 1960,
-      'name': 'National Beverage Corp. (FIZZ)'
-    }, {
-      'id': 1961,
-      'name': 'National CineMedia (NCMI)'
-    }, {
-      'id': 1962,
-      'name': 'National Commerce Corporation (NCOM)'
-    }, {
-      'id': 1963,
-      'name': 'National General Holdings Corp (NGHC)'
-    }, {
-      'id': 1964,
-      'name': 'National General Holdings Corp (NGHCN)'
-    }, {
-      'id': 1965,
-      'name': 'National General Holdings Corp (NGHCO)'
-    }, {
-      'id': 1966,
-      'name': 'National General Holdings Corp (NGHCP)'
-    }, {
-      'id': 1967,
-      'name': 'National General Holdings Corp (NGHCZ)'
-    }, {
-      'id': 1968,
-      'name': 'National Holdings Corporation (NHLD)'
-    }, {
-      'id': 1969,
-      'name': 'National Holdings Corporation (NHLDW)'
-    }, {
-      'id': 1970,
-      'name': 'National Instruments Corporation (NATI)'
-    }, {
-      'id': 1971,
-      'name': 'National Research Corporation (NRCIA)'
-    }, {
-      'id': 1972,
-      'name': 'National Research Corporation (NRCIB)'
-    }, {
-      'id': 1973,
-      'name': 'National Security Group (NSEC)'
-    }, {
-      'id': 1974,
-      'name': 'National Western Life Group (NWLI)'
-    }, {
-      'id': 1975,
-      'name': 'Natural Alternatives International (NAII)'
-    }, {
-      'id': 1976,
-      'name': 'Natural Health Trends Corp. (NHTC)'
-    }, {
-      'id': 1977,
-      'name': 'Nature&#39;s Sunshine Products (NATR)'
-    }, {
-      'id': 1978,
-      'name': 'Natus Medical Incorporated (BABY)'
-    }, {
-      'id': 1979,
-      'name': 'Navient Corporation (ISM)'
-    }, {
-      'id': 1980,
-      'name': 'Navient Corporation (JSM)'
-    }, {
-      'id': 1981,
-      'name': 'Navient Corporation (NAVI)'
-    }, {
-      'id': 1982,
-      'name': 'NB Capital Acquisition Corp. (NBCP)'
-    }, {
-      'id': 1983,
-      'name': 'NBT Bancorp Inc. (NBTB)'
-    }, {
-      'id': 1984,
-      'name': 'NCI (NCIT)'
-    }, {
-      'id': 1985,
-      'name': 'Nektar Therapeutics (NKTR)'
-    }, {
-      'id': 1986,
-      'name': 'Neogen Corporation (NEOG)'
-    }, {
-      'id': 1987,
-      'name': 'NeoGenomics (NEO)'
-    }, {
-      'id': 1988,
-      'name': 'Neonode Inc. (NEON)'
-    }, {
-      'id': 1989,
-      'name': 'Neos Therapeutics (NEOS)'
-    }, {
-      'id': 1990,
-      'name': 'Neothetics (NEOT)'
-    }, {
-      'id': 1991,
-      'name': 'Neovasc Inc. (NVCN)'
-    }, {
-      'id': 1992,
-      'name': 'Neptune Technologies & Bioresources Inc (NEPT)'
-    }, {
-      'id': 1993,
-      'name': 'Net 1 UEPS Technologies (UEPS)'
-    }, {
-      'id': 1994,
-      'name': 'Net Element (NETE)'
-    }, {
-      'id': 1995,
-      'name': 'NetApp (NTAP)'
-    }, {
-      'id': 1996,
-      'name': 'NetEase (NTES)'
-    }, {
-      'id': 1997,
-      'name': 'Netflix (NFLX)'
-    }, {
-      'id': 1998,
-      'name': 'NETGEAR (NTGR)'
-    }, {
-      'id': 1999,
-      'name': 'Netlist (NLST)'
-    }, {
-      'id': 2000,
-      'name': 'NetScout Systems (NTCT)'
-    }, {
-      'id': 2001,
-      'name': 'NetSol Technologies Inc. (NTWK)'
-    }, {
-      'id': 2002,
-      'name': 'Neuralstem (CUR)'
-    }, {
-      'id': 2003,
-      'name': 'Neurocrine Biosciences (NBIX)'
-    }, {
-      'id': 2004,
-      'name': 'NeuroDerm Ltd. (NDRM)'
-    }, {
-      'id': 2005,
-      'name': 'NeuroMetrix (NURO)'
-    }, {
-      'id': 2006,
-      'name': 'NeuroMetrix (NUROW)'
-    }, {
-      'id': 2007,
-      'name': 'Neurotrope (NTRP)'
-    }, {
-      'id': 2008,
-      'name': 'New Age Beverages Corporation (NBEV)'
-    }, {
-      'id': 2009,
-      'name': 'New York Mortgage Trust (NYMT)'
-    }, {
-      'id': 2010,
-      'name': 'New York Mortgage Trust (NYMTO)'
-    }, {
-      'id': 2011,
-      'name': 'New York Mortgage Trust (NYMTP)'
-    }, {
-      'id': 2012,
-      'name': 'NewLink Genetics Corporation (NLNK)'
-    }, {
-      'id': 2013,
-      'name': 'News Corporation (NWS)'
-    }, {
-      'id': 2014,
-      'name': 'News Corporation (NWSA)'
-    }, {
-      'id': 2015,
-      'name': 'NewStar Financial (NEWS)'
-    }, {
-      'id': 2016,
-      'name': 'Newtek Business Services Corp. (NEWT)'
-    }, {
-      'id': 2017,
-      'name': 'Newtek Business Services Corp. (NEWTL)'
-    }, {
-      'id': 2018,
-      'name': 'Newtek Business Services Corp. (NEWTZ)'
-    }, {
-      'id': 2019,
-      'name': 'Nexeo Solutions (NXEO)'
-    }, {
-      'id': 2020,
-      'name': 'Nexeo Solutions (NXEOU)'
-    }, {
-      'id': 2021,
-      'name': 'Nexeo Solutions (NXEOW)'
-    }, {
-      'id': 2022,
-      'name': 'Nexstar Media Group (NXST)'
-    }, {
-      'id': 2023,
-      'name': 'Nexvet Biopharma plc (NVET)'
-    }, {
-      'id': 2024,
-      'name': 'NF Energy Saving Corporation (NFEC)'
-    }, {
-      'id': 2025,
-      'name': 'NI Holdings (NODK)'
-    }, {
-      'id': 2026,
-      'name': 'NIC Inc. (EGOV)'
-    }, {
-      'id': 2027,
-      'name': 'NICE Ltd (NICE)'
-    }, {
-      'id': 2028,
-      'name': 'Nicholas Financial (NICK)'
-    }, {
-      'id': 2029,
-      'name': 'Nicolet Bankshares Inc. (NCBS)'
-    }, {
-      'id': 2030,
-      'name': 'NII Holdings (NIHD)'
-    }, {
-      'id': 2031,
-      'name': 'Nivalis Therapeutics (NVLS)'
-    }, {
-      'id': 2032,
-      'name': 'NMI Holdings Inc (NMIH)'
-    }, {
-      'id': 2033,
-      'name': 'NN (NNBR)'
-    }, {
-      'id': 2034,
-      'name': 'Noodles & Company (NDLS)'
-    }, {
-      'id': 2035,
-      'name': 'Nordson Corporation (NDSN)'
-    }, {
-      'id': 2036,
-      'name': 'Nortech Systems Incorporated (NSYS)'
-    }, {
-      'id': 2037,
-      'name': 'Northeast Bancorp (NBN)'
-    }, {
-      'id': 2038,
-      'name': 'Northern Technologies International Corporation (NTIC)'
-    }, {
-      'id': 2039,
-      'name': 'Northern Trust Corporation (NTRS)'
-    }, {
-      'id': 2040,
-      'name': 'Northern Trust Corporation (NTRSP)'
-    }, {
-      'id': 2041,
-      'name': 'Northfield Bancorp (NFBK)'
-    }, {
-      'id': 2042,
-      'name': 'Northrim BanCorp Inc (NRIM)'
-    }, {
-      'id': 2043,
-      'name': 'Northwest Bancshares (NWBI)'
-    }, {
-      'id': 2044,
-      'name': 'Northwest Pipe Company (NWPX)'
-    }, {
-      'id': 2045,
-      'name': 'Norwegian Cruise Line Holdings Ltd. (NCLH)'
-    }, {
-      'id': 2046,
-      'name': 'Norwood Financial Corp. (NWFL)'
-    }, {
-      'id': 2047,
-      'name': 'Nova Lifestyle (NVFY)'
-    }, {
-      'id': 2048,
-      'name': 'Nova Measuring Instruments Ltd. (NVMI)'
-    }, {
-      'id': 2049,
-      'name': 'Novadaq Technologies Inc (NVDQ)'
-    }, {
-      'id': 2050,
-      'name': 'Novan (NOVN)'
-    }, {
-      'id': 2051,
-      'name': 'Novanta Inc. (NOVT)'
-    }, {
-      'id': 2052,
-      'name': 'Novavax (NVAX)'
-    }, {
-      'id': 2053,
-      'name': 'Novelion Therapeutics Inc.  (NVLN)'
-    }, {
-      'id': 2054,
-      'name': 'NovoCure Limited (NVCR)'
-    }, {
-      'id': 2055,
-      'name': 'Novogen Limited (NVGN)'
-    }, {
-      'id': 2056,
-      'name': 'Nuance Communications (NUAN)'
-    }, {
-      'id': 2057,
-      'name': 'Numerex Corp. (NMRX)'
-    }, {
-      'id': 2058,
-      'name': 'Nutanix (NTNX)'
-    }, {
-      'id': 2059,
-      'name': 'Nutraceutical International Corporation (NUTR)'
-    }, {
-      'id': 2060,
-      'name': 'NutriSystem Inc (NTRI)'
-    }, {
-      'id': 2061,
-      'name': 'NuVasive (NUVA)'
-    }, {
-      'id': 2062,
-      'name': 'Nuvectra Corporation (NVTR)'
-    }, {
-      'id': 2063,
-      'name': 'Nuveen NASDAQ 100 Dynamic Overwrite Fund (QQQX)'
-    }, {
-      'id': 2064,
-      'name': 'NV5 Global (NVEE)'
-    }, {
-      'id': 2065,
-      'name': 'NVE Corporation (NVEC)'
-    }, {
-      'id': 2066,
-      'name': 'NVIDIA Corporation (NVDA)'
-    }, {
-      'id': 2067,
-      'name': 'NXP Semiconductors N.V. (NXPI)'
-    }, {
-      'id': 2068,
-      'name': 'NxStage Medical (NXTM)'
-    }, {
-      'id': 2069,
-      'name': 'NXT-ID Inc. (NXTD)'
-    }, {
-      'id': 2070,
-      'name': 'NXT-ID Inc. (NXTDW)'
-    }, {
-      'id': 2071,
-      'name': 'Nymox Pharmaceutical Corporation (NYMX)'
-    }, {
-      'id': 2072,
-      'name': 'O2Micro International Limited (OIIM)'
-    }, {
-      'id': 2073,
-      'name': 'Oak Valley Bancorp (CA) (OVLY)'
-    }, {
-      'id': 2074,
-      'name': 'Oasmia Pharmaceutical AB (OASM)'
-    }, {
-      'id': 2075,
-      'name': 'Obalon Therapeutics (OBLN)'
-    }, {
-      'id': 2076,
-      'name': 'ObsEva SA (OBSV)'
-    }, {
-      'id': 2077,
-      'name': 'Ocean Bio-Chem (OBCI)'
-    }, {
-      'id': 2078,
-      'name': 'Ocean Power Technologies (OPTT)'
-    }, {
-      'id': 2079,
-      'name': 'Ocean Rig UDW Inc. (ORIG)'
-    }, {
-      'id': 2080,
-      'name': 'OceanFirst Financial Corp. (OCFC)'
-    }, {
-      'id': 2081,
-      'name': 'Ocera Therapeutics (OCRX)'
-    }, {
-      'id': 2082,
-      'name': 'Oclaro (OCLR)'
-    }, {
-      'id': 2083,
-      'name': 'Oconee Federal Financial Corp. (OFED)'
-    }, {
-      'id': 2084,
-      'name': 'Ocular Therapeutix (OCUL)'
-    }, {
-      'id': 2085,
-      'name': 'Odyssey Marine Exploration (OMEX)'
-    }, {
-      'id': 2086,
-      'name': 'Office Depot (ODP)'
-    }, {
-      'id': 2087,
-      'name': 'OFS Capital Corporation (OFS)'
-    }, {
-      'id': 2088,
-      'name': 'OHA Investment Corporation (OHAI)'
-    }, {
-      'id': 2089,
-      'name': 'Ohio Valley Banc Corp. (OVBC)'
-    }, {
-      'id': 2090,
-      'name': 'Ohr Pharmaceuticals (OHRP)'
-    }, {
-      'id': 2091,
-      'name': 'Okta (OKTA)'
-    }, {
-      'id': 2092,
-      'name': 'Old Dominion Freight Line (ODFL)'
-    }, {
-      'id': 2093,
-      'name': 'Old Line Bancshares (OLBK)'
-    }, {
-      'id': 2094,
-      'name': 'Old National Bancorp (ONB)'
-    }, {
-      'id': 2095,
-      'name': 'Old Point Financial Corporation (OPOF)'
-    }, {
-      'id': 2096,
-      'name': 'Old Second Bancorp (OSBC)'
-    }, {
-      'id': 2097,
-      'name': 'Old Second Bancorp (OSBCP)'
-    }, {
-      'id': 2098,
-      'name': 'Ollie&#39;s Bargain Outlet Holdings (OLLI)'
-    }, {
-      'id': 2099,
-      'name': 'Olympic Steel (ZEUS)'
-    }, {
-      'id': 2100,
-      'name': 'Omega Flex (OFLX)'
-    }, {
-      'id': 2101,
-      'name': 'Omeros Corporation (OMER)'
-    }, {
-      'id': 2102,
-      'name': 'Ominto (OMNT)'
-    }, {
-      'id': 2103,
-      'name': 'Omnicell (OMCL)'
-    }, {
-      'id': 2104,
-      'name': 'ON Semiconductor Corporation (ON)'
-    }, {
-      'id': 2105,
-      'name': 'On Track Innovations Ltd (OTIV)'
-    }, {
-      'id': 2106,
-      'name': 'Oncobiologics (ONS)'
-    }, {
-      'id': 2107,
-      'name': 'Oncobiologics (ONSIW)'
-    }, {
-      'id': 2108,
-      'name': 'Oncobiologics (ONSIZ)'
-    }, {
-      'id': 2109,
-      'name': 'OncoGenex Pharmaceuticals Inc. (OGXI)'
-    }, {
-      'id': 2110,
-      'name': 'OncoMed Pharmaceuticals (OMED)'
-    }, {
-      'id': 2111,
-      'name': 'Onconova Therapeutics (ONTX)'
-    }, {
-      'id': 2112,
-      'name': 'Onconova Therapeutics (ONTXW)'
-    }, {
-      'id': 2113,
-      'name': 'OncoSec Medical Incorporated (ONCS)'
-    }, {
-      'id': 2114,
-      'name': 'One Horizon Group (OHGI)'
-    }, {
-      'id': 2115,
-      'name': 'Onvia (ONVI)'
-    }, {
-      'id': 2116,
-      'name': 'Open Text Corporation (OTEX)'
-    }, {
-      'id': 2117,
-      'name': 'Opexa Therapeutics (OPXA)'
-    }, {
-      'id': 2118,
-      'name': 'Opexa Therapeutics (OPXAW)'
-    }, {
-      'id': 2119,
-      'name': 'OpGen (OPGN)'
-    }, {
-      'id': 2120,
-      'name': 'OpGen (OPGNW)'
-    }, {
-      'id': 2121,
-      'name': 'Ophthotech Corporation (OPHT)'
-    }, {
-      'id': 2122,
-      'name': 'Opko Health (OPK)'
-    }, {
-      'id': 2123,
-      'name': 'Optibase Ltd. (OBAS)'
-    }, {
-      'id': 2124,
-      'name': 'Optical Cable Corporation (OCC)'
-    }, {
-      'id': 2125,
-      'name': 'OptimumBank Holdings (OPHC)'
-    }, {
-      'id': 2126,
-      'name': 'Opus Bank (OPB)'
-    }, {
-      'id': 2127,
-      'name': 'Oramed Pharmaceuticals Inc. (ORMP)'
-    }, {
-      'id': 2128,
-      'name': 'OraSure Technologies (OSUR)'
-    }, {
-      'id': 2129,
-      'name': 'ORBCOMM Inc. (ORBC)'
-    }, {
-      'id': 2130,
-      'name': 'Orbotech Ltd. (ORBK)'
-    }, {
-      'id': 2131,
-      'name': 'O&#39;Reilly Automotive (ORLY)'
-    }, {
-      'id': 2132,
-      'name': 'Orexigen Therapeutics (OREX)'
-    }, {
-      'id': 2133,
-      'name': 'Organovo Holdings (ONVO)'
-    }, {
-      'id': 2134,
-      'name': 'Origin Agritech Limited (SEED)'
-    }, {
-      'id': 2135,
-      'name': 'Origo Acquisition Corporation (OACQ)'
-    }, {
-      'id': 2136,
-      'name': 'Origo Acquisition Corporation (OACQR)'
-    }, {
-      'id': 2137,
-      'name': 'Origo Acquisition Corporation (OACQU)'
-    }, {
-      'id': 2138,
-      'name': 'Origo Acquisition Corporation (OACQW)'
-    }, {
-      'id': 2139,
-      'name': 'Orion Energy Systems (OESX)'
-    }, {
-      'id': 2140,
-      'name': 'Oritani Financial Corp. (ORIT)'
-    }, {
-      'id': 2141,
-      'name': 'Orrstown Financial Services Inc (ORRF)'
-    }, {
-      'id': 2142,
-      'name': 'Orthofix International N.V. (OFIX)'
-    }, {
-      'id': 2143,
-      'name': 'OSI Systems (OSIS)'
-    }, {
-      'id': 2144,
-      'name': 'Ossen Innovation Co. (OSN)'
-    }, {
-      'id': 2145,
-      'name': 'Otelco Inc. (OTEL)'
-    }, {
-      'id': 2146,
-      'name': 'OTG EXP (OTG)'
-    }, {
-      'id': 2147,
-      'name': 'Otonomy (OTIC)'
-    }, {
-      'id': 2148,
-      'name': 'Ottawa Bancorp (OTTW)'
-    }, {
-      'id': 2149,
-      'name': 'Otter Tail Corporation (OTTR)'
-    }, {
-      'id': 2150,
-      'name': 'OvaScience Inc. (OVAS)'
-    }, {
-      'id': 2151,
-      'name': 'Overstock.com (OSTK)'
-    }, {
-      'id': 2152,
-      'name': 'Oxbridge Re Holdings Limited (OXBR)'
-    }, {
-      'id': 2153,
-      'name': 'Oxbridge Re Holdings Limited (OXBRW)'
-    }, {
-      'id': 2154,
-      'name': 'Oxford Immunotec Global PLC (OXFD)'
-    }, {
-      'id': 2155,
-      'name': 'Oxford Lane Capital Corp. (OXLC)'
-    }, {
-      'id': 2156,
-      'name': 'Oxford Lane Capital Corp. (OXLCN)'
-    }, {
-      'id': 2157,
-      'name': 'Oxford Lane Capital Corp. (OXLCO)'
-    }, {
-      'id': 2158,
-      'name': 'P & F Industries (PFIN)'
-    }, {
-      'id': 2159,
-      'name': 'P.A.M. Transportation Services (PTSI)'
-    }, {
-      'id': 2160,
-      'name': 'PACCAR Inc. (PCAR)'
-    }, {
-      'id': 2161,
-      'name': 'Pacific Biosciences of California (PACB)'
-    }, {
-      'id': 2162,
-      'name': 'Pacific Continental Corporation (Ore) (PCBK)'
-    }, {
-      'id': 2163,
-      'name': 'Pacific Ethanol (PEIX)'
-    }, {
-      'id': 2164,
-      'name': 'Pacific Mercantile Bancorp (PMBC)'
-    }, {
-      'id': 2165,
-      'name': 'Pacific Premier Bancorp Inc (PPBI)'
-    }, {
-      'id': 2166,
-      'name': 'Pacific Special Acquisition Corp. (PAAC)'
-    }, {
-      'id': 2167,
-      'name': 'Pacific Special Acquisition Corp. (PAACR)'
-    }, {
-      'id': 2168,
-      'name': 'Pacific Special Acquisition Corp. (PAACU)'
-    }, {
-      'id': 2169,
-      'name': 'Pacific Special Acquisition Corp. (PAACW)'
-    }, {
-      'id': 2170,
-      'name': 'Pacira Pharmaceuticals (PCRX)'
-    }, {
-      'id': 2171,
-      'name': 'PacWest Bancorp (PACW)'
-    }, {
-      'id': 2172,
-      'name': 'Pain Therapeutics (PTIE)'
-    }, {
-      'id': 2173,
-      'name': 'Pan American Silver Corp. (PAAS)'
-    }, {
-      'id': 2174,
-      'name': 'Panera Bread Company (PNRA)'
-    }, {
-      'id': 2175,
-      'name': 'Pangaea Logistics Solutions Ltd. (PANL)'
-    }, {
-      'id': 2176,
-      'name': 'Papa John&#39;s International (PZZA)'
-    }, {
-      'id': 2177,
-      'name': 'Papa Murphy&#39;s Holdings (FRSH)'
-    }, {
-      'id': 2178,
-      'name': 'Paragon Commercial Corporation (PBNC)'
-    }, {
-      'id': 2179,
-      'name': 'Paratek Pharmaceuticals (PRTK)'
-    }, {
-      'id': 2180,
-      'name': 'PAREXEL International Corporation (PRXL)'
-    }, {
-      'id': 2181,
-      'name': 'Park City Group (PCYG)'
-    }, {
-      'id': 2182,
-      'name': 'Park Sterling Corporation (PSTB)'
-    }, {
-      'id': 2183,
-      'name': 'Parke Bancorp (PKBK)'
-    }, {
-      'id': 2184,
-      'name': 'ParkerVision (PRKR)'
-    }, {
-      'id': 2185,
-      'name': 'Park-Ohio Holdings Corp. (PKOH)'
-    }, {
-      'id': 2186,
-      'name': 'Partner Communications Company Ltd. (PTNR)'
-    }, {
-      'id': 2187,
-      'name': 'Pathfinder Bancorp (PBHC)'
-    }, {
-      'id': 2188,
-      'name': 'Patrick Industries (PATK)'
-    }, {
-      'id': 2189,
-      'name': 'Patriot National Bancorp Inc. (PNBK)'
-    }, {
-      'id': 2190,
-      'name': 'Patriot Transportation Holding (PATI)'
-    }, {
-      'id': 2191,
-      'name': 'Pattern Energy Group Inc. (PEGI)'
-    }, {
-      'id': 2192,
-      'name': 'Patterson Companies (PDCO)'
-    }, {
-      'id': 2193,
-      'name': 'Patterson-UTI Energy (PTEN)'
-    }, {
-      'id': 2194,
-      'name': 'PAVmed Inc. (PAVM)'
-    }, {
-      'id': 2195,
-      'name': 'PAVmed Inc. (PAVMW)'
-    }, {
-      'id': 2196,
-      'name': 'Paychex (PAYX)'
-    }, {
-      'id': 2197,
-      'name': 'Paylocity Holding Corporation (PCTY)'
-    }, {
-      'id': 2198,
-      'name': 'Payment Data Systems (PYDS)'
-    }, {
-      'id': 2199,
-      'name': 'PayPal Holdings (PYPL)'
-    }, {
-      'id': 2200,
-      'name': 'PB Bancorp (PBBI)'
-    }, {
-      'id': 2201,
-      'name': 'PC Connection (CNXN)'
-    }, {
-      'id': 2202,
-      'name': 'PCM (PCMI)'
-    }, {
-      'id': 2203,
-      'name': 'PC-Tel (PCTI)'
-    }, {
-      'id': 2204,
-      'name': 'PDC Energy (PDCE)'
-    }, {
-      'id': 2205,
-      'name': 'PDF Solutions (PDFS)'
-    }, {
-      'id': 2206,
-      'name': 'PDL BioPharma (PDLI)'
-    }, {
-      'id': 2207,
-      'name': 'pdvWireless (PDVW)'
-    }, {
-      'id': 2208,
-      'name': 'Peak Resorts (SKIS)'
-    }, {
-      'id': 2209,
-      'name': 'Peapack-Gladstone Financial Corporation (PGC)'
-    }, {
-      'id': 2210,
-      'name': 'Pegasystems Inc. (PEGA)'
-    }, {
-      'id': 2211,
-      'name': 'Pendrell Corporation (PCO)'
-    }, {
-      'id': 2212,
-      'name': 'Penn National Gaming (PENN)'
-    }, {
-      'id': 2213,
-      'name': 'Penn Virginia Corporation (PVAC)'
-    }, {
-      'id': 2214,
-      'name': 'PennantPark Floating Rate Capital Ltd. (PFLT)'
-    }, {
-      'id': 2215,
-      'name': 'PennantPark Investment Corporation (PNNT)'
-    }, {
-      'id': 2216,
-      'name': 'Penns Woods Bancorp (PWOD)'
-    }, {
-      'id': 2217,
-      'name': 'PennTex Midstream Partners (PTXP)'
-    }, {
-      'id': 2218,
-      'name': 'Peoples Bancorp Inc. (PEBO)'
-    }, {
-      'id': 2219,
-      'name': 'Peoples Bancorp of North Carolina (PEBK)'
-    }, {
-      'id': 2220,
-      'name': 'Peoples Financial Corporation (PFBX)'
-    }, {
-      'id': 2221,
-      'name': 'Peoples Financial Services Corp.  (PFIS)'
-    }, {
-      'id': 2222,
-      'name': 'People&#39;s United Financial (PBCT)'
-    }, {
-      'id': 2223,
-      'name': 'People&#39;s United Financial (PBCTP)'
-    }, {
-      'id': 2224,
-      'name': 'People&#39;s Utah Bancorp (PUB)'
-    }, {
-      'id': 2225,
-      'name': 'Perceptron (PRCP)'
-    }, {
-      'id': 2226,
-      'name': 'Peregrine Pharmaceuticals Inc. (PPHM)'
-    }, {
-      'id': 2227,
-      'name': 'Peregrine Pharmaceuticals Inc. (PPHMP)'
-    }, {
-      'id': 2228,
-      'name': 'Perficient (PRFT)'
-    }, {
-      'id': 2229,
-      'name': 'Performant Financial Corporation (PFMT)'
-    }, {
-      'id': 2230,
-      'name': 'Perfumania Holdings (PERF)'
-    }, {
-      'id': 2231,
-      'name': 'Perion Network Ltd (PERI)'
-    }, {
-      'id': 2232,
-      'name': 'Perma-Fix Environmental Services (PESI)'
-    }, {
-      'id': 2233,
-      'name': 'Perma-Pipe International Holdings (PPIH)'
-    }, {
-      'id': 2234,
-      'name': 'Pernix Therapeutics Holdings (PTX)'
-    }, {
-      'id': 2235,
-      'name': 'Perry Ellis International Inc. (PERY)'
-    }, {
-      'id': 2236,
-      'name': 'Pershing Gold Corporation (PGLC)'
-    }, {
-      'id': 2237,
-      'name': 'PetMed Express (PETS)'
-    }, {
-      'id': 2238,
-      'name': 'PFSweb (PFSW)'
-    }, {
-      'id': 2239,
-      'name': 'PGT Innovations (PGTI)'
-    }, {
-      'id': 2240,
-      'name': 'PhaseRx (PZRX)'
-    }, {
-      'id': 2241,
-      'name': 'PHI (PHII)'
-    }, {
-      'id': 2242,
-      'name': 'PHI (PHIIK)'
-    }, {
-      'id': 2243,
-      'name': 'Phibro Animal Health Corporation (PAHC)'
-    }, {
-      'id': 2244,
-      'name': 'PhotoMedex (PHMD)'
-    }, {
-      'id': 2245,
-      'name': 'Photronics (PLAB)'
-    }, {
-      'id': 2246,
-      'name': 'PICO Holdings Inc. (PICO)'
-    }, {
-      'id': 2247,
-      'name': 'Pieris Pharmaceuticals (PIRS)'
-    }, {
-      'id': 2248,
-      'name': 'Pilgrim&#39;s Pride Corporation (PPC)'
-    }, {
-      'id': 2249,
-      'name': 'Pingtan Marine Enterprise Ltd. (PME)'
-    }, {
-      'id': 2250,
-      'name': 'Pinnacle Entertainment (PNK)'
-    }, {
-      'id': 2251,
-      'name': 'Pinnacle Financial Partners (PNFP)'
-    }, {
-      'id': 2252,
-      'name': 'Pioneer Power Solutions (PPSI)'
-    }, {
-      'id': 2253,
-      'name': 'Pixelworks (PXLW)'
-    }, {
-      'id': 2254,
-      'name': 'Planet Payment (PLPM)'
-    }, {
-      'id': 2255,
-      'name': 'Playa Hotels & Resorts N.V. (PLYA)'
-    }, {
-      'id': 2256,
-      'name': 'Playa Hotels & Resorts N.V. (PLYAW)'
-    }, {
-      'id': 2257,
-      'name': 'Plexus Corp. (PLXS)'
-    }, {
-      'id': 2258,
-      'name': 'Plug Power (PLUG)'
-    }, {
-      'id': 2259,
-      'name': 'Plumas Bancorp (PLBC)'
-    }, {
-      'id': 2260,
-      'name': 'Pluristem Therapeutics (PSTI)'
-    }, {
-      'id': 2261,
-      'name': 'Poage Bankshares (PBSK)'
-    }, {
-      'id': 2262,
-      'name': 'Pointer Telocation Ltd. (PNTR)'
-    }, {
-      'id': 2263,
-      'name': 'Points International (PCOM)'
-    }, {
-      'id': 2264,
-      'name': 'Polar Power (POLA)'
-    }, {
-      'id': 2265,
-      'name': 'PolarityTE (COOL)'
-    }, {
-      'id': 2266,
-      'name': 'Pool Corporation (POOL)'
-    }, {
-      'id': 2267,
-      'name': 'Pope Resources (POPE)'
-    }, {
-      'id': 2268,
-      'name': 'Popular (BPOP)'
-    }, {
-      'id': 2269,
-      'name': 'Popular (BPOPM)'
-    }, {
-      'id': 2270,
-      'name': 'Popular (BPOPN)'
-    }, {
-      'id': 2271,
-      'name': 'Porter Bancorp (PBIB)'
-    }, {
-      'id': 2272,
-      'name': 'Portola Pharmaceuticals (PTLA)'
-    }, {
-      'id': 2273,
-      'name': 'Potbelly Corporation (PBPB)'
-    }, {
-      'id': 2274,
-      'name': 'Potlatch Corporation (PCH)'
-    }, {
-      'id': 2275,
-      'name': 'Powell Industries (POWL)'
-    }, {
-      'id': 2276,
-      'name': 'Power Integrations (POWI)'
-    }, {
-      'id': 2277,
-      'name': 'Power Solutions International (PSIX)'
-    }, {
-      'id': 2278,
-      'name': 'PowerShares 1-30 Laddered Treasury Portfolio (PLW)'
-    }, {
-      'id': 2279,
-      'name': 'PowerShares BuyBack Achievers Portfolio (PKW)'
-    }, {
-      'id': 2280,
-      'name': 'PowerShares Dividend Achievers Portfolio (PFM)'
-    }, {
-      'id': 2281,
-      'name': 'PowerShares DWA Basic Materials Momentum Portfolio (PYZ)'
-    }, {
-      'id': 2282,
-      'name': 'PowerShares DWA Consumer Cyclicals Momentum Portfolio (PEZ)'
-    }, {
-      'id': 2283,
-      'name': 'PowerShares DWA Consumer Staples Momentum Portfolio (PSL)'
-    }, {
-      'id': 2284,
-      'name': 'PowerShares DWA Developed Markets Momentum Portfolio (PIZ)'
-    }, {
-      'id': 2285,
-      'name': 'PowerShares DWA Emerging Markets Momentum Portfolio (PIE)'
-    }, {
-      'id': 2286,
-      'name': 'PowerShares DWA Energy Momentum Portfolio (PXI)'
-    }, {
-      'id': 2287,
-      'name': 'PowerShares DWA Financial Momentum Portfolio (PFI)'
-    }, {
-      'id': 2288,
-      'name': 'PowerShares DWA Healthcare Momentum Portfolio (PTH)'
-    }, {
-      'id': 2289,
-      'name': 'PowerShares DWA Industrials Momentum Portfolio (PRN)'
-    }, {
-      'id': 2290,
-      'name': 'PowerShares DWA Momentum & Low Volatility Rotation Portfolio (DWLV)'
-    }, {
-      'id': 2291,
-      'name': 'PowerShares DWA Momentum Portfolio (PDP)'
-    }, {
-      'id': 2292,
-      'name': 'PowerShares DWA NASDAQ Momentum Portfolio (DWAQ)'
-    }, {
-      'id': 2293,
-      'name': 'PowerShares DWA SmallCap Momentum Portfolio (DWAS)'
-    }, {
-      'id': 2294,
-      'name': 'PowerShares DWA Tactical Multi-Asset Income Portfolio (DWIN)'
-    }, {
-      'id': 2295,
-      'name': 'PowerShares DWA Tactical Sector Rotation Portfolio (DWTR)'
-    }, {
-      'id': 2296,
-      'name': 'PowerShares DWA Technology Momenum Portfolio (PTF)'
-    }, {
-      'id': 2297,
-      'name': 'PowerShares DWA Utilities Momentum Portfolio (PUI)'
-    }, {
-      'id': 2298,
-      'name': 'PowerShares FTSE International Low Beta Equal Weight Portfolio (IDLB)'
-    }, {
-      'id': 2299,
-      'name': 'PowerShares FTSE RAFI US 1500 Small-Mid Portfolio (PRFZ)'
-    }, {
-      'id': 2300,
-      'name': 'PowerShares Global Agriculture Portfolio (PAGG)'
-    }, {
-      'id': 2301,
-      'name': 'PowerShares Global Gold & Precious Metals Portfolio (PSAU)'
-    }, {
-      'id': 2302,
-      'name': 'PowerShares Global Water Portfolio (PIO)'
-    }, {
-      'id': 2303,
-      'name': 'PowerShares Golden Dragon China Portfolio (PGJ)'
-    }, {
-      'id': 2304,
-      'name': 'PowerShares High Yield Equity Dividend Achievers Portfolio (PEY)'
-    }, {
-      'id': 2305,
-      'name': 'PowerShares International BuyBack Achievers Portfolio (IPKW)'
-    }, {
-      'id': 2306,
-      'name': 'PowerShares International Dividend Achievers Portfolio (PID)'
-    }, {
-      'id': 2307,
-      'name': 'PowerShares KBW Bank Portfolio (KBWB)'
-    }, {
-      'id': 2308,
-      'name': 'PowerShares KBW High Dividend Yield Financial Portfolio (KBWD)'
-    }, {
-      'id': 2309,
-      'name': 'PowerShares KBW Premium Yield Equity REIT Portfolio (KBWY)'
-    }, {
-      'id': 2310,
-      'name': 'PowerShares KBW Property & Casualty Insurance Portfolio (KBWP)'
-    }, {
-      'id': 2311,
-      'name': 'PowerShares KBW Regional Banking Portfolio (KBWR)'
-    }, {
-      'id': 2312,
-      'name': 'PowerShares LadderRite 0-5 Year Corporate Bond Portfolio (LDRI)'
-    }, {
-      'id': 2313,
-      'name': 'PowerShares Multi-Strategy Alternative Portfolio (LALT)'
-    }, {
-      'id': 2314,
-      'name': 'PowerShares Nasdaq Internet Portfolio (PNQI)'
-    }, {
-      'id': 2315,
-      'name': 'PowerShares Optimum Yield Diversified Commodity Strategy No K- (PDBC)'
-    }, {
-      'id': 2316,
-      'name': 'PowerShares QQQ Trust (QQQ)'
-    }, {
-      'id': 2317,
-      'name': 'PowerShares Russell 1000 Low Beta Equal Weight Portfolio (USLB)'
-    }, {
-      'id': 2318,
-      'name': 'PowerShares S&P SmallCap Consumer Discretionary Portfolio (PSCD)'
-    }, {
-      'id': 2319,
-      'name': 'PowerShares S&P SmallCap Consumer Staples Portfolio (PSCC)'
-    }, {
-      'id': 2320,
-      'name': 'PowerShares S&P SmallCap Energy Portfolio (PSCE)'
-    }, {
-      'id': 2321,
-      'name': 'PowerShares S&P SmallCap Financials Portfolio (PSCF)'
-    }, {
-      'id': 2322,
-      'name': 'PowerShares S&P SmallCap Health Care Portfolio (PSCH)'
-    }, {
-      'id': 2323,
-      'name': 'PowerShares S&P SmallCap Industrials Portfolio (PSCI)'
-    }, {
-      'id': 2324,
-      'name': 'PowerShares S&P SmallCap Information Technology Portfolio (PSCT)'
-    }, {
-      'id': 2325,
-      'name': 'PowerShares S&P SmallCap Materials Portfolio (PSCM)'
-    }, {
-      'id': 2326,
-      'name': 'PowerShares S&P SmallCap Utilities Portfolio (PSCU)'
-    }, {
-      'id': 2327,
-      'name': 'PowerShares Variable Rate Investment Grade Portfolio (VRIG)'
-    }, {
-      'id': 2328,
-      'name': 'PowerShares Water Resources Portfolio (PHO)'
-    }, {
-      'id': 2329,
-      'name': 'PRA Group (PRAA)'
-    }, {
-      'id': 2330,
-      'name': 'PRA Health Sciences (PRAH)'
-    }, {
-      'id': 2331,
-      'name': 'Prana Biotechnology Ltd (PRAN)'
-    }, {
-      'id': 2332,
-      'name': 'Preferred Bank (PFBC)'
-    }, {
-      'id': 2333,
-      'name': 'Preformed Line Products Company (PLPC)'
-    }, {
-      'id': 2334,
-      'name': 'Premier Financial Bancorp (PFBI)'
-    }, {
-      'id': 2335,
-      'name': 'Premier (PINC)'
-    }, {
-      'id': 2336,
-      'name': 'Presbia PLC (LENS)'
-    }, {
-      'id': 2337,
-      'name': 'Presidio (PSDO)'
-    }, {
-      'id': 2338,
-      'name': 'PRGX Global (PRGX)'
-    }, {
-      'id': 2339,
-      'name': 'PriceSmart (PSMT)'
-    }, {
-      'id': 2340,
-      'name': 'Prima BioMed Ltd (PBMD)'
-    }, {
-      'id': 2341,
-      'name': 'PrimeEnergy Corporation (PNRG)'
-    }, {
-      'id': 2342,
-      'name': 'Primo Water Corporation (PRMW)'
-    }, {
-      'id': 2343,
-      'name': 'Primoris Services Corporation (PRIM)'
-    }, {
-      'id': 2344,
-      'name': 'Principal Healthcare Innovators Index ETF (BTEC)'
-    }, {
-      'id': 2345,
-      'name': 'Principal Millennials Index ETF (GENY)'
-    }, {
-      'id': 2346,
-      'name': 'Principal Price Setters Index ETF (PSET)'
-    }, {
-      'id': 2347,
-      'name': 'Principal Shareholder Yield Index ETF (PY)'
-    }, {
-      'id': 2348,
-      'name': 'Principal U.S. Small Cap Index ETF (PSC)'
-    }, {
-      'id': 2349,
-      'name': 'PrivateBancorp (PVTB)'
-    }, {
-      'id': 2350,
-      'name': 'PrivateBancorp (PVTBP)'
-    }, {
-      'id': 2351,
-      'name': 'Pro-Dex (PDEX)'
-    }, {
-      'id': 2352,
-      'name': 'Professional Diversity Network (IPDN)'
-    }, {
-      'id': 2353,
-      'name': 'Profire Energy (PFIE)'
-    }, {
-      'id': 2354,
-      'name': 'Progenics Pharmaceuticals Inc. (PGNX)'
-    }, {
-      'id': 2355,
-      'name': 'Progress Software Corporation (PRGS)'
-    }, {
-      'id': 2356,
-      'name': 'Proofpoint (PFPT)'
-    }, {
-      'id': 2357,
-      'name': 'ProPhase Labs (PRPH)'
-    }, {
-      'id': 2358,
-      'name': 'ProQR Therapeutics N.V. (PRQR)'
-    }, {
-      'id': 2359,
-      'name': 'ProShares Ultra Nasdaq Biotechnology (BIB)'
-    }, {
-      'id': 2360,
-      'name': 'Proshares UltraPro Nasdaq Biotechnology (UBIO)'
-    }, {
-      'id': 2361,
-      'name': 'ProShares UltraPro QQQ (TQQQ)'
-    }, {
-      'id': 2362,
-      'name': 'ProShares UltraPro Short NASDAQ Biotechnology (ZBIO)'
-    }, {
-      'id': 2363,
-      'name': 'ProShares UltraPro Short QQQ (SQQQ)'
-    }, {
-      'id': 2364,
-      'name': 'ProShares UltraShort Nasdaq Biotechnology (BIS)'
-    }, {
-      'id': 2365,
-      'name': 'Prospect Capital Corporation (PSEC)'
-    }, {
-      'id': 2366,
-      'name': 'Protagonist Therapeutics (PTGX)'
-    }, {
-      'id': 2367,
-      'name': 'Proteon Therapeutics (PRTO)'
-    }, {
-      'id': 2368,
-      'name': 'Proteostasis Therapeutics (PTI)'
-    }, {
-      'id': 2369,
-      'name': 'Prothena Corporation plc (PRTA)'
-    }, {
-      'id': 2370,
-      'name': 'Provident Bancorp (PVBC)'
-    }, {
-      'id': 2371,
-      'name': 'Provident Financial Holdings (PROV)'
-    }, {
-      'id': 2372,
-      'name': 'Prudential Bancorp (PBIP)'
-    }, {
-      'id': 2373,
-      'name': 'pSivida Corp. (PSDV)'
-    }, {
-      'id': 2374,
-      'name': 'Psychemedics Corporation (PMD)'
-    }, {
-      'id': 2375,
-      'name': 'PTC Inc. (PTC)'
-    }, {
-      'id': 2376,
-      'name': 'PTC Therapeutics (PTCT)'
-    }, {
-      'id': 2377,
-      'name': 'Pulmatrix (PULM)'
-    }, {
-      'id': 2378,
-      'name': 'Pulse Biosciences (PLSE)'
-    }, {
-      'id': 2379,
-      'name': 'Puma Biotechnology Inc (PBYI)'
-    }, {
-      'id': 2380,
-      'name': 'Pure Cycle Corporation (PCYO)'
-    }, {
-      'id': 2381,
-      'name': 'PureFunds ETFx HealthTech ETF (IMED)'
-    }, {
-      'id': 2382,
-      'name': 'Purefunds Solactive FinTech ETF (FINQ)'
-    }, {
-      'id': 2383,
-      'name': 'Pyxis Tankers Inc. (PXS)'
-    }, {
-      'id': 2384,
-      'name': 'QAD Inc. (QADA)'
-    }, {
-      'id': 2385,
-      'name': 'QAD Inc. (QADB)'
-    }, {
-      'id': 2386,
-      'name': 'QCR Holdings (QCRH)'
-    }, {
-      'id': 2387,
-      'name': 'Qiagen N.V. (QGEN)'
-    }, {
-      'id': 2388,
-      'name': 'QIWI plc (QIWI)'
-    }, {
-      'id': 2389,
-      'name': 'Qorvo (QRVO)'
-    }, {
-      'id': 2390,
-      'name': 'QUALCOMM Incorporated (QCOM)'
-    }, {
-      'id': 2391,
-      'name': 'Quality Systems (QSII)'
-    }, {
-      'id': 2392,
-      'name': 'Qualstar Corporation (QBAK)'
-    }, {
-      'id': 2393,
-      'name': 'Qualys (QLYS)'
-    }, {
-      'id': 2394,
-      'name': 'Quantenna Communications (QTNA)'
-    }, {
-      'id': 2395,
-      'name': 'Quest Resource Holding Corporation. (QRHC)'
-    }, {
-      'id': 2396,
-      'name': 'QuickLogic Corporation (QUIK)'
-    }, {
-      'id': 2397,
-      'name': 'Quidel Corporation (QDEL)'
-    }, {
-      'id': 2398,
-      'name': 'Quinpario Acquisition Corp. 2 (QPAC)'
-    }, {
-      'id': 2399,
-      'name': 'Quinpario Acquisition Corp. 2 (QPACU)'
-    }, {
-      'id': 2400,
-      'name': 'Quinpario Acquisition Corp. 2 (QPACW)'
-    }, {
-      'id': 2401,
-      'name': 'QuinStreet (QNST)'
-    }, {
-      'id': 2402,
-      'name': 'Qumu Corporation (QUMU)'
-    }, {
-      'id': 2403,
-      'name': 'Quotient Limited (QTNT)'
-    }, {
-      'id': 2404,
-      'name': 'R.R. Donnelley & Sons Company (RRD)'
-    }, {
-      'id': 2405,
-      'name': 'R1 RCM Inc. (RCM)'
-    }, {
-      'id': 2406,
-      'name': 'Ra Pharmaceuticals (RARX)'
-    }, {
-      'id': 2407,
-      'name': 'RADA Electronic Industries Ltd. (RADA)'
-    }, {
-      'id': 2408,
-      'name': 'Radcom Ltd. (RDCM)'
-    }, {
-      'id': 2409,
-      'name': 'Radio One (ROIA)'
-    }, {
-      'id': 2410,
-      'name': 'Radio One (ROIAK)'
-    }, {
-      'id': 2411,
-      'name': 'RadiSys Corporation (RSYS)'
-    }, {
-      'id': 2412,
-      'name': 'Radius Health (RDUS)'
-    }, {
-      'id': 2413,
-      'name': 'RadNet (RDNT)'
-    }, {
-      'id': 2414,
-      'name': 'Radware Ltd. (RDWR)'
-    }, {
-      'id': 2415,
-      'name': 'Ramaco Resources (METC)'
-    }, {
-      'id': 2416,
-      'name': 'Rambus (RMBS)'
-    }, {
-      'id': 2417,
-      'name': 'Rand Capital Corporation (RAND)'
-    }, {
-      'id': 2418,
-      'name': 'Rand Logistics (RLOG)'
-    }, {
-      'id': 2419,
-      'name': 'Randgold Resources Limited (GOLD)'
-    }, {
-      'id': 2420,
-      'name': 'Randolph Bancorp (RNDB)'
-    }, {
-      'id': 2421,
-      'name': 'Rapid7 (RPD)'
-    }, {
-      'id': 2422,
-      'name': 'Rave Restaurant Group (RAVE)'
-    }, {
-      'id': 2423,
-      'name': 'Raven Industries (RAVN)'
-    }, {
-      'id': 2424,
-      'name': 'RBC Bearings Incorporated (ROLL)'
-    }, {
-      'id': 2425,
-      'name': 'RCI Hospitality Holdings (RICK)'
-    }, {
-      'id': 2426,
-      'name': 'RCM Technologies (RCMT)'
-    }, {
-      'id': 2427,
-      'name': 'Reading International Inc (RDI)'
-    }, {
-      'id': 2428,
-      'name': 'Reading International Inc (RDIB)'
-    }, {
-      'id': 2429,
-      'name': 'Real Goods Solar (RGSE)'
-    }, {
-      'id': 2430,
-      'name': 'Real Industry (RELY)'
-    }, {
-      'id': 2431,
-      'name': 'RealNetworks (RNWK)'
-    }, {
-      'id': 2432,
-      'name': 'RealPage (RP)'
-    }, {
-      'id': 2433,
-      'name': 'Reata Pharmaceuticals (RETA)'
-    }, {
-      'id': 2434,
-      'name': 'Recon Technology (RCON)'
-    }, {
-      'id': 2435,
-      'name': 'Recro Pharma (REPH)'
-    }, {
-      'id': 2436,
-      'name': 'Red Robin Gourmet Burgers (RRGB)'
-    }, {
-      'id': 2437,
-      'name': 'Red Rock Resorts (RRR)'
-    }, {
-      'id': 2438,
-      'name': 'Redhill Biopharma Ltd. (RDHL)'
-    }, {
-      'id': 2439,
-      'name': 'Regeneron Pharmaceuticals (REGN)'
-    }, {
-      'id': 2440,
-      'name': 'REGENXBIO Inc. (RGNX)'
-    }, {
-      'id': 2441,
-      'name': 'Regulus Therapeutics Inc. (RGLS)'
-    }, {
-      'id': 2442,
-      'name': 'Reis (REIS)'
-    }, {
-      'id': 2443,
-      'name': 'Reliv&#39; International (RELV)'
-    }, {
-      'id': 2444,
-      'name': 'Remark Media (MARK)'
-    }, {
-      'id': 2445,
-      'name': 'Renasant Corporation (RNST)'
-    }, {
-      'id': 2446,
-      'name': 'Renewable Energy Group (REGI)'
-    }, {
-      'id': 2447,
-      'name': 'Rennova Health (RNVA)'
-    }, {
-      'id': 2448,
-      'name': 'Rennova Health (RNVAZ)'
-    }, {
-      'id': 2449,
-      'name': 'Rent-A-Center Inc. (RCII)'
-    }, {
-      'id': 2450,
-      'name': 'Rentech (RTK)'
-    }, {
-      'id': 2451,
-      'name': 'Repligen Corporation (RGEN)'
-    }, {
-      'id': 2452,
-      'name': 'Repros Therapeutics Inc. (RPRX)'
-    }, {
-      'id': 2453,
-      'name': 'Republic Bancorp (RBCAA)'
-    }, {
-      'id': 2454,
-      'name': 'Republic First Bancorp (FRBK)'
-    }, {
-      'id': 2455,
-      'name': 'RESAAS Services Inc. (RSAS)'
-    }, {
-      'id': 2456,
-      'name': 'Research Frontiers Incorporated (REFR)'
-    }, {
-      'id': 2457,
-      'name': 'Resonant Inc. (RESN)'
-    }, {
-      'id': 2458,
-      'name': 'Resources Connection (RECN)'
-    }, {
-      'id': 2459,
-      'name': 'Retail Opportunity Investments Corp. (ROIC)'
-    }, {
-      'id': 2460,
-      'name': 'RetailMeNot (SALE)'
-    }, {
-      'id': 2461,
-      'name': 'Retrophin (RTRX)'
-    }, {
-      'id': 2462,
-      'name': 'Revance Therapeutics (RVNC)'
-    }, {
-      'id': 2463,
-      'name': 'Reven Housing REIT (RVEN)'
-    }, {
-      'id': 2464,
-      'name': 'rEVO Biologics (RBIO)'
-    }, {
-      'id': 2465,
-      'name': 'Revolution Lighting Technologies (RVLT)'
-    }, {
-      'id': 2466,
-      'name': 'ReWalk Robotics Ltd (RWLK)'
-    }, {
-      'id': 2467,
-      'name': 'Rex Energy Corporation (REXX)'
-    }, {
-      'id': 2468,
-      'name': 'RF Industries (RFIL)'
-    }, {
-      'id': 2469,
-      'name': 'RGC Resources Inc. (RGCO)'
-    }, {
-      'id': 2470,
-      'name': 'RiceBran Technologies (RIBT)'
-    }, {
-      'id': 2471,
-      'name': 'RiceBran Technologies (RIBTW)'
-    }, {
-      'id': 2472,
-      'name': 'Richardson Electronics (RELL)'
-    }, {
-      'id': 2473,
-      'name': 'Rigel Pharmaceuticals (RIGL)'
-    }, {
-      'id': 2474,
-      'name': 'Rightside Group (NAME)'
-    }, {
-      'id': 2475,
-      'name': 'RigNet (RNET)'
-    }, {
-      'id': 2476,
-      'name': 'Ritter Pharmaceuticals (RTTR)'
-    }, {
-      'id': 2477,
-      'name': 'Riverview Bancorp Inc (RVSB)'
-    }, {
-      'id': 2478,
-      'name': 'RLJ Entertainment (RLJE)'
-    }, {
-      'id': 2479,
-      'name': 'RMG Networks Holding Corporation (RMGN)'
-    }, {
-      'id': 2480,
-      'name': 'ROBO Global Robotics and Automation Index ETF (ROBO)'
-    }, {
-      'id': 2481,
-      'name': 'Rocket Fuel Inc. (FUEL)'
-    }, {
-      'id': 2482,
-      'name': 'Rockwell Medical (RMTI)'
-    }, {
-      'id': 2483,
-      'name': 'Rocky Brands (RCKY)'
-    }, {
-      'id': 2484,
-      'name': 'Rocky Mountain Chocolate Factory (RMCF)'
-    }, {
-      'id': 2485,
-      'name': 'Roka Bioscience (ROKA)'
-    }, {
-      'id': 2486,
-      'name': 'root9B Holdings (RTNB)'
-    }, {
-      'id': 2487,
-      'name': 'Rosetta Genomics Ltd. (ROSG)'
-    }, {
-      'id': 2488,
-      'name': 'Ross Stores (ROST)'
-    }, {
-      'id': 2489,
-      'name': 'Royal Bancshares of Pennsylvania (RBPAA)'
-    }, {
-      'id': 2490,
-      'name': 'Royal Gold (RGLD)'
-    }, {
-      'id': 2491,
-      'name': 'RPX Corporation (RPXC)'
-    }, {
-      'id': 2492,
-      'name': 'RTI Surgical (RTIX)'
-    }, {
-      'id': 2493,
-      'name': 'Rubicon Technology (RBCN)'
-    }, {
-      'id': 2494,
-      'name': 'Rush Enterprises (RUSHA)'
-    }, {
-      'id': 2495,
-      'name': 'Rush Enterprises (RUSHB)'
-    }, {
-      'id': 2496,
-      'name': 'Ruth&#39;s Hospitality Group (RUTH)'
-    }, {
-      'id': 2497,
-      'name': 'RXi Pharmaceuticals Corporation (RXII)'
-    }, {
-      'id': 2498,
-      'name': 'RXi Pharmaceuticals Corporation (RXIIW)'
-    }, {
-      'id': 2499,
-      'name': 'Ryanair Holdings plc (RYAAY)'
-    }, {
-      'id': 2500,
-      'name': 'S&T Bancorp (STBA)'
-    }, {
-      'id': 2501,
-      'name': 'S&W Seed Company (SANW)'
-    }, {
-      'id': 2502,
-      'name': 'Saban Capital Acquisition Corp. (SCAC)'
-    }, {
-      'id': 2503,
-      'name': 'Saban Capital Acquisition Corp. (SCACU)'
-    }, {
-      'id': 2504,
-      'name': 'Saban Capital Acquisition Corp. (SCACW)'
-    }, {
-      'id': 2505,
-      'name': 'Sabra Healthcare REIT (SBRA)'
-    }, {
-      'id': 2506,
-      'name': 'Sabra Healthcare REIT (SBRAP)'
-    }, {
-      'id': 2507,
-      'name': 'Sabre Corporation (SABR)'
-    }, {
-      'id': 2508,
-      'name': 'SAExploration Holdings (SAEX)'
-    }, {
-      'id': 2509,
-      'name': 'Safety Insurance Group (SAFT)'
-    }, {
-      'id': 2510,
-      'name': 'Sage Therapeutics (SAGE)'
-    }, {
-      'id': 2511,
-      'name': 'Saia (SAIA)'
-    }, {
-      'id': 2512,
-      'name': 'Sajan (SAJA)'
-    }, {
-      'id': 2513,
-      'name': 'Salem Media Group (SALM)'
-    }, {
-      'id': 2514,
-      'name': 'Salisbury Bancorp (SAL)'
-    }, {
-      'id': 2515,
-      'name': 'Sanderson Farms (SAFM)'
-    }, {
-      'id': 2516,
-      'name': 'Sandy Spring Bancorp (SASR)'
-    }, {
-      'id': 2517,
-      'name': 'Sangamo Therapeutics (SGMO)'
-    }, {
-      'id': 2518,
-      'name': 'Sanmina Corporation (SANM)'
-    }, {
-      'id': 2519,
-      'name': 'Sanofi (GCVRZ)'
-    }, {
-      'id': 2520,
-      'name': 'Sapiens International Corporation N.V. (SPNS)'
-    }, {
-      'id': 2521,
-      'name': 'Sarepta Therapeutics (SRPT)'
-    }, {
-      'id': 2522,
-      'name': 'SB Financial Group (SBFG)'
-    }, {
-      'id': 2523,
-      'name': 'SB Financial Group (SBFGP)'
-    }, {
-      'id': 2524,
-      'name': 'SBA Communications Corporation (SBAC)'
-    }, {
-      'id': 2525,
-      'name': 'ScanSource (SCSC)'
-    }, {
-      'id': 2526,
-      'name': 'Schmitt Industries (SMIT)'
-    }, {
-      'id': 2527,
-      'name': 'Schnitzer Steel Industries (SCHN)'
-    }, {
-      'id': 2528,
-      'name': 'Scholastic Corporation (SCHL)'
-    }, {
-      'id': 2529,
-      'name': 'SciClone Pharmaceuticals (SCLN)'
-    }, {
-      'id': 2530,
-      'name': 'Scientific Games Corp (SGMS)'
-    }, {
-      'id': 2531,
-      'name': 'Scripps Networks Interactive (SNI)'
-    }, {
-      'id': 2532,
-      'name': 'SCYNEXIS (SCYX)'
-    }, {
-      'id': 2533,
-      'name': 'SeaChange International (SEAC)'
-    }, {
-      'id': 2534,
-      'name': 'Seacoast Banking Corporation of Florida (SBCF)'
-    }, {
-      'id': 2535,
-      'name': 'Seagate Technology PLC (STX)'
-    }, {
-      'id': 2536,
-      'name': 'Seanergy Maritime Holdings Corp (SHIP)'
-    }, {
-      'id': 2537,
-      'name': 'Seanergy Maritime Holdings Corp (SHIPW)'
-    }, {
-      'id': 2538,
-      'name': 'Sears Canada Inc.  (SRSC)'
-    }, {
-      'id': 2539,
-      'name': 'Sears Holdings Corporation (SHLD)'
-    }, {
-      'id': 2540,
-      'name': 'Sears Holdings Corporation (SHLDW)'
-    }, {
-      'id': 2541,
-      'name': 'Sears Hometown and Outlet Stores (SHOS)'
-    }, {
-      'id': 2542,
-      'name': 'SeaSpine Holdings Corporation (SPNE)'
-    }, {
-      'id': 2543,
-      'name': 'Seattle Genetics (SGEN)'
-    }, {
-      'id': 2544,
-      'name': 'Second Sight Medical Products (EYES)'
-    }, {
-      'id': 2545,
-      'name': 'Second Sight Medical Products (EYESW)'
-    }, {
-      'id': 2546,
-      'name': 'SecureWorks Corp. (SCWX)'
-    }, {
-      'id': 2547,
-      'name': 'Security National Financial Corporation (SNFCA)'
-    }, {
-      'id': 2548,
-      'name': 'SEI Investments Company (SEIC)'
-    }, {
-      'id': 2549,
-      'name': 'Select Bancorp (SLCT)'
-    }, {
-      'id': 2550,
-      'name': 'Select Comfort Corporation (SCSS)'
-    }, {
-      'id': 2551,
-      'name': 'Select Income REIT (SIR)'
-    }, {
-      'id': 2552,
-      'name': 'Selecta Biosciences (SELB)'
-    }, {
-      'id': 2553,
-      'name': 'Selective Insurance Group (SIGI)'
-    }, {
-      'id': 2554,
-      'name': 'SemiLEDS Corporation (LEDS)'
-    }, {
-      'id': 2555,
-      'name': 'Semtech Corporation (SMTC)'
-    }, {
-      'id': 2556,
-      'name': 'Seneca Foods Corp. (SENEA)'
-    }, {
-      'id': 2557,
-      'name': 'Seneca Foods Corp. (SENEB)'
-    }, {
-      'id': 2558,
-      'name': 'SenesTech (SNES)'
-    }, {
-      'id': 2559,
-      'name': 'Senior Housing Properties Trust (SNH)'
-    }, {
-      'id': 2560,
-      'name': 'Senior Housing Properties Trust (SNHNI)'
-    }, {
-      'id': 2561,
-      'name': 'Senior Housing Properties Trust (SNHNL)'
-    }, {
-      'id': 2562,
-      'name': 'Senomyx (SNMX)'
-    }, {
-      'id': 2563,
-      'name': 'Sensus Healthcare (SRTS)'
-    }, {
-      'id': 2564,
-      'name': 'Sensus Healthcare (SRTSW)'
-    }, {
-      'id': 2565,
-      'name': 'Sequential Brands Group (SQBG)'
-    }, {
-      'id': 2566,
-      'name': 'Seres Therapeutics (MCRB)'
-    }, {
-      'id': 2567,
-      'name': 'ServiceSource International (SREV)'
-    }, {
-      'id': 2568,
-      'name': 'ServisFirst Bancshares (SFBS)'
-    }, {
-      'id': 2569,
-      'name': 'Sevcon (SEV)'
-    }, {
-      'id': 2570,
-      'name': 'Severn Bancorp Inc (SVBI)'
-    }, {
-      'id': 2571,
-      'name': 'SGOCO Group (SGOC)'
-    }, {
-      'id': 2572,
-      'name': 'Sharps Compliance Corp (SMED)'
-    }, {
-      'id': 2573,
-      'name': 'SharpSpring (SHSP)'
-    }, {
-      'id': 2574,
-      'name': 'Shenandoah Telecommunications Co (SHEN)'
-    }, {
-      'id': 2575,
-      'name': 'ShiftPixy (PIXY)'
-    }, {
-      'id': 2576,
-      'name': 'Shiloh Industries (SHLO)'
-    }, {
-      'id': 2577,
-      'name': 'Shimmick Construction Company (SCCI)'
-    }, {
-      'id': 2578,
-      'name': 'Shineco (TYHT)'
-    }, {
-      'id': 2579,
-      'name': 'Shire plc (SHPG)'
-    }, {
-      'id': 2580,
-      'name': 'Shoe Carnival (SCVL)'
-    }, {
-      'id': 2581,
-      'name': 'Shore Bancshares Inc (SHBI)'
-    }, {
-      'id': 2582,
-      'name': 'ShoreTel (SHOR)'
-    }, {
-      'id': 2583,
-      'name': 'Shutterfly (SFLY)'
-    }, {
-      'id': 2584,
-      'name': 'SI Financial Group (SIFI)'
-    }, {
-      'id': 2585,
-      'name': 'Siebert Financial Corp. (SIEB)'
-    }, {
-      'id': 2586,
-      'name': 'Sientra (SIEN)'
-    }, {
-      'id': 2587,
-      'name': 'Sierra Bancorp (BSRR)'
-    }, {
-      'id': 2588,
-      'name': 'Sierra Oncology (SRRA)'
-    }, {
-      'id': 2589,
-      'name': 'Sierra Wireless (SWIR)'
-    }, {
-      'id': 2590,
-      'name': 'Sify Technologies Limited (SIFY)'
-    }, {
-      'id': 2591,
-      'name': 'Sigma Designs (SIGM)'
-    }, {
-      'id': 2592,
-      'name': 'Sigma Labs (SGLB)'
-    }, {
-      'id': 2593,
-      'name': 'Sigma Labs (SGLBW)'
-    }, {
-      'id': 2594,
-      'name': 'SigmaTron International (SGMA)'
-    }, {
-      'id': 2595,
-      'name': 'Signature Bank (SBNY)'
-    }, {
-      'id': 2596,
-      'name': 'Signature Bank (SBNYW)'
-    }, {
-      'id': 2597,
-      'name': 'Silgan Holdings Inc. (SLGN)'
-    }, {
-      'id': 2598,
-      'name': 'Silicom Ltd (SILC)'
-    }, {
-      'id': 2599,
-      'name': 'Silicon Laboratories (SLAB)'
-    }, {
-      'id': 2600,
-      'name': 'Silicon Motion Technology Corporation (SIMO)'
-    }, {
-      'id': 2601,
-      'name': 'Siliconware Precision Industries Company (SPIL)'
-    }, {
-      'id': 2602,
-      'name': 'Silver Run Acquisition Corporation II (SRUNU)'
-    }, {
-      'id': 2603,
-      'name': 'Silver Standard Resources Inc. (SSRI)'
-    }, {
-      'id': 2604,
-      'name': 'Silvercrest Asset Management Group Inc. (SAMG)'
-    }, {
-      'id': 2605,
-      'name': 'Simmons First National Corporation (SFNC)'
-    }, {
-      'id': 2606,
-      'name': 'Simulations Plus (SLP)'
-    }, {
-      'id': 2607,
-      'name': 'Sina Corporation (SINA)'
-    }, {
-      'id': 2608,
-      'name': 'Sinclair Broadcast Group (SBGI)'
-    }, {
-      'id': 2609,
-      'name': 'Sino-Global Shipping America (SINO)'
-    }, {
-      'id': 2610,
-      'name': 'Sinovac Biotech (SVA)'
-    }, {
-      'id': 2611,
-      'name': 'Sirius XM Holdings Inc. (SIRI)'
-    }, {
-      'id': 2612,
-      'name': 'SIRVA (SRVA)'
-    }, {
-      'id': 2613,
-      'name': 'SITO Mobile (SITO)'
-    }, {
-      'id': 2614,
-      'name': 'Sky Solar Holdings (SKYS)'
-    }, {
-      'id': 2615,
-      'name': 'Skyline Medical Inc. (SKLN)'
-    }, {
-      'id': 2616,
-      'name': 'SkyPeople Fruit Juice (SPU)'
-    }, {
-      'id': 2617,
-      'name': 'SkyWest (SKYW)'
-    }, {
-      'id': 2618,
-      'name': 'Skyworks Solutions (SWKS)'
-    }, {
-      'id': 2619,
-      'name': 'SLM Corporation (SLM)'
-    }, {
-      'id': 2620,
-      'name': 'SLM Corporation (SLMAP)'
-    }, {
-      'id': 2621,
-      'name': 'SLM Corporation (SLMBP)'
-    }, {
-      'id': 2622,
-      'name': 'Smart Sand (SND)'
-    }, {
-      'id': 2623,
-      'name': 'SmartFinancial (SMBK)'
-    }, {
-      'id': 2624,
-      'name': 'Smith Micro Software (SMSI)'
-    }, {
-      'id': 2625,
-      'name': 'SMTC Corporation (SMTX)'
-    }, {
-      'id': 2626,
-      'name': 'Snyder&#39;s-Lance (LNCE)'
-    }, {
-      'id': 2627,
-      'name': 'Social Reality (SRAX)'
-    }, {
-      'id': 2628,
-      'name': 'Socket Mobile (SCKT)'
-    }, {
-      'id': 2629,
-      'name': 'SodaStream International Ltd. (SODA)'
-    }, {
-      'id': 2630,
-      'name': 'Sohu.com Inc. (SOHU)'
-    }, {
-      'id': 2631,
-      'name': 'Solar Capital Ltd. (SLRC)'
-    }, {
-      'id': 2632,
-      'name': 'Solar Senior Capital Ltd. (SUNS)'
-    }, {
-      'id': 2633,
-      'name': 'SolarEdge Technologies (SEDG)'
-    }, {
-      'id': 2634,
-      'name': 'Soligenix (SNGX)'
-    }, {
-      'id': 2635,
-      'name': 'Soligenix (SNGXW)'
-    }, {
-      'id': 2636,
-      'name': 'Sonic Corp. (SONC)'
-    }, {
-      'id': 2637,
-      'name': 'Sonic Foundry (SOFO)'
-    }, {
-      'id': 2638,
-      'name': 'Sonoma Pharmaceuticals (SNOA)'
-    }, {
-      'id': 2639,
-      'name': 'Sonoma Pharmaceuticals (SNOAW)'
-    }, {
-      'id': 2640,
-      'name': 'Sonus Networks (SONS)'
-    }, {
-      'id': 2641,
-      'name': 'Sophiris Bio (SPHS)'
-    }, {
-      'id': 2642,
-      'name': 'SORL Auto Parts (SORL)'
-    }, {
-      'id': 2643,
-      'name': 'Sorrento Therapeutics (SRNE)'
-    }, {
-      'id': 2644,
-      'name': 'Sotherly Hotels Inc. (SOHO)'
-    }, {
-      'id': 2645,
-      'name': 'Sotherly Hotels Inc. (SOHOB)'
-    }, {
-      'id': 2646,
-      'name': 'Sotherly Hotels LP (SOHOM)'
-    }, {
-      'id': 2647,
-      'name': 'Sound Financial Bancorp (SFBC)'
-    }, {
-      'id': 2648,
-      'name': 'South State Corporation (SSB)'
-    }, {
-      'id': 2649,
-      'name': 'Southern First Bancshares (SFST)'
-    }, {
-      'id': 2650,
-      'name': 'Southern Missouri Bancorp (SMBC)'
-    }, {
-      'id': 2651,
-      'name': 'Southern National Bancorp of Virginia (SONA)'
-    }, {
-      'id': 2652,
-      'name': 'Southside Bancshares (SBSI)'
-    }, {
-      'id': 2653,
-      'name': 'Southwest Bancorp (OKSB)'
-    }, {
-      'id': 2654,
-      'name': 'SP Plus Corporation (SP)'
-    }, {
-      'id': 2655,
-      'name': 'Span-America Medical Systems (SPAN)'
-    }, {
-      'id': 2656,
-      'name': 'SPAR Group (SGRP)'
-    }, {
-      'id': 2657,
-      'name': 'Spark Energy (SPKE)'
-    }, {
-      'id': 2658,
-      'name': 'Spark Energy (SPKEP)'
-    }, {
-      'id': 2659,
-      'name': 'Spark Therapeutics (ONCE)'
-    }, {
-      'id': 2660,
-      'name': 'Spartan Motors (SPAR)'
-    }, {
-      'id': 2661,
-      'name': 'SpartanNash Company (SPTN)'
-    }, {
-      'id': 2662,
-      'name': 'SPDR Dorsey Wright Fixed Income Allocation ETF (DWFI)'
-    }, {
-      'id': 2663,
-      'name': 'Spectrum Pharmaceuticals (SPPI)'
-    }, {
-      'id': 2664,
-      'name': 'Sphere 3D Corp. (ANY)'
-    }, {
-      'id': 2665,
-      'name': 'Spherix Incorporated (SPEX)'
-    }, {
-      'id': 2666,
-      'name': 'SPI Energy Co. (SPI)'
-    }, {
-      'id': 2667,
-      'name': 'Spirit Airlines (SAVE)'
-    }, {
-      'id': 2668,
-      'name': 'Splunk Inc. (SPLK)'
-    }, {
-      'id': 2669,
-      'name': 'Spok Holdings (SPOK)'
-    }, {
-      'id': 2670,
-      'name': 'Sportsman&#39;s Warehouse Holdings (SPWH)'
-    }, {
-      'id': 2671,
-      'name': 'Spring Bank Pharmaceuticals (SBPH)'
-    }, {
-      'id': 2672,
-      'name': 'Sprott Focus Trust (FUND)'
-    }, {
-      'id': 2673,
-      'name': 'Sprouts Farmers Market (SFM)'
-    }, {
-      'id': 2674,
-      'name': 'SPS Commerce (SPSC)'
-    }, {
-      'id': 2675,
-      'name': 'SS&C Technologies Holdings (SSNC)'
-    }, {
-      'id': 2676,
-      'name': 'STAAR Surgical Company (STAA)'
-    }, {
-      'id': 2677,
-      'name': 'Staffing 360 Solutions (STAF)'
-    }, {
-      'id': 2678,
-      'name': 'Stamps.com Inc. (STMP)'
-    }, {
-      'id': 2679,
-      'name': 'Stanley Furniture Company (STLY)'
-    }, {
-      'id': 2680,
-      'name': 'Staples (SPLS)'
-    }, {
-      'id': 2681,
-      'name': 'Star Bulk Carriers Corp. (SBLK)'
-    }, {
-      'id': 2682,
-      'name': 'Star Bulk Carriers Corp. (SBLKL)'
-    }, {
-      'id': 2683,
-      'name': 'Starbucks Corporation (SBUX)'
-    }, {
-      'id': 2684,
-      'name': 'State Auto Financial Corporation (STFC)'
-    }, {
-      'id': 2685,
-      'name': 'State Bank Financial Corporation. (STBZ)'
-    }, {
-      'id': 2686,
-      'name': 'State National Companies (SNC)'
-    }, {
-      'id': 2687,
-      'name': 'SteadyMed Ltd. (STDY)'
-    }, {
-      'id': 2688,
-      'name': 'StealthGas (GASS)'
-    }, {
-      'id': 2689,
-      'name': 'Steel Dynamics (STLD)'
-    }, {
-      'id': 2690,
-      'name': 'Stein Mart (SMRT)'
-    }, {
-      'id': 2691,
-      'name': 'Stellar Acquisition III Inc. (STLR)'
-    }, {
-      'id': 2692,
-      'name': 'Stellar Acquisition III Inc. (STLRU)'
-    }, {
-      'id': 2693,
-      'name': 'Stellar Acquisition III Inc. (STLRW)'
-    }, {
-      'id': 2694,
-      'name': 'Stellar Biotechnologies (SBOT)'
-    }, {
-      'id': 2695,
-      'name': 'Stemline Therapeutics (STML)'
-    }, {
-      'id': 2696,
-      'name': 'Stericycle (SRCL)'
-    }, {
-      'id': 2697,
-      'name': 'Stericycle (SRCLP)'
-    }, {
-      'id': 2698,
-      'name': 'Sterling Construction Company Inc (STRL)'
-    }, {
-      'id': 2699,
-      'name': 'Steven Madden (SHOO)'
-    }, {
-      'id': 2700,
-      'name': 'Stewardship Financial Corp (SSFN)'
-    }, {
-      'id': 2701,
-      'name': 'Stock Yards Bancorp (SYBT)'
-    }, {
-      'id': 2702,
-      'name': 'StoneCastle Financial Corp (BANX)'
-    }, {
-      'id': 2703,
-      'name': 'Stonegate Bank (SGBK)'
-    }, {
-      'id': 2704,
-      'name': 'Strata Skin Sciences (SSKN)'
-    }, {
-      'id': 2705,
-      'name': 'Stratasys (SSYS)'
-    }, {
-      'id': 2706,
-      'name': 'Strattec Security Corporation (STRT)'
-    }, {
-      'id': 2707,
-      'name': 'Stratus Properties Inc. (STRS)'
-    }, {
-      'id': 2708,
-      'name': 'Strayer Education (STRA)'
-    }, {
-      'id': 2709,
-      'name': 'Streamline Health Solutions (STRM)'
-    }, {
-      'id': 2710,
-      'name': 'Strongbridge Biopharma plc (SBBP)'
-    }, {
-      'id': 2711,
-      'name': 'Student Transportation Inc (STB)'
-    }, {
-      'id': 2712,
-      'name': 'Sucampo Pharmaceuticals (SCMP)'
-    }, {
-      'id': 2713,
-      'name': 'Summer Infant (SUMR)'
-    }, {
-      'id': 2714,
-      'name': 'Summit Financial Group (SMMF)'
-    }, {
-      'id': 2715,
-      'name': 'Summit State Bank (SSBI)'
-    }, {
-      'id': 2716,
-      'name': 'Summit Therapeutics plc (SMMT)'
-    }, {
-      'id': 2717,
-      'name': 'Sun Bancorp (SNBC)'
-    }, {
-      'id': 2718,
-      'name': 'Sun Hydraulics Corporation (SNHY)'
-    }, {
-      'id': 2719,
-      'name': 'Sundance Energy Australia Limited (SNDE)'
-    }, {
-      'id': 2720,
-      'name': 'Sunesis Pharmaceuticals (SNSS)'
-    }, {
-      'id': 2721,
-      'name': 'SunOpta (STKL)'
-    }, {
-      'id': 2722,
-      'name': 'SunPower Corporation (SPWR)'
-    }, {
-      'id': 2723,
-      'name': 'Sunrun Inc. (RUN)'
-    }, {
-      'id': 2724,
-      'name': 'Sunshine Bancorp (SBCP)'
-    }, {
-      'id': 2725,
-      'name': 'Sunshine Heart Inc (SSH)'
-    }, {
-      'id': 2726,
-      'name': 'Sunworks (SUNW)'
-    }, {
-      'id': 2727,
-      'name': 'Super Micro Computer (SMCI)'
-    }, {
-      'id': 2728,
-      'name': 'SuperCom (SPCB)'
-    }, {
-      'id': 2729,
-      'name': 'Superconductor Technologies Inc. (SCON)'
-    }, {
-      'id': 2730,
-      'name': 'Superior Uniform Group (SGC)'
-    }, {
-      'id': 2731,
-      'name': 'Supernus Pharmaceuticals (SUPN)'
-    }, {
-      'id': 2732,
-      'name': 'support.com (SPRT)'
-    }, {
-      'id': 2733,
-      'name': 'Surgery Partners (SGRY)'
-    }, {
-      'id': 2734,
-      'name': 'Surmodics (SRDX)'
-    }, {
-      'id': 2735,
-      'name': 'Sussex Bancorp (SBBX)'
-    }, {
-      'id': 2736,
-      'name': 'SVB Financial Group (SIVB)'
-    }, {
-      'id': 2737,
-      'name': 'SVB Financial Group (SIVBO)'
-    }, {
-      'id': 2738,
-      'name': 'Sykes Enterprises (SYKE)'
-    }, {
-      'id': 2739,
-      'name': 'Symantec Corporation (SYMC)'
-    }, {
-      'id': 2740,
-      'name': 'Synacor (SYNC)'
-    }, {
-      'id': 2741,
-      'name': 'Synalloy Corporation (SYNL)'
-    }, {
-      'id': 2742,
-      'name': 'Synaptics Incorporated (SYNA)'
-    }, {
-      'id': 2743,
-      'name': 'Synchronoss Technologies (SNCR)'
-    }, {
-      'id': 2744,
-      'name': 'Syndax Pharmaceuticals (SNDX)'
-    }, {
-      'id': 2745,
-      'name': 'Synergy Pharmaceuticals (SGYP)'
-    }, {
-      'id': 2746,
-      'name': 'Syneron Medical Ltd. (ELOS)'
-    }, {
-      'id': 2747,
-      'name': 'Synopsys (SNPS)'
-    }, {
-      'id': 2748,
-      'name': 'Syntel (SYNT)'
-    }, {
-      'id': 2749,
-      'name': 'Synthesis Energy Systems (SYMX)'
-    }, {
-      'id': 2750,
-      'name': 'Synutra International (SYUT)'
-    }, {
-      'id': 2751,
-      'name': 'Sypris Solutions (SYPR)'
-    }, {
-      'id': 2752,
-      'name': 'Syros Pharmaceuticals (SYRS)'
-    }, {
-      'id': 2753,
-      'name': 'T. Rowe Price Group (TROW)'
-    }, {
-      'id': 2754,
-      'name': 'T2 Biosystems (TTOO)'
-    }, {
-      'id': 2755,
-      'name': 'Tabula Rasa HealthCare (TRHC)'
-    }, {
-      'id': 2756,
-      'name': 'Tactile Systems Technology (TCMD)'
-    }, {
-      'id': 2757,
-      'name': 'Taitron Components Incorporated (TAIT)'
-    }, {
-      'id': 2758,
-      'name': 'Take-Two Interactive Software (TTWO)'
-    }, {
-      'id': 2759,
-      'name': 'Talend S.A. (TLND)'
-    }, {
-      'id': 2760,
-      'name': 'Tandem Diabetes Care (TNDM)'
-    }, {
-      'id': 2761,
-      'name': 'Tandy Leather Factory (TLF)'
-    }, {
-      'id': 2762,
-      'name': 'Tantech Holdings Ltd. (TANH)'
-    }, {
-      'id': 2763,
-      'name': 'TapImmune Inc. (TPIV)'
-    }, {
-      'id': 2764,
-      'name': 'Tarena International (TEDU)'
-    }, {
-      'id': 2765,
-      'name': 'TAT Technologies Ltd. (TATT)'
-    }, {
-      'id': 2766,
-      'name': 'Taylor Devices (TAYD)'
-    }, {
-      'id': 2767,
-      'name': 'TCP Capital Corp. (TCPC)'
-    }, {
-      'id': 2768,
-      'name': 'TD Ameritrade Holding Corporation (AMTD)'
-    }, {
-      'id': 2769,
-      'name': 'TearLab Corporation (TEAR)'
-    }, {
-      'id': 2770,
-      'name': 'Tech Data Corporation (TECD)'
-    }, {
-      'id': 2771,
-      'name': 'Technical Communications Corporation (TCCO)'
-    }, {
-      'id': 2772,
-      'name': 'TechTarget (TTGT)'
-    }, {
-      'id': 2773,
-      'name': 'Tecnoglass Inc. (TGLS)'
-    }, {
-      'id': 2774,
-      'name': 'Tecogen Inc. (TGEN)'
-    }, {
-      'id': 2775,
-      'name': 'Telenav (TNAV)'
-    }, {
-      'id': 2776,
-      'name': 'TeleTech Holdings (TTEC)'
-    }, {
-      'id': 2777,
-      'name': 'Teligent (TLGT)'
-    }, {
-      'id': 2778,
-      'name': 'Tellurian Inc. (TELL)'
-    }, {
-      'id': 2779,
-      'name': 'Tenax Therapeutics (TENX)'
-    }, {
-      'id': 2780,
-      'name': 'TerraForm Global (GLBL)'
-    }, {
-      'id': 2781,
-      'name': 'TerraForm Power (TERP)'
-    }, {
-      'id': 2782,
-      'name': 'TerraVia Holdings (TVIA)'
-    }, {
-      'id': 2783,
-      'name': 'Territorial Bancorp Inc. (TBNK)'
-    }, {
-      'id': 2784,
-      'name': 'TESARO (TSRO)'
-    }, {
-      'id': 2785,
-      'name': 'Tesco Corporation (TESO)'
-    }, {
-      'id': 2786,
-      'name': 'Tesla (TSLA)'
-    }, {
-      'id': 2787,
-      'name': 'TESSCO Technologies Incorporated (TESS)'
-    }, {
-      'id': 2788,
-      'name': 'Tetra Tech (TTEK)'
-    }, {
-      'id': 2789,
-      'name': 'Tetraphase Pharmaceuticals (TTPH)'
-    }, {
-      'id': 2790,
-      'name': 'Texas Capital Bancshares (TCBI)'
-    }, {
-      'id': 2791,
-      'name': 'Texas Capital Bancshares (TCBIL)'
-    }, {
-      'id': 2792,
-      'name': 'Texas Capital Bancshares (TCBIP)'
-    }, {
-      'id': 2793,
-      'name': 'Texas Capital Bancshares (TCBIW)'
-    }, {
-      'id': 2794,
-      'name': 'Texas Instruments Incorporated (TXN)'
-    }, {
-      'id': 2795,
-      'name': 'Texas Roadhouse (TXRH)'
-    }, {
-      'id': 2796,
-      'name': 'TFS Financial Corporation (TFSL)'
-    }, {
-      'id': 2797,
-      'name': 'TG Therapeutics (TGTX)'
-    }, {
-      'id': 2798,
-      'name': 'The Advisory Board Company (ABCO)'
-    }, {
-      'id': 2799,
-      'name': 'The Andersons (ANDE)'
-    }, {
-      'id': 2800,
-      'name': 'The Bancorp (TBBK)'
-    }, {
-      'id': 2801,
-      'name': 'The Bon-Ton Stores (BONT)'
-    }, {
-      'id': 2802,
-      'name': 'The Carlyle Group L.P. (CG)'
-    }, {
-      'id': 2803,
-      'name': 'The Cheesecake Factory Incorporated (CAKE)'
-    }, {
-      'id': 2804,
-      'name': 'The Chefs&#39; Warehouse (CHEF)'
-    }, {
-      'id': 2805,
-      'name': 'The Community Financial Corporation (TCFC)'
-    }, {
-      'id': 2806,
-      'name': 'The Descartes Systems Group Inc. (DSGX)'
-    }, {
-      'id': 2807,
-      'name': 'The Dixie Group (DXYN)'
-    }, {
-      'id': 2808,
-      'name': 'The Ensign Group (ENSG)'
-    }, {
-      'id': 2809,
-      'name': 'The ExOne Company (XONE)'
-    }, {
-      'id': 2810,
-      'name': 'The Finish Line (FINL)'
-    }, {
-      'id': 2811,
-      'name': 'The First Bancshares (FBMS)'
-    }, {
-      'id': 2812,
-      'name': 'The First of Long Island Corporation (FLIC)'
-    }, {
-      'id': 2813,
-      'name': 'The Goodyear Tire & Rubber Company (GT)'
-    }, {
-      'id': 2814,
-      'name': 'The Habit Restaurants (HABT)'
-    }, {
-      'id': 2815,
-      'name': 'The Hackett Group (HCKT)'
-    }, {
-      'id': 2816,
-      'name': 'The Hain Celestial Group (HAIN)'
-    }, {
-      'id': 2817,
-      'name': 'The Health and Fitness ETF (FITS)'
-    }, {
-      'id': 2818,
-      'name': 'The Herzfeld Caribbean Basin Fund (CUBA)'
-    }, {
-      'id': 2819,
-      'name': 'The Intergroup Corporation (INTG)'
-    }, {
-      'id': 2820,
-      'name': 'The Joint Corp. (JYNT)'
-    }, {
-      'id': 2821,
-      'name': 'The KEYW Holding Corporation (KEYW)'
-    }, {
-      'id': 2822,
-      'name': 'The Kraft Heinz Company (KHC)'
-    }, {
-      'id': 2823,
-      'name': 'The Long-Term Care ETF (OLD)'
-    }, {
-      'id': 2824,
-      'name': 'The Medicines Company (MDCO)'
-    }, {
-      'id': 2825,
-      'name': 'The Meet Group (MEET)'
-    }, {
-      'id': 2826,
-      'name': 'The Michaels Companies (MIK)'
-    }, {
-      'id': 2827,
-      'name': 'The Middleby Corporation (MIDD)'
-    }, {
-      'id': 2828,
-      'name': 'The Navigators Group (NAVG)'
-    }, {
-      'id': 2829,
-      'name': 'The Obesity ETF (SLIM)'
-    }, {
-      'id': 2830,
-      'name': 'The ONE Group Hospitality (STKS)'
-    }, {
-      'id': 2831,
-      'name': 'The Organics ETF (ORG)'
-    }, {
-      'id': 2832,
-      'name': 'The Priceline Group Inc.  (PCLN)'
-    }, {
-      'id': 2833,
-      'name': 'The Providence Service Corporation (PRSC)'
-    }, {
-      'id': 2834,
-      'name': 'The RMR Group Inc. (RMR)'
-    }, {
-      'id': 2835,
-      'name': 'The Spectranetics Corporation (SPNC)'
-    }, {
-      'id': 2836,
-      'name': 'The Trade Desk (TTD)'
-    }, {
-      'id': 2837,
-      'name': 'The Ultimate Software Group (ULTI)'
-    }, {
-      'id': 2838,
-      'name': 'The York Water Company (YORW)'
-    }, {
-      'id': 2839,
-      'name': 'The9 Limited (NCTY)'
-    }, {
-      'id': 2840,
-      'name': 'Therapix Biosciences Ltd. (TRPX)'
-    }, {
-      'id': 2841,
-      'name': 'Theravance Biopharma (TBPH)'
-    }, {
-      'id': 2842,
-      'name': 'TheStreet (TST)'
-    }, {
-      'id': 2843,
-      'name': 'THL Credit (TCRD)'
-    }, {
-      'id': 2844,
-      'name': 'Threshold Pharmaceuticals (THLD)'
-    }, {
-      'id': 2845,
-      'name': 'TICC Capital Corp. (TICC)'
-    }, {
-      'id': 2846,
-      'name': 'TiGenix (TIG)'
-    }, {
-      'id': 2847,
-      'name': 'Tile Shop Hldgs (TTS)'
-    }, {
-      'id': 2848,
-      'name': 'Till Capital Ltd. (TIL)'
-    }, {
-      'id': 2849,
-      'name': 'Timberland Bancorp (TSBK)'
-    }, {
-      'id': 2850,
-      'name': 'Tiptree Inc. (TIPT)'
-    }, {
-      'id': 2851,
-      'name': 'Titan Machinery Inc. (TITN)'
-    }, {
-      'id': 2852,
-      'name': 'Titan Pharmaceuticals (TTNP)'
-    }, {
-      'id': 2853,
-      'name': 'Tivity Health (TVTY)'
-    }, {
-      'id': 2854,
-      'name': 'TiVo Corporation (TIVO)'
-    }, {
-      'id': 2855,
-      'name': 'T-Mobile US (TMUS)'
-    }, {
-      'id': 2856,
-      'name': 'T-Mobile US (TMUSP)'
-    }, {
-      'id': 2857,
-      'name': 'Tokai Pharmaceuticals (TKAI)'
-    }, {
-      'id': 2858,
-      'name': 'Tonix Pharmaceuticals Holding Corp. (TNXP)'
-    }, {
-      'id': 2859,
-      'name': 'Top Image Systems (TISA)'
-    }, {
-      'id': 2860,
-      'name': 'TOP Ships Inc. (TOPS)'
-    }, {
-      'id': 2861,
-      'name': 'TOR Minerals International Inc (TORM          )'
-    }, {
-      'id': 2862,
-      'name': 'Torchlight Energy Resources (TRCH)'
-    }, {
-      'id': 2863,
-      'name': 'Tower Semiconductor Ltd. (TSEM)'
-    }, {
-      'id': 2864,
-      'name': 'Town Sports International Holdings (CLUB)'
-    }, {
-      'id': 2865,
-      'name': 'Towne Bank (TOWN)'
-    }, {
-      'id': 2866,
-      'name': 'TPI Composites (TPIC)'
-    }, {
-      'id': 2867,
-      'name': 'TRACON Pharmaceuticals (TCON)'
-    }, {
-      'id': 2868,
-      'name': 'Tractor Supply Company (TSCO)'
-    }, {
-      'id': 2869,
-      'name': 'Trans World Entertainment Corp. (TWMC)'
-    }, {
-      'id': 2870,
-      'name': 'TransAct Technologies Incorporated (TACT)'
-    }, {
-      'id': 2871,
-      'name': 'Transcat (TRNS)'
-    }, {
-      'id': 2872,
-      'name': 'Transglobe Energy Corp (TGA)'
-    }, {
-      'id': 2873,
-      'name': 'TravelCenters of America LLC (TA)'
-    }, {
-      'id': 2874,
-      'name': 'TravelCenters of America LLC (TANNI)'
-    }, {
-      'id': 2875,
-      'name': 'TravelCenters of America LLC (TANNL)'
-    }, {
-      'id': 2876,
-      'name': 'TravelCenters of America LLC (TANNZ)'
-    }, {
-      'id': 2877,
-      'name': 'Travelzoo Inc. (TZOO)'
-    }, {
-      'id': 2878,
-      'name': 'Trevena (TRVN)'
-    }, {
-      'id': 2879,
-      'name': 'TriCo Bancshares (TCBK)'
-    }, {
-      'id': 2880,
-      'name': 'Trillium Therapeutics Inc. (TRIL)'
-    }, {
-      'id': 2881,
-      'name': 'TriMas Corporation (TRS)'
-    }, {
-      'id': 2882,
-      'name': 'Trimble Inc. (TRMB)'
-    }, {
-      'id': 2883,
-      'name': 'Trinity Biotech plc (TRIB)'
-    }, {
-      'id': 2884,
-      'name': 'TripAdvisor (TRIP)'
-    }, {
-      'id': 2885,
-      'name': 'TriState Capital Holdings (TSC)'
-    }, {
-      'id': 2886,
-      'name': 'Triumph Bancorp (TBK)'
-    }, {
-      'id': 2887,
-      'name': 'trivago N.V. (TRVG)'
-    }, {
-      'id': 2888,
-      'name': 'tronc (TRNC)'
-    }, {
-      'id': 2889,
-      'name': 'TrovaGene (TROV)'
-    }, {
-      'id': 2890,
-      'name': 'TrovaGene (TROVU)'
-    }, {
-      'id': 2891,
-      'name': 'TrovaGene (TROVW)'
-    }, {
-      'id': 2892,
-      'name': 'TrueCar (TRUE)'
-    }, {
-      'id': 2893,
-      'name': 'Truett-Hurst (THST)'
-    }, {
-      'id': 2894,
-      'name': 'Trupanion (TRUP)'
-    }, {
-      'id': 2895,
-      'name': 'TrustCo Bank Corp NY (TRST)'
-    }, {
-      'id': 2896,
-      'name': 'Trustmark Corporation (TRMK)'
-    }, {
-      'id': 2897,
-      'name': 'TSR (TSRI)'
-    }, {
-      'id': 2898,
-      'name': 'TTM Technologies (TTMI)'
-    }, {
-      'id': 2899,
-      'name': 'Tucows Inc. (TCX)'
-    }, {
-      'id': 2900,
-      'name': 'Tuesday Morning Corp. (TUES)'
-    }, {
-      'id': 2901,
-      'name': 'Tuniu Corporation (TOUR)'
-    }, {
-      'id': 2902,
-      'name': 'Turtle Beach Corporation (HEAR)'
-    }, {
-      'id': 2903,
-      'name': 'Tuttle Tactical Management Multi-Strategy Income ETF (TUTI)'
-    }, {
-      'id': 2904,
-      'name': 'Tuttle Tactical Management U.S. Core ETF (TUTT)'
-    }, {
-      'id': 2905,
-      'name': 'Twenty-First Century Fox (FOX)'
-    }, {
-      'id': 2906,
-      'name': 'Twenty-First Century Fox (FOXA)'
-    }, {
-      'id': 2907,
-      'name': 'Twin Disc (TWIN)'
-    }, {
-      'id': 2908,
-      'name': 'Two River Bancorp (TRCB)'
-    }, {
-      'id': 2909,
-      'name': 'U S Concrete (USCR)'
-    }, {
-      'id': 2910,
-      'name': 'U.S. Auto Parts Network (PRTS)'
-    }, {
-      'id': 2911,
-      'name': 'U.S. Energy Corp. (USEG)'
-    }, {
-      'id': 2912,
-      'name': 'U.S. Global Investors (GROW)'
-    }, {
-      'id': 2913,
-      'name': 'U.S. Rare Earths (UREE)'
-    }, {
-      'id': 2914,
-      'name': 'Ubiquiti Networks (UBNT)'
-    }, {
-      'id': 2915,
-      'name': 'UFP Technologies (UFPT)'
-    }, {
-      'id': 2916,
-      'name': 'Ulta Beauty (ULTA)'
-    }, {
-      'id': 2917,
-      'name': 'Ultra Clean Holdings (UCTT)'
-    }, {
-      'id': 2918,
-      'name': 'Ultragenyx Pharmaceutical Inc. (RARE)'
-    }, {
-      'id': 2919,
-      'name': 'Ultralife Corporation (ULBI)'
-    }, {
-      'id': 2920,
-      'name': 'Ultratech (UTEK)'
-    }, {
-      'id': 2921,
-      'name': 'UMB Financial Corporation (UMBF)'
-    }, {
-      'id': 2922,
-      'name': 'Umpqua Holdings Corporation (UMPQ)'
-    }, {
-      'id': 2923,
-      'name': 'Unico American Corporation (UNAM)'
-    }, {
-      'id': 2924,
-      'name': 'Unilife Corporation (UNIS)'
-    }, {
-      'id': 2925,
-      'name': 'Union Bankshares Corporation (UBSH)'
-    }, {
-      'id': 2926,
-      'name': 'Union Bankshares (UNB)'
-    }, {
-      'id': 2927,
-      'name': 'Uni-Pixel (UNXL)'
-    }, {
-      'id': 2928,
-      'name': 'uniQure N.V. (QURE)'
-    }, {
-      'id': 2929,
-      'name': 'United Bancorp (UBCP)'
-    }, {
-      'id': 2930,
-      'name': 'United Bancshares (UBOH)'
-    }, {
-      'id': 2931,
-      'name': 'United Bankshares (UBSI)'
-    }, {
-      'id': 2932,
-      'name': 'United Community Bancorp (UCBA)'
-    }, {
-      'id': 2933,
-      'name': 'United Community Banks (UCBI)'
-    }, {
-      'id': 2934,
-      'name': 'United Community Financial Corp. (UCFC)'
-    }, {
-      'id': 2935,
-      'name': 'United Financial Bancorp (UBNK)'
-    }, {
-      'id': 2936,
-      'name': 'United Fire Group (UFCS)'
-    }, {
-      'id': 2937,
-      'name': 'United Insurance Holdings Corp. (UIHC)'
-    }, {
-      'id': 2938,
-      'name': 'United Natural Foods (UNFI)'
-    }, {
-      'id': 2939,
-      'name': 'United Security Bancshares (UBFO)'
-    }, {
-      'id': 2940,
-      'name': 'United States Lime & Minerals (USLM)'
-    }, {
-      'id': 2941,
-      'name': 'United Therapeutics Corporation (UTHR)'
-    }, {
-      'id': 2942,
-      'name': 'United-Guardian (UG)'
-    }, {
-      'id': 2943,
-      'name': 'Uniti Group Inc. (UNIT)'
-    }, {
-      'id': 2944,
-      'name': 'Unity Bancorp (UNTY)'
-    }, {
-      'id': 2945,
-      'name': 'Universal Display Corporation (OLED)'
-    }, {
-      'id': 2946,
-      'name': 'Universal Electronics Inc. (UEIC)'
-    }, {
-      'id': 2947,
-      'name': 'Universal Forest Products (UFPI)'
-    }, {
-      'id': 2948,
-      'name': 'Universal Logistics Holdings (ULH)'
-    }, {
-      'id': 2949,
-      'name': 'Universal Stainless & Alloy Products (USAP)'
-    }, {
-      'id': 2950,
-      'name': 'Univest Corporation of Pennsylvania (UVSP)'
-    }, {
-      'id': 2951,
-      'name': 'Upland Software (UPLD)'
-    }, {
-      'id': 2952,
-      'name': 'Uranium Resources (URRE)'
-    }, {
-      'id': 2953,
-      'name': 'Urban Outfitters (URBN)'
-    }, {
-      'id': 2954,
-      'name': 'US Ecology (ECOL)'
-    }, {
-      'id': 2955,
-      'name': 'USA Technologies (USAT)'
-    }, {
-      'id': 2956,
-      'name': 'USA Technologies (USATP)'
-    }, {
-      'id': 2957,
-      'name': 'USA Truck (USAK)'
-    }, {
-      'id': 2958,
-      'name': 'Utah Medical Products (UTMD)'
-    }, {
-      'id': 2959,
-      'name': 'UTStarcom Holdings Corp (UTSI)'
-    }, {
-      'id': 2960,
-      'name': 'Valeritas Holdings (VLRX)'
-    }, {
-      'id': 2961,
-      'name': 'Validea Market Legends ETF (VALX)'
-    }, {
-      'id': 2962,
-      'name': 'Value Line (VALU)'
-    }, {
-      'id': 2963,
-      'name': 'Vanda Pharmaceuticals Inc. (VNDA)'
-    }, {
-      'id': 2964,
-      'name': 'VanEck Vectors Biotech ETF (BBH)'
-    }, {
-      'id': 2965,
-      'name': 'VanEck Vectors Generic Drugs ETF (GNRX)'
-    }, {
-      'id': 2966,
-      'name': 'VanEck Vectors Pharmaceutical ETF (PPH)'
-    }, {
-      'id': 2967,
-      'name': 'Vanguard Emerging Markets Government Bond ETF (VWOB)'
-    }, {
-      'id': 2968,
-      'name': 'Vanguard Global ex-U.S. Real Estate ETF (VNQI)'
-    }, {
-      'id': 2969,
-      'name': 'Vanguard Intermediate -Term Government Bond ETF (VGIT)'
-    }, {
-      'id': 2970,
-      'name': 'Vanguard Intermediate-Term Corporate Bond ETF (VCIT)'
-    }, {
-      'id': 2971,
-      'name': 'Vanguard International Dividend Appreciation ETF (VIGI)'
-    }, {
-      'id': 2972,
-      'name': 'Vanguard International High Dividend Yield ETF (VYMI)'
-    }, {
-      'id': 2973,
-      'name': 'Vanguard Long-Term Corporate Bond ETF (VCLT)'
-    }, {
-      'id': 2974,
-      'name': 'Vanguard Long-Term Government Bond ETF (VGLT)'
-    }, {
-      'id': 2975,
-      'name': 'Vanguard Mortgage-Backed Securities ETF (VMBS)'
-    }, {
-      'id': 2976,
-      'name': 'Vanguard Russell 1000 ETF (VONE)'
-    }, {
-      'id': 2977,
-      'name': 'Vanguard Russell 1000 Growth ETF (VONG)'
-    }, {
-      'id': 2978,
-      'name': 'Vanguard Russell 1000 Value ETF (VONV)'
-    }, {
-      'id': 2979,
-      'name': 'Vanguard Russell 2000 ETF (VTWO)'
-    }, {
-      'id': 2980,
-      'name': 'Vanguard Russell 2000 Growth ETF (VTWG)'
-    }, {
-      'id': 2981,
-      'name': 'Vanguard Russell 2000 Value ETF (VTWV)'
-    }, {
-      'id': 2982,
-      'name': 'Vanguard Russell 3000 ETF (VTHR)'
-    }, {
-      'id': 2983,
-      'name': 'Vanguard Short-Term Corporate Bond ETF (VCSH)'
-    }, {
-      'id': 2984,
-      'name': 'Vanguard Short-Term Government ETF (VGSH)'
-    }, {
-      'id': 2985,
-      'name': 'Vanguard Short-Term Inflation-Protected Securities Index Fund (VTIP)'
-    }, {
-      'id': 2986,
-      'name': 'Vanguard Total International Bond ETF (BNDX)'
-    }, {
-      'id': 2987,
-      'name': 'Vanguard Total International Stock ETF (VXUS)'
-    }, {
-      'id': 2988,
-      'name': 'Varex Imaging Corporation (VREX)'
-    }, {
-      'id': 2989,
-      'name': 'Varonis Systems (VRNS)'
-    }, {
-      'id': 2990,
-      'name': 'VASCO Data Security International (VDSI)'
-    }, {
-      'id': 2991,
-      'name': 'Vascular Biogenics Ltd. (VBLT)'
-    }, {
-      'id': 2992,
-      'name': 'VBI Vaccines (VBIV)'
-    }, {
-      'id': 2993,
-      'name': 'VCA Inc.  (WOOF)'
-    }, {
-      'id': 2994,
-      'name': 'Veeco Instruments Inc. (VECO)'
-    }, {
-      'id': 2995,
-      'name': 'VelocityShares 3x Inverse Gold ETN linked to S&P GSCI Gold Ind (DGLD)'
-    }, {
-      'id': 2996,
-      'name': 'VelocityShares 3x Inverse Silver ETN linked to S&P GSCI Silver (DSLV)'
-    }, {
-      'id': 2997,
-      'name': 'VelocityShares 3x Long Gold ETN linked to the S&P GSCI Gold In (UGLD)'
-    }, {
-      'id': 2998,
-      'name': 'VelocityShares 3x Long Silver ETN linked to the S&P GSCI Silve (USLV)'
-    }, {
-      'id': 2999,
-      'name': 'VelocityShares Daily 2x VIX Medium Term ETN (TVIZ)'
-    }, {
-      'id': 3000,
-      'name': 'VelocityShares Daily 2x VIX Short Term ETN (TVIX)'
-    }, {
-      'id': 3001,
-      'name': 'VelocityShares Daily Inverse VIX Medium Term ETN (ZIV)'
-    }, {
-      'id': 3002,
-      'name': 'VelocityShares Daily Inverse VIX Short Term ETN (XIV)'
-    }, {
-      'id': 3003,
-      'name': 'VelocityShares VIX Medium Term ETN (VIIZ)'
-    }, {
-      'id': 3004,
-      'name': 'VelocityShares VIX Short Term ETN (VIIX)'
-    }, {
-      'id': 3005,
-      'name': 'VEON Ltd. (VEON)'
-    }, {
-      'id': 3006,
-      'name': 'Vera Bradley (VRA)'
-    }, {
-      'id': 3007,
-      'name': 'Veracyte (VCYT)'
-    }, {
-      'id': 3008,
-      'name': 'Verastem (VSTM)'
-    }, {
-      'id': 3009,
-      'name': 'Vericel Corporation (VCEL)'
-    }, {
-      'id': 3010,
-      'name': 'Verint Systems Inc. (VRNT)'
-    }, {
-      'id': 3011,
-      'name': 'VeriSign (VRSN)'
-    }, {
-      'id': 3012,
-      'name': 'Verisk Analytics (VRSK)'
-    }, {
-      'id': 3013,
-      'name': 'Veritex Holdings (VBTX)'
-    }, {
-      'id': 3014,
-      'name': 'Vermillion (VRML)'
-    }, {
-      'id': 3015,
-      'name': 'Versartis (VSAR)'
-    }, {
-      'id': 3016,
-      'name': 'Vertex Energy (VTNR)'
-    }, {
-      'id': 3017,
-      'name': 'Vertex Pharmaceuticals Incorporated (VRTX)'
-    }, {
-      'id': 3018,
-      'name': 'Viacom Inc. (VIA)'
-    }, {
-      'id': 3019,
-      'name': 'Viacom Inc. (VIAB)'
-    }, {
-      'id': 3020,
-      'name': 'Viamet Pharmaceuticals Corp. (VMET)'
-    }, {
-      'id': 3021,
-      'name': 'ViaSat (VSAT)'
-    }, {
-      'id': 3022,
-      'name': 'Viavi Solutions Inc. (VIAV)'
-    }, {
-      'id': 3023,
-      'name': 'Vical Incorporated (VICL)'
-    }, {
-      'id': 3024,
-      'name': 'Vicor Corporation (VICR)'
-    }, {
-      'id': 3025,
-      'name': 'VictoryShares Developed Enhanced Volatility Wtd ETF (CIZ)'
-    }, {
-      'id': 3026,
-      'name': 'VictoryShares Emerging Market Volatility Wtd ETF (CEZ)'
-    }, {
-      'id': 3027,
-      'name': 'VictoryShares International High Div Volatility Wtd ETF (CID)'
-    }, {
-      'id': 3028,
-      'name': 'VictoryShares International Volatility Wtd ETF (CIL)'
-    }, {
-      'id': 3029,
-      'name': 'VictoryShares US 500 Enhanced Volatility Wtd ETF (CFO)'
-    }, {
-      'id': 3030,
-      'name': 'VictoryShares US 500 Volatility Wtd ETF (CFA)'
-    }, {
-      'id': 3031,
-      'name': 'VictoryShares US Discovery Enhanced Volatility Wtd ETF (CSF)'
-    }, {
-      'id': 3032,
-      'name': 'VictoryShares US EQ Income Enhanced Volatility Wtd ETF (CDC)'
-    }, {
-      'id': 3033,
-      'name': 'VictoryShares US Large Cap High Div Volatility Wtd ETF (CDL)'
-    }, {
-      'id': 3034,
-      'name': 'VictoryShares US Small Cap High Div Volatility Wtd ETF (CSB)'
-    }, {
-      'id': 3035,
-      'name': 'VictoryShares US Small Cap Volatility Wtd ETF (CSA)'
-    }, {
-      'id': 3036,
-      'name': 'Vident Core U.S. Bond Strategy Fund (VBND)'
-    }, {
-      'id': 3037,
-      'name': 'Vident Core US Equity ETF (VUSE)'
-    }, {
-      'id': 3038,
-      'name': 'Vident International Equity Fund (VIDI)'
-    }, {
-      'id': 3039,
-      'name': 'Videocon d2h Limited (VDTH)'
-    }, {
-      'id': 3040,
-      'name': 'ViewRay (VRAY)'
-    }, {
-      'id': 3041,
-      'name': 'Viking Therapeutics (VKTX)'
-    }, {
-      'id': 3042,
-      'name': 'Viking Therapeutics (VKTXW)'
-    }, {
-      'id': 3043,
-      'name': 'Village Bank and Trust Financial Corp. (VBFC)'
-    }, {
-      'id': 3044,
-      'name': 'Village Super Market (VLGEA)'
-    }, {
-      'id': 3045,
-      'name': 'Viper Energy Partners LP (VNOM)'
-    }, {
-      'id': 3046,
-      'name': 'Virco Manufacturing Corporation (VIRC)'
-    }, {
-      'id': 3047,
-      'name': 'Virtu Financial (VIRT)'
-    }, {
-      'id': 3048,
-      'name': 'Virtus Investment Partners (VRTS)'
-    }, {
-      'id': 3049,
-      'name': 'Virtus Investment Partners (VRTSP)'
-    }, {
-      'id': 3050,
-      'name': 'Virtusa Corporation (VRTU)'
-    }, {
-      'id': 3051,
-      'name': 'VistaGen Therapeutics (VTGN)'
-    }, {
-      'id': 3052,
-      'name': 'Visterra (VIST)'
-    }, {
-      'id': 3053,
-      'name': 'Vital Therapies (VTL)'
-    }, {
-      'id': 3054,
-      'name': 'Viveve Medical (VIVE)'
-    }, {
-      'id': 3055,
-      'name': 'VivoPower International PLC (VVPR)'
-    }, {
-      'id': 3056,
-      'name': 'VIVUS (VVUS)'
-    }, {
-      'id': 3057,
-      'name': 'Vodafone Group Plc (VOD)'
-    }, {
-      'id': 3058,
-      'name': 'VOXX International Corporation (VOXX)'
-    }, {
-      'id': 3059,
-      'name': 'Voyager Therapeutics (VYGR)'
-    }, {
-      'id': 3060,
-      'name': 'VSE Corporation (VSEC)'
-    }, {
-      'id': 3061,
-      'name': 'vTv Therapeutics Inc. (VTVT)'
-    }, {
-      'id': 3062,
-      'name': 'Vuzix Corporation (VUZI)'
-    }, {
-      'id': 3063,
-      'name': 'VWR Corporation (VWR)'
-    }, {
-      'id': 3064,
-      'name': 'Walgreens Boots Alliance (WBA)'
-    }, {
-      'id': 3065,
-      'name': 'Washington Federal (WAFD)'
-    }, {
-      'id': 3066,
-      'name': 'Washington Federal (WAFDW)'
-    }, {
-      'id': 3067,
-      'name': 'Washington Trust Bancorp (WASH)'
-    }, {
-      'id': 3068,
-      'name': 'WashingtonFirst Bankshares Inc (WFBI)'
-    }, {
-      'id': 3069,
-      'name': 'Waterstone Financial (WSBF)'
-    }, {
-      'id': 3070,
-      'name': 'WAVE Life Sciences Ltd. (WVE)'
-    }, {
-      'id': 3071,
-      'name': 'Wayne Farms (WNFM)'
-    }, {
-      'id': 3072,
-      'name': 'Wayne Savings Bancshares Inc. (WAYN)'
-    }, {
-      'id': 3073,
-      'name': 'Wayside Technology Group (WSTG)'
-    }, {
-      'id': 3074,
-      'name': 'WCF Bancorp (WCFB)'
-    }, {
-      'id': 3075,
-      'name': 'WD-40 Company (WDFC)'
-    }, {
-      'id': 3076,
-      'name': 'WeatherStorm Forensic Accounting Long Short ETF (FLAG)'
-    }, {
-      'id': 3077,
-      'name': 'Web.com Group (WEB)'
-    }, {
-      'id': 3078,
-      'name': 'WebMD Health Corp (WBMD)'
-    }, {
-      'id': 3079,
-      'name': 'Wecast Network (WCST)'
-    }, {
-      'id': 3080,
-      'name': 'Weibo Corporation (WB)'
-    }, {
-      'id': 3081,
-      'name': 'Wellesley Bancorp (WEBK)'
-    }, {
-      'id': 3082,
-      'name': 'Wendy&#39;s Company (The) (WEN)'
-    }, {
-      'id': 3083,
-      'name': 'Werner Enterprises (WERN)'
-    }, {
-      'id': 3084,
-      'name': 'WesBanco (WSBC)'
-    }, {
-      'id': 3085,
-      'name': 'West Bancorporation (WTBA)'
-    }, {
-      'id': 3086,
-      'name': 'West Corporation (WSTC)'
-    }, {
-      'id': 3087,
-      'name': 'West Marine (WMAR)'
-    }, {
-      'id': 3088,
-      'name': 'Westamerica Bancorporation (WABC)'
-    }, {
-      'id': 3089,
-      'name': 'Westbury Bancorp (WBB)'
-    }, {
-      'id': 3090,
-      'name': 'Westell Technologies (WSTL)'
-    }, {
-      'id': 3091,
-      'name': 'Western Digital Corporation (WDC)'
-    }, {
-      'id': 3092,
-      'name': 'Western New England Bancorp (WNEB)'
-    }, {
-      'id': 3093,
-      'name': 'Westmoreland Coal Company (WLB)'
-    }, {
-      'id': 3094,
-      'name': 'Westport Fuel Systems Inc (WPRT)'
-    }, {
-      'id': 3095,
-      'name': 'Weyco Group (WEYS)'
-    }, {
-      'id': 3096,
-      'name': 'Wheeler Real Estate Investment Trust (WHLR)'
-    }, {
-      'id': 3097,
-      'name': 'Wheeler Real Estate Investment Trust (WHLRD)'
-    }, {
-      'id': 3098,
-      'name': 'Wheeler Real Estate Investment Trust (WHLRP)'
-    }, {
-      'id': 3099,
-      'name': 'Wheeler Real Estate Investment Trust (WHLRW)'
-    }, {
-      'id': 3100,
-      'name': 'WhiteHorse Finance (WHF)'
-    }, {
-      'id': 3101,
-      'name': 'WhiteHorse Finance (WHFBL)'
-    }, {
-      'id': 3102,
-      'name': 'Whole Foods Market (WFM)'
-    }, {
-      'id': 3103,
-      'name': 'Wi-LAN Inc (WILN)'
-    }, {
-      'id': 3104,
-      'name': 'Wilhelmina International (WHLM)'
-    }, {
-      'id': 3105,
-      'name': 'Willamette Valley Vineyards (WVVI)'
-    }, {
-      'id': 3106,
-      'name': 'Willamette Valley Vineyards (WVVIP)'
-    }, {
-      'id': 3107,
-      'name': 'Willdan Group (WLDN)'
-    }, {
-      'id': 3108,
-      'name': 'Willis Lease Finance Corporation (WLFC)'
-    }, {
-      'id': 3109,
-      'name': 'Willis Towers Watson Public Limited Company (WLTW)'
-    }, {
-      'id': 3110,
-      'name': 'Windstream Holdings (WIN)'
-    }, {
-      'id': 3111,
-      'name': 'Windtree Therapeutics (WINT)'
-    }, {
-      'id': 3112,
-      'name': 'Wingstop Inc. (WING)'
-    }, {
-      'id': 3113,
-      'name': 'Winmark Corporation (WINA)'
-    }, {
-      'id': 3114,
-      'name': 'Wins Finance Holdings Inc. (WINS)'
-    }, {
-      'id': 3115,
-      'name': 'Wintrust Financial Corporation (WTFC)'
-    }, {
-      'id': 3116,
-      'name': 'Wintrust Financial Corporation (WTFCM)'
-    }, {
-      'id': 3117,
-      'name': 'Wintrust Financial Corporation (WTFCW)'
-    }, {
-      'id': 3118,
-      'name': 'WisdomTree Barclays Interest Rate Hedged U.S. Aggregate Bond F (AGZD)'
-    }, {
-      'id': 3119,
-      'name': 'WisdomTree Barclays Negative Duration U.S. Aggregate Bond Fund (AGND)'
-    }, {
-      'id': 3120,
-      'name': 'WisdomTree China ex-State-Owned Enterprises Fund (CXSE)'
-    }, {
-      'id': 3121,
-      'name': 'WisdomTree Emerging Markets Consumer Growth Fund (EMCG)'
-    }, {
-      'id': 3122,
-      'name': 'WisdomTree Emerging Markets Corporate Bond Fund (EMCB)'
-    }, {
-      'id': 3123,
-      'name': 'WisdomTree Emerging Markets Quality Dividend Growth Fund (DGRE)'
-    }, {
-      'id': 3124,
-      'name': 'WisdomTree Germany Hedged Equity Fund (DXGE)'
-    }, {
-      'id': 3125,
-      'name': 'WisdomTree Interest Rate Hedged High Yield Bond Fund (HYZD)'
-    }, {
-      'id': 3126,
-      'name': 'WisdomTree Investments (WETF)'
-    }, {
-      'id': 3127,
-      'name': 'WisdomTree Japan Hedged SmallCap Equity Fund (DXJS)'
-    }, {
-      'id': 3128,
-      'name': 'WisdomTree Middle East Dividend Fund (GULF)'
-    }, {
-      'id': 3129,
-      'name': 'WisdomTree Negative Duration High Yield Bond Fund (HYND)'
-    }, {
-      'id': 3130,
-      'name': 'WisdomTree Strategic Corporate Bond Fund (CRDT)'
-    }, {
-      'id': 3131,
-      'name': 'WisdomTree U.S. Quality Dividend Growth Fund (DGRW)'
-    }, {
-      'id': 3132,
-      'name': 'WisdomTree U.S. SmallCap Quality Dividend Growth Fund (DGRS)'
-    }, {
-      'id': 3133,
-      'name': 'WisdomTree United Kingdom Hedged Equity Fund (DXPS)'
-    }, {
-      'id': 3134,
-      'name': 'WisdomTree Western Asset Unconstrained Bond Fund (UBND)'
-    }, {
-      'id': 3135,
-      'name': 'Wix.com Ltd. (WIX)'
-    }, {
-      'id': 3136,
-      'name': 'WMIH Corp. (WMIH)'
-    }, {
-      'id': 3137,
-      'name': 'Wolverine Bancorp (WBKC)'
-    }, {
-      'id': 3138,
-      'name': 'Woodward (WWD)'
-    }, {
-      'id': 3139,
-      'name': 'Workhorse Group (WKHS)'
-    }, {
-      'id': 3140,
-      'name': 'World Acceptance Corporation (WRLD)'
-    }, {
-      'id': 3141,
-      'name': 'WPCS International Incorporated (WPCS)'
-    }, {
-      'id': 3142,
-      'name': 'WPP plc (WPPGY)'
-    }, {
-      'id': 3143,
-      'name': 'Wright Medical Group N.V. (WMGI)'
-    }, {
-      'id': 3144,
-      'name': 'Wright Medical Group N.V. (WMGIZ)'
-    }, {
-      'id': 3145,
-      'name': 'WSFS Financial Corporation (WSFS)'
-    }, {
-      'id': 3146,
-      'name': 'WSFS Financial Corporation (WSFSL)'
-    }, {
-      'id': 3147,
-      'name': 'WSI Industries Inc. (WSCI)'
-    }, {
-      'id': 3148,
-      'name': 'WVS Financial Corp. (WVFC)'
-    }, {
-      'id': 3149,
-      'name': 'Wynn Resorts (WYNN)'
-    }, {
-      'id': 3150,
-      'name': 'XBiotech Inc. (XBIT)'
-    }, {
-      'id': 3151,
-      'name': 'Xcel Brands (XELB)'
-    }, {
-      'id': 3152,
-      'name': 'Xcerra Corporation (XCRA)'
-    }, {
-      'id': 3153,
-      'name': 'Xencor (XNCR)'
-    }, {
-      'id': 3154,
-      'name': 'Xenetic Biosciences (XBIO)'
-    }, {
-      'id': 3155,
-      'name': 'Xenith Bankshares (XBKS)'
-    }, {
-      'id': 3156,
-      'name': 'Xenon Pharmaceuticals Inc. (XENE)'
-    }, {
-      'id': 3157,
-      'name': 'XG Technology (XGTI)'
-    }, {
-      'id': 3158,
-      'name': 'XG Technology (XGTIW)'
-    }, {
-      'id': 3159,
-      'name': 'Xilinx (XLNX)'
-    }, {
-      'id': 3160,
-      'name': 'XOMA Corporation (XOMA)'
-    }, {
-      'id': 3161,
-      'name': 'Xperi Corporation (XPER)'
-    }, {
-      'id': 3162,
-      'name': 'Xplore Technologies Corp (XPLR)'
-    }, {
-      'id': 3163,
-      'name': 'XTL Biopharmaceuticals Ltd. (XTLB)'
-    }, {
-      'id': 3164,
-      'name': 'Xunlei Limited (XNET)'
-    }, {
-      'id': 3165,
-      'name': 'Yahoo! Inc. (YHOO)'
-    }, {
-      'id': 3166,
-      'name': 'Yandex N.V. (YNDX)'
-    }, {
-      'id': 3167,
-      'name': 'Yatra Online (YTRA)'
-    }, {
-      'id': 3168,
-      'name': 'Yield10 Bioscience (YTEN)'
-    }, {
-      'id': 3169,
-      'name': 'Yintech Investment Holdings Limited (YIN)'
-    }, {
-      'id': 3170,
-      'name': 'YRC Worldwide (YRCW)'
-    }, {
-      'id': 3171,
-      'name': 'Yulong Eco-Materials Limited (YECO)'
-    }, {
-      'id': 3172,
-      'name': 'YY Inc. (YY)'
-    }, {
-      'id': 3173,
-      'name': 'Zafgen (ZFGN)'
-    }, {
-      'id': 3174,
-      'name': 'ZAGG Inc (ZAGG)'
-    }, {
-      'id': 3175,
-      'name': 'ZAIS Group Holdings (ZAIS)'
-    }, {
-      'id': 3176,
-      'name': 'Zebra Technologies Corporation (ZBRA)'
-    }, {
-      'id': 3177,
-      'name': 'ZELTIQ Aesthetics (ZLTQ)'
-    }, {
-      'id': 3178,
-      'name': 'Zillow Group (Z)'
-    }, {
-      'id': 3179,
-      'name': 'Zillow Group (ZG)'
-    }, {
-      'id': 3180,
-      'name': 'Zion Oil & Gas Inc (ZN)'
-    }, {
-      'id': 3181,
-      'name': 'Zion Oil & Gas Inc (ZNWAA)'
-    }, {
-      'id': 3182,
-      'name': 'Zions Bancorporation (ZION)'
-    }, {
-      'id': 3183,
-      'name': 'Zions Bancorporation (ZIONW)'
-    }, {
-      'id': 3184,
-      'name': 'Zions Bancorporation (ZIONZ)'
-    }, {
-      'id': 3185,
-      'name': 'ZIOPHARM Oncology Inc (ZIOP)'
-    }, {
-      'id': 3186,
-      'name': 'Zix Corporation (ZIXI)'
-    }, {
-      'id': 3187,
-      'name': 'Zogenix (ZGNX)'
-    }, {
-      'id': 3188,
-      'name': 'Zosano Pharma Corporation (ZSAN)'
-    }, {
-      'id': 3189,
-      'name': 'Zumiez Inc. (ZUMZ)'
-    }, {
-      'id': 3190,
-      'name': 'Zynerba Pharmaceuticals (ZYNE)'
-    }, {
-      'id': 3191,
-      'name': 'Zynga Inc. (ZNGA)'
-    }
+  data: [{"id":"1AD.AX", "name": "ADALTA LIMITED (1AD.AX)"},
+  {"id":"1AG.AX", "name": "ALTERRA LIMITED (1AG.AX)"},
+  {"id":"1AL.AX", "name": "ONEALL INTERNATIONAL LIMITED (1AL.AX)"},
+  {"id":"1PG.AX", "name": "1-PAGE LIMITED (1PG.AX)"},
+  {"id":"1ST.AX", "name": "1ST GROUP LIMITED (1ST.AX)"},
+  {"id":"3DP.AX", "name": "POINTERRA LIMITED (3DP.AX)"},
+  {"id":"3PL.AX", "name": "3P LEARNING LIMITED.. (3PL.AX)"},
+  {"id":"4CE.AX", "name": "FORCE COMMODITIES LIMITED (4CE.AX)"},
+  {"id":"4DS.AX", "name": "4DS MEMORY LIMITED (4DS.AX)"},
+  {"id":"4WD.AX", "name": "AUTOMOTIVE SOLUTIONS GROUP LTD (4WD.AX)"},
+  {"id":"88E.AX", "name": "88 ENERGY LIMITED (88E.AX)"},
+  {"id":"8CO.AX", "name": "8COMMON LIMITED (8CO.AX)"},
+  {"id":"8EC.AX", "name": "8IP EMERGING COMPANIES LIMITED (8EC.AX)"},
+  {"id":"8IH.AX", "name": "8I HOLDINGS LTD (8IH.AX)"},
+  {"id":"9SP.AX", "name": "9 SPOKES INTERNATIONAL LIMITED (9SP.AX)"},
+  {"id":"A2M.AX", "name": "THE A2 MILK COMPANY LIMITED (A2M.AX)"},
+  {"id":"A3D.AX", "name": "AURORA LABS LIMITED (A3D.AX)"},
+  {"id":"AAAP", "name": "Advanced Accelerator Applications S.A. (AAAP)"},
+  {"id":"AAC.AX", "name": "AUSTRALIAN AGRICULTURAL COMPANY LIMITED. (AAC.AX)"},
+  {"id":"AAD.AX", "name": "ARDENT LEISURE GROUP (AAD.AX)"},
+  {"id":"AAJ.AX", "name": "ARUMA RESOURCES LIMITED (AAJ.AX)"},
+  {"id":"AAL", "name": "American Airlines Group, Inc. (AAL)"},
+  {"id":"AAL.AX", "name": "APAC COAL LIMITED (AAL.AX)"},
+  {"id":"AAME", "name": "Atlantic American Corporation (AAME)"},
+  {"id":"AAOI", "name": "Applied Optoelectronics, Inc. (AAOI)"},
+  {"id":"AAON", "name": "AAON, Inc. (AAON)"},
+  {"id":"AAP.AX", "name": "AUSTRALIAN AGRICULTURAL PROJECTS LIMITED (AAP.AX)"},
+  {"id":"AAPC", "name": "Atlantic Alliance Partnership Corp. (AAPC)"},
+  {"id":"AAPL", "name": "Apple Inc. (AAPL)"},
+  {"id":"AAR.AX", "name": "ANGLO AUSTRALIAN RESOURCES NL (AAR.AX)"},
+  {"id":"AAU.AX", "name": "ADCORP AUSTRALIA LIMITED (AAU.AX)"},
+  {"id":"AAWW", "name": "Atlas Air Worldwide Holdings (AAWW)"},
+  {"id":"AAXJ", "name": "iShares MSCI All Country Asia ex Japan Index Fund (AAXJ)"},
+  {"id":"AAXN", "name": "Axon Enterprise, Inc. (AAXN)"},
+  {"id":"AB1.AX", "name": "ANIMOCA BRANDS CORPORATION LIMITED (AB1.AX)"},
+  {"id":"ABA.AX", "name": "AUSWIDE BANK LTD (ABA.AX)"},
+  {"id":"ABAC", "name": "Aoxin Tianli Group, Inc. (ABAC)"},
+  {"id":"ABAX", "name": "ABAXIS, Inc. (ABAX)"},
+  {"id":"ABC.AX", "name": "ADELAIDE BRIGHTON LIMITED (ABC.AX)"},
+  {"id":"ABCB", "name": "Ameris Bancorp (ABCB)"},
+  {"id":"ABCD", "name": "Cambium Learning Group, Inc. (ABCD)"},
+  {"id":"ABCO", "name": "The Advisory Board Company (ABCO)"},
+  {"id":"ABDC", "name": "Alcentra Capital Corp. (ABDC)"},
+  {"id":"ABEO", "name": "Abeona Therapeutics Inc. (ABEO)"},
+  {"id":"ABEOW", "name": "Abeona Therapeutics Inc. (ABEOW)"},
+  {"id":"ABIL", "name": "Ability Inc. (ABIL)"},
+  {"id":"ABIO", "name": "ARCA biopharma, Inc. (ABIO)"},
+  {"id":"ABL.AX", "name": "ABILENE OIL AND GAS LIMITED (ABL.AX)"},
+  {"id":"ABMD", "name": "ABIOMED, Inc. (ABMD)"},
+  {"id":"ABP.AX", "name": "ABACUS PROPERTY GROUP (ABP.AX)"},
+  {"id":"ABT.AX", "name": "ABUNDANT PRODUCE LIMITED (ABT.AX)"},
+  {"id":"ABTL", "name": "Autobytel Inc. (ABTL)"},
+  {"id":"ABTX", "name": "Allegiance Bancshares, Inc. (ABTX)"},
+  {"id":"ABU.AX", "name": "ABM RESOURCES NL (ABU.AX)"},
+  {"id":"ABUS", "name": "Arbutus Biopharma Corporation (ABUS)"},
+  {"id":"ABV.AX", "name": "ADVANCED BRAKING TECHNOLOGY LTD (ABV.AX)"},
+  {"id":"ABW.AX", "name": "AURORA ABSOLUTE RETURN FUND (ABW.AX)"},
+  {"id":"ABX.AX", "name": "AUSTRALIAN BAUXITE LIMITED. (ABX.AX)"},
+  {"id":"ABY", "name": "Atlantica Yield plc (ABY)"},
+  {"id":"AC8.AX", "name": "AUSCANN GROUP HOLDINGS LTD (AC8.AX)"},
+  {"id":"ACAD", "name": "ACADIA Pharmaceuticals Inc. (ACAD)"},
+  {"id":"ACB.AX", "name": "A-CAP RESOURCES LIMITED (ACB.AX)"},
+  {"id":"ACBI", "name": "Atlantic Capital Bancshares, Inc. (ACBI)"},
+  {"id":"ACCP", "name": "Accelerated Pharma, Inc. (ACCP)"},
+  {"id":"ACET", "name": "Aceto Corporation (ACET)"},
+  {"id":"ACFC", "name": "Atlantic Coast Financial Corporation (ACFC)"},
+  {"id":"ACG.AX", "name": "ATCOR MEDICAL HOLDINGS LIMITED (ACG.AX)"},
+  {"id":"ACGL", "name": "Arch Capital Group Ltd. (ACGL)"},
+  {"id":"ACGLP", "name": "Arch Capital Group Ltd. (ACGLP)"},
+  {"id":"ACHC", "name": "Acadia Healthcare Company, Inc. (ACHC)"},
+  {"id":"ACHN", "name": "Achillion Pharmaceuticals, Inc. (ACHN)"},
+  {"id":"ACIA", "name": "Acacia Communications, Inc. (ACIA)"},
+  {"id":"ACIU", "name": "AC Immune SA (ACIU)"},
+  {"id":"ACIW", "name": "ACI Worldwide, Inc. (ACIW)"},
+  {"id":"ACK.AX", "name": "AUSTOCK GROUP LIMITED (ACK.AX)"},
+  {"id":"ACL.AX", "name": "ALCHEMIA LIMITED (ACL.AX)"},
+  {"id":"ACLS", "name": "Axcelis Technologies, Inc. (ACLS)"},
+  {"id":"ACNB", "name": "ACNB Corporation (ACNB)"},
+  {"id":"ACO.AX", "name": "AUSTRALIAN CAREERS NETWORK LIMITED (ACO.AX)"},
+  {"id":"ACOR", "name": "Acorda Therapeutics, Inc. (ACOR)"},
+  {"id":"ACP.AX", "name": "AUDALIA RESOURCES LIMITED (ACP.AX)"},
+  {"id":"ACQ.AX", "name": "ACORN CAPITAL INVESTMENT FUND LIMITED (ACQ.AX)"},
+  {"id":"ACR.AX", "name": "ACRUX LIMITED (ACR.AX)"},
+  {"id":"ACRS", "name": "Aclaris Therapeutics, Inc. (ACRS)"},
+  {"id":"ACRX", "name": "AcelRx Pharmaceuticals, Inc. (ACRX)"},
+  {"id":"ACS.AX", "name": "ACCENT RESOURCES NL (ACS.AX)"},
+  {"id":"ACSF", "name": "American Capital Senior Floating, Ltd. (ACSF)"},
+  {"id":"ACST", "name": "Acasti Pharma, Inc. (ACST)"},
+  {"id":"ACTA", "name": "Actua Corporation (ACTA)"},
+  {"id":"ACTG", "name": "Acacia Research Corporation (ACTG)"},
+  {"id":"ACTX", "name": "Global X Guru Activist ETF (ACTX)"},
+  {"id":"ACU.AX", "name": "ACTIVISTIC LIMITED (ACU.AX)"},
+  {"id":"ACW.AX", "name": "ACTINOGEN MEDICAL LIMITED (ACW.AX)"},
+  {"id":"ACWI", "name": "iShares MSCI ACWI Index Fund (ACWI)"},
+  {"id":"ACWX", "name": "iShares MSCI ACWI ex US Index Fund (ACWX)"},
+  {"id":"ACX.AX", "name": "ACONEX LIMITED (ACX.AX)"},
+  {"id":"ACXM", "name": "Acxiom Corporation (ACXM)"},
+  {"id":"AD1.AX", "name": "APPLYDIRECT LIMITED (AD1.AX)"},
+  {"id":"ADA.AX", "name": "ADACEL TECHNOLOGIES LIMITED (ADA.AX)"},
+  {"id":"ADAP", "name": "Adaptimmune Therapeutics plc (ADAP)"},
+  {"id":"ADBE", "name": "Adobe Systems Incorporated (ADBE)"},
+  {"id":"ADD.AX", "name": "ADAVALE RESOURCES LIMITED (ADD.AX)"},
+  {"id":"ADES", "name": "Advanced Emissions Solutions, Inc. (ADES)"},
+  {"id":"ADH.AX", "name": "ADAIRS LIMITED (ADH.AX)"},
+  {"id":"ADHD", "name": "Alcobra Ltd. (ADHD)"},
+  {"id":"ADI", "name": "Analog Devices, Inc. (ADI)"},
+  {"id":"ADJ.AX", "name": "ADSLOT LTD (ADJ.AX)"},
+  {"id":"ADMA", "name": "ADMA Biologics Inc (ADMA)"},
+  {"id":"ADMP", "name": "Adamis Pharmaceuticals Corporation (ADMP)"},
+  {"id":"ADMS", "name": "Adamas Pharmaceuticals, Inc. (ADMS)"},
+  {"id":"ADN.AX", "name": "ANDROMEDA METALS LIMITED (ADN.AX)"},
+  {"id":"ADO.AX", "name": "ANTEO DIAGNOSTICS LIMITED (ADO.AX)"},
+  {"id":"ADP", "name": "Automatic Data Processing, Inc. (ADP)"},
+  {"id":"ADQ.AX", "name": "ADG GLOBAL SUPPLY LIMITED. (ADQ.AX)"},
+  {"id":"ADR.AX", "name": "ADHERIUM LIMITED (ADR.AX)"},
+  {"id":"ADRA", "name": "BLDRS Asia 50 ADR Index Fund (ADRA)"},
+  {"id":"ADRD", "name": "BLDRS Developed Markets 100 ADR Index Fund (ADRD)"},
+  {"id":"ADRE", "name": "BLDRS Emerging Markets 50 ADR Index Fund (ADRE)"},
+  {"id":"ADRO", "name": "Aduro Biotech, Inc. (ADRO)"},
+  {"id":"ADRU", "name": "BLDRS Europe 100 ADR Index Fund (ADRU)"},
+  {"id":"ADSK", "name": "Autodesk, Inc. (ADSK)"},
+  {"id":"ADTN", "name": "ADTRAN, Inc. (ADTN)"},
+  {"id":"ADUS", "name": "Addus HomeCare Corporation (ADUS)"},
+  {"id":"ADV.AX", "name": "ARDIDEN LTD (ADV.AX)"},
+  {"id":"ADVM", "name": "Adverum Biotechnologies, Inc. (ADVM)"},
+  {"id":"ADX.AX", "name": "ADX ENERGY LTD (ADX.AX)"},
+  {"id":"ADXS", "name": "Advaxis, Inc. (ADXS)"},
+  {"id":"ADXSW", "name": "Advaxis, Inc. (ADXSW)"},
+  {"id":"ADY.AX", "name": "ADMIRALTY RESOURCES NL. (ADY.AX)"},
+  {"id":"AEB.AX", "name": "ALGAE.TEC LIMITED (AEB.AX)"},
+  {"id":"AEE.AX", "name": "AURA ENERGY LIMITED (AEE.AX)"},
+  {"id":"AEF.AX", "name": "AUSTRALIAN ETHICAL INVESTMENT LIMITED (AEF.AX)"},
+  {"id":"AEG.AX", "name": "ABSOLUTE EQUITY PERFORMANCE FUND LIMITED (AEG.AX)"},
+  {"id":"AEGN", "name": "Aegion Corp (AEGN)"},
+  {"id":"AEHR", "name": "Aehr Test Systems (AEHR)"},
+  {"id":"AEI.AX", "name": "AERIS ENVIRONMENTAL LTD (AEI.AX)"},
+  {"id":"AEIS", "name": "Advanced Energy Industries, Inc. (AEIS)"},
+  {"id":"AEMD", "name": "Aethlon Medical, Inc. (AEMD)"},
+  {"id":"AER.AX", "name": "AEERIS LTD (AER.AX)"},
+  {"id":"AERI", "name": "Aerie Pharmaceuticals, Inc. (AERI)"},
+  {"id":"AETI", "name": "American Electric Technologies, Inc. (AETI)"},
+  {"id":"AEV.AX", "name": "AVENIRA LIMITED (AEV.AX)"},
+  {"id":"AEY", "name": "ADDvantage Technologies Group, Inc. (AEY)"},
+  {"id":"AEZS", "name": "AEterna Zentaris Inc. (AEZS)"},
+  {"id":"AFA.AX", "name": "ASF GROUP LIMITED (AFA.AX)"},
+  {"id":"AFAM", "name": "Almost Family Inc (AFAM)"},
+  {"id":"AFG.AX", "name": "AUSTRALIAN FINANCE GROUP LTD (AFG.AX)"},
+  {"id":"AFH", "name": "Atlas Financial Holdings, Inc. (AFH)"},
+  {"id":"AFI.AX", "name": "AUSTRALIAN FOUNDATION INVESTMENT COMPANY LIMITED (AFI.AX)"},
+  {"id":"AFMD", "name": "Affimed N.V. (AFMD)"},
+  {"id":"AFP.AX", "name": "AFT PHARMACEUTICALS LIMITED (AFP.AX)"},
+  {"id":"AFR.AX", "name": "AFRICAN ENERGY RESOURCES LIMITED (AFR.AX)"},
+  {"id":"AFSI", "name": "AmTrust Financial Services, Inc. (AFSI)"},
+  {"id":"AFT.AX", "name": "AFT CORPORATION LIMITED (AFT.AX)"},
+  {"id":"AFY.AX", "name": "AFTERPAY HOLDINGS LIMITED (AFY.AX)"},
+  {"id":"AGD.AX", "name": "AUSTRAL GOLD LIMITED (AGD.AX)"},
+  {"id":"AGE.AX", "name": "ALLIGATOR ENERGY LIMITED (AGE.AX)"},
+  {"id":"AGEN", "name": "Agenus Inc. (AGEN)"},
+  {"id":"AGFS", "name": "AgroFresh Solutions, Inc. (AGFS)"},
+  {"id":"AGFSW", "name": "AgroFresh Solutions, Inc. (AGFSW)"},
+  {"id":"AGG.AX", "name": "ANGLOGOLD ASHANTI LIMITED (AGG.AX)"},
+  {"id":"AGI.AX", "name": "AINSWORTH GAME TECHNOLOGY LIMITED (AGI.AX)"},
+  {"id":"AGII", "name": "Argo Group International Holdings, Ltd. (AGII)"},
+  {"id":"AGIIL", "name": "Argo Group International Holdings, Ltd. (AGIIL)"},
+  {"id":"AGIO", "name": "Agios Pharmaceuticals, Inc. (AGIO)"},
+  {"id":"AGJ.AX", "name": "AGRICULTURAL LAND TRUST (AGJ.AX)"},
+  {"id":"AGL.AX", "name": "AGL ENERGY LIMITED. (AGL.AX)"},
+  {"id":"AGLE", "name": "Aeglea BioTherapeutics, Inc. (AGLE)"},
+  {"id":"AGNC", "name": "AGNC Investment Corp. (AGNC)"},
+  {"id":"AGNCB", "name": "AGNC Investment Corp. (AGNCB)"},
+  {"id":"AGNCP", "name": "AGNC Investment Corp. (AGNCP)"},
+  {"id":"AGND", "name": "WisdomTree Barclays Negative Duration U.S. Aggregate Bond Fund (AGND)"},
+  {"id":"AGO.AX", "name": "ATLAS IRON LIMITED (AGO.AX)"},
+  {"id":"AGR.AX", "name": "AGUIA RESOURCES LIMITED (AGR.AX)"},
+  {"id":"AGRX", "name": "Agile Therapeutics, Inc. (AGRX)"},
+  {"id":"AGS.AX", "name": "ALLIANCE RESOURCES LIMITED (AGS.AX)"},
+  {"id":"AGTC", "name": "Applied Genetic Technologies Corporation (AGTC)"},
+  {"id":"AGY.AX", "name": "ARGOSY MINERALS LIMITED (AGY.AX)"},
+  {"id":"AGYS", "name": "Agilysys, Inc. (AGYS)"},
+  {"id":"AGZD", "name": "WisdomTree Barclays Interest Rate Hedged U.S. Aggregate Bond F (AGZD)"},
+  {"id":"AHF.AX", "name": "AUSTRALIAN DAIRY FARMS GROUP (AHF.AX)"},
+  {"id":"AHG.AX", "name": "AUTOMOTIVE HOLDINGS GROUP LIMITED. (AHG.AX)"},
+  {"id":"AHGP", "name": "Alliance Holdings GP, L.P. (AHGP)"},
+  {"id":"AHK.AX", "name": "ARK MINES LIMITED (AHK.AX)"},
+  {"id":"AHL.AX", "name": "AHALIFE HOLDINGS LIMITED (AHL.AX)"},
+  {"id":"AHN.AX", "name": "ATHENA RESOURCES LIMITED (AHN.AX)"},
+  {"id":"AHPA", "name": "Avista Healthcare Public Acquisition Corp. (AHPA)"},
+  {"id":"AHPAU", "name": "Avista Healthcare Public Acquisition Corp. (AHPAU)"},
+  {"id":"AHPAW", "name": "Avista Healthcare Public Acquisition Corp. (AHPAW)"},
+  {"id":"AHPI", "name": "Allied Healthcare Products, Inc. (AHPI)"},
+  {"id":"AHQ.AX", "name": "ALLEGIANCE COAL LIMITED (AHQ.AX)"},
+  {"id":"AHR.AX", "name": "ANCHOR RESOURCES LIMITED (AHR.AX)"},
+  {"id":"AHX.AX", "name": "APIAM ANIMAL HEALTH LIMITED (AHX.AX)"},
+  {"id":"AHY.AX", "name": "ASALEO CARE LIMITED (AHY.AX)"},
+  {"id":"AHZ.AX", "name": "ADMEDUS LTD (AHZ.AX)"},
+  {"id":"AIA", "name": "iShares Asia 50 ETF (AIA)"},
+  {"id":"AIA.AX", "name": "AUCKLAND INTERNATIONAL AIRPORT LIMITED (AIA.AX)"},
+  {"id":"AIB.AX", "name": "AURORA GLOBAL INCOME TRUST (AIB.AX)"},
+  {"id":"AIK.AX", "name": "ARMIDALE INVESTMENT CORPORATION LIMITED (AIK.AX)"},
+  {"id":"AIMC", "name": "Altra Industrial Motion Corp. (AIMC)"},
+  {"id":"AIMT", "name": "Aimmune Therapeutics, Inc. (AIMT)"},
+  {"id":"AINV", "name": "Apollo Investment Corporation (AINV)"},
+  {"id":"AIQ", "name": "Alliance HealthCare Services, Inc. (AIQ)"},
+  {"id":"AIQ.AX", "name": "ALTERNATIVE INVESTMENT TRUST (AIQ.AX)"},
+  {"id":"AIR.AX", "name": "ASTIVITA LIMITED (AIR.AX)"},
+  {"id":"AIRG", "name": "Airgain, Inc. (AIRG)"},
+  {"id":"AIRM", "name": "Air Methods Corporation (AIRM)"},
+  {"id":"AIRR", "name": "First Trust RBA American Industrial Renaissance ETF (AIRR)"},
+  {"id":"AIRT", "name": "Air T, Inc. (AIRT)"},
+  {"id":"AIS.AX", "name": "AERIS RESOURCES LIMITED (AIS.AX)"},
+  {"id":"AIV.AX", "name": "ACTIVEX LIMITED (AIV.AX)"},
+  {"id":"AIY.AX", "name": "AUTHORISED INVESTMENT FUND LIMITED (AIY.AX)"},
+  {"id":"AIZ.AX", "name": "AIR NEW ZEALAND LIMITED (AIZ.AX)"},
+  {"id":"AJA.AX", "name": "ASTRO JAPAN PROPERTY GROUP (AJA.AX)"},
+  {"id":"AJC.AX", "name": "ACACIA COAL LIMITED (AJC.AX)"},
+  {"id":"AJD.AX", "name": "ASIA PACIFIC DATA CENTRE GROUP (AJD.AX)"},
+  {"id":"AJJ.AX", "name": "ASIAN AMERICAN MEDICAL GROUP LIMITED (AJJ.AX)"},
+  {"id":"AJL.AX", "name": "AJ LUCAS GROUP LIMITED (AJL.AX)"},
+  {"id":"AJM.AX", "name": "ALTURA MINING LIMITED (AJM.AX)"},
+  {"id":"AJQ.AX", "name": "ARMOUR ENERGY LIMITED (AJQ.AX)"},
+  {"id":"AJX.AX", "name": "ALEXIUM INTERNATIONAL GROUP LIMITED (AJX.AX)"},
+  {"id":"AJY.AX", "name": "ASAPLUS RESOURCES LIMITED (AJY.AX)"},
+  {"id":"AKAM", "name": "Akamai Technologies, Inc. (AKAM)"},
+  {"id":"AKAO", "name": "Achaogen, Inc. (AKAO)"},
+  {"id":"AKBA", "name": "Akebia Therapeutics, Inc. (AKBA)"},
+  {"id":"AKER", "name": "Akers Biosciences Inc (AKER)"},
+  {"id":"AKF.AX", "name": "ASK FUNDING LIMITED (AKF.AX)"},
+  {"id":"AKG.AX", "name": "ACADEMIES AUSTRALASIA GROUP LIMITED (AKG.AX)"},
+  {"id":"AKK.AX", "name": "AUSTIN EXPLORATION LIMITED (AKK.AX)"},
+  {"id":"AKM.AX", "name": "ASPIRE MINING LIMITED (AKM.AX)"},
+  {"id":"AKP.AX", "name": "AUDIO PIXELS HOLDINGS LIMITED (AKP.AX)"},
+  {"id":"AKRX", "name": "Akorn, Inc. (AKRX)"},
+  {"id":"AKTS", "name": "Akoustis Technologies, Inc. (AKTS)"},
+  {"id":"AKTX", "name": "Akari Therapeutics Plc (AKTX)"},
+  {"id":"ALBO", "name": "Albireo Pharma, Inc. (ALBO)"},
+  {"id":"ALC.AX", "name": "ALCIDION GROUP LIMITED (ALC.AX)"},
+  {"id":"ALCO", "name": "Alico, Inc. (ALCO)"},
+  {"id":"ALDR", "name": "Alder BioPharmaceuticals, Inc. (ALDR)"},
+  {"id":"ALDX", "name": "Aldeyra Therapeutics, Inc. (ALDX)"},
+  {"id":"ALF.AX", "name": "AUSTRALIAN LEADERS FUND LIMITED (ALF.AX)"},
+  {"id":"ALGN", "name": "Align Technology, Inc. (ALGN)"},
+  {"id":"ALGT", "name": "Allegiant Travel Company (ALGT)"},
+  {"id":"ALI.AX", "name": "ARGO GLOBAL LISTED INFRASTRUCTURE LIMITED (ALI.AX)"},
+  {"id":"ALIM", "name": "Alimera Sciences, Inc. (ALIM)"},
+  {"id":"ALJJ", "name": "ALJ Regional Holdings, Inc. (ALJJ)"},
+  {"id":"ALK.AX", "name": "ALKANE RESOURCES LIMITED (ALK.AX)"},
+  {"id":"ALKS", "name": "Alkermes plc (ALKS)"},
+  {"id":"ALL.AX", "name": "ARISTOCRAT LEISURE LIMITED (ALL.AX)"},
+  {"id":"ALLT", "name": "Allot Communications Ltd. (ALLT)"},
+  {"id":"ALNY", "name": "Alnylam Pharmaceuticals, Inc. (ALNY)"},
+  {"id":"ALOG", "name": "Analogic Corporation (ALOG)"},
+  {"id":"ALOT", "name": "AstroNova, Inc. (ALOT)"},
+  {"id":"ALQ.AX", "name": "ALS LIMITED (ALQ.AX)"},
+  {"id":"ALQA", "name": "Alliqua BioMedical, Inc. (ALQA)"},
+  {"id":"ALR.AX", "name": "ABERDEEN LEADERS LIMITED (ALR.AX)"},
+  {"id":"ALRM", "name": "Alarm.com Holdings, Inc. (ALRM)"},
+  {"id":"ALSK", "name": "Alaska Communications Systems Group, Inc. (ALSK)"},
+  {"id":"ALT.AX", "name": "ANALYTICA LIMITED (ALT.AX)"},
+  {"id":"ALTY", "name": "Global X SuperDividend Alternatives ETF (ALTY)"},
+  {"id":"ALU.AX", "name": "ALTIUM LIMITED (ALU.AX)"},
+  {"id":"ALXN", "name": "Alexion Pharmaceuticals, Inc. (ALXN)"},
+  {"id":"ALY.AX", "name": "ALCHEMY RESOURCES LIMITED (ALY.AX)"},
+  {"id":"AM3.AX", "name": "ASIAN MINERAL RESOURCES LIMITED (AM3.AX)"},
+  {"id":"AMA.AX", "name": "AMA GROUP LIMITED (AMA.AX)"},
+  {"id":"AMAG", "name": "AMAG Pharmaceuticals, Inc. (AMAG)"},
+  {"id":"AMAT", "name": "Applied Materials, Inc. (AMAT)"},
+  {"id":"AMB.AX", "name": "AMBITION GROUP LIMITED (AMB.AX)"},
+  {"id":"AMBA", "name": "Ambarella, Inc. (AMBA)"},
+  {"id":"AMBC", "name": "Ambac Financial Group, Inc. (AMBC)"},
+  {"id":"AMBCW", "name": "Ambac Financial Group, Inc. (AMBCW)"},
+  {"id":"AMC.AX", "name": "AMCOR LIMITED (AMC.AX)"},
+  {"id":"AMCN", "name": "AirMedia Group Inc (AMCN)"},
+  {"id":"AMCX", "name": "AMC Networks Inc. (AMCX)"},
+  {"id":"AMD", "name": "Advanced Micro Devices, Inc. (AMD)"},
+  {"id":"AMDA", "name": "Amedica Corporation (AMDA)"},
+  {"id":"AME.AX", "name": "ALTO METALS LIMITED (AME.AX)"},
+  {"id":"AMED", "name": "Amedisys Inc (AMED)"},
+  {"id":"AMEH", "name": "Apollo Medical Holdings, Inc. (AMEH)"},
+  {"id":"AMGN", "name": "Amgen Inc. (AMGN)"},
+  {"id":"AMH.AX", "name": "AMCIL LIMITED (AMH.AX)"},
+  {"id":"AMI.AX", "name": "AURELIA METALS LIMITED (AMI.AX)"},
+  {"id":"AMKR", "name": "Amkor Technology, Inc. (AMKR)"},
+  {"id":"AML.AX", "name": "AEON METALS LIMITED. (AML.AX)"},
+  {"id":"AMMA", "name": "Alliance MMA, Inc. (AMMA)"},
+  {"id":"AMN.AX", "name": "AGRIMIN LIMITED (AMN.AX)"},
+  {"id":"AMNB", "name": "American National Bankshares, Inc. (AMNB)"},
+  {"id":"AMO.AX", "name": "AMBERTECH LIMITED (AMO.AX)"},
+  {"id":"AMOT", "name": "Allied Motion Technologies, Inc. (AMOT)"},
+  {"id":"AMOV", "name": "America Movil, S.A.B. de C.V. (AMOV)"},
+  {"id":"AMP.AX", "name": "AMP LIMITED (AMP.AX)"},
+  {"id":"AMPH", "name": "Amphastar Pharmaceuticals, Inc. (AMPH)"},
+  {"id":"AMRB", "name": "American River Bankshares (AMRB)"},
+  {"id":"AMRI", "name": "Albany Molecular Research, Inc. (AMRI)"},
+  {"id":"AMRK", "name": "A-Mark Precious Metals, Inc. (AMRK)"},
+  {"id":"AMRN", "name": "Amarin Corporation plc (AMRN)"},
+  {"id":"AMRS", "name": "Amyris, Inc. (AMRS)"},
+  {"id":"AMSC", "name": "American Superconductor Corporation (AMSC)"},
+  {"id":"AMSF", "name": "AMERISAFE, Inc. (AMSF)"},
+  {"id":"AMSWA", "name": "American Software, Inc. (AMSWA)"},
+  {"id":"AMT.AX", "name": "ALLEGRA ORTHOPAEDICS LIMITED (AMT.AX)"},
+  {"id":"AMTD", "name": "TD Ameritrade Holding Corporation (AMTD)"},
+  {"id":"AMTX", "name": "Aemetis, Inc (AMTX)"},
+  {"id":"AMWD", "name": "American Woodmark Corporation (AMWD)"},
+  {"id":"AMZN", "name": "Amazon.com, Inc. (AMZN)"},
+  {"id":"ANAB", "name": "AnaptysBio, Inc. (ANAB)"},
+  {"id":"ANAT", "name": "American National Insurance Company (ANAT)"},
+  {"id":"ANCB", "name": "Anchor Bancorp (ANCB)"},
+  {"id":"ANCX", "name": "Access National Corporation (ANCX)"},
+  {"id":"ANDA", "name": "Andina Acquisition Corp. II (ANDA)"},
+  {"id":"ANDAR", "name": "Andina Acquisition Corp. II (ANDAR)"},
+  {"id":"ANDAU", "name": "Andina Acquisition Corp. II (ANDAU)"},
+  {"id":"ANDAW", "name": "Andina Acquisition Corp. II (ANDAW)"},
+  {"id":"ANDE", "name": "The Andersons, Inc. (ANDE)"},
+  {"id":"ANG.AX", "name": "AUSTIN ENGINEERING LIMITED (ANG.AX)"},
+  {"id":"ANGI", "name": "Angie&#39;s List, Inc. (ANGI)"},
+  {"id":"ANGO", "name": "AngioDynamics, Inc. (ANGO)"},
+  {"id":"ANIK", "name": "Anika Therapeutics Inc. (ANIK)"},
+  {"id":"ANIP", "name": "ANI Pharmaceuticals, Inc. (ANIP)"},
+  {"id":"ANL.AX", "name": "AMANI GOLD LIMITED (ANL.AX)"},
+  {"id":"ANN.AX", "name": "ANSELL LIMITED (ANN.AX)"},
+  {"id":"ANO.AX", "name": "ADVANCED NANO TECHNOLOGIES LIMITED (ANO.AX)"},
+  {"id":"ANP.AX", "name": "ANTISENSE THERAPEUTICS LIMITED (ANP.AX)"},
+  {"id":"ANQ.AX", "name": "ANAECO LIMITED (ANQ.AX)"},
+  {"id":"ANR.AX", "name": "ANATARA LIFESCIENCES LTD (ANR.AX)"},
+  {"id":"ANS.AX", "name": "AUSTSINO RESOURCES GROUP LIMITED (ANS.AX)"},
+  {"id":"ANSS", "name": "ANSYS, Inc. (ANSS)"},
+  {"id":"ANTH", "name": "Anthera Pharmaceuticals, Inc. (ANTH)"},
+  {"id":"ANV.AX", "name": "AUSNET SERVICES HOLDINGS PTY LTD (ANV.AX)"},
+  {"id":"ANW.AX", "name": "AUS TIN MINING LTD (ANW.AX)"},
+  {"id":"ANY", "name": "Sphere 3D Corp. (ANY)"},
+  {"id":"ANZ.AX", "name": "AUSTRALIA AND NEW ZEALAND BANKING GROUP LIMITED (ANZ.AX)"},
+  {"id":"AO1.AX", "name": "ASSETOWL LIMITED (AO1.AX)"},
+  {"id":"AOA.AX", "name": "AUSMON RESOURCES LIMITED (AOA.AX)"},
+  {"id":"AOBC", "name": "American Outdoor Brands Corporation (AOBC)"},
+  {"id":"AOD.AX", "name": "AURORA DIVIDEND INCOME TRUST (MANAGED FUND) (AOD.AX)"},
+  {"id":"AOF.AX", "name": "AUSTRALIAN UNITY OFFICE FUND (AOF.AX)"},
+  {"id":"AOG.AX", "name": "AVEO GROUP (AOG.AX)"},
+  {"id":"AOH.AX", "name": "ALTONA MINING LIMITED (AOH.AX)"},
+  {"id":"AOJ.AX", "name": "APOLLO SERIES 2010-1 TRUST (AOJ.AX)"},
+  {"id":"AOK.AX", "name": "AUSTEX OIL LIMITED (AOK.AX)"},
+  {"id":"AOL.AX", "name": "APOLLO SERIES 2015-1 TRUST (AOL.AX)"},
+  {"id":"AON.AX", "name": "APOLLO MINERALS LIMITED (AON.AX)"},
+  {"id":"AOP.AX", "name": "APOLLO CONSOLIDATED LIMITED (AOP.AX)"},
+  {"id":"AOR.AX", "name": "APOLLO SERIES 2013-1 TRUST (AOR.AX)"},
+  {"id":"AOSL", "name": "Alpha and Omega Semiconductor Limited (AOSL)"},
+  {"id":"AOU.AX", "name": "AUROCH MINERALS LTD (AOU.AX)"},
+  {"id":"AOW.AX", "name": "AMERICAN PATRIOT OIL & GAS LIMITED (AOW.AX)"},
+  {"id":"APA.AX", "name": "APA GROUP (APA.AX)"},
+  {"id":"APC.AX", "name": "AUSTRALIAN POTASH LIMITED (APC.AX)"},
+  {"id":"APD.AX", "name": "APN PROPERTY GROUP LIMITED (APD.AX)"},
+  {"id":"APDN", "name": "Applied DNA Sciences Inc (APDN)"},
+  {"id":"APDNW", "name": "Applied DNA Sciences Inc (APDNW)"},
+  {"id":"APE.AX", "name": "AP EAGERS LIMITED (APE.AX)"},
+  {"id":"APEI", "name": "American Public Education, Inc. (APEI)"},
+  {"id":"APEN", "name": "Apollo Endosurgery, Inc. (APEN)"},
+  {"id":"APG.AX", "name": "AUSTPAC RESOURCES NL (APG.AX)"},
+  {"id":"API.AX", "name": "AUSTRALIAN PHARMACEUTICAL INDUSTRIES LIMITED (API.AX)"},
+  {"id":"APL.AX", "name": "ANTIPODES GLOBAL INVESTMENT COMPANY LTD (APL.AX)"},
+  {"id":"APLP", "name": "Archrock Partners, L.P. (APLP)"},
+  {"id":"APN.AX", "name": "APN NEWS & MEDIA LIMITED (APN.AX)"},
+  {"id":"APO.AX", "name": "APN OUTDOOR GROUP LIMITED (APO.AX)"},
+  {"id":"APOG", "name": "Apogee Enterprises, Inc. (APOG)"},
+  {"id":"APOP", "name": "Cellect Biotechnology Ltd. (APOP)"},
+  {"id":"APOPW", "name": "Cellect Biotechnology Ltd. (APOPW)"},
+  {"id":"APPF", "name": "AppFolio, Inc. (APPF)"},
+  {"id":"APPS", "name": "Digital Turbine, Inc. (APPS)"},
+  {"id":"APRI", "name": "Apricus Biosciences, Inc. (APRI)"},
+  {"id":"APTI", "name": "Apptio, Inc. (APTI)"},
+  {"id":"APTO", "name": "Aptose Biosciences, Inc. (APTO)"},
+  {"id":"APVO", "name": "Aptevo Therapeutics Inc. (APVO)"},
+  {"id":"APW.AX", "name": "AIMS PROPERTY SECURITIES FUND (APW.AX)"},
+  {"id":"APWC", "name": "Asia Pacific Wire & Cable Corporation Limited (APWC)"},
+  {"id":"APX.AX", "name": "APPEN LIMITED (APX.AX)"},
+  {"id":"APY.AX", "name": "AZONTO PETROLEUM LTD (APY.AX)"},
+  {"id":"APZ.AX", "name": "ASPEN GROUP (APZ.AX)"},
+  {"id":"AQB", "name": "AquaBounty Technologies, Inc. (AQB)"},
+  {"id":"AQC.AX", "name": "AUSTRALIAN PACIFIC COAL LIMITED (AQC.AX)"},
+  {"id":"AQD.AX", "name": "AUSQUEST LIMITED (AQD.AX)"},
+  {"id":"AQF.AX", "name": "AUSTRALIAN GOVERNANCE MASTERS INDEX FUND LIMITED (AQF.AX)"},
+  {"id":"AQG.AX", "name": "ALACER GOLD CORP. (AQG.AX)"},
+  {"id":"AQH.AX", "name": "APT PIPELINES LIMITED. (AQH.AX)"},
+  {"id":"AQI.AX", "name": "ALICANTO MINERALS LIMITED (AQI.AX)"},
+  {"id":"AQJ.AX", "name": "AUS ASIA MINERALS LIMITED (AQJ.AX)"},
+  {"id":"AQM.AX", "name": "ANGLO AMERICAN CAPITAL PLC (AQM.AX)"},
+  {"id":"AQMS", "name": "Aqua Metals, Inc. (AQMS)"},
+  {"id":"AQQ.AX", "name": "APHRODITE GOLD LIMITED (AQQ.AX)"},
+  {"id":"AQS.AX", "name": "AQUIS ENTERTAINMENT LIMITED (AQS.AX)"},
+  {"id":"AQU.AX", "name": "AQUAINT CAPITAL HOLDINGS LIMITED (AQU.AX)"},
+  {"id":"AQX.AX", "name": "ALICE QUEEN LIMITED (AQX.AX)"},
+  {"id":"AQXP", "name": "Aquinox Pharmaceuticals, Inc. (AQXP)"},
+  {"id":"AQZ.AX", "name": "ALLIANCE AVIATION SERVICES LIMITED (AQZ.AX)"},
+  {"id":"AR1.AX", "name": "ARROWHEAD RESOURCES LIMITED (AR1.AX)"},
+  {"id":"ARA.AX", "name": "ARIADNE AUSTRALIA LIMITED (ARA.AX)"},
+  {"id":"ARAY", "name": "Accuray Incorporated (ARAY)"},
+  {"id":"ARB.AX", "name": "ARB CORPORATION LIMITED. (ARB.AX)"},
+  {"id":"ARC.AX", "name": "AUSTRALIAN RURAL CAPITAL LIMITED (ARC.AX)"},
+  {"id":"ARCB", "name": "ArcBest Corporation (ARCB)"},
+  {"id":"ARCC", "name": "Ares Capital Corporation (ARCC)"},
+  {"id":"ARCI", "name": "Appliance Recycling Centers of America, Inc. (ARCI)"},
+  {"id":"ARCW", "name": "ARC Group Worldwide, Inc. (ARCW)"},
+  {"id":"ARD.AX", "name": "ARGENT MINERALS LIMITED (ARD.AX)"},
+  {"id":"ARDM", "name": "Aradigm Corporation (ARDM)"},
+  {"id":"ARDX", "name": "Ardelyx, Inc. (ARDX)"},
+  {"id":"ARE.AX", "name": "ARGONAUT RESOURCES NL (ARE.AX)"},
+  {"id":"AREX", "name": "Approach Resources Inc. (AREX)"},
+  {"id":"ARF.AX", "name": "ARENA REIT. (ARF.AX)"},
+  {"id":"ARG.AX", "name": "ARGO INVESTMENTS LIMITED (ARG.AX)"},
+  {"id":"ARGS", "name": "Argos Therapeutics, Inc. (ARGS)"},
+  {"id":"ARH.AX", "name": "AUSTRALASIAN RESOURCES LIMITED (ARH.AX)"},
+  {"id":"ARI.AX", "name": "ARRIUM LIMITED (ARI.AX)"},
+  {"id":"ARII", "name": "American Railcar Industries, Inc. (ARII)"},
+  {"id":"ARIS", "name": "ARI Network Services, Inc. (ARIS)"},
+  {"id":"ARK.AX", "name": "AUSROC METALS LTD (ARK.AX)"},
+  {"id":"ARKR", "name": "Ark Restaurants Corp. (ARKR)"},
+  {"id":"ARL.AX", "name": "ARDEA RESOURCES LIMITED (ARL.AX)"},
+  {"id":"ARLP", "name": "Alliance Resource Partners, L.P. (ARLP)"},
+  {"id":"ARLZ", "name": "Aralez Pharmaceuticals Inc. (ARLZ)"},
+  {"id":"ARM.AX", "name": "AURORA MINERALS LIMITED (ARM.AX)"},
+  {"id":"ARNA", "name": "Arena Pharmaceuticals, Inc. (ARNA)"},
+  {"id":"ARO.AX", "name": "ASTRO RESOURCES NL (ARO.AX)"},
+  {"id":"AROW", "name": "Arrow Financial Corporation (AROW)"},
+  {"id":"ARQL", "name": "ArQule, Inc. (ARQL)"},
+  {"id":"ARRS", "name": "ARRIS International plc (ARRS)"},
+  {"id":"ARRY", "name": "Array BioPharma Inc. (ARRY)"},
+  {"id":"ARS.AX", "name": "ALT RESOURCES LIMITED (ARS.AX)"},
+  {"id":"ARTNA", "name": "Artesian Resources Corporation (ARTNA)"},
+  {"id":"ARTW", "name": "Art&#39;s-Way Manufacturing Co., Inc. (ARTW)"},
+  {"id":"ARTX", "name": "Arotech Corporation (ARTX)"},
+  {"id":"ARU.AX", "name": "ARAFURA RESOURCES LIMITED (ARU.AX)"},
+  {"id":"ARV.AX", "name": "ARTEMIS RESOURCES LIMITED (ARV.AX)"},
+  {"id":"ARWR", "name": "Arrowhead Pharmaceuticals, Inc. (ARWR)"},
+  {"id":"ARX.AX", "name": "ARC EXPLORATION LIMITED (ARX.AX)"},
+  {"id":"ASB.AX", "name": "AUSTAL LIMITED (ASB.AX)"},
+  {"id":"ASBB", "name": "ASB Bancorp, Inc. (ASBB)"},
+  {"id":"ASCMA", "name": "Ascent Capital Group, Inc. (ASCMA)"},
+  {"id":"ASET", "name": "FlexShares Real Assets Allocation Index Fund (ASET)"},
+  {"id":"ASFI", "name": "Asta Funding, Inc. (ASFI)"},
+  {"id":"ASG.AX", "name": "AUTOSPORTS GROUP LIMITED. (ASG.AX)"},
+  {"id":"ASH.AX", "name": "ASHLEY SERVICES GROUP LIMITED (ASH.AX)"},
+  {"id":"ASL.AX", "name": "AUSDRILL LIMITED (ASL.AX)"},
+  {"id":"ASMB", "name": "Assembly Biosciences, Inc. (ASMB)"},
+  {"id":"ASML", "name": "ASML Holding N.V. (ASML)"},
+  {"id":"ASN.AX", "name": "ANSON RESOURCES LIMITED (ASN.AX)"},
+  {"id":"ASNA", "name": "Ascena Retail Group, Inc. (ASNA)"},
+  {"id":"ASND", "name": "Ascendis Pharma A/S (ASND)"},
+  {"id":"ASP.AX", "name": "ASPERMONT LIMITED. (ASP.AX)"},
+  {"id":"ASPS", "name": "Altisource Portfolio Solutions S.A. (ASPS)"},
+  {"id":"ASRV", "name": "AmeriServ Financial Inc. (ASRV)"},
+  {"id":"ASRVP", "name": "AmeriServ Financial Inc. (ASRVP)"},
+  {"id":"AST.AX", "name": "AUSNET SERVICES LIMITED (AST.AX)"},
+  {"id":"ASTC", "name": "Astrotech Corporation (ASTC)"},
+  {"id":"ASTE", "name": "Astec Industries, Inc. (ASTE)"},
+  {"id":"ASUR", "name": "Asure Software Inc (ASUR)"},
+  {"id":"ASW.AX", "name": "ADVANCED SHARE REGISTRY LIMITED (ASW.AX)"},
+  {"id":"ASX.AX", "name": "ASX LIMITED (ASX.AX)"},
+  {"id":"ASY.AX", "name": "ASSEMBLEBAY LIMITED (ASY.AX)"},
+  {"id":"ASYS", "name": "Amtech Systems, Inc. (ASYS)"},
+  {"id":"ATA.AX", "name": "ATC ALLOYS LTD (ATA.AX)"},
+  {"id":"ATAI", "name": "ATA Inc. (ATAI)"},
+  {"id":"ATAX", "name": "America First Multifamily Investors, L.P. (ATAX)"},
+  {"id":"ATB.AX", "name": "ASIAN DEVELOPMENT BANK (ATB.AX)"},
+  {"id":"ATC.AX", "name": "ALTECH CHEMICALS LTD (ATC.AX)"},
+  {"id":"ATEC", "name": "Alphatec Holdings, Inc. (ATEC)"},
+  {"id":"ATHN", "name": "athenahealth, Inc. (ATHN)"},
+  {"id":"ATHX", "name": "Athersys, Inc. (ATHX)"},
+  {"id":"ATL.AX", "name": "APOLLO TOURISM & LEISURE LTD (ATL.AX)"},
+  {"id":"ATLC", "name": "Atlanticus Holdings Corporation (ATLC)"},
+  {"id":"ATLO", "name": "Ames National Corporation (ATLO)"},
+  {"id":"ATM.AX", "name": "ANEKA TAMBANG (PERSERO) TBK (PT) (ATM.AX)"},
+  {"id":"ATNI", "name": "ATN International, Inc. (ATNI)"},
+  {"id":"ATOM", "name": "Atomera Incorporated (ATOM)"},
+  {"id":"ATOS", "name": "Atossa Genetics Inc. (ATOS)"},
+  {"id":"ATP.AX", "name": "ATLAS PEARLS AND PERFUMES LTD (ATP.AX)"},
+  {"id":"ATR.AX", "name": "ASTRON CORPORATION LIMITED (ATR.AX)"},
+  {"id":"ATRA", "name": "Atara Biotherapeutics, Inc. (ATRA)"},
+  {"id":"ATRC", "name": "AtriCure, Inc. (ATRC)"},
+  {"id":"ATRI", "name": "Atrion Corporation (ATRI)"},
+  {"id":"ATRO", "name": "Astronics Corporation (ATRO)"},
+  {"id":"ATRS", "name": "Antares Pharma, Inc. (ATRS)"},
+  {"id":"ATS.AX", "name": "AUSTRALIS OIL & GAS LIMITED (ATS.AX)"},
+  {"id":"ATSG", "name": "Air Transport Services Group, Inc (ATSG)"},
+  {"id":"ATT.AX", "name": "ANTE REAL ESTATE TRUST (ATT.AX)"},
+  {"id":"ATTU", "name": "Attunity Ltd. (ATTU)"},
+  {"id":"ATU.AX", "name": "ATRUM COAL LIMITED (ATU.AX)"},
+  {"id":"ATVI", "name": "Activision Blizzard, Inc (ATVI)"},
+  {"id":"AU1.AX", "name": "AUSNET FINANCIAL SERVICES LIMITED (AU1.AX)"},
+  {"id":"AUB.AX", "name": "AUB GROUP LIMITED (AUB.AX)"},
+  {"id":"AUBN", "name": "Auburn National Bancorporation, Inc. (AUBN)"},
+  {"id":"AUC.AX", "name": "AUSGOLD LIMITED (AUC.AX)"},
+  {"id":"AUDC", "name": "AudioCodes Ltd. (AUDC)"},
+  {"id":"AUF.AX", "name": "ASIAN MASTERS FUND LIMITED (AUF.AX)"},
+  {"id":"AUG.AX", "name": "AUGEND LTD (AUG.AX)"},
+  {"id":"AUI.AX", "name": "AUSTRALIAN UNITED INVESTMENT COMPANY LIMITED (AUI.AX)"},
+  {"id":"AUK.AX", "name": "AUGUR RESOURCES LIMITED (AUK.AX)"},
+  {"id":"AUP.AX", "name": "AURORA PROPERTY BUY-WRITE INCOME TRUST (AUP.AX)"},
+  {"id":"AUPH", "name": "Aurinia Pharmaceuticals Inc (AUPH)"},
+  {"id":"AUQ.AX", "name": "ALARA RESOURCES LIMITED (AUQ.AX)"},
+  {"id":"AUZ.AX", "name": "AUSTRALIAN MINES LIMITED (AUZ.AX)"},
+  {"id":"AVAV", "name": "AeroVironment, Inc. (AVAV)"},
+  {"id":"AVB.AX", "name": "AVANCO RESOURCES LIMITED (AVB.AX)"},
+  {"id":"AVD.AX", "name": "ANTILLES OIL AND GAS NL (AVD.AX)"},
+  {"id":"AVDL", "name": "Avadel Pharmaceuticals plc (AVDL)"},
+  {"id":"AVEO", "name": "AVEO Pharmaceuticals, Inc. (AVEO)"},
+  {"id":"AVG.AX", "name": "AUSTRALIAN VINTAGE LTD (AVG.AX)"},
+  {"id":"AVGO", "name": "Broadcom Limited (AVGO)"},
+  {"id":"AVGR", "name": "Avinger, Inc. (AVGR)"},
+  {"id":"AVH.AX", "name": "AVITA MEDICAL LTD (AVH.AX)"},
+  {"id":"AVHI", "name": "A V Homes, Inc. (AVHI)"},
+  {"id":"AVI.AX", "name": "AVALON MINERALS LIMITED (AVI.AX)"},
+  {"id":"AVID", "name": "Avid Technology, Inc. (AVID)"},
+  {"id":"AVIR", "name": "Aviragen Therapeutics, Inc. (AVIR)"},
+  {"id":"AVJ.AX", "name": "AVJENNINGS LIMITED (AVJ.AX)"},
+  {"id":"AVL.AX", "name": "AUSTRALIAN VANADIUM LIMITED (AVL.AX)"},
+  {"id":"AVN.AX", "name": "AVENTUS RETAIL PROPERTY FUND (AVN.AX)"},
+  {"id":"AVNW", "name": "Aviat Networks, Inc. (AVNW)"},
+  {"id":"AVQ.AX", "name": "AXIOM MINING LIMITED (AVQ.AX)"},
+  {"id":"AVW.AX", "name": "AVIRA ENERGY LIMITED (AVW.AX)"},
+  {"id":"AVXL", "name": "Anavex Life Sciences Corp. (AVXL)"},
+  {"id":"AVXS", "name": "AveXis, Inc. (AVXS)"},
+  {"id":"AVZ.AX", "name": "AVZ MINERALS LIMITED (AVZ.AX)"},
+  {"id":"AWC.AX", "name": "ALUMINA LIMITED (AWC.AX)"},
+  {"id":"AWE.AX", "name": "AWE LIMITED (AWE.AX)"},
+  {"id":"AWN.AX", "name": "AROWANA INTERNATIONAL LIMITED (AWN.AX)"},
+  {"id":"AWQ.AX", "name": "AROWANA AUSTRALASIAN VALUE OPPORTUNITIES FUND LIMITED (AWQ.AX)"},
+  {"id":"AWRE", "name": "Aware, Inc. (AWRE)"},
+  {"id":"AWV.AX", "name": "ANOVA METALS LIMITED (AWV.AX)"},
+  {"id":"AWY.AX", "name": "AUSTRALIAN WHISKY HOLDINGS LIMITED (AWY.AX)"},
+  {"id":"AXAR", "name": "Axar Acquisition Corp. (AXAR)"},
+  {"id":"AXARU", "name": "Axar Acquisition Corp. (AXARU)"},
+  {"id":"AXARW", "name": "Axar Acquisition Corp. (AXARW)"},
+  {"id":"AXAS", "name": "Abraxas Petroleum Corporation (AXAS)"},
+  {"id":"AXDX", "name": "Accelerate Diagnostics, Inc. (AXDX)"},
+  {"id":"AXE.AX", "name": "ARCHER EXPLORATION LIMITED (AXE.AX)"},
+  {"id":"AXGN", "name": "AxoGen, Inc. (AXGN)"},
+  {"id":"AXI.AX", "name": "AXIOM PROPERTIES LIMITED (AXI.AX)"},
+  {"id":"AXJ.AX", "name": "AXA (AXJ.AX)"},
+  {"id":"AXL.AX", "name": "AXSESSTODAY LIMITED (AXL.AX)"},
+  {"id":"AXP.AX", "name": "AIRXPANDERS, INC. (AXP.AX)"},
+  {"id":"AXSM", "name": "Axsome Therapeutics, Inc. (AXSM)"},
+  {"id":"AXT.AX", "name": "ARGO EXPLORATION LIMITED (AXT.AX)"},
+  {"id":"AXTI", "name": "AXT Inc (AXTI)"},
+  {"id":"AXZ.AX", "name": "AMEX RESOURCES LIMITED (AXZ.AX)"},
+  {"id":"AYA", "name": "Amaya Inc. (AYA)"},
+  {"id":"AYA.AX", "name": "ATTILA RESOURCES LIMITED (AYA.AX)"},
+  {"id":"AYD.AX", "name": "AUSTRALIAN MASTERS YIELD FUND NO 1 LIMITED (AYD.AX)"},
+  {"id":"AYF.AX", "name": "AUSTRALIAN ENHANCED INCOME FUND (AYF.AX)"},
+  {"id":"AYG.AX", "name": "AXXIS TECHNOLOGY GROUP LTD (AYG.AX)"},
+  {"id":"AYH.AX", "name": "AUSTRALIAN MASTERS YIELD FUND NO 2 LIMITED (AYH.AX)"},
+  {"id":"AYI.AX", "name": "A1 INVESTMENTS & RESOURCES LTD (AYI.AX)"},
+  {"id":"AYJ.AX", "name": "AUSTRALIAN MASTERS YIELD FUND NO 3 LIMITED (AYJ.AX)"},
+  {"id":"AYK.AX", "name": "AUSTRALIAN MASTERS YIELD FUND NO 4 LIMITED (AYK.AX)"},
+  {"id":"AYM.AX", "name": "AUSTRALIA UNITED MINING LIMITED (AYM.AX)"},
+  {"id":"AYR.AX", "name": "ALLOY RESOURCES LIMITED (AYR.AX)"},
+  {"id":"AYS.AX", "name": "AMAYSIM AUSTRALIA LIMITED (AYS.AX)"},
+  {"id":"AYU.AX", "name": "AUSTRALIAN UNITY LIMITED (AYU.AX)"},
+  {"id":"AYZ.AX", "name": "AUSTRALIAN MASTERS YIELD FUND NO 5 LIMITED (AYZ.AX)"},
+  {"id":"AZJ.AX", "name": "AURIZON HOLDINGS LIMITED (AZJ.AX)"},
+  {"id":"AZM.AX", "name": "AZUMAH RESOURCES LIMITED (AZM.AX)"},
+  {"id":"AZPN", "name": "Aspen Technology, Inc. (AZPN)"},
+  {"id":"AZRX", "name": "AzurRx BioPharma, Inc. (AZRX)"},
+  {"id":"AZS.AX", "name": "AZURE MINERALS LIMITED (AZS.AX)"},
+  {"id":"AZV.AX", "name": "AZURE HEALTHCARE LIMITED (AZV.AX)"},
+  {"id":"AZY.AX", "name": "ANTIPA MINERALS LIMITED (AZY.AX)"},
+  {"id":"AZZ.AX", "name": "ANTARES ENERGY LIMITED (AZZ.AX)"},
+  {"id":"BABY", "name": "Natus Medical Incorporated (BABY)"},
+  {"id":"BAF.AX", "name": "BLUE SKY ALTERNATIVES ACCESS FUND LIMITED (BAF.AX)"},
+  {"id":"BAL.AX", "name": "BELLAMY'S AUSTRALIA LIMITED (BAL.AX)"},
+  {"id":"BANF", "name": "BancFirst Corporation (BANF)"},
+  {"id":"BANFP", "name": "BancFirst Corporation (BANFP)"},
+  {"id":"BANR", "name": "Banner Corporation (BANR)"},
+  {"id":"BANX", "name": "StoneCastle Financial Corp (BANX)"},
+  {"id":"BAP.AX", "name": "BAPCOR LIMITED (BAP.AX)"},
+  {"id":"BAR.AX", "name": "BARRA RESOURCES LIMITED (BAR.AX)"},
+  {"id":"BAS.AX", "name": "BASS OIL LIMITED (BAS.AX)"},
+  {"id":"BASI", "name": "Bioanalytical Systems, Inc. (BASI)"},
+  {"id":"BAT.AX", "name": "BATTERY MINERALS LIMITED (BAT.AX)"},
+  {"id":"BATRA", "name": "Liberty Media Corporation (BATRA)"},
+  {"id":"BATRK", "name": "Liberty Media Corporation (BATRK)"},
+  {"id":"BAU.AX", "name": "BAUXITE RESOURCES LIMITED (BAU.AX)"},
+  {"id":"BBBY", "name": "Bed Bath & Beyond Inc. (BBBY)"},
+  {"id":"BBC", "name": "BioShares Biotechnology Clinical Trials Fund (BBC)"},
+  {"id":"BBG.AX", "name": "BILLABONG INTERNATIONAL LIMITED (BBG.AX)"},
+  {"id":"BBGI", "name": "Beasley Broadcast Group, Inc. (BBGI)"},
+  {"id":"BBH", "name": "VanEck Vectors Biotech ETF (BBH)"},
+  {"id":"BBL.AX", "name": "BRISBANE BRONCOS LIMITED (BBL.AX)"},
+  {"id":"BBN.AX", "name": "BABY BUNTING GROUP LIMITED (BBN.AX)"},
+  {"id":"BBOX", "name": "Black Box Corporation (BBOX)"},
+  {"id":"BBP", "name": "BioShares Biotechnology Products Fund (BBP)"},
+  {"id":"BBR.AX", "name": "BORA BORA RESOURCES LIMITED (BBR.AX)"},
+  {"id":"BBRG", "name": "Bravo Brio Restaurant Group, Inc. (BBRG)"},
+  {"id":"BBRX", "name": "Braeburn Pharmaceuticals, Inc. (BBRX)"},
+  {"id":"BBRY", "name": "BlackBerry Limited (BBRY)"},
+  {"id":"BBSI", "name": "Barrett Business Services, Inc. (BBSI)"},
+  {"id":"BBX.AX", "name": "BBX MINERALS LIMITED (BBX.AX)"},
+  {"id":"BCBP", "name": "BCB Bancorp, Inc. (NJ) (BCBP)"},
+  {"id":"BCD.AX", "name": "BCD RESOURCES NL (BCD.AX)"},
+  {"id":"BCI.AX", "name": "BC IRON LIMITED (BCI.AX)"},
+  {"id":"BCK.AX", "name": "BROCKMAN MINING LIMITED (BCK.AX)"},
+  {"id":"BCL.AX", "name": "BARALABA COAL COMPANY LIMITED (BCL.AX)"},
+  {"id":"BCLI", "name": "Brainstorm Cell Therapeutics Inc. (BCLI)"},
+  {"id":"BCN.AX", "name": "BEACON MINERALS LIMITED (BCN.AX)"},
+  {"id":"BCOM", "name": "B Communications Ltd. (BCOM)"},
+  {"id":"BCOR", "name": "Blucora, Inc. (BCOR)"},
+  {"id":"BCOV", "name": "Brightcove Inc. (BCOV)"},
+  {"id":"BCPC", "name": "Balchem Corporation (BCPC)"},
+  {"id":"BCRX", "name": "BioCryst Pharmaceuticals, Inc. (BCRX)"},
+  {"id":"BCT.AX", "name": "BLUECHIIP LIMITED (BCT.AX)"},
+  {"id":"BCTF", "name": "Bancorp 34, Inc. (BCTF)"},
+  {"id":"BD1.AX", "name": "BARD1 LIFE SCIENCES LIMITED (BD1.AX)"},
+  {"id":"BDA.AX", "name": "BOD AUSTRALIA LIMITED (BDA.AX)"},
+  {"id":"BDE", "name": "Black Diamond, Inc. (BDE)"},
+  {"id":"BDGE", "name": "Bridge Bancorp, Inc. (BDGE)"},
+  {"id":"BDI.AX", "name": "BLINA MINERALS NL (BDI.AX)"},
+  {"id":"BDR.AX", "name": "BEADELL RESOURCES LIMITED (BDR.AX)"},
+  {"id":"BDSI", "name": "BioDelivery Sciences International, Inc. (BDSI)"},
+  {"id":"BEAT", "name": "BioTelemetry, Inc. (BEAT)"},
+  {"id":"BEAV", "name": "B/E Aerospace, Inc. (BEAV)"},
+  {"id":"BEBE", "name": "bebe stores, inc. (BEBE)"},
+  {"id":"BECN", "name": "Beacon Roofing Supply, Inc. (BECN)"},
+  {"id":"BEE.AX", "name": "BROO LTD (BEE.AX)"},
+  {"id":"BEL.AX", "name": "BENTLEY CAPITAL LIMITED (BEL.AX)"},
+  {"id":"BELFA", "name": "Bel Fuse Inc. (BELFA)"},
+  {"id":"BELFB", "name": "Bel Fuse Inc. (BELFB)"},
+  {"id":"BEN.AX", "name": "BENDIGO AND ADELAIDE BANK LIMITED (BEN.AX)"},
+  {"id":"BFC.AX", "name": "BESTON GLOBAL FOOD COMPANY LIMITED (BFC.AX)"},
+  {"id":"BFG.AX", "name": "BELL FINANCIAL GROUP LIMITED (BFG.AX)"},
+  {"id":"BFIN", "name": "BankFinancial Corporation (BFIN)"},
+  {"id":"BFIT", "name": "Global X Health & Wellness Thematic ETF (BFIT)"},
+  {"id":"BGA.AX", "name": "BEGA CHEESE LIMITED (BGA.AX)"},
+  {"id":"BGCP", "name": "BGC Partners, Inc. (BGCP)"},
+  {"id":"BGFV", "name": "Big 5 Sporting Goods Corporation (BGFV)"},
+  {"id":"BGG.AX", "name": "BLACKGOLD INTERNATIONAL HOLDINGS LIMITED (BGG.AX)"},
+  {"id":"BGH.AX", "name": "BLIGH RESOURCES LIMITED (BGH.AX)"},
+  {"id":"BGNE", "name": "BeiGene, Ltd. (BGNE)"},
+  {"id":"BGR.AX", "name": "BRONSON GROUP LIMITED (BGR.AX)"},
+  {"id":"BGS.AX", "name": "BIRIMIAN LIMITED (BGS.AX)"},
+  {"id":"BHAC", "name": "Barington/Hilco Acquisition Corp. (BHAC)"},
+  {"id":"BHACR", "name": "Barington/Hilco Acquisition Corp. (BHACR)"},
+  {"id":"BHACU", "name": "Barington/Hilco Acquisition Corp. (BHACU)"},
+  {"id":"BHACW", "name": "Barington/Hilco Acquisition Corp. (BHACW)"},
+  {"id":"BHBK", "name": "Blue Hills Bancorp, Inc. (BHBK)"},
+  {"id":"BHL.AX", "name": "BOYUAN HOLDINGS LIMITED (BHL.AX)"},
+  {"id":"BHP.AX", "name": "BHP BILLITON LIMITED (BHP.AX)"},
+  {"id":"BIB", "name": "ProShares Ultra Nasdaq Biotechnology (BIB)"},
+  {"id":"BICK", "name": "First Trust BICK Index Fund (BICK)"},
+  {"id":"BID.AX", "name": "BIDENERGY LIMITED (BID.AX)"},
+  {"id":"BIDU", "name": "Baidu, Inc. (BIDU)"},
+  {"id":"BIG.AX", "name": "BIG UN LIMITED (BIG.AX)"},
+  {"id":"BIIB", "name": "Biogen Inc. (BIIB)"},
+  {"id":"BIOC", "name": "Biocept, Inc. (BIOC)"},
+  {"id":"BIOL", "name": "Biolase, Inc. (BIOL)"},
+  {"id":"BIOP", "name": "Bioptix, Inc (BIOP)"},
+  {"id":"BIOS", "name": "BioScrip, Inc. (BIOS)"},
+  {"id":"BIQ.AX", "name": "BUILDINGIQ, INC (BIQ.AX)"},
+  {"id":"BIS", "name": "ProShares UltraShort Nasdaq Biotechnology (BIS)"},
+  {"id":"BIS.AX", "name": "BISALLOY STEEL GROUP LIMITED (BIS.AX)"},
+  {"id":"BIT.AX", "name": "BIOTRON LIMITED (BIT.AX)"},
+  {"id":"BIVV", "name": "Bioverativ Inc. (BIVV)"},
+  {"id":"BJRI", "name": "BJ&#39;s Restaurants, Inc. (BJRI)"},
+  {"id":"BKCC", "name": "BlackRock Capital Investment Corporation (BKCC)"},
+  {"id":"BKEP", "name": "Blueknight Energy Partners L.P., L.L.C. (BKEP)"},
+  {"id":"BKEPP", "name": "Blueknight Energy Partners L.P., L.L.C. (BKEPP)"},
+  {"id":"BKI.AX", "name": "BKI INVESTMENT COMPANY LIMITED (BKI.AX)"},
+  {"id":"BKL.AX", "name": "BLACKMORES LIMITED (BKL.AX)"},
+  {"id":"BKM.AX", "name": "BKM MANAGEMENT LIMITED (BKM.AX)"},
+  {"id":"BKMU", "name": "Bank Mutual Corporation (BKMU)"},
+  {"id":"BKN.AX", "name": "BRADKEN LIMITED (BKN.AX)"},
+  {"id":"BKP.AX", "name": "BARAKA ENERGY & RESOURCES LIMITED (BKP.AX)"},
+  {"id":"BKSC", "name": "Bank of South Carolina Corp. (BKSC)"},
+  {"id":"BKT.AX", "name": "BLACK ROCK MINING LIMITED (BKT.AX)"},
+  {"id":"BKW.AX", "name": "BRICKWORKS LIMITED (BKW.AX)"},
+  {"id":"BKY.AX", "name": "BERKELEY ENERGIA LIMITED (BKY.AX)"},
+  {"id":"BL", "name": "BlackLine, Inc. (BL)"},
+  {"id":"BLA.AX", "name": "BLUE SKY ALTERNATIVE INVESTMENTS LIMITED (BLA.AX)"},
+  {"id":"BLBD", "name": "Blue Bird Corporation (BLBD)"},
+  {"id":"BLCM", "name": "Bellicum Pharmaceuticals, Inc. (BLCM)"},
+  {"id":"BLD.AX", "name": "BORAL LIMITED. (BLD.AX)"},
+  {"id":"BLDP", "name": "Ballard Power Systems, Inc. (BLDP)"},
+  {"id":"BLDR", "name": "Builders FirstSource, Inc. (BLDR)"},
+  {"id":"BLFS", "name": "BioLife Solutions, Inc. (BLFS)"},
+  {"id":"BLG.AX", "name": "BLUGLASS LIMITED (BLG.AX)"},
+  {"id":"BLIN          ", "name": "Bridgeline Digital, Inc. (BLIN          )"},
+  {"id":"BLK.AX", "name": "BLACKHAM RESOURCES LIMITED (BLK.AX)"},
+  {"id":"BLKB", "name": "Blackbaud, Inc. (BLKB)"},
+  {"id":"BLMN", "name": "Bloomin&#39; Brands, Inc. (BLMN)"},
+  {"id":"BLMT", "name": "BSB Bancorp, Inc. (BLMT)"},
+  {"id":"BLPH", "name": "Bellerophon Therapeutics, Inc. (BLPH)"},
+  {"id":"BLRX", "name": "BioLineRx Ltd. (BLRX)"},
+  {"id":"BLT.AX", "name": "BENITEC BIOPHARMA LIMITED (BLT.AX)"},
+  {"id":"BLUE", "name": "bluebird bio, Inc. (BLUE)"},
+  {"id":"BLVD", "name": "Boulevard Acquisition Corp. II (BLVD)"},
+  {"id":"BLVDU", "name": "Boulevard Acquisition Corp. II (BLVDU)"},
+  {"id":"BLVDW", "name": "Boulevard Acquisition Corp. II (BLVDW)"},
+  {"id":"BLX.AX", "name": "BEACON LIGHTING GROUP LIMITED (BLX.AX)"},
+  {"id":"BLY.AX", "name": "BOART LONGYEAR LIMITED (BLY.AX)"},
+  {"id":"BLZ.AX", "name": "BLAZE INTERNATIONAL LIMITED (BLZ.AX)"},
+  {"id":"BMCH", "name": "BMC Stock Holdings, Inc. (BMCH)"},
+  {"id":"BMG.AX", "name": "BMG RESOURCES LIMITED (BMG.AX)"},
+  {"id":"BMH.AX", "name": "BAUMART HOLDINGS LIMITED (BMH.AX)"},
+  {"id":"BML.AX", "name": "BOTSWANA METALS LIMITED (BML.AX)"},
+  {"id":"BMLA", "name": "BullMark LatAm Select Leaders ETF (BMLA)"},
+  {"id":"BMLP", "name": "Bank Of Montreal (BMLP)"},
+  {"id":"BMN.AX", "name": "BANNERMAN RESOURCES LIMITED (BMN.AX)"},
+  {"id":"BMP.AX", "name": "BUYMYPLACE.COM.AU LIMITED (BMP.AX)"},
+  {"id":"BMRA", "name": "Biomerica, Inc. (BMRA)"},
+  {"id":"BMRC", "name": "Bank of Marin Bancorp (BMRC)"},
+  {"id":"BMRN", "name": "BioMarin Pharmaceutical Inc. (BMRN)"},
+  {"id":"BMT.AX", "name": "BERKUT MINERALS LIMITED (BMT.AX)"},
+  {"id":"BMTC", "name": "Bryn Mawr Bank Corporation (BMTC)"},
+  {"id":"BMZ.AX", "name": "BLACK MOUNTAIN RESOURCES LIMITED (BMZ.AX)"},
+  {"id":"BNCL", "name": "Beneficial Bancorp, Inc. (BNCL)"},
+  {"id":"BNCN", "name": "BNC Bancorp (BNCN)"},
+  {"id":"BNDX", "name": "Vanguard Total International Bond ETF (BNDX)"},
+  {"id":"BNFT", "name": "Benefitfocus, Inc. (BNFT)"},
+  {"id":"BNO.AX", "name": "BIONOMICS LIMITED (BNO.AX)"},
+  {"id":"BNR.AX", "name": "BULLETIN RESOURCES LIMITED (BNR.AX)"},
+  {"id":"BNSO", "name": "Bonso Electronics International, Inc. (BNSO)"},
+  {"id":"BNTC", "name": "Benitec Biopharma Limited (BNTC)"},
+  {"id":"BNTCW", "name": "Benitec Biopharma Limited (BNTCW)"},
+  {"id":"BOA.AX", "name": "BOADICEA RESOURCES LIMITED (BOA.AX)"},
+  {"id":"BOBE", "name": "Bob Evans Farms, Inc. (BOBE)"},
+  {"id":"BOC.AX", "name": "BOUGAINVILLE COPPER LIMITED (BOC.AX)"},
+  {"id":"BOCH", "name": "Bank of Commerce Holdings (CA) (BOCH)"},
+  {"id":"BOE.AX", "name": "BOSS RESOURCES LIMITED (BOE.AX)"},
+  {"id":"BOFI", "name": "BofI Holding, Inc. (BOFI)"},
+  {"id":"BOFIL", "name": "BofI Holding, Inc. (BOFIL)"},
+  {"id":"BOJA", "name": "Bojangles&#39;, Inc. (BOJA)"},
+  {"id":"BOKF", "name": "BOK Financial Corporation (BOKF)"},
+  {"id":"BOKFL", "name": "BOK Financial Corporation (BOKFL)"},
+  {"id":"BOL.AX", "name": "BOOM LOGISTICS LIMITED (BOL.AX)"},
+  {"id":"BOLD", "name": "Audentes Therapeutics, Inc. (BOLD)"},
+  {"id":"BOLT", "name": "BioLight Life Sciences Ltd. (BOLT)"},
+  {"id":"BONT", "name": "The Bon-Ton Stores, Inc. (BONT)"},
+  {"id":"BOOM", "name": "DMC Global Inc. (BOOM)"},
+  {"id":"BOP.AX", "name": "BIRCH AND PRESTIGE INVESTMENT GROUP LIMITED (BOP.AX)"},
+  {"id":"BOQ.AX", "name": "BANK OF QUEENSLAND LIMITED. (BOQ.AX)"},
+  {"id":"BOSC", "name": "B.O.S. Better Online Solutions (BOSC)"},
+  {"id":"BOT.AX", "name": "BOTANIX PHARMACEUTICALS LTD (BOT.AX)"},
+  {"id":"BOTJ", "name": "Bank of the James Financial Group, Inc. (BOTJ)"},
+  {"id":"BOTZ", "name": "Global X Robotics & Artificial Intelligence ETF (BOTZ)"},
+  {"id":"BOXL", "name": "Boxlight Corporation (BOXL)"},
+  {"id":"BPA.AX", "name": "BROOKFIELD PRIME PROPERTY FUND (BPA.AX)"},
+  {"id":"BPB.AX", "name": "BP CAPITAL MARKETS PLC (BPB.AX)"},
+  {"id":"BPF.AX", "name": "BULLETPROOF GROUP LIMITED (BPF.AX)"},
+  {"id":"BPFH", "name": "Boston Private Financial Holdings, Inc. (BPFH)"},
+  {"id":"BPFHP", "name": "Boston Private Financial Holdings, Inc. (BPFHP)"},
+  {"id":"BPFHW", "name": "Boston Private Financial Holdings, Inc. (BPFHW)"},
+  {"id":"BPG.AX", "name": "BYTE POWER GROUP LIMITED (BPG.AX)"},
+  {"id":"BPH.AX", "name": "BPH ENERGY LTD (BPH.AX)"},
+  {"id":"BPL.AX", "name": "BROKEN HILL PROSPECTING LIMITED (BPL.AX)"},
+  {"id":"BPMC", "name": "Blueprint Medicines Corporation (BPMC)"},
+  {"id":"BPOP", "name": "Popular, Inc. (BPOP)"},
+  {"id":"BPOPM", "name": "Popular, Inc. (BPOPM)"},
+  {"id":"BPOPN", "name": "Popular, Inc. (BPOPN)"},
+  {"id":"BPS.AX", "name": "BPS TECHNOLOGY LIMITED (BPS.AX)"},
+  {"id":"BPT.AX", "name": "BEACH ENERGY LIMITED (BPT.AX)"},
+  {"id":"BPTH", "name": "Bio-Path Holdings, Inc. (BPTH)"},
+  {"id":"BRB.AX", "name": "BREAKER RESOURCES NL (BRB.AX)"},
+  {"id":"BRC.AX", "name": "BRAIN RESOURCE LIMITED (BRC.AX)"},
+  {"id":"BRCD", "name": "Brocade Communications Systems, Inc. (BRCD)"},
+  {"id":"BREW", "name": "Craft Brew Alliance, Inc. (BREW)"},
+  {"id":"BRG.AX", "name": "BREVILLE GROUP LIMITED (BRG.AX)"},
+  {"id":"BRI.AX", "name": "BIG RIVER INDUSTRIES LIMITED (BRI.AX)"},
+  {"id":"BRID", "name": "Bridgford Foods Corporation (BRID)"},
+  {"id":"BRK.AX", "name": "BROOKSIDE ENERGY LIMITED (BRK.AX)"},
+  {"id":"BRKL", "name": "Brookline Bancorp, Inc. (BRKL)"},
+  {"id":"BRKR", "name": "Bruker Corporation (BRKR)"},
+  {"id":"BRKS", "name": "Brooks Automation, Inc. (BRKS)"},
+  {"id":"BRL.AX", "name": "BATHURST RESOURCES LIMITED. (BRL.AX)"},
+  {"id":"BRN.AX", "name": "BRAINCHIP HOLDINGS LTD (BRN.AX)"},
+  {"id":"BRO.AX", "name": "BROAD INVESTMENTS LIMITED (BRO.AX)"},
+  {"id":"BRU.AX", "name": "BURU ENERGY LIMITED (BRU.AX)"},
+  {"id":"BSA.AX", "name": "BSA LIMITED (BSA.AX)"},
+  {"id":"BSE.AX", "name": "BASE RESOURCES LIMITED (BSE.AX)"},
+  {"id":"BSET", "name": "Bassett Furniture Industries, Incorporated (BSET)"},
+  {"id":"BSF", "name": "Bear State Financial, Inc. (BSF)"},
+  {"id":"BSFT", "name": "BroadSoft, Inc. (BSFT)"},
+  {"id":"BSL.AX", "name": "BLUESCOPE STEEL LIMITED (BSL.AX)"},
+  {"id":"BSM.AX", "name": "BASS METALS LTD (BSM.AX)"},
+  {"id":"BSN.AX", "name": "BISAN LIMITED (BSN.AX)"},
+  {"id":"BSP.AX", "name": "BLACK STAR PETROLEUM LIMITED (BSP.AX)"},
+  {"id":"BSPM", "name": "Biostar Pharmaceuticals, Inc. (BSPM)"},
+  {"id":"BSQR", "name": "BSQUARE Corporation (BSQR)"},
+  {"id":"BSR.AX", "name": "BASSARI RESOURCES LIMITED (BSR.AX)"},
+  {"id":"BSRR", "name": "Sierra Bancorp (BSRR)"},
+  {"id":"BST.AX", "name": "BARRACK ST INVESTMENTS LIMITED (BST.AX)"},
+  {"id":"BSTC", "name": "BioSpecifics Technologies Corp (BSTC)"},
+  {"id":"BSTG", "name": "Biostage, Inc. (BSTG)"},
+  {"id":"BSX.AX", "name": "BLACKSTONE MINERALS LIMITED (BSX.AX)"},
+  {"id":"BTC.AX", "name": "BIOTECH CAPITAL LIMITED (BTC.AX)"},
+  {"id":"BTEC", "name": "Principal Healthcare Innovators Index ETF (BTEC)"},
+  {"id":"BTH.AX", "name": "BIGTINCAN HOLDINGS LIMITED (BTH.AX)"},
+  {"id":"BTI.AX", "name": "BAILADOR TECHNOLOGY INVESTMENTS LIMITED (BTI.AX)"},
+  {"id":"BTN.AX", "name": "BRIGHTON MINING GROUP LIMITED (BTN.AX)"},
+  {"id":"BTT.AX", "name": "BT INVESTMENT MANAGEMENT LIMITED (BTT.AX)"},
+  {"id":"BUA.AX", "name": "BURRABULLA CORPORATION LIMITED (BUA.AX)"},
+  {"id":"BUB.AX", "name": "BUBS AUSTRALIA LIMITED (BUB.AX)"},
+  {"id":"BUD.AX", "name": "BUDDY PLATFORM LTD (BUD.AX)"},
+  {"id":"BUFF", "name": "Blue Buffalo Pet Products, Inc. (BUFF)"},
+  {"id":"BUG.AX", "name": "BUDERIM GROUP LIMITED (BUG.AX)"},
+  {"id":"BUL.AX", "name": "BLUE ENERGY LIMITED (BUL.AX)"},
+  {"id":"BUR", "name": "Burcon NutraScience Corp (BUR)"},
+  {"id":"BUSE", "name": "First Busey Corporation (BUSE)"},
+  {"id":"BUX.AX", "name": "BUXTON RESOURCES LIMITED (BUX.AX)"},
+  {"id":"BUY.AX", "name": "BOUNTY OIL & GAS NL (BUY.AX)"},
+  {"id":"BV", "name": "Bazaarvoice, Inc. (BV)"},
+  {"id":"BVS.AX", "name": "BRAVURA SOLUTIONS LIMITED. (BVS.AX)"},
+  {"id":"BVSN", "name": "BroadVision, Inc. (BVSN)"},
+  {"id":"BVXV", "name": "BiondVax Pharmaceuticals Ltd. (BVXV)"},
+  {"id":"BVXVW", "name": "BiondVax Pharmaceuticals Ltd. (BVXVW)"},
+  {"id":"BWEN", "name": "Broadwind Energy, Inc. (BWEN)"},
+  {"id":"BWF.AX", "name": "BLACKWALL LIMITED (BWF.AX)"},
+  {"id":"BWFG", "name": "Bankwell Financial Group, Inc. (BWFG)"},
+  {"id":"BWINA", "name": "Baldwin & Lyons, Inc. (BWINA)"},
+  {"id":"BWINB", "name": "Baldwin & Lyons, Inc. (BWINB)"},
+  {"id":"BWLD", "name": "Buffalo Wild Wings, Inc. (BWLD)"},
+  {"id":"BWP.AX", "name": "BWP TRUST (BWP.AX)"},
+  {"id":"BWR.AX", "name": "BLACKWALL PROPERTY TRUST (BWR.AX)"},
+  {"id":"BWX.AX", "name": "BWX LIMITED (BWX.AX)"},
+  {"id":"BXB.AX", "name": "BRAMBLES LIMITED (BXB.AX)"},
+  {"id":"BXN.AX", "name": "BIOXYNE LIMITED (BXN.AX)"},
+  {"id":"BYBK", "name": "Bay Bancorp, Inc. (BYBK)"},
+  {"id":"BYE.AX", "name": "BYRON ENERGY LIMITED (BYE.AX)"},
+  {"id":"BYFC", "name": "Broadway Financial Corporation (BYFC)"},
+  {"id":"BYI.AX", "name": "BEYOND INTERNATIONAL LIMITED (BYI.AX)"},
+  {"id":"BYL.AX", "name": "BRIERTY LIMITED (BYL.AX)"},
+  {"id":"BYSI", "name": "BeyondSpring, Inc. (BYSI)"},
+  {"id":"BZUN", "name": "Baozun Inc. (BZUN)"},
+  {"id":"CA", "name": "CA Inc. (CA)"},
+  {"id":"CA8.AX", "name": "COASSETS LIMITED. (CA8.AX)"},
+  {"id":"CAA.AX", "name": "CAPRAL LIMITED (CAA.AX)"},
+  {"id":"CAAS", "name": "China Automotive Systems, Inc. (CAAS)"},
+  {"id":"CAB.AX", "name": "CABCHARGE AUSTRALIA LIMITED (CAB.AX)"},
+  {"id":"CAC", "name": "Camden National Corporation (CAC)"},
+  {"id":"CACB", "name": "Cascade Bancorp (CACB)"},
+  {"id":"CACC", "name": "Credit Acceptance Corporation (CACC)"},
+  {"id":"CACQ", "name": "Caesars Acquisition Company (CACQ)"},
+  {"id":"CAD.AX", "name": "CAENEUS MINERALS LTD (CAD.AX)"},
+  {"id":"CADC", "name": "China Advanced Construction Materials Group, Inc. (CADC)"},
+  {"id":"CAE.AX", "name": "CANNINDAH RESOURCES LIMITED (CAE.AX)"},
+  {"id":"CAF.AX", "name": "CENTREPOINT ALLIANCE LIMITED (CAF.AX)"},
+  {"id":"CAFD", "name": "8point3 Energy Partners LP (CAFD)"},
+  {"id":"CAFN", "name": "Cachet Financial Solutions, Inc. (CAFN)"},
+  {"id":"CAJ.AX", "name": "CAPITOL HEALTH LIMITED (CAJ.AX)"},
+  {"id":"CAKE", "name": "The Cheesecake Factory Incorporated (CAKE)"},
+  {"id":"CALA", "name": "Calithera Biosciences, Inc. (CALA)"},
+  {"id":"CALD", "name": "Callidus Software, Inc. (CALD)"},
+  {"id":"CALI", "name": "China Auto Logistics Inc. (CALI)"},
+  {"id":"CALL", "name": "magicJack VocalTec Ltd (CALL)"},
+  {"id":"CALM", "name": "Cal-Maine Foods, Inc. (CALM)"},
+  {"id":"CAM.AX", "name": "CLIME CAPITAL LIMITED (CAM.AX)"},
+  {"id":"CAMP", "name": "CalAmp Corp. (CAMP)"},
+  {"id":"CAMT", "name": "Camtek Ltd. (CAMT)"},
+  {"id":"CAN.AX", "name": "CANN GROUP LIMITED (CAN.AX)"},
+  {"id":"CAP.AX", "name": "CARPENTARIA EXPLORATION LIMITED (CAP.AX)"},
+  {"id":"CAPN", "name": "Capnia, Inc. (CAPN)"},
+  {"id":"CAPNW", "name": "Capnia, Inc. (CAPNW)"},
+  {"id":"CAPR", "name": "Capricor Therapeutics, Inc. (CAPR)"},
+  {"id":"CAQ.AX", "name": "CAQ HOLDINGS LIMITED (CAQ.AX)"},
+  {"id":"CAR", "name": "Avis Budget Group, Inc. (CAR)"},
+  {"id":"CAR.AX", "name": "CARSALES.COM LIMITED. (CAR.AX)"},
+  {"id":"CARA", "name": "Cara Therapeutics, Inc. (CARA)"},
+  {"id":"CARB", "name": "Carbonite, Inc. (CARB)"},
+  {"id":"CARO", "name": "Carolina Financial Corporation (CARO)"},
+  {"id":"CART", "name": "Carolina Trust BancShares, Inc. (CART)"},
+  {"id":"CARV", "name": "Carver Bancorp, Inc. (CARV)"},
+  {"id":"CARZ", "name": "First Trust NASDAQ Global Auto Index Fund (CARZ)"},
+  {"id":"CAS.AX", "name": "CRUSADER RESOURCES LIMITED (CAS.AX)"},
+  {"id":"CASC", "name": "Cascadian Therapeutics, Inc. (CASC)"},
+  {"id":"CASH", "name": "Meta Financial Group, Inc. (CASH)"},
+  {"id":"CASI", "name": "CASI Pharmaceuticals, Inc. (CASI)"},
+  {"id":"CASM", "name": "CAS Medical Systems, Inc. (CASM)"},
+  {"id":"CASS", "name": "Cass Information Systems, Inc (CASS)"},
+  {"id":"CASY", "name": "Caseys General Stores, Inc. (CASY)"},
+  {"id":"CAT.AX", "name": "CATAPULT GROUP INTERNATIONAL LTD (CAT.AX)"},
+  {"id":"CATB", "name": "Catabasis Pharmaceuticals, Inc. (CATB)"},
+  {"id":"CATH", "name": "Global X S&P 500 Catholic Values ETF (CATH)"},
+  {"id":"CATM", "name": "Cardtronics plc (CATM)"},
+  {"id":"CATY", "name": "Cathay General Bancorp (CATY)"},
+  {"id":"CATYW", "name": "Cathay General Bancorp (CATYW)"},
+  {"id":"CAV.AX", "name": "CARNAVALE RESOURCES LIMITED (CAV.AX)"},
+  {"id":"CAVM", "name": "Cavium, Inc. (CAVM)"},
+  {"id":"CAY.AX", "name": "CANYON RESOURCES LIMITED (CAY.AX)"},
+  {"id":"CAZ.AX", "name": "CAZALY RESOURCES LIMITED (CAZ.AX)"},
+  {"id":"CBA.AX", "name": "COMMONWEALTH BANK OF AUSTRALIA. (CBA.AX)"},
+  {"id":"CBAK", "name": "CBAK Energy Technology, Inc. (CBAK)"},
+  {"id":"CBAN", "name": "Colony Bankcorp, Inc. (CBAN)"},
+  {"id":"CBAY", "name": "CymaBay Therapeutics Inc. (CBAY)"},
+  {"id":"CBC.AX", "name": "CBG CAPITAL LIMITED (CBC.AX)"},
+  {"id":"CBF", "name": "Capital Bank Financial Corp. (CBF)"},
+  {"id":"CBFV", "name": "CB Financial Services, Inc. (CBFV)"},
+  {"id":"CBIO", "name": "Catalyst Biosciences, Inc.  (CBIO)"},
+  {"id":"CBL.AX", "name": "CBL CORPORATION LIMITED (CBL.AX)"},
+  {"id":"CBLI", "name": "Cleveland BioLabs, Inc. (CBLI)"},
+  {"id":"CBMG", "name": "Cellular Biomedicine Group, Inc. (CBMG)"},
+  {"id":"CBMX", "name": "CombiMatrix Corporation (CBMX)"},
+  {"id":"CBMXW", "name": "CombiMatrix Corporation (CBMXW)"},
+  {"id":"CBOE", "name": "CBOE Holdings, Inc. (CBOE)"},
+  {"id":"CBPO", "name": "China Biologic Products, Inc. (CBPO)"},
+  {"id":"CBQ.AX", "name": "COALBANK LIMITED (CBQ.AX)"},
+  {"id":"CBRL", "name": "Cracker Barrel Old Country Store, Inc. (CBRL)"},
+  {"id":"CBS.AX", "name": "CABRAL RESOURCES LIMITED (CBS.AX)"},
+  {"id":"CBSH", "name": "Commerce Bancshares, Inc. (CBSH)"},
+  {"id":"CBSHP", "name": "Commerce Bancshares, Inc. (CBSHP)"},
+  {"id":"CCA.AX", "name": "CHIMPCHANGE LIMITED (CCA.AX)"},
+  {"id":"CCB.AX", "name": "CHINA CONSTRUCTION BANK CORPORATION (CCB.AX)"},
+  {"id":"CCBG", "name": "Capital City Bank Group (CCBG)"},
+  {"id":"CCCL", "name": "China Ceramics Co., Ltd. (CCCL)"},
+  {"id":"CCCR", "name": "China Commercial Credit, Inc. (CCCR)"},
+  {"id":"CCD", "name": "Calamos Dynamic Convertible & Income Fund (CCD)"},
+  {"id":"CCE.AX", "name": "CARNEGIE CLEAN ENERGY LIMITED (CCE.AX)"},
+  {"id":"CCFI", "name": "Community Choice Financial Inc. (CCFI)"},
+  {"id":"CCIH", "name": "ChinaCache International Holdings Ltd. (CCIH)"},
+  {"id":"CCJ.AX", "name": "COUNTY INTERNATIONAL LIMITED (CCJ.AX)"},
+  {"id":"CCL.AX", "name": "COCA-COLA AMATIL LIMITED (CCL.AX)"},
+  {"id":"CCLP", "name": "CSI Compressco LP (CCLP)"},
+  {"id":"CCMP", "name": "Cabot Microelectronics Corporation (CCMP)"},
+  {"id":"CCN", "name": "CardConnect Corp. (CCN)"},
+  {"id":"CCNE", "name": "CNB Financial Corporation (CCNE)"},
+  {"id":"CCOI", "name": "Cogent Communications Holdings, Inc. (CCOI)"},
+  {"id":"CCP.AX", "name": "CREDIT CORP GROUP LIMITED (CCP.AX)"},
+  {"id":"CCRC", "name": "China Customer Relations Centers, Inc. (CCRC)"},
+  {"id":"CCRN", "name": "Cross Country Healthcare, Inc. (CCRN)"},
+  {"id":"CCUR", "name": "Concurrent Computer Corporation (CCUR)"},
+  {"id":"CCV.AX", "name": "CASH CONVERTERS INTERNATIONAL (CCV.AX)"},
+  {"id":"CCXI", "name": "ChemoCentryx, Inc. (CCXI)"},
+  {"id":"CCZ.AX", "name": "CASTILLO COPPER LIMITED (CCZ.AX)"},
+  {"id":"CDA.AX", "name": "CODAN LIMITED (CDA.AX)"},
+  {"id":"CDB.AX", "name": "CONDOR BLANCO MINES LIMITED (CDB.AX)"},
+  {"id":"CDC", "name": "VictoryShares US EQ Income Enhanced Volatility Wtd ETF (CDC)"},
+  {"id":"CDC.AX", "name": "CHINA DAIRY CORPORATION LIMITED (CDC.AX)"},
+  {"id":"CDD.AX", "name": "CARDNO LIMITED (CDD.AX)"},
+  {"id":"CDEV", "name": "Centennial Resource Development, Inc. (CDEV)"},
+  {"id":"CDG.AX", "name": "CLEVELAND MINING COMPANY LIMITED (CDG.AX)"},
+  {"id":"CDH.AX", "name": "CHONGHERR INVESTMENTS LTD (CDH.AX)"},
+  {"id":"CDK", "name": "CDK Global, Inc. (CDK)"},
+  {"id":"CDL", "name": "VictoryShares US Large Cap High Div Volatility Wtd ETF (CDL)"},
+  {"id":"CDM.AX", "name": "CADENCE CAPITAL LIMITED (CDM.AX)"},
+  {"id":"CDNA", "name": "CareDx, Inc. (CDNA)"},
+  {"id":"CDNS", "name": "Cadence Design Systems, Inc. (CDNS)"},
+  {"id":"CDOR", "name": "Condor Hospitality Trust, Inc. (CDOR)"},
+  {"id":"CDP.AX", "name": "CARINDALE PROPERTY TRUST (CDP.AX)"},
+  {"id":"CDT.AX", "name": "CASTLE MINERALS LIMITED (CDT.AX)"},
+  {"id":"CDTI", "name": "Clean Diesel Technologies, Inc. (CDTI)"},
+  {"id":"CDTX", "name": "Cidara Therapeutics, Inc. (CDTX)"},
+  {"id":"CDU.AX", "name": "CUDECO LIMITED (CDU.AX)"},
+  {"id":"CDV.AX", "name": "CARDINAL RESOURCES LIMITED (CDV.AX)"},
+  {"id":"CDW", "name": "CDW Corporation (CDW)"},
+  {"id":"CDXC", "name": "ChromaDex Corporation (CDXC)"},
+  {"id":"CDXS", "name": "Codexis, Inc. (CDXS)"},
+  {"id":"CDY.AX", "name": "CELLMID LIMITED (CDY.AX)"},
+  {"id":"CDZI", "name": "Cadiz, Inc. (CDZI)"},
+  {"id":"CECE", "name": "CECO Environmental Corp. (CECE)"},
+  {"id":"CECO", "name": "Career Education Corporation (CECO)"},
+  {"id":"CEL.AX", "name": "CHALLENGER ENERGY LIMITED (CEL.AX)"},
+  {"id":"CELG", "name": "Celgene Corporation (CELG)"},
+  {"id":"CELGZ", "name": "Celgene Corporation (CELGZ)"},
+  {"id":"CEMI", "name": "Chembio Diagnostics, Inc. (CEMI)"},
+  {"id":"CEMP", "name": "Cempra, Inc. (CEMP)"},
+  {"id":"CEN.AX", "name": "CONTACT ENERGY LIMITED (CEN.AX)"},
+  {"id":"CENT", "name": "Central Garden & Pet Company (CENT)"},
+  {"id":"CENTA", "name": "Central Garden & Pet Company (CENTA)"},
+  {"id":"CENX", "name": "Century Aluminum Company (CENX)"},
+  {"id":"CERC", "name": "Cerecor Inc. (CERC)"},
+  {"id":"CERCW", "name": "Cerecor Inc. (CERCW)"},
+  {"id":"CERCZ", "name": "Cerecor Inc. (CERCZ)"},
+  {"id":"CERN", "name": "Cerner Corporation (CERN)"},
+  {"id":"CERS", "name": "Cerus Corporation (CERS)"},
+  {"id":"CERU", "name": "Cerulean Pharma Inc. (CERU)"},
+  {"id":"CETC", "name": "Hongli Clean Energy Technologies Corp. (CETC)"},
+  {"id":"CETV", "name": "Central European Media Enterprises Ltd. (CETV)"},
+  {"id":"CETX", "name": "Cemtrex Inc. (CETX)"},
+  {"id":"CETXP", "name": "Cemtrex Inc. (CETXP)"},
+  {"id":"CETXW", "name": "Cemtrex Inc. (CETXW)"},
+  {"id":"CEVA", "name": "CEVA, Inc. (CEVA)"},
+  {"id":"CEZ", "name": "VictoryShares Emerging Market Volatility Wtd ETF (CEZ)"},
+  {"id":"CFA", "name": "VictoryShares US 500 Volatility Wtd ETF (CFA)"},
+  {"id":"CFBK", "name": "Central Federal Corporation (CFBK)"},
+  {"id":"CFCB", "name": "Centrue Financial Corporation (CFCB)"},
+  {"id":"CFCO", "name": "CF Corporation (CFCO)"},
+  {"id":"CFCOU", "name": "CF Corporation (CFCOU)"},
+  {"id":"CFCOW", "name": "CF Corporation (CFCOW)"},
+  {"id":"CFE.AX", "name": "CAPE LAMBERT RESOURCES LIMITED (CFE.AX)"},
+  {"id":"CFF.AX", "name": "COMPAGNIE DE FINANCEMENT FONCIER (CFF.AX)"},
+  {"id":"CFFI", "name": "C&F Financial Corporation (CFFI)"},
+  {"id":"CFFN", "name": "Capitol Federal Financial, Inc. (CFFN)"},
+  {"id":"CFMS", "name": "ConforMIS, Inc. (CFMS)"},
+  {"id":"CFNB", "name": "California First National Bancorp (CFNB)"},
+  {"id":"CFNL", "name": "Cardinal Financial Corporation (CFNL)"},
+  {"id":"CFO", "name": "VictoryShares US 500 Enhanced Volatility Wtd ETF (CFO)"},
+  {"id":"CFO.AX", "name": "CFOAM LIMITED (CFO.AX)"},
+  {"id":"CFRX", "name": "ContraFect Corporation (CFRX)"},
+  {"id":"CFU.AX", "name": "CERAMIC FUEL CELLS LIMITED (CFU.AX)"},
+  {"id":"CG", "name": "The Carlyle Group L.P. (CG)"},
+  {"id":"CGA.AX", "name": "CONTANGO ASSET MANAGEMENT LIMITED (CGA.AX)"},
+  {"id":"CGC.AX", "name": "COSTA GROUP HOLDINGS LIMITED (CGC.AX)"},
+  {"id":"CGEN", "name": "Compugen Ltd. (CGEN)"},
+  {"id":"CGF.AX", "name": "CHALLENGER LIMITED (CGF.AX)"},
+  {"id":"CGIX", "name": "Cancer Genetics, Inc. (CGIX)"},
+  {"id":"CGL.AX", "name": "THE CITADEL GROUP LIMITED (CGL.AX)"},
+  {"id":"CGM.AX", "name": "COUGAR METALS NL (CGM.AX)"},
+  {"id":"CGN.AX", "name": "CRATER GOLD MINING LIMITED (CGN.AX)"},
+  {"id":"CGNT", "name": "Cogentix Medical, Inc. (CGNT)"},
+  {"id":"CGNX", "name": "Cognex Corporation (CGNX)"},
+  {"id":"CGO", "name": "Calamos Global Total Return Fund (CGO)"},
+  {"id":"CGO.AX", "name": "CPT GLOBAL LIMITED (CGO.AX)"},
+  {"id":"CGR.AX", "name": "CML GROUP LIMITED (CGR.AX)"},
+  {"id":"CGS.AX", "name": "COGSTATE LTD (CGS.AX)"},
+  {"id":"CHC.AX", "name": "CHARTER HALL GROUP (CHC.AX)"},
+  {"id":"CHCI", "name": "Comstock Holding Companies, Inc. (CHCI)"},
+  {"id":"CHCO", "name": "City Holding Company (CHCO)"},
+  {"id":"CHDN", "name": "Churchill Downs, Incorporated (CHDN)"},
+  {"id":"CHEF", "name": "The Chefs&#39; Warehouse, Inc. (CHEF)"},
+  {"id":"CHEK", "name": "Check-Cap Ltd. (CHEK)"},
+  {"id":"CHEKW", "name": "Check-Cap Ltd. (CHEKW)"},
+  {"id":"CHF.AX", "name": "CHARTER PACIFIC CORPORATION LIMITED (CHF.AX)"},
+  {"id":"CHFC", "name": "Chemical Financial Corporation (CHFC)"},
+  {"id":"CHFN", "name": "Charter Financial Corp. (CHFN)"},
+  {"id":"CHI", "name": "Calamos Convertible Opportunities and Income Fund (CHI)"},
+  {"id":"CHJ.AX", "name": "CHALLENGER MILLENNIUM SERIES 2007-1E TRUST (CHJ.AX)"},
+  {"id":"CHK.AX", "name": "COHIBA MINERALS LIMITED (CHK.AX)"},
+  {"id":"CHKE", "name": "Cherokee Inc. (CHKE)"},
+  {"id":"CHKP", "name": "Check Point Software Technologies Ltd. (CHKP)"},
+  {"id":"CHMA", "name": "Chiasma, Inc. (CHMA)"},
+  {"id":"CHMG", "name": "Chemung Financial Corp (CHMG)"},
+  {"id":"CHN.AX", "name": "CHALICE GOLD MINES LIMITED (CHN.AX)"},
+  {"id":"CHNR", "name": "China Natural Resources, Inc. (CHNR)"},
+  {"id":"CHP.AX", "name": "CHAPMANS LIMITED (CHP.AX)"},
+  {"id":"CHR.AX", "name": "CHALMERS LIMITED (CHR.AX)"},
+  {"id":"CHRS", "name": "Coherus BioSciences, Inc. (CHRS)"},
+  {"id":"CHRW", "name": "C.H. Robinson Worldwide, Inc. (CHRW)"},
+  {"id":"CHSCL", "name": "CHS Inc (CHSCL)"},
+  {"id":"CHSCM", "name": "CHS Inc (CHSCM)"},
+  {"id":"CHSCN", "name": "CHS Inc (CHSCN)"},
+  {"id":"CHSCO", "name": "CHS Inc (CHSCO)"},
+  {"id":"CHSCP", "name": "CHS Inc (CHSCP)"},
+  {"id":"CHTR", "name": "Charter Communications, Inc. (CHTR)"},
+  {"id":"CHU.AX", "name": "CHALLENGER MILLENNIUM SERIES 2007-2L TRUST (CHU.AX)"},
+  {"id":"CHUBA", "name": "CommerceHub, Inc. (CHUBA)"},
+  {"id":"CHUBK", "name": "CommerceHub, Inc. (CHUBK)"},
+  {"id":"CHUY", "name": "Chuy&#39;s Holdings, Inc. (CHUY)"},
+  {"id":"CHW", "name": "Calamos Global Dynamic Income Fund (CHW)"},
+  {"id":"CHY", "name": "Calamos Convertible and High Income Fund (CHY)"},
+  {"id":"CHZ.AX", "name": "CHESSER RESOURCES LIMITED (CHZ.AX)"},
+  {"id":"CIA.AX", "name": "CHAMPION IRON LIMITED (CIA.AX)"},
+  {"id":"CIBR", "name": "First Trust NASDAQ Cybersecurity ETF (CIBR)"},
+  {"id":"CID", "name": "VictoryShares International High Div Volatility Wtd ETF (CID)"},
+  {"id":"CIDM", "name": "Cinedigm Corp (CIDM)"},
+  {"id":"CIE.AX", "name": "CONTANGO INCOME GENERATOR  LIMITED (CIE.AX)"},
+  {"id":"CIGI", "name": "Colliers International Group Inc.  (CIGI)"},
+  {"id":"CII.AX", "name": "CI RESOURCES LIMITED (CII.AX)"},
+  {"id":"CIL", "name": "VictoryShares International Volatility Wtd ETF (CIL)"},
+  {"id":"CIM.AX", "name": "CIMIC GROUP LIMITED (CIM.AX)"},
+  {"id":"CIN.AX", "name": "CARLTON INVESTMENTS LIMITED (CIN.AX)"},
+  {"id":"CINF", "name": "Cincinnati Financial Corporation (CINF)"},
+  {"id":"CIO.AX", "name": "CONNECTED IO LIMITED (CIO.AX)"},
+  {"id":"CIP.AX", "name": "CENTURIA INDUSTRIAL REIT (CIP.AX)"},
+  {"id":"CIVB", "name": "Civista Bancshares, Inc.  (CIVB)"},
+  {"id":"CIVBP", "name": "Civista Bancshares, Inc.  (CIVBP)"},
+  {"id":"CIW.AX", "name": "CLIME INVESTMENT MANAGEMENT LTD (CIW.AX)"},
+  {"id":"CIZ", "name": "VictoryShares Developed Enhanced Volatility Wtd ETF (CIZ)"},
+  {"id":"CIZ.AX", "name": "CORIZON LIMITED (CIZ.AX)"},
+  {"id":"CIZN", "name": "Citizens Holding Company (CIZN)"},
+  {"id":"CJJD", "name": "China Jo-Jo Drugstores, Inc. (CJJD)"},
+  {"id":"CKA.AX", "name": "COKAL LIMITED (CKA.AX)"},
+  {"id":"CKF.AX", "name": "COLLINS FOODS LIMITED (CKF.AX)"},
+  {"id":"CL1.AX", "name": "CLASS LIMITED (CL1.AX)"},
+  {"id":"CL8.AX", "name": "COLLABORATE CORPORATION LIMITED (CL8.AX)"},
+  {"id":"CLA.AX", "name": "CELSIUS RESOURCES LIMITED (CLA.AX)"},
+  {"id":"CLAC", "name": "Capitol Acquisition Corp. III (CLAC)"},
+  {"id":"CLACU", "name": "Capitol Acquisition Corp. III (CLACU)"},
+  {"id":"CLACW", "name": "Capitol Acquisition Corp. III (CLACW)"},
+  {"id":"CLBS", "name": "Caladrius Biosciences, Inc. (CLBS)"},
+  {"id":"CLCT", "name": "Collectors Universe, Inc. (CLCT)"},
+  {"id":"CLDC", "name": "China Lending Corporation (CLDC)"},
+  {"id":"CLDX", "name": "Celldex Therapeutics, Inc. (CLDX)"},
+  {"id":"CLFD", "name": "Clearfield, Inc. (CLFD)"},
+  {"id":"CLH.AX", "name": "COLLECTION HOUSE LIMITED (CLH.AX)"},
+  {"id":"CLIR", "name": "ClearSign Combustion Corporation (CLIR)"},
+  {"id":"CLIRW", "name": "ClearSign Combustion Corporation (CLIRW)"},
+  {"id":"CLLS", "name": "Cellectis S.A. (CLLS)"},
+  {"id":"CLMT", "name": "Calumet Specialty Products Partners, L.P. (CLMT)"},
+  {"id":"CLNE", "name": "Clean Energy Fuels Corp. (CLNE)"},
+  {"id":"CLNT", "name": "Cleantech Solutions International, Inc. (CLNT)"},
+  {"id":"CLQ.AX", "name": "CLEAN TEQ HOLDINGS LIMITED (CLQ.AX)"},
+  {"id":"CLRB", "name": "Cellectar Biosciences, Inc. (CLRB)"},
+  {"id":"CLRBW", "name": "Cellectar Biosciences, Inc. (CLRBW)"},
+  {"id":"CLRBZ", "name": "Cellectar Biosciences, Inc. (CLRBZ)"},
+  {"id":"CLRO", "name": "ClearOne, Inc. (CLRO)"},
+  {"id":"CLSD", "name": "Clearside Biomedical, Inc. (CLSD)"},
+  {"id":"CLSN", "name": "Celsion Corporation (CLSN)"},
+  {"id":"CLT.AX", "name": "CELLNET GROUP LIMITED (CLT.AX)"},
+  {"id":"CLUB", "name": "Town Sports International Holdings, Inc. (CLUB)"},
+  {"id":"CLV.AX", "name": "CLOVER CORPORATION LIMITED (CLV.AX)"},
+  {"id":"CLVS", "name": "Clovis Oncology, Inc. (CLVS)"},
+  {"id":"CLW.AX", "name": "CHARTER HALL LONG WALE REIT (CLW.AX)"},
+  {"id":"CLWT", "name": "Euro Tech Holdings Company Limited (CLWT)"},
+  {"id":"CLX.AX", "name": "CTI LOGISTICS LIMITED (CLX.AX)"},
+  {"id":"CLY.AX", "name": "CLANCY EXPLORATION LIMITED (CLY.AX)"},
+  {"id":"CLZ.AX", "name": "CLASSIC MINERALS LTD (CLZ.AX)"},
+  {"id":"CM8.AX", "name": "CROWD MOBILE LIMITED (CM8.AX)"},
+  {"id":"CMA.AX", "name": "CENTURIA METROPOLITAN REIT (CMA.AX)"},
+  {"id":"CMC.AX", "name": "CHINA MAGNESIUM CORPORATION LIMITED (CMC.AX)"},
+  {"id":"CMCO", "name": "Columbus McKinnon Corporation (CMCO)"},
+  {"id":"CMCSA", "name": "Comcast Corporation (CMCSA)"},
+  {"id":"CMCT", "name": "CIM Commercial Trust Corporation (CMCT)"},
+  {"id":"CME", "name": "CME Group Inc. (CME)"},
+  {"id":"CMFN", "name": "CM Finance Inc (CMFN)"},
+  {"id":"CMI.AX", "name": "CMI LIMITED. (CMI.AX)"},
+  {"id":"CMLS", "name": "Cumulus Media Inc. (CMLS)"},
+  {"id":"CMM.AX", "name": "CAPRICORN METALS LTD (CMM.AX)"},
+  {"id":"CMP.AX", "name": "COMPUMEDICS LIMITED (CMP.AX)"},
+  {"id":"CMPR", "name": "Cimpress N.V (CMPR)"},
+  {"id":"CMRX", "name": "Chimerix, Inc. (CMRX)"},
+  {"id":"CMT.AX", "name": "COTT OIL AND GAS LIMITED (CMT.AX)"},
+  {"id":"CMTL", "name": "Comtech Telecommunications Corp. (CMTL)"},
+  {"id":"CMW.AX", "name": "CROMWELL PROPERTY GROUP (CMW.AX)"},
+  {"id":"CMY.AX", "name": "CAPITAL MINING LIMITED (CMY.AX)"},
+  {"id":"CNAT", "name": "Conatus Pharmaceuticals Inc. (CNAT)"},
+  {"id":"CNBKA", "name": "Century Bancorp, Inc. (CNBKA)"},
+  {"id":"CNCE", "name": "Concert Pharmaceuticals, Inc. (CNCE)"},
+  {"id":"CNCR", "name": "Loncar Cancer Immunotherapy ETF (CNCR)"},
+  {"id":"CND.AX", "name": "CLARIUS GROUP LIMITED (CND.AX)"},
+  {"id":"CNET", "name": "ChinaNet Online Holdings, Inc. (CNET)"},
+  {"id":"CNFR", "name": "Conifer Holdings, Inc. (CNFR)"},
+  {"id":"CNI.AX", "name": "CENTURIA CAPITAL GROUP (CNI.AX)"},
+  {"id":"CNIT", "name": "China Information Technology, Inc. (CNIT)"},
+  {"id":"CNJ.AX", "name": "CONICO LTD (CNJ.AX)"},
+  {"id":"CNL.AX", "name": "CELAMIN HOLDINGS NL (CNL.AX)"},
+  {"id":"CNMD", "name": "CONMED Corporation (CNMD)"},
+  {"id":"CNOB", "name": "ConnectOne Bancorp, Inc. (CNOB)"},
+  {"id":"CNQ.AX", "name": "CARBINE TUNGSTEN LIMITED (CNQ.AX)"},
+  {"id":"CNSL", "name": "Consolidated Communications Holdings, Inc. (CNSL)"},
+  {"id":"CNTF", "name": "China TechFaith Wireless Communication Technology Limited (CNTF)"},
+  {"id":"CNTY", "name": "Century Casinos, Inc. (CNTY)"},
+  {"id":"CNU.AX", "name": "CHORUS LIMITED (CNU.AX)"},
+  {"id":"CNW.AX", "name": "CIRRUS NETWORKS HOLDINGS LIMITED (CNW.AX)"},
+  {"id":"CNX.AX", "name": "CARBON ENERGY LIMITED (CNX.AX)"},
+  {"id":"CNXN", "name": "PC Connection, Inc. (CNXN)"},
+  {"id":"CNXR", "name": "Connecture, Inc. (CNXR)"},
+  {"id":"COB.AX", "name": "COBALT BLUE HOLDINGS LIMITED (COB.AX)"},
+  {"id":"COBZ", "name": "CoBiz Financial Inc. (COBZ)"},
+  {"id":"COE.AX", "name": "COOPER ENERGY LIMITED (COE.AX)"},
+  {"id":"COGT", "name": "Cogint, Inc. (COGT)"},
+  {"id":"COH.AX", "name": "COCHLEAR LIMITED (COH.AX)"},
+  {"id":"COHR", "name": "Coherent, Inc. (COHR)"},
+  {"id":"COHU", "name": "Cohu, Inc. (COHU)"},
+  {"id":"COI.AX", "name": "COMET RIDGE LIMITED (COI.AX)"},
+  {"id":"COKE", "name": "Coca-Cola Bottling Co. Consolidated (COKE)"},
+  {"id":"COLB", "name": "Columbia Banking System, Inc. (COLB)"},
+  {"id":"COLL", "name": "Collegium Pharmaceutical, Inc. (COLL)"},
+  {"id":"COLM", "name": "Columbia Sportswear Company (COLM)"},
+  {"id":"COM.AX", "name": "COMOPS LIMITED (COM.AX)"},
+  {"id":"COMM", "name": "CommScope Holding Company, Inc. (COMM)"},
+  {"id":"COMT", "name": "iShares Commodities Select Strategy ETF (COMT)"},
+  {"id":"CONE", "name": "CyrusOne Inc (CONE)"},
+  {"id":"CONN", "name": "Conn&#39;s, Inc. (CONN)"},
+  {"id":"COO.AX", "name": "CORUM GROUP LIMITED (COO.AX)"},
+  {"id":"COOL", "name": "PolarityTE, Inc. (COOL)"},
+  {"id":"CORE", "name": "Core-Mark Holding Company, Inc. (CORE)"},
+  {"id":"CORI", "name": "Corium International, Inc. (CORI)"},
+  {"id":"CORT", "name": "Corcept Therapeutics Incorporated (CORT)"},
+  {"id":"COST", "name": "Costco Wholesale Corporation (COST)"},
+  {"id":"COUP", "name": "Coupa Software Incorporated (COUP)"},
+  {"id":"COVS", "name": "Covisint Corporation (COVS)"},
+  {"id":"COWN", "name": "Cowen Group, Inc. (COWN)"},
+  {"id":"COWNL", "name": "Cowen Group, Inc. (COWNL)"},
+  {"id":"COY.AX", "name": "COPPERMOLY LIMITED (COY.AX)"},
+  {"id":"CPAA", "name": "Conyers Park Acquisition Corp. (CPAA)"},
+  {"id":"CPAAU", "name": "Conyers Park Acquisition Corp. (CPAAU)"},
+  {"id":"CPAAW", "name": "Conyers Park Acquisition Corp. (CPAAW)"},
+  {"id":"CPAH", "name": "CounterPath Corporation (CPAH)"},
+  {"id":"CPH.AX", "name": "CRESO PHARMA LIMITED (CPH.AX)"},
+  {"id":"CPHC", "name": "Canterbury Park Holding Corporation (CPHC)"},
+  {"id":"CPIX", "name": "Cumberland Pharmaceuticals Inc. (CPIX)"},
+  {"id":"CPLA", "name": "Capella Education Company (CPLA)"},
+  {"id":"CPLP", "name": "Capital Product Partners L.P. (CPLP)"},
+  {"id":"CPRT", "name": "Copart, Inc. (CPRT)"},
+  {"id":"CPRX", "name": "Catalyst Pharmaceuticals, Inc. (CPRX)"},
+  {"id":"CPSH", "name": "CPS Technologies Corp. (CPSH)"},
+  {"id":"CPSI", "name": "Computer Programs and Systems, Inc. (CPSI)"},
+  {"id":"CPSS", "name": "Consumer Portfolio Services, Inc. (CPSS)"},
+  {"id":"CPST", "name": "Capstone Turbine Corporation (CPST)"},
+  {"id":"CPTA", "name": "Capitala Finance Corp. (CPTA)"},
+  {"id":"CPU.AX", "name": "COMPUTERSHARE LIMITED. (CPU.AX)"},
+  {"id":"CQR.AX", "name": "CHARTER HALL RETAIL REIT (CQR.AX)"},
+  {"id":"CR8.AX", "name": "CRE8TEK LIMITED (CR8.AX)"},
+  {"id":"CRAI", "name": "CRA International,Inc. (CRAI)"},
+  {"id":"CRAY", "name": "Cray Inc (CRAY)"},
+  {"id":"CRB.AX", "name": "CARBINE RESOURCES LIMITED (CRB.AX)"},
+  {"id":"CRBP", "name": "Corbus Pharmaceuticals Holdings, Inc. (CRBP)"},
+  {"id":"CRDS", "name": "Crossroads Systems, Inc. (CRDS)"},
+  {"id":"CRDT", "name": "WisdomTree Strategic Corporate Bond Fund (CRDT)"},
+  {"id":"CREE", "name": "Cree, Inc. (CREE)"},
+  {"id":"CREG", "name": "China Recycling Energy Corporation (CREG)"},
+  {"id":"CRESY", "name": "Cresud S.A.C.I.F. y A. (CRESY)"},
+  {"id":"CRIS", "name": "Curis, Inc. (CRIS)"},
+  {"id":"CRL.AX", "name": "COMET RESOURCES LIMITED (CRL.AX)"},
+  {"id":"CRM.AX", "name": "CARBON MINERALS LIMITED (CRM.AX)"},
+  {"id":"CRME", "name": "Cardiome Pharma Corporation (CRME)"},
+  {"id":"CRMT", "name": "America&#39;s Car-Mart, Inc. (CRMT)"},
+  {"id":"CRNT", "name": "Ceragon Networks Ltd. (CRNT)"},
+  {"id":"CROX", "name": "Crocs, Inc. (CROX)"},
+  {"id":"CRSP", "name": "CRISPR Therapeutics AG (CRSP)"},
+  {"id":"CRTN", "name": "Cartesian, Inc. (CRTN)"},
+  {"id":"CRTO", "name": "Criteo S.A. (CRTO)"},
+  {"id":"CRUS", "name": "Cirrus Logic, Inc. (CRUS)"},
+  {"id":"CRVL", "name": "CorVel Corp. (CRVL)"},
+  {"id":"CRVS", "name": "Corvus Pharmaceuticals, Inc. (CRVS)"},
+  {"id":"CRWS", "name": "Crown Crafts, Inc. (CRWS)"},
+  {"id":"CRZO", "name": "Carrizo Oil & Gas, Inc. (CRZO)"},
+  {"id":"CSA", "name": "VictoryShares US Small Cap Volatility Wtd ETF (CSA)"},
+  {"id":"CSB", "name": "VictoryShares US Small Cap High Div Volatility Wtd ETF (CSB)"},
+  {"id":"CSBK", "name": "Clifton Bancorp Inc. (CSBK)"},
+  {"id":"CSBR", "name": "Champions Oncology, Inc. (CSBR)"},
+  {"id":"CSCO", "name": "Cisco Systems, Inc. (CSCO)"},
+  {"id":"CSD.AX", "name": "CONSOLIDATED TIN MINES LIMITED (CSD.AX)"},
+  {"id":"CSE.AX", "name": "COPPER STRIKE LIMITED (CSE.AX)"},
+  {"id":"CSF", "name": "VictoryShares US Discovery Enhanced Volatility Wtd ETF (CSF)"},
+  {"id":"CSFL", "name": "CenterState Banks, Inc. (CSFL)"},
+  {"id":"CSGP", "name": "CoStar Group, Inc. (CSGP)"},
+  {"id":"CSGS", "name": "CSG Systems International, Inc. (CSGS)"},
+  {"id":"CSII", "name": "Cardiovascular Systems, Inc. (CSII)"},
+  {"id":"CSIQ", "name": "Canadian Solar Inc. (CSIQ)"},
+  {"id":"CSL.AX", "name": "CSL LIMITED (CSL.AX)"},
+  {"id":"CSN.AX", "name": "CRUSADE EURO TRUST NO.1E OF 2007 (CSN.AX)"},
+  {"id":"CSOD", "name": "Cornerstone OnDemand, Inc. (CSOD)"},
+  {"id":"CSPI", "name": "CSP Inc. (CSPI)"},
+  {"id":"CSQ", "name": "Calamos Strategic Total Return Fund (CSQ)"},
+  {"id":"CSR.AX", "name": "CSR LIMITED (CSR.AX)"},
+  {"id":"CSS.AX", "name": "CLEAN SEAS SEAFOOD LIMITED (CSS.AX)"},
+  {"id":"CSTE", "name": "Caesarstone Ltd. (CSTE)"},
+  {"id":"CSTR", "name": "CapStar Financial Holdings, Inc. (CSTR)"},
+  {"id":"CSV.AX", "name": "CSG LIMITED (CSV.AX)"},
+  {"id":"CSWC", "name": "Capital Southwest Corporation (CSWC)"},
+  {"id":"CSWI", "name": "CSW Industrials, Inc. (CSWI)"},
+  {"id":"CSX", "name": "CSX Corporation (CSX)"},
+  {"id":"CT1.AX", "name": "CCP TECHNOLOGIES LIMITED (CT1.AX)"},
+  {"id":"CTAS", "name": "Cintas Corporation (CTAS)"},
+  {"id":"CTBI", "name": "Community Trust Bancorp, Inc. (CTBI)"},
+  {"id":"CTD.AX", "name": "CORPORATE TRAVEL MANAGEMENT LIMITED (CTD.AX)"},
+  {"id":"CTE.AX", "name": "CRYOSITE LIMITED (CTE.AX)"},
+  {"id":"CTG", "name": "Computer Task Group, Incorporated (CTG)"},
+  {"id":"CTH.AX", "name": "CRUSADE GLOBAL TRUST NO.1 OF 2007 (CTH.AX)"},
+  {"id":"CTHR", "name": "Charles & Colvard Ltd (CTHR)"},
+  {"id":"CTIB", "name": "CTI Industries Corporation (CTIB)"},
+  {"id":"CTIC", "name": "CTI BioPharma Corp. (CTIC)"},
+  {"id":"CTL.AX", "name": "CENTENNIAL MINING LIMITED (CTL.AX)"},
+  {"id":"CTM.AX", "name": "CENTAURUS METALS LIMITED (CTM.AX)"},
+  {"id":"CTMX", "name": "CytomX Therapeutics, Inc. (CTMX)"},
+  {"id":"CTN.AX", "name": "CONTANGO MICROCAP LIMITED (CTN.AX)"},
+  {"id":"CTO.AX", "name": "CITIGOLD CORPORATION LIMITED (CTO.AX)"},
+  {"id":"CTP.AX", "name": "CENTRAL PETROLEUM LIMITED (CTP.AX)"},
+  {"id":"CTR.AX", "name": "CITATION RESOURCES LTD (CTR.AX)"},
+  {"id":"CTRE", "name": "CareTrust REIT, Inc. (CTRE)"},
+  {"id":"CTRL", "name": "Control4 Corporation (CTRL)"},
+  {"id":"CTRN", "name": "Citi Trends, Inc. (CTRN)"},
+  {"id":"CTRP", "name": "Ctrip.com International, Ltd. (CTRP)"},
+  {"id":"CTRV", "name": "ContraVir Pharmaceuticals Inc (CTRV)"},
+  {"id":"CTSH", "name": "Cognizant Technology Solutions Corporation (CTSH)"},
+  {"id":"CTSO", "name": "Cytosorbents Corporation (CTSO)"},
+  {"id":"CTWS", "name": "Connecticut Water Service, Inc. (CTWS)"},
+  {"id":"CTX.AX", "name": "CALTEX AUSTRALIA LIMITED (CTX.AX)"},
+  {"id":"CTXS", "name": "Citrix Systems, Inc. (CTXS)"},
+  {"id":"CU1.AX", "name": "CRUSADE ABS SERIES 2016-1 TRUST (CU1.AX)"},
+  {"id":"CU2.AX", "name": "CRUSADE ABS SERIES 2017-1 TRUST (CU2.AX)"},
+  {"id":"CUA.AX", "name": "CENTURIA URBAN REIT (CUA.AX)"},
+  {"id":"CUBA", "name": "The Herzfeld Caribbean Basin Fund, Inc. (CUBA)"},
+  {"id":"CUBN", "name": "Commerce Union Bancshares, Inc. (CUBN)"},
+  {"id":"CUE.AX", "name": "CUE ENERGY RESOURCES LIMITED (CUE.AX)"},
+  {"id":"CUF.AX", "name": "CRUSADE ABS SERIES 2013-1 TRUST (CUF.AX)"},
+  {"id":"CUH.AX", "name": "CRUSADE ABS SERIES 2015-1 TRUST (CUH.AX)"},
+  {"id":"CUI", "name": "CUI Global, Inc. (CUI)"},
+  {"id":"CUL.AX", "name": "CULLEN RESOURCES LIMITED (CUL.AX)"},
+  {"id":"CUNB", "name": "CU Bancorp (CA) (CUNB)"},
+  {"id":"CUP.AX", "name": "COUNTPLUS LIMITED (CUP.AX)"},
+  {"id":"CUR", "name": "Neuralstem, Inc. (CUR)"},
+  {"id":"CUTR", "name": "Cutera, Inc. (CUTR)"},
+  {"id":"CUV.AX", "name": "CLINUVEL PHARMACEUTICALS LIMITED (CUV.AX)"},
+  {"id":"CUX.AX", "name": "CROSSLAND STRATEGIC METALS LTD (CUX.AX)"},
+  {"id":"CV1.AX", "name": "CV CHECK LTD (CV1.AX)"},
+  {"id":"CVBF", "name": "CVB Financial Corporation (CVBF)"},
+  {"id":"CVC.AX", "name": "CVC LIMITED (CVC.AX)"},
+  {"id":"CVCO", "name": "Cavco Industries, Inc. (CVCO)"},
+  {"id":"CVCY", "name": "Central Valley Community Bancorp (CVCY)"},
+  {"id":"CVGI", "name": "Commercial Vehicle Group, Inc. (CVGI)"},
+  {"id":"CVGW", "name": "Calavo Growers, Inc. (CVGW)"},
+  {"id":"CVLT", "name": "Commvault Systems, Inc. (CVLT)"},
+  {"id":"CVLY", "name": "Codorus Valley Bancorp, Inc (CVLY)"},
+  {"id":"CVN.AX", "name": "CARNARVON PETROLEUM LIMITED (CVN.AX)"},
+  {"id":"CVO.AX", "name": "COVER-MORE GROUP LIMITED (CVO.AX)"},
+  {"id":"CVR.AX", "name": "CENTRAL ASIA RESOURCES LIMITED. (CVR.AX)"},
+  {"id":"CVS.AX", "name": "CERVANTES CORPORATION LIMITED (CVS.AX)"},
+  {"id":"CVT.AX", "name": "COVATA LIMITED (CVT.AX)"},
+  {"id":"CVTI", "name": "Covenant Transportation Group, Inc. (CVTI)"},
+  {"id":"CVV", "name": "CVD Equipment Corporation (CVV)"},
+  {"id":"CVV.AX", "name": "CARAVEL MINERALS LIMITED (CVV.AX)"},
+  {"id":"CVW.AX", "name": "CLEARVIEW WEALTH LIMITED (CVW.AX)"},
+  {"id":"CWAY", "name": "Coastway Bancorp, Inc. (CWAY)"},
+  {"id":"CWBC", "name": "Community West Bancshares (CWBC)"},
+  {"id":"CWCO", "name": "Consolidated Water Co. Ltd. (CWCO)"},
+  {"id":"CWH.AX", "name": "CWH RESOURCES LTD (CWH.AX)"},
+  {"id":"CWN.AX", "name": "CROWN RESORTS LIMITED (CWN.AX)"},
+  {"id":"CWP.AX", "name": "CEDAR WOODS PROPERTIES LIMITED (CWP.AX)"},
+  {"id":"CWST", "name": "Casella Waste Systems, Inc. (CWST)"},
+  {"id":"CWY.AX", "name": "CLEANAWAY WASTE MANAGEMENT LIMITED (CWY.AX)"},
+  {"id":"CXDC", "name": "China XD Plastics Company Limited (CXDC)"},
+  {"id":"CXM.AX", "name": "CENTREX METALS LIMITED (CXM.AX)"},
+  {"id":"CXO.AX", "name": "CORE EXPLORATION LIMITED (CXO.AX)"},
+  {"id":"CXRX", "name": "Concordia International Corp. (CXRX)"},
+  {"id":"CXSE", "name": "WisdomTree China ex-State-Owned Enterprises Fund (CXSE)"},
+  {"id":"CXU.AX", "name": "CAULDRON ENERGY LIMITED (CXU.AX)"},
+  {"id":"CXX.AX", "name": "CRADLE RESOURCES LIMITED (CXX.AX)"},
+  {"id":"CXZ.AX", "name": "CONNEXION MEDIA LIMITED (CXZ.AX)"},
+  {"id":"CY", "name": "Cypress Semiconductor Corporation (CY)"},
+  {"id":"CYA.AX", "name": "CENTURY AUSTRALIA INVESTMENTS LIMITED (CYA.AX)"},
+  {"id":"CYAD", "name": "Celyad SA (CYAD)"},
+  {"id":"CYAN", "name": "Cyanotech Corporation (CYAN)"},
+  {"id":"CYB.AX", "name": "CYBG PLC (CYB.AX)"},
+  {"id":"CYBE", "name": "CyberOptics Corporation (CYBE)"},
+  {"id":"CYBR", "name": "CyberArk Software Ltd. (CYBR)"},
+  {"id":"CYC.AX", "name": "CYCLOPHARM LIMITED (CYC.AX)"},
+  {"id":"CYCC", "name": "Cyclacel Pharmaceuticals, Inc. (CYCC)"},
+  {"id":"CYCCP", "name": "Cyclacel Pharmaceuticals, Inc. (CYCCP)"},
+  {"id":"CYG.AX", "name": "COVENTRY GROUP LIMITED (CYG.AX)"},
+  {"id":"CYHHZ", "name": "Community Health Systems, Inc. (CYHHZ)"},
+  {"id":"CYL.AX", "name": "CATALYST METALS LIMITED (CYL.AX)"},
+  {"id":"CYOU", "name": "Changyou.com Limited (CYOU)"},
+  {"id":"CYP.AX", "name": "CYNATA THERAPEUTICS LIMITED (CYP.AX)"},
+  {"id":"CYQ.AX", "name": "CYCLIQ GROUP LTD (CYQ.AX)"},
+  {"id":"CYRN", "name": "CYREN Ltd. (CYRN)"},
+  {"id":"CYRX", "name": "CryoPort, Inc. (CYRX)"},
+  {"id":"CYRXW", "name": "CryoPort, Inc. (CYRXW)"},
+  {"id":"CYTK", "name": "Cytokinetics, Incorporated (CYTK)"},
+  {"id":"CYTR", "name": "CytRx Corporation (CYTR)"},
+  {"id":"CYTX", "name": "Cytori Therapeutics Inc (CYTX)"},
+  {"id":"CYTXW", "name": "Cytori Therapeutics Inc (CYTXW)"},
+  {"id":"CYU.AX", "name": "CHINALCO YUNNAN COPPER RESOURCES LTD (CYU.AX)"},
+  {"id":"CYY.AX", "name": "COVENTRY RESOURCES LIMITED. (CYY.AX)"},
+  {"id":"CZA.AX", "name": "COAL OF AFRICA LIMITED (CZA.AX)"},
+  {"id":"CZFC", "name": "Citizens First Corporation (CZFC)"},
+  {"id":"CZI.AX", "name": "CASSINI RESOURCES LIMITED (CZI.AX)"},
+  {"id":"CZL.AX", "name": "CONSOLIDATED ZINC LIMITED (CZL.AX)"},
+  {"id":"CZN.AX", "name": "CORAZON MINING LIMITED (CZN.AX)"},
+  {"id":"CZNC", "name": "Citizens & Northern Corp (CZNC)"},
+  {"id":"CZR", "name": "Caesars Entertainment Corporation (CZR)"},
+  {"id":"CZR.AX", "name": "COZIRON RESOURCES LIMITED (CZR.AX)"},
+  {"id":"CZWI", "name": "Citizens Community Bancorp, Inc. (CZWI)"},
+  {"id":"CZZ.AX", "name": "CAPILANO HONEY LIMITED (CZZ.AX)"},
+  {"id":"D13.AX", "name": "DEPARTMENT 13 INTERNATIONAL LTD (D13.AX)"},
+  {"id":"D2O.AX", "name": "DUXTON WATER LIMITED (D2O.AX)"},
+  {"id":"DAE.AX", "name": "DRIVER AUSTRALIA THREE TRUST (DAE.AX)"},
+  {"id":"DAF.AX", "name": "DISCOVERY AFRICA LIMITED (DAF.AX)"},
+  {"id":"DAIO", "name": "Data I/O Corporation (DAIO)"},
+  {"id":"DAKT", "name": "Daktronics, Inc. (DAKT)"},
+  {"id":"DAM.AX", "name": "DRIVER AUSTRALIA MASTER TRUST (DAM.AX)"},
+  {"id":"DAQ.AX", "name": "DRIVER AUSTRALIA TWO TRUST (DAQ.AX)"},
+  {"id":"DAU.AX", "name": "DAMPIER GOLD LIMITED (DAU.AX)"},
+  {"id":"DAV.AX", "name": "DAVENPORT RESOURCES LIMITED (DAV.AX)"},
+  {"id":"DAVE", "name": "Famous Dave&#39;s of America, Inc. (DAVE)"},
+  {"id":"DAX", "name": "Horizons DAX Germany ETF (DAX)"},
+  {"id":"DBVT", "name": "DBV Technologies S.A. (DBVT)"},
+  {"id":"DCC.AX", "name": "DIGITALX LIMITED (DCC.AX)"},
+  {"id":"DCG.AX", "name": "DECMIL GROUP LIMITED (DCG.AX)"},
+  {"id":"DCIX", "name": "Diana Containerships Inc. (DCIX)"},
+  {"id":"DCL.AX", "name": "DOMACOM LIMITED (DCL.AX)"},
+  {"id":"DCN.AX", "name": "DACIAN GOLD LIMITED (DCN.AX)"},
+  {"id":"DCOM", "name": "Dime Community Bancshares, Inc. (DCOM)"},
+  {"id":"DCTH", "name": "Delcath Systems, Inc. (DCTH)"},
+  {"id":"DDBI", "name": "Legg Mason Developed EX-US Diversified Core ETF (DDBI)"},
+  {"id":"DDD.AX", "name": "3D RESOURCES LIMITED (DDD.AX)"},
+  {"id":"DDR.AX", "name": "DICKER DATA LIMITED (DDR.AX)"},
+  {"id":"DDT.AX", "name": "DATADOT TECHNOLOGY LIMITED (DDT.AX)"},
+  {"id":"DEG.AX", "name": "DE GREY MINING LIMITED (DEG.AX)"},
+  {"id":"DELT", "name": "Delta Technology Holdings Limited (DELT)"},
+  {"id":"DELTW", "name": "Delta Technology Holdings Limited (DELTW)"},
+  {"id":"DEM.AX", "name": "DE.MEM LIMITED (DEM.AX)"},
+  {"id":"DENN", "name": "Denny&#39;s Corporation (DENN)"},
+  {"id":"DEPO", "name": "Depomed, Inc. (DEPO)"},
+  {"id":"DERM", "name": "Dermira, Inc. (DERM)"},
+  {"id":"DEST", "name": "Destination Maternity Corporation (DEST)"},
+  {"id":"DFBG", "name": "Differential Brands Group Inc. (DFBG)"},
+  {"id":"DFFN", "name": "Diffusion Pharmaceuticals Inc. (DFFN)"},
+  {"id":"DFM.AX", "name": "DONGFANG MODERN AGRICULTURE HOLDING GROUP LIMITED (DFM.AX)"},
+  {"id":"DFNL", "name": "Davis Select Financial ETF (DFNL)"},
+  {"id":"DFRG", "name": "Del Frisco&#39;s Restaurant Group, Inc. (DFRG)"},
+  {"id":"DFVL", "name": "iPath US Treasury 5-year Bull ETN (DFVL)"},
+  {"id":"DFVS", "name": "iPath US Treasury 5-year Bear Exchange Traded Note (DFVS)"},
+  {"id":"DGAS", "name": "Delta Natural Gas Company, Inc. (DGAS)"},
+  {"id":"DGH.AX", "name": "DESANE GROUP HOLDINGS LIMITED (DGH.AX)"},
+  {"id":"DGICA", "name": "Donegal Group, Inc. (DGICA)"},
+  {"id":"DGICB", "name": "Donegal Group, Inc. (DGICB)"},
+  {"id":"DGII", "name": "Digi International Inc. (DGII)"},
+  {"id":"DGLD", "name": "VelocityShares 3x Inverse Gold ETN linked to S&P GSCI Gold Ind (DGLD)"},
+  {"id":"DGLY", "name": "Digital Ally, Inc. (DGLY)"},
+  {"id":"DGO.AX", "name": "DGO GOLD LIMITED (DGO.AX)"},
+  {"id":"DGR.AX", "name": "DGR GLOBAL LIMITED (DGR.AX)"},
+  {"id":"DGRE", "name": "WisdomTree Emerging Markets Quality Dividend Growth Fund (DGRE)"},
+  {"id":"DGRS", "name": "WisdomTree U.S. SmallCap Quality Dividend Growth Fund (DGRS)"},
+  {"id":"DGRW", "name": "WisdomTree U.S. Quality Dividend Growth Fund (DGRW)"},
+  {"id":"DGX.AX", "name": "DIPLOMA GROUP LIMITED (DGX.AX)"},
+  {"id":"DHIL", "name": "Diamond Hill Investment Group, Inc. (DHIL)"},
+  {"id":"DHR.AX", "name": "DARK HORSE RESOURCES LIMITED (DHR.AX)"},
+  {"id":"DHXM", "name": "DHX Media Ltd. (DHXM)"},
+  {"id":"DIG.AX", "name": "ASIA PACIFIC DIGITAL LIMITED (DIG.AX)"},
+  {"id":"DIOD", "name": "Diodes Incorporated (DIOD)"},
+  {"id":"DISCA", "name": "Discovery Communications, Inc. (DISCA)"},
+  {"id":"DISCB", "name": "Discovery Communications, Inc. (DISCB)"},
+  {"id":"DISCK", "name": "Discovery Communications, Inc. (DISCK)"},
+  {"id":"DISH", "name": "DISH Network Corporation (DISH)"},
+  {"id":"DJCO", "name": "Daily Journal Corp. (S.C.) (DJCO)"},
+  {"id":"DJW.AX", "name": "DJERRIWARRH INVESTMENTS LIMITED (DJW.AX)"},
+  {"id":"DKM.AX", "name": "DUKETON MINING LIMITED (DKM.AX)"},
+  {"id":"DKO.AX", "name": "DAKOTA MINERALS LIMITED (DKO.AX)"},
+  {"id":"DLBL", "name": "iPath US Treasury Long Bond Bull ETN (DLBL)"},
+  {"id":"DLBS", "name": "iPath US Treasury Long Bond Bear ETN (DLBS)"},
+  {"id":"DLC.AX", "name": "DELECTA LIMITED (DLC.AX)"},
+  {"id":"DLHC", "name": "DLH Holdings Corp. (DLHC)"},
+  {"id":"DLTH", "name": "Duluth Holdings Inc. (DLTH)"},
+  {"id":"DLTR", "name": "Dollar Tree, Inc. (DLTR)"},
+  {"id":"DLX.AX", "name": "DULUXGROUP LIMITED (DLX.AX)"},
+  {"id":"DM1.AX", "name": "DIRECTMONEY LIMITED (DM1.AX)"},
+  {"id":"DMA.AX", "name": "DYNASTY RESOURCES LIMITED (DMA.AX)"},
+  {"id":"DMC.AX", "name": "DIGIMATIC GROUP LIMITED (DMC.AX)"},
+  {"id":"DME.AX", "name": "DOME GOLD MINES LIMITED (DME.AX)"},
+  {"id":"DMG.AX", "name": "DRAGON MOUNTAIN GOLD LIMITED (DMG.AX)"},
+  {"id":"DMI.AX", "name": "DEMPSEY MINERALS LIMITED (DMI.AX)"},
+  {"id":"DMLP", "name": "Dorchester Minerals, L.P. (DMLP)"},
+  {"id":"DMP.AX", "name": "DOMINO'S PIZZA ENTERPRISES LIMITED (DMP.AX)"},
+  {"id":"DMPI", "name": "DelMar Pharmaceuticals, Inc. (DMPI)"},
+  {"id":"DMRC", "name": "Digimarc Corporation (DMRC)"},
+  {"id":"DMTX", "name": "Dimension Therapeutics, Inc. (DMTX)"},
+  {"id":"DN8.AX", "name": "DREAMSCAPE NETWORKS LIMITED (DN8.AX)"},
+  {"id":"DNA.AX", "name": "DONACO INTERNATIONAL LIMITED (DNA.AX)"},
+  {"id":"DNBF", "name": "DNB Financial Corp (DNBF)"},
+  {"id":"DNK.AX", "name": "DANAKALI LIMITED (DNK.AX)"},
+  {"id":"DNKN", "name": "Dunkin&#39; Brands Group, Inc. (DNKN)"},
+  {"id":"DORM", "name": "Dorman Products, Inc. (DORM)"},
+  {"id":"DOW.AX", "name": "DOWNER EDI LIMITED (DOW.AX)"},
+  {"id":"DOX", "name": "Amdocs Limited (DOX)"},
+  {"id":"DPRX", "name": "Dipexium Pharmaceuticals, Inc. (DPRX)"},
+  {"id":"DRA.AX", "name": "DRAGON MINING LIMITED (DRA.AX)"},
+  {"id":"DRAD", "name": "Digirad Corporation (DRAD)"},
+  {"id":"DRAM", "name": "Dataram Corporation (DRAM)"},
+  {"id":"DRG.AX", "name": "DRAIG RESOURCES LIMITED (DRG.AX)"},
+  {"id":"DRIO", "name": "DarioHealth Corp. (DRIO)"},
+  {"id":"DRIOW", "name": "DarioHealth Corp. (DRIOW)"},
+  {"id":"DRK.AX", "name": "DRAKE RESOURCES LIMITED (DRK.AX)"},
+  {"id":"DRM.AX", "name": "DORAY MINERALS LIMITED (DRM.AX)"},
+  {"id":"DRNA", "name": "Dicerna Pharmaceuticals, Inc. (DRNA)"},
+  {"id":"DRO.AX", "name": "DRONESHIELD LIMITED (DRO.AX)"},
+  {"id":"DRRX", "name": "DURECT Corporation (DRRX)"},
+  {"id":"DRWI", "name": "DragonWave Inc (DRWI)"},
+  {"id":"DRX.AX", "name": "DIATREME RESOURCES LIMITED (DRX.AX)"},
+  {"id":"DRYS", "name": "DryShips Inc. (DRYS)"},
+  {"id":"DSB.AX", "name": "DELTA SBD LIMITED (DSB.AX)"},
+  {"id":"DSE.AX", "name": "DROPSUITE LIMITED (DSE.AX)"},
+  {"id":"DSGX", "name": "The Descartes Systems Group Inc. (DSGX)"},
+  {"id":"DSKE", "name": "Daseke, Inc. (DSKE)"},
+  {"id":"DSKEW", "name": "Daseke, Inc. (DSKEW)"},
+  {"id":"DSLV", "name": "VelocityShares 3x Inverse Silver ETN linked to S&P GSCI Silver (DSLV)"},
+  {"id":"DSPG", "name": "DSP Group, Inc. (DSPG)"},
+  {"id":"DSWL", "name": "Deswell Industries, Inc. (DSWL)"},
+  {"id":"DSX.AX", "name": "DECIMAL SOFTWARE LIMITED (DSX.AX)"},
+  {"id":"DTEA", "name": "DAVIDsTEA Inc. (DTEA)"},
+  {"id":"DTI.AX", "name": "DTI GROUP LTD (DTI.AX)"},
+  {"id":"DTL.AX", "name": "DATA#3 LIMITED (DTL.AX)"},
+  {"id":"DTM.AX", "name": "DART MINING NL (DTM.AX)"},
+  {"id":"DTR.AX", "name": "DATELINE RESOURCES LIMITED (DTR.AX)"},
+  {"id":"DTRM", "name": "Determine, Inc.  (DTRM)"},
+  {"id":"DTS.AX", "name": "DRAGONTAIL SYSTEMS LIMITED (DTS.AX)"},
+  {"id":"DTUL", "name": "iPath US Treasury 2-year Bull ETN (DTUL)"},
+  {"id":"DTUS", "name": "iPath US Treasury 2-year Bear ETN (DTUS)"},
+  {"id":"DTX.AX", "name": "DATETIX GROUP LTD (DTX.AX)"},
+  {"id":"DTYL", "name": "iPath US Treasury 10-year Bull ETN (DTYL)"},
+  {"id":"DTYS", "name": "iPath US Treasury 10-year Bear ETN (DTYS)"},
+  {"id":"DTZ.AX", "name": "DOTZ NANO LIMITED (DTZ.AX)"},
+  {"id":"DUB.AX", "name": "DUBBER CORPORATION LIMITED (DUB.AX)"},
+  {"id":"DUE.AX", "name": "DUET GROUP (DUE.AX)"},
+  {"id":"DUI.AX", "name": "DIVERSIFIED UNITED INVESTMENT LIMITED (DUI.AX)"},
+  {"id":"DUSA", "name": "Davis Select U.S. Equity ETF (DUSA)"},
+  {"id":"DVAX", "name": "Dynavax Technologies Corporation (DVAX)"},
+  {"id":"DVCR", "name": "Diversicare Healthcare Services Inc. (DVCR)"},
+  {"id":"DVL.AX", "name": "DORSAVI LTD (DVL.AX)"},
+  {"id":"DVN.AX", "name": "DEVINE LIMITED (DVN.AX)"},
+  {"id":"DW8.AX", "name": "DAWINE LTD (DW8.AX)"},
+  {"id":"DWAC", "name": "Elkhorn Commodity Rotation Strategy ETF (DWAC)"},
+  {"id":"DWAQ", "name": "PowerShares DWA NASDAQ Momentum Portfolio (DWAQ)"},
+  {"id":"DWAS", "name": "PowerShares DWA SmallCap Momentum Portfolio (DWAS)"},
+  {"id":"DWAT", "name": "Arrow DWA Tactical ETF (DWAT)"},
+  {"id":"DWCH", "name": "Datawatch Corporation (DWCH)"},
+  {"id":"DWFI", "name": "SPDR Dorsey Wright Fixed Income Allocation ETF (DWFI)"},
+  {"id":"DWIN", "name": "PowerShares DWA Tactical Multi-Asset Income Portfolio (DWIN)"},
+  {"id":"DWLD", "name": "Davis Select Worldwide ETF (DWLD)"},
+  {"id":"DWLV", "name": "PowerShares DWA Momentum & Low Volatility Rotation Portfolio (DWLV)"},
+  {"id":"DWS.AX", "name": "DWS LIMITED (DWS.AX)"},
+  {"id":"DWSN", "name": "Dawson Geophysical Company (DWSN)"},
+  {"id":"DWTR", "name": "PowerShares DWA Tactical Sector Rotation Portfolio (DWTR)"},
+  {"id":"DXA.AX", "name": "CAISSE FRANCAISE DE FINANCEMENT LOCAL (DXA.AX)"},
+  {"id":"DXB.AX", "name": "DIMERIX LIMITED (DXB.AX)"},
+  {"id":"DXCM", "name": "DexCom, Inc. (DXCM)"},
+  {"id":"DXF.AX", "name": "DING SHENG XIN FINANCE CO. LIMITED (DXF.AX)"},
+  {"id":"DXGE", "name": "WisdomTree Germany Hedged Equity Fund (DXGE)"},
+  {"id":"DXJS", "name": "WisdomTree Japan Hedged SmallCap Equity Fund (DXJS)"},
+  {"id":"DXLG", "name": "Destination XL Group, Inc. (DXLG)"},
+  {"id":"DXPE", "name": "DXP Enterprises, Inc. (DXPE)"},
+  {"id":"DXPS", "name": "WisdomTree United Kingdom Hedged Equity Fund (DXPS)"},
+  {"id":"DXS.AX", "name": "DEXUS PROPERTY GROUP (DXS.AX)"},
+  {"id":"DXTR", "name": "Dextera Surgical Inc. (DXTR)"},
+  {"id":"DXYN", "name": "The Dixie Group, Inc. (DXYN)"},
+  {"id":"DYE.AX", "name": "DYESOL LIMITED (DYE.AX)"},
+  {"id":"DYL.AX", "name": "DEEP YELLOW LIMITED (DYL.AX)"},
+  {"id":"DYNT", "name": "Dynatronics Corporation (DYNT)"},
+  {"id":"DYSL", "name": "Dynasil Corporation of America (DYSL)"},
+  {"id":"DZSI", "name": "DASAN Zhone Solutions, Inc. (DZSI)"},
+  {"id":"E2M.AX", "name": "E2 METALS LIMITED (E2M.AX)"},
+  {"id":"E88.AX", "name": "ENSOGO LIMITED (E88.AX)"},
+  {"id":"EA", "name": "Electronic Arts Inc. (EA)"},
+  {"id":"EACQ", "name": "Easterly Acquisition Corp. (EACQ)"},
+  {"id":"EACQU", "name": "Easterly Acquisition Corp. (EACQU)"},
+  {"id":"EACQW", "name": "Easterly Acquisition Corp. (EACQW)"},
+  {"id":"EAGL", "name": "Double Eagle Acquisition Corp. (EAGL)"},
+  {"id":"EAGLU", "name": "Double Eagle Acquisition Corp. (EAGLU)"},
+  {"id":"EAGLW", "name": "Double Eagle Acquisition Corp. (EAGLW)"},
+  {"id":"EAI.AX", "name": "ELLERSTON ASIAN INVESTMENTS LIMITED (EAI.AX)"},
+  {"id":"EAL.AX", "name": "E & A LIMITED (EAL.AX)"},
+  {"id":"EAR.AX", "name": "ECHO RESOURCES LIMITED (EAR.AX)"},
+  {"id":"EARS", "name": "Auris Medical Holding AG (EARS)"},
+  {"id":"EAS.AX", "name": "EASTON INVESTMENTS LIMITED (EAS.AX)"},
+  {"id":"EAX.AX", "name": "ENERGY ACTION LIMITED (EAX.AX)"},
+  {"id":"EBAY", "name": "eBay Inc. (EBAY)"},
+  {"id":"EBAYL", "name": "eBay Inc. (EBAYL)"},
+  {"id":"EBG.AX", "name": "EUMUNDI GROUP LIMITED (EBG.AX)"},
+  {"id":"EBIO", "name": "Eleven Biotherapeutics, Inc. (EBIO)"},
+  {"id":"EBIX", "name": "Ebix, Inc. (EBIX)"},
+  {"id":"EBMT", "name": "Eagle Bancorp Montana, Inc. (EBMT)"},
+  {"id":"EBO.AX", "name": "EBOS GROUP LIMITED (EBO.AX)"},
+  {"id":"EBSB", "name": "Meridian Bancorp, Inc. (EBSB)"},
+  {"id":"EBTC", "name": "Enterprise Bancorp Inc (EBTC)"},
+  {"id":"ECG.AX", "name": "ECARGO HOLDINGS LIMITED (ECG.AX)"},
+  {"id":"ECHO", "name": "Echo Global Logistics, Inc. (ECHO)"},
+  {"id":"ECOL", "name": "US Ecology, Inc. (ECOL)"},
+  {"id":"ECPG", "name": "Encore Capital Group Inc (ECPG)"},
+  {"id":"ECX.AX", "name": "ECLIPX GROUP LIMITED (ECX.AX)"},
+  {"id":"ECYT", "name": "Endocyte, Inc. (ECYT)"},
+  {"id":"EDAP", "name": "EDAP TMS S.A. (EDAP)"},
+  {"id":"EDBI", "name": "Legg Mason Emerging Markets Diversified Core ETF (EDBI)"},
+  {"id":"EDC.AX", "name": "EILDON CAPITAL LIMITED (EDC.AX)"},
+  {"id":"EDE.AX", "name": "EDEN INNOVATIONS LTD (EDE.AX)"},
+  {"id":"EDGE", "name": "Edge Therapeutics, Inc. (EDGE)"},
+  {"id":"EDGW", "name": "Edgewater Technology, Inc. (EDGW)"},
+  {"id":"EDIT", "name": "Editas Medicine, Inc. (EDIT)"},
+  {"id":"EDUC", "name": "Educational Development Corporation (EDUC)"},
+  {"id":"EEFT", "name": "Euronet Worldwide, Inc. (EEFT)"},
+  {"id":"EEG.AX", "name": "EMPIRE ENERGY GROUP LIMITED (EEG.AX)"},
+  {"id":"EEI", "name": "Ecology and Environment, Inc. (EEI)"},
+  {"id":"EEMA", "name": "iShares MSCI Emerging Markets Asia Index Fund (EEMA)"},
+  {"id":"EER.AX", "name": "EAST ENERGY RESOURCES LIMITED (EER.AX)"},
+  {"id":"EFAS", "name": "Global X MSCI SuperDividend EAFE ETF (EFAS)"},
+  {"id":"EFE.AX", "name": "EASTERN IRON LIMITED (EFE.AX)"},
+  {"id":"EFII", "name": "Electronics for Imaging, Inc. (EFII)"},
+  {"id":"EFOI", "name": "Energy Focus, Inc. (EFOI)"},
+  {"id":"EFSC", "name": "Enterprise Financial Services Corporation (EFSC)"},
+  {"id":"EGA.AX", "name": "EGAN STREET RESOURCES LIMITED (EGA.AX)"},
+  {"id":"EGAN", "name": "eGain Corporation (EGAN)"},
+  {"id":"EGBN", "name": "Eagle Bancorp, Inc. (EGBN)"},
+  {"id":"EGG.AX", "name": "ENERO GROUP LIMITED (EGG.AX)"},
+  {"id":"EGH.AX", "name": "EUREKA GROUP HOLDINGS LIMITED (EGH.AX)"},
+  {"id":"EGHT", "name": "8x8 Inc (EGHT)"},
+  {"id":"EGI.AX", "name": "ELLERSTON GLOBAL INVESTMENTS LIMITED (EGI.AX)"},
+  {"id":"EGL.AX", "name": "ENVIRONMENTAL GROUP LIMITED (THE) (EGL.AX)"},
+  {"id":"EGLE", "name": "Eagle Bulk Shipping Inc. (EGLE)"},
+  {"id":"EGLT", "name": "Egalet Corporation (EGLT)"},
+  {"id":"EGN.AX", "name": "ENGENCO LIMITED (EGN.AX)"},
+  {"id":"EGO.AX", "name": "EMPIRE OIL & GAS NL (EGO.AX)"},
+  {"id":"EGOV", "name": "NIC Inc. (EGOV)"},
+  {"id":"EGRX", "name": "Eagle Pharmaceuticals, Inc. (EGRX)"},
+  {"id":"EGS.AX", "name": "EASTERN GOLDFIELDS LIMITED (EGS.AX)"},
+  {"id":"EGT", "name": "Entertainment Gaming Asia Incorporated (EGT)"},
+  {"id":"EGY.AX", "name": "ENERGY TECHNOLOGIES LIMITED (EGY.AX)"},
+  {"id":"EHE.AX", "name": "ESTIA HEALTH LIMITED (EHE.AX)"},
+  {"id":"EHL.AX", "name": "EMECO HOLDINGS LIMITED (EHL.AX)"},
+  {"id":"EHR", "name": "Energy Hunter Resources, Inc. (EHR)"},
+  {"id":"EHTH", "name": "eHealth, Inc. (EHTH)"},
+  {"id":"EIGI", "name": "Endurance International Group Holdings, Inc. (EIGI)"},
+  {"id":"EIGR", "name": "Eiger BioPharmaceuticals, Inc. (EIGR)"},
+  {"id":"EKSO", "name": "Ekso Bionics Holdings, Inc. (EKSO)"},
+  {"id":"ELD.AX", "name": "ELDERS LIMITED (ELD.AX)"},
+  {"id":"ELEC", "name": "Electrum Special Acquisition Corporation (ELEC)"},
+  {"id":"ELECU", "name": "Electrum Special Acquisition Corporation (ELECU)"},
+  {"id":"ELECW", "name": "Electrum Special Acquisition Corporation (ELECW)"},
+  {"id":"ELGX", "name": "Endologix, Inc. (ELGX)"},
+  {"id":"ELK.AX", "name": "ELK PETROLEUM LIMITED (ELK.AX)"},
+  {"id":"ELON", "name": "Echelon Corporation (ELON)"},
+  {"id":"ELOS", "name": "Syneron Medical Ltd. (ELOS)"},
+  {"id":"ELSE", "name": "Electro-Sensors, Inc. (ELSE)"},
+  {"id":"ELT.AX", "name": "ELEMENTOS LIMITED (ELT.AX)"},
+  {"id":"ELTK", "name": "Eltek Ltd. (ELTK)"},
+  {"id":"ELX.AX", "name": "ELLEX MEDICAL LASERS LIMITED (ELX.AX)"},
+  {"id":"EMB.AX", "name": "EMBELTON LIMITED (EMB.AX)"},
+  {"id":"EMC.AX", "name": "EMEFCY GROUP LIMITED (EMC.AX)"},
+  {"id":"EMCB", "name": "WisdomTree Emerging Markets Corporate Bond Fund (EMCB)"},
+  {"id":"EMCF", "name": "Emclaire Financial Corp (EMCF)"},
+  {"id":"EMCG", "name": "WisdomTree Emerging Markets Consumer Growth Fund (EMCG)"},
+  {"id":"EMCI", "name": "EMC Insurance Group Inc. (EMCI)"},
+  {"id":"EME.AX", "name": "ENERGY METALS LTD (EME.AX)"},
+  {"id":"EMF.AX", "name": "EMERGING MARKETS MASTERS FUND (EMF.AX)"},
+  {"id":"EMG.AX", "name": "EMERGENT RESOURCES LIMITED (EMG.AX)"},
+  {"id":"EMH.AX", "name": "EUROPEAN METALS HOLDINGS LIMITED (EMH.AX)"},
+  {"id":"EMIF", "name": "iShares S&P Emerging Markets Infrastructure Index Fund (EMIF)"},
+  {"id":"EMITF", "name": "Elbit Imaging Ltd. (EMITF)"},
+  {"id":"EMKR", "name": "EMCORE Corporation (EMKR)"},
+  {"id":"EML", "name": "Eastern Company (The) (EML)"},
+  {"id":"EML.AX", "name": "EML PAYMENTS LIMITED (EML.AX)"},
+  {"id":"EMMS", "name": "Emmis Communications Corporation (EMMS)"},
+  {"id":"EMR.AX", "name": "EMERALD RESOURCES NL (EMR.AX)"},
+  {"id":"EMU.AX", "name": "EMU NL (EMU.AX)"},
+  {"id":"EMX.AX", "name": "ENERGIA MINERALS LIMITED (EMX.AX)"},
+  {"id":"ENA.AX", "name": "ENSURANCE LTD (ENA.AX)"},
+  {"id":"ENB.AX", "name": "ENEABBA GAS LIMITED (ENB.AX)"},
+  {"id":"ENC.AX", "name": "ENICE HOLDING COMPANY LIMITED (ENC.AX)"},
+  {"id":"ENDP", "name": "Endo International plc (ENDP)"},
+  {"id":"ENFC", "name": "Entegra Financial Corp. (ENFC)"},
+  {"id":"ENG", "name": "ENGlobal Corporation (ENG)"},
+  {"id":"ENL.AX", "name": "EAGLE NICKEL LIMITED (ENL.AX)"},
+  {"id":"ENN.AX", "name": "ELANOR INVESTORS GROUP (ENN.AX)"},
+  {"id":"ENOC", "name": "EnerNOC, Inc. (ENOC)"},
+  {"id":"ENPH", "name": "Enphase Energy, Inc. (ENPH)"},
+  {"id":"ENR.AX", "name": "ENCOUNTER RESOURCES LIMITED (ENR.AX)"},
+  {"id":"ENSG", "name": "The Ensign Group, Inc. (ENSG)"},
+  {"id":"ENT", "name": "Global Eagle Entertainment Inc. (ENT)"},
+  {"id":"ENT.AX", "name": "ENTERPRISE METALS LIMITED (ENT.AX)"},
+  {"id":"ENTA", "name": "Enanta Pharmaceuticals, Inc. (ENTA)"},
+  {"id":"ENTG", "name": "Entegris, Inc. (ENTG)"},
+  {"id":"ENTL", "name": "Entellus Medical, Inc. (ENTL)"},
+  {"id":"ENX.AX", "name": "ENEGEX LIMITED (ENX.AX)"},
+  {"id":"ENZ.AX", "name": "ENZUMO LIMITED (ENZ.AX)"},
+  {"id":"ENZL", "name": "iShares MSCI New Zealand Capped ETF (ENZL)"},
+  {"id":"ENZY          ", "name": "Enzymotec Ltd. (ENZY          )"},
+  {"id":"EOL.AX", "name": "ENERGY ONE LIMITED (EOL.AX)"},
+  {"id":"EOR.AX", "name": "ENHANCED OIL & GAS RECOVERY LIMITED (EOR.AX)"},
+  {"id":"EOS.AX", "name": "ELECTRO OPTIC SYSTEMS HOLDINGS LIMITED (EOS.AX)"},
+  {"id":"EPA.AX", "name": "EPHRAIM RESOURCES LIMITED (EPA.AX)"},
+  {"id":"EPAY", "name": "Bottomline Technologies, Inc. (EPAY)"},
+  {"id":"EPD.AX", "name": "EMPIRED LTD (EPD.AX)"},
+  {"id":"EPIX", "name": "ESSA Pharma Inc. (EPIX)"},
+  {"id":"EPM.AX", "name": "ECLIPSE METALS LIMITED. (EPM.AX)"},
+  {"id":"EPT.AX", "name": "EPAT TECHNOLOGIES LTD (EPT.AX)"},
+  {"id":"EPW.AX", "name": "ERM POWER LIMITED (EPW.AX)"},
+  {"id":"EPZM", "name": "Epizyme, Inc. (EPZM)"},
+  {"id":"EQBK", "name": "Equity Bancshares, Inc. (EQBK)"},
+  {"id":"EQE.AX", "name": "EQUUS MINING LIMITED (EQE.AX)"},
+  {"id":"EQFN", "name": "Equitable Financial Corp. (EQFN)"},
+  {"id":"EQIX", "name": "Equinix, Inc. (EQIX)"},
+  {"id":"EQT.AX", "name": "EQT HOLDINGS LIMITED (EQT.AX)"},
+  {"id":"EQU.AX", "name": "EQUATOR RESOURCES LTD (EQU.AX)"},
+  {"id":"EQX.AX", "name": "EQUATORIAL RESOURCES LIMITED (EQX.AX)"},
+  {"id":"ERA.AX", "name": "ENERGY RESOURCES OF AUSTRALIA LIMITED (ERA.AX)"},
+  {"id":"ERF.AX", "name": "ELANOR RETAIL PROPERTY FUND (ERF.AX)"},
+  {"id":"ERI", "name": "Eldorado Resorts, Inc. (ERI)"},
+  {"id":"ERIC", "name": "Ericsson (ERIC)"},
+  {"id":"ERIE", "name": "Erie Indemnity Company (ERIE)"},
+  {"id":"ERII", "name": "Energy Recovery, Inc. (ERII)"},
+  {"id":"ERJ.AX", "name": "ENERJI LTD (ERJ.AX)"},
+  {"id":"ERL.AX", "name": "EMPIRE RESOURCES LIMITED (ERL.AX)"},
+  {"id":"ERM.AX", "name": "EMMERSON RESOURCES LIMITED (ERM.AX)"},
+  {"id":"ERS", "name": "Empire Resources, Inc. (ERS)"},
+  {"id":"ERX.AX", "name": "EMPEROR RANGE GROUP LIMITED (ERX.AX)"},
+  {"id":"ESBK", "name": "Elmira Savings Bank NY (The) (ESBK)"},
+  {"id":"ESCA", "name": "Escalade, Incorporated (ESCA)"},
+  {"id":"ESE.AX", "name": "ESENSE-LAB LTD (ESE.AX)"},
+  {"id":"ESEA", "name": "Euroseas Ltd. (ESEA)"},
+  {"id":"ESES", "name": "Eco-Stim Energy Solutions, Inc. (ESES)"},
+  {"id":"ESG", "name": "FlexShares STOXX US ESG Impact Index Fund (ESG)"},
+  {"id":"ESGD", "name": "iShares MSCI EAFE ESG Optimized ETF (ESGD)"},
+  {"id":"ESGE", "name": "iShares MSCI EM ESG Optimized ETF (ESGE)"},
+  {"id":"ESGG", "name": "FlexShares STOXX Global ESG Impact Index Fund (ESGG)"},
+  {"id":"ESGR", "name": "Enstar Group Limited (ESGR)"},
+  {"id":"ESGU", "name": "iShares MSCI USA ESG Optimized ETF (ESGU)"},
+  {"id":"ESH.AX", "name": "ESPORTS MOGUL ASIA PACIFIC LIMITED (ESH.AX)"},
+  {"id":"ESI.AX", "name": "ENVIRONMENTAL CLEAN TECHNOLOGIES LIMITED (ESI.AX)"},
+  {"id":"ESIO", "name": "Electro Scientific Industries, Inc. (ESIO)"},
+  {"id":"ESK.AX", "name": "ETHERSTACK PLC (ESK.AX)"},
+  {"id":"ESLT", "name": "Elbit Systems Ltd. (ESLT)"},
+  {"id":"ESM.AX", "name": "ESPERANCE MINERALS LIMITED (ESM.AX)"},
+  {"id":"ESND", "name": "Essendant Inc. (ESND)"},
+  {"id":"ESPR", "name": "Esperion Therapeutics, Inc. (ESPR)"},
+  {"id":"ESR.AX", "name": "ESTRELLA RESOURCES LIMITED (ESR.AX)"},
+  {"id":"ESRX", "name": "Express Scripts Holding Company (ESRX)"},
+  {"id":"ESSA", "name": "ESSA Bancorp, Inc. (ESSA)"},
+  {"id":"ESV.AX", "name": "ESERVGLOBAL LIMITED (ESV.AX)"},
+  {"id":"ESXB", "name": "Community Bankers Trust Corporation. (ESXB)"},
+  {"id":"ETE.AX", "name": "ENTEK ENERGY LTD (ETE.AX)"},
+  {"id":"ETFC", "name": "E*TRADE Financial Corporation (ETFC)"},
+  {"id":"ETRM", "name": "EnteroMedics Inc. (ETRM)"},
+  {"id":"ETSY", "name": "Etsy, Inc. (ETSY)"},
+  {"id":"EUFN", "name": "iShares MSCI Europe Financials Sector Index Fund (EUFN)"},
+  {"id":"EUM.AX", "name": "EUMERALLA RESOURCES LIMITED (EUM.AX)"},
+  {"id":"EUR.AX", "name": "EUROPEAN LITHIUM LIMITED (EUR.AX)"},
+  {"id":"EVAR", "name": "Lombard Medical, Inc. (EVAR)"},
+  {"id":"EVBG", "name": "Everbridge, Inc. (EVBG)"},
+  {"id":"EVBS", "name": "Eastern Virginia Bankshares, Inc. (EVBS)"},
+  {"id":"EVE.AX", "name": "EVE INVESTMENTS LIMITED (EVE.AX)"},
+  {"id":"EVEP", "name": "EV Energy Partners, L.P. (EVEP)"},
+  {"id":"EVGBC", "name": "Eaton Vance NextShares Trust (EVGBC)"},
+  {"id":"EVGN", "name": "Evogene Ltd. (EVGN)"},
+  {"id":"EVK", "name": "Ever-Glory International Group, Inc. (EVK)"},
+  {"id":"EVLMC", "name": "Eaton Vance NextShares Trust II (EVLMC)"},
+  {"id":"EVLV", "name": "EVINE Live Inc. (EVLV)"},
+  {"id":"EVM.AX", "name": "ENVIROMISSION LIMITED (EVM.AX)"},
+  {"id":"EVN.AX", "name": "EVOLUTION MINING LIMITED (EVN.AX)"},
+  {"id":"EVO.AX", "name": "EVOLVE EDUCATION GROUP LIMITED (EVO.AX)"},
+  {"id":"EVOK", "name": "Evoke Pharma, Inc. (EVOK)"},
+  {"id":"EVOL", "name": "Evolving Systems, Inc. (EVOL)"},
+  {"id":"EVS.AX", "name": "ENVIROSUITE LIMITED (EVS.AX)"},
+  {"id":"EVSTC", "name": "Eaton Vance NextShares Trust (EVSTC)"},
+  {"id":"EVT.AX", "name": "EVENT HOSPITALITY AND ENTERTAINMENT LTD (EVT.AX)"},
+  {"id":"EVZ.AX", "name": "EVZ LIMITED (EVZ.AX)"},
+  {"id":"EWBC", "name": "East West Bancorp, Inc. (EWBC)"},
+  {"id":"EWC.AX", "name": "ENERGY WORLD CORPORATION LTD (EWC.AX)"},
+  {"id":"EWE.AX", "name": "EAST WEST ENERGY LIMITED (EWE.AX)"},
+  {"id":"EWZS", "name": "iShares MSCI Brazil Small-Cap ETF (EWZS)"},
+  {"id":"EXA", "name": "Exa Corporation (EXA)"},
+  {"id":"EXAC", "name": "Exactech, Inc. (EXAC)"},
+  {"id":"EXAS", "name": "Exact Sciences Corporation (EXAS)"},
+  {"id":"EXC.AX", "name": "EXTERRA RESOURCES LIMITED (EXC.AX)"},
+  {"id":"EXEL", "name": "Exelixis, Inc. (EXEL)"},
+  {"id":"EXFO", "name": "EXFO Inc (EXFO)"},
+  {"id":"EXG.AX", "name": "EXCELSIOR GOLD LIMITED (EXG.AX)"},
+  {"id":"EXLS", "name": "ExlService Holdings, Inc. (EXLS)"},
+  {"id":"EXO.AX", "name": "ENNOX GROUP LTD (EXO.AX)"},
+  {"id":"EXPD", "name": "Expeditors International of Washington, Inc. (EXPD)"},
+  {"id":"EXPE", "name": "Expedia, Inc. (EXPE)"},
+  {"id":"EXPO", "name": "Exponent, Inc. (EXPO)"},
+  {"id":"EXR.AX", "name": "ELIXIR PETROLEUM LIMITED (EXR.AX)"},
+  {"id":"EXTR", "name": "Extreme Networks, Inc. (EXTR)"},
+  {"id":"EXU.AX", "name": "EXPLAURUM LIMITED (EXU.AX)"},
+  {"id":"EXXI", "name": "Energy XXI Gulf Coast, Inc. (EXXI)"},
+  {"id":"EYEG", "name": "Eyegate Pharmaceuticals, Inc. (EYEG)"},
+  {"id":"EYEGW", "name": "Eyegate Pharmaceuticals, Inc. (EYEGW)"},
+  {"id":"EYES", "name": "Second Sight Medical Products, Inc. (EYES)"},
+  {"id":"EYESW", "name": "Second Sight Medical Products, Inc. (EYESW)"},
+  {"id":"EYM.AX", "name": "ELYSIUM RESOURCES LIMITED (EYM.AX)"},
+  {"id":"EZA.AX", "name": "EZA CORPORATION LTD (EZA.AX)"},
+  {"id":"EZL.AX", "name": "EUROZ LIMITED (EZL.AX)"},
+  {"id":"EZPW", "name": "EZCORP, Inc. (EZPW)"},
+  {"id":"FAAR", "name": "First Trust Alternative Absolute Return Strategy ETF (FAAR)"},
+  {"id":"FAB", "name": "First Trust Multi Cap Value AlphaDEX Fund (FAB)"},
+  {"id":"FAD", "name": "First Trust Multi Cap Growth AlphaDEX Fund (FAD)"},
+  {"id":"FALC", "name": "FalconStor Software, Inc. (FALC)"},
+  {"id":"FALN", "name": "iShares Fallen Angels USD Bond ETF (FALN)"},
+  {"id":"FANG", "name": "Diamondback Energy, Inc. (FANG)"},
+  {"id":"FANH", "name": "Fanhua Inc. (FANH)"},
+  {"id":"FAR.AX", "name": "FAR LIMITED (FAR.AX)"},
+  {"id":"FARM", "name": "Farmer Brothers Company (FARM)"},
+  {"id":"FARO", "name": "FARO Technologies, Inc. (FARO)"},
+  {"id":"FAST", "name": "Fastenal Company (FAST)"},
+  {"id":"FATE", "name": "Fate Therapeutics, Inc. (FATE)"},
+  {"id":"FB", "name": "Facebook, Inc. (FB)"},
+  {"id":"FBIO", "name": "Fortress Biotech, Inc. (FBIO)"},
+  {"id":"FBIZ", "name": "First Business Financial Services, Inc. (FBIZ)"},
+  {"id":"FBMS", "name": "The First Bancshares, Inc. (FBMS)"},
+  {"id":"FBNC", "name": "First Bancorp (FBNC)"},
+  {"id":"FBNK", "name": "First Connecticut Bancorp, Inc. (FBNK)"},
+  {"id":"FBR.AX", "name": "FASTBRICK ROBOTICS LTD (FBR.AX)"},
+  {"id":"FBRC", "name": "FBR & Co (FBRC)"},
+  {"id":"FBSS", "name": "Fauquier Bankshares, Inc. (FBSS)"},
+  {"id":"FBU.AX", "name": "FLETCHER BUILDING LIMITED (FBU.AX)"},
+  {"id":"FBZ", "name": "First Trust Brazil AlphaDEX Fund (FBZ)"},
+  {"id":"FCA", "name": "First Trust China AlphaDEX Fund (FCA)"},
+  {"id":"FCAN", "name": "First Trust Canada AlphaDEX Fund (FCAN)"},
+  {"id":"FCAP", "name": "First Capital, Inc. (FCAP)"},
+  {"id":"FCBC", "name": "First Community Bancshares, Inc. (FCBC)"},
+  {"id":"FCCO", "name": "First Community Corporation (FCCO)"},
+  {"id":"FCCY", "name": "1st Constitution Bancorp (NJ) (FCCY)"},
+  {"id":"FCEF", "name": "First Trust CEF Income Opportunity ETF (FCEF)"},
+  {"id":"FCEL", "name": "FuelCell Energy, Inc. (FCEL)"},
+  {"id":"FCFP", "name": "First Community Financial Partners, Inc. (FCFP)"},
+  {"id":"FCFS", "name": "First Cash, Inc. (FCFS)"},
+  {"id":"FCG.AX", "name": "FRONTIER CAPITAL GROUP LIMITED (FCG.AX)"},
+  {"id":"FCNCA", "name": "First Citizens BancShares, Inc. (FCNCA)"},
+  {"id":"FCR.AX", "name": "FERRUM CRESCENT LIMITED (FCR.AX)"},
+  {"id":"FCSC", "name": "Fibrocell Science Inc (FCSC)"},
+  {"id":"FCT.AX", "name": "FIRSTWAVE CLOUD TECHNOLOGY LIMITED (FCT.AX)"},
+  {"id":"FCVT", "name": "First Trust SSI Strategic Convertible Securities ETF (FCVT)"},
+  {"id":"FDEF", "name": "First Defiance Financial Corp. (FDEF)"},
+  {"id":"FDIV", "name": "First Trust Strategic Income ETF (FDIV)"},
+  {"id":"FDM.AX", "name": "FREEDOM OIL AND GAS LTD (FDM.AX)"},
+  {"id":"FDT", "name": "First Trust Developed Markets Ex-US AlphaDEX Fund (FDT)"},
+  {"id":"FDTS", "name": "First Trust Developed Markets ex-US Small Cap AlphaDEX Fund (FDTS)"},
+  {"id":"FDUS", "name": "Fidus Investment Corporation (FDUS)"},
+  {"id":"FDV.AX", "name": "FRONTIER DIGITAL VENTURES LIMITED (FDV.AX)"},
+  {"id":"FE8.AX", "name": "FASTER ENTERPRISES LTD (FE8.AX)"},
+  {"id":"FEIM", "name": "Frequency Electronics, Inc. (FEIM)"},
+  {"id":"FEL.AX", "name": "FE LIMITED (FEL.AX)"},
+  {"id":"FELE", "name": "Franklin Electric Co., Inc. (FELE)"},
+  {"id":"FEM", "name": "First Trust Emerging Markets AlphaDEX Fund (FEM)"},
+  {"id":"FEMB", "name": "First Trust Emerging Markets Local Currency Bond ETF (FEMB)"},
+  {"id":"FEMS", "name": "First Trust Emerging Markets Small Cap AlphaDEX Fund (FEMS)"},
+  {"id":"FENX", "name": "Fenix Parts, Inc. (FENX)"},
+  {"id":"FEP", "name": "First Trust Europe AlphaDEX Fund (FEP)"},
+  {"id":"FET.AX", "name": "FOLKESTONE EDUCATION TRUST (FET.AX)"},
+  {"id":"FEUZ", "name": "First Trust Eurozone AlphaDEX ETF (FEUZ)"},
+  {"id":"FEX", "name": "First Trust Large Cap Core AlphaDEX Fund (FEX)"},
+  {"id":"FEYE", "name": "FireEye, Inc. (FEYE)"},
+  {"id":"FFBC", "name": "First Financial Bancorp. (FFBC)"},
+  {"id":"FFBCW", "name": "First Financial Bancorp. (FFBCW)"},
+  {"id":"FFC.AX", "name": "FARMAFORCE LIMITED (FFC.AX)"},
+  {"id":"FFG.AX", "name": "FATFISH INTERNET GROUP LTD (FFG.AX)"},
+  {"id":"FFHL", "name": "Fuwei Films (Holdings) Co., Ltd. (FFHL)"},
+  {"id":"FFI.AX", "name": "FFI HOLDINGS LIMITED (FFI.AX)"},
+  {"id":"FFIC", "name": "Flushing Financial Corporation (FFIC)"},
+  {"id":"FFIN", "name": "First Financial Bankshares, Inc. (FFIN)"},
+  {"id":"FFIV", "name": "F5 Networks, Inc. (FFIV)"},
+  {"id":"FFKT", "name": "Farmers Capital Bank Corporation (FFKT)"},
+  {"id":"FFNW", "name": "First Financial Northwest, Inc. (FFNW)"},
+  {"id":"FFT.AX", "name": "FUTURE FIBRE TECHNOLOGIES LIMITED (FFT.AX)"},
+  {"id":"FFWM", "name": "First Foundation Inc. (FFWM)"},
+  {"id":"FGBI", "name": "First Guaranty Bancshares, Inc. (FGBI)"},
+  {"id":"FGEN", "name": "FibroGen, Inc (FGEN)"},
+  {"id":"FGF.AX", "name": "FIRST GROWTH FUNDS LIMITED (FGF.AX)"},
+  {"id":"FGG.AX", "name": "FUTURE GENERATION GLOBAL INVESTMENT COMPANY LIMITED (FGG.AX)"},
+  {"id":"FGM", "name": "First Trust Germany AlphaDEX Fund (FGM)"},
+  {"id":"FGR.AX", "name": "FIRST GRAPHITE LIMITED (FGR.AX)"},
+  {"id":"FGX.AX", "name": "FUTURE GENERATION INVESTMENT COMPANY LIMITED (FGX.AX)"},
+  {"id":"FH", "name": "FORM Holdings Corp. (FH)"},
+  {"id":"FHB", "name": "First Hawaiian, Inc. (FHB)"},
+  {"id":"FHCO", "name": "Female Health Company (The) (FHCO)"},
+  {"id":"FHK", "name": "First Trust Hong Kong AlphaDEX Fund (FHK)"},
+  {"id":"FHS.AX", "name": "FREEHILL MINING LIMITED. (FHS.AX)"},
+  {"id":"FIBK", "name": "First Interstate BancSystem, Inc. (FIBK)"},
+  {"id":"FID.AX", "name": "FIDUCIAN GROUP LIMITED (FID.AX)"},
+  {"id":"FIG.AX", "name": "FREEDOM INSURANCE GROUP LTD (FIG.AX)"},
+  {"id":"FINL", "name": "The Finish Line, Inc. (FINL)"},
+  {"id":"FINQ", "name": "Purefunds Solactive FinTech ETF (FINQ)"},
+  {"id":"FINX", "name": "Global X FinTech ETF (FINX)"},
+  {"id":"FISI", "name": "Financial Institutions, Inc. (FISI)"},
+  {"id":"FISV", "name": "Fiserv, Inc. (FISV)"},
+  {"id":"FITB", "name": "Fifth Third Bancorp (FITB)"},
+  {"id":"FITBI", "name": "Fifth Third Bancorp (FITBI)"},
+  {"id":"FITS", "name": "The Health and Fitness ETF (FITS)"},
+  {"id":"FIVE", "name": "Five Below, Inc. (FIVE)"},
+  {"id":"FIVN", "name": "Five9, Inc. (FIVN)"},
+  {"id":"FIXD", "name": "First Trust TCW Opportunistic Fixed Income ETF (FIXD)"},
+  {"id":"FIZZ", "name": "National Beverage Corp. (FIZZ)"},
+  {"id":"FJP", "name": "First Trust Japan AlphaDEX Fund (FJP)"},
+  {"id":"FKO", "name": "First Trust South Korea AlphaDEX Fund (FKO)"},
+  {"id":"FKU", "name": "First Trust United Kingdom AlphaDEX Fund (FKU)"},
+  {"id":"FLAG", "name": "WeatherStorm Forensic Accounting Long Short ETF (FLAG)"},
+  {"id":"FLAT", "name": "iPath US Treasury Flattener ETN (FLAT)"},
+  {"id":"FLDM", "name": "Fluidigm Corporation (FLDM)"},
+  {"id":"FLEX", "name": "Flex Ltd. (FLEX)"},
+  {"id":"FLGT", "name": "Fulgent Genetics, Inc. (FLGT)"},
+  {"id":"FLIC", "name": "The First of Long Island Corporation (FLIC)"},
+  {"id":"FLIR", "name": "FLIR Systems, Inc. (FLIR)"},
+  {"id":"FLK.AX", "name": "FOLKESTONE LIMITED (FLK.AX)"},
+  {"id":"FLKS", "name": "Flex Pharma, Inc. (FLKS)"},
+  {"id":"FLL", "name": "Full House Resorts, Inc. (FLL)"},
+  {"id":"FLN", "name": "First Trust Latin America AlphaDEX Fund (FLN)"},
+  {"id":"FLN.AX", "name": "FREELANCER LIMITED (FLN.AX)"},
+  {"id":"FLT.AX", "name": "FLIGHT CENTRE TRAVEL GROUP LIMITED (FLT.AX)"},
+  {"id":"FLWS", "name": "1-800 FLOWERS.COM, Inc. (FLWS)"},
+  {"id":"FLXN", "name": "Flexion Therapeutics, Inc. (FLXN)"},
+  {"id":"FLXS", "name": "Flexsteel Industries, Inc. (FLXS)"},
+  {"id":"FMA.AX", "name": "FIRSTMAC MORTGAGE FUNDING TRUST SERIES 1-2007 (FMA.AX)"},
+  {"id":"FMAX", "name": "Full Spectrum Inc. (FMAX)"},
+  {"id":"FMB", "name": "First Trust Managed Municipal ETF (FMB)"},
+  {"id":"FMBH", "name": "First Mid-Illinois Bancshares, Inc. (FMBH)"},
+  {"id":"FMBI", "name": "First Midwest Bancorp, Inc. (FMBI)"},
+  {"id":"FMCI", "name": "Forum Merger Corporation (FMCI)"},
+  {"id":"FMCIU", "name": "Forum Merger Corporation (FMCIU)"},
+  {"id":"FMG.AX", "name": "FORTESCUE METALS GROUP LTD (FMG.AX)"},
+  {"id":"FMI", "name": "Foundation Medicine, Inc. (FMI)"},
+  {"id":"FMK", "name": "First Trust Mega Cap AlphaDEX Fund (FMK)"},
+  {"id":"FML.AX", "name": "FOCUS MINERALS LTD (FML.AX)"},
+  {"id":"FMNB", "name": "Farmers National Banc Corp. (FMNB)"},
+  {"id":"FMS.AX", "name": "FLINDERS MINES LIMITED (FMS.AX)"},
+  {"id":"FNBC", "name": "First NBC Bank Holding Company (FNBC)"},
+  {"id":"FNCX", "name": "Function(x) Inc. (FNCX)"},
+  {"id":"FND.AX", "name": "FINDERS RESOURCES LIMITED (FND.AX)"},
+  {"id":"FNGN", "name": "Financial Engines, Inc. (FNGN)"},
+  {"id":"FNHC", "name": "Federated National Holding Company (FNHC)"},
+  {"id":"FNJN", "name": "Finjan Holdings, Inc. (FNJN)"},
+  {"id":"FNK", "name": "First Trust Mid Cap Value AlphaDEX Fund (FNK)"},
+  {"id":"FNLC", "name": "First Bancorp, Inc (ME) (FNLC)"},
+  {"id":"FNP.AX", "name": "FREEDOM FOODS GROUP LIMITED (FNP.AX)"},
+  {"id":"FNSR", "name": "Finisar Corporation (FNSR)"},
+  {"id":"FNT.AX", "name": "FRONTIER RESOURCES LIMITED (FNT.AX)"},
+  {"id":"FNTE", "name": "FinTech Acquisition Corp. II (FNTE)"},
+  {"id":"FNTEU", "name": "FinTech Acquisition Corp. II (FNTEU)"},
+  {"id":"FNTEW", "name": "FinTech Acquisition Corp. II (FNTEW)"},
+  {"id":"FNWB", "name": "First Northwest Bancorp (FNWB)"},
+  {"id":"FNX", "name": "First Trust Mid Cap Core AlphaDEX Fund (FNX)"},
+  {"id":"FNY", "name": "First Trust Mid Cap Growth AlphaDEX Fund (FNY)"},
+  {"id":"FOANC", "name": "Gabelli NextShares Trust (FOANC)"},
+  {"id":"FOD.AX", "name": "THE FOOD REVOLUTION GROUP LIMITED (FOD.AX)"},
+  {"id":"FOGO", "name": "Fogo de Chao, Inc. (FOGO)"},
+  {"id":"FOLD", "name": "Amicus Therapeutics, Inc. (FOLD)"},
+  {"id":"FOMX", "name": "Foamix Pharmaceuticals Ltd. (FOMX)"},
+  {"id":"FONE", "name": "First Trust NASDAQ Smartphone Index Fund (FONE)"},
+  {"id":"FONR", "name": "Fonar Corporation (FONR)"},
+  {"id":"FOR.AX", "name": "FORAGER AUSTRALIAN SHARES FUND (FOR.AX)"},
+  {"id":"FORD", "name": "Forward Industries, Inc. (FORD)"},
+  {"id":"FORK", "name": "Fuling Global Inc. (FORK)"},
+  {"id":"FORM", "name": "FormFactor, Inc. (FORM)"},
+  {"id":"FORR", "name": "Forrester Research, Inc. (FORR)"},
+  {"id":"FORTY", "name": "Formula Systems (1985) Ltd. (FORTY)"},
+  {"id":"FOSL", "name": "Fossil Group, Inc. (FOSL)"},
+  {"id":"FOX", "name": "Twenty-First Century Fox, Inc. (FOX)"},
+  {"id":"FOXA", "name": "Twenty-First Century Fox, Inc. (FOXA)"},
+  {"id":"FOXF", "name": "Fox Factory Holding Corp. (FOXF)"},
+  {"id":"FOY.AX", "name": "FOY GROUP LIMITED (FOY.AX)"},
+  {"id":"FPA", "name": "First Trust Asia Pacific Ex-Japan AlphaDEX Fund (FPA)"},
+  {"id":"FPAY", "name": "FlexShopper, Inc. (FPAY)"},
+  {"id":"FPC.AX", "name": "FAT PROPHETS GLOBAL CONTRARIAN FUND LTD (FPC.AX)"},
+  {"id":"FPH.AX", "name": "FISHER & PAYKEL HEALTHCARE CORPORATION LIMITED (FPH.AX)"},
+  {"id":"FPRX", "name": "Five Prime Therapeutics, Inc. (FPRX)"},
+  {"id":"FPXI", "name": "First Trust International IPO ETF (FPXI)"},
+  {"id":"FRAN", "name": "Francesca&#39;s Holdings Corporation (FRAN)"},
+  {"id":"FRBA", "name": "First Bank (FRBA)"},
+  {"id":"FRBK", "name": "Republic First Bancorp, Inc. (FRBK)"},
+  {"id":"FRC.AX", "name": "FORTE CONSOLIDATED LIMITED (FRC.AX)"},
+  {"id":"FRE.AX", "name": "FRESHTEL HOLDINGS LIMITED (FRE.AX)"},
+  {"id":"FRED", "name": "Fred&#39;s, Inc. (FRED)"},
+  {"id":"FRGI", "name": "Fiesta Restaurant Group, Inc. (FRGI)"},
+  {"id":"FRI.AX", "name": "FINBAR GROUP LIMITED (FRI.AX)"},
+  {"id":"FRM.AX", "name": "FARM PRIDE FOODS LIMITED (FRM.AX)"},
+  {"id":"FRME", "name": "First Merchants Corporation (FRME)"},
+  {"id":"FRN.AX", "name": "FRASER RANGE METALS GROUP LTD (FRN.AX)"},
+  {"id":"FRP", "name": "FairPoint Communications, Inc. (FRP)"},
+  {"id":"FRPH", "name": "FRP Holdings, Inc. (FRPH)"},
+  {"id":"FRPT", "name": "Freshpet, Inc. (FRPT)"},
+  {"id":"FRSH", "name": "Papa Murphy&#39;s Holdings, Inc. (FRSH)"},
+  {"id":"FRTA", "name": "Forterra, Inc. (FRTA)"},
+  {"id":"FRX.AX", "name": "FLEXIROAM LIMITED (FRX.AX)"},
+  {"id":"FSA.AX", "name": "FSA GROUP LIMITED (FSA.AX)"},
+  {"id":"FSAM", "name": "Fifth Street Asset Management Inc. (FSAM)"},
+  {"id":"FSBC", "name": "FSB Bancorp, Inc. (FSBC)"},
+  {"id":"FSBK", "name": "First South Bancorp Inc (FSBK)"},
+  {"id":"FSBW", "name": "FS Bancorp, Inc. (FSBW)"},
+  {"id":"FSC", "name": "Fifth Street Finance Corp. (FSC)"},
+  {"id":"FSCFL", "name": "Fifth Street Finance Corp. (FSCFL)"},
+  {"id":"FSF.AX", "name": "FONTERRA SHAREHOLDERS' FUND (FSF.AX)"},
+  {"id":"FSFG", "name": "First Savings Financial Group, Inc. (FSFG)"},
+  {"id":"FSFR", "name": "Fifth Street Senior Floating Rate Corp. (FSFR)"},
+  {"id":"FSI.AX", "name": "FLAGSHIP INVESTMENTS LIMITED (FSI.AX)"},
+  {"id":"FSLR", "name": "First Solar, Inc. (FSLR)"},
+  {"id":"FSNN", "name": "Fusion Telecommunications International, Inc. (FSNN)"},
+  {"id":"FSTR", "name": "L.B. Foster Company (FSTR)"},
+  {"id":"FSV", "name": "FirstService Corporation (FSV)"},
+  {"id":"FSZ", "name": "First Trust Switzerland AlphaDEX Fund (FSZ)"},
+  {"id":"FTA", "name": "First Trust Large Cap Value AlphaDEX Fund (FTA)"},
+  {"id":"FTAG", "name": "First Trust Indxx Global Agriculture ETF (FTAG)"},
+  {"id":"FTC", "name": "First Trust Large Cap Growth AlphaDEX Fund (FTC)"},
+  {"id":"FTCS", "name": "First Trust Capital Strength ETF (FTCS)"},
+  {"id":"FTD", "name": "FTD Companies, Inc. (FTD)"},
+  {"id":"FTEK", "name": "Fuel Tech, Inc. (FTEK)"},
+  {"id":"FTEO", "name": "FRONTEO, Inc. (FTEO)"},
+  {"id":"FTGC", "name": "First Trust Global Tactical Commodity Strategy Fund (FTGC)"},
+  {"id":"FTHI", "name": "First Trust High Income ETF (FTHI)"},
+  {"id":"FTLB", "name": "First Trust Low Beta Income ETF (FTLB)"},
+  {"id":"FTNT", "name": "Fortinet, Inc. (FTNT)"},
+  {"id":"FTR", "name": "Frontier Communications Corporation (FTR)"},
+  {"id":"FTRI", "name": "First Trust Indxx Global Natural Resources Income ETF (FTRI)"},
+  {"id":"FTRPR", "name": "Frontier Communications Corporation (FTRPR)"},
+  {"id":"FTSL", "name": "First Trust Senior Loan Fund ETF (FTSL)"},
+  {"id":"FTSM", "name": "First Trust Enhanced Short Maturity ETF (FTSM)"},
+  {"id":"FTT.AX", "name": "FACTOR THERAPEUTICS LIMITED (FTT.AX)"},
+  {"id":"FTW", "name": "First Trust Taiwan AlphaDEX Fund (FTW)"},
+  {"id":"FTXD", "name": "First Trust Nasdaq Retail ETF (FTXD)"},
+  {"id":"FTXG", "name": "First Trust Nasdaq Food & Beverage ETF (FTXG)"},
+  {"id":"FTXH", "name": "First Trust Nasdaq Pharmaceuticals ETF (FTXH)"},
+  {"id":"FTXL", "name": "First Trust Nasdaq Semiconductor ETF (FTXL)"},
+  {"id":"FTXN", "name": "First Trust Nasdaq Oil & Gas ETF (FTXN)"},
+  {"id":"FTXO", "name": "First Trust Nasdaq Bank ETF (FTXO)"},
+  {"id":"FTXR", "name": "First Trust Nasdaq Transportation ETF (FTXR)"},
+  {"id":"FTZ.AX", "name": "FERTOZ LIMITED (FTZ.AX)"},
+  {"id":"FUEL", "name": "Rocket Fuel Inc. (FUEL)"},
+  {"id":"FULLL", "name": "Great Elm Capital Corp. (FULLL)"},
+  {"id":"FULT", "name": "Fulton Financial Corporation (FULT)"},
+  {"id":"FUN.AX", "name": "FUNTASTIC LIMITED (FUN.AX)"},
+  {"id":"FUNC", "name": "First United Corporation (FUNC)"},
+  {"id":"FUND", "name": "Sprott Focus Trust, Inc. (FUND)"},
+  {"id":"FUSB", "name": "First US Bancshares, Inc. (FUSB)"},
+  {"id":"FV", "name": "First Trust Dorsey Wright Focus 5 ETF (FV)"},
+  {"id":"FVC", "name": "First Trust Dorsey Wright Dynamic Focus 5 ETF (FVC)"},
+  {"id":"FVE", "name": "Five Star Senior Living Inc. (FVE)"},
+  {"id":"FWD.AX", "name": "FLEETWOOD CORPORATION LIMITED (FWD.AX)"},
+  {"id":"FWONA", "name": "Liberty Media Corporation (FWONA)"},
+  {"id":"FWONK", "name": "Liberty Media Corporation (FWONK)"},
+  {"id":"FWP", "name": "Forward Pharma A/S (FWP)"},
+  {"id":"FWRD", "name": "Forward Air Corporation (FWRD)"},
+  {"id":"FXJ.AX", "name": "FAIRFAX MEDIA LIMITED (FXJ.AX)"},
+  {"id":"FXL.AX", "name": "FLEXIGROUP LIMITED (FXL.AX)"},
+  {"id":"FYC", "name": "First Trust Small Cap Growth AlphaDEX Fund (FYC)"},
+  {"id":"FYI.AX", "name": "FYI RESOURCES LIMITED (FYI.AX)"},
+  {"id":"FYT", "name": "First Trust Small Cap Value AlphaDEX Fund (FYT)"},
+  {"id":"FYX", "name": "First Trust Small Cap Core AlphaDEX Fund (FYX)"},
+  {"id":"FZO.AX", "name": "FAMILY ZONE CYBER SAFETY LIMITED (FZO.AX)"},
+  {"id":"FZR.AX", "name": "FITZROY RIVER CORPORATION LTD (FZR.AX)"},
+  {"id":"GABC", "name": "German American Bancorp, Inc. (GABC)"},
+  {"id":"GAIA", "name": "Gaia, Inc. (GAIA)"},
+  {"id":"GAIN", "name": "Gladstone Investment Corporation (GAIN)"},
+  {"id":"GAINM", "name": "Gladstone Investment Corporation (GAINM)"},
+  {"id":"GAINN", "name": "Gladstone Investment Corporation (GAINN)"},
+  {"id":"GAINO", "name": "Gladstone Investment Corporation (GAINO)"},
+  {"id":"GALE", "name": "Galena Biopharma, Inc. (GALE)"},
+  {"id":"GALT", "name": "Galectin Therapeutics Inc. (GALT)"},
+  {"id":"GAP.AX", "name": "GALE PACIFIC LIMITED (GAP.AX)"},
+  {"id":"GARS", "name": "Garrison Capital Inc. (GARS)"},
+  {"id":"GASS", "name": "StealthGas, Inc. (GASS)"},
+  {"id":"GBA.AX", "name": "GRANDBRIDGE LIMITED (GBA.AX)"},
+  {"id":"GBCI", "name": "Glacier Bancorp, Inc. (GBCI)"},
+  {"id":"GBDC", "name": "Golub Capital BDC, Inc. (GBDC)"},
+  {"id":"GBE.AX", "name": "GLOBE METALS & MINING LIMITED (GBE.AX)"},
+  {"id":"GBG.AX", "name": "GINDALBIE METALS LTD (GBG.AX)"},
+  {"id":"GBI.AX", "name": "GENERA BIOSYSTEMS LIMITED (GBI.AX)"},
+  {"id":"GBLI", "name": "Global Indemnity Limited (GBLI)"},
+  {"id":"GBLIZ", "name": "Global Indemnity Limited (GBLIZ)"},
+  {"id":"GBM.AX", "name": "GBM GOLD LTD (GBM.AX)"},
+  {"id":"GBNK", "name": "Guaranty Bancorp (GBNK)"},
+  {"id":"GBP.AX", "name": "GLOBAL PETROLEUM LIMITED (GBP.AX)"},
+  {"id":"GBR.AX", "name": "GREAT BOULDER RESOURCES LIMITED (GBR.AX)"},
+  {"id":"GBT", "name": "Global Blood Therapeutics, Inc. (GBT)"},
+  {"id":"GBT.AX", "name": "GBST HOLDINGS LIMITED (GBT.AX)"},
+  {"id":"GBX.AX", "name": "GB ENERGY LIMITED (GBX.AX)"},
+  {"id":"GBZ.AX", "name": "GBM RESOURCES LIMITED (GBZ.AX)"},
+  {"id":"GC1.AX", "name": "GLENNON SMALL COMPANIES LIMITED (GC1.AX)"},
+  {"id":"GCBC", "name": "Greene County Bancorp, Inc. (GCBC)"},
+  {"id":"GCM.AX", "name": "GARDA CAPITAL GROUP (GCM.AX)"},
+  {"id":"GCN.AX", "name": "GOCONNECT LIMITED (GCN.AX)"},
+  {"id":"GCR.AX", "name": "GOLDEN CROSS RESOURCES LTD (GCR.AX)"},
+  {"id":"GCS.AX", "name": "GLOBAL CONSTRUCTION SERVICES LIMITED (GCS.AX)"},
+  {"id":"GCVRZ", "name": "Sanofi (GCVRZ)"},
+  {"id":"GCY.AX", "name": "GASCOYNE RESOURCES LIMITED (GCY.AX)"},
+  {"id":"GDA.AX", "name": "GONDWANA RESOURCES LIMITED (GDA.AX)"},
+  {"id":"GDEN", "name": "Golden Entertainment, Inc. (GDEN)"},
+  {"id":"GDF.AX", "name": "GARDA DIVERSIFIED PROPERTY FUND (GDF.AX)"},
+  {"id":"GDI.AX", "name": "GDI PROPERTY GROUP (GDI.AX)"},
+  {"id":"GDS", "name": "GDS Holdings Limited (GDS)"},
+  {"id":"GEC", "name": "Great Elm Capital Group, Inc.  (GEC)"},
+  {"id":"GECC", "name": "Great Elm Capital Corp. (GECC)"},
+  {"id":"GED.AX", "name": "GOLDEN DEEPS LIMITED. (GED.AX)"},
+  {"id":"GEG.AX", "name": "GRAYS ECOMMERCE GROUP LIMITED (GEG.AX)"},
+  {"id":"GEM.AX", "name": "G8 EDUCATION LIMITED (GEM.AX)"},
+  {"id":"GEMP", "name": "Gemphire Therapeutics Inc. (GEMP)"},
+  {"id":"GENC", "name": "Gencor Industries Inc. (GENC)"},
+  {"id":"GENE", "name": "Genetic Technologies Ltd (GENE)"},
+  {"id":"GENY", "name": "Principal Millennials Index ETF (GENY)"},
+  {"id":"GEOS", "name": "Geospace Technologies Corporation (GEOS)"},
+  {"id":"GERN", "name": "Geron Corporation (GERN)"},
+  {"id":"GES.AX", "name": "GENESIS RESOURCES LIMITED (GES.AX)"},
+  {"id":"GEV.AX", "name": "GLOBAL ENERGY VENTURES LTD (GEV.AX)"},
+  {"id":"GEVO", "name": "Gevo, Inc. (GEVO)"},
+  {"id":"GFED", "name": "Guaranty Federal Bancshares, Inc. (GFED)"},
+  {"id":"GFI.AX", "name": "GLOBAL FORTUNE INVESTMENT LIMITED (GFI.AX)"},
+  {"id":"GFL.AX", "name": "GLOBAL MASTERS FUND LIMITED (GFL.AX)"},
+  {"id":"GFN", "name": "General Finance Corporation (GFN)"},
+  {"id":"GFNCP", "name": "General Finance Corporation (GFNCP)"},
+  {"id":"GFNSL", "name": "General Finance Corporation (GFNSL)"},
+  {"id":"GFY.AX", "name": "GODFREYS GROUP LIMITED (GFY.AX)"},
+  {"id":"GGAL", "name": "Grupo Financiero Galicia S.A. (GGAL)"},
+  {"id":"GGE.AX", "name": "GRAND GULF ENERGY LIMITED (GGE.AX)"},
+  {"id":"GGG.AX", "name": "GREENLAND MINERALS AND ENERGY LIMITED (GGG.AX)"},
+  {"id":"GGH.AX", "name": "GLOBAL GOLD HOLDINGS LIMITED (GGH.AX)"},
+  {"id":"GGL.AX", "name": "THE GRUDEN GROUP LTD (GGL.AX)"},
+  {"id":"GGX.AX", "name": "GAS2GRID LIMITED (GGX.AX)"},
+  {"id":"GHC.AX", "name": "GENERATION HEALTHCARE REIT (GHC.AX)"},
+  {"id":"GHDX", "name": "Genomic Health, Inc. (GHDX)"},
+  {"id":"GID.AX", "name": "GI DYNAMICS, INC (GID.AX)"},
+  {"id":"GIFI", "name": "Gulf Island Fabrication, Inc. (GIFI)"},
+  {"id":"GIGA", "name": "Giga-tronics Incorporated (GIGA)"},
+  {"id":"GIGM", "name": "GigaMedia Limited (GIGM)"},
+  {"id":"GIII", "name": "G-III Apparel Group, LTD. (GIII)"},
+  {"id":"GILD", "name": "Gilead Sciences, Inc. (GILD)"},
+  {"id":"GILT", "name": "Gilat Satellite Networks Ltd. (GILT)"},
+  {"id":"GLA.AX", "name": "GLADIATOR RESOURCES LIMITED (GLA.AX)"},
+  {"id":"GLAD", "name": "Gladstone Capital Corporation (GLAD)"},
+  {"id":"GLADO", "name": "Gladstone Capital Corporation (GLADO)"},
+  {"id":"GLB.AX", "name": "GLOBE INTERNATIONAL LIMITED (GLB.AX)"},
+  {"id":"GLBL", "name": "TerraForm Global, Inc. (GLBL)"},
+  {"id":"GLBR", "name": "Global Brokerage, Inc. (GLBR)"},
+  {"id":"GLBS", "name": "Globus Maritime Limited (GLBS)"},
+  {"id":"GLBZ", "name": "Glen Burnie Bancorp (GLBZ)"},
+  {"id":"GLDD", "name": "Great Lakes Dredge & Dock Corporation (GLDD)"},
+  {"id":"GLDI", "name": "Credit Suisse Gold Shares Covered Calls ETN (GLDI)"},
+  {"id":"GLE.AX", "name": "GLG CORP LTD (GLE.AX)"},
+  {"id":"GLF.AX", "name": "GULF INDUSTRIALS LIMITED (GLF.AX)"},
+  {"id":"GLH.AX", "name": "GLOBAL HEALTH LIMITED (GLH.AX)"},
+  {"id":"GLL.AX", "name": "GALILEE ENERGY LIMITED (GLL.AX)"},
+  {"id":"GLMD", "name": "Galmed Pharmaceuticals Ltd. (GLMD)"},
+  {"id":"GLNG", "name": "Golar LNG Limited (GLNG)"},
+  {"id":"GLPG", "name": "Galapagos NV (GLPG)"},
+  {"id":"GLPI", "name": "Gaming and Leisure Properties, Inc. (GLPI)"},
+  {"id":"GLRE", "name": "Greenlight Reinsurance, Ltd. (GLRE)"},
+  {"id":"GLUU", "name": "Glu Mobile Inc. (GLUU)"},
+  {"id":"GLYC", "name": "GlycoMimetics, Inc. (GLYC)"},
+  {"id":"GMA.AX", "name": "GENWORTH MORTGAGE INSURANCE AUSTRALIA LIMITED (GMA.AX)"},
+  {"id":"GMC.AX", "name": "GULF MANGANESE CORPORATION LIMITED (GMC.AX)"},
+  {"id":"GMD.AX", "name": "GENESIS MINERALS LIMITED (GMD.AX)"},
+  {"id":"GME.AX", "name": "GME RESOURCES LIMITED (GME.AX)"},
+  {"id":"GMG.AX", "name": "GOODMAN GROUP (GMG.AX)"},
+  {"id":"GML.AX", "name": "GATEWAY MINING LIMITED (GML.AX)"},
+  {"id":"GMLP", "name": "Golar LNG Partners LP (GMLP)"},
+  {"id":"GMN.AX", "name": "GOLD MOUNTAIN LIMITED (GMN.AX)"},
+  {"id":"GMP.AX", "name": "GOODMAN PLUS TRUST (GMP.AX)"},
+  {"id":"GMR.AX", "name": "GOLDEN RIM RESOURCES LTD (GMR.AX)"},
+  {"id":"GMV.AX", "name": "G MEDICAL INNOVATIONS HOLDINGS LIMITED (GMV.AX)"},
+  {"id":"GMY.AX", "name": "GOLDFIELDS MONEY LIMITED (GMY.AX)"},
+  {"id":"GNBC", "name": "Green Bancorp, Inc. (GNBC)"},
+  {"id":"GNC.AX", "name": "GRAINCORP LIMITED (GNC.AX)"},
+  {"id":"GNCA", "name": "Genocea Biosciences, Inc. (GNCA)"},
+  {"id":"GNCMA", "name": "General Communication, Inc. (GNCMA)"},
+  {"id":"GNE.AX", "name": "GENESIS ENERGY LIMITED (GNE.AX)"},
+  {"id":"GNG.AX", "name": "GR ENGINEERING SERVICES LIMITED (GNG.AX)"},
+  {"id":"GNMA", "name": "iShares GNMA Bond ETF (GNMA)"},
+  {"id":"GNMK", "name": "GenMark Diagnostics, Inc. (GNMK)"},
+  {"id":"GNMX", "name": "Aevi Genomic Medicine, Inc. (GNMX)"},
+  {"id":"GNRX", "name": "VanEck Vectors Generic Drugs ETF (GNRX)"},
+  {"id":"GNST", "name": "GenSight Biologics S.A. (GNST)"},
+  {"id":"GNTX", "name": "Gentex Corporation (GNTX)"},
+  {"id":"GNUS", "name": "Genius Brands International, Inc. (GNUS)"},
+  {"id":"GNVC", "name": "GenVec, Inc. (GNVC)"},
+  {"id":"GNX.AX", "name": "GENEX POWER LIMITED (GNX.AX)"},
+  {"id":"GOE.AX", "name": "GO ENERGY GROUP LIMITED (GOE.AX)"},
+  {"id":"GOGL", "name": "Golden Ocean Group Limited (GOGL)"},
+  {"id":"GOGO", "name": "Gogo Inc. (GOGO)"},
+  {"id":"GOL.AX", "name": "ETFS METAL SECURITIES AUSTRALIA LIMITED. (GOL.AX)"},
+  {"id":"GOLD", "name": "Randgold Resources Limited (GOLD)"},
+  {"id":"GOO.AX", "name": "GOOROO VENTURES LIMITED (GOO.AX)"},
+  {"id":"GOOD", "name": "Gladstone Commercial Corporation (GOOD)"},
+  {"id":"GOODM", "name": "Gladstone Commercial Corporation (GOODM)"},
+  {"id":"GOODO", "name": "Gladstone Commercial Corporation (GOODO)"},
+  {"id":"GOODP", "name": "Gladstone Commercial Corporation (GOODP)"},
+  {"id":"GOOG", "name": "Alphabet Inc. (GOOG)"},
+  {"id":"GOOGL", "name": "Alphabet Inc. (GOOGL)"},
+  {"id":"GOR.AX", "name": "GOLD ROAD RESOURCES LIMITED (GOR.AX)"},
+  {"id":"GOV", "name": "Government Properties Income Trust (GOV)"},
+  {"id":"GOVNI", "name": "Government Properties Income Trust (GOVNI)"},
+  {"id":"GOW.AX", "name": "GOWING BROS LIMITED (GOW.AX)"},
+  {"id":"GOZ.AX", "name": "GROWTHPOINT PROPERTIES AUSTRALIA (GOZ.AX)"},
+  {"id":"GPAC", "name": "Global Partner Acquisition Corp. (GPAC)"},
+  {"id":"GPACU", "name": "Global Partner Acquisition Corp. (GPACU)"},
+  {"id":"GPACW", "name": "Global Partner Acquisition Corp. (GPACW)"},
+  {"id":"GPIA", "name": "GP Investments Acquisition Corp. (GPIA)"},
+  {"id":"GPIAU", "name": "GP Investments Acquisition Corp. (GPIAU)"},
+  {"id":"GPIAW", "name": "GP Investments Acquisition Corp. (GPIAW)"},
+  {"id":"GPIC", "name": "Gaming Partners International Corporation (GPIC)"},
+  {"id":"GPOR", "name": "Gulfport Energy Corporation (GPOR)"},
+  {"id":"GPP", "name": "Green Plains Partners LP (GPP)"},
+  {"id":"GPP.AX", "name": "GREENPOWER ENERGY LIMITED (GPP.AX)"},
+  {"id":"GPR.AX", "name": "GEOPACIFIC RESOURCES LTD (GPR.AX)"},
+  {"id":"GPRE", "name": "Green Plains, Inc. (GPRE)"},
+  {"id":"GPRO", "name": "GoPro, Inc. (GPRO)"},
+  {"id":"GPS.AX", "name": "GPS ALLIANCE HOLDINGS LIMITED (GPS.AX)"},
+  {"id":"GPT.AX", "name": "GPT GROUP (GPT.AX)"},
+  {"id":"GPX.AX", "name": "GRAPHEX MINING LIMITED (GPX.AX)"},
+  {"id":"GRA.AX", "name": "GRAPHITECORP LIMITED (GRA.AX)"},
+  {"id":"GRB.AX", "name": "GAGE ROADS BREWING CO LIMITED (GRB.AX)"},
+  {"id":"GRBK", "name": "Green Brick Partners, Inc. (GRBK)"},
+  {"id":"GRFS", "name": "Grifols, S.A. (GRFS)"},
+  {"id":"GRID", "name": "First Trust NASDAQ Clean Edge Smart Grid Infrastructure Index  (GRID)"},
+  {"id":"GRIF", "name": "Griffin Industrial Realty, Inc. (GRIF)"},
+  {"id":"GRMN", "name": "Garmin Ltd. (GRMN)"},
+  {"id":"GROW", "name": "U.S. Global Investors, Inc. (GROW)"},
+  {"id":"GRPN", "name": "Groupon, Inc. (GRPN)"},
+  {"id":"GRR.AX", "name": "GRANGE RESOURCES LIMITED. (GRR.AX)"},
+  {"id":"GRV.AX", "name": "GREENVALE ENERGY LIMITED (GRV.AX)"},
+  {"id":"GRVY", "name": "GRAVITY Co., Ltd. (GRVY)"},
+  {"id":"GSB.AX", "name": "AUSTRALIAN GOVERNMENT TREASURY BONDS (GSB.AX)"},
+  {"id":"GSBC", "name": "Great Southern Bancorp, Inc. (GSBC)"},
+  {"id":"GSC.AX", "name": "GLOBAL GEOSCIENCE LIMITED (GSC.AX)"},
+  {"id":"GSE.AX", "name": "GOLDSEARCH LIMITED (GSE.AX)"},
+  {"id":"GSHT", "name": "Gores Holdings II, Inc. (GSHT)"},
+  {"id":"GSHTU", "name": "Gores Holdings II, Inc. (GSHTU)"},
+  {"id":"GSHTW", "name": "Gores Holdings II, Inc. (GSHTW)"},
+  {"id":"GSI.AX", "name": "AUSTRALIAN GOVERNMENT TREASURY INDEXED BONDS (GSI.AX)"},
+  {"id":"GSIT", "name": "GSI Technology, Inc. (GSIT)"},
+  {"id":"GSM", "name": "Ferroglobe PLC (GSM)"},
+  {"id":"GSOL", "name": "Global Sources Ltd. (GSOL)"},
+  {"id":"GSS.AX", "name": "GENETIC SIGNATURES LIMITED (GSS.AX)"},
+  {"id":"GSUM", "name": "Gridsum Holding Inc. (GSUM)"},
+  {"id":"GSVC", "name": "GSV Capital Corp (GSVC)"},
+  {"id":"GSW.AX", "name": "GETSWIFT LIMITED (GSW.AX)"},
+  {"id":"GT", "name": "The Goodyear Tire & Rubber Company (GT)"},
+  {"id":"GTE.AX", "name": "GREAT WESTERN EXPLORATION LIMITED. (GTE.AX)"},
+  {"id":"GTG.AX", "name": "GENETIC TECHNOLOGIES LIMITED (GTG.AX)"},
+  {"id":"GTIM", "name": "Good Times Restaurants Inc. (GTIM)"},
+  {"id":"GTK.AX", "name": "GENTRACK GROUP LIMITED (GTK.AX)"},
+  {"id":"GTLS", "name": "Chart Industries, Inc. (GTLS)"},
+  {"id":"GTN.AX", "name": "GTN LIMITED (GTN.AX)"},
+  {"id":"GTR.AX", "name": "GTI RESOURCES LIMITED (GTR.AX)"},
+  {"id":"GTWN", "name": "Georgetown Bancorp, Inc. (GTWN)"},
+  {"id":"GTXI", "name": "GTx, Inc. (GTXI)"},
+  {"id":"GTY.AX", "name": "GATEWAY LIFESTYLE GROUP (GTY.AX)"},
+  {"id":"GTYH", "name": "GTY Technology Holdings, Inc. (GTYH)"},
+  {"id":"GTYHU", "name": "GTY Technology Holdings, Inc. (GTYHU)"},
+  {"id":"GTYHW", "name": "GTY Technology Holdings, Inc. (GTYHW)"},
+  {"id":"GUD.AX", "name": "G.U.D. HOLDINGS LIMITED (GUD.AX)"},
+  {"id":"GUID", "name": "Guidance Software, Inc. (GUID)"},
+  {"id":"GUL.AX", "name": "GULLEWA LIMITED (GUL.AX)"},
+  {"id":"GULF", "name": "WisdomTree Middle East Dividend Fund (GULF)"},
+  {"id":"GURE", "name": "Gulf Resources, Inc. (GURE)"},
+  {"id":"GVF.AX", "name": "GLOBAL VALUE FUND LIMITED (GVF.AX)"},
+  {"id":"GWA.AX", "name": "GWA GROUP LIMITED. (GWA.AX)"},
+  {"id":"GWGH", "name": "GWG Holdings, Inc (GWGH)"},
+  {"id":"GWPH", "name": "GW Pharmaceuticals Plc (GWPH)"},
+  {"id":"GWR.AX", "name": "GWR GROUP LIMITED (GWR.AX)"},
+  {"id":"GWRS", "name": "Global Water Resources, Inc. (GWRS)"},
+  {"id":"GXL.AX", "name": "GREENCROSS LIMITED (GXL.AX)"},
+  {"id":"GXY.AX", "name": "GALAXY RESOURCES LIMITED (GXY.AX)"},
+  {"id":"GYRO", "name": "Gyrodyne , LLC (GYRO)"},
+  {"id":"GZL.AX", "name": "GAZAL CORPORATION LIMITED (GZL.AX)"},
+  {"id":"HA", "name": "Hawaiian Holdings, Inc. (HA)"},
+  {"id":"HABT", "name": "The Habit Restaurants, Inc. (HABT)"},
+  {"id":"HAFC", "name": "Hanmi Financial Corporation (HAFC)"},
+  {"id":"HAIN", "name": "The Hain Celestial Group, Inc. (HAIN)"},
+  {"id":"HALL", "name": "Hallmark Financial Services, Inc. (HALL)"},
+  {"id":"HALO", "name": "Halozyme Therapeutics, Inc. (HALO)"},
+  {"id":"HAO.AX", "name": "HAOMA MINING NL (HAO.AX)"},
+  {"id":"HAR.AX", "name": "HARANGA RESOURCES LIMITED (HAR.AX)"},
+  {"id":"HAS", "name": "Hasbro, Inc. (HAS)"},
+  {"id":"HAS.AX", "name": "HASTINGS TECHNOLOGY METALS LTD (HAS.AX)"},
+  {"id":"HAV.AX", "name": "HAVILAH RESOURCES LIMITED (HAV.AX)"},
+  {"id":"HAW.AX", "name": "HAWTHORN RESOURCES LIMITED (HAW.AX)"},
+  {"id":"HAWK", "name": "Blackhawk Network Holdings, Inc. (HAWK)"},
+  {"id":"HAYN", "name": "Haynes International, Inc. (HAYN)"},
+  {"id":"HBAN", "name": "Huntington Bancshares Incorporated (HBAN)"},
+  {"id":"HBANN", "name": "Huntington Bancshares Incorporated (HBANN)"},
+  {"id":"HBANO", "name": "Huntington Bancshares Incorporated (HBANO)"},
+  {"id":"HBANP", "name": "Huntington Bancshares Incorporated (HBANP)"},
+  {"id":"HBCP", "name": "Home Bancorp, Inc. (HBCP)"},
+  {"id":"HBHC", "name": "Hancock Holding Company (HBHC)"},
+  {"id":"HBHCL", "name": "Hancock Holding Company (HBHCL)"},
+  {"id":"HBIO", "name": "Harvard Bioscience, Inc. (HBIO)"},
+  {"id":"HBK", "name": "Hamilton Bancorp, Inc. (HBK)"},
+  {"id":"HBMD", "name": "Howard Bancorp, Inc. (HBMD)"},
+  {"id":"HBNC", "name": "Horizon Bancorp (IN) (HBNC)"},
+  {"id":"HBP", "name": "Huttig Building Products, Inc. (HBP)"},
+  {"id":"HBS.AX", "name": "HERITAGE BANK LIMITED (HBS.AX)"},
+  {"id":"HCAP", "name": "Harvest Capital Credit Corporation (HCAP)"},
+  {"id":"HCAPL", "name": "Harvest Capital Credit Corporation (HCAPL)"},
+  {"id":"HCCI", "name": "Heritage-Crystal Clean, Inc. (HCCI)"},
+  {"id":"HCH.AX", "name": "HOT CHILI LIMITED (HCH.AX)"},
+  {"id":"HCKT", "name": "The Hackett Group, Inc. (HCKT)"},
+  {"id":"HCM", "name": "Hutchison China MediTech Limited (HCM)"},
+  {"id":"HCOM", "name": "Hawaiian Telcom Holdco, Inc. (HCOM)"},
+  {"id":"HCS.AX", "name": "HYUNDAI CAPITAL SERVICES, INC. (HCS.AX)"},
+  {"id":"HCSG", "name": "Healthcare Services Group, Inc. (HCSG)"},
+  {"id":"HCT.AX", "name": "HOLISTA COLLTECH LIMITED (HCT.AX)"},
+  {"id":"HDNG", "name": "Hardinge Inc. (HDNG)"},
+  {"id":"HDP", "name": "Hortonworks, Inc. (HDP)"},
+  {"id":"HDS", "name": "HD Supply Holdings, Inc. (HDS)"},
+  {"id":"HDSN", "name": "Hudson Technologies, Inc. (HDSN)"},
+  {"id":"HDX.AX", "name": "HUGHES DRILLING LIMITED (HDX.AX)"},
+  {"id":"HEAR", "name": "Turtle Beach Corporation (HEAR)"},
+  {"id":"HEBT", "name": "Hebron Technology Co., Ltd. (HEBT)"},
+  {"id":"HEES", "name": "H&E Equipment Services, Inc. (HEES)"},
+  {"id":"HEG.AX", "name": "HILL END GOLD LIMITED (HEG.AX)"},
+  {"id":"HELE", "name": "Helen of Troy Limited (HELE)"},
+  {"id":"HFA.AX", "name": "HFA HOLDINGS LIMITED (HFA.AX)"},
+  {"id":"HFBC", "name": "HopFed Bancorp, Inc. (HFBC)"},
+  {"id":"HFBL", "name": "Home Federal Bancorp, Inc. of Louisiana (HFBL)"},
+  {"id":"HFR.AX", "name": "HIGHFIELD RESOURCES LIMITED (HFR.AX)"},
+  {"id":"HFWA", "name": "Heritage Financial Corporation (HFWA)"},
+  {"id":"HGG.AX", "name": "HENDERSON GROUP PLC. (HGG.AX)"},
+  {"id":"HGL.AX", "name": "HUDSON INVESTMENT GROUP LIMITED (HGL.AX)"},
+  {"id":"HGO.AX", "name": "HILLGROVE RESOURCES LIMITED (HGO.AX)"},
+  {"id":"HGSH", "name": "China HGS Real Estate, Inc. (HGSH)"},
+  {"id":"HHL.AX", "name": "HUNTER HALL INTERNATIONAL LIMITED (HHL.AX)"},
+  {"id":"HHM.AX", "name": "HAMPTON HILL MINING NL (HHM.AX)"},
+  {"id":"HHV.AX", "name": "HUNTER HALL GLOBAL VALUE LIMITED (HHV.AX)"},
+  {"id":"HHY.AX", "name": "HHY FUND (HHY.AX)"},
+  {"id":"HIBB", "name": "Hibbett Sports, Inc. (HIBB)"},
+  {"id":"HIFS", "name": "Hingham Institution for Savings (HIFS)"},
+  {"id":"HIG.AX", "name": "HIGHLANDS PACIFIC LIMITED (HIG.AX)"},
+  {"id":"HIHO", "name": "Highway Holdings Limited (HIHO)"},
+  {"id":"HIIQ", "name": "Health Insurance Innovations, Inc. (HIIQ)"},
+  {"id":"HIL.AX", "name": "HILLS LIMITED (HIL.AX)"},
+  {"id":"HIMX", "name": "Himax Technologies, Inc. (HIMX)"},
+  {"id":"HIT.AX", "name": "HITECH GROUP AUSTRALIA LIMITED (HIT.AX)"},
+  {"id":"HJB.AX", "name": "HJB CORPORATION LIMITED (HJB.AX)"},
+  {"id":"HLG", "name": "Hailiang Education Group Inc. (HLG)"},
+  {"id":"HLIT", "name": "Harmonic Inc. (HLIT)"},
+  {"id":"HLNE", "name": "Hamilton Lane Incorporated (HLNE)"},
+  {"id":"HLO.AX", "name": "HELLOWORLD LIMITED (HLO.AX)"},
+  {"id":"HLX.AX", "name": "HELIX RESOURCES LIMITED (HLX.AX)"},
+  {"id":"HMHC", "name": "Houghton Mifflin Harcourt Company (HMHC)"},
+  {"id":"HML.AX", "name": "HENRY MORGAN LIMITED (HML.AX)"},
+  {"id":"HMNF", "name": "HMN Financial, Inc. (HMNF)"},
+  {"id":"HMNY", "name": "Helios and Matheson Analytics Inc (HMNY)"},
+  {"id":"HMO.AX", "name": "HEARMEOUT LIMITED (HMO.AX)"},
+  {"id":"HMST", "name": "HomeStreet, Inc. (HMST)"},
+  {"id":"HMSY", "name": "HMS Holdings Corp (HMSY)"},
+  {"id":"HMTA", "name": "HomeTown Bankshares Corporation (HMTA)"},
+  {"id":"HMTV", "name": "Hemisphere Media Group, Inc. (HMTV)"},
+  {"id":"HMU", "name": "HomeUnion Holdings Inc. (HMU)"},
+  {"id":"HMX.AX", "name": "HAMMER METALS LIMITED (HMX.AX)"},
+  {"id":"HNG.AX", "name": "HGL LIMITED (HNG.AX)"},
+  {"id":"HNH", "name": "Handy & Harman Ltd. (HNH)"},
+  {"id":"HNNA", "name": "Hennessy Advisors, Inc. (HNNA)"},
+  {"id":"HNR.AX", "name": "HANNANS LTD (HNR.AX)"},
+  {"id":"HNRG", "name": "Hallador Energy Company (HNRG)"},
+  {"id":"HOFT", "name": "Hooker Furniture Corporation (HOFT)"},
+  {"id":"HOG.AX", "name": "HAWKLEY OIL AND GAS LIMITED (HOG.AX)"},
+  {"id":"HOLI", "name": "Hollysys Automation Technologies, Ltd. (HOLI)"},
+  {"id":"HOLX", "name": "Hologic, Inc. (HOLX)"},
+  {"id":"HOM.AX", "name": "HOMELOANS LIMITED (HOM.AX)"},
+  {"id":"HOMB", "name": "Home BancShares, Inc. (HOMB)"},
+  {"id":"HONE", "name": "HarborOne Bancorp, Inc. (HONE)"},
+  {"id":"HOPE", "name": "Hope Bancorp, Inc. (HOPE)"},
+  {"id":"HOR.AX", "name": "HORSESHOE METALS LIMITED (HOR.AX)"},
+  {"id":"HOT.AX", "name": "HOTCOPPER HOLDINGS LIMITED (HOT.AX)"},
+  {"id":"HOTR", "name": "Chanticleer Holdings, Inc. (HOTR)"},
+  {"id":"HOTRW", "name": "Chanticleer Holdings, Inc. (HOTRW)"},
+  {"id":"HOVNP", "name": "Hovnanian Enterprises Inc (HOVNP)"},
+  {"id":"HPI.AX", "name": "HOTEL PROPERTY INVESTMENTS (HPI.AX)"},
+  {"id":"HPJ", "name": "Highpower International Inc (HPJ)"},
+  {"id":"HPR.AX", "name": "HIGH PEAK ROYALTIES LIMITED (HPR.AX)"},
+  {"id":"HPT", "name": "Hospitality Properties Trust (HPT)"},
+  {"id":"HQCL", "name": "Hanwha Q CELLS Co., Ltd.  (HQCL)"},
+  {"id":"HQY", "name": "HealthEquity, Inc. (HQY)"},
+  {"id":"HRE.AX", "name": "HUNTSMAN RESOURCES LIMITED (HRE.AX)"},
+  {"id":"HRL.AX", "name": "HRL HOLDINGS LTD (HRL.AX)"},
+  {"id":"HRMN", "name": "Harmony Merger Corp. (HRMN)"},
+  {"id":"HRMNU", "name": "Harmony Merger Corp. (HRMNU)"},
+  {"id":"HRMNW", "name": "Harmony Merger Corp. (HRMNW)"},
+  {"id":"HRN.AX", "name": "HORIZON GOLD LIMITED (HRN.AX)"},
+  {"id":"HRR.AX", "name": "HERON RESOURCES LIMITED (HRR.AX)"},
+  {"id":"HRTX", "name": "Heron Therapeutics, Inc.   (HRTX)"},
+  {"id":"HRZN", "name": "Horizon Technology Finance Corporation (HRZN)"},
+  {"id":"HSGX", "name": "Histogenics Corporation (HSGX)"},
+  {"id":"HSIC", "name": "Henry Schein, Inc. (HSIC)"},
+  {"id":"HSII", "name": "Heidrick & Struggles International, Inc. (HSII)"},
+  {"id":"HSK.AX", "name": "HEEMSKIRK CONSOLIDATED LIMITED (HSK.AX)"},
+  {"id":"HSKA", "name": "Heska Corporation (HSKA)"},
+  {"id":"HSN.AX", "name": "HANSEN TECHNOLOGIES LIMITED (HSN.AX)"},
+  {"id":"HSNI", "name": "HSN, Inc. (HSNI)"},
+  {"id":"HSO.AX", "name": "HEALTHSCOPE LIMITED. (HSO.AX)"},
+  {"id":"HSON", "name": "Hudson Global, Inc. (HSON)"},
+  {"id":"HSTM", "name": "HealthStream, Inc. (HSTM)"},
+  {"id":"HT8.AX", "name": "HARRIS TECHNOLOGY GROUP LIMITED (HT8.AX)"},
+  {"id":"HTA.AX", "name": "HUTCHISON TELECOMMUNICATIONS (AUSTRALIA) LIMITED (HTA.AX)"},
+  {"id":"HTB.AX", "name": "SERIES 2013-1 HARVEY TRUST (HTB.AX)"},
+  {"id":"HTBI", "name": "HomeTrust Bancshares, Inc. (HTBI)"},
+  {"id":"HTBK", "name": "Heritage Commerce Corp (HTBK)"},
+  {"id":"HTBX", "name": "Heat Biologics, Inc. (HTBX)"},
+  {"id":"HTGM", "name": "HTG Molecular Diagnostics, Inc. (HTGM)"},
+  {"id":"HTHT", "name": "China Lodging Group, Limited (HTHT)"},
+  {"id":"HTLD", "name": "Heartland Express, Inc. (HTLD)"},
+  {"id":"HTLF", "name": "Heartland Financial USA, Inc. (HTLF)"},
+  {"id":"HTV.AX", "name": "SERIES 2007-1 HARVEY TRUST (HTV.AX)"},
+  {"id":"HUB.AX", "name": "HUB24 LIMITED (HUB.AX)"},
+  {"id":"HUBG", "name": "Hub Group, Inc. (HUBG)"},
+  {"id":"HUNT", "name": "Hunter Maritime Acquisition Corp. (HUNT)"},
+  {"id":"HUNTU", "name": "Hunter Maritime Acquisition Corp. (HUNTU)"},
+  {"id":"HUNTW", "name": "Hunter Maritime Acquisition Corp. (HUNTW)"},
+  {"id":"HUO.AX", "name": "HUON AQUACULTURE GROUP LIMITED (HUO.AX)"},
+  {"id":"HURC", "name": "Hurco Companies, Inc. (HURC)"},
+  {"id":"HURN", "name": "Huron Consulting Group Inc. (HURN)"},
+  {"id":"HVBC", "name": "HV Bancorp, Inc. (HVBC)"},
+  {"id":"HVN.AX", "name": "HARVEY NORMAN HOLDINGS LIMITED (HVN.AX)"},
+  {"id":"HWBK", "name": "Hawthorn Bancshares, Inc. (HWBK)"},
+  {"id":"HWCC", "name": "Houston Wire & Cable Company (HWCC)"},
+  {"id":"HWK.AX", "name": "HAWKSTONE MINING LIMITED (HWK.AX)"},
+  {"id":"HWKN", "name": "Hawkins, Inc. (HWKN)"},
+  {"id":"HXG.AX", "name": "HEXAGON RESOURCES LIMITED (HXG.AX)"},
+  {"id":"HYGS", "name": "Hydrogenics Corporation (HYGS)"},
+  {"id":"HYLS", "name": "First Trust High Yield Long/Short ETF (HYLS)"},
+  {"id":"HYND", "name": "WisdomTree Negative Duration High Yield Bond Fund (HYND)"},
+  {"id":"HYXE", "name": "iShares iBoxx $ High Yield ex Oil & Gas Corporate Bond ETF (HYXE)"},
+  {"id":"HYZD", "name": "WisdomTree Interest Rate Hedged High Yield Bond Fund (HYZD)"},
+  {"id":"HZN.AX", "name": "HORIZON OIL LIMITED (HZN.AX)"},
+  {"id":"HZNP", "name": "Horizon Pharma plc (HZNP)"},
+  {"id":"HZR.AX", "name": "HAZER GROUP LIMITED (HZR.AX)"},
+  {"id":"IAA.AX", "name": "ISHARES ASIA 50 ETF (IAA.AX)"},
+  {"id":"IAB.AX", "name": "INABOX GROUP LIMITED (IAB.AX)"},
+  {"id":"IAC", "name": "IAC/InterActiveCorp (IAC)"},
+  {"id":"IAG.AX", "name": "INSURANCE AUSTRALIA GROUP LIMITED (IAG.AX)"},
+  {"id":"IAM.AX", "name": "INTIGER GROUP LIMITED (IAM.AX)"},
+  {"id":"IAN.AX", "name": "IAG FINANCE (NEW ZEALAND) LIMITED (IAN.AX)"},
+  {"id":"IART", "name": "Integra LifeSciences Holdings Corporation (IART)"},
+  {"id":"IAU.AX", "name": "INTREPID MINES LIMITED (IAU.AX)"},
+  {"id":"IB8.AX", "name": "IBOSSES CORPORATION LIMITED (IB8.AX)"},
+  {"id":"IBB", "name": "iShares Nasdaq Biotechnology Index Fund (IBB)"},
+  {"id":"IBC.AX", "name": "IRONBARK CAPITAL LIMITED (IBC.AX)"},
+  {"id":"IBCP", "name": "Independent Bank Corporation (IBCP)"},
+  {"id":"IBG.AX", "name": "IRONBARK ZINC LTD (IBG.AX)"},
+  {"id":"IBK.AX", "name": "ISHARES MSCI BRIC ETF (IBK.AX)"},
+  {"id":"IBKC", "name": "IBERIABANK Corporation (IBKC)"},
+  {"id":"IBKCO", "name": "IBERIABANK Corporation (IBKCO)"},
+  {"id":"IBKCP", "name": "IBERIABANK Corporation (IBKCP)"},
+  {"id":"IBKR", "name": "Interactive Brokers Group, Inc. (IBKR)"},
+  {"id":"IBN.AX", "name": "IBUYNEW GROUP LIMITED (IBN.AX)"},
+  {"id":"IBOC", "name": "International Bancshares Corporation (IBOC)"},
+  {"id":"IBTX", "name": "Independent Bank Group, Inc (IBTX)"},
+  {"id":"IBUY", "name": "Amplify Online Retail ETF (IBUY)"},
+  {"id":"ICAD", "name": "icad inc. (ICAD)"},
+  {"id":"ICB.AX", "name": "INDUSTRIAL AND COMMERCIAL BANK OF CHINA LIMITED (ICB.AX)"},
+  {"id":"ICBK", "name": "County Bancorp, Inc. (ICBK)"},
+  {"id":"ICCC", "name": "ImmuCell Corporation (ICCC)"},
+  {"id":"ICCH", "name": "ICC Holdings, Inc. (ICCH)"},
+  {"id":"ICFI", "name": "ICF International, Inc. (ICFI)"},
+  {"id":"ICG.AX", "name": "INCA MINERALS LIMITED (ICG.AX)"},
+  {"id":"ICHR", "name": "Ichor Holdings (ICHR)"},
+  {"id":"ICI.AX", "name": "ICANDY INTERACTIVE LIMITED (ICI.AX)"},
+  {"id":"ICLN", "name": "iShares S&P Global Clean Energy Index Fund (ICLN)"},
+  {"id":"ICLR", "name": "ICON plc (ICLR)"},
+  {"id":"ICN.AX", "name": "ICON ENERGY LIMITED (ICN.AX)"},
+  {"id":"ICON", "name": "Iconix Brand Group, Inc. (ICON)"},
+  {"id":"ICPT", "name": "Intercept Pharmaceuticals, Inc. (ICPT)"},
+  {"id":"ICQ.AX", "name": "ICAR ASIA LIMITED (ICQ.AX)"},
+  {"id":"ICS.AX", "name": "ICSGLOBAL LIMITED (ICS.AX)"},
+  {"id":"ICT.AX", "name": "ICOLLEGE LIMITED (ICT.AX)"},
+  {"id":"ICU.AX", "name": "ISENTRIC LIMITED. (ICU.AX)"},
+  {"id":"ICUI", "name": "ICU Medical, Inc. (ICUI)"},
+  {"id":"ICZ.AX", "name": "INDUS COAL LIMITED (ICZ.AX)"},
+  {"id":"IDA.AX", "name": "INDIANA RESOURCES LIMITED (IDA.AX)"},
+  {"id":"IDC.AX", "name": "INDOCHINE MINING LIMITED (IDC.AX)"},
+  {"id":"IDCC", "name": "InterDigital, Inc. (IDCC)"},
+  {"id":"IDF.AX", "name": "IDOL 2010-1 TRUST (IDF.AX)"},
+  {"id":"IDH.AX", "name": "IDOL 2011-1 TRUST (IDH.AX)"},
+  {"id":"IDJ.AX", "name": "IDOL 2011-2 TRUST (IDJ.AX)"},
+  {"id":"IDLB", "name": "PowerShares FTSE International Low Beta Equal Weight Portfolio (IDLB)"},
+  {"id":"IDO.AX", "name": "INDO MINES LIMITED (IDO.AX)"},
+  {"id":"IDR.AX", "name": "INDUSTRIA REIT (IDR.AX)"},
+  {"id":"IDRA", "name": "Idera Pharmaceuticals, Inc. (IDRA)"},
+  {"id":"IDSA", "name": "Industrial Services of America, Inc. (IDSA)"},
+  {"id":"IDSY", "name": "I.D. Systems, Inc. (IDSY)"},
+  {"id":"IDT.AX", "name": "IDT AUSTRALIA LIMITED (IDT.AX)"},
+  {"id":"IDTI", "name": "Integrated Device Technology, Inc. (IDTI)"},
+  {"id":"IDX.AX", "name": "INTEGRAL DIAGNOSTICS LIMITED (IDX.AX)"},
+  {"id":"IDXG", "name": "Interpace Diagnostics Group, Inc. (IDXG)"},
+  {"id":"IDXX", "name": "IDEXX Laboratories, Inc. (IDXX)"},
+  {"id":"IDZ.AX", "name": "INDOOR SKYDIVE AUSTRALIA GROUP LIMITED (IDZ.AX)"},
+  {"id":"IEC.AX", "name": "INTRA ENERGY CORPORATION LIMITED (IEC.AX)"},
+  {"id":"IEL.AX", "name": "IDP EDUCATION LIMITED (IEL.AX)"},
+  {"id":"IEM.AX", "name": "ISHARES MSCI EMERGING MARKETS ETF (IEM.AX)"},
+  {"id":"IEP", "name": "Icahn Enterprises L.P. (IEP)"},
+  {"id":"IEQ.AX", "name": "INTERNATIONAL EQUITIES CORPORATION LIMITED. (IEQ.AX)"},
+  {"id":"IESC", "name": "IES Holdings, Inc. (IESC)"},
+  {"id":"IEU.AX", "name": "ISHARES EUROPE ETF (IEU.AX)"},
+  {"id":"IEUS", "name": "iShares MSCI Europe Small-Cap ETF (IEUS)"},
+  {"id":"IFEU", "name": "iShares FTSE EPRA/NAREIT Europe Index Fund (IFEU)"},
+  {"id":"IFGL", "name": "iShares FTSE EPRA/NAREIT Global Real Estate ex-U.S. Index Fund (IFGL)"},
+  {"id":"IFL.AX", "name": "IOOF HOLDINGS LIMITED (IFL.AX)"},
+  {"id":"IFM.AX", "name": "INFOMEDIA LTD (IFM.AX)"},
+  {"id":"IFMK", "name": "iFresh Inc. (IFMK)"},
+  {"id":"IFN.AX", "name": "INFIGEN ENERGY (IFN.AX)"},
+  {"id":"IFON", "name": "InfoSonics Corp (IFON)"},
+  {"id":"IFT.AX", "name": "INFRATIL LIMITED. (IFT.AX)"},
+  {"id":"IFV", "name": "First Trust Dorsey Wright International Focus 5 ETF (IFV)"},
+  {"id":"IFX.AX", "name": "INTERNATIONAL FINANCE CORPORATION (IFX.AX)"},
+  {"id":"IGF", "name": "iShares Global Infrastructure ETF (IGF)"},
+  {"id":"IGL.AX", "name": "IVE GROUP LIMITED (IGL.AX)"},
+  {"id":"IGLD", "name": "Internet Gold Golden Lines Ltd. (IGLD)"},
+  {"id":"IGLE", "name": "Eagleline Acquisition Corp. (IGLE)"},
+  {"id":"IGO.AX", "name": "INDEPENDENCE GROUP NL (IGO.AX)"},
+  {"id":"IGOV", "name": "iShares S&P/Citigroup International Treasury Bond Fund (IGOV)"},
+  {"id":"IGS.AX", "name": "INTERNATIONAL GOLDFIELDS LIMITED... (IGS.AX)"},
+  {"id":"IHK.AX", "name": "ISHARES MSCI HONG KONG ETF (IHK.AX)"},
+  {"id":"IHL.AX", "name": "IMPRESSION HEALTHCARE LIMITED (IHL.AX)"},
+  {"id":"IHS.AX", "name": "INTERPOSE HOLDINGS LIMITED (IHS.AX)"},
+  {"id":"III", "name": "Information Services Group, Inc. (III)"},
+  {"id":"IIIN", "name": "Insteel Industries, Inc. (IIIN)"},
+  {"id":"IIJI", "name": "Internet Initiative Japan, Inc. (IIJI)"},
+  {"id":"IIL.AX", "name": "INNATE IMMUNOTHERAPEUTICS LIMITED (IIL.AX)"},
+  {"id":"IIN", "name": "IntriCon Corporation (IIN)"},
+  {"id":"IIVI", "name": "II-VI Incorporated (IIVI)"},
+  {"id":"IJH.AX", "name": "ISHARES S&P MID-CAP ETF (IJH.AX)"},
+  {"id":"IJP.AX", "name": "ISHARES MSCI JAPAN ETF (IJP.AX)"},
+  {"id":"IJR.AX", "name": "ISHARES S&P SMALL-CAP ETF (IJR.AX)"},
+  {"id":"IKE.AX", "name": "IKEGPS GROUP LIMITED (IKE.AX)"},
+  {"id":"IKGH", "name": "Iao Kun Group Holding Company Limited (IKGH)"},
+  {"id":"IKNX", "name": "Ikonics Corporation (IKNX)"},
+  {"id":"IKO.AX", "name": "ISHARES MSCI SOUTH KOREA CAPPED ETF (IKO.AX)"},
+  {"id":"IKW.AX", "name": "IKWEZI MINING LIMITED (IKW.AX)"},
+  {"id":"ILG", "name": "ILG, Inc (ILG)"},
+  {"id":"ILMN", "name": "Illumina, Inc. (ILMN)"},
+  {"id":"ILU.AX", "name": "ILUKA RESOURCES LIMITED (ILU.AX)"},
+  {"id":"IMA.AX", "name": "IMAGE RESOURCES NL (IMA.AX)"},
+  {"id":"IMC.AX", "name": "IMMURON LIMITED (IMC.AX)"},
+  {"id":"IMD.AX", "name": "IMDEX LIMITED (IMD.AX)"},
+  {"id":"IMDZ", "name": "Immune Design Corp. (IMDZ)"},
+  {"id":"IMED", "name": "PureFunds ETFx HealthTech ETF (IMED)"},
+  {"id":"IMF.AX", "name": "IMF BENTHAM LIMITED (IMF.AX)"},
+  {"id":"IMG.AX", "name": "INTERSTAR MILLENNIUM SERIES 2002-1G TRUST (IMG.AX)"},
+  {"id":"IMGN", "name": "ImmunoGen, Inc. (IMGN)"},
+  {"id":"IMI", "name": "Intermolecular, Inc. (IMI)"},
+  {"id":"IMI.AX", "name": "IM MEDICAL LTD (IMI.AX)"},
+  {"id":"IMK.AX", "name": "INTERSTAR MILLENNIUM SERIES 2004-2G TRUST (IMK.AX)"},
+  {"id":"IMKTA", "name": "Ingles Markets, Incorporated (IMKTA)"},
+  {"id":"IMMR", "name": "Immersion Corporation (IMMR)"},
+  {"id":"IMMU", "name": "Immunomedics, Inc. (IMMU)"},
+  {"id":"IMMY", "name": "Imprimis Pharmaceuticals, Inc. (IMMY)"},
+  {"id":"IMN.AX", "name": "INTERSTAR MILLENNIUM SERIES 2004-5 TRUST (IMN.AX)"},
+  {"id":"IMNP          ", "name": "Immune Pharmaceuticals Inc. (IMNP          )"},
+  {"id":"IMO.AX", "name": "INTERSTAR MILLENNIUM SERIES 2005-2L TRUST (IMO.AX)"},
+  {"id":"IMOS", "name": "ChipMOS TECHNOLOGIES INC. (IMOS)"},
+  {"id":"IMPV", "name": "Imperva, Inc. (IMPV)"},
+  {"id":"IMQ.AX", "name": "INTERSTAR MILLENNIUM SERIES 2004-1E TRUST (IMQ.AX)"},
+  {"id":"IMU.AX", "name": "IMUGENE LIMITED (IMU.AX)"},
+  {"id":"IMX.AX", "name": "INTERSTAR MILLENNIUM SERIES 2003-3G TRUST (IMX.AX)"},
+  {"id":"INA.AX", "name": "INGENIA COMMUNITIES GROUP (INA.AX)"},
+  {"id":"INAP", "name": "Internap Corporation (INAP)"},
+  {"id":"INB.AX", "name": "INTERSTAR MILLENNIUM SERIES 2006-2G TRUST (INB.AX)"},
+  {"id":"INBK", "name": "First Internet Bancorp (INBK)"},
+  {"id":"INBKL", "name": "First Internet Bancorp (INBKL)"},
+  {"id":"INCR", "name": "INC Research Holdings, Inc. (INCR)"},
+  {"id":"INCY", "name": "Incyte Corporation (INCY)"},
+  {"id":"IND.AX", "name": "INDUS ENERGY NL (IND.AX)"},
+  {"id":"INDB", "name": "Independent Bank Corp. (INDB)"},
+  {"id":"INDY", "name": "iShares S&P India Nifty 50 Index Fund (INDY)"},
+  {"id":"INF.AX", "name": "INDIA FUND LIMITED. (INF.AX)"},
+  {"id":"INFI", "name": "Infinity Pharmaceuticals, Inc. (INFI)"},
+  {"id":"INFN", "name": "Infinera Corporation (INFN)"},
+  {"id":"INFO", "name": "IHS Markit Ltd. (INFO)"},
+  {"id":"INFR", "name": "Legg Mason Global Infrastructure ETF (INFR)"},
+  {"id":"ING.AX", "name": "INGHAMS GROUP LIMITED (ING.AX)"},
+  {"id":"INGN", "name": "Inogen, Inc (INGN)"},
+  {"id":"INH.AX", "name": "INTERSTAR MILLENNIUM SERIES 2006-4H TRUST (INH.AX)"},
+  {"id":"INK.AX", "name": "INDAGO ENERGY LIMITED (INK.AX)"},
+  {"id":"INM.AX", "name": "IRON MOUNTAIN INCORPORATED (INM.AX)"},
+  {"id":"INN.AX", "name": "INTERSTAR MILLENNIUM SERIES 2006-3L TRUST (INN.AX)"},
+  {"id":"INNL", "name": "Innocoll Holdings (INNL)"},
+  {"id":"INO", "name": "Inovio Pharmaceuticals, Inc. (INO)"},
+  {"id":"INOD", "name": "Innodata Inc. (INOD)"},
+  {"id":"INOV", "name": "Inovalon Holdings, Inc. (INOV)"},
+  {"id":"INPX", "name": "Inpixon  (INPX)"},
+  {"id":"INSE", "name": "Inspired Entertainment, Inc. (INSE)"},
+  {"id":"INSEW", "name": "Inspired Entertainment, Inc. (INSEW)"},
+  {"id":"INSG", "name": "Inseego Corp. (INSG)"},
+  {"id":"INSM", "name": "Insmed, Inc. (INSM)"},
+  {"id":"INSY", "name": "Insys Therapeutics, Inc. (INSY)"},
+  {"id":"INTC", "name": "Intel Corporation (INTC)"},
+  {"id":"INTG", "name": "The Intergroup Corporation (INTG)"},
+  {"id":"INTL", "name": "INTL FCStone Inc. (INTL)"},
+  {"id":"INTU", "name": "Intuit Inc. (INTU)"},
+  {"id":"INTX", "name": "Intersections, Inc. (INTX)"},
+  {"id":"INV.AX", "name": "INVESTSMART GROUP LIMITED (INV.AX)"},
+  {"id":"INVA", "name": "Innoviva, Inc. (INVA)"},
+  {"id":"INVE", "name": "Identiv, Inc. (INVE)"},
+  {"id":"INVT", "name": "Inventergy Global, Inc. (INVT)"},
+  {"id":"INWK", "name": "InnerWorkings, Inc. (INWK)"},
+  {"id":"IOD.AX", "name": "IODM LIMITED (IOD.AX)"},
+  {"id":"IOF.AX", "name": "INVESTA OFFICE FUND (IOF.AX)"},
+  {"id":"IOG.AX", "name": "INCREMENTAL OIL AND GAS LIMITED (IOG.AX)"},
+  {"id":"IONS", "name": "Ionis Pharmaceuticals, Inc. (IONS)"},
+  {"id":"IOO.AX", "name": "ISHARES GLOBAL 100 ETF (IOO.AX)"},
+  {"id":"IOSP", "name": "Innospec Inc. (IOSP)"},
+  {"id":"IOT.AX", "name": "IOT GROUP LIMITED (IOT.AX)"},
+  {"id":"IOTS", "name": "Adesto Technologies Corporation (IOTS)"},
+  {"id":"IP1.AX", "name": "INTEGRATED PAYMENT TECHNOLOGIES LIMITED (IP1.AX)"},
+  {"id":"IPAR", "name": "Inter Parfums, Inc. (IPAR)"},
+  {"id":"IPAS", "name": "iPass Inc. (IPAS)"},
+  {"id":"IPB.AX", "name": "IPB PETROLEUM LIMITED (IPB.AX)"},
+  {"id":"IPC.AX", "name": "IMPERIAL PACIFIC LIMITED (IPC.AX)"},
+  {"id":"IPCC", "name": "Infinity Property and Casualty Corporation (IPCC)"},
+  {"id":"IPCI", "name": "Intellipharmaceutics International Inc. (IPCI)"},
+  {"id":"IPD.AX", "name": "IMPEDIMED LIMITED (IPD.AX)"},
+  {"id":"IPDN", "name": "Professional Diversity Network, Inc. (IPDN)"},
+  {"id":"IPE.AX", "name": "IPE LIMITED (IPE.AX)"},
+  {"id":"IPGP", "name": "IPG Photonics Corporation (IPGP)"},
+  {"id":"IPH.AX", "name": "IPH LIMITED (IPH.AX)"},
+  {"id":"IPHS", "name": "Innophos Holdings, Inc. (IPHS)"},
+  {"id":"IPKW", "name": "PowerShares International BuyBack Achievers Portfolio (IPKW)"},
+  {"id":"IPL.AX", "name": "INCITEC PIVOT LIMITED (IPL.AX)"},
+  {"id":"IPT.AX", "name": "IMPACT MINERALS LIMITED (IPT.AX)"},
+  {"id":"IPWR", "name": "Ideal Power Inc. (IPWR)"},
+  {"id":"IPXL", "name": "Impax Laboratories, Inc. (IPXL)"},
+  {"id":"IQ3.AX", "name": "IQ3CORP LIMITED (IQ3.AX)"},
+  {"id":"IRBT", "name": "iRobot Corporation (IRBT)"},
+  {"id":"IRC.AX", "name": "INTERMIN RESOURCES LIMITED (IRC.AX)"},
+  {"id":"IRCP", "name": "IRSA Propiedades Comerciales S.A. (IRCP)"},
+  {"id":"IRD.AX", "name": "IRON ROAD LIMITED (IRD.AX)"},
+  {"id":"IRDM", "name": "Iridium Communications Inc (IRDM)"},
+  {"id":"IRDMB", "name": "Iridium Communications Inc (IRDMB)"},
+  {"id":"IRE.AX", "name": "IRESS LIMITED (IRE.AX)"},
+  {"id":"IRI.AX", "name": "INTEGRATED RESEARCH LIMITED (IRI.AX)"},
+  {"id":"IRIX", "name": "IRIDEX Corporation (IRIX)"},
+  {"id":"IRL.AX", "name": "INDIA RESOURCES LIMITED (IRL.AX)"},
+  {"id":"IRMD", "name": "iRadimed Corporation (IRMD)"},
+  {"id":"IROQ", "name": "IF Bancorp, Inc. (IROQ)"},
+  {"id":"IRTC", "name": "iRhythm Technologies, Inc. (IRTC)"},
+  {"id":"IRU.AX", "name": "ISHARES RUSSELL 2000 ETF (IRU.AX)"},
+  {"id":"IRWD", "name": "Ironwood Pharmaceuticals, Inc. (IRWD)"},
+  {"id":"IS3.AX", "name": "I SYNERGY GROUP LIMITED (IS3.AX)"},
+  {"id":"ISBC", "name": "Investors Bancorp, Inc. (ISBC)"},
+  {"id":"ISCA", "name": "International Speedway Corporation (ISCA)"},
+  {"id":"ISD.AX", "name": "ISENTIA GROUP LIMITED (ISD.AX)"},
+  {"id":"ISG.AX", "name": "ISHARES MSCI SINGAPORE CAPPED ETF (ISG.AX)"},
+  {"id":"ISH.AX", "name": "ISHINE INTERNATIONAL RESOURCES LIMITED (ISH.AX)"},
+  {"id":"ISHG", "name": "iShares S&P/Citigroup 1-3 Year International Treasury Bond Fun (ISHG)"},
+  {"id":"ISIG", "name": "Insignia Systems, Inc. (ISIG)"},
+  {"id":"ISLE", "name": "Isle of Capri Casinos, Inc. (ISLE)"},
+  {"id":"ISM", "name": "Navient Corporation (ISM)"},
+  {"id":"ISNS", "name": "Image Sensing Systems, Inc. (ISNS)"},
+  {"id":"ISRG", "name": "Intuitive Surgical, Inc. (ISRG)"},
+  {"id":"ISRL", "name": "Isramco, Inc. (ISRL)"},
+  {"id":"ISSC", "name": "Innovative Solutions and Support, Inc. (ISSC)"},
+  {"id":"ISTR", "name": "Investar Holding Corporation (ISTR)"},
+  {"id":"ISU.AX", "name": "ISELECT LIMITED. (ISU.AX)"},
+  {"id":"ISX.AX", "name": "ISIGNTHIS LTD (ISX.AX)"},
+  {"id":"ITCI", "name": "Intra-Cellular Therapies Inc. (ITCI)"},
+  {"id":"ITD.AX", "name": "ITL LIMITED (ITD.AX)"},
+  {"id":"ITEK", "name": "Inotek Pharmaceuticals Corporation (ITEK)"},
+  {"id":"ITEQ", "name": "BlueStar TA-BIGITech Israel Technology ETF (ITEQ)"},
+  {"id":"ITI", "name": "Iteris, Inc. (ITI)"},
+  {"id":"ITIC", "name": "Investors Title Company (ITIC)"},
+  {"id":"ITL.AX", "name": "INTEGRATED MEDIA TECHNOLOGY LIMITED (ITL.AX)"},
+  {"id":"ITRI", "name": "Itron, Inc. (ITRI)"},
+  {"id":"ITRN", "name": "Ituran Location and Control Ltd. (ITRN)"},
+  {"id":"ITUS", "name": "ITUS Corporation (ITUS)"},
+  {"id":"ITW.AX", "name": "ISHARES MSCI TAIWAN CAPPED ETF (ITW.AX)"},
+  {"id":"IVAC", "name": "Intevac, Inc. (IVAC)"},
+  {"id":"IVC.AX", "name": "INVOCARE LIMITED (IVC.AX)"},
+  {"id":"IVE.AX", "name": "ISHARES MSCI EAFE ETF (IVE.AX)"},
+  {"id":"IVENC", "name": "Ivy NextShares (IVENC)"},
+  {"id":"IVFGC", "name": "Ivy NextShares (IVFGC)"},
+  {"id":"IVFVC", "name": "Ivy NextShares (IVFVC)"},
+  {"id":"IVO.AX", "name": "INVIGOR GROUP LIMITED (IVO.AX)"},
+  {"id":"IVQ.AX", "name": "INVITROCUE LIMITED (IVQ.AX)"},
+  {"id":"IVR.AX", "name": "INVESTIGATOR RESOURCES LTD (IVR.AX)"},
+  {"id":"IVT.AX", "name": "INVENTIS LIMITED (IVT.AX)"},
+  {"id":"IVTY", "name": "Invuity, Inc. (IVTY)"},
+  {"id":"IVV.AX", "name": "ISHARES S&P 500 ETF (IVV.AX)"},
+  {"id":"IVX.AX", "name": "INVION LIMITED (IVX.AX)"},
+  {"id":"IXUS", "name": "iShares Core MSCI Total International Stock ETF (IXUS)"},
+  {"id":"IXYS", "name": "IXYS Corporation (IXYS)"},
+  {"id":"IZEA", "name": "IZEA Inc. (IZEA)"},
+  {"id":"IZZ.AX", "name": "ISHARES CHINA LARGE-CAP ETF (IZZ.AX)"},
+  {"id":"JACK", "name": "Jack In The Box Inc. (JACK)"},
+  {"id":"JAGX", "name": "Jaguar Animal Health, Inc. (JAGX)"},
+  {"id":"JAKK", "name": "JAKKS Pacific, Inc. (JAKK)"},
+  {"id":"JAL.AX", "name": "JAMESON RESOURCES LIMITED (JAL.AX)"},
+  {"id":"JASN", "name": "Jason Industries, Inc. (JASN)"},
+  {"id":"JASNW", "name": "Jason Industries, Inc. (JASNW)"},
+  {"id":"JASO", "name": "JA Solar Holdings, Co., Ltd. (JASO)"},
+  {"id":"JAT.AX", "name": "JATENERGY LIMITED (JAT.AX)"},
+  {"id":"JAZZ", "name": "Jazz Pharmaceuticals plc (JAZZ)"},
+  {"id":"JBH.AX", "name": "JB HI-FI LIMITED (JBH.AX)"},
+  {"id":"JBHT", "name": "J.B. Hunt Transport Services, Inc. (JBHT)"},
+  {"id":"JBLU", "name": "JetBlue Airways Corporation (JBLU)"},
+  {"id":"JBSS", "name": "John B. Sanfilippo & Son, Inc. (JBSS)"},
+  {"id":"JCI.AX", "name": "JC INTERNATIONAL GROUP LIMITED (JCI.AX)"},
+  {"id":"JCOM", "name": "j2 Global, Inc. (JCOM)"},
+  {"id":"JCS", "name": "Communications Systems, Inc. (JCS)"},
+  {"id":"JCS.AX", "name": "JCURVE SOLUTIONS LTD (JCS.AX)"},
+  {"id":"JCTCF", "name": "Jewett-Cameron Trading Company (JCTCF)"},
+  {"id":"JD", "name": "JD.com, Inc. (JD)"},
+  {"id":"JHC.AX", "name": "JAPARA HEALTHCARE LIMITED (JHC.AX)"},
+  {"id":"JHL.AX", "name": "JAYEX HEALTHCARE LIMITED (JHL.AX)"},
+  {"id":"JHX.AX", "name": "JAMES HARDIE INDUSTRIES PLC (JHX.AX)"},
+  {"id":"JIN.AX", "name": "JUMBO INTERACTIVE LIMITED (JIN.AX)"},
+  {"id":"JIP.AX", "name": "JACK-IN GROUP LIMITED (JIP.AX)"},
+  {"id":"JIVE", "name": "Jive Software, Inc. (JIVE)"},
+  {"id":"JJF.AX", "name": "JIAJIAFU MODERN AGRICULTURE LIMITED (JJF.AX)"},
+  {"id":"JJSF", "name": "J & J Snack Foods Corp. (JJSF)"},
+  {"id":"JKA.AX", "name": "JACKA RESOURCES LIMITED (JKA.AX)"},
+  {"id":"JKHY", "name": "Jack Henry & Associates, Inc. (JKHY)"},
+  {"id":"JKI", "name": "iShares Morningstar Mid-Cap ETF (JKI)"},
+  {"id":"JKL.AX", "name": "JUSTKAPITAL LIMITED (JKL.AX)"},
+  {"id":"JMBA", "name": "Jamba, Inc. (JMBA)"},
+  {"id":"JMU", "name": "JMU Limited (JMU)"},
+  {"id":"JNCE", "name": "Jounce Therapeutics, Inc. (JNCE)"},
+  {"id":"JNP", "name": "Juniper Pharmaceuticals, Inc. (JNP)"},
+  {"id":"JOBS", "name": "51job, Inc. (JOBS)"},
+  {"id":"JOUT", "name": "Johnson Outdoors Inc. (JOUT)"},
+  {"id":"JPR.AX", "name": "JUPITER ENERGY LIMITED (JPR.AX)"},
+  {"id":"JRJC", "name": "China Finance Online Co. Limited (JRJC)"},
+  {"id":"JRL.AX", "name": "JINDALEE RESOURCES LIMITED (JRL.AX)"},
+  {"id":"JRV.AX", "name": "JERVOIS MINING LIMITED (JRV.AX)"},
+  {"id":"JRVR", "name": "James River Group Holdings, Ltd. (JRVR)"},
+  {"id":"JSM", "name": "Navient Corporation (JSM)"},
+  {"id":"JSMD", "name": "Janus Small/Mid Cap Growth Alpha ETF (JSMD)"},
+  {"id":"JSML", "name": "Janus Small Cap Growth Alpha ETF (JSML)"},
+  {"id":"JSYN", "name": "Jensyn Acquistion Corp. (JSYN)"},
+  {"id":"JSYNR", "name": "Jensyn Acquistion Corp. (JSYNR)"},
+  {"id":"JSYNU", "name": "Jensyn Acquistion Corp. (JSYNU)"},
+  {"id":"JSYNW", "name": "Jensyn Acquistion Corp. (JSYNW)"},
+  {"id":"JTPY", "name": "JetPay Corporation (JTPY)"},
+  {"id":"JUNO", "name": "Juno Therapeutics, Inc. (JUNO)"},
+  {"id":"JVA", "name": "Coffee Holding Co., Inc. (JVA)"},
+  {"id":"JVG.AX", "name": "JV GLOBAL LIMITED (JVG.AX)"},
+  {"id":"JXSB", "name": "Jacksonville Bancorp Inc. (JXSB)"},
+  {"id":"JYC.AX", "name": "JOYCE CORPORATION LTD (JYC.AX)"},
+  {"id":"JYNT", "name": "The Joint Corp. (JYNT)"},
+  {"id":"K2F.AX", "name": "K2FLY LIMITED (K2F.AX)"},
+  {"id":"K2P.AX", "name": "KORE POTASH LIMITED (K2P.AX)"},
+  {"id":"KAACU", "name": "Kayne Anderson Acquisition Corp. (KAACU)"},
+  {"id":"KAB.AX", "name": "KABOKO MINING LIMITED (KAB.AX)"},
+  {"id":"KAI.AX", "name": "KAIROS MINERALS LIMITED (KAI.AX)"},
+  {"id":"KALU", "name": "Kaiser Aluminum Corporation (KALU)"},
+  {"id":"KALV", "name": "KalVista Pharmaceuticals, Inc. (KALV)"},
+  {"id":"KAM.AX", "name": "K2 ASSET MANAGEMENT HOLDINGS LTD (KAM.AX)"},
+  {"id":"KANG", "name": "iKang Healthcare Group, Inc. (KANG)"},
+  {"id":"KAR.AX", "name": "KAROON GAS AUSTRALIA LIMITED (KAR.AX)"},
+  {"id":"KAS.AX", "name": "KASBAH RESOURCES LIMITED (KAS.AX)"},
+  {"id":"KAT.AX", "name": "KATANA CAPITAL LIMITED (KAT.AX)"},
+  {"id":"KBAL", "name": "Kimball International, Inc. (KBAL)"},
+  {"id":"KBC.AX", "name": "KEYBRIDGE CAPITAL LIMITED (KBC.AX)"},
+  {"id":"KBL.AX", "name": "KBL MINING LIMITED (KBL.AX)"},
+  {"id":"KBSF", "name": "KBS Fashion Group Limited (KBSF)"},
+  {"id":"KBU.AX", "name": "KABUNI LTD (KBU.AX)"},
+  {"id":"KBWB", "name": "PowerShares KBW Bank Portfolio (KBWB)"},
+  {"id":"KBWD", "name": "PowerShares KBW High Dividend Yield Financial Portfolio (KBWD)"},
+  {"id":"KBWP", "name": "PowerShares KBW Property & Casualty Insurance Portfolio (KBWP)"},
+  {"id":"KBWR", "name": "PowerShares KBW Regional Banking Portfolio (KBWR)"},
+  {"id":"KBWY", "name": "PowerShares KBW Premium Yield Equity REIT Portfolio (KBWY)"},
+  {"id":"KCAP", "name": "KCAP Financial, Inc. (KCAP)"},
+  {"id":"KCN.AX", "name": "KINGSGATE CONSOLIDATED LIMITED. (KCN.AX)"},
+  {"id":"KDR.AX", "name": "KIDMAN RESOURCES LIMITED (KDR.AX)"},
+  {"id":"KE", "name": "Kimball Electronics, Inc. (KE)"},
+  {"id":"KELYA", "name": "Kelly Services, Inc. (KELYA)"},
+  {"id":"KELYB", "name": "Kelly Services, Inc. (KELYB)"},
+  {"id":"KEQU", "name": "Kewaunee Scientific Corporation (KEQU)"},
+  {"id":"KERX", "name": "Keryx Biopharmaceuticals, Inc. (KERX)"},
+  {"id":"KEY.AX", "name": "KEY PETROLEUM LIMITED (KEY.AX)"},
+  {"id":"KEYW", "name": "The KEYW Holding Corporation (KEYW)"},
+  {"id":"KFE.AX", "name": "KOGI IRON LIMITED (KFE.AX)"},
+  {"id":"KFFB", "name": "Kentucky First Federal Bancorp (KFFB)"},
+  {"id":"KFG.AX", "name": "KINGFORM HEALTH HOMETEXTILE GROUP LIMITED (KFG.AX)"},
+  {"id":"KFRC", "name": "Kforce, Inc. (KFRC)"},
+  {"id":"KFW.AX", "name": "KFW (KFW.AX)"},
+  {"id":"KGD.AX", "name": "KULA GOLD LIMITED (KGD.AX)"},
+  {"id":"KGJI", "name": "Kingold Jewelry Inc. (KGJI)"},
+  {"id":"KGL.AX", "name": "KGL RESOURCES LIMITED (KGL.AX)"},
+  {"id":"KGM.AX", "name": "KALNORTH GOLD MINES LIMITED (KGM.AX)"},
+  {"id":"KGN.AX", "name": "KOGAN.COM LTD (KGN.AX)"},
+  {"id":"KHC", "name": "The Kraft Heinz Company (KHC)"},
+  {"id":"KIG.AX", "name": "KINGFISHER TRUST 2016-1 (KIG.AX)"},
+  {"id":"KIK.AX", "name": "KAIRIKI ENERGY LIMITED (KIK.AX)"},
+  {"id":"KIN", "name": "Kindred Biosciences, Inc. (KIN)"},
+  {"id":"KIN.AX", "name": "KIN MINING NL (KIN.AX)"},
+  {"id":"KINS", "name": "Kingstone Companies, Inc (KINS)"},
+  {"id":"KIRK", "name": "Kirkland&#39;s, Inc. (KIRK)"},
+  {"id":"KIS.AX", "name": "KING ISLAND SCHEELITE LIMITED (KIS.AX)"},
+  {"id":"KITE", "name": "Kite Pharma, Inc. (KITE)"},
+  {"id":"KKL.AX", "name": "KOLLAKORN CORPORATION LIMITED (KKL.AX)"},
+  {"id":"KKO.AX", "name": "KINETIKO ENERGY LTD (KKO.AX)"},
+  {"id":"KKT.AX", "name": "KONEKT LIMITED (KKT.AX)"},
+  {"id":"KLAC", "name": "KLA-Tencor Corporation (KLAC)"},
+  {"id":"KLIC", "name": "Kulicke and Soffa Industries, Inc. (KLIC)"},
+  {"id":"KLL.AX", "name": "KALIUM LAKES LIMITED (KLL.AX)"},
+  {"id":"KLO.AX", "name": "KINGSLAND GLOBAL LTD (KLO.AX)"},
+  {"id":"KLR.AX", "name": "KAILI RESOURCES LIMITED (KLR.AX)"},
+  {"id":"KLRE", "name": "KLR Energy Acquisition Corp. (KLRE)"},
+  {"id":"KLREU", "name": "KLR Energy Acquisition Corp. (KLREU)"},
+  {"id":"KLREW", "name": "KLR Energy Acquisition Corp. (KLREW)"},
+  {"id":"KLXI", "name": "KLX Inc. (KLXI)"},
+  {"id":"KMD.AX", "name": "KATHMANDU HOLDINGS LIMITED (KMD.AX)"},
+  {"id":"KMDA", "name": "Kamada Ltd. (KMDA)"},
+  {"id":"KME.AX", "name": "KIP MCGRATH EDUCATION CENTRES LIMITED (KME.AX)"},
+  {"id":"KMPH", "name": "KemPharm, Inc. (KMPH)"},
+  {"id":"KNDI", "name": "Kandi Technologies Group, Inc. (KNDI)"},
+  {"id":"KNH.AX", "name": "KOON HOLDINGS LIMITED (KNH.AX)"},
+  {"id":"KNL.AX", "name": "KIBARAN RESOURCES LIMITED (KNL.AX)"},
+  {"id":"KNM.AX", "name": "KNEOMEDIA LIMITED (KNM.AX)"},
+  {"id":"KNO.AX", "name": "KNOSYS LIMITED (KNO.AX)"},
+  {"id":"KNSL", "name": "Kinsale Capital Group, Inc. (KNSL)"},
+  {"id":"KONA", "name": "Kona Grill, Inc. (KONA)"},
+  {"id":"KONE", "name": "Kingtone Wirelessinfo Solution Holding Ltd (KONE)"},
+  {"id":"KOOL", "name": "Cesca Therapeutics Inc. (KOOL)"},
+  {"id":"KOP.AX", "name": "KOREA SOUTH-EAST POWER CO LTD (KOP.AX)"},
+  {"id":"KOPN", "name": "Kopin Corporation (KOPN)"},
+  {"id":"KOR.AX", "name": "KORAB RESOURCES LIMITED (KOR.AX)"},
+  {"id":"KOSS", "name": "Koss Corporation (KOSS)"},
+  {"id":"KOV.AX", "name": "KORVEST LTD (KOV.AX)"},
+  {"id":"KPC.AX", "name": "KAZAKHSTAN POTASH CORPORATION LIMITED (KPC.AX)"},
+  {"id":"KPL.AX", "name": "KINA PETROLEUM LIMITED (KPL.AX)"},
+  {"id":"KPO.AX", "name": "KALINA POWER LIMITED (KPO.AX)"},
+  {"id":"KPT.AX", "name": "KANGAROO ISLAND PLANTATION TIMBERS LTD (KPT.AX)"},
+  {"id":"KPTI", "name": "Karyopharm Therapeutics Inc. (KPTI)"},
+  {"id":"KRC.AX", "name": "KING RIVER COPPER LIMITED (KRC.AX)"},
+  {"id":"KRL.AX", "name": "KANGAROO RESOURCES LIMITED (KRL.AX)"},
+  {"id":"KRM.AX", "name": "KINGSROSE MINING LIMITED (KRM.AX)"},
+  {"id":"KRMA", "name": "Global X Conscious Companies ETF (KRMA)"},
+  {"id":"KRNT", "name": "Kornit Digital Ltd. (KRNT)"},
+  {"id":"KRNY", "name": "Kearny Financial (KRNY)"},
+  {"id":"KRS.AX", "name": "KRESTA HOLDINGS LIMITED (KRS.AX)"},
+  {"id":"KSC.AX", "name": "K & S CORPORATION LIMITED (KSC.AX)"},
+  {"id":"KSL.AX", "name": "KINA SECURITIES LIMITED (KSL.AX)"},
+  {"id":"KSN.AX", "name": "KINGSTON RESOURCES LIMITED (KSN.AX)"},
+  {"id":"KTA.AX", "name": "KRAKATOA RESOURCES LIMITED (KTA.AX)"},
+  {"id":"KTCC", "name": "Key Tronic Corporation (KTCC)"},
+  {"id":"KTE.AX", "name": "K2 ENERGY LIMITED. (KTE.AX)"},
+  {"id":"KTEC", "name": "Key Technology, Inc. (KTEC)"},
+  {"id":"KTOS", "name": "Kratos Defense & Security Solutions, Inc. (KTOS)"},
+  {"id":"KTOV", "name": "Kitov Pharmaceuticals Holdings Ltd. (KTOV)"},
+  {"id":"KTOVW", "name": "Kitov Pharmaceuticals Holdings Ltd. (KTOVW)"},
+  {"id":"KTWO", "name": "K2M Group Holdings, Inc. (KTWO)"},
+  {"id":"KURA", "name": "Kura Oncology, Inc. (KURA)"},
+  {"id":"KVHI", "name": "KVH Industries, Inc. (KVHI)"},
+  {"id":"KWEB", "name": "KraneShares CSI China Internet ETF (KWEB)"},
+  {"id":"KYK.AX", "name": "KYCKR LIMITED (KYK.AX)"},
+  {"id":"KZ", "name": "KongZhong Corporation (KZ)"},
+  {"id":"KZR.AX", "name": "KALAMAZOO RESOURCES LIMITED (KZR.AX)"},
+  {"id":"LAA.AX", "name": "LATAM AUTOS LIMITED (LAA.AX)"},
+  {"id":"LABL", "name": "Multi-Color Corporation (LABL)"},
+  {"id":"LAKE", "name": "Lakeland Industries, Inc. (LAKE)"},
+  {"id":"LALT", "name": "PowerShares Multi-Strategy Alternative Portfolio (LALT)"},
+  {"id":"LAM.AX", "name": "LARAMIDE RESOURCES LTD (LAM.AX)"},
+  {"id":"LAMR", "name": "Lamar Advertising Company (LAMR)"},
+  {"id":"LANC", "name": "Lancaster Colony Corporation (LANC)"},
+  {"id":"LAND", "name": "Gladstone Land Corporation (LAND)"},
+  {"id":"LANDP", "name": "Gladstone Land Corporation (LANDP)"},
+  {"id":"LARK", "name": "Landmark Bancorp Inc. (LARK)"},
+  {"id":"LAU.AX", "name": "LINDSAY AUSTRALIA LIMITED (LAU.AX)"},
+  {"id":"LAUR", "name": "Laureate Education, Inc. (LAUR)"},
+  {"id":"LAWS", "name": "Lawson Products, Inc. (LAWS)"},
+  {"id":"LAYN", "name": "Layne Christensen Company (LAYN)"},
+  {"id":"LBAI", "name": "Lakeland Bancorp, Inc. (LBAI)"},
+  {"id":"LBIO", "name": "Lion Biotechnologies, Inc. (LBIO)"},
+  {"id":"LBIX", "name": "Leading Brands Inc (LBIX)"},
+  {"id":"LBL.AX", "name": "LASERBOND LIMITED (LBL.AX)"},
+  {"id":"LBRDA", "name": "Liberty Broadband Corporation (LBRDA)"},
+  {"id":"LBRDK", "name": "Liberty Broadband Corporation (LBRDK)"},
+  {"id":"LBT.AX", "name": "LBT INNOVATIONS LIMITED (LBT.AX)"},
+  {"id":"LBTYA", "name": "Liberty Global plc (LBTYA)"},
+  {"id":"LBTYB", "name": "Liberty Global plc (LBTYB)"},
+  {"id":"LBTYK", "name": "Liberty Global plc (LBTYK)"},
+  {"id":"LCA", "name": "Landcadia Holdings, Inc. (LCA)"},
+  {"id":"LCA.AX", "name": "LITIGATION CAPITAL MANAGEMENT LIMITED (LCA.AX)"},
+  {"id":"LCAHU", "name": "Landcadia Holdings, Inc. (LCAHU)"},
+  {"id":"LCAHW", "name": "Landcadia Holdings, Inc. (LCAHW)"},
+  {"id":"LCD.AX", "name": "LATITUDE CONSOLIDATED LIMITED (LCD.AX)"},
+  {"id":"LCE.AX", "name": "LONDON CITY EQUITIES LIMITED (LCE.AX)"},
+  {"id":"LCG.AX", "name": "LIVING CITIES DEVELOPMENT GROUP LIMITED (LCG.AX)"},
+  {"id":"LCK.AX", "name": "LEIGH CREEK ENERGY LIMITED (LCK.AX)"},
+  {"id":"LCM.AX", "name": "LOGICAMMS LIMITED (LCM.AX)"},
+  {"id":"LCNB", "name": "LCNB Corporation (LCNB)"},
+  {"id":"LCR.AX", "name": "LACONIA RESOURCES LIMITED (LCR.AX)"},
+  {"id":"LCT.AX", "name": "LIVING CELL TECHNOLOGIES LIMITED (LCT.AX)"},
+  {"id":"LCUT", "name": "Lifetime Brands, Inc. (LCUT)"},
+  {"id":"LCY.AX", "name": "LEGACY IRON ORE LIMITED (LCY.AX)"},
+  {"id":"LDRI", "name": "PowerShares LadderRite 0-5 Year Corporate Bond Portfolio (LDRI)"},
+  {"id":"LE", "name": "Lands&#39; End, Inc. (LE)"},
+  {"id":"LECO", "name": "Lincoln Electric Holdings, Inc. (LECO)"},
+  {"id":"LEDS", "name": "SemiLEDS Corporation (LEDS)"},
+  {"id":"LEG.AX", "name": "LEGEND MINING LIMITED (LEG.AX)"},
+  {"id":"LENS", "name": "Presbia PLC (LENS)"},
+  {"id":"LEP.AX", "name": "ALE PROPERTY GROUP (LEP.AX)"},
+  {"id":"LER.AX", "name": "LEAF RESOURCES LTD (LER.AX)"},
+  {"id":"LEX.AX", "name": "LEFROY EXPLORATION LIMITED (LEX.AX)"},
+  {"id":"LEXEA", "name": "Liberty Expedia Holdings, Inc. (LEXEA)"},
+  {"id":"LEXEB", "name": "Liberty Expedia Holdings, Inc. (LEXEB)"},
+  {"id":"LFC.AX", "name": "LIFE CORPORATION LTD (LFC.AX)"},
+  {"id":"LFUS", "name": "Littelfuse, Inc. (LFUS)"},
+  {"id":"LFVN", "name": "Lifevantage Corporation (LFVN)"},
+  {"id":"LGCY", "name": "Legacy Reserves LP (LGCY)"},
+  {"id":"LGCYO", "name": "Legacy Reserves LP (LGCYO)"},
+  {"id":"LGCYP", "name": "Legacy Reserves LP (LGCYP)"},
+  {"id":"LGD.AX", "name": "LEGEND CORPORATION LIMITED (LGD.AX)"},
+  {"id":"LGIH", "name": "LGI Homes, Inc. (LGIH)"},
+  {"id":"LGM.AX", "name": "LUIRI GOLD LIMITED (LGM.AX)"},
+  {"id":"LGND", "name": "Ligand Pharmaceuticals Incorporated (LGND)"},
+  {"id":"LGO.AX", "name": "LONGREACH OIL LIMITED (LGO.AX)"},
+  {"id":"LGR.AX", "name": "LANKA GRAPHITE LIMITED (LGR.AX)"},
+  {"id":"LHB.AX", "name": "LIONHUB GROUP LIMITED (LHB.AX)"},
+  {"id":"LHC.AX", "name": "LIFEHEALTHCARE GROUP LIMITED (LHC.AX)"},
+  {"id":"LHCG", "name": "LHC Group (LHCG)"},
+  {"id":"LHM.AX", "name": "LAND & HOMES GROUP LIMITED (LHM.AX)"},
+  {"id":"LI3.AX", "name": "LITHIUM CONSOLIDATED MINERAL EXPLORATION LIMITED (LI3.AX)"},
+  {"id":"LIC.AX", "name": "LIFESTYLE COMMUNITIES LIMITED (LIC.AX)"},
+  {"id":"LIFE", "name": "aTyr Pharma, Inc. (LIFE)"},
+  {"id":"LILA", "name": "Liberty Global plc (LILA)"},
+  {"id":"LILAK", "name": "Liberty Global plc (LILAK)"},
+  {"id":"LIN.AX", "name": "LINDIAN RESOURCES LIMITED (LIN.AX)"},
+  {"id":"LINC", "name": "Lincoln Educational Services Corporation (LINC)"},
+  {"id":"LIND", "name": "Lindblad Expeditions Holdings Inc.  (LIND)"},
+  {"id":"LINDW", "name": "Lindblad Expeditions Holdings Inc.  (LINDW)"},
+  {"id":"LINK", "name": "Interlink Electronics, Inc. (LINK)"},
+  {"id":"LIO.AX", "name": "LION ENERGY LIMITED (LIO.AX)"},
+  {"id":"LION", "name": "Fidelity Southern Corporation (LION)"},
+  {"id":"LIT.AX", "name": "LITHIUM AUSTRALIA NL (LIT.AX)"},
+  {"id":"LITE", "name": "Lumentum Holdings Inc. (LITE)"},
+  {"id":"LIVE", "name": "Live Ventures Incorporated (LIVE)"},
+  {"id":"LIVN", "name": "LivaNova PLC (LIVN)"},
+  {"id":"LJPC", "name": "La Jolla Pharmaceutical Company (LJPC)"},
+  {"id":"LKE.AX", "name": "LAKE RESOURCES N.L. (LKE.AX)"},
+  {"id":"LKFN", "name": "Lakeland Financial Corporation (LKFN)"},
+  {"id":"LKO.AX", "name": "LAKES OIL NL (LKO.AX)"},
+  {"id":"LKOR", "name": "FlexShares Credit-Scored US Long Corporate Bond Index Fund (LKOR)"},
+  {"id":"LKQ", "name": "LKQ Corporation (LKQ)"},
+  {"id":"LLC.AX", "name": "LENDLEASE GROUP (LLC.AX)"},
+  {"id":"LLEX", "name": "Lilis Energy, Inc. (LLEX)"},
+  {"id":"LLIT", "name": "Lianluo Smart Limited (LLIT)"},
+  {"id":"LLNW", "name": "Limelight Networks, Inc. (LLNW)"},
+  {"id":"LLO.AX", "name": "LION ONE METALS LIMITED (LLO.AX)"},
+  {"id":"LMAT", "name": "LeMaitre Vascular, Inc. (LMAT)"},
+  {"id":"LMB", "name": "Limbach Holdings, Inc. (LMB)"},
+  {"id":"LMBS", "name": "First Trust Low Duration Opportunities ETF (LMBS)"},
+  {"id":"LMFA", "name": "LM Funding America, Inc. (LMFA)"},
+  {"id":"LMFAW", "name": "LM Funding America, Inc. (LMFAW)"},
+  {"id":"LMG.AX", "name": "LATROBE MAGNESIUM LIMITED (LMG.AX)"},
+  {"id":"LMIA", "name": "LMI Aerospace, Inc. (LMIA)"},
+  {"id":"LML.AX", "name": "LINCOLN MINERALS LIMITED (LML.AX)"},
+  {"id":"LMNR", "name": "Limoneira Co (LMNR)"},
+  {"id":"LMNX", "name": "Luminex Corporation (LMNX)"},
+  {"id":"LMOS", "name": "Lumos Networks Corp. (LMOS)"},
+  {"id":"LMRK", "name": "Landmark Infrastructure Partners LP (LMRK)"},
+  {"id":"LMRKO", "name": "Landmark Infrastructure Partners LP (LMRKO)"},
+  {"id":"LMRKP", "name": "Landmark Infrastructure Partners LP (LMRKP)"},
+  {"id":"LMW.AX", "name": "LANDMARK WHITE LIMITED (LMW.AX)"},
+  {"id":"LNCE", "name": "Snyder&#39;s-Lance, Inc. (LNCE)"},
+  {"id":"LNDC", "name": "Landec Corporation (LNDC)"},
+  {"id":"LNG.AX", "name": "LIQUEFIED NATURAL GAS LIMITED (LNG.AX)"},
+  {"id":"LNGR", "name": "Global X Longevity Thematic ETF (LNGR)"},
+  {"id":"LNK.AX", "name": "LINK ADMINISTRATION HOLDINGS LIMITED (LNK.AX)"},
+  {"id":"LNTH", "name": "Lantheus Holdings, Inc. (LNTH)"},
+  {"id":"LNU.AX", "name": "LINIUS TECHNOLOGIES LIMITED (LNU.AX)"},
+  {"id":"LNY.AX", "name": "LANEWAY RESOURCES LTD (LNY.AX)"},
+  {"id":"LOAN", "name": "Manhattan Bridge Capital, Inc (LOAN)"},
+  {"id":"LOB", "name": "Live Oak Bancshares, Inc. (LOB)"},
+  {"id":"LOCO", "name": "El Pollo Loco Holdings, Inc. (LOCO)"},
+  {"id":"LOGI", "name": "Logitech International S.A. (LOGI)"},
+  {"id":"LOGM", "name": "LogMein, Inc. (LOGM)"},
+  {"id":"LOM.AX", "name": "LUCAPA DIAMOND COMPANY LIMITED (LOM.AX)"},
+  {"id":"LONE", "name": "Lonestar Resources US Inc. (LONE)"},
+  {"id":"LOPE", "name": "Grand Canyon Education, Inc. (LOPE)"},
+  {"id":"LORL", "name": "Loral Space and Communications, Inc. (LORL)"},
+  {"id":"LOV.AX", "name": "LOVISA HOLDINGS LIMITED (LOV.AX)"},
+  {"id":"LOXO", "name": "Loxo Oncology, Inc. (LOXO)"},
+  {"id":"LPCN", "name": "Lipocine Inc. (LPCN)"},
+  {"id":"LPD.AX", "name": "LEPIDICO LTD (LPD.AX)"},
+  {"id":"LPE.AX", "name": "LOCALITY PLANNING ENERGY HOLDINGS LIMITED (LPE.AX)"},
+  {"id":"LPI.AX", "name": "LITHIUM POWER INTERNATIONAL LIMITED (LPI.AX)"},
+  {"id":"LPLA", "name": "LPL Financial Holdings Inc. (LPLA)"},
+  {"id":"LPNT", "name": "LifePoint Health, Inc. (LPNT)"},
+  {"id":"LPSN", "name": "LivePerson, Inc. (LPSN)"},
+  {"id":"LPTH", "name": "LightPath Technologies, Inc. (LPTH)"},
+  {"id":"LPTX", "name": "LEAP THERAPEUTICS, INC. (LPTX)"},
+  {"id":"LQDT", "name": "Liquidity Services, Inc. (LQDT)"},
+  {"id":"LRAD", "name": "LRAD Corporation (LRAD)"},
+  {"id":"LRCX", "name": "Lam Research Corporation (LRCX)"},
+  {"id":"LRL.AX", "name": "LEYSHON RESOURCES LIMITED (LRL.AX)"},
+  {"id":"LRS.AX", "name": "LATIN RESOURCES LIMITED (LRS.AX)"},
+  {"id":"LSA.AX", "name": "LACHLAN STAR LIMITED (LSA.AX)"},
+  {"id":"LSBK", "name": "Lake Shore Bancorp, Inc. (LSBK)"},
+  {"id":"LSCC", "name": "Lattice Semiconductor Corporation (LSCC)"},
+  {"id":"LSH.AX", "name": "LIFESPOT HEALTH LTD (LSH.AX)"},
+  {"id":"LSN.AX", "name": "LAWSON GOLD LIMITED (LSN.AX)"},
+  {"id":"LSR.AX", "name": "LODESTAR MINERALS LIMITED (LSR.AX)"},
+  {"id":"LSTR", "name": "Landstar System, Inc. (LSTR)"},
+  {"id":"LSX.AX", "name": "LION SELECTION GROUP LIMITED. (LSX.AX)"},
+  {"id":"LSXMA", "name": "Liberty Media Corporation (LSXMA)"},
+  {"id":"LSXMB", "name": "Liberty Media Corporation (LSXMB)"},
+  {"id":"LSXMK", "name": "Liberty Media Corporation (LSXMK)"},
+  {"id":"LTBR", "name": "Lightbridge Corporation (LTBR)"},
+  {"id":"LTEA", "name": "Long Island Iced Tea Corp. (LTEA)"},
+  {"id":"LTN.AX", "name": "LANTERN HOTEL GROUP (LTN.AX)"},
+  {"id":"LTR.AX", "name": "LIONTOWN RESOURCES LIMITED (LTR.AX)"},
+  {"id":"LTRPA", "name": "Liberty TripAdvisor Holdings, Inc. (LTRPA)"},
+  {"id":"LTRPB", "name": "Liberty TripAdvisor Holdings, Inc. (LTRPB)"},
+  {"id":"LTRX", "name": "Lantronix, Inc. (LTRX)"},
+  {"id":"LTXB", "name": "LegacyTexas Financial Group, Inc. (LTXB)"},
+  {"id":"LULU", "name": "lululemon athletica inc. (LULU)"},
+  {"id":"LUNA", "name": "Luna Innovations Incorporated (LUNA)"},
+  {"id":"LVH.AX", "name": "LIVEHIRE LIMITED (LVH.AX)"},
+  {"id":"LVHD", "name": "Legg Mason Low Volatility High Dividend ETF (LVHD)"},
+  {"id":"LVNTA", "name": "Liberty Interactive Corporation (LVNTA)"},
+  {"id":"LVNTB", "name": "Liberty Interactive Corporation (LVNTB)"},
+  {"id":"LVT.AX", "name": "LIVETILES LIMITED (LVT.AX)"},
+  {"id":"LWAY", "name": "Lifeway Foods, Inc. (LWAY)"},
+  {"id":"LWP.AX", "name": "LWP TECHNOLOGIES LIMITED (LWP.AX)"},
+  {"id":"LXRX", "name": "Lexicon Pharmaceuticals, Inc. (LXRX)"},
+  {"id":"LYC.AX", "name": "LYNAS CORPORATION LIMITED (LYC.AX)"},
+  {"id":"LYL.AX", "name": "LYCOPODIUM LIMITED (LYL.AX)"},
+  {"id":"LYTS", "name": "LSI Industries Inc. (LYTS)"},
+  {"id":"M7T.AX", "name": "MACH7 TECHNOLOGIES LIMITED (M7T.AX)"},
+  {"id":"MA1.AX", "name": "MONASH ABSOLUTE INVESTMENT COMPANY LIMITED (MA1.AX)"},
+  {"id":"MACK", "name": "Merrimack Pharmaceuticals, Inc. (MACK)"},
+  {"id":"MACQ", "name": "M I Acquisitions, Inc. (MACQ)"},
+  {"id":"MACQU", "name": "M I Acquisitions, Inc. (MACQU)"},
+  {"id":"MACQW", "name": "M I Acquisitions, Inc. (MACQW)"},
+  {"id":"MAG.AX", "name": "MAGMATIC RESOURCES LIMITED (MAG.AX)"},
+  {"id":"MAGS", "name": "Magal Security Systems Ltd. (MAGS)"},
+  {"id":"MAH.AX", "name": "MACMAHON HOLDINGS LIMITED (MAH.AX)"},
+  {"id":"MAI.AX", "name": "MAINSTREAMBPO LIMITED (MAI.AX)"},
+  {"id":"MAMS", "name": "MAM Software Group, Inc. (MAMS)"},
+  {"id":"MANH", "name": "Manhattan Associates, Inc. (MANH)"},
+  {"id":"MANT", "name": "ManTech International Corporation (MANT)"},
+  {"id":"MAPI", "name": "Mapi - Pharma Ltd. (MAPI)"},
+  {"id":"MAQ.AX", "name": "MACQUARIE TELECOM GROUP LIMITED (MAQ.AX)"},
+  {"id":"MAR", "name": "Marriott International (MAR)"},
+  {"id":"MAR.AX", "name": "MALACHITE RESOURCES LIMITED (MAR.AX)"},
+  {"id":"MARA", "name": "Marathon Patent Group, Inc. (MARA)"},
+  {"id":"MARK", "name": "Remark Media, Inc. (MARK)"},
+  {"id":"MARPS", "name": "Marine Petroleum Trust (MARPS)"},
+  {"id":"MAS.AX", "name": "MESA MINERALS LIMITED (MAS.AX)"},
+  {"id":"MASI", "name": "Masimo Corporation (MASI)"},
+  {"id":"MAT", "name": "Mattel, Inc. (MAT)"},
+  {"id":"MAT.AX", "name": "MATSA RESOURCES LIMITED (MAT.AX)"},
+  {"id":"MATR", "name": "Mattersight Corporation (MATR)"},
+  {"id":"MATW", "name": "Matthews International Corporation (MATW)"},
+  {"id":"MAU.AX", "name": "MAGNETIC RESOURCES NL (MAU.AX)"},
+  {"id":"MAUI", "name": "AdvisorShares Market Adaptive Unconstrained Income ETF (MAUI)"},
+  {"id":"MAX.AX", "name": "MILLINIUM'S ALTERNATIVES FUND. (MAX.AX)"},
+  {"id":"MAY.AX", "name": "MELBANA ENERGY LIMITED (MAY.AX)"},
+  {"id":"MAYS", "name": "J. W. Mays, Inc. (MAYS)"},
+  {"id":"MB", "name": "MINDBODY, Inc. (MB)"},
+  {"id":"MBCN", "name": "Middlefield Banc Corp. (MBCN)"},
+  {"id":"MBE.AX", "name": "MOBILE EMBRACE LIMITED (MBE.AX)"},
+  {"id":"MBFI", "name": "MB Financial Inc. (MBFI)"},
+  {"id":"MBFIP", "name": "MB Financial Inc. (MBFIP)"},
+  {"id":"MBII", "name": "Marrone Bio Innovations, Inc. (MBII)"},
+  {"id":"MBJ.AX", "name": "MEDALLION TRUST SERIES 2013-2 (MBJ.AX)"},
+  {"id":"MBK.AX", "name": "METAL BANK LIMITED (MBK.AX)"},
+  {"id":"MBL.AX", "name": "MACQUARIE BANK LIMITED (MBL.AX)"},
+  {"id":"MBO.AX", "name": "MOBILARM LIMITED (MBO.AX)"},
+  {"id":"MBOT", "name": "Microbot Medical Inc.  (MBOT)"},
+  {"id":"MBRX", "name": "Moleculin Biotech, Inc. (MBRX)"},
+  {"id":"MBSD", "name": "FlexShares Disciplined Duration MBS Index Fund (MBSD)"},
+  {"id":"MBT.AX", "name": "MISSION NEWENERGY LIMITED (MBT.AX)"},
+  {"id":"MBTF", "name": "M B T Financial Corp (MBTF)"},
+  {"id":"MBUU", "name": "Malibu Boats, Inc. (MBUU)"},
+  {"id":"MBVT", "name": "Merchants Bancshares, Inc. (MBVT)"},
+  {"id":"MBVX", "name": "MabVax Therapeutics Holdings, Inc. (MBVX)"},
+  {"id":"MBWM", "name": "Mercantile Bank Corporation (MBWM)"},
+  {"id":"MCA.AX", "name": "MURRAY COD AUSTRALIA LIMITED (MCA.AX)"},
+  {"id":"MCBC", "name": "Macatawa Bank Corporation (MCBC)"},
+  {"id":"MCE.AX", "name": "MATRIX COMPOSITES & ENGINEERING LIMITED (MCE.AX)"},
+  {"id":"MCEF", "name": "First Trust Municipal CEF Income Opportunity ETF (MCEF)"},
+  {"id":"MCEP", "name": "Mid-Con Energy Partners, LP (MCEP)"},
+  {"id":"MCFT", "name": "MCBC Holdings, Inc. (MCFT)"},
+  {"id":"MCH.AX", "name": "MURCHISON HOLDINGS LIMITED (MCH.AX)"},
+  {"id":"MCHI", "name": "iShares MSCI China ETF (MCHI)"},
+  {"id":"MCHP", "name": "Microchip Technology Incorporated (MCHP)"},
+  {"id":"MCHX", "name": "Marchex, Inc. (MCHX)"},
+  {"id":"MCP.AX", "name": "MCPHERSON'S LIMITED (MCP.AX)"},
+  {"id":"MCR.AX", "name": "MINCOR RESOURCES NL (MCR.AX)"},
+  {"id":"MCRB", "name": "Seres Therapeutics, Inc. (MCRB)"},
+  {"id":"MCRI", "name": "Monarch Casino & Resort, Inc. (MCRI)"},
+  {"id":"MCS.AX", "name": "MCALEESE LIMITED (MCS.AX)"},
+  {"id":"MCT.AX", "name": "METALICITY LIMITED (MCT.AX)"},
+  {"id":"MCX.AX", "name": "MARINER CORPORATION LIMITED (MCX.AX)"},
+  {"id":"MCY.AX", "name": "MERCURY NZ LIMITED (MCY.AX)"},
+  {"id":"MDC.AX", "name": "MEDLAB CLINICAL LIMITED (MDC.AX)"},
+  {"id":"MDCA", "name": "MDC Partners Inc. (MDCA)"},
+  {"id":"MDCO", "name": "The Medicines Company (MDCO)"},
+  {"id":"MDD.AX", "name": "MANDALONG RESOURCES LIMITED (MDD.AX)"},
+  {"id":"MDGL", "name": "Madrigal Pharmaceuticals, Inc. (MDGL)"},
+  {"id":"MDGS", "name": "Medigus Ltd. (MDGS)"},
+  {"id":"MDI.AX", "name": "MIDDLE ISLAND RESOURCES LIMITED (MDI.AX)"},
+  {"id":"MDIV", "name": "First Trust Multi-Asset Diversified Income Index Fund (MDIV)"},
+  {"id":"MDL.AX", "name": "MINERAL DEPOSITS LIMITED (MDL.AX)"},
+  {"id":"MDLZ", "name": "Mondelez International, Inc. (MDLZ)"},
+  {"id":"MDR.AX", "name": "MEDADVISOR LIMITED (MDR.AX)"},
+  {"id":"MDRX", "name": "Allscripts Healthcare Solutions, Inc. (MDRX)"},
+  {"id":"MDSO", "name": "Medidata Solutions, Inc. (MDSO)"},
+  {"id":"MDSY", "name": "ModSys International Ltd. (MDSY)"},
+  {"id":"MDVX", "name": "Medovex Corp. (MDVX)"},
+  {"id":"MDVXW", "name": "Medovex Corp. (MDVXW)"},
+  {"id":"MDWD", "name": "MediWound Ltd. (MDWD)"},
+  {"id":"MDX.AX", "name": "MINDAX LIMITED (MDX.AX)"},
+  {"id":"MDXG", "name": "MiMedx Group, Inc (MDXG)"},
+  {"id":"MDZ.AX", "name": "MEDALLION TRUST SERIES 2014-1 (MDZ.AX)"},
+  {"id":"MEA.AX", "name": "MCGRATH LIMITED (MEA.AX)"},
+  {"id":"MEB.AX", "name": "MEDIBIO LIMITED (MEB.AX)"},
+  {"id":"MEC.AX", "name": "MORPHIC ETHICAL EQUITIES FUND LIMITED (MEC.AX)"},
+  {"id":"MED.AX", "name": "MERLIN DIAMONDS LIMITED (MED.AX)"},
+  {"id":"MEDP", "name": "Medpace Holdings, Inc. (MEDP)"},
+  {"id":"MEET", "name": "The Meet Group, Inc. (MEET)"},
+  {"id":"MEI.AX", "name": "METEORIC RESOURCES NL (MEI.AX)"},
+  {"id":"MEIP", "name": "MEI Pharma, Inc. (MEIP)"},
+  {"id":"MEL.AX", "name": "METGASCO LIMITED (MEL.AX)"},
+  {"id":"MELI", "name": "MercadoLibre, Inc. (MELI)"},
+  {"id":"MELR", "name": "Melrose Bancorp, Inc. (MELR)"},
+  {"id":"MEM.AX", "name": "MEMPHASYS LIMITED. (MEM.AX)"},
+  {"id":"MEMP", "name": "Memorial Production Partners LP (MEMP)"},
+  {"id":"MEOH", "name": "Methanex Corporation (MEOH)"},
+  {"id":"MEP.AX", "name": "MINOTAUR EXPLORATION LTD (MEP.AX)"},
+  {"id":"MEQ.AX", "name": "METLIFECARE LIMITED (MEQ.AX)"},
+  {"id":"MERC", "name": "Mercer International Inc. (MERC)"},
+  {"id":"MESO", "name": "Mesoblast Limited (MESO)"},
+  {"id":"METC", "name": "Ramaco Resources, Inc. (METC)"},
+  {"id":"MEU.AX", "name": "MARMOTA LIMITED (MEU.AX)"},
+  {"id":"MEY.AX", "name": "MARENICA ENERGY LTD (MEY.AX)"},
+  {"id":"MEZ.AX", "name": "MERIDIAN ENERGY LIMITED (MEZ.AX)"},
+  {"id":"MFD.AX", "name": "MAYFIELD CHILDCARE LIMITED (MFD.AX)"},
+  {"id":"MFF.AX", "name": "MFF CAPITAL INVESTMENTS LIMITED (MFF.AX)"},
+  {"id":"MFG.AX", "name": "MAGELLAN FINANCIAL GROUP LIMITED (MFG.AX)"},
+  {"id":"MFIN", "name": "Medallion Financial Corp. (MFIN)"},
+  {"id":"MFINL", "name": "Medallion Financial Corp. (MFINL)"},
+  {"id":"MFNC", "name": "Mackinac Financial Corporation (MFNC)"},
+  {"id":"MFSF", "name": "MutualFirst Financial Inc. (MFSF)"},
+  {"id":"MGC.AX", "name": "MG UNIT TRUST (MGC.AX)"},
+  {"id":"MGCD", "name": "MGC Diagnostics Corporation (MGCD)"},
+  {"id":"MGEE", "name": "MGE Energy Inc. (MGEE)"},
+  {"id":"MGEN", "name": "Miragen Therapeutics, Inc. (MGEN)"},
+  {"id":"MGI", "name": "Moneygram International, Inc. (MGI)"},
+  {"id":"MGIC", "name": "Magic Software Enterprises Ltd. (MGIC)"},
+  {"id":"MGL.AX", "name": "MAGONTEC LIMITED (MGL.AX)"},
+  {"id":"MGLN", "name": "Magellan Health, Inc. (MGLN)"},
+  {"id":"MGNX", "name": "MacroGenics, Inc. (MGNX)"},
+  {"id":"MGP.AX", "name": "MANAGED ACCOUNTS HOLDINGS LIMITED (MGP.AX)"},
+  {"id":"MGPI", "name": "MGP Ingredients, Inc. (MGPI)"},
+  {"id":"MGR.AX", "name": "MIRVAC GROUP (MGR.AX)"},
+  {"id":"MGRC", "name": "McGrath RentCorp (MGRC)"},
+  {"id":"MGT.AX", "name": "MAGNETITE MINES LIMITED. (MGT.AX)"},
+  {"id":"MGU.AX", "name": "MAGNUM MINING AND EXPLORATION LIMITED (MGU.AX)"},
+  {"id":"MGV.AX", "name": "MUSGRAVE MINERALS LIMITED (MGV.AX)"},
+  {"id":"MGX.AX", "name": "MOUNT GIBSON IRON LIMITED (MGX.AX)"},
+  {"id":"MGYR", "name": "Magyar Bancorp, Inc. (MGYR)"},
+  {"id":"MGZ.AX", "name": "MEDIGARD LIMITED (MGZ.AX)"},
+  {"id":"MHC.AX", "name": "MANHATTAN CORPORATION LIMITED (MHC.AX)"},
+  {"id":"MHH.AX", "name": "MAJESTIC HORIZON HOLDINGS LTD (MHH.AX)"},
+  {"id":"MHI.AX", "name": "MERCHANT HOUSE INTERNATIONAL LIMITED (MHI.AX)"},
+  {"id":"MHJ.AX", "name": "MICHAEL HILL INTERNATIONAL LIMITED (MHJ.AX)"},
+  {"id":"MHLD", "name": "Maiden Holdings, Ltd. (MHLD)"},
+  {"id":"MHM.AX", "name": "MHM METALS LIMITED (MHM.AX)"},
+  {"id":"MICT", "name": "Micronet Enertec Technologies, Inc. (MICT)"},
+  {"id":"MICTW", "name": "Micronet Enertec Technologies, Inc. (MICTW)"},
+  {"id":"MIDD", "name": "The Middleby Corporation (MIDD)"},
+  {"id":"MIG.AX", "name": "MIGME LIMITED (MIG.AX)"},
+  {"id":"MIH.AX", "name": "MNC MEDIA INVESTMENT LTD (MIH.AX)"},
+  {"id":"MIII", "name": "M III Acquisition Corp. (MIII)"},
+  {"id":"MIIIU", "name": "M III Acquisition Corp. (MIIIU)"},
+  {"id":"MIIIW", "name": "M III Acquisition Corp. (MIIIW)"},
+  {"id":"MIK", "name": "The Michaels Companies, Inc. (MIK)"},
+  {"id":"MIL.AX", "name": "MILLENNIUM SERVICES GROUP LIMITED (MIL.AX)"},
+  {"id":"MILN", "name": "Global X Millennials Thematic ETF (MILN)"},
+  {"id":"MIME", "name": "Mimecast Limited (MIME)"},
+  {"id":"MIN.AX", "name": "MINERAL RESOURCES LIMITED (MIN.AX)"},
+  {"id":"MIND", "name": "Mitcham Industries, Inc. (MIND)"},
+  {"id":"MINDP", "name": "Mitcham Industries, Inc. (MINDP)"},
+  {"id":"MINI", "name": "Mobile Mini, Inc. (MINI)"},
+  {"id":"MIR.AX", "name": "MIRRABOOKA INVESTMENTS LIMITED (MIR.AX)"},
+  {"id":"MIRN", "name": "Mirna Therapeutics, Inc. (MIRN)"},
+  {"id":"MITK", "name": "Mitek Systems, Inc. (MITK)"},
+  {"id":"MITL", "name": "Mitel Networks Corporation (MITL)"},
+  {"id":"MIZ.AX", "name": "MINERA GOLD LIMITED (MIZ.AX)"},
+  {"id":"MJC.AX", "name": "MEJORITY CAPITAL LIMITED (MJC.AX)"},
+  {"id":"MJP.AX", "name": "MARTIN AIRCRAFT COMPANY LIMITED (MJP.AX)"},
+  {"id":"MKB.AX", "name": "MOKO SOCIAL MEDIA LIMITED (MKB.AX)"},
+  {"id":"MKSI", "name": "MKS Instruments, Inc. (MKSI)"},
+  {"id":"MKTX", "name": "MarketAxess Holdings, Inc. (MKTX)"},
+  {"id":"MLA.AX", "name": "MEDICAL AUSTRALIA LIMITED (MLA.AX)"},
+  {"id":"MLAB", "name": "Mesa Laboratories, Inc. (MLAB)"},
+  {"id":"MLB.AX", "name": "MELBOURNE IT LIMITED (MLB.AX)"},
+  {"id":"MLCO", "name": "Melco Resorts & Entertainment Limited (MLCO)"},
+  {"id":"MLD.AX", "name": "MACA LIMITED (MLD.AX)"},
+  {"id":"MLHR", "name": "Herman Miller, Inc. (MLHR)"},
+  {"id":"MLI.AX", "name": "MINTAILS LIMITED (MLI.AX)"},
+  {"id":"MLM.AX", "name": "METALLICA MINERALS LIMITED (MLM.AX)"},
+  {"id":"MLNK", "name": "ModusLink Global Solutions, Inc (MLNK)"},
+  {"id":"MLNX", "name": "Mellanox Technologies, Ltd. (MLNX)"},
+  {"id":"MLS.AX", "name": "METALS AUSTRALIA LTD (MLS.AX)"},
+  {"id":"MLT.AX", "name": "MILTON CORPORATION LIMITED (MLT.AX)"},
+  {"id":"MLVF", "name": "Malvern Bancorp, Inc. (MLVF)"},
+  {"id":"MLX.AX", "name": "METALS X LIMITED (MLX.AX)"},
+  {"id":"MMAC", "name": "MMA Capital Management, LLC (MMAC)"},
+  {"id":"MMDM", "name": "Modern Media Acquisition Corp. (MMDM)"},
+  {"id":"MMDMU", "name": "Modern Media Acquisition Corp. (MMDMU)"},
+  {"id":"MMG.AX", "name": "MMG LIMITED (MMG.AX)"},
+  {"id":"MMI.AX", "name": "METRO MINING LIMITED (MMI.AX)"},
+  {"id":"MMJ.AX", "name": "MMJ PHYTOTECH LIMITED (MMJ.AX)"},
+  {"id":"MML.AX", "name": "MEDUSA MINING LIMITED (MML.AX)"},
+  {"id":"MMLP", "name": "Martin Midstream Partners L.P. (MMLP)"},
+  {"id":"MMM.AX", "name": "MACARTHUR AUSTRALIA LIMITED (MMM.AX)"},
+  {"id":"MMR.AX", "name": "MEC RESOURCES LIMITED (MMR.AX)"},
+  {"id":"MMS.AX", "name": "MCMILLAN SHAKESPEARE LIMITED (MMS.AX)"},
+  {"id":"MMSI", "name": "Merit Medical Systems, Inc. (MMSI)"},
+  {"id":"MMYT", "name": "MakeMyTrip Limited (MMYT)"},
+  {"id":"MNB.AX", "name": "MINBOS RESOURCES LIMITED (MNB.AX)"},
+  {"id":"MNC.AX", "name": "METMINCO LIMITED (MNC.AX)"},
+  {"id":"MND.AX", "name": "MONADELPHOUS GROUP LIMITED (MND.AX)"},
+  {"id":"MNDO", "name": "MIND C.T.I. Ltd. (MNDO)"},
+  {"id":"MNE.AX", "name": "METALLUM LIMITED (MNE.AX)"},
+  {"id":"MNF.AX", "name": "MNF GROUP LIMITED (MNF.AX)"},
+  {"id":"MNGA", "name": "MagneGas Corporation (MNGA)"},
+  {"id":"MNKD", "name": "MannKind Corporation (MNKD)"},
+  {"id":"MNM.AX", "name": "MANTLE MINING CORPORATION LIMITED (MNM.AX)"},
+  {"id":"MNOV", "name": "MediciNova, Inc. (MNOV)"},
+  {"id":"MNRO", "name": "Monro Muffler Brake, Inc. (MNRO)"},
+  {"id":"MNS.AX", "name": "MAGNIS RESOURCES LIMITED. (MNS.AX)"},
+  {"id":"MNST", "name": "Monster Beverage Corporation (MNST)"},
+  {"id":"MNTA", "name": "Momenta Pharmaceuticals, Inc. (MNTA)"},
+  {"id":"MNTX", "name": "Manitex International, Inc. (MNTX)"},
+  {"id":"MNW.AX", "name": "MINT PAYMENTS LIMITED (MNW.AX)"},
+  {"id":"MNY.AX", "name": "MONEY3 CORPORATION LIMITED (MNY.AX)"},
+  {"id":"MOB.AX", "name": "MOBILICOM LIMITED (MOB.AX)"},
+  {"id":"MOBL", "name": "MobileIron, Inc. (MOBL)"},
+  {"id":"MOC.AX", "name": "MORTGAGE CHOICE LIMITED (MOC.AX)"},
+  {"id":"MOCO", "name": "MOCON, Inc. (MOCO)"},
+  {"id":"MOD.AX", "name": "MOD RESOURCES LIMITED (MOD.AX)"},
+  {"id":"MOE.AX", "name": "MOELIS AUSTRALIA LIMITED (MOE.AX)"},
+  {"id":"MOFG", "name": "MidWestOne Financial Group, Inc. (MOFG)"},
+  {"id":"MOGLC", "name": "Gabelli NextShares Trust (MOGLC)"},
+  {"id":"MOL.AX", "name": "MOLY MINES LIMITED (MOL.AX)"},
+  {"id":"MOMO", "name": "Momo Inc. (MOMO)"},
+  {"id":"MOQ.AX", "name": "MOQ LIMITED (MOQ.AX)"},
+  {"id":"MORN", "name": "Morningstar, Inc. (MORN)"},
+  {"id":"MOSY", "name": "MoSys, Inc. (MOSY)"},
+  {"id":"MOT.AX", "name": "MOTOPIA LIMITED (MOT.AX)"},
+  {"id":"MOX.AX", "name": "MONAX MINING LIMITED (MOX.AX)"},
+  {"id":"MOXC", "name": "Moxian, Inc. (MOXC)"},
+  {"id":"MOY.AX", "name": "MILLENNIUM MINERALS LIMITED (MOY.AX)"},
+  {"id":"MP1.AX", "name": "MEGAPORT LIMITED (MP1.AX)"},
+  {"id":"MPAA", "name": "Motorcar Parts of America, Inc. (MPAA)"},
+  {"id":"MPACU", "name": "Matlin & Partners Acquisition Corporation (MPACU)"},
+  {"id":"MPB", "name": "Mid Penn Bancorp (MPB)"},
+  {"id":"MPCT", "name": "iShares MSCI Global Impact ETF (MPCT)"},
+  {"id":"MPE.AX", "name": "MAGNUM GAS & POWER LIMITED (MPE.AX)"},
+  {"id":"MPL.AX", "name": "MEDIBANK PRIVATE LIMITED (MPL.AX)"},
+  {"id":"MPO.AX", "name": "MOLOPO ENERGY LIMITED (MPO.AX)"},
+  {"id":"MPP.AX", "name": "METRO PERFORMANCE GLASS LIMITED (MPP.AX)"},
+  {"id":"MPVD", "name": "Mountain Province Diamonds Inc. (MPVD)"},
+  {"id":"MPWR", "name": "Monolithic Power Systems, Inc. (MPWR)"},
+  {"id":"MPX.AX", "name": "MUSTERA PROPERTY GROUP LIMITED (MPX.AX)"},
+  {"id":"MPZ.AX", "name": "MEDALLION TRUST SERIES 2014-1P (MPZ.AX)"},
+  {"id":"MQA.AX", "name": "MACQUARIE ATLAS ROADS GROUP (MQA.AX)"},
+  {"id":"MQG.AX", "name": "MACQUARIE GROUP LIMITED (MQG.AX)"},
+  {"id":"MQR.AX", "name": "MARQUEE RESOURCES LIMITED (MQR.AX)"},
+  {"id":"MRAM", "name": "Everspin Technologies, Inc. (MRAM)"},
+  {"id":"MRC.AX", "name": "MINERAL COMMODITIES LTD (MRC.AX)"},
+  {"id":"MRCC", "name": "Monroe Capital Corporation (MRCC)"},
+  {"id":"MRCY", "name": "Mercury Systems Inc (MRCY)"},
+  {"id":"MRD.AX", "name": "MOUNT RIDLEY MINES LIMITED (MRD.AX)"},
+  {"id":"MRDN", "name": "Meridian Waste Solutions, Inc (MRDN)"},
+  {"id":"MRDNW", "name": "Meridian Waste Solutions, Inc (MRDNW)"},
+  {"id":"MRG.AX", "name": "MURRAY RIVER ORGANICS GROUP LIMITED (MRG.AX)"},
+  {"id":"MRIC", "name": "MRI Interventions Inc (MRIC)"},
+  {"id":"MRLN", "name": "Marlin Business Services Corp. (MRLN)"},
+  {"id":"MRM.AX", "name": "MMA OFFSHORE LIMITED (MRM.AX)"},
+  {"id":"MRN.AX", "name": "MACQUARIE MEDIA LIMITED (MRN.AX)"},
+  {"id":"MRNS", "name": "Marinus Pharmaceuticals, Inc. (MRNS)"},
+  {"id":"MRP.AX", "name": "MACPHERSONS RESOURCES LIMITED (MRP.AX)"},
+  {"id":"MRQ.AX", "name": "MRG METALS LIMITED (MRQ.AX)"},
+  {"id":"MRR.AX", "name": "MINREX RESOURCES LIMITED (MRR.AX)"},
+  {"id":"MRTN", "name": "Marten Transport, Ltd. (MRTN)"},
+  {"id":"MRTX", "name": "Mirati Therapeutics, Inc. (MRTX)"},
+  {"id":"MRUS", "name": "Merus N.V. (MRUS)"},
+  {"id":"MRV.AX", "name": "MORETON RESOURCES LTD (MRV.AX)"},
+  {"id":"MRVC", "name": "MRV Communications, Inc. (MRVC)"},
+  {"id":"MRVL", "name": "Marvell Technology Group Ltd. (MRVL)"},
+  {"id":"MSB.AX", "name": "MESOBLAST LIMITED (MSB.AX)"},
+  {"id":"MSBF", "name": "MSB Financial Corp. (MSBF)"},
+  {"id":"MSBI", "name": "Midland States Bancorp, Inc. (MSBI)"},
+  {"id":"MSCC", "name": "Microsemi Corporation (MSCC)"},
+  {"id":"MSDI", "name": "Monster Digital, Inc. (MSDI)"},
+  {"id":"MSDIW", "name": "Monster Digital, Inc. (MSDIW)"},
+  {"id":"MSEX", "name": "Middlesex Water Company (MSEX)"},
+  {"id":"MSFG", "name": "MainSource Financial Group, Inc. (MSFG)"},
+  {"id":"MSFT", "name": "Microsoft Corporation (MSFT)"},
+  {"id":"MSG", "name": "MSG Networks Inc. (MSG)"},
+  {"id":"MSG.AX", "name": "MCS SERVICES LIMITED (MSG.AX)"},
+  {"id":"MSI.AX", "name": "MULTISTACK INTERNATIONAL LIMITED (MSI.AX)"},
+  {"id":"MSLI", "name": "Merus Labs International Inc. (MSLI)"},
+  {"id":"MSM.AX", "name": "MSM CORPORATION INTERNATIONAL LTD (MSM.AX)"},
+  {"id":"MSON", "name": "MISONIX, Inc. (MSON)"},
+  {"id":"MSP.AX", "name": "MAXSEC GROUP LIMITED (MSP.AX)"},
+  {"id":"MSR.AX", "name": "MANAS RESOURCES LIMITED (MSR.AX)"},
+  {"id":"MSTR", "name": "MicroStrategy Incorporated (MSTR)"},
+  {"id":"MSV.AX", "name": "MITCHELL SERVICES LIMITED (MSV.AX)"},
+  {"id":"MTB.AX", "name": "MOUNT BURGESS MINING NL (MTB.AX)"},
+  {"id":"MTBC", "name": "Medical Transcription Billing, Corp. (MTBC)"},
+  {"id":"MTBCP", "name": "Medical Transcription Billing, Corp. (MTBCP)"},
+  {"id":"MTC.AX", "name": "METALSTECH LIMITED (MTC.AX)"},
+  {"id":"MTCH", "name": "Match Group, Inc. (MTCH)"},
+  {"id":"MTEX", "name": "Mannatech, Incorporated (MTEX)"},
+  {"id":"MTFB", "name": "Motif Bio plc (MTFB)"},
+  {"id":"MTFBW", "name": "Motif Bio plc (MTFBW)"},
+  {"id":"MTGE", "name": "MTGE Investment Corp. (MTGE)"},
+  {"id":"MTGEP", "name": "MTGE Investment Corp. (MTGEP)"},
+  {"id":"MTH.AX", "name": "MITHRIL RESOURCES LIMITED (MTH.AX)"},
+  {"id":"MTL.AX", "name": "MANALTO LIMITED (MTL.AX)"},
+  {"id":"MTLS", "name": "Materialise NV (MTLS)"},
+  {"id":"MTM.AX", "name": "MARETERRAM LIMITED (MTM.AX)"},
+  {"id":"MTO.AX", "name": "MOTORCYCLE HOLDINGS LIMITED (MTO.AX)"},
+  {"id":"MTP", "name": "Midatech Pharma PLC (MTP)"},
+  {"id":"MTR.AX", "name": "MANTRA GROUP LIMITED (MTR.AX)"},
+  {"id":"MTRX", "name": "Matrix Service Company (MTRX)"},
+  {"id":"MTS.AX", "name": "METCASH LIMITED (MTS.AX)"},
+  {"id":"MTSC", "name": "MTS Systems Corporation (MTSC)"},
+  {"id":"MTSI", "name": "MACOM Technology Solutions Holdings, Inc. (MTSI)"},
+  {"id":"MTSL", "name": "MER Telemanagement Solutions Ltd. (MTSL)"},
+  {"id":"MU", "name": "Micron Technology, Inc. (MU)"},
+  {"id":"MUA.AX", "name": "MITULA GROUP LIMITED (MUA.AX)"},
+  {"id":"MUS.AX", "name": "MUSTANG RESOURCES LIMITED (MUS.AX)"},
+  {"id":"MVF.AX", "name": "MONASH IVF GROUP LIMITED (MVF.AX)"},
+  {"id":"MVIS", "name": "Microvision, Inc. (MVIS)"},
+  {"id":"MVP.AX", "name": "MEDICAL DEVELOPMENTS INTERNATIONAL LIMITED (MVP.AX)"},
+  {"id":"MVT.AX", "name": "MERCANTILE INVESTMENT COMPANY LTD (MVT.AX)"},
+  {"id":"MWR.AX", "name": "MGM WIRELESS LIMITED (MWR.AX)"},
+  {"id":"MWY.AX", "name": "MIDWAY LIMITED (MWY.AX)"},
+  {"id":"MX1.AX", "name": "MICRO-X LIMITED (MX1.AX)"},
+  {"id":"MXC.AX", "name": "MGC PHARMACEUTICALS LTD (MXC.AX)"},
+  {"id":"MXI.AX", "name": "MAXITRANS INDUSTRIES LIMITED (MXI.AX)"},
+  {"id":"MXIM", "name": "Maxim Integrated Products, Inc. (MXIM)"},
+  {"id":"MXPT", "name": "MaxPoint Interactive, Inc. (MXPT)"},
+  {"id":"MXR.AX", "name": "MAXIMUS RESOURCES LIMITED (MXR.AX)"},
+  {"id":"MXU.AX", "name": "MULTIPLEX SITES TRUST (MXU.AX)"},
+  {"id":"MXWL", "name": "Maxwell Technologies, Inc. (MXWL)"},
+  {"id":"MYE.AX", "name": "MASTERMYNE GROUP LIMITED (MYE.AX)"},
+  {"id":"MYGN", "name": "Myriad Genetics, Inc. (MYGN)"},
+  {"id":"MYL", "name": "Mylan N.V. (MYL)"},
+  {"id":"MYO.AX", "name": "MYOB GROUP LIMITED (MYO.AX)"},
+  {"id":"MYOK", "name": "MyoKardia, Inc. (MYOK)"},
+  {"id":"MYOS", "name": "MYOS RENS Technology Inc. (MYOS)"},
+  {"id":"MYQ.AX", "name": "MYFIZIQ LIMITED (MYQ.AX)"},
+  {"id":"MYR.AX", "name": "MYER HOLDINGS LIMITED (MYR.AX)"},
+  {"id":"MYRG", "name": "MYR Group, Inc. (MYRG)"},
+  {"id":"MYS.AX", "name": "MYSTATE LIMITED (MYS.AX)"},
+  {"id":"MYSZ", "name": "My Size, Inc. (MYSZ)"},
+  {"id":"MYX.AX", "name": "MAYNE PHARMA GROUP LIMITED (MYX.AX)"},
+  {"id":"MZA.AX", "name": "MEDALLION TRUST SERIES 2015-1 (MZA.AX)"},
+  {"id":"MZB.AX", "name": "MEDALLION TRUST SERIES 2014-2 (MZB.AX)"},
+  {"id":"MZC.AX", "name": "MEDALLION TRUST SERIES 2015-2 (MZC.AX)"},
+  {"id":"MZF.AX", "name": "MEDALLION TRUST SERIES 2016-1 (MZF.AX)"},
+  {"id":"MZI.AX", "name": "MZI RESOURCES LTD (MZI.AX)"},
+  {"id":"MZM.AX", "name": "MONTEZUMA MINING COMPANY LTD (MZM.AX)"},
+  {"id":"MZN.AX", "name": "MARINDI METALS LIMITED (MZN.AX)"},
+  {"id":"MZOR", "name": "Mazor Robotics Ltd. (MZOR)"},
+  {"id":"MZT.AX", "name": "MEDALLION TRUST SERIES 2016-2 (MZT.AX)"},
+  {"id":"MZZ.AX", "name": "MATADOR MINING LIMITED (MZZ.AX)"},
+  {"id":"N1H.AX", "name": "N1 HOLDINGS LIMITED (N1H.AX)"},
+  {"id":"NAB.AX", "name": "NATIONAL AUSTRALIA BANK LIMITED (NAB.AX)"},
+  {"id":"NAC.AX", "name": "NAOS ABSOLUTE OPPORTUNITIES COMPANY LIMITED (NAC.AX)"},
+  {"id":"NAE.AX", "name": "NEW AGE EXPLORATION LIMITED (NAE.AX)"},
+  {"id":"NAF.AX", "name": "NATIONAL RMBS TRUST 2011-1 SERIES 2011-1 (NAF.AX)"},
+  {"id":"NAG.AX", "name": "NAGAMBIE RESOURCES LIMITED (NAG.AX)"},
+  {"id":"NAH.AX", "name": "NATIONAL RMBS TRUST 2012-2 SERIES 2012-2 (NAH.AX)"},
+  {"id":"NAII", "name": "Natural Alternatives International, Inc. (NAII)"},
+  {"id":"NAJ.AX", "name": "NATIONAL RMBS TRUST 2015-1 SERIES 2015-1 (NAJ.AX)"},
+  {"id":"NAKD", "name": "Naked Brand Group Inc. (NAKD)"},
+  {"id":"NAM.AX", "name": "NAMOI COTTON CO-OPERATIVE LIMITED (NAM.AX)"},
+  {"id":"NAME", "name": "Rightside Group, Ltd. (NAME)"},
+  {"id":"NAN.AX", "name": "NANOSONICS LIMITED (NAN.AX)"},
+  {"id":"NANO", "name": "Nanometrics Incorporated (NANO)"},
+  {"id":"NAO.AX", "name": "NATIONAL RMBS TRUST 2011-2 SERIES 2011-2 (NAO.AX)"},
+  {"id":"NATH", "name": "Nathan&#39;s Famous, Inc. (NATH)"},
+  {"id":"NATI", "name": "National Instruments Corporation (NATI)"},
+  {"id":"NATR", "name": "Nature&#39;s Sunshine Products, Inc. (NATR)"},
+  {"id":"NAUH", "name": "National American University Holdings, Inc. (NAUH)"},
+  {"id":"NAV.AX", "name": "NAVIGATOR RESOURCES LIMITED (NAV.AX)"},
+  {"id":"NAVG", "name": "The Navigators Group, Inc. (NAVG)"},
+  {"id":"NAVI", "name": "Navient Corporation (NAVI)"},
+  {"id":"NBCP", "name": "NB Capital Acquisition Corp. (NBCP)"},
+  {"id":"NBEV", "name": "New Age Beverages Corporation (NBEV)"},
+  {"id":"NBIX", "name": "Neurocrine Biosciences, Inc. (NBIX)"},
+  {"id":"NBL.AX", "name": "NONI B LIMITED (NBL.AX)"},
+  {"id":"NBN", "name": "Northeast Bancorp (NBN)"},
+  {"id":"NBRV", "name": "Nabriva Therapeutics AG (NBRV)"},
+  {"id":"NBTB", "name": "NBT Bancorp Inc. (NBTB)"},
+  {"id":"NCBS", "name": "Nicolet Bankshares Inc. (NCBS)"},
+  {"id":"NCC.AX", "name": "NAOS EMERGING OPPORTUNITIES COMPANY LIMITED (NCC.AX)"},
+  {"id":"NCIT", "name": "NCI, Inc. (NCIT)"},
+  {"id":"NCK.AX", "name": "NICK SCALI LIMITED (NCK.AX)"},
+  {"id":"NCL.AX", "name": "NETCCENTRIC LIMITED (NCL.AX)"},
+  {"id":"NCLH", "name": "Norwegian Cruise Line Holdings Ltd. (NCLH)"},
+  {"id":"NCM.AX", "name": "NEWCREST MINING LIMITED (NCM.AX)"},
+  {"id":"NCMI", "name": "National CineMedia, Inc. (NCMI)"},
+  {"id":"NCOM", "name": "National Commerce Corporation (NCOM)"},
+  {"id":"NCR.AX", "name": "NUCOAL RESOURCES LIMITED (NCR.AX)"},
+  {"id":"NCTY", "name": "The9 Limited (NCTY)"},
+  {"id":"NDAQ", "name": "Nasdaq, Inc. (NDAQ)"},
+  {"id":"NDLS", "name": "Noodles & Company (NDLS)"},
+  {"id":"NDO.AX", "name": "NIDO PETROLEUM LIMITED (NDO.AX)"},
+  {"id":"NDRA", "name": "ENDRA Life Sciences Inc. (NDRA)"},
+  {"id":"NDRM", "name": "NeuroDerm Ltd. (NDRM)"},
+  {"id":"NDSN", "name": "Nordson Corporation (NDSN)"},
+  {"id":"NEA.AX", "name": "NEARMAP LTD (NEA.AX)"},
+  {"id":"NEC.AX", "name": "NINE ENTERTAINMENT CO. HOLDINGS LIMITED (NEC.AX)"},
+  {"id":"NEO", "name": "NeoGenomics, Inc. (NEO)"},
+  {"id":"NEOG", "name": "Neogen Corporation (NEOG)"},
+  {"id":"NEON", "name": "Neonode Inc. (NEON)"},
+  {"id":"NEOS", "name": "Neos Therapeutics, Inc. (NEOS)"},
+  {"id":"NEOT", "name": "Neothetics, Inc. (NEOT)"},
+  {"id":"NEPT", "name": "Neptune Technologies & Bioresources Inc (NEPT)"},
+  {"id":"NERV", "name": "Minerva Neurosciences, Inc (NERV)"},
+  {"id":"NES.AX", "name": "NELSON RESOURCES LIMITED (NES.AX)"},
+  {"id":"NET.AX", "name": "NETLINKZ LIMITED (NET.AX)"},
+  {"id":"NETE", "name": "Net Element, Inc. (NETE)"},
+  {"id":"NEU.AX", "name": "NEUREN PHARMACEUTICALS LIMITED (NEU.AX)"},
+  {"id":"NEWS", "name": "NewStar Financial, Inc. (NEWS)"},
+  {"id":"NEWT", "name": "Newtek Business Services Corp. (NEWT)"},
+  {"id":"NEWTL", "name": "Newtek Business Services Corp. (NEWTL)"},
+  {"id":"NEWTZ", "name": "Newtek Business Services Corp. (NEWTZ)"},
+  {"id":"NFBK", "name": "Northfield Bancorp, Inc. (NFBK)"},
+  {"id":"NFEC", "name": "NF Energy Saving Corporation (NFEC)"},
+  {"id":"NFLX", "name": "Netflix, Inc. (NFLX)"},
+  {"id":"NFN.AX", "name": "NUFARM FINANCE (NZ) LIMITED (NFN.AX)"},
+  {"id":"NGE.AX", "name": "NEW GUINEA ENERGY LTD (NGE.AX)"},
+  {"id":"NGHC", "name": "National General Holdings Corp (NGHC)"},
+  {"id":"NGHCN", "name": "National General Holdings Corp (NGHCN)"},
+  {"id":"NGHCO", "name": "National General Holdings Corp (NGHCO)"},
+  {"id":"NGHCP", "name": "National General Holdings Corp (NGHCP)"},
+  {"id":"NGHCZ", "name": "National General Holdings Corp (NGHCZ)"},
+  {"id":"NGY.AX", "name": "NUENERGY GAS LIMITED (NGY.AX)"},
+  {"id":"NH", "name": "NantHealth, Inc. (NH)"},
+  {"id":"NHC.AX", "name": "NEW HOPE CORPORATION LIMITED (NHC.AX)"},
+  {"id":"NHF.AX", "name": "NIB HOLDINGS LIMITED (NHF.AX)"},
+  {"id":"NHL.AX", "name": "NOVITA HEALTHCARE LIMITED (NHL.AX)"},
+  {"id":"NHLD", "name": "National Holdings Corporation (NHLD)"},
+  {"id":"NHLDW", "name": "National Holdings Corporation (NHLDW)"},
+  {"id":"NHO.AX", "name": "NEW HORIZON COAL LTD (NHO.AX)"},
+  {"id":"NHTC", "name": "Natural Health Trends Corp. (NHTC)"},
+  {"id":"NIB.AX", "name": "NORDIC INVESTMENT BANK (NIB.AX)"},
+  {"id":"NICE", "name": "NICE Ltd (NICE)"},
+  {"id":"NICK", "name": "Nicholas Financial, Inc. (NICK)"},
+  {"id":"NIHD", "name": "NII Holdings, Inc. (NIHD)"},
+  {"id":"NIO.AX", "name": "NICKELORE LIMITED (NIO.AX)"},
+  {"id":"NIU.AX", "name": "NIUMINCO GROUP LIMITED (NIU.AX)"},
+  {"id":"NK", "name": "NantKwest, Inc. (NK)"},
+  {"id":"NKP.AX", "name": "NKWE PLATINUM LIMITED (NKP.AX)"},
+  {"id":"NKSH", "name": "National Bankshares, Inc. (NKSH)"},
+  {"id":"NKTR", "name": "Nektar Therapeutics (NKTR)"},
+  {"id":"NLNK", "name": "NewLink Genetics Corporation (NLNK)"},
+  {"id":"NLST", "name": "Netlist, Inc. (NLST)"},
+  {"id":"NME.AX", "name": "NEX METALS EXPLORATION LIMITED (NME.AX)"},
+  {"id":"NMG.AX", "name": "NMG CORPORATION LIMITED (NMG.AX)"},
+  {"id":"NMI.AX", "name": "NORTHERN MINING LIMITED (NMI.AX)"},
+  {"id":"NMIH", "name": "NMI Holdings Inc (NMIH)"},
+  {"id":"NML.AX", "name": "NAVARRE MINERALS LIMITED (NML.AX)"},
+  {"id":"NMM.AX", "name": "NOBLE METALS LIMITED (NMM.AX)"},
+  {"id":"NMRX", "name": "Numerex Corp. (NMRX)"},
+  {"id":"NMS.AX", "name": "NEPTUNE MARINE SERVICES LIMITED (NMS.AX)"},
+  {"id":"NMT.AX", "name": "NEOMETALS LTD (NMT.AX)"},
+  {"id":"NNBR", "name": "NN, Inc. (NNBR)"},
+  {"id":"NNDM", "name": "Nano Dimension Ltd. (NNDM)"},
+  {"id":"NNW.AX", "name": "99 WUXIAN LIMITED (NNW.AX)"},
+  {"id":"NODK", "name": "NI Holdings, Inc. (NODK)"},
+  {"id":"NOE.AX", "name": "NOVARISE RENEWABLE RESOURCES INTERNATIONAL LIMITED (NOE.AX)"},
+  {"id":"NOR.AX", "name": "NORWOOD SYSTEMS LIMITED (NOR.AX)"},
+  {"id":"NOV.AX", "name": "NOVATTI GROUP LIMITED (NOV.AX)"},
+  {"id":"NOVN", "name": "Novan, Inc. (NOVN)"},
+  {"id":"NOVT", "name": "Novanta Inc. (NOVT)"},
+  {"id":"NOX.AX", "name": "NOXOPHARM LIMITED (NOX.AX)"},
+  {"id":"NRCIA", "name": "National Research Corporation (NRCIA)"},
+  {"id":"NRCIB", "name": "National Research Corporation (NRCIB)"},
+  {"id":"NRIM", "name": "Northrim BanCorp Inc (NRIM)"},
+  {"id":"NRM.AX", "name": "NATIONAL RMBS TRUST 2016-1 (NRM.AX)"},
+  {"id":"NRT.AX", "name": "NOVOGEN LIMITED (NRT.AX)"},
+  {"id":"NSE.AX", "name": "NEW STANDARD ENERGY LIMITED (NSE.AX)"},
+  {"id":"NSEC", "name": "National Security Group, Inc. (NSEC)"},
+  {"id":"NSIT", "name": "Insight Enterprises, Inc. (NSIT)"},
+  {"id":"NSL.AX", "name": "NSL CONSOLIDATED LIMITED (NSL.AX)"},
+  {"id":"NSR.AX", "name": "NATIONAL STORAGE REIT (NSR.AX)"},
+  {"id":"NSSC", "name": "NAPCO Security Technologies, Inc. (NSSC)"},
+  {"id":"NST.AX", "name": "NORTHERN STAR RESOURCES LTD (NST.AX)"},
+  {"id":"NSTG", "name": "NanoString Technologies, Inc. (NSTG)"},
+  {"id":"NSX.AX", "name": "NSX LIMITED (NSX.AX)"},
+  {"id":"NSYS", "name": "Nortech Systems Incorporated (NSYS)"},
+  {"id":"NTAP", "name": "NetApp, Inc. (NTAP)"},
+  {"id":"NTC.AX", "name": "NETCOMM WIRELESS LIMITED (NTC.AX)"},
+  {"id":"NTCT", "name": "NetScout Systems, Inc. (NTCT)"},
+  {"id":"NTEC", "name": "Intec Pharma Ltd. (NTEC)"},
+  {"id":"NTES", "name": "NetEase, Inc. (NTES)"},
+  {"id":"NTGR", "name": "NETGEAR, Inc. (NTGR)"},
+  {"id":"NTI.AX", "name": "NEUROTECH INTERNATIONAL LIMITED (NTI.AX)"},
+  {"id":"NTIC", "name": "Northern Technologies International Corporation (NTIC)"},
+  {"id":"NTL.AX", "name": "NEW TALISMAN GOLD MINES LIMITED (NTL.AX)"},
+  {"id":"NTLA", "name": "Intellia Therapeutics, Inc. (NTLA)"},
+  {"id":"NTM.AX", "name": "NTM GOLD LIMITED (NTM.AX)"},
+  {"id":"NTNX", "name": "Nutanix, Inc. (NTNX)"},
+  {"id":"NTRA", "name": "Natera, Inc. (NTRA)"},
+  {"id":"NTRI", "name": "NutriSystem Inc (NTRI)"},
+  {"id":"NTRP", "name": "Neurotrope, Inc. (NTRP)"},
+  {"id":"NTRS", "name": "Northern Trust Corporation (NTRS)"},
+  {"id":"NTRSP", "name": "Northern Trust Corporation (NTRSP)"},
+  {"id":"NTU.AX", "name": "NORTHERN MINERALS LIMITED (NTU.AX)"},
+  {"id":"NTWK", "name": "NetSol Technologies Inc. (NTWK)"},
+  {"id":"NUAN", "name": "Nuance Communications, Inc. (NUAN)"},
+  {"id":"NUF.AX", "name": "NUFARM LIMITED (NUF.AX)"},
+  {"id":"NUH.AX", "name": "NUHEARA LIMITED (NUH.AX)"},
+  {"id":"NURO", "name": "NeuroMetrix, Inc. (NURO)"},
+  {"id":"NUROW", "name": "NeuroMetrix, Inc. (NUROW)"},
+  {"id":"NUTR", "name": "Nutraceutical International Corporation (NUTR)"},
+  {"id":"NUVA", "name": "NuVasive, Inc. (NUVA)"},
+  {"id":"NVAX", "name": "Novavax, Inc. (NVAX)"},
+  {"id":"NVCN", "name": "Neovasc Inc. (NVCN)"},
+  {"id":"NVCR", "name": "NovoCure Limited (NVCR)"},
+  {"id":"NVDA", "name": "NVIDIA Corporation (NVDA)"},
+  {"id":"NVDQ", "name": "Novadaq Technologies Inc (NVDQ)"},
+  {"id":"NVEC", "name": "NVE Corporation (NVEC)"},
+  {"id":"NVEE", "name": "NV5 Global, Inc. (NVEE)"},
+  {"id":"NVET", "name": "Nexvet Biopharma plc (NVET)"},
+  {"id":"NVFY", "name": "Nova Lifestyle, Inc (NVFY)"},
+  {"id":"NVGN", "name": "Novogen Limited (NVGN)"},
+  {"id":"NVIV", "name": "InVivo Therapeutics Holdings Corp. (NVIV)"},
+  {"id":"NVL.AX", "name": "NATIONAL VETERINARY CARE LTD (NVL.AX)"},
+  {"id":"NVLN", "name": "Novelion Therapeutics Inc.  (NVLN)"},
+  {"id":"NVLS", "name": "Nivalis Therapeutics, Inc. (NVLS)"},
+  {"id":"NVMI", "name": "Nova Measuring Instruments Ltd. (NVMI)"},
+  {"id":"NVO.AX", "name": "NVOI LTD (NVO.AX)"},
+  {"id":"NVT.AX", "name": "NAVITAS LIMITED (NVT.AX)"},
+  {"id":"NVTR", "name": "Nuvectra Corporation (NVTR)"},
+  {"id":"NWBI", "name": "Northwest Bancshares, Inc. (NWBI)"},
+  {"id":"NWE.AX", "name": "NORWEST ENERGY NL (NWE.AX)"},
+  {"id":"NWF.AX", "name": "NEWFIELD RESOURCES LIMITED (NWF.AX)"},
+  {"id":"NWFL", "name": "Norwood Financial Corp. (NWFL)"},
+  {"id":"NWH.AX", "name": "NRW HOLDINGS LIMITED (NWH.AX)"},
+  {"id":"NWLI", "name": "National Western Life Group, Inc. (NWLI)"},
+  {"id":"NWPX", "name": "Northwest Pipe Company (NWPX)"},
+  {"id":"NWS", "name": "News Corporation (NWS)"},
+  {"id":"NWS.AX", "name": "NEWS CORPORATION.. (NWS.AX)"},
+  {"id":"NWSA", "name": "News Corporation (NWSA)"},
+  {"id":"NWZ.AX", "name": "NEWZULU LIMITED (NWZ.AX)"},
+  {"id":"NXEO", "name": "Nexeo Solutions, Inc. (NXEO)"},
+  {"id":"NXEOU", "name": "Nexeo Solutions, Inc. (NXEOU)"},
+  {"id":"NXEOW", "name": "Nexeo Solutions, Inc. (NXEOW)"},
+  {"id":"NXM.AX", "name": "NEXUS MINERALS LIMITED (NXM.AX)"},
+  {"id":"NXPI", "name": "NXP Semiconductors N.V. (NXPI)"},
+  {"id":"NXR.AX", "name": "NEMEX RESOURCES LIMITED (NXR.AX)"},
+  {"id":"NXST", "name": "Nexstar Media Group, Inc. (NXST)"},
+  {"id":"NXT.AX", "name": "NEXTDC LIMITED (NXT.AX)"},
+  {"id":"NXTD", "name": "NXT-ID Inc. (NXTD)"},
+  {"id":"NXTDW", "name": "NXT-ID Inc. (NXTDW)"},
+  {"id":"NXTM", "name": "NxStage Medical, Inc. (NXTM)"},
+  {"id":"NYMT", "name": "New York Mortgage Trust, Inc. (NYMT)"},
+  {"id":"NYMTO", "name": "New York Mortgage Trust, Inc. (NYMTO)"},
+  {"id":"NYMTP", "name": "New York Mortgage Trust, Inc. (NYMTP)"},
+  {"id":"NYMX", "name": "Nymox Pharmaceutical Corporation (NYMX)"},
+  {"id":"NYNY", "name": "Empire Resorts, Inc. (NYNY)"},
+  {"id":"NYO.AX", "name": "NYOTA MINERALS LIMITED (NYO.AX)"},
+  {"id":"NZC.AX", "name": "NZURI COPPER LIMITED (NZC.AX)"},
+  {"id":"NZK.AX", "name": "NEW ZEALAND KING SALMON INVESTMENTS LIMITED (NZK.AX)"},
+  {"id":"NZM.AX", "name": "NZME LIMITED (NZM.AX)"},
+  {"id":"OACQ", "name": "Origo Acquisition Corporation (OACQ)"},
+  {"id":"OACQR", "name": "Origo Acquisition Corporation (OACQR)"},
+  {"id":"OACQU", "name": "Origo Acquisition Corporation (OACQU)"},
+  {"id":"OACQW", "name": "Origo Acquisition Corporation (OACQW)"},
+  {"id":"OAR.AX", "name": "OAKDALE RESOURCES LIMITED (OAR.AX)"},
+  {"id":"OASM", "name": "Oasmia Pharmaceutical AB (OASM)"},
+  {"id":"OBAS", "name": "Optibase Ltd. (OBAS)"},
+  {"id":"OBCI", "name": "Ocean Bio-Chem, Inc. (OBCI)"},
+  {"id":"OBJ.AX", "name": "OBJ LIMITED (OBJ.AX)"},
+  {"id":"OBL.AX", "name": "OIL BASINS LIMITED (OBL.AX)"},
+  {"id":"OBLN", "name": "Obalon Therapeutics, Inc. (OBLN)"},
+  {"id":"OBSV", "name": "ObsEva SA (OBSV)"},
+  {"id":"OCA.AX", "name": "OCEANIA HEALTHCARE LIMITED (OCA.AX)"},
+  {"id":"OCC", "name": "Optical Cable Corporation (OCC)"},
+  {"id":"OCC.AX", "name": "ORTHOCELL LIMITED (OCC.AX)"},
+  {"id":"OCFC", "name": "OceanFirst Financial Corp. (OCFC)"},
+  {"id":"OCL.AX", "name": "OBJECTIVE CORPORATION LIMITED (OCL.AX)"},
+  {"id":"OCLR", "name": "Oclaro, Inc. (OCLR)"},
+  {"id":"OCP.AX", "name": "OCEANIA CAPITAL PARTNERS LIMITED (OCP.AX)"},
+  {"id":"OCRX", "name": "Ocera Therapeutics, Inc. (OCRX)"},
+  {"id":"OCUL", "name": "Ocular Therapeutix, Inc. (OCUL)"},
+  {"id":"ODFL", "name": "Old Dominion Freight Line, Inc. (ODFL)"},
+  {"id":"ODN.AX", "name": "ODIN ENERGY LIMITED (ODN.AX)"},
+  {"id":"ODP", "name": "Office Depot, Inc. (ODP)"},
+  {"id":"ODY.AX", "name": "ODYSSEY ENERGY LIMITED (ODY.AX)"},
+  {"id":"OEC.AX", "name": "ORBITAL CORPORATION LIMITED (OEC.AX)"},
+  {"id":"OEG.AX", "name": "ORPHEUS ENERGY LIMITED (OEG.AX)"},
+  {"id":"OEL.AX", "name": "OTTO ENERGY LIMITED (OEL.AX)"},
+  {"id":"OEQ.AX", "name": "ORION EQUITIES LIMITED (OEQ.AX)"},
+  {"id":"OESX", "name": "Orion Energy Systems, Inc. (OESX)"},
+  {"id":"OEX.AX", "name": "OILEX LTD (OEX.AX)"},
+  {"id":"OFED", "name": "Oconee Federal Financial Corp. (OFED)"},
+  {"id":"OFIX", "name": "Orthofix International N.V. (OFIX)"},
+  {"id":"OFLX", "name": "Omega Flex, Inc. (OFLX)"},
+  {"id":"OFS", "name": "OFS Capital Corporation (OFS)"},
+  {"id":"OFX.AX", "name": "OFX GROUP LIMITED (OFX.AX)"},
+  {"id":"OGC.AX", "name": "OCEANAGOLD CORPORATION (OGC.AX)"},
+  {"id":"OGH.AX", "name": "OCHRE GROUP HOLDINGS LIMITED (OGH.AX)"},
+  {"id":"OGX.AX", "name": "ORINOCO GOLD LIMITED (OGX.AX)"},
+  {"id":"OGXI", "name": "OncoGenex Pharmaceuticals Inc. (OGXI)"},
+  {"id":"OGY.AX", "name": "ORCA ENERGY LIMITED (OGY.AX)"},
+  {"id":"OHAI", "name": "OHA Investment Corporation (OHAI)"},
+  {"id":"OHE.AX", "name": "ORION HEALTH GROUP LIMITED (OHE.AX)"},
+  {"id":"OHGI", "name": "One Horizon Group, Inc. (OHGI)"},
+  {"id":"OHRP", "name": "Ohr Pharmaceuticals, Inc. (OHRP)"},
+  {"id":"OIIM", "name": "O2Micro International Limited (OIIM)"},
+  {"id":"OIL.AX", "name": "OPTISCAN IMAGING LIMITED (OIL.AX)"},
+  {"id":"OKJ.AX", "name": "OAKAJEE CORPORATION LIMITED (OKJ.AX)"},
+  {"id":"OKSB", "name": "Southwest Bancorp, Inc. (OKSB)"},
+  {"id":"OKTA", "name": "Okta, Inc. (OKTA)"},
+  {"id":"OKU.AX", "name": "OKLO RESOURCES LIMITED (OKU.AX)"},
+  {"id":"OLBK", "name": "Old Line Bancshares, Inc. (OLBK)"},
+  {"id":"OLD", "name": "The Long-Term Care ETF (OLD)"},
+  {"id":"OLED", "name": "Universal Display Corporation (OLED)"},
+  {"id":"OLH.AX", "name": "OLDFIELDS HOLDINGS LIMITED (OLH.AX)"},
+  {"id":"OLLI", "name": "Ollie&#39;s Bargain Outlet Holdings, Inc. (OLLI)"},
+  {"id":"OLV.AX", "name": "OTHERLEVELS HOLDINGS LIMITED (OLV.AX)"},
+  {"id":"OMAB", "name": "Grupo Aeroportuario del Centro Norte S.A.B. de C.V. (OMAB)"},
+  {"id":"OMCL", "name": "Omnicell, Inc. (OMCL)"},
+  {"id":"OMED", "name": "OncoMed Pharmaceuticals, Inc. (OMED)"},
+  {"id":"OMER", "name": "Omeros Corporation (OMER)"},
+  {"id":"OMEX", "name": "Odyssey Marine Exploration, Inc. (OMEX)"},
+  {"id":"OMH.AX", "name": "OM HOLDINGS LIMITED (OMH.AX)"},
+  {"id":"OML.AX", "name": "OOH!MEDIA LIMITED (OML.AX)"},
+  {"id":"OMNT", "name": "Ominto, Inc. (OMNT)"},
+  {"id":"OMT.AX", "name": "OMNI MARKET TIDE LTD (OMT.AX)"},
+  {"id":"ON", "name": "ON Semiconductor Corporation (ON)"},
+  {"id":"ONB", "name": "Old National Bancorp (ONB)"},
+  {"id":"ONCE", "name": "Spark Therapeutics, Inc. (ONCE)"},
+  {"id":"ONCS", "name": "OncoSec Medical Incorporated (ONCS)"},
+  {"id":"ONE.AX", "name": "ONEVIEW HEALTHCARE PLC (ONE.AX)"},
+  {"id":"ONEQ", "name": "Fidelity Nasdaq Composite Index Tracking Stock (ONEQ)"},
+  {"id":"ONS", "name": "Oncobiologics, Inc. (ONS)"},
+  {"id":"ONSIW", "name": "Oncobiologics, Inc. (ONSIW)"},
+  {"id":"ONSIZ", "name": "Oncobiologics, Inc. (ONSIZ)"},
+  {"id":"ONT.AX", "name": "1300 SMILES LIMITED (ONT.AX)"},
+  {"id":"ONTX", "name": "Onconova Therapeutics, Inc. (ONTX)"},
+  {"id":"ONTXW", "name": "Onconova Therapeutics, Inc. (ONTXW)"},
+  {"id":"ONVI", "name": "Onvia, Inc. (ONVI)"},
+  {"id":"ONVO", "name": "Organovo Holdings, Inc. (ONVO)"},
+  {"id":"OOK.AX", "name": "OOKAMI LIMITED (OOK.AX)"},
+  {"id":"OPB", "name": "Opus Bank (OPB)"},
+  {"id":"OPG.AX", "name": "OPUS GROUP LIMITED (OPG.AX)"},
+  {"id":"OPGN", "name": "OpGen, Inc. (OPGN)"},
+  {"id":"OPGNW", "name": "OpGen, Inc. (OPGNW)"},
+  {"id":"OPHC", "name": "OptimumBank Holdings, Inc. (OPHC)"},
+  {"id":"OPHT", "name": "Ophthotech Corporation (OPHT)"},
+  {"id":"OPK", "name": "Opko Health, Inc. (OPK)"},
+  {"id":"OPN.AX", "name": "OPENDNA LIMITED (OPN.AX)"},
+  {"id":"OPOF", "name": "Old Point Financial Corporation (OPOF)"},
+  {"id":"OPT.AX", "name": "OPTHEA LIMITED (OPT.AX)"},
+  {"id":"OPTT", "name": "Ocean Power Technologies, Inc. (OPTT)"},
+  {"id":"OPXA", "name": "Opexa Therapeutics, Inc. (OPXA)"},
+  {"id":"OPXAW", "name": "Opexa Therapeutics, Inc. (OPXAW)"},
+  {"id":"ORA.AX", "name": "ORORA LIMITED (ORA.AX)"},
+  {"id":"ORBC", "name": "ORBCOMM Inc. (ORBC)"},
+  {"id":"ORBK", "name": "Orbotech Ltd. (ORBK)"},
+  {"id":"ORE.AX", "name": "OROCOBRE LIMITED (ORE.AX)"},
+  {"id":"OREX", "name": "Orexigen Therapeutics, Inc. (OREX)"},
+  {"id":"ORG", "name": "The Organics ETF (ORG)"},
+  {"id":"ORG.AX", "name": "ORIGIN ENERGY LIMITED (ORG.AX)"},
+  {"id":"ORH.AX", "name": "ORH LIMITED (ORH.AX)"},
+  {"id":"ORI.AX", "name": "ORICA LIMITED (ORI.AX)"},
+  {"id":"ORIG", "name": "Ocean Rig UDW Inc. (ORIG)"},
+  {"id":"ORIT", "name": "Oritani Financial Corp. (ORIT)"},
+  {"id":"ORL.AX", "name": "OROTONGROUP LIMITED (ORL.AX)"},
+  {"id":"ORLY", "name": "O&#39;Reilly Automotive, Inc. (ORLY)"},
+  {"id":"ORM.AX", "name": "ORION METALS LIMITED (ORM.AX)"},
+  {"id":"ORMP", "name": "Oramed Pharmaceuticals Inc. (ORMP)"},
+  {"id":"ORN.AX", "name": "ORION GOLD NL (ORN.AX)"},
+  {"id":"ORPN", "name": "Bioblast Pharma Ltd. (ORPN)"},
+  {"id":"ORR.AX", "name": "ORECORP LIMITED (ORR.AX)"},
+  {"id":"ORRF", "name": "Orrstown Financial Services Inc (ORRF)"},
+  {"id":"OSBC", "name": "Old Second Bancorp, Inc. (OSBC)"},
+  {"id":"OSBCP", "name": "Old Second Bancorp, Inc. (OSBCP)"},
+  {"id":"OSH.AX", "name": "OIL SEARCH LIMITED (OSH.AX)"},
+  {"id":"OSIS", "name": "OSI Systems, Inc. (OSIS)"},
+  {"id":"OSL.AX", "name": "ONCOSIL MEDICAL LTD (OSL.AX)"},
+  {"id":"OSN", "name": "Ossen Innovation Co., Ltd. (OSN)"},
+  {"id":"OSP.AX", "name": "OSPREY MEDICAL INC (OSP.AX)"},
+  {"id":"OSTK", "name": "Overstock.com, Inc. (OSTK)"},
+  {"id":"OSUR", "name": "OraSure Technologies, Inc. (OSUR)"},
+  {"id":"OTEL", "name": "Otelco Inc. (OTEL)"},
+  {"id":"OTEX", "name": "Open Text Corporation (OTEX)"},
+  {"id":"OTG", "name": "OTG EXP, Inc. (OTG)"},
+  {"id":"OTI.AX", "name": "ORIENTAL TECHNOLOGIES INVESTMENT LIMITED (OTI.AX)"},
+  {"id":"OTIC", "name": "Otonomy, Inc. (OTIC)"},
+  {"id":"OTIV", "name": "On Track Innovations Ltd (OTIV)"},
+  {"id":"OTR.AX", "name": "ONTERRAN LIMITED (OTR.AX)"},
+  {"id":"OTTR", "name": "Otter Tail Corporation (OTTR)"},
+  {"id":"OTTW", "name": "Ottawa Bancorp, Inc. (OTTW)"},
+  {"id":"OTW.AX", "name": "OVER THE WIRE HOLDINGS LIMITED (OTW.AX)"},
+  {"id":"OVAS", "name": "OvaScience Inc. (OVAS)"},
+  {"id":"OVBC", "name": "Ohio Valley Banc Corp. (OVBC)"},
+  {"id":"OVH.AX", "name": "ONEVUE HOLDINGS LIMITED (OVH.AX)"},
+  {"id":"OVL.AX", "name": "ORO VERDE LIMITED (OVL.AX)"},
+  {"id":"OVLY", "name": "Oak Valley Bancorp (CA) (OVLY)"},
+  {"id":"OVN.AX", "name": "OVENTUS MEDICAL LIMITED (OVN.AX)"},
+  {"id":"OVR.AX", "name": "OVERLAND RESOURCES LIMITED (OVR.AX)"},
+  {"id":"OXBR", "name": "Oxbridge Re Holdings Limited (OXBR)"},
+  {"id":"OXBRW", "name": "Oxbridge Re Holdings Limited (OXBRW)"},
+  {"id":"OXFD", "name": "Oxford Immunotec Global PLC (OXFD)"},
+  {"id":"OXLC", "name": "Oxford Lane Capital Corp. (OXLC)"},
+  {"id":"OXLCN", "name": "Oxford Lane Capital Corp. (OXLCN)"},
+  {"id":"OXLCO", "name": "Oxford Lane Capital Corp. (OXLCO)"},
+  {"id":"OXX.AX", "name": "OCTANEX LIMITED (OXX.AX)"},
+  {"id":"OZG.AX", "name": "OZGROWTH LIMITED (OZG.AX)"},
+  {"id":"OZL.AX", "name": "OZ MINERALS LIMITED (OZL.AX)"},
+  {"id":"OZRK", "name": "Bank of the Ozarks (OZRK)"},
+  {"id":"OZT.AX", "name": "OZTRADE PUBLISHING GROUP LIMITED (OZT.AX)"},
+  {"id":"PAA.AX", "name": "PHARMAUST LIMITED (PAA.AX)"},
+  {"id":"PAAC", "name": "Pacific Special Acquisition Corp. (PAAC)"},
+  {"id":"PAACR", "name": "Pacific Special Acquisition Corp. (PAACR)"},
+  {"id":"PAACU", "name": "Pacific Special Acquisition Corp. (PAACU)"},
+  {"id":"PAACW", "name": "Pacific Special Acquisition Corp. (PAACW)"},
+  {"id":"PAAS", "name": "Pan American Silver Corp. (PAAS)"},
+  {"id":"PAB.AX", "name": "PATRYS LIMITED (PAB.AX)"},
+  {"id":"PAC.AX", "name": "PACIFIC CURRENT GROUP LIMITED (PAC.AX)"},
+  {"id":"PACB", "name": "Pacific Biosciences of California, Inc. (PACB)"},
+  {"id":"PACW", "name": "PacWest Bancorp (PACW)"},
+  {"id":"PAF.AX", "name": "PM CAPITAL ASIAN OPPORTUNITIES FUND LIMITED (PAF.AX)"},
+  {"id":"PAGG", "name": "PowerShares Global Agriculture Portfolio (PAGG)"},
+  {"id":"PAHC", "name": "Phibro Animal Health Corporation (PAHC)"},
+  {"id":"PAI.AX", "name": "PLATINUM ASIA INVESTMENTS LIMITED (PAI.AX)"},
+  {"id":"PAK.AX", "name": "PACIFIC AMERICAN COAL LIMITED (PAK.AX)"},
+  {"id":"PAN.AX", "name": "PANORAMIC RESOURCES LIMITED (PAN.AX)"},
+  {"id":"PANL", "name": "Pangaea Logistics Solutions Ltd. (PANL)"},
+  {"id":"PAR.AX", "name": "PARADIGM BIOPHARMACEUTICALS LIMITED.. (PAR.AX)"},
+  {"id":"PATI", "name": "Patriot Transportation Holding, Inc. (PATI)"},
+  {"id":"PATK", "name": "Patrick Industries, Inc. (PATK)"},
+  {"id":"PAVM", "name": "PAVmed Inc. (PAVM)"},
+  {"id":"PAVMW", "name": "PAVmed Inc. (PAVMW)"},
+  {"id":"PAYX", "name": "Paychex, Inc. (PAYX)"},
+  {"id":"PBBI", "name": "PB Bancorp, Inc. (PBBI)"},
+  {"id":"PBCT", "name": "People&#39;s United Financial, Inc. (PBCT)"},
+  {"id":"PBCTP", "name": "People&#39;s United Financial, Inc. (PBCTP)"},
+  {"id":"PBHC", "name": "Pathfinder Bancorp, Inc. (PBHC)"},
+  {"id":"PBIB", "name": "Porter Bancorp, Inc. (PBIB)"},
+  {"id":"PBIP", "name": "Prudential Bancorp, Inc. (PBIP)"},
+  {"id":"PBMD", "name": "Prima BioMed Ltd (PBMD)"},
+  {"id":"PBNC", "name": "Paragon Commercial Corporation (PBNC)"},
+  {"id":"PBP.AX", "name": "PROBIOTEC LIMITED (PBP.AX)"},
+  {"id":"PBPB", "name": "Potbelly Corporation (PBPB)"},
+  {"id":"PBSK", "name": "Poage Bankshares, Inc. (PBSK)"},
+  {"id":"PBT.AX", "name": "PRANA BIOTECHNOLOGY LIMITED (PBT.AX)"},
+  {"id":"PBX.AX", "name": "PACIFIC BAUXITE LIMITED (PBX.AX)"},
+  {"id":"PBYI", "name": "Puma Biotechnology Inc (PBYI)"},
+  {"id":"PCAR", "name": "PACCAR Inc. (PCAR)"},
+  {"id":"PCBK", "name": "Pacific Continental Corporation (Ore) (PCBK)"},
+  {"id":"PCH", "name": "Potlatch Corporation (PCH)"},
+  {"id":"PCH.AX", "name": "PROPERTY CONNECT HOLDINGS LIMITED (PCH.AX)"},
+  {"id":"PCL.AX", "name": "PANCONTINENTAL OIL & GAS NL (PCL.AX)"},
+  {"id":"PCLN", "name": "The Priceline Group Inc.  (PCLN)"},
+  {"id":"PCMI", "name": "PCM, Inc. (PCMI)"},
+  {"id":"PCO", "name": "Pendrell Corporation (PCO)"},
+  {"id":"PCOM", "name": "Points International, Ltd. (PCOM)"},
+  {"id":"PCRX", "name": "Pacira Pharmaceuticals, Inc. (PCRX)"},
+  {"id":"PCTI", "name": "PC-Tel, Inc. (PCTI)"},
+  {"id":"PCTY", "name": "Paylocity Holding Corporation (PCTY)"},
+  {"id":"PCYG", "name": "Park City Group, Inc. (PCYG)"},
+  {"id":"PCYO", "name": "Pure Cycle Corporation (PCYO)"},
+  {"id":"PDBC", "name": "PowerShares Optimum Yield Diversified Commodity Strategy No K- (PDBC)"},
+  {"id":"PDCE", "name": "PDC Energy, Inc. (PDCE)"},
+  {"id":"PDCO", "name": "Patterson Companies, Inc. (PDCO)"},
+  {"id":"PDEX", "name": "Pro-Dex, Inc. (PDEX)"},
+  {"id":"PDF.AX", "name": "PACIFIC DAIRIES LIMITED (PDF.AX)"},
+  {"id":"PDFS", "name": "PDF Solutions, Inc. (PDFS)"},
+  {"id":"PDI.AX", "name": "PREDICTIVE DISCOVERY LIMITED (PDI.AX)"},
+  {"id":"PDLI", "name": "PDL BioPharma, Inc. (PDLI)"},
+  {"id":"PDN.AX", "name": "PALADIN ENERGY LTD (PDN.AX)"},
+  {"id":"PDP", "name": "PowerShares DWA Momentum Portfolio (PDP)"},
+  {"id":"PDVW", "name": "pdvWireless, Inc. (PDVW)"},
+  {"id":"PDZ.AX", "name": "PRAIRIE MINING LIMITED (PDZ.AX)"},
+  {"id":"PEA.AX", "name": "PACIFIC ENERGY LIMITED (PEA.AX)"},
+  {"id":"PEBK", "name": "Peoples Bancorp of North Carolina, Inc. (PEBK)"},
+  {"id":"PEBO", "name": "Peoples Bancorp Inc. (PEBO)"},
+  {"id":"PEC.AX", "name": "PERPETUAL RESOURCES LIMITED (PEC.AX)"},
+  {"id":"PEG.AX", "name": "PIXIE GROUP LIMITED (PEG.AX)"},
+  {"id":"PEGA", "name": "Pegasystems Inc. (PEGA)"},
+  {"id":"PEGI", "name": "Pattern Energy Group Inc. (PEGI)"},
+  {"id":"PEIX", "name": "Pacific Ethanol, Inc. (PEIX)"},
+  {"id":"PEK.AX", "name": "PEAK RESOURCES LIMITED (PEK.AX)"},
+  {"id":"PEL.AX", "name": "PELICAN RESOURCES LIMITED (PEL.AX)"},
+  {"id":"PEN.AX", "name": "PENINSULA ENERGY LIMITED (PEN.AX)"},
+  {"id":"PENN", "name": "Penn National Gaming, Inc. (PENN)"},
+  {"id":"PEP.AX", "name": "PEPPER GROUP LIMITED (PEP.AX)"},
+  {"id":"PERF", "name": "Perfumania Holdings, Inc (PERF)"},
+  {"id":"PERI", "name": "Perion Network Ltd (PERI)"},
+  {"id":"PERY", "name": "Perry Ellis International Inc. (PERY)"},
+  {"id":"PESI", "name": "Perma-Fix Environmental Services, Inc. (PESI)"},
+  {"id":"PETS", "name": "PetMed Express, Inc. (PETS)"},
+  {"id":"PETX", "name": "Aratana Therapeutics, Inc. (PETX)"},
+  {"id":"PEX.AX", "name": "PEEL MINING LIMITED (PEX.AX)"},
+  {"id":"PEY", "name": "PowerShares High Yield Equity Dividend Achievers Portfolio (PEY)"},
+  {"id":"PEZ", "name": "PowerShares DWA Consumer Cyclicals Momentum Portfolio (PEZ)"},
+  {"id":"PEZ.AX", "name": "PREMIERE EASTERN ENERGY LIMITED (PEZ.AX)"},
+  {"id":"PFBC", "name": "Preferred Bank (PFBC)"},
+  {"id":"PFBI", "name": "Premier Financial Bancorp, Inc. (PFBI)"},
+  {"id":"PFBX", "name": "Peoples Financial Corporation (PFBX)"},
+  {"id":"PFG.AX", "name": "PRIME FINANCIAL GROUP LIMITED (PFG.AX)"},
+  {"id":"PFI", "name": "PowerShares DWA Financial Momentum Portfolio (PFI)"},
+  {"id":"PFIE", "name": "Profire Energy, Inc. (PFIE)"},
+  {"id":"PFIN", "name": "P & F Industries, Inc. (PFIN)"},
+  {"id":"PFIS", "name": "Peoples Financial Services Corp.  (PFIS)"},
+  {"id":"PFLT", "name": "PennantPark Floating Rate Capital Ltd. (PFLT)"},
+  {"id":"PFM", "name": "PowerShares Dividend Achievers Portfolio (PFM)"},
+  {"id":"PFM.AX", "name": "PACIFIC MINING LIMITED (PFM.AX)"},
+  {"id":"PFMT", "name": "Performant Financial Corporation (PFMT)"},
+  {"id":"PFPT", "name": "Proofpoint, Inc. (PFPT)"},
+  {"id":"PFSW", "name": "PFSweb, Inc. (PFSW)"},
+  {"id":"PGC", "name": "Peapack-Gladstone Financial Corporation (PGC)"},
+  {"id":"PGC.AX", "name": "PARAGON CARE LIMITED (PGC.AX)"},
+  {"id":"PGF.AX", "name": "PM CAPITAL GLOBAL OPPORTUNITIES FUND LIMITED (PGF.AX)"},
+  {"id":"PGH.AX", "name": "PACT GROUP HOLDINGS LTD (PGH.AX)"},
+  {"id":"PGI.AX", "name": "PANTERRA GOLD LIMITED (PGI.AX)"},
+  {"id":"PGJ", "name": "PowerShares Golden Dragon China Portfolio (PGJ)"},
+  {"id":"PGLC", "name": "Pershing Gold Corporation (PGLC)"},
+  {"id":"PGM.AX", "name": "PLATINA RESOURCES LIMITED (PGM.AX)"},
+  {"id":"PGNX", "name": "Progenics Pharmaceuticals Inc. (PGNX)"},
+  {"id":"PGO.AX", "name": "PRIMARY GOLD LIMITED (PGO.AX)"},
+  {"id":"PGR.AX", "name": "THE PAS GROUP LIMITED (PGR.AX)"},
+  {"id":"PGS.AX", "name": "PLANET GAS LIMITED (PGS.AX)"},
+  {"id":"PGTI", "name": "PGT Innovations, Inc. (PGTI)"},
+  {"id":"PGY.AX", "name": "PILOT ENERGY LIMITED (PGY.AX)"},
+  {"id":"PHA.AX", "name": "PUBLIC HOLDINGS (AUSTRALIA) LIMITED (PHA.AX)"},
+  {"id":"PHG.AX", "name": "PULSE HEALTH LIMITED (PHG.AX)"},
+  {"id":"PHI.AX", "name": "PHILEO AUSTRALIA LIMITED (PHI.AX)"},
+  {"id":"PHII", "name": "PHI, Inc. (PHII)"},
+  {"id":"PHIIK", "name": "PHI, Inc. (PHIIK)"},
+  {"id":"PHK.AX", "name": "PHOSLOCK WATER SOLUTIONS LIMITED (PHK.AX)"},
+  {"id":"PHMD", "name": "PhotoMedex, Inc. (PHMD)"},
+  {"id":"PHO", "name": "PowerShares Water Resources Portfolio (PHO)"},
+  {"id":"PI", "name": "Impinj, Inc. (PI)"},
+  {"id":"PIC.AX", "name": "PERPETUAL EQUITY INVESTMENT COMPANY LIMITED (PIC.AX)"},
+  {"id":"PICO", "name": "PICO Holdings Inc. (PICO)"},
+  {"id":"PID", "name": "PowerShares International Dividend Achievers Portfolio (PID)"},
+  {"id":"PIE", "name": "PowerShares DWA Emerging Markets Momentum Portfolio (PIE)"},
+  {"id":"PIH", "name": "1347 Property Insurance Holdings, Inc. (PIH)"},
+  {"id":"PIL.AX", "name": "PEPPERMINT INNOVATION LIMITED (PIL.AX)"},
+  {"id":"PINC", "name": "Premier, Inc. (PINC)"},
+  {"id":"PIO", "name": "PowerShares Global Water Portfolio (PIO)"},
+  {"id":"PIO.AX", "name": "PIONEER RESOURCES LIMITED (PIO.AX)"},
+  {"id":"PIQ.AX", "name": "PROTEOMICS INTERNATIONAL LABORATORIES LTD (PIQ.AX)"},
+  {"id":"PIRS", "name": "Pieris Pharmaceuticals, Inc. (PIRS)"},
+  {"id":"PIXY", "name": "ShiftPixy, Inc. (PIXY)"},
+  {"id":"PIZ", "name": "PowerShares DWA Developed Markets Momentum Portfolio (PIZ)"},
+  {"id":"PKA.AX", "name": "PLUKKA LIMITED (PKA.AX)"},
+  {"id":"PKBK", "name": "Parke Bancorp, Inc. (PKBK)"},
+  {"id":"PKO.AX", "name": "PEAKO LIMITED (PKO.AX)"},
+  {"id":"PKOH", "name": "Park-Ohio Holdings Corp. (PKOH)"},
+  {"id":"PKW", "name": "PowerShares BuyBack Achievers Portfolio (PKW)"},
+  {"id":"PL8.AX", "name": "PLATO INCOME MAXIMISER LIMITED. (PL8.AX)"},
+  {"id":"PLAB", "name": "Photronics, Inc. (PLAB)"},
+  {"id":"PLAY", "name": "Dave & Buster&#39;s Entertainment, Inc. (PLAY)"},
+  {"id":"PLBC", "name": "Plumas Bancorp (PLBC)"},
+  {"id":"PLCE", "name": "Children&#39;s Place, Inc. (The) (PLCE)"},
+  {"id":"PLG.AX", "name": "PROPERTYLINK GROUP (PLG.AX)"},
+  {"id":"PLH.AX", "name": "PLYMOUTH MINERALS LIMITED (PLH.AX)"},
+  {"id":"PLPC", "name": "Preformed Line Products Company (PLPC)"},
+  {"id":"PLPM", "name": "Planet Payment, Inc. (PLPM)"},
+  {"id":"PLS.AX", "name": "PILBARA MINERALS LIMITED (PLS.AX)"},
+  {"id":"PLSE", "name": "Pulse Biosciences, Inc (PLSE)"},
+  {"id":"PLUG", "name": "Plug Power, Inc. (PLUG)"},
+  {"id":"PLUS", "name": "ePlus inc. (PLUS)"},
+  {"id":"PLW", "name": "PowerShares 1-30 Laddered Treasury Portfolio (PLW)"},
+  {"id":"PLXS", "name": "Plexus Corp. (PLXS)"},
+  {"id":"PLYA", "name": "Playa Hotels & Resorts N.V. (PLYA)"},
+  {"id":"PLYAW", "name": "Playa Hotels & Resorts N.V. (PLYAW)"},
+  {"id":"PMBC", "name": "Pacific Mercantile Bancorp (PMBC)"},
+  {"id":"PMC.AX", "name": "PLATINUM CAPITAL LIMITED (PMC.AX)"},
+  {"id":"PMD", "name": "Psychemedics Corporation (PMD)"},
+  {"id":"PME", "name": "Pingtan Marine Enterprise Ltd. (PME)"},
+  {"id":"PME.AX", "name": "PRO MEDICUS LIMITED (PME.AX)"},
+  {"id":"PMP.AX", "name": "PMP LIMITED (PMP.AX)"},
+  {"id":"PMPT", "name": "iSectors Post-MPT Growth ETF (PMPT)"},
+  {"id":"PMTS", "name": "CPI Card Group Inc. (PMTS)"},
+  {"id":"PMV.AX", "name": "PREMIER INVESTMENTS LIMITED (PMV.AX)"},
+  {"id":"PMY.AX", "name": "PACIFICO MINERALS LIMITED (PMY.AX)"},
+  {"id":"PNBK", "name": "Patriot National Bancorp Inc. (PNBK)"},
+  {"id":"PNC.AX", "name": "PIONEER CREDIT LIMITED (PNC.AX)"},
+  {"id":"PNFP", "name": "Pinnacle Financial Partners, Inc. (PNFP)"},
+  {"id":"PNI.AX", "name": "PINNACLE INVESTMENT MANAGEMENT GROUP LIMITED (PNI.AX)"},
+  {"id":"PNK", "name": "Pinnacle Entertainment, Inc. (PNK)"},
+  {"id":"PNL.AX", "name": "PARINGA RESOURCES LIMITED (PNL.AX)"},
+  {"id":"PNN.AX", "name": "PEPINNINI MINERALS LIMITED (PNN.AX)"},
+  {"id":"PNNT", "name": "PennantPark Investment Corporation (PNNT)"},
+  {"id":"PNO.AX", "name": "PHARMANET GROUP LIMITED (PNO.AX)"},
+  {"id":"PNQI", "name": "PowerShares Nasdaq Internet Portfolio (PNQI)"},
+  {"id":"PNR.AX", "name": "PANTORO LIMITED (PNR.AX)"},
+  {"id":"PNRA", "name": "Panera Bread Company (PNRA)"},
+  {"id":"PNRG", "name": "PrimeEnergy Corporation (PNRG)"},
+  {"id":"PNTR", "name": "Pointer Telocation Ltd. (PNTR)"},
+  {"id":"PNV.AX", "name": "POLYNOVO LIMITED (PNV.AX)"},
+  {"id":"PNW.AX", "name": "PACIFIC STAR NETWORK LIMITED (PNW.AX)"},
+  {"id":"PNX.AX", "name": "PNX METALS LIMITED (PNX.AX)"},
+  {"id":"POB.AX", "name": "PROGRESS 2010-1 TRUST (POB.AX)"},
+  {"id":"PODD", "name": "Insulet Corporation (PODD)"},
+  {"id":"POH.AX", "name": "PHOSPHAGENICS LIMITED (POH.AX)"},
+  {"id":"POLA", "name": "Polar Power, Inc. (POLA)"},
+  {"id":"PON.AX", "name": "PROVINCE OF ONTARIO (PON.AX)"},
+  {"id":"POOL", "name": "Pool Corporation (POOL)"},
+  {"id":"POP.AX", "name": "PRIMARY OPINION LIMITED (POP.AX)"},
+  {"id":"POPE", "name": "Pope Resources (POPE)"},
+  {"id":"POS.AX", "name": "POSEIDON NICKEL LIMITED (POS.AX)"},
+  {"id":"POW.AX", "name": "PROTEAN ENERGY LIMITED (POW.AX)"},
+  {"id":"POWI", "name": "Power Integrations, Inc. (POWI)"},
+  {"id":"POWL", "name": "Powell Industries, Inc. (POWL)"},
+  {"id":"POZ.AX", "name": "POZ MINERALS LIMITED (POZ.AX)"},
+  {"id":"PPBI", "name": "Pacific Premier Bancorp Inc (PPBI)"},
+  {"id":"PPC", "name": "Pilgrim&#39;s Pride Corporation (PPC)"},
+  {"id":"PPC.AX", "name": "PEET LIMITED (PPC.AX)"},
+  {"id":"PPG.AX", "name": "PRO-PAC PACKAGING LIMITED (PPG.AX)"},
+  {"id":"PPH", "name": "VanEck Vectors Pharmaceutical ETF (PPH)"},
+  {"id":"PPH.AX", "name": "PUSHPAY HOLDINGS LIMITED (PPH.AX)"},
+  {"id":"PPHM", "name": "Peregrine Pharmaceuticals Inc. (PPHM)"},
+  {"id":"PPHMP", "name": "Peregrine Pharmaceuticals Inc. (PPHMP)"},
+  {"id":"PPIH", "name": "Perma-Pipe International Holdings, Inc. (PPIH)"},
+  {"id":"PPK.AX", "name": "PPK GROUP LIMITED (PPK.AX)"},
+  {"id":"PPL.AX", "name": "PUREPROFILE LTD (PPL.AX)"},
+  {"id":"PPP.AX", "name": "PAN PACIFIC PETROLEUM NL (PPP.AX)"},
+  {"id":"PPS.AX", "name": "PRAEMIUM LIMITED (PPS.AX)"},
+  {"id":"PPSI", "name": "Pioneer Power Solutions, Inc. (PPSI)"},
+  {"id":"PPT.AX", "name": "PERPETUAL LIMITED (PPT.AX)"},
+  {"id":"PPY.AX", "name": "PAPYRUS AUSTRALIA LIMITED (PPY.AX)"},
+  {"id":"PRAA", "name": "PRA Group, Inc. (PRAA)"},
+  {"id":"PRAH", "name": "PRA Health Sciences, Inc. (PRAH)"},
+  {"id":"PRAN", "name": "Prana Biotechnology Ltd (PRAN)"},
+  {"id":"PRCP", "name": "Perceptron, Inc. (PRCP)"},
+  {"id":"PRFT", "name": "Perficient, Inc. (PRFT)"},
+  {"id":"PRFZ", "name": "PowerShares FTSE RAFI US 1500 Small-Mid Portfolio (PRFZ)"},
+  {"id":"PRG.AX", "name": "PROGRAMMED MAINTENANCE SERVICES LIMITED (PRG.AX)"},
+  {"id":"PRGS", "name": "Progress Software Corporation (PRGS)"},
+  {"id":"PRGX", "name": "PRGX Global, Inc. (PRGX)"},
+  {"id":"PRIM", "name": "Primoris Services Corporation (PRIM)"},
+  {"id":"PRKR", "name": "ParkerVision, Inc. (PRKR)"},
+  {"id":"PRL.AX", "name": "PETREL ENERGY LIMITED (PRL.AX)"},
+  {"id":"PRMW", "name": "Primo Water Corporation (PRMW)"},
+  {"id":"PRN", "name": "PowerShares DWA Industrials Momentum Portfolio (PRN)"},
+  {"id":"PRO.AX", "name": "PROPHECY INTERNATIONAL HOLDINGS LIMITED (PRO.AX)"},
+  {"id":"PROV", "name": "Provident Financial Holdings, Inc. (PROV)"},
+  {"id":"PRPH", "name": "ProPhase Labs, Inc. (PRPH)"},
+  {"id":"PRQR", "name": "ProQR Therapeutics N.V. (PRQR)"},
+  {"id":"PRR.AX", "name": "PRIMA BIOMED LTD (PRR.AX)"},
+  {"id":"PRSC", "name": "The Providence Service Corporation (PRSC)"},
+  {"id":"PRSS", "name": "CafePress Inc. (PRSS)"},
+  {"id":"PRT.AX", "name": "PRIME MEDIA GROUP LIMITED (PRT.AX)"},
+  {"id":"PRTA", "name": "Prothena Corporation plc (PRTA)"},
+  {"id":"PRTK", "name": "Paratek Pharmaceuticals, Inc.  (PRTK)"},
+  {"id":"PRTO", "name": "Proteon Therapeutics, Inc. (PRTO)"},
+  {"id":"PRTS", "name": "U.S. Auto Parts Network, Inc. (PRTS)"},
+  {"id":"PRU.AX", "name": "PERSEUS MINING LIMITED (PRU.AX)"},
+  {"id":"PRW.AX", "name": "PROTO RESOURCES & INVESTMENTS LTD (PRW.AX)"},
+  {"id":"PRXL", "name": "PAREXEL International Corporation (PRXL)"},
+  {"id":"PRY.AX", "name": "PRIMARY HEALTH CARE LIMITED (PRY.AX)"},
+  {"id":"PSA.AX", "name": "PETSEC ENERGY LIMITED (PSA.AX)"},
+  {"id":"PSAU", "name": "PowerShares Global Gold & Precious Metals Portfolio (PSAU)"},
+  {"id":"PSC", "name": "Principal U.S. Small Cap Index ETF (PSC)"},
+  {"id":"PSC.AX", "name": "PROSPECT RESOURCES LIMITED (PSC.AX)"},
+  {"id":"PSCC", "name": "PowerShares S&P SmallCap Consumer Staples Portfolio (PSCC)"},
+  {"id":"PSCD", "name": "PowerShares S&P SmallCap Consumer Discretionary Portfolio (PSCD)"},
+  {"id":"PSCE", "name": "PowerShares S&P SmallCap Energy Portfolio (PSCE)"},
+  {"id":"PSCF", "name": "PowerShares S&P SmallCap Financials Portfolio (PSCF)"},
+  {"id":"PSCH", "name": "PowerShares S&P SmallCap Health Care Portfolio (PSCH)"},
+  {"id":"PSCI", "name": "PowerShares S&P SmallCap Industrials Portfolio (PSCI)"},
+  {"id":"PSCM", "name": "PowerShares S&P SmallCap Materials Portfolio (PSCM)"},
+  {"id":"PSCT", "name": "PowerShares S&P SmallCap Information Technology Portfolio (PSCT)"},
+  {"id":"PSCU", "name": "PowerShares S&P SmallCap Utilities Portfolio (PSCU)"},
+  {"id":"PSDO", "name": "Presidio, Inc. (PSDO)"},
+  {"id":"PSDV", "name": "pSivida Corp. (PSDV)"},
+  {"id":"PSEC", "name": "Prospect Capital Corporation (PSEC)"},
+  {"id":"PSET", "name": "Principal Price Setters Index ETF (PSET)"},
+  {"id":"PSI.AX", "name": "PSC INSURANCE GROUP LIMITED (PSI.AX)"},
+  {"id":"PSIX", "name": "Power Solutions International, Inc. (PSIX)"},
+  {"id":"PSL", "name": "PowerShares DWA Consumer Staples Momentum Portfolio (PSL)"},
+  {"id":"PSM.AX", "name": "PENINSULA MINES LIMITED (PSM.AX)"},
+  {"id":"PSMT", "name": "PriceSmart, Inc. (PSMT)"},
+  {"id":"PSP.AX", "name": "PROSPERITY RESOURCES LIMITED (PSP.AX)"},
+  {"id":"PSQ.AX", "name": "PACIFIC SMILES GROUP LIMITED (PSQ.AX)"},
+  {"id":"PSTB", "name": "Park Sterling Corporation (PSTB)"},
+  {"id":"PSTI", "name": "Pluristem Therapeutics, Inc. (PSTI)"},
+  {"id":"PSY.AX", "name": "PANORAMA SYNERGY LTD (PSY.AX)"},
+  {"id":"PSZ.AX", "name": "PS&C LIMITED (PSZ.AX)"},
+  {"id":"PTB.AX", "name": "PTB GROUP LIMITED (PTB.AX)"},
+  {"id":"PTC", "name": "PTC Inc. (PTC)"},
+  {"id":"PTCT", "name": "PTC Therapeutics, Inc. (PTCT)"},
+  {"id":"PTEN", "name": "Patterson-UTI Energy, Inc. (PTEN)"},
+  {"id":"PTF", "name": "PowerShares DWA Technology Momenum Portfolio (PTF)"},
+  {"id":"PTGX", "name": "Protagonist Therapeutics, Inc. (PTGX)"},
+  {"id":"PTH", "name": "PowerShares DWA Healthcare Momentum Portfolio (PTH)"},
+  {"id":"PTI", "name": "Proteostasis Therapeutics, Inc. (PTI)"},
+  {"id":"PTIE", "name": "Pain Therapeutics (PTIE)"},
+  {"id":"PTL.AX", "name": "PENTAL LIMITED (PTL.AX)"},
+  {"id":"PTLA", "name": "Portola Pharmaceuticals, Inc. (PTLA)"},
+  {"id":"PTM.AX", "name": "PLATINUM ASSET MANAGEMENT LIMITED (PTM.AX)"},
+  {"id":"PTNR", "name": "Partner Communications Company Ltd. (PTNR)"},
+  {"id":"PTR.AX", "name": "PETRATHERM LTD (PTR.AX)"},
+  {"id":"PTSI", "name": "P.A.M. Transportation Services, Inc. (PTSI)"},
+  {"id":"PTX", "name": "Pernix Therapeutics Holdings, Inc. (PTX)"},
+  {"id":"PTX.AX", "name": "PRESCIENT THERAPEUTICS LIMITED (PTX.AX)"},
+  {"id":"PTXP", "name": "PennTex Midstream Partners, LP (PTXP)"},
+  {"id":"PUB", "name": "People&#39;s Utah Bancorp (PUB)"},
+  {"id":"PUB.AX", "name": "PUMA MASTERFUND P-16 (PUB.AX)"},
+  {"id":"PUG.AX", "name": "PUMA MASTERFUND S-8 (PUG.AX)"},
+  {"id":"PUI", "name": "PowerShares DWA Utilities Momentum Portfolio (PUI)"},
+  {"id":"PUI.AX", "name": "PUMA MASTERFUND P-13 (PUI.AX)"},
+  {"id":"PUJ.AX", "name": "PUMA SERIES 2013-1 (PUJ.AX)"},
+  {"id":"PUK.AX", "name": "PUMA SERIES 2014-1 (PUK.AX)"},
+  {"id":"PULM", "name": "Pulmatrix, Inc. (PULM)"},
+  {"id":"PUN.AX", "name": "PEGASUS METALS LIMITED (PUN.AX)"},
+  {"id":"PUO.AX", "name": "PUMA SERIES 2014-2 (PUO.AX)"},
+  {"id":"PUQ.AX", "name": "PUMA SERIES 2014-4P (PUQ.AX)"},
+  {"id":"PUU.AX", "name": "PUMA SERIES 2015-1 (PUU.AX)"},
+  {"id":"PUV.AX", "name": "PUMA SERIES 2015-3 (PUV.AX)"},
+  {"id":"PVA.AX", "name": "PSIVIDA CORP. (PVA.AX)"},
+  {"id":"PVAC", "name": "Penn Virginia Corporation (PVAC)"},
+  {"id":"PVBC", "name": "Provident Bancorp, Inc. (PVBC)"},
+  {"id":"PVD.AX", "name": "PURA VIDA ENERGY NL (PVD.AX)"},
+  {"id":"PVE.AX", "name": "PO VALLEY ENERGY LIMITED (PVE.AX)"},
+  {"id":"PVL.AX", "name": "POWERHOUSE VENTURES LIMITED (PVL.AX)"},
+  {"id":"PVTB", "name": "PrivateBancorp, Inc. (PVTB)"},
+  {"id":"PVTBP", "name": "PrivateBancorp, Inc. (PVTBP)"},
+  {"id":"PWH.AX", "name": "PWR HOLDINGS LIMITED (PWH.AX)"},
+  {"id":"PWN.AX", "name": "PARKWAY MINERALS NL (PWN.AX)"},
+  {"id":"PWOD", "name": "Penns Woods Bancorp, Inc. (PWOD)"},
+  {"id":"PXI", "name": "PowerShares DWA Energy Momentum Portfolio (PXI)"},
+  {"id":"PXLW", "name": "Pixelworks, Inc. (PXLW)"},
+  {"id":"PXS", "name": "Pyxis Tankers Inc. (PXS)"},
+  {"id":"PXS.AX", "name": "PHARMAXIS LTD (PXS.AX)"},
+  {"id":"PXU.AX", "name": "PAPERLINX SPS TRUST (PXU.AX)"},
+  {"id":"PY", "name": "Principal Shareholder Yield Index ETF (PY)"},
+  {"id":"PYC.AX", "name": "PHYLOGICA LIMITED (PYC.AX)"},
+  {"id":"PYDS", "name": "Payment Data Systems, Inc. (PYDS)"},
+  {"id":"PYPL", "name": "PayPal Holdings, Inc. (PYPL)"},
+  {"id":"PYZ", "name": "PowerShares DWA Basic Materials Momentum Portfolio (PYZ)"},
+  {"id":"PZC.AX", "name": "PAN ASIA CORPORATION LIMITED (PZC.AX)"},
+  {"id":"PZRX", "name": "PhaseRx, Inc. (PZRX)"},
+  {"id":"PZZA", "name": "Papa John&#39;s International, Inc. (PZZA)"},
+  {"id":"QABA", "name": "First Trust NASDAQ ABA Community Bank Index Fund (QABA)"},
+  {"id":"QADA", "name": "QAD Inc. (QADA)"},
+  {"id":"QADB", "name": "QAD Inc. (QADB)"},
+  {"id":"QAN.AX", "name": "QANTAS AIRWAYS LIMITED (QAN.AX)"},
+  {"id":"QAT", "name": "iShares MSCI Qatar Capped ETF (QAT)"},
+  {"id":"QBAK", "name": "Qualstar Corporation (QBAK)"},
+  {"id":"QBC.AX", "name": "QUEBEC (QBC.AX)"},
+  {"id":"QBE.AX", "name": "QBE INSURANCE GROUP LIMITED (QBE.AX)"},
+  {"id":"QBL.AX", "name": "QUEENSLAND BAUXITE LIMITED (QBL.AX)"},
+  {"id":"QCLN", "name": "First Trust NASDAQ Clean Edge Green Energy Index Fund (QCLN)"},
+  {"id":"QCOM", "name": "QUALCOMM Incorporated (QCOM)"},
+  {"id":"QCRH", "name": "QCR Holdings, Inc. (QCRH)"},
+  {"id":"QDEL", "name": "Quidel Corporation (QDEL)"},
+  {"id":"QFY.AX", "name": "QUANTIFY TECHNOLOGY HOLDINGS LIMITED (QFY.AX)"},
+  {"id":"QGEN", "name": "Qiagen N.V. (QGEN)"},
+  {"id":"QHL.AX", "name": "QUICKSTEP HOLDINGS LIMITED (QHL.AX)"},
+  {"id":"QIN.AX", "name": "QUINTIS LTD (QIN.AX)"},
+  {"id":"QINC", "name": "First Trust RBA Quality Income ETF (QINC)"},
+  {"id":"QIP.AX", "name": "QANTM INTELLECTUAL PROPERTY LIMITED (QIP.AX)"},
+  {"id":"QIWI", "name": "QIWI plc (QIWI)"},
+  {"id":"QLC", "name": "FlexShares US Quality Large Cap Index Fund (QLC)"},
+  {"id":"QLYS", "name": "Qualys, Inc. (QLYS)"},
+  {"id":"QMN.AX", "name": "QUEENSLAND MINING CORPORATION LIMITED (QMN.AX)"},
+  {"id":"QMS.AX", "name": "QMS MEDIA LIMITED (QMS.AX)"},
+  {"id":"QNL.AX", "name": "QUEST MINERALS LIMITED (QNL.AX)"},
+  {"id":"QNST", "name": "QuinStreet, Inc. (QNST)"},
+  {"id":"QPAC", "name": "Quinpario Acquisition Corp. 2 (QPAC)"},
+  {"id":"QPACU", "name": "Quinpario Acquisition Corp. 2 (QPACU)"},
+  {"id":"QPACW", "name": "Quinpario Acquisition Corp. 2 (QPACW)"},
+  {"id":"QQEW", "name": "First Trust NASDAQ-100 Equal Weighted Index Fund (QQEW)"},
+  {"id":"QQQ", "name": "PowerShares QQQ Trust, Series 1 (QQQ)"},
+  {"id":"QQQC", "name": "Global X NASDAQ China Technology ETF (QQQC)"},
+  {"id":"QQQX", "name": "Nuveen NASDAQ 100 Dynamic Overwrite Fund (QQQX)"},
+  {"id":"QQXT", "name": "First Trust NASDAQ-100 Ex-Technology Sector Index Fund (QQXT)"},
+  {"id":"QRHC", "name": "Quest Resource Holding Corporation. (QRHC)"},
+  {"id":"QRVO", "name": "Qorvo, Inc. (QRVO)"},
+  {"id":"QRX.AX", "name": "QRXPHARMA LTD (QRX.AX)"},
+  {"id":"QSII", "name": "Quality Systems, Inc. (QSII)"},
+  {"id":"QSS.AX", "name": "QUESTUS LIMITED (QSS.AX)"},
+  {"id":"QST.AX", "name": "QUEST INVESTMENTS LIMITED (QST.AX)"},
+  {"id":"QTEC", "name": "First Trust NASDAQ-100- Technology Index Fund (QTEC)"},
+  {"id":"QTG.AX", "name": "Q TECHNOLOGY GROUP LIMITED (QTG.AX)"},
+  {"id":"QTM.AX", "name": "QUANTUM ENERGY LIMITED. (QTM.AX)"},
+  {"id":"QTNA", "name": "Quantenna Communications, Inc. (QTNA)"},
+  {"id":"QTNT", "name": "Quotient Limited (QTNT)"},
+  {"id":"QUB.AX", "name": "QUBE HOLDINGS LIMITED (QUB.AX)"},
+  {"id":"QUE.AX", "name": "QUESTE COMMUNICATIONS LIMITED (QUE.AX)"},
+  {"id":"QUIK", "name": "QuickLogic Corporation (QUIK)"},
+  {"id":"QUMU", "name": "Qumu Corporation (QUMU)"},
+  {"id":"QUR.AX", "name": "QUANTUM RESOURCES LIMITED (QUR.AX)"},
+  {"id":"QURE", "name": "uniQure N.V. (QURE)"},
+  {"id":"QVCA", "name": "Liberty Interactive Corporation (QVCA)"},
+  {"id":"QVCB", "name": "Liberty Interactive Corporation (QVCB)"},
+  {"id":"QVE.AX", "name": "QV EQUITIES LIMITED (QVE.AX)"},
+  {"id":"QYLD", "name": "Horizons NASDAQ-100 Covered Call ETF (QYLD)"},
+  {"id":"R3D.AX", "name": "R3D GLOBAL LIMITED (R3D.AX)"},
+  {"id":"RAC.AX", "name": "RACE ONCOLOGY LTD (RAC.AX)"},
+  {"id":"RADA", "name": "RADA Electronic Industries Ltd. (RADA)"},
+  {"id":"RAF.AX", "name": "RAFFLES CAPITAL LIMITED (RAF.AX)"},
+  {"id":"RAIL", "name": "Freightcar America, Inc. (RAIL)"},
+  {"id":"RAN.AX", "name": "RANGE INTERNATIONAL LIMITED (RAN.AX)"},
+  {"id":"RAND", "name": "Rand Capital Corporation (RAND)"},
+  {"id":"RAP.AX", "name": "RESAPP HEALTH LIMITED (RAP.AX)"},
+  {"id":"RARE", "name": "Ultragenyx Pharmaceutical Inc. (RARE)"},
+  {"id":"RARX", "name": "Ra Pharmaceuticals, Inc. (RARX)"},
+  {"id":"RAVE", "name": "Rave Restaurant Group, Inc. (RAVE)"},
+  {"id":"RAVN", "name": "Raven Industries, Inc. (RAVN)"},
+  {"id":"RAW.AX", "name": "RAWSON OIL AND GAS LTD (RAW.AX)"},
+  {"id":"RBCAA", "name": "Republic Bancorp, Inc. (RBCAA)"},
+  {"id":"RBCN", "name": "Rubicon Technology, Inc. (RBCN)"},
+  {"id":"RBIO", "name": "rEVO Biologics, Inc. (RBIO)"},
+  {"id":"RBL.AX", "name": "REDBUBBLE LIMITED (RBL.AX)"},
+  {"id":"RBO.AX", "name": "ROBO 3D LIMITED (RBO.AX)"},
+  {"id":"RBPAA", "name": "Royal Bancshares of Pennsylvania, Inc. (RBPAA)"},
+  {"id":"RBR.AX", "name": "RBR GROUP LIMITED (RBR.AX)"},
+  {"id":"RBX.AX", "name": "RESOURCE BASE LIMITED (RBX.AX)"},
+  {"id":"RCE.AX", "name": "RECCE LIMITED (RCE.AX)"},
+  {"id":"RCG.AX", "name": "RCG CORPORATION LIMITED (RCG.AX)"},
+  {"id":"RCII", "name": "Rent-A-Center Inc. (RCII)"},
+  {"id":"RCKY", "name": "Rocky Brands, Inc. (RCKY)"},
+  {"id":"RCM", "name": "R1 RCM Inc. (RCM)"},
+  {"id":"RCMT", "name": "RCM Technologies, Inc. (RCMT)"},
+  {"id":"RCO.AX", "name": "ROYALCO RESOURCES LIMITED (RCO.AX)"},
+  {"id":"RCON", "name": "Recon Technology, Ltd. (RCON)"},
+  {"id":"RCP.AX", "name": "REDBANK COPPER LIMITED (RCP.AX)"},
+  {"id":"RCR.AX", "name": "RCR TOMLINSON LIMITED (RCR.AX)"},
+  {"id":"RCT.AX", "name": "REEF CASINO TRUST (RCT.AX)"},
+  {"id":"RDA.AX", "name": "SERIES 2010-2 REDS TRUST (RDA.AX)"},
+  {"id":"RDCM", "name": "Radcom Ltd. (RDCM)"},
+  {"id":"RDF.AX", "name": "REDFLEX HOLDINGS LIMITED (RDF.AX)"},
+  {"id":"RDG.AX", "name": "RESOURCE DEVELOPMENT GROUP LIMITED (RDG.AX)"},
+  {"id":"RDH.AX", "name": "REDHILL EDUCATION LIMITED (RDH.AX)"},
+  {"id":"RDHL", "name": "Redhill Biopharma Ltd. (RDHL)"},
+  {"id":"RDI", "name": "Reading International Inc (RDI)"},
+  {"id":"RDIB", "name": "Reading International Inc (RDIB)"},
+  {"id":"RDM.AX", "name": "RED METAL LIMITED (RDM.AX)"},
+  {"id":"RDNT", "name": "RadNet, Inc. (RDNT)"},
+  {"id":"RDS.AX", "name": "REDSTONE RESOURCES LIMITED (RDS.AX)"},
+  {"id":"RDUS", "name": "Radius Health, Inc. (RDUS)"},
+  {"id":"RDVY", "name": "First Trust Rising Dividend Achievers ETF (RDVY)"},
+  {"id":"RDWR", "name": "Radware Ltd. (RDWR)"},
+  {"id":"REA.AX", "name": "REA GROUP LTD (REA.AX)"},
+  {"id":"RECN", "name": "Resources Connection, Inc. (RECN)"},
+  {"id":"RED.AX", "name": "RED 5 LIMITED (RED.AX)"},
+  {"id":"REF.AX", "name": "REVERSE CORP LIMITED (REF.AX)"},
+  {"id":"REFR", "name": "Research Frontiers Incorporated (REFR)"},
+  {"id":"REG.AX", "name": "REGIS HEALTHCARE LIMITED (REG.AX)"},
+  {"id":"REGI", "name": "Renewable Energy Group, Inc. (REGI)"},
+  {"id":"REGN", "name": "Regeneron Pharmaceuticals, Inc. (REGN)"},
+  {"id":"REH.AX", "name": "REECE LIMITED (REH.AX)"},
+  {"id":"REIS", "name": "Reis, Inc (REIS)"},
+  {"id":"REK.AX", "name": "SERIES 2010-1 REDS TRUST (REK.AX)"},
+  {"id":"RELL", "name": "Richardson Electronics, Ltd. (RELL)"},
+  {"id":"RELV", "name": "Reliv&#39; International, Inc. (RELV)"},
+  {"id":"RELY", "name": "Real Industry, Inc.  (RELY)"},
+  {"id":"REPH", "name": "Recro Pharma, Inc. (REPH)"},
+  {"id":"REQ.AX", "name": "SERIES 2007-2 REDS TRUST (REQ.AX)"},
+  {"id":"RES.AX", "name": "RESOURCE GENERATION LIMITED (RES.AX)"},
+  {"id":"RESN", "name": "Resonant Inc. (RESN)"},
+  {"id":"RETA", "name": "Reata Pharmaceuticals, Inc. (RETA)"},
+  {"id":"REV.AX", "name": "REAL ESTATE INVESTAR GROUP LIMITED (REV.AX)"},
+  {"id":"REX.AX", "name": "REGIONAL EXPRESS HOLDINGS LIMITED (REX.AX)"},
+  {"id":"REXX", "name": "Rex Energy Corporation (REXX)"},
+  {"id":"REY.AX", "name": "REY RESOURCES LIMITED (REY.AX)"},
+  {"id":"REZ.AX", "name": "RESOURCES & ENERGY GROUP LIMITED (REZ.AX)"},
+  {"id":"RFAP", "name": "First Trust RiverFront Dynamic Asia Pacific ETF (RFAP)"},
+  {"id":"RFB.AX", "name": "SERIES 2012-1E REDS TRUST (RFB.AX)"},
+  {"id":"RFDI", "name": "First Trust RiverFront Dynamic Developed International ETF (RFDI)"},
+  {"id":"RFEM", "name": "First Trust RiverFront Dynamic Emerging Markets ETF (RFEM)"},
+  {"id":"RFEU", "name": "First Trust RiverFront Dynamic Europe ETF (RFEU)"},
+  {"id":"RFF.AX", "name": "RURAL FUNDS GROUP (RFF.AX)"},
+  {"id":"RFG.AX", "name": "RETAIL FOOD GROUP LIMITED (RFG.AX)"},
+  {"id":"RFIL", "name": "RF Industries, Ltd. (RFIL)"},
+  {"id":"RFL.AX", "name": "RUBIK FINANCIAL LIMITED (RFL.AX)"},
+  {"id":"RFN.AX", "name": "REFFIND LIMITED (RFN.AX)"},
+  {"id":"RFT.AX", "name": "RECTIFIER TECHNOLOGIES LTD (RFT.AX)"},
+  {"id":"RFX.AX", "name": "REDFLOW LIMITED (RFX.AX)"},
+  {"id":"RGCO", "name": "RGC Resources Inc. (RGCO)"},
+  {"id":"RGEN", "name": "Repligen Corporation (RGEN)"},
+  {"id":"RGI.AX", "name": "ROTO-GRO INTERNATIONAL LIMITED (RGI.AX)"},
+  {"id":"RGLD", "name": "Royal Gold, Inc. (RGLD)"},
+  {"id":"RGLS", "name": "Regulus Therapeutics Inc. (RGLS)"},
+  {"id":"RGNX", "name": "REGENXBIO Inc. (RGNX)"},
+  {"id":"RGP.AX", "name": "REFRESH GROUP LIMITED (RGP.AX)"},
+  {"id":"RGS.AX", "name": "REGENEUS LTD (RGS.AX)"},
+  {"id":"RGSE", "name": "Real Goods Solar, Inc. (RGSE)"},
+  {"id":"RHC.AX", "name": "RAMSAY HEALTH CARE LIMITED (RHC.AX)"},
+  {"id":"RHI.AX", "name": "RED HILL IRON LIMITED (RHI.AX)"},
+  {"id":"RHL.AX", "name": "RURALCO HOLDINGS LIMITED (RHL.AX)"},
+  {"id":"RHP.AX", "name": "RHIPE LIMITED (RHP.AX)"},
+  {"id":"RHS.AX", "name": "REPRODUCTIVE HEALTH SCIENCE LIMITED (RHS.AX)"},
+  {"id":"RHT.AX", "name": "RESONANCE HEALTH LIMITED (RHT.AX)"},
+  {"id":"RIBT", "name": "RiceBran Technologies (RIBT)"},
+  {"id":"RIBTW", "name": "RiceBran Technologies (RIBTW)"},
+  {"id":"RIC.AX", "name": "RIDLEY CORPORATION LIMITED (RIC.AX)"},
+  {"id":"RICK", "name": "RCI Hospitality Holdings, Inc. (RICK)"},
+  {"id":"RIE.AX", "name": "RIEDEL RESOURCES LIMITED (RIE.AX)"},
+  {"id":"RIGL", "name": "Rigel Pharmaceuticals, Inc. (RIGL)"},
+  {"id":"RILY", "name": "B. Riley Financial, Inc. (RILY)"},
+  {"id":"RILYL", "name": "B. Riley Financial, Inc. (RILYL)"},
+  {"id":"RIM.AX", "name": "RIMFIRE PACIFIC MINING NL (RIM.AX)"},
+  {"id":"RIO.AX", "name": "RIO TINTO LIMITED (RIO.AX)"},
+  {"id":"RIR.AX", "name": "RIVA RESOURCES LIMITED (RIR.AX)"},
+  {"id":"RKDA", "name": "Arcadia Biosciences, Inc. (RKDA)"},
+  {"id":"RKN.AX", "name": "RECKON LIMITED (RKN.AX)"},
+  {"id":"RLC.AX", "name": "REEDY LAGOON CORPORATION LIMITED (RLC.AX)"},
+  {"id":"RLE.AX", "name": "REAL ENERGY CORPORATION LIMITED (RLE.AX)"},
+  {"id":"RLJE", "name": "RLJ Entertainment, Inc. (RLJE)"},
+  {"id":"RLOG", "name": "Rand Logistics, Inc. (RLOG)"},
+  {"id":"RMB.AX", "name": "RAMS MORTGAGE SECURITIES TRUST SERIES 2007-1HE (RMB.AX)"},
+  {"id":"RMBS", "name": "Rambus, Inc. (RMBS)"},
+  {"id":"RMCF", "name": "Rocky Mountain Chocolate Factory, Inc. (RMCF)"},
+  {"id":"RMD.AX", "name": "RESMED INC (RMD.AX)"},
+  {"id":"RMG.AX", "name": "RMG LIMITED (RMG.AX)"},
+  {"id":"RMGN", "name": "RMG Networks Holding Corporation (RMGN)"},
+  {"id":"RMH.AX", "name": "RAMS MORTGAGE SECURITIES TRUST SERIES 2007-2H (RMH.AX)"},
+  {"id":"RMI.AX", "name": "RESOURCE MINING CORPORATION LIMITED (RMI.AX)"},
+  {"id":"RMM.AX", "name": "RAMS MORTGAGE SECURITIES TRUST SERIES 2006-1 (RMM.AX)"},
+  {"id":"RMP.AX", "name": "RED EMPEROR RESOURCES NL (RMP.AX)"},
+  {"id":"RMR", "name": "The RMR Group Inc. (RMR)"},
+  {"id":"RMR.AX", "name": "RAM RESOURCES LIMITED (RMR.AX)"},
+  {"id":"RMS.AX", "name": "RAMELIUS RESOURCES LIMITED (RMS.AX)"},
+  {"id":"RMT.AX", "name": "RMA ENERGY LIMITED (RMT.AX)"},
+  {"id":"RMTI", "name": "Rockwell Medical, Inc. (RMTI)"},
+  {"id":"RMX.AX", "name": "RED MOUNTAIN MINING LIMITED (RMX.AX)"},
+  {"id":"RND.AX", "name": "RAND MINING LIMITED (RND.AX)"},
+  {"id":"RNDB", "name": "Randolph Bancorp, Inc. (RNDB)"},
+  {"id":"RNE.AX", "name": "RENU ENERGY LIMITED (RNE.AX)"},
+  {"id":"RNET", "name": "RigNet, Inc. (RNET)"},
+  {"id":"RNI.AX", "name": "RNI NL. (RNI.AX)"},
+  {"id":"RNL.AX", "name": "RISION LIMITED (RNL.AX)"},
+  {"id":"RNO.AX", "name": "RHINOMED LIMITED (RNO.AX)"},
+  {"id":"RNST", "name": "Renasant Corporation (RNST)"},
+  {"id":"RNT.AX", "name": "RENT.COM.AU LIMITED (RNT.AX)"},
+  {"id":"RNU.AX", "name": "RENASCOR RESOURCES LIMITED (RNU.AX)"},
+  {"id":"RNVA", "name": "Rennova Health, Inc. (RNVA)"},
+  {"id":"RNVAZ", "name": "Rennova Health, Inc. (RNVAZ)"},
+  {"id":"RNWK", "name": "RealNetworks, Inc. (RNWK)"},
+  {"id":"RNY.AX", "name": "RNY PROPERTY TRUST (RNY.AX)"},
+  {"id":"ROBO", "name": "ROBO Global Robotics and Automation Index ETF (ROBO)"},
+  {"id":"ROCK", "name": "Gibraltar Industries, Inc. (ROCK)"},
+  {"id":"ROG.AX", "name": "RED SKY ENERGY LIMITED. (ROG.AX)"},
+  {"id":"ROIA", "name": "Radio One, Inc. (ROIA)"},
+  {"id":"ROIAK", "name": "Radio One, Inc. (ROIAK)"},
+  {"id":"ROIC", "name": "Retail Opportunity Investments Corp. (ROIC)"},
+  {"id":"ROKA", "name": "Roka Bioscience, Inc. (ROKA)"},
+  {"id":"ROLL", "name": "RBC Bearings Incorporated (ROLL)"},
+  {"id":"ROSG", "name": "Rosetta Genomics Ltd. (ROSG)"},
+  {"id":"ROST", "name": "Ross Stores, Inc. (ROST)"},
+  {"id":"RP", "name": "RealPage, Inc. (RP)"},
+  {"id":"RPD", "name": "Rapid7, Inc. (RPD)"},
+  {"id":"RPG.AX", "name": "RAPTIS GROUP LIMITED (RPG.AX)"},
+  {"id":"RPL.AX", "name": "RAPTOR RESOURCES LIMITED (RPL.AX)"},
+  {"id":"RPRX", "name": "Repros Therapeutics Inc. (RPRX)"},
+  {"id":"RPXC", "name": "RPX Corporation (RPXC)"},
+  {"id":"RRD", "name": "R.R. Donnelley & Sons Company (RRD)"},
+  {"id":"RRGB", "name": "Red Robin Gourmet Burgers, Inc. (RRGB)"},
+  {"id":"RRL.AX", "name": "REGIS RESOURCES LIMITED (RRL.AX)"},
+  {"id":"RRP.AX", "name": "REALM RESOURCES LIMITED (RRP.AX)"},
+  {"id":"RRR", "name": "Red Rock Resorts, Inc. (RRR)"},
+  {"id":"RRS.AX", "name": "RANGE RESOURCES LIMITED (RRS.AX)"},
+  {"id":"RSAS", "name": "RESAAS Services Inc. (RSAS)"},
+  {"id":"RSG.AX", "name": "RESOLUTE MINING LIMITED (RSG.AX)"},
+  {"id":"RSH.AX", "name": "RESPIRI LIMITED (RSH.AX)"},
+  {"id":"RSYS", "name": "RadiSys Corporation (RSYS)"},
+  {"id":"RTE.AX", "name": "RETECH TECHNOLOGY., CO LIMITED (RTE.AX)"},
+  {"id":"RTG.AX", "name": "RTG MINING INC. (RTG.AX)"},
+  {"id":"RTIX", "name": "RTI Surgical, Inc. (RTIX)"},
+  {"id":"RTK", "name": "Rentech, Inc. (RTK)"},
+  {"id":"RTNB", "name": "root9B Holdings, Inc.  (RTNB)"},
+  {"id":"RTR.AX", "name": "RUMBLE RESOURCES LIMITED (RTR.AX)"},
+  {"id":"RTRX", "name": "Retrophin, Inc. (RTRX)"},
+  {"id":"RTTR", "name": "Ritter Pharmaceuticals, Inc. (RTTR)"},
+  {"id":"RUB.AX", "name": "RUBICOR GROUP LIMITED (RUB.AX)"},
+  {"id":"RUL.AX", "name": "RPMGLOBAL HOLDINGS LIMITED (RUL.AX)"},
+  {"id":"RUN", "name": "Sunrun Inc. (RUN)"},
+  {"id":"RUSHA", "name": "Rush Enterprises, Inc. (RUSHA)"},
+  {"id":"RUSHB", "name": "Rush Enterprises, Inc. (RUSHB)"},
+  {"id":"RUTH", "name": "Ruth&#39;s Hospitality Group, Inc. (RUTH)"},
+  {"id":"RVA.AX", "name": "REVA MEDICAL, INC (RVA.AX)"},
+  {"id":"RVEN", "name": "Reven Housing REIT, Inc. (RVEN)"},
+  {"id":"RVLT", "name": "Revolution Lighting Technologies, Inc. (RVLT)"},
+  {"id":"RVNC", "name": "Revance Therapeutics, Inc. (RVNC)"},
+  {"id":"RVR.AX", "name": "RED RIVER RESOURCES LIMITED (RVR.AX)"},
+  {"id":"RVSB", "name": "Riverview Bancorp Inc (RVSB)"},
+  {"id":"RVY.AX", "name": "RIFT VALLEY RESOURCES LIMITED. (RVY.AX)"},
+  {"id":"RWC.AX", "name": "RELIANCE WORLDWIDE CORPORATION LIMITED (RWC.AX)"},
+  {"id":"RWD.AX", "name": "REWARD MINERALS LTD (RWD.AX)"},
+  {"id":"RWH.AX", "name": "ROYAL WOLF HOLDINGS LIMITED (RWH.AX)"},
+  {"id":"RWLK", "name": "ReWalk Robotics Ltd (RWLK)"},
+  {"id":"RXDX", "name": "Ignyta, Inc. (RXDX)"},
+  {"id":"RXH.AX", "name": "REWARDLE HOLDINGS LIMITED (RXH.AX)"},
+  {"id":"RXII", "name": "RXi Pharmaceuticals Corporation (RXII)"},
+  {"id":"RXIIW", "name": "RXi Pharmaceuticals Corporation (RXIIW)"},
+  {"id":"RXL.AX", "name": "ROX RESOURCES LIMITED (RXL.AX)"},
+  {"id":"RXM.AX", "name": "REX MINERALS LIMITED (RXM.AX)"},
+  {"id":"RXP.AX", "name": "RXP SERVICES LIMITED (RXP.AX)"},
+  {"id":"RYAAY", "name": "Ryanair Holdings plc (RYAAY)"},
+  {"id":"RYD.AX", "name": "RYDER CAPITAL LIMITED (RYD.AX)"},
+  {"id":"S2G.AX", "name": "SECURE2GO GROUP LIMITED (S2G.AX)"},
+  {"id":"S2R.AX", "name": "S2 RESOURCES LTD (S2R.AX)"},
+  {"id":"S32.AX", "name": "SOUTH32 LIMITED (S32.AX)"},
+  {"id":"SAB.AX", "name": "SMART ABS SERIES 2014-2E TRUST (SAB.AX)"},
+  {"id":"SABR", "name": "Sabre Corporation (SABR)"},
+  {"id":"SAC.AX", "name": "SECURITISED AUSTRALIAN MORTGAGE TRUST 2011-1 (SAC.AX)"},
+  {"id":"SAEX", "name": "SAExploration Holdings, Inc. (SAEX)"},
+  {"id":"SAFM", "name": "Sanderson Farms, Inc. (SAFM)"},
+  {"id":"SAFT", "name": "Safety Insurance Group, Inc. (SAFT)"},
+  {"id":"SAGE", "name": "Sage Therapeutics, Inc. (SAGE)"},
+  {"id":"SAIA", "name": "Saia, Inc. (SAIA)"},
+  {"id":"SAJA", "name": "Sajan, Inc. (SAJA)"},
+  {"id":"SAL", "name": "Salisbury Bancorp, Inc. (SAL)"},
+  {"id":"SALE", "name": "RetailMeNot, Inc. (SALE)"},
+  {"id":"SALM", "name": "Salem Media Group, Inc. (SALM)"},
+  {"id":"SAM.AX", "name": "SIV ASSET MANAGEMENT LIMITED (SAM.AX)"},
+  {"id":"SAMG", "name": "Silvercrest Asset Management Group Inc. (SAMG)"},
+  {"id":"SAN.AX", "name": "SAGALIO ENERGY LIMITED (SAN.AX)"},
+  {"id":"SANM", "name": "Sanmina Corporation (SANM)"},
+  {"id":"SANW", "name": "S&W Seed Company (SANW)"},
+  {"id":"SAR.AX", "name": "SARACEN MINERAL HOLDINGS LIMITED (SAR.AX)"},
+  {"id":"SAS.AX", "name": "SKY AND SPACE GLOBAL LTD (SAS.AX)"},
+  {"id":"SASR", "name": "Sandy Spring Bancorp, Inc. (SASR)"},
+  {"id":"SATS", "name": "EchoStar Corporation (SATS)"},
+  {"id":"SAU.AX", "name": "SOUTHERN GOLD LIMITED (SAU.AX)"},
+  {"id":"SAUC", "name": "Diversified Restaurant Holdings, Inc. (SAUC)"},
+  {"id":"SAVE", "name": "Spirit Airlines, Inc. (SAVE)"},
+  {"id":"SAY.AX", "name": "SOUTH AMERICAN IRON & STEEL CORPORATION LIMITED (SAY.AX)"},
+  {"id":"SAZ.AX", "name": "SMART ABS SERIES 2016-3 TRUST (SAZ.AX)"},
+  {"id":"SBAC", "name": "SBA Communications Corporation (SBAC)"},
+  {"id":"SBB.AX", "name": "SUNBRIDGE GROUP LIMITED (SBB.AX)"},
+  {"id":"SBBP", "name": "Strongbridge Biopharma plc (SBBP)"},
+  {"id":"SBBX", "name": "Sussex Bancorp (SBBX)"},
+  {"id":"SBCF", "name": "Seacoast Banking Corporation of Florida (SBCF)"},
+  {"id":"SBCP", "name": "Sunshine Bancorp, Inc. (SBCP)"},
+  {"id":"SBFG", "name": "SB Financial Group, Inc. (SBFG)"},
+  {"id":"SBFGP", "name": "SB Financial Group, Inc. (SBFGP)"},
+  {"id":"SBGI", "name": "Sinclair Broadcast Group, Inc. (SBGI)"},
+  {"id":"SBI.AX", "name": "STERLING PLANTATIONS LIMITED (SBI.AX)"},
+  {"id":"SBK.AX", "name": "SUNCORP-METWAY LIMITED . (SBK.AX)"},
+  {"id":"SBLK", "name": "Star Bulk Carriers Corp. (SBLK)"},
+  {"id":"SBLKL", "name": "Star Bulk Carriers Corp. (SBLKL)"},
+  {"id":"SBM.AX", "name": "ST BARBARA LIMITED (SBM.AX)"},
+  {"id":"SBNY", "name": "Signature Bank (SBNY)"},
+  {"id":"SBNYW", "name": "Signature Bank (SBNYW)"},
+  {"id":"SBOT", "name": "Stellar Biotechnologies, Inc. (SBOT)"},
+  {"id":"SBPH", "name": "Spring Bank Pharmaceuticals, Inc. (SBPH)"},
+  {"id":"SBR.AX", "name": "SABRE RESOURCES LIMITED (SBR.AX)"},
+  {"id":"SBRA", "name": "Sabra Healthcare REIT, Inc. (SBRA)"},
+  {"id":"SBRAP", "name": "Sabra Healthcare REIT, Inc. (SBRAP)"},
+  {"id":"SBSI", "name": "Southside Bancshares, Inc. (SBSI)"},
+  {"id":"SBU.AX", "name": "SIBURAN RESOURCES LIMITED (SBU.AX)"},
+  {"id":"SBUX", "name": "Starbucks Corporation (SBUX)"},
+  {"id":"SCA.AX", "name": "SCENTRE GROUP TRUST 1 AND SCENTRE GROUP TRUST 2 (SCA.AX)"},
+  {"id":"SCAC", "name": "Saban Capital Acquisition Corp. (SCAC)"},
+  {"id":"SCACU", "name": "Saban Capital Acquisition Corp. (SCACU)"},
+  {"id":"SCACW", "name": "Saban Capital Acquisition Corp. (SCACW)"},
+  {"id":"SCCI", "name": "Shimmick Construction Company, Inc. (SCCI)"},
+  {"id":"SCG.AX", "name": "SCENTRE GROUP (SCG.AX)"},
+  {"id":"SCHL", "name": "Scholastic Corporation (SCHL)"},
+  {"id":"SCHN", "name": "Schnitzer Steel Industries, Inc. (SCHN)"},
+  {"id":"SCI.AX", "name": "SILVER CITY MINERALS LIMITED (SCI.AX)"},
+  {"id":"SCKT", "name": "Socket Mobile, Inc. (SCKT)"},
+  {"id":"SCLN", "name": "SciClone Pharmaceuticals, Inc. (SCLN)"},
+  {"id":"SCMP", "name": "Sucampo Pharmaceuticals, Inc. (SCMP)"},
+  {"id":"SCO.AX", "name": "SCOTTISH PACIFIC GROUP LIMITED (SCO.AX)"},
+  {"id":"SCON", "name": "Superconductor Technologies Inc. (SCON)"},
+  {"id":"SCP.AX", "name": "SHOPPING CENTRES AUSTRALASIA PROPERTY GROUP (SCP.AX)"},
+  {"id":"SCSC", "name": "ScanSource, Inc. (SCSC)"},
+  {"id":"SCSS", "name": "Select Comfort Corporation (SCSS)"},
+  {"id":"SCT.AX", "name": "SCOUT SECURITY LIMITED (SCT.AX)"},
+  {"id":"SCU.AX", "name": "STEMCELL UNITED LIMITED (SCU.AX)"},
+  {"id":"SCVL", "name": "Shoe Carnival, Inc. (SCVL)"},
+  {"id":"SCW.AX", "name": "SCENTRE GROUP TRUST 1 (SCW.AX)"},
+  {"id":"SCWX", "name": "SecureWorks Corp. (SCWX)"},
+  {"id":"SCYX", "name": "SCYNEXIS, Inc. (SCYX)"},
+  {"id":"SCZ", "name": "iShares MSCI EAFE Small-Cap ETF (SCZ)"},
+  {"id":"SDA.AX", "name": "SPEEDCAST INTERNATIONAL LIMITED (SDA.AX)"},
+  {"id":"SDC.AX", "name": "SUGAR DRAGON LIMITED (SDC.AX)"},
+  {"id":"SDF.AX", "name": "STEADFAST GROUP LIMITED (SDF.AX)"},
+  {"id":"SDG.AX", "name": "SUNLAND GROUP LIMITED (SDG.AX)"},
+  {"id":"SDI.AX", "name": "SDI LIMITED (SDI.AX)"},
+  {"id":"SDL.AX", "name": "SUNDANCE RESOURCES LIMITED (SDL.AX)"},
+  {"id":"SDV.AX", "name": "SCIDEV LTD (SDV.AX)"},
+  {"id":"SE1.AX", "name": "SENSERA LIMITED (SE1.AX)"},
+  {"id":"SEA.AX", "name": "SUNDANCE ENERGY AUSTRALIA LIMITED (SEA.AX)"},
+  {"id":"SEAC", "name": "SeaChange International, Inc. (SEAC)"},
+  {"id":"SEDG", "name": "SolarEdge Technologies, Inc. (SEDG)"},
+  {"id":"SEED", "name": "Origin Agritech Limited (SEED)"},
+  {"id":"SEG.AX", "name": "SEGUE RESOURCES LIMITED (SEG.AX)"},
+  {"id":"SEH.AX", "name": "SINO GAS & ENERGY HOLDINGS LIMITED (SEH.AX)"},
+  {"id":"SEIC", "name": "SEI Investments Company (SEIC)"},
+  {"id":"SEK.AX", "name": "SEEK LIMITED (SEK.AX)"},
+  {"id":"SELB", "name": "Selecta Biosciences, Inc. (SELB)"},
+  {"id":"SELF", "name": "Global Self Storage, Inc. (SELF)"},
+  {"id":"SEN.AX", "name": "SENETAS CORPORATION LIMITED (SEN.AX)"},
+  {"id":"SENEA", "name": "Seneca Foods Corp. (SENEA)"},
+  {"id":"SENEB", "name": "Seneca Foods Corp. (SENEB)"},
+  {"id":"SEQ.AX", "name": "SEQUOIA FINANCIAL GROUP LTD (SEQ.AX)"},
+  {"id":"SER.AX", "name": "STRATEGIC ENERGY RESOURCES LIMITED (SER.AX)"},
+  {"id":"SES.AX", "name": "SECOS GROUP LTD (SES.AX)"},
+  {"id":"SEV", "name": "Sevcon, Inc. (SEV)"},
+  {"id":"SFBC", "name": "Sound Financial Bancorp, Inc. (SFBC)"},
+  {"id":"SFBS", "name": "ServisFirst Bancshares, Inc. (SFBS)"},
+  {"id":"SFC.AX", "name": "SCHAFFER CORPORATION LIMITED (SFC.AX)"},
+  {"id":"SFG.AX", "name": "SEAFARMS GROUP LIMITED (SFG.AX)"},
+  {"id":"SFH.AX", "name": "SPECIALTY FASHION GROUP LIMITED (SFH.AX)"},
+  {"id":"SFI.AX", "name": "SPOOKFISH LIMITED (SFI.AX)"},
+  {"id":"SFL.AX", "name": "SPRING FG LIMITED (SFL.AX)"},
+  {"id":"SFLY", "name": "Shutterfly, Inc. (SFLY)"},
+  {"id":"SFM", "name": "Sprouts Farmers Market, Inc. (SFM)"},
+  {"id":"SFNC", "name": "Simmons First National Corporation (SFNC)"},
+  {"id":"SFR.AX", "name": "SANDFIRE RESOURCES NL (SFR.AX)"},
+  {"id":"SFST", "name": "Southern First Bancshares, Inc. (SFST)"},
+  {"id":"SFX.AX", "name": "SHEFFIELD RESOURCES LIMITED (SFX.AX)"},
+  {"id":"SFY.AX", "name": "SPDR S&P/ASX 50 FUND (SFY.AX)"},
+  {"id":"SGBK", "name": "Stonegate Bank (SGBK)"},
+  {"id":"SGC", "name": "Superior Uniform Group, Inc. (SGC)"},
+  {"id":"SGC.AX", "name": "SACGASCO LIMITED (SGC.AX)"},
+  {"id":"SGEN", "name": "Seattle Genetics, Inc. (SGEN)"},
+  {"id":"SGF.AX", "name": "SG FLEET GROUP LIMITED (SGF.AX)"},
+  {"id":"SGH.AX", "name": "SLATER & GORDON LIMITED (SGH.AX)"},
+  {"id":"SGLB", "name": "Sigma Labs, Inc. (SGLB)"},
+  {"id":"SGLBW", "name": "Sigma Labs, Inc. (SGLBW)"},
+  {"id":"SGM.AX", "name": "SIMS METAL MANAGEMENT LIMITED (SGM.AX)"},
+  {"id":"SGMA", "name": "SigmaTron International, Inc. (SGMA)"},
+  {"id":"SGMO", "name": "Sangamo Therapeutics, Inc. (SGMO)"},
+  {"id":"SGMS", "name": "Scientific Games Corp (SGMS)"},
+  {"id":"SGO.AX", "name": "STREAM GROUP LIMITED (SGO.AX)"},
+  {"id":"SGOC", "name": "SGOCO Group, Ltd (SGOC)"},
+  {"id":"SGP.AX", "name": "STOCKLAND (SGP.AX)"},
+  {"id":"SGQ.AX", "name": "ST GEORGE MINING LIMITED (SGQ.AX)"},
+  {"id":"SGQI", "name": "Janus SG Global Quality Income ETF (SGQI)"},
+  {"id":"SGR.AX", "name": "THE STAR ENTERTAINMENT GROUP LIMITED (SGR.AX)"},
+  {"id":"SGRP", "name": "SPAR Group, Inc. (SGRP)"},
+  {"id":"SGRY", "name": "Surgery Partners, Inc. (SGRY)"},
+  {"id":"SGU.AX", "name": "SUCCESS GLOBAL MEDIA LIMITED (SGU.AX)"},
+  {"id":"SGYP", "name": "Synergy Pharmaceuticals, Inc. (SGYP)"},
+  {"id":"SHBI", "name": "Shore Bancshares Inc (SHBI)"},
+  {"id":"SHEN", "name": "Shenandoah Telecommunications Co (SHEN)"},
+  {"id":"SHH.AX", "name": "SHREE MINERALS LIMITED (SHH.AX)"},
+  {"id":"SHIP", "name": "Seanergy Maritime Holdings Corp (SHIP)"},
+  {"id":"SHIPW", "name": "Seanergy Maritime Holdings Corp (SHIPW)"},
+  {"id":"SHJ.AX", "name": "SHINE CORPORATE LTD (SHJ.AX)"},
+  {"id":"SHK.AX", "name": "STONE RESOURCES AUSTRALIA LIMITED (SHK.AX)"},
+  {"id":"SHL.AX", "name": "SONIC HEALTHCARE LIMITED (SHL.AX)"},
+  {"id":"SHLD", "name": "Sears Holdings Corporation (SHLD)"},
+  {"id":"SHLDW", "name": "Sears Holdings Corporation (SHLDW)"},
+  {"id":"SHLM", "name": "A. Schulman, Inc. (SHLM)"},
+  {"id":"SHLO", "name": "Shiloh Industries, Inc. (SHLO)"},
+  {"id":"SHM.AX", "name": "SHRIRO HOLDINGS LIMITED (SHM.AX)"},
+  {"id":"SHO.AX", "name": "SPORTSHERO LIMITED (SHO.AX)"},
+  {"id":"SHOO", "name": "Steven Madden, Ltd. (SHOO)"},
+  {"id":"SHOR", "name": "ShoreTel, Inc. (SHOR)"},
+  {"id":"SHOS", "name": "Sears Hometown and Outlet Stores, Inc. (SHOS)"},
+  {"id":"SHPG", "name": "Shire plc (SHPG)"},
+  {"id":"SHSP", "name": "SharpSpring, Inc. (SHSP)"},
+  {"id":"SHU.AX", "name": "SHENHUA INTERNATIONAL LIMITED (SHU.AX)"},
+  {"id":"SHV.AX", "name": "SELECT HARVESTS LIMITED (SHV.AX)"},
+  {"id":"SIE.AX", "name": "SCIGEN LIMITED (SIE.AX)"},
+  {"id":"SIEB", "name": "Siebert Financial Corp. (SIEB)"},
+  {"id":"SIEN", "name": "Sientra, Inc. (SIEN)"},
+  {"id":"SIFI", "name": "SI Financial Group, Inc. (SIFI)"},
+  {"id":"SIFY", "name": "Sify Technologies Limited (SIFY)"},
+  {"id":"SIGI", "name": "Selective Insurance Group, Inc. (SIGI)"},
+  {"id":"SIGM", "name": "Sigma Designs, Inc. (SIGM)"},
+  {"id":"SIH.AX", "name": "SIHAYO GOLD LIMITED (SIH.AX)"},
+  {"id":"SILC", "name": "Silicom Ltd (SILC)"},
+  {"id":"SIMO", "name": "Silicon Motion Technology Corporation (SIMO)"},
+  {"id":"SINA", "name": "Sina Corporation (SINA)"},
+  {"id":"SINO", "name": "Sino-Global Shipping America, Ltd. (SINO)"},
+  {"id":"SIO.AX", "name": "SIMONDS GROUP LIMITED (SIO.AX)"},
+  {"id":"SIP.AX", "name": "SIGMA PHARMACEUTICALS LIMITED (SIP.AX)"},
+  {"id":"SIQ.AX", "name": "SMARTGROUP CORPORATION LTD (SIQ.AX)"},
+  {"id":"SIR", "name": "Select Income REIT (SIR)"},
+  {"id":"SIRI", "name": "Sirius XM Holdings Inc. (SIRI)"},
+  {"id":"SIT.AX", "name": "SITE GROUP INTERNATIONAL LIMITED (SIT.AX)"},
+  {"id":"SITO", "name": "SITO Mobile, Ltd. (SITO)"},
+  {"id":"SIV.AX", "name": "SILVER CHEF LIMITED (SIV.AX)"},
+  {"id":"SIVB", "name": "SVB Financial Group (SIVB)"},
+  {"id":"SIVBO", "name": "SVB Financial Group (SIVBO)"},
+  {"id":"SIX.AX", "name": "SPRINTEX LIMITED (SIX.AX)"},
+  {"id":"SKB.AX", "name": "SKYDIVE THE BEACH GROUP LIMITED (SKB.AX)"},
+  {"id":"SKC.AX", "name": "SKYCITY ENTERTAINMENT GROUP LIMITED (SKC.AX)"},
+  {"id":"SKF.AX", "name": "SKYFII LTD (SKF.AX)"},
+  {"id":"SKI.AX", "name": "SPARK INFRASTRUCTURE GROUP (SKI.AX)"},
+  {"id":"SKIS", "name": "Peak Resorts, Inc. (SKIS)"},
+  {"id":"SKLN", "name": "Skyline Medical Inc. (SKLN)"},
+  {"id":"SKN.AX", "name": "SKIN ELEMENTS LIMITED (SKN.AX)"},
+  {"id":"SKOR", "name": "FlexShares Credit-Scored US Corporate Bond Index Fund (SKOR)"},
+  {"id":"SKP.AX", "name": "SKYLAND PETROLEUM  GROUP LIMITED (SKP.AX)"},
+  {"id":"SKS.AX", "name": "STOKES LIMITED (SKS.AX)"},
+  {"id":"SKT.AX", "name": "SKY NETWORK TELEVISION LIMITED. (SKT.AX)"},
+  {"id":"SKYS", "name": "Sky Solar Holdings, Ltd. (SKYS)"},
+  {"id":"SKYW", "name": "SkyWest, Inc. (SKYW)"},
+  {"id":"SKYY", "name": "First Trust Cloud Computing ETF (SKYY)"},
+  {"id":"SLAB", "name": "Silicon Laboratories, Inc. (SLAB)"},
+  {"id":"SLC.AX", "name": "SUPERLOOP LIMITED (SLC.AX)"},
+  {"id":"SLCT", "name": "Select Bancorp, Inc. (SLCT)"},
+  {"id":"SLF.AX", "name": "SPDR S&P/ASX 200 LISTED PROPERTY FUND (SLF.AX)"},
+  {"id":"SLGN", "name": "Silgan Holdings Inc. (SLGN)"},
+  {"id":"SLIM", "name": "The Obesity ETF (SLIM)"},
+  {"id":"SLK.AX", "name": "SEALINK TRAVEL GROUP LIMITED (SLK.AX)"},
+  {"id":"SLM", "name": "SLM Corporation (SLM)"},
+  {"id":"SLM.AX", "name": "SALMAT LIMITED (SLM.AX)"},
+  {"id":"SLMAP", "name": "SLM Corporation (SLMAP)"},
+  {"id":"SLMBP", "name": "SLM Corporation (SLMBP)"},
+  {"id":"SLP", "name": "Simulations Plus, Inc. (SLP)"},
+  {"id":"SLQD", "name": "iShares 0-5 Year Investment Grade Corporate Bond ETF (SLQD)"},
+  {"id":"SLR.AX", "name": "SILVER LAKE RESOURCES LIMITED (SLR.AX)"},
+  {"id":"SLRC", "name": "Solar Capital Ltd. (SLRC)"},
+  {"id":"SLVO", "name": "Credit Suisse Silver Shares Covered Call ETN (SLVO)"},
+  {"id":"SLX.AX", "name": "SILEX SYSTEMS LIMITED (SLX.AX)"},
+  {"id":"SM1.AX", "name": "SYNLAIT MILK LIMITED (SM1.AX)"},
+  {"id":"SM8.AX", "name": "SHARK MITIGATION SYSTEMS LIMITED (SM8.AX)"},
+  {"id":"SMA.AX", "name": "SMARTTRANS HOLDINGS LTD (SMA.AX)"},
+  {"id":"SMBC", "name": "Southern Missouri Bancorp, Inc. (SMBC)"},
+  {"id":"SMBK", "name": "SmartFinancial, Inc. (SMBK)"},
+  {"id":"SMC.AX", "name": "STRATEGIC MINERALS CORPORATION NL (SMC.AX)"},
+  {"id":"SMCI", "name": "Super Micro Computer, Inc. (SMCI)"},
+  {"id":"SMCP", "name": "AlphaMark Actively Managed Small Cap ETF (SMCP)"},
+  {"id":"SMD.AX", "name": "SYNDICATED METALS LIMITED (SMD.AX)"},
+  {"id":"SMED", "name": "Sharps Compliance Corp (SMED)"},
+  {"id":"SMG.AX", "name": "SOON MINING LIMITED (SMG.AX)"},
+  {"id":"SMI.AX", "name": "SANTANA MINERALS LIMITED (SMI.AX)"},
+  {"id":"SMIT", "name": "Schmitt Industries, Inc. (SMIT)"},
+  {"id":"SMM.AX", "name": "SUMMIT RESOURCES LIMITED (SMM.AX)"},
+  {"id":"SMMF", "name": "Summit Financial Group, Inc. (SMMF)"},
+  {"id":"SMMT", "name": "Summit Therapeutics plc (SMMT)"},
+  {"id":"SMN.AX", "name": "STRUCTURAL MONITORING SYSTEMS PLC (SMN.AX)"},
+  {"id":"SMP.AX", "name": "SMARTPAY HOLDINGS LIMITED (SMP.AX)"},
+  {"id":"SMR.AX", "name": "STANMORE COAL LIMITED (SMR.AX)"},
+  {"id":"SMRT", "name": "Stein Mart, Inc. (SMRT)"},
+  {"id":"SMSI", "name": "Smith Micro Software, Inc. (SMSI)"},
+  {"id":"SMT.AX", "name": "SMART ABS SERIES 2015-2 TRUST (SMT.AX)"},
+  {"id":"SMTC", "name": "Semtech Corporation (SMTC)"},
+  {"id":"SMTX", "name": "SMTC Corporation (SMTX)"},
+  {"id":"SMX.AX", "name": "SMS MANAGEMENT & TECHNOLOGY LIMITED. (SMX.AX)"},
+  {"id":"SNAK", "name": "Inventure Foods, Inc. (SNAK)"},
+  {"id":"SNBC", "name": "Sun Bancorp, Inc. (SNBC)"},
+  {"id":"SNC", "name": "State National Companies, Inc. (SNC)"},
+  {"id":"SNC.AX", "name": "SANDON CAPITAL INVESTMENTS LIMITED (SNC.AX)"},
+  {"id":"SNCR", "name": "Synchronoss Technologies, Inc. (SNCR)"},
+  {"id":"SND", "name": "Smart Sand, Inc. (SND)"},
+  {"id":"SND.AX", "name": "SAUNDERS INTERNATIONAL LIMITED (SND.AX)"},
+  {"id":"SNDE", "name": "Sundance Energy Australia Limited (SNDE)"},
+  {"id":"SNDX", "name": "Syndax Pharmaceuticals, Inc. (SNDX)"},
+  {"id":"SNES", "name": "SenesTech, Inc. (SNES)"},
+  {"id":"SNFCA", "name": "Security National Financial Corporation (SNFCA)"},
+  {"id":"SNGX", "name": "Soligenix, Inc. (SNGX)"},
+  {"id":"SNGXW", "name": "Soligenix, Inc. (SNGXW)"},
+  {"id":"SNH", "name": "Senior Housing Properties Trust (SNH)"},
+  {"id":"SNHNI", "name": "Senior Housing Properties Trust (SNHNI)"},
+  {"id":"SNHNL", "name": "Senior Housing Properties Trust (SNHNL)"},
+  {"id":"SNHY", "name": "Sun Hydraulics Corporation (SNHY)"},
+  {"id":"SNI", "name": "Scripps Networks Interactive, Inc (SNI)"},
+  {"id":"SNL.AX", "name": "SUPPLY NETWORK LIMITED (SNL.AX)"},
+  {"id":"SNLN", "name": "Highland/iBoxx Senior Loan ETF (SNLN)"},
+  {"id":"SNMX", "name": "Senomyx, Inc. (SNMX)"},
+  {"id":"SNOA", "name": "Sonoma Pharmaceuticals, Inc. (SNOA)"},
+  {"id":"SNOAW", "name": "Sonoma Pharmaceuticals, Inc. (SNOAW)"},
+  {"id":"SNPS", "name": "Synopsys, Inc. (SNPS)"},
+  {"id":"SNSR", "name": "Global X Internet of Things ETF (SNSR)"},
+  {"id":"SNSS", "name": "Sunesis Pharmaceuticals, Inc. (SNSS)"},
+  {"id":"SNV.AX", "name": "SINOVUS MINING LIMITED (SNV.AX)"},
+  {"id":"SNZ.AX", "name": "SUMMERSET GROUP HOLDINGS LIMITED (SNZ.AX)"},
+  {"id":"SO4.AX", "name": "SALT LAKE POTASH LIMITED (SO4.AX)"},
+  {"id":"SOCL", "name": "Global X Social Media ETF (SOCL)"},
+  {"id":"SODA", "name": "SodaStream International Ltd. (SODA)"},
+  {"id":"SOFO", "name": "Sonic Foundry, Inc. (SOFO)"},
+  {"id":"SOHO", "name": "Sotherly Hotels Inc. (SOHO)"},
+  {"id":"SOHOB", "name": "Sotherly Hotels Inc. (SOHOB)"},
+  {"id":"SOHOM", "name": "Sotherly Hotels LP (SOHOM)"},
+  {"id":"SOHU", "name": "Sohu.com Inc. (SOHU)"},
+  {"id":"SOL.AX", "name": "WASHINGTON H SOUL PATTINSON & COMPANY LIMITED (SOL.AX)"},
+  {"id":"SOM.AX", "name": "SOMNOMED LIMITED (SOM.AX)"},
+  {"id":"SONA", "name": "Southern National Bancorp of Virginia, Inc. (SONA)"},
+  {"id":"SONC", "name": "Sonic Corp. (SONC)"},
+  {"id":"SONS", "name": "Sonus Networks, Inc. (SONS)"},
+  {"id":"SOP.AX", "name": "SML CORPORATION LIMITED (SOP.AX)"},
+  {"id":"SOR.AX", "name": "STRATEGIC ELEMENTS LIMITED (SOR.AX)"},
+  {"id":"SORL", "name": "SORL Auto Parts, Inc. (SORL)"},
+  {"id":"SOXX", "name": "iShares PHLX SOX Semiconductor Sector Index Fund (SOXX)"},
+  {"id":"SP", "name": "SP Plus Corporation (SP)"},
+  {"id":"SP1.AX", "name": "SEARCH PARTY GROUP LTD (SP1.AX)"},
+  {"id":"SPAN", "name": "Span-America Medical Systems, Inc. (SPAN)"},
+  {"id":"SPAR", "name": "Spartan Motors, Inc. (SPAR)"},
+  {"id":"SPB.AX", "name": "SOUTH PACIFIC RESOURCES LIMITED (SPB.AX)"},
+  {"id":"SPCB", "name": "SuperCom, Ltd. (SPCB)"},
+  {"id":"SPEX", "name": "Spherix Incorporated (SPEX)"},
+  {"id":"SPHS", "name": "Sophiris Bio, Inc. (SPHS)"},
+  {"id":"SPI", "name": "SPI Energy Co., Ltd. (SPI)"},
+  {"id":"SPI.AX", "name": "SPITFIRE MATERIALS LTD (SPI.AX)"},
+  {"id":"SPIL", "name": "Siliconware Precision Industries Company, Ltd. (SPIL)"},
+  {"id":"SPK.AX", "name": "SPARK NEW ZEALAND LIMITED (SPK.AX)"},
+  {"id":"SPKE", "name": "Spark Energy, Inc. (SPKE)"},
+  {"id":"SPKEP", "name": "Spark Energy, Inc. (SPKEP)"},
+  {"id":"SPL.AX", "name": "STARPHARMA HOLDINGS LIMITED (SPL.AX)"},
+  {"id":"SPLK", "name": "Splunk Inc. (SPLK)"},
+  {"id":"SPLS", "name": "Staples, Inc. (SPLS)"},
+  {"id":"SPNC", "name": "The Spectranetics Corporation (SPNC)"},
+  {"id":"SPNE", "name": "SeaSpine Holdings Corporation (SPNE)"},
+  {"id":"SPNS", "name": "Sapiens International Corporation N.V. (SPNS)"},
+  {"id":"SPO.AX", "name": "SPOTLESS GROUP HOLDINGS LIMITED (SPO.AX)"},
+  {"id":"SPOK", "name": "Spok Holdings, Inc. (SPOK)"},
+  {"id":"SPPI", "name": "Spectrum Pharmaceuticals, Inc. (SPPI)"},
+  {"id":"SPQ.AX", "name": "SUPERIOR RESOURCES LIMITED (SPQ.AX)"},
+  {"id":"SPRT", "name": "support.com, Inc. (SPRT)"},
+  {"id":"SPSC", "name": "SPS Commerce, Inc. (SPSC)"},
+  {"id":"SPTN", "name": "SpartanNash Company (SPTN)"},
+  {"id":"SPU", "name": "SkyPeople Fruit Juice, Inc. (SPU)"},
+  {"id":"SPWH", "name": "Sportsman&#39;s Warehouse Holdings, Inc. (SPWH)"},
+  {"id":"SPWR", "name": "SunPower Corporation (SPWR)"},
+  {"id":"SPX.AX", "name": "SPECTRUM RARE EARTHS LIMITED (SPX.AX)"},
+  {"id":"SPZ.AX", "name": "SMART PARKING LIMITED (SPZ.AX)"},
+  {"id":"SQBG", "name": "Sequential Brands Group, Inc. (SQBG)"},
+  {"id":"SQQQ", "name": "ProShares UltraPro Short QQQ (SQQQ)"},
+  {"id":"SQZZ", "name": "Active Alts Contrarian ETF (SQZZ)"},
+  {"id":"SRAX", "name": "Social Reality, Inc. (SRAX)"},
+  {"id":"SRCE", "name": "1st Source Corporation (SRCE)"},
+  {"id":"SRCL", "name": "Stericycle, Inc. (SRCL)"},
+  {"id":"SRCLP", "name": "Stericycle, Inc. (SRCLP)"},
+  {"id":"SRDX", "name": "Surmodics, Inc. (SRDX)"},
+  {"id":"SRET", "name": "Global X SuperDividend REIT ETF (SRET)"},
+  {"id":"SREV", "name": "ServiceSource International, Inc. (SREV)"},
+  {"id":"SRF.AX", "name": "SURFSTITCH GROUP LIMITED (SRF.AX)"},
+  {"id":"SRG.AX", "name": "SRG LIMITED. (SRG.AX)"},
+  {"id":"SRH.AX", "name": "SAFEROADS HOLDINGS LIMITED (SRH.AX)"},
+  {"id":"SRI.AX", "name": "SIPA RESOURCES LIMITED (SRI.AX)"},
+  {"id":"SRK.AX", "name": "STRIKE RESOURCES LIMITED (SRK.AX)"},
+  {"id":"SRN.AX", "name": "SUREFIRE RESOURCES NL (SRN.AX)"},
+  {"id":"SRNE", "name": "Sorrento Therapeutics, Inc. (SRNE)"},
+  {"id":"SRO.AX", "name": "SHAREROOT LTD (SRO.AX)"},
+  {"id":"SRPT", "name": "Sarepta Therapeutics, Inc. (SRPT)"},
+  {"id":"SRR.AX", "name": "SHAW RIVER MANGANESE LIMITED (SRR.AX)"},
+  {"id":"SRRA", "name": "Sierra Oncology, Inc. (SRRA)"},
+  {"id":"SRS.AX", "name": "SPICERS LIMITED (SRS.AX)"},
+  {"id":"SRSC", "name": "Sears Canada Inc.  (SRSC)"},
+  {"id":"SRTS", "name": "Sensus Healthcare, Inc. (SRTS)"},
+  {"id":"SRTSW", "name": "Sensus Healthcare, Inc. (SRTSW)"},
+  {"id":"SRUNU", "name": "Silver Run Acquisition Corporation II (SRUNU)"},
+  {"id":"SRV.AX", "name": "SERVCORP LIMITED (SRV.AX)"},
+  {"id":"SRVA", "name": "SIRVA, Inc. (SRVA)"},
+  {"id":"SRX.AX", "name": "SIRTEX MEDICAL LIMITED (SRX.AX)"},
+  {"id":"SRY.AX", "name": "STORY-I LIMITED (SRY.AX)"},
+  {"id":"SRZ.AX", "name": "STELLAR RESOURCES LIMITED (SRZ.AX)"},
+  {"id":"SS6.AX", "name": "SMART ABS SERIES 2016-1 TRUST (SS6.AX)"},
+  {"id":"SSB", "name": "South State Corporation (SSB)"},
+  {"id":"SSBI", "name": "Summit State Bank (SSBI)"},
+  {"id":"SSE.AX", "name": "SMART ABS SERIES 2014-4 TRUST (SSE.AX)"},
+  {"id":"SSFN", "name": "Stewardship Financial Corp (SSFN)"},
+  {"id":"SSG.AX", "name": "SHAVER SHOP GROUP LIMITED (SSG.AX)"},
+  {"id":"SSH", "name": "Sunshine Heart Inc (SSH)"},
+  {"id":"SSKN", "name": "Strata Skin Sciences, Inc. (SSKN)"},
+  {"id":"SSL.AX", "name": "SIETEL LIMITED (SSL.AX)"},
+  {"id":"SSM.AX", "name": "SERVICE STREAM LIMITED (SSM.AX)"},
+  {"id":"SSN.AX", "name": "SAMSON OIL & GAS LIMITED (SSN.AX)"},
+  {"id":"SSNC", "name": "SS&C Technologies Holdings, Inc. (SSNC)"},
+  {"id":"SSRI", "name": "Silver Standard Resources Inc. (SSRI)"},
+  {"id":"SST.AX", "name": "STEAMSHIPS TRADING COMPANY LIMITED (SST.AX)"},
+  {"id":"SSYS", "name": "Stratasys, Ltd. (SSYS)"},
+  {"id":"ST1.AX", "name": "SPIRIT TELECOM LIMITED (ST1.AX)"},
+  {"id":"STA.AX", "name": "STRANDLINE RESOURCES LIMITED (STA.AX)"},
+  {"id":"STAA", "name": "STAAR Surgical Company (STAA)"},
+  {"id":"STAF", "name": "Staffing 360 Solutions, Inc. (STAF)"},
+  {"id":"STB", "name": "Student Transportation Inc (STB)"},
+  {"id":"STBA", "name": "S&T Bancorp, Inc. (STBA)"},
+  {"id":"STBZ", "name": "State Bank Financial Corporation. (STBZ)"},
+  {"id":"STDY", "name": "SteadyMed Ltd. (STDY)"},
+  {"id":"STFC", "name": "State Auto Financial Corporation (STFC)"},
+  {"id":"STKL", "name": "SunOpta, Inc. (STKL)"},
+  {"id":"STKS", "name": "The ONE Group Hospitality, Inc. (STKS)"},
+  {"id":"STL.AX", "name": "STARGROUP LIMITED (STL.AX)"},
+  {"id":"STLD", "name": "Steel Dynamics, Inc. (STLD)"},
+  {"id":"STLR", "name": "Stellar Acquisition III Inc. (STLR)"},
+  {"id":"STLRU", "name": "Stellar Acquisition III Inc. (STLRU)"},
+  {"id":"STLRW", "name": "Stellar Acquisition III Inc. (STLRW)"},
+  {"id":"STLY", "name": "Stanley Furniture Company, Inc. (STLY)"},
+  {"id":"STML", "name": "Stemline Therapeutics, Inc. (STML)"},
+  {"id":"STMP", "name": "Stamps.com Inc. (STMP)"},
+  {"id":"STO.AX", "name": "SANTOS LIMITED (STO.AX)"},
+  {"id":"STPP", "name": "iPath US Treasury Steepener ETN (STPP)"},
+  {"id":"STRA", "name": "Strayer Education, Inc. (STRA)"},
+  {"id":"STRL", "name": "Sterling Construction Company Inc (STRL)"},
+  {"id":"STRM", "name": "Streamline Health Solutions, Inc. (STRM)"},
+  {"id":"STRS", "name": "Stratus Properties Inc. (STRS)"},
+  {"id":"STRT", "name": "Strattec Security Corporation (STRT)"},
+  {"id":"STW.AX", "name": "SPDR S&P/ASX 200 FUND (STW.AX)"},
+  {"id":"STX", "name": "Seagate Technology PLC (STX)"},
+  {"id":"STX.AX", "name": "STRIKE ENERGY LIMITED (STX.AX)"},
+  {"id":"SUD.AX", "name": "SUDA LTD (SUD.AX)"},
+  {"id":"SUH.AX", "name": "SOUTHERN HEMISPHERE MINING LIMITED (SUH.AX)"},
+  {"id":"SUL.AX", "name": "SUPER RETAIL GROUP LIMITED (SUL.AX)"},
+  {"id":"SUM.AX", "name": "SUMATRA COPPER & GOLD PLC (SUM.AX)"},
+  {"id":"SUMR", "name": "Summer Infant, Inc. (SUMR)"},
+  {"id":"SUN.AX", "name": "SUNCORP GROUP LIMITED (SUN.AX)"},
+  {"id":"SUNS", "name": "Solar Senior Capital Ltd. (SUNS)"},
+  {"id":"SUNW", "name": "Sunworks, Inc. (SUNW)"},
+  {"id":"SUPN", "name": "Supernus Pharmaceuticals, Inc. (SUPN)"},
+  {"id":"SUR.AX", "name": "SUN RESOURCES NL (SUR.AX)"},
+  {"id":"SVA", "name": "Sinovac Biotech, Ltd. (SVA)"},
+  {"id":"SVA.AX", "name": "SIMAVITA LIMITED (SVA.AX)"},
+  {"id":"SVBI", "name": "Severn Bancorp Inc (SVBI)"},
+  {"id":"SVH.AX", "name": "SILVER HERITAGE GROUP LIMITED (SVH.AX)"},
+  {"id":"SVL.AX", "name": "SILVER MINES LIMITED (SVL.AX)"},
+  {"id":"SVM.AX", "name": "SOVEREIGN METALS LIMITED (SVM.AX)"},
+  {"id":"SVS.AX", "name": "SUNVEST CORPORATION LIMITED (SVS.AX)"},
+  {"id":"SVT.AX", "name": "SERVTECH GLOBAL HOLDINGS LTD (SVT.AX)"},
+  {"id":"SVVC", "name": "Firsthand Technology Value Fund, Inc. (SVVC)"},
+  {"id":"SVW.AX", "name": "SEVEN GROUP HOLDINGS LIMITED (SVW.AX)"},
+  {"id":"SVY.AX", "name": "STAVELY MINERALS LIMITED (SVY.AX)"},
+  {"id":"SW1.AX", "name": "SWIFT NETWORKS GROUP LIMITED (SW1.AX)"},
+  {"id":"SWE.AX", "name": "SWALA ENERGY LIMITED (SWE.AX)"},
+  {"id":"SWIN", "name": "ALPS/Dorsey Wright Sector Momentum ETF (SWIN)"},
+  {"id":"SWIR", "name": "Sierra Wireless, Inc. (SWIR)"},
+  {"id":"SWJ.AX", "name": "STONEWALL RESOURCES LIMITED (SWJ.AX)"},
+  {"id":"SWK.AX", "name": "SWICK MINING SERVICES LTD (SWK.AX)"},
+  {"id":"SWKS", "name": "Skyworks Solutions, Inc. (SWKS)"},
+  {"id":"SWL.AX", "name": "SEYMOUR WHYTE LIMITED (SWL.AX)"},
+  {"id":"SWM.AX", "name": "SEVEN WEST MEDIA LIMITED (SWM.AX)"},
+  {"id":"SXA.AX", "name": "STRATA-X ENERGY LIMITED (SXA.AX)"},
+  {"id":"SXB.AX", "name": "SMART ABS SERIES 2015-4E TRUST (SXB.AX)"},
+  {"id":"SXE.AX", "name": "SOUTHERN CROSS ELECTRICAL ENGINEERING LTD (SXE.AX)"},
+  {"id":"SXI.AX", "name": "SOUTH EAST ASIA RESOURCES LIMITED (SXI.AX)"},
+  {"id":"SXL.AX", "name": "SOUTHERN CROSS MEDIA GROUP LIMITED (SXL.AX)"},
+  {"id":"SXX.AX", "name": "SOUTHERN CROSS EXPLORATION N.L. (SXX.AX)"},
+  {"id":"SXY.AX", "name": "SENEX ENERGY LIMITED (SXY.AX)"},
+  {"id":"SYA.AX", "name": "SAYONA MINING LIMITED (SYA.AX)"},
+  {"id":"SYBT", "name": "Stock Yards Bancorp, Inc. (SYBT)"},
+  {"id":"SYD.AX", "name": "SYDNEY AIRPORT (SYD.AX)"},
+  {"id":"SYKE", "name": "Sykes Enterprises, Incorporated (SYKE)"},
+  {"id":"SYMC", "name": "Symantec Corporation (SYMC)"},
+  {"id":"SYMX", "name": "Synthesis Energy Systems, Inc. (SYMX)"},
+  {"id":"SYNA", "name": "Synaptics Incorporated (SYNA)"},
+  {"id":"SYNC", "name": "Synacor, Inc. (SYNC)"},
+  {"id":"SYNL", "name": "Synalloy Corporation (SYNL)"},
+  {"id":"SYNT", "name": "Syntel, Inc. (SYNT)"},
+  {"id":"SYPR", "name": "Sypris Solutions, Inc. (SYPR)"},
+  {"id":"SYR.AX", "name": "SYRAH RESOURCES LIMITED (SYR.AX)"},
+  {"id":"SYRS", "name": "Syros Pharmaceuticals, Inc. (SYRS)"},
+  {"id":"SYS.AX", "name": "SYNGAS LIMITED (SYS.AX)"},
+  {"id":"SYT.AX", "name": "SYNTONIC LIMITED (SYT.AX)"},
+  {"id":"SYUT", "name": "Synutra International, Inc. (SYUT)"},
+  {"id":"SZG.AX", "name": "SUBZERO GROUP LIMITED (SZG.AX)"},
+  {"id":"T3D.AX", "name": "333D LIMITED (T3D.AX)"},
+  {"id":"TA", "name": "TravelCenters of America LLC (TA)"},
+  {"id":"TACO", "name": "Del Taco Restaurants, Inc. (TACO)"},
+  {"id":"TACOW", "name": "Del Taco Restaurants, Inc. (TACOW)"},
+  {"id":"TACT", "name": "TransAct Technologies Incorporated (TACT)"},
+  {"id":"TAG.AX", "name": "TAG PACIFIC LIMITED (TAG.AX)"},
+  {"id":"TAH.AX", "name": "TABCORP HOLDINGS LIMITED (TAH.AX)"},
+  {"id":"TAIT", "name": "Taitron Components Incorporated (TAIT)"},
+  {"id":"TAM.AX", "name": "TANAMI GOLD NL (TAM.AX)"},
+  {"id":"TANH", "name": "Tantech Holdings Ltd. (TANH)"},
+  {"id":"TANNI", "name": "TravelCenters of America LLC (TANNI)"},
+  {"id":"TANNL", "name": "TravelCenters of America LLC (TANNL)"},
+  {"id":"TANNZ", "name": "TravelCenters of America LLC (TANNZ)"},
+  {"id":"TAP.AX", "name": "TAP OIL LIMITED (TAP.AX)"},
+  {"id":"TAPR", "name": "Barclays Inverse US Treasury Composite ETN (TAPR)"},
+  {"id":"TAR.AX", "name": "TARUGA GOLD LIMITED (TAR.AX)"},
+  {"id":"TAS.AX", "name": "TASMAN RESOURCES LTD (TAS.AX)"},
+  {"id":"TAST", "name": "Carrols Restaurant Group, Inc. (TAST)"},
+  {"id":"TATT", "name": "TAT Technologies Ltd. (TATT)"},
+  {"id":"TAU.AX", "name": "TRUSTEES AUSTRALIA LIMITED (TAU.AX)"},
+  {"id":"TAW.AX", "name": "TAWANA RESOURCES NL (TAW.AX)"},
+  {"id":"TAX", "name": "Liberty Tax, Inc. (TAX)"},
+  {"id":"TAYD", "name": "Taylor Devices, Inc. (TAYD)"},
+  {"id":"TB8.AX", "name": "TIANMEI BEVERAGE GROUP CORPORATION LIMITED (TB8.AX)"},
+  {"id":"TBBK", "name": "The Bancorp, Inc. (TBBK)"},
+  {"id":"TBH.AX", "name": "TOPBETTA HOLDINGS LIMITED (TBH.AX)"},
+  {"id":"TBK", "name": "Triumph Bancorp, Inc. (TBK)"},
+  {"id":"TBNK", "name": "Territorial Bancorp Inc. (TBNK)"},
+  {"id":"TBPH", "name": "Theravance Biopharma, Inc. (TBPH)"},
+  {"id":"TBR.AX", "name": "TRIBUNE RESOURCES LIMITED (TBR.AX)"},
+  {"id":"TCBI", "name": "Texas Capital Bancshares, Inc. (TCBI)"},
+  {"id":"TCBIL", "name": "Texas Capital Bancshares, Inc. (TCBIL)"},
+  {"id":"TCBIP", "name": "Texas Capital Bancshares, Inc. (TCBIP)"},
+  {"id":"TCBIW", "name": "Texas Capital Bancshares, Inc. (TCBIW)"},
+  {"id":"TCBK", "name": "TriCo Bancshares (TCBK)"},
+  {"id":"TCCO", "name": "Technical Communications Corporation (TCCO)"},
+  {"id":"TCFC", "name": "The Community Financial Corporation (TCFC)"},
+  {"id":"TCH.AX", "name": "TOUCHCORP LIMITED (TCH.AX)"},
+  {"id":"TCL.AX", "name": "TRANSURBAN GROUP (TCL.AX)"},
+  {"id":"TCMD", "name": "Tactile Systems Technology, Inc. (TCMD)"},
+  {"id":"TCN.AX", "name": "TECHNICHE LIMITED. (TCN.AX)"},
+  {"id":"TCO.AX", "name": "TRANSMETRO CORPORATION LIMITED (TCO.AX)"},
+  {"id":"TCON", "name": "TRACON Pharmaceuticals, Inc. (TCON)"},
+  {"id":"TCPC", "name": "TCP Capital Corp. (TCPC)"},
+  {"id":"TCRD", "name": "THL Credit, Inc. (TCRD)"},
+  {"id":"TCX", "name": "Tucows Inc. (TCX)"},
+  {"id":"TDIV", "name": "First Trust NASDAQ Technology Dividend Index Fund (TDIV)"},
+  {"id":"TDL.AX", "name": "TBG DIAGNOSTICS LIMITED (TDL.AX)"},
+  {"id":"TDO.AX", "name": "3D OIL LIMITED (TDO.AX)"},
+  {"id":"TEAM", "name": "Atlassian Corporation Plc (TEAM)"},
+  {"id":"TEAR", "name": "TearLab Corporation (TEAR)"},
+  {"id":"TECD", "name": "Tech Data Corporation (TECD)"},
+  {"id":"TECH", "name": "Bio-Techne Corp (TECH)"},
+  {"id":"TEDU", "name": "Tarena International, Inc. (TEDU)"},
+  {"id":"TEG.AX", "name": "TRIANGLE ENERGY (GLOBAL) LIMITED (TEG.AX)"},
+  {"id":"TEK.AX", "name": "THORNEY TECHNOLOGIES LTD (TEK.AX)"},
+  {"id":"TELL", "name": "Tellurian Inc. (TELL)"},
+  {"id":"TEN.AX", "name": "TEN NETWORK HOLDINGS LIMITED (TEN.AX)"},
+  {"id":"TENX", "name": "Tenax Therapeutics, Inc. (TENX)"},
+  {"id":"TER.AX", "name": "TERRACOM LIMITED (TER.AX)"},
+  {"id":"TERP", "name": "TerraForm Power, Inc. (TERP)"},
+  {"id":"TES.AX", "name": "TEST SECURITY (TES.AX)"},
+  {"id":"TESO", "name": "Tesco Corporation (TESO)"},
+  {"id":"TESS", "name": "TESSCO Technologies Incorporated (TESS)"},
+  {"id":"TEX.AX", "name": "TARGET ENERGY LIMITED (TEX.AX)"},
+  {"id":"TFG.AX", "name": "TOTAL FACE GROUP LIMITED (TFG.AX)"},
+  {"id":"TFL.AX", "name": "TASFOODS LIMITED (TFL.AX)"},
+  {"id":"TFSL", "name": "TFS Financial Corporation (TFSL)"},
+  {"id":"TGA", "name": "Transglobe Energy Corp (TGA)"},
+  {"id":"TGA.AX", "name": "THORN GROUP LIMITED (TGA.AX)"},
+  {"id":"TGEN", "name": "Tecogen Inc. (TGEN)"},
+  {"id":"TGG.AX", "name": "TEMPLETON GLOBAL GROWTH FUND LIMITED (TGG.AX)"},
+  {"id":"TGH.AX", "name": "TEGEL GROUP HOLDINGS LIMITED (TGH.AX)"},
+  {"id":"TGLS", "name": "Tecnoglass Inc. (TGLS)"},
+  {"id":"TGN.AX", "name": "TUNGSTEN MINING NL (TGN.AX)"},
+  {"id":"TGP.AX", "name": "360 CAPITAL GROUP (TGP.AX)"},
+  {"id":"TGR.AX", "name": "TASSAL GROUP LIMITED (TGR.AX)"},
+  {"id":"TGS.AX", "name": "TIGER RESOURCES LIMITED (TGS.AX)"},
+  {"id":"TGTX", "name": "TG Therapeutics, Inc. (TGTX)"},
+  {"id":"TGZ.AX", "name": "TERANGA GOLD CORPORATION (TGZ.AX)"},
+  {"id":"THC.AX", "name": "THE HYDROPONICS COMPANY LIMITED (THC.AX)"},
+  {"id":"THD.AX", "name": "THRED LIMITED (THD.AX)"},
+  {"id":"THFF", "name": "First Financial Corporation Indiana (THFF)"},
+  {"id":"THLD", "name": "Threshold Pharmaceuticals, Inc. (THLD)"},
+  {"id":"THR.AX", "name": "THOR MINING PLC (THR.AX)"},
+  {"id":"THRM", "name": "Gentherm Inc (THRM)"},
+  {"id":"THST", "name": "Truett-Hurst, Inc. (THST)"},
+  {"id":"THX.AX", "name": "THUNDELARRA LIMITED (THX.AX)"},
+  {"id":"TIA.AX", "name": "TIAN AN AUSTRALIA LIMITED (TIA.AX)"},
+  {"id":"TICC", "name": "TICC Capital Corp. (TICC)"},
+  {"id":"TIG", "name": "TiGenix (TIG)"},
+  {"id":"TIG.AX", "name": "TIGERS REALM COAL LIMITED (TIG.AX)"},
+  {"id":"TIL", "name": "Till Capital Ltd. (TIL)"},
+  {"id":"TIL.AX", "name": "TRILOGY INTERNATIONAL LIMITED (TIL.AX)"},
+  {"id":"TILE", "name": "Interface, Inc. (TILE)"},
+  {"id":"TIPT", "name": "Tiptree Inc. (TIPT)"},
+  {"id":"TISA", "name": "Top Image Systems, Ltd. (TISA)"},
+  {"id":"TITN", "name": "Titan Machinery Inc. (TITN)"},
+  {"id":"TIVO", "name": "TiVo Corporation (TIVO)"},
+  {"id":"TKAI", "name": "Tokai Pharmaceuticals, Inc. (TKAI)"},
+  {"id":"TKF.AX", "name": "TIKFORCE LIMITED (TKF.AX)"},
+  {"id":"TKG.AX", "name": "TAKORADI LIMITED (TKG.AX)"},
+  {"id":"TKL.AX", "name": "TRAKA RESOURCES LIMITED (TKL.AX)"},
+  {"id":"TKM.AX", "name": "TREK METALS LIMITED (TKM.AX)"},
+  {"id":"TKO.AX", "name": "TAKOR GROUP LTD (TKO.AX)"},
+  {"id":"TLF", "name": "Tandy Leather Factory, Inc. (TLF)"},
+  {"id":"TLG.AX", "name": "TALGA RESOURCES LTD (TLG.AX)"},
+  {"id":"TLGT", "name": "Teligent, Inc. (TLGT)"},
+  {"id":"TLM.AX", "name": "TALISMAN MINING LIMITED (TLM.AX)"},
+  {"id":"TLND", "name": "Talend S.A. (TLND)"},
+  {"id":"TLS.AX", "name": "TELSTRA CORPORATION LIMITED. (TLS.AX)"},
+  {"id":"TLT", "name": "iShares 20+ Year Treasury Bond ETF (TLT)"},
+  {"id":"TLT.AX", "name": "TILT RENEWABLES LIMITED. (TLT.AX)"},
+  {"id":"TME.AX", "name": "TRADE ME GROUP LIMITED (TME.AX)"},
+  {"id":"TMI.AX", "name": "TRAPROCK MINING LIMITED (TMI.AX)"},
+  {"id":"TMK.AX", "name": "TAMASKA OIL AND GAS LTD (TMK.AX)"},
+  {"id":"TML.AX", "name": "TIMAH RESOURCES LIMITED (TML.AX)"},
+  {"id":"TMM.AX", "name": "TASMANIA MINES LIMITED (TMM.AX)"},
+  {"id":"TMP.AX", "name": "TECH MPIRE LIMITED (TMP.AX)"},
+  {"id":"TMT.AX", "name": "TECHNOLOGY METALS AUSTRALIA LIMITED (TMT.AX)"},
+  {"id":"TMUS", "name": "T-Mobile US, Inc. (TMUS)"},
+  {"id":"TMUSP", "name": "T-Mobile US, Inc. (TMUSP)"},
+  {"id":"TMX.AX", "name": "TERRAIN MINERALS LIMITED (TMX.AX)"},
+  {"id":"TMZ.AX", "name": "THOMSON RESOURCES LIMITED (TMZ.AX)"},
+  {"id":"TNAV", "name": "Telenav, Inc. (TNAV)"},
+  {"id":"TNB.AX", "name": "TORRENS SERIES 2013-1 TRUST (TNB.AX)"},
+  {"id":"TND.AX", "name": "TOP END MINERALS LIMITED (TND.AX)"},
+  {"id":"TNDM", "name": "Tandem Diabetes Care, Inc. (TNDM)"},
+  {"id":"TNE.AX", "name": "TECHNOLOGY ONE LIMITED (TNE.AX)"},
+  {"id":"TNF.AX", "name": "TORRENS SERIES 2013-2 TRUST (TNF.AX)"},
+  {"id":"TNG.AX", "name": "TNG LIMITED (TNG.AX)"},
+  {"id":"TNH.AX", "name": "TORRENS SERIES 2014-1 TRUST (TNH.AX)"},
+  {"id":"TNJ.AX", "name": "TORRENS SERIES 2015-1 TRUST (TNJ.AX)"},
+  {"id":"TNK.AX", "name": "THINK CHILDCARE LIMITED (TNK.AX)"},
+  {"id":"TNP.AX", "name": "TRIPLE ENERGY LIMITED (TNP.AX)"},
+  {"id":"TNR.AX", "name": "TORIAN RESOURCES LIMITED (TNR.AX)"},
+  {"id":"TNT.AX", "name": "TESSERENT LIMITED (TNT.AX)"},
+  {"id":"TNXP", "name": "Tonix Pharmaceuticals Holding Corp. (TNXP)"},
+  {"id":"TNY.AX", "name": "TINYBEANS GROUP PTY LTD (TNY.AX)"},
+  {"id":"TOA.AX", "name": "TORRENS SERIES 2010-3 TRUST (TOA.AX)"},
+  {"id":"TOE.AX", "name": "TORO ENERGY LIMITED (TOE.AX)"},
+  {"id":"TOM.AX", "name": "TOMIZONE LIMITED (TOM.AX)"},
+  {"id":"TON.AX", "name": "TRITON MINERALS LTD (TON.AX)"},
+  {"id":"TOP.AX", "name": "THORNEY OPPORTUNITIES LTD (TOP.AX)"},
+  {"id":"TOPS", "name": "TOP Ships Inc. (TOPS)"},
+  {"id":"TORM          ", "name": "TOR Minerals International Inc (TORM          )"},
+  {"id":"TOT.AX", "name": "360 CAPITAL TOTAL RETURN FUND (TOT.AX)"},
+  {"id":"TOU.AX", "name": "TLOU ENERGY LIMITED (TOU.AX)"},
+  {"id":"TOUR", "name": "Tuniu Corporation (TOUR)"},
+  {"id":"TOWN", "name": "Towne Bank (TOWN)"},
+  {"id":"TOX.AX", "name": "TOX FREE SOLUTIONS LIMITED (TOX.AX)"},
+  {"id":"TOZ.AX", "name": "TORRENS SERIES 2014-2 TRUST (TOZ.AX)"},
+  {"id":"TPC.AX", "name": "TPC CONSOLIDATED LIMITED (TPC.AX)"},
+  {"id":"TPD.AX", "name": "TALON PETROLEUM LIMITED (TPD.AX)"},
+  {"id":"TPE.AX", "name": "TPI ENTERPRISES LIMITED (TPE.AX)"},
+  {"id":"TPIC", "name": "TPI Composites, Inc. (TPIC)"},
+  {"id":"TPIV", "name": "TapImmune Inc. (TPIV)"},
+  {"id":"TPM.AX", "name": "TPG TELECOM LIMITED (TPM.AX)"},
+  {"id":"TPO.AX", "name": "TIAN POH RESOURCES LIMITED (TPO.AX)"},
+  {"id":"TPP.AX", "name": "TEMPO AUSTRALIA LTD (TPP.AX)"},
+  {"id":"TPS.AX", "name": "THREAT PROTECT AUSTRALIA LIMITED (TPS.AX)"},
+  {"id":"TPW.AX", "name": "TEMPLE & WEBSTER GROUP LTD (TPW.AX)"},
+  {"id":"TQQQ", "name": "ProShares UltraPro QQQ (TQQQ)"},
+  {"id":"TRA.AX", "name": "TURNERS LIMITED (TRA.AX)"},
+  {"id":"TRB.AX", "name": "TORRENS 2009-3 TRUST (TRB.AX)"},
+  {"id":"TRCB", "name": "Two River Bancorp (TRCB)"},
+  {"id":"TRCH", "name": "Torchlight Energy Resources, Inc. (TRCH)"},
+  {"id":"TREE", "name": "LendingTree, Inc. (TREE)"},
+  {"id":"TRHC", "name": "Tabula Rasa HealthCare, Inc. (TRHC)"},
+  {"id":"TRIB", "name": "Trinity Biotech plc (TRIB)"},
+  {"id":"TRIL", "name": "Trillium Therapeutics Inc. (TRIL)"},
+  {"id":"TRIP", "name": "TripAdvisor, Inc. (TRIP)"},
+  {"id":"TRK.AX", "name": "TORRENS SERIES 2010-2 TRUST (TRK.AX)"},
+  {"id":"TRL.AX", "name": "TANGA RESOURCES LIMITED (TRL.AX)"},
+  {"id":"TRM.AX", "name": "TRUSCOTT MINING CORPORATION LIMITED (TRM.AX)"},
+  {"id":"TRMB", "name": "Trimble Inc. (TRMB)"},
+  {"id":"TRMK", "name": "Trustmark Corporation (TRMK)"},
+  {"id":"TRNC", "name": "tronc, Inc. (TRNC)"},
+  {"id":"TRNS", "name": "Transcat, Inc. (TRNS)"},
+  {"id":"TROV", "name": "TrovaGene, Inc. (TROV)"},
+  {"id":"TROVU", "name": "TrovaGene, Inc. (TROVU)"},
+  {"id":"TROVW", "name": "TrovaGene, Inc. (TROVW)"},
+  {"id":"TROW", "name": "T. Rowe Price Group, Inc. (TROW)"},
+  {"id":"TRP.AX", "name": "TORRENS SERIES 2010-1 TRUST (TRP.AX)"},
+  {"id":"TRPX", "name": "Therapix Biosciences Ltd. (TRPX)"},
+  {"id":"TRS", "name": "TriMas Corporation (TRS)"},
+  {"id":"TRS.AX", "name": "THE REJECT SHOP LIMITED (TRS.AX)"},
+  {"id":"TRST", "name": "TrustCo Bank Corp NY (TRST)"},
+  {"id":"TRT.AX", "name": "TODD RIVER RESOURCES LIMITED (TRT.AX)"},
+  {"id":"TRUE", "name": "TrueCar, Inc. (TRUE)"},
+  {"id":"TRUP", "name": "Trupanion, Inc. (TRUP)"},
+  {"id":"TRVG", "name": "trivago N.V. (TRVG)"},
+  {"id":"TRVN", "name": "Trevena, Inc. (TRVN)"},
+  {"id":"TRY.AX", "name": "TROY RESOURCES LIMITED (TRY.AX)"},
+  {"id":"TSBK", "name": "Timberland Bancorp, Inc. (TSBK)"},
+  {"id":"TSC", "name": "TriState Capital Holdings, Inc. (TSC)"},
+  {"id":"TSCO", "name": "Tractor Supply Company (TSCO)"},
+  {"id":"TSEM", "name": "Tower Semiconductor Ltd. (TSEM)"},
+  {"id":"TSL.AX", "name": "TITANIUM SANDS LIMITED (TSL.AX)"},
+  {"id":"TSLA", "name": "Tesla, Inc.  (TSLA)"},
+  {"id":"TSN.AX", "name": "TRANSACTION SOLUTIONS INTERNATIONAL LIMITED (TSN.AX)"},
+  {"id":"TSRI", "name": "TSR, Inc. (TSRI)"},
+  {"id":"TSRO", "name": "TESARO, Inc. (TSRO)"},
+  {"id":"TST", "name": "TheStreet, Inc. (TST)"},
+  {"id":"TSV.AX", "name": "TRANSERV ENERGY LIMITED (TSV.AX)"},
+  {"id":"TTA.AX", "name": "TTA HOLDINGS LIMITED (TTA.AX)"},
+  {"id":"TTC.AX", "name": "TRADITIONAL THERAPY CLINICS LIMITED (TTC.AX)"},
+  {"id":"TTD", "name": "The Trade Desk, Inc. (TTD)"},
+  {"id":"TTEC", "name": "TeleTech Holdings, Inc. (TTEC)"},
+  {"id":"TTEK", "name": "Tetra Tech, Inc. (TTEK)"},
+  {"id":"TTGT", "name": "TechTarget, Inc. (TTGT)"},
+  {"id":"TTI.AX", "name": "TRAFFIC TECHNOLOGIES LTD. (TTI.AX)"},
+  {"id":"TTL.AX", "name": "TRANSCENDENCE TECHNOLOGIES LIMITED (TTL.AX)"},
+  {"id":"TTMI", "name": "TTM Technologies, Inc. (TTMI)"},
+  {"id":"TTNP", "name": "Titan Pharmaceuticals, Inc. (TTNP)"},
+  {"id":"TTOO", "name": "T2 Biosystems, Inc. (TTOO)"},
+  {"id":"TTPH", "name": "Tetraphase Pharmaceuticals, Inc. (TTPH)"},
+  {"id":"TTS", "name": "Tile Shop Hldgs, Inc. (TTS)"},
+  {"id":"TTS.AX", "name": "TATTS GROUP LIMITED (TTS.AX)"},
+  {"id":"TTW.AX", "name": "TOPTUNG LTD (TTW.AX)"},
+  {"id":"TTWO", "name": "Take-Two Interactive Software, Inc. (TTWO)"},
+  {"id":"TTZ.AX", "name": "TORRENS SERIES 2016-1 TRUST (TTZ.AX)"},
+  {"id":"TUES", "name": "Tuesday Morning Corp. (TUES)"},
+  {"id":"TUP.AX", "name": "TTG FINTECH LIMITED (TUP.AX)"},
+  {"id":"TURN", "name": "180 Degree Capital Corp. (TURN)"},
+  {"id":"TUSA", "name": "First Trust Total US Market AlphaDEX ETF (TUSA)"},
+  {"id":"TUSK", "name": "Mammoth Energy Services, Inc. (TUSK)"},
+  {"id":"TUTI", "name": "Tuttle Tactical Management Multi-Strategy Income ETF (TUTI)"},
+  {"id":"TUTT", "name": "Tuttle Tactical Management U.S. Core ETF (TUTT)"},
+  {"id":"TV2.AX", "name": "TV2U INTERNATIONAL LIMITED (TV2.AX)"},
+  {"id":"TVIA", "name": "TerraVia Holdings, Inc. (TVIA)"},
+  {"id":"TVIX", "name": "VelocityShares Daily 2x VIX Short Term ETN (TVIX)"},
+  {"id":"TVIZ", "name": "VelocityShares Daily 2x VIX Medium Term ETN (TVIZ)"},
+  {"id":"TVTY", "name": "Tivity Health, Inc. (TVTY)"},
+  {"id":"TWD.AX", "name": "TAMAWOOD LIMITED (TWD.AX)"},
+  {"id":"TWE.AX", "name": "TREASURY WINE ESTATES LIMITED (TWE.AX)"},
+  {"id":"TWIN", "name": "Twin Disc, Incorporated (TWIN)"},
+  {"id":"TWMC", "name": "Trans World Entertainment Corp. (TWMC)"},
+  {"id":"TWNK", "name": "Hostess Brands, Inc. (TWNK)"},
+  {"id":"TWNKW", "name": "Hostess Brands, Inc. (TWNKW)"},
+  {"id":"TWOU", "name": "2U, Inc. (TWOU)"},
+  {"id":"TWR.AX", "name": "TOWER LIMITED (TWR.AX)"},
+  {"id":"TXN", "name": "Texas Instruments Incorporated (TXN)"},
+  {"id":"TXRH", "name": "Texas Roadhouse, Inc. (TXRH)"},
+  {"id":"TYHT", "name": "Shineco, Inc. (TYHT)"},
+  {"id":"TYK.AX", "name": "TYCHEAN RESOURCES LTD (TYK.AX)"},
+  {"id":"TYPE", "name": "Monotype Imaging Holdings Inc. (TYPE)"},
+  {"id":"TYX.AX", "name": "TYRANNA RESOURCES LIMITED (TYX.AX)"},
+  {"id":"TZL.AX", "name": "TZ LIMITED (TZL.AX)"},
+  {"id":"TZN.AX", "name": "TERRAMIN AUSTRALIA LIMITED. (TZN.AX)"},
+  {"id":"TZOO", "name": "Travelzoo Inc. (TZOO)"},
+  {"id":"UAE", "name": "iShares MSCI UAE Capped ETF (UAE)"},
+  {"id":"UBCP", "name": "United Bancorp, Inc. (UBCP)"},
+  {"id":"UBFO", "name": "United Security Bancshares (UBFO)"},
+  {"id":"UBI.AX", "name": "UNIVERSAL BIOSENSORS INC. (UBI.AX)"},
+  {"id":"UBIO", "name": "Proshares UltraPro Nasdaq Biotechnology (UBIO)"},
+  {"id":"UBN.AX", "name": "URBANISE.COM LIMITED (UBN.AX)"},
+  {"id":"UBND", "name": "WisdomTree Western Asset Unconstrained Bond Fund (UBND)"},
+  {"id":"UBNK", "name": "United Financial Bancorp, Inc.  (UBNK)"},
+  {"id":"UBNT", "name": "Ubiquiti Networks, Inc. (UBNT)"},
+  {"id":"UBOH", "name": "United Bancshares, Inc. (UBOH)"},
+  {"id":"UBSH", "name": "Union Bankshares Corporation (UBSH)"},
+  {"id":"UBSI", "name": "United Bankshares, Inc. (UBSI)"},
+  {"id":"UCBA", "name": "United Community Bancorp (UCBA)"},
+  {"id":"UCBI", "name": "United Community Banks, Inc. (UCBI)"},
+  {"id":"UCFC", "name": "United Community Financial Corp. (UCFC)"},
+  {"id":"UCM.AX", "name": "USCOM LIMITED (UCM.AX)"},
+  {"id":"UCTT", "name": "Ultra Clean Holdings, Inc. (UCTT)"},
+  {"id":"UCW.AX", "name": "UCW LIMITED (UCW.AX)"},
+  {"id":"UDBI", "name": "Legg Mason US Diversified Core ETF (UDBI)"},
+  {"id":"UEIC", "name": "Universal Electronics Inc. (UEIC)"},
+  {"id":"UEPS", "name": "Net 1 UEPS Technologies, Inc. (UEPS)"},
+  {"id":"UEQ.AX", "name": "URANIUM EQUITIES LIMITED (UEQ.AX)"},
+  {"id":"UFCS", "name": "United Fire Group, Inc (UFCS)"},
+  {"id":"UFPI", "name": "Universal Forest Products, Inc. (UFPI)"},
+  {"id":"UFPT", "name": "UFP Technologies, Inc. (UFPT)"},
+  {"id":"UG", "name": "United-Guardian, Inc. (UG)"},
+  {"id":"UGLD", "name": "VelocityShares 3x Long Gold ETN linked to the S&P GSCI Gold In (UGLD)"},
+  {"id":"UHAL", "name": "Amerco (UHAL)"},
+  {"id":"UIHC", "name": "United Insurance Holdings Corp. (UIHC)"},
+  {"id":"UIL.AX", "name": "UIL ENERGY LTD (UIL.AX)"},
+  {"id":"ULBI", "name": "Ultralife Corporation (ULBI)"},
+  {"id":"ULH", "name": "Universal Logistics Holdings, Inc. (ULH)"},
+  {"id":"ULTA", "name": "Ulta Beauty, Inc. (ULTA)"},
+  {"id":"ULTI", "name": "The Ultimate Software Group, Inc. (ULTI)"},
+  {"id":"UMBF", "name": "UMB Financial Corporation (UMBF)"},
+  {"id":"UMPQ", "name": "Umpqua Holdings Corporation (UMPQ)"},
+  {"id":"UNAM", "name": "Unico American Corporation (UNAM)"},
+  {"id":"UNB", "name": "Union Bankshares, Inc. (UNB)"},
+  {"id":"UNFI", "name": "United Natural Foods, Inc. (UNFI)"},
+  {"id":"UNIS", "name": "Unilife Corporation (UNIS)"},
+  {"id":"UNIT", "name": "Uniti Group Inc. (UNIT)"},
+  {"id":"UNL.AX", "name": "UNITED NETWORKS LIMITED (UNL.AX)"},
+  {"id":"UNS.AX", "name": "UNILIFE CORPORATION (UNS.AX)"},
+  {"id":"UNTY", "name": "Unity Bancorp, Inc. (UNTY)"},
+  {"id":"UNV.AX", "name": "UNIVERSAL COAL PLC (UNV.AX)"},
+  {"id":"UNXL", "name": "Uni-Pixel, Inc. (UNXL)"},
+  {"id":"UOS.AX", "name": "UNITED OVERSEAS AUSTRALIA LIMITED (UOS.AX)"},
+  {"id":"UPD.AX", "name": "UPDATER INC (UPD.AX)"},
+  {"id":"UPLD", "name": "Upland Software, Inc. (UPLD)"},
+  {"id":"URB.AX", "name": "URB INVESTMENTS LIMITED (URB.AX)"},
+  {"id":"URBN", "name": "Urban Outfitters, Inc. (URBN)"},
+  {"id":"UREE", "name": "U.S. Rare Earths, Inc. (UREE)"},
+  {"id":"URF.AX", "name": "US MASTERS RESIDENTIAL PROPERTY FUND (URF.AX)"},
+  {"id":"URI.AX", "name": "URANIUM RESOURCES INC (URI.AX)"},
+  {"id":"URRE", "name": "Uranium Resources, Inc. (URRE)"},
+  {"id":"USA.AX", "name": "URANIUMSA LIMITED (USA.AX)"},
+  {"id":"USAK", "name": "USA Truck, Inc. (USAK)"},
+  {"id":"USAP", "name": "Universal Stainless & Alloy Products, Inc. (USAP)"},
+  {"id":"USAT", "name": "USA Technologies, Inc. (USAT)"},
+  {"id":"USATP", "name": "USA Technologies, Inc. (USATP)"},
+  {"id":"USCR", "name": "U S Concrete, Inc. (USCR)"},
+  {"id":"USEG", "name": "U.S. Energy Corp. (USEG)"},
+  {"id":"USF.AX", "name": "US SELECT PRIVATE OPPORTUNITIES FUND (USF.AX)"},
+  {"id":"USG.AX", "name": "US SELECT PRIVATE OPPORTUNITIES FUND II (USG.AX)"},
+  {"id":"USLB", "name": "PowerShares Russell 1000 Low Beta Equal Weight Portfolio (USLB)"},
+  {"id":"USLM", "name": "United States Lime & Minerals, Inc. (USLM)"},
+  {"id":"USLV", "name": "VelocityShares 3x Long Silver ETN linked to the S&P GSCI Silve (USLV)"},
+  {"id":"USP.AX", "name": "US SELECT PRIVATE OPPORTUNITIES FUND III (USP.AX)"},
+  {"id":"USR.AX", "name": "US RESIDENTIAL FUND (USR.AX)"},
+  {"id":"UTEK", "name": "Ultratech, Inc. (UTEK)"},
+  {"id":"UTHR", "name": "United Therapeutics Corporation (UTHR)"},
+  {"id":"UTMD", "name": "Utah Medical Products, Inc. (UTMD)"},
+  {"id":"UTR.AX", "name": "ULTRACHARGE LIMITED (UTR.AX)"},
+  {"id":"UTSI", "name": "UTStarcom Holdings Corp (UTSI)"},
+  {"id":"UUL.AX", "name": "ULTIMA UNITED LIMITED (UUL.AX)"},
+  {"id":"UUV.AX", "name": "UUV AQUABOTIX LTD (UUV.AX)"},
+  {"id":"UVSP", "name": "Univest Corporation of Pennsylvania (UVSP)"},
+  {"id":"VAH.AX", "name": "VIRGIN AUSTRALIA HOLDINGS LIMITED (VAH.AX)"},
+  {"id":"VAL.AX", "name": "VALOR RESOURCES LIMITED (VAL.AX)"},
+  {"id":"VALU", "name": "Value Line, Inc. (VALU)"},
+  {"id":"VALX", "name": "Validea Market Legends ETF (VALX)"},
+  {"id":"VAN.AX", "name": "VANGO MINING LIMITED (VAN.AX)"},
+  {"id":"VAR.AX", "name": "VARISCAN MINES LIMITED (VAR.AX)"},
+  {"id":"VBFC", "name": "Village Bank and Trust Financial Corp. (VBFC)"},
+  {"id":"VBIV", "name": "VBI Vaccines, Inc. (VBIV)"},
+  {"id":"VBLT", "name": "Vascular Biogenics Ltd. (VBLT)"},
+  {"id":"VBND", "name": "Vident Core U.S. Bond Strategy Fund (VBND)"},
+  {"id":"VBS.AX", "name": "VECTUS BIOSYSTEMS LIMITED (VBS.AX)"},
+  {"id":"VBTX", "name": "Veritex Holdings, Inc. (VBTX)"},
+  {"id":"VCD.AX", "name": "VICINITY CENTRES TRUST (VCD.AX)"},
+  {"id":"VCEL", "name": "Vericel Corporation (VCEL)"},
+  {"id":"VCIT", "name": "Vanguard Intermediate-Term Corporate Bond ETF (VCIT)"},
+  {"id":"VCLT", "name": "Vanguard Long-Term Corporate Bond ETF (VCLT)"},
+  {"id":"VCSH", "name": "Vanguard Short-Term Corporate Bond ETF (VCSH)"},
+  {"id":"VCX.AX", "name": "VICINITY CENTRES (VCX.AX)"},
+  {"id":"VCYT", "name": "Veracyte, Inc. (VCYT)"},
+  {"id":"VDSI", "name": "VASCO Data Security International, Inc. (VDSI)"},
+  {"id":"VDTH", "name": "Videocon d2h Limited (VDTH)"},
+  {"id":"VEC.AX", "name": "VECTOR RESOURCES LIMITED (VEC.AX)"},
+  {"id":"VECO", "name": "Veeco Instruments Inc. (VECO)"},
+  {"id":"VEE.AX", "name": "VEEM LTD (VEE.AX)"},
+  {"id":"VEL.AX", "name": "VEALLS LIMITED (VEL.AX)"},
+  {"id":"VEON", "name": "VEON Ltd. (VEON)"},
+  {"id":"VGIT", "name": "Vanguard Intermediate -Term Government Bond ETF (VGIT)"},
+  {"id":"VGL.AX", "name": "VISTA GROUP INTERNATIONAL LIMITED. (VGL.AX)"},
+  {"id":"VGLT", "name": "Vanguard Long-Term Government Bond ETF (VGLT)"},
+  {"id":"VGSH", "name": "Vanguard Short-Term Government ETF (VGSH)"},
+  {"id":"VHT.AX", "name": "VOLPARA HEALTH TECHNOLOGIES LIMITED (VHT.AX)"},
+  {"id":"VIA", "name": "Viacom Inc. (VIA)"},
+  {"id":"VIA.AX", "name": "VIAGOLD CAPITAL LIMITED (VIA.AX)"},
+  {"id":"VIAB", "name": "Viacom Inc. (VIAB)"},
+  {"id":"VIAV", "name": "Viavi Solutions Inc. (VIAV)"},
+  {"id":"VIC.AX", "name": "VICTORY MINES LIMITED (VIC.AX)"},
+  {"id":"VICL", "name": "Vical Incorporated (VICL)"},
+  {"id":"VICR", "name": "Vicor Corporation (VICR)"},
+  {"id":"VIDI", "name": "Vident International Equity Fund (VIDI)"},
+  {"id":"VIE.AX", "name": "VIENTO GROUP LIMITED (VIE.AX)"},
+  {"id":"VIG.AX", "name": "VICTOR GROUP HOLDINGS LIMITED (VIG.AX)"},
+  {"id":"VIGI", "name": "Vanguard International Dividend Appreciation ETF (VIGI)"},
+  {"id":"VII.AX", "name": "VIETNAM INDUSTRIAL INVESTMENTS LIMITED (VII.AX)"},
+  {"id":"VIIX", "name": "VelocityShares VIX Short Term ETN (VIIX)"},
+  {"id":"VIIZ", "name": "VelocityShares VIX Medium Term ETN (VIIZ)"},
+  {"id":"VIP.AX", "name": "VOLTAGE IP LIMITED (VIP.AX)"},
+  {"id":"VIRC", "name": "Virco Manufacturing Corporation (VIRC)"},
+  {"id":"VIRT", "name": "Virtu Financial, Inc. (VIRT)"},
+  {"id":"VIST", "name": "Visterra, Inc. (VIST)"},
+  {"id":"VIV.AX", "name": "VIVID TECHNOLOGY LIMITED (VIV.AX)"},
+  {"id":"VIVE", "name": "Viveve Medical, Inc. (VIVE)"},
+  {"id":"VIVO", "name": "Meridian Bioscience Inc. (VIVO)"},
+  {"id":"VKA.AX", "name": "VIKING MINES LIMITED (VKA.AX)"},
+  {"id":"VKTX", "name": "Viking Therapeutics, Inc. (VKTX)"},
+  {"id":"VKTXW", "name": "Viking Therapeutics, Inc. (VKTXW)"},
+  {"id":"VLA.AX", "name": "VIRALYTICS LIMITED (VLA.AX)"},
+  {"id":"VLGEA", "name": "Village Super Market, Inc. (VLGEA)"},
+  {"id":"VLRX", "name": "Valeritas Holdings, Inc. (VLRX)"},
+  {"id":"VLT.AX", "name": "VAULT INTELLIGENCE LIMITED (VLT.AX)"},
+  {"id":"VLW.AX", "name": "VILLA WORLD LIMITED. (VLW.AX)"},
+  {"id":"VMBS", "name": "Vanguard Mortgage-Backed Securities ETF (VMBS)"},
+  {"id":"VMC.AX", "name": "VENUS METALS CORPORATION LIMITED (VMC.AX)"},
+  {"id":"VMET", "name": "Viamet Pharmaceuticals Corp. (VMET)"},
+  {"id":"VMG.AX", "name": "VDM GROUP LIMITED (VMG.AX)"},
+  {"id":"VML.AX", "name": "VITAL METALS LIMITED (VML.AX)"},
+  {"id":"VMS.AX", "name": "VENTURE MINERALS LIMITED (VMS.AX)"},
+  {"id":"VMT.AX", "name": "VMOTO LIMITED (VMT.AX)"},
+  {"id":"VMX.AX", "name": "VALMEC LIMITED (VMX.AX)"},
+  {"id":"VMY.AX", "name": "VIMY RESOURCES LIMITED (VMY.AX)"},
+  {"id":"VNDA", "name": "Vanda Pharmaceuticals Inc. (VNDA)"},
+  {"id":"VNET", "name": "21Vianet Group, Inc. (VNET)"},
+  {"id":"VNOM", "name": "Viper Energy Partners LP (VNOM)"},
+  {"id":"VNQI", "name": "Vanguard Global ex-U.S. Real Estate ETF (VNQI)"},
+  {"id":"VOC.AX", "name": "VOCUS GROUP LIMITED (VOC.AX)"},
+  {"id":"VOD", "name": "Vodafone Group Plc (VOD)"},
+  {"id":"VONE", "name": "Vanguard Russell 1000 ETF (VONE)"},
+  {"id":"VONG", "name": "Vanguard Russell 1000 Growth ETF (VONG)"},
+  {"id":"VONV", "name": "Vanguard Russell 1000 Value ETF (VONV)"},
+  {"id":"VOXX", "name": "VOXX International Corporation (VOXX)"},
+  {"id":"VP7.AX", "name": "VELOCITY PROPERTY GROUP LIMITED (VP7.AX)"},
+  {"id":"VPC.AX", "name": "VELPIC LIMITED (VPC.AX)"},
+  {"id":"VRA", "name": "Vera Bradley, Inc. (VRA)"},
+  {"id":"VRAY", "name": "ViewRay, Inc. (VRAY)"},
+  {"id":"VRC.AX", "name": "VOLT RESOURCES LIMITED (VRC.AX)"},
+  {"id":"VREX", "name": "Varex Imaging Corporation (VREX)"},
+  {"id":"VRI.AX", "name": "VERILUMA LIMITED (VRI.AX)"},
+  {"id":"VRIG", "name": "PowerShares Variable Rate Investment Grade Portfolio (VRIG)"},
+  {"id":"VRL.AX", "name": "VILLAGE ROADSHOW LIMITED (VRL.AX)"},
+  {"id":"VRM.AX", "name": "VERDANT MINERALS LTD (VRM.AX)"},
+  {"id":"VRML", "name": "Vermillion, Inc. (VRML)"},
+  {"id":"VRNS", "name": "Varonis Systems, Inc. (VRNS)"},
+  {"id":"VRNT", "name": "Verint Systems Inc. (VRNT)"},
+  {"id":"VRS.AX", "name": "VERIS LIMITED (VRS.AX)"},
+  {"id":"VRSK", "name": "Verisk Analytics, Inc. (VRSK)"},
+  {"id":"VRSN", "name": "VeriSign, Inc. (VRSN)"},
+  {"id":"VRT.AX", "name": "VIRTUS HEALTH LIMITED (VRT.AX)"},
+  {"id":"VRTS", "name": "Virtus Investment Partners, Inc. (VRTS)"},
+  {"id":"VRTSP", "name": "Virtus Investment Partners, Inc. (VRTSP)"},
+  {"id":"VRTU", "name": "Virtusa Corporation (VRTU)"},
+  {"id":"VRTX", "name": "Vertex Pharmaceuticals Incorporated (VRTX)"},
+  {"id":"VRX.AX", "name": "VENTNOR RESOURCES LTD (VRX.AX)"},
+  {"id":"VSAR", "name": "Versartis, Inc. (VSAR)"},
+  {"id":"VSAT", "name": "ViaSat, Inc. (VSAT)"},
+  {"id":"VSC.AX", "name": "VITA LIFE SCIENCES LIMITED. (VSC.AX)"},
+  {"id":"VSEC", "name": "VSE Corporation (VSEC)"},
+  {"id":"VSTM", "name": "Verastem, Inc. (VSTM)"},
+  {"id":"VTG.AX", "name": "VITA GROUP LIMITED (VTG.AX)"},
+  {"id":"VTGN", "name": "VistaGen Therapeutics, Inc. (VTGN)"},
+  {"id":"VTHR", "name": "Vanguard Russell 3000 ETF (VTHR)"},
+  {"id":"VTI.AX", "name": "VISIONEERING TECHNOLOGIES, INC. (VTI.AX)"},
+  {"id":"VTIP", "name": "Vanguard Short-Term Inflation-Protected Securities Index Fund (VTIP)"},
+  {"id":"VTL", "name": "Vital Therapies, Inc. (VTL)"},
+  {"id":"VTNR", "name": "Vertex Energy, Inc (VTNR)"},
+  {"id":"VTVT", "name": "vTv Therapeutics Inc. (VTVT)"},
+  {"id":"VTWG", "name": "Vanguard Russell 2000 Growth ETF (VTWG)"},
+  {"id":"VTWO", "name": "Vanguard Russell 2000 ETF (VTWO)"},
+  {"id":"VTWV", "name": "Vanguard Russell 2000 Value ETF (VTWV)"},
+  {"id":"VUSE", "name": "Vident Core US Equity ETF (VUSE)"},
+  {"id":"VUZI", "name": "Vuzix Corporation (VUZI)"},
+  {"id":"VVPR", "name": "VivoPower International PLC (VVPR)"},
+  {"id":"VVR.AX", "name": "VIVA ENERGY REIT (VVR.AX)"},
+  {"id":"VVUS", "name": "VIVUS, Inc. (VVUS)"},
+  {"id":"VWOB", "name": "Vanguard Emerging Markets Government Bond ETF (VWOB)"},
+  {"id":"VWR", "name": "VWR Corporation (VWR)"},
+  {"id":"VXL.AX", "name": "VALENCE INDUSTRIES LIMITED (VXL.AX)"},
+  {"id":"VXR.AX", "name": "VENTUREX RESOURCES LIMITED (VXR.AX)"},
+  {"id":"VXUS", "name": "Vanguard Total International Stock ETF (VXUS)"},
+  {"id":"VYGR", "name": "Voyager Therapeutics, Inc. (VYGR)"},
+  {"id":"VYMI", "name": "Vanguard International High Dividend Yield ETF (VYMI)"},
+  {"id":"WAA.AX", "name": "WAM ACTIVE LIMITED (WAA.AX)"},
+  {"id":"WABC", "name": "Westamerica Bancorporation (WABC)"},
+  {"id":"WAF.AX", "name": "WEST AFRICAN RESOURCES LIMITED (WAF.AX)"},
+  {"id":"WAFD", "name": "Washington Federal, Inc. (WAFD)"},
+  {"id":"WAFDW", "name": "Washington Federal, Inc. (WAFDW)"},
+  {"id":"WAK.AX", "name": "WAKENBY LIMITED (WAK.AX)"},
+  {"id":"WAL.AX", "name": "WAVENET INTERNATIONAL LIMITED (WAL.AX)"},
+  {"id":"WAM.AX", "name": "WAM CAPITAL LIMITED (WAM.AX)"},
+  {"id":"WASH", "name": "Washington Trust Bancorp, Inc. (WASH)"},
+  {"id":"WAT.AX", "name": "WATERCO LIMITED (WAT.AX)"},
+  {"id":"WATT", "name": "Energous Corporation (WATT)"},
+  {"id":"WAX.AX", "name": "WAM RESEARCH LIMITED (WAX.AX)"},
+  {"id":"WAYN", "name": "Wayne Savings Bancshares Inc. (WAYN)"},
+  {"id":"WB", "name": "Weibo Corporation (WB)"},
+  {"id":"WBA", "name": "Walgreens Boots Alliance, Inc. (WBA)"},
+  {"id":"WBA.AX", "name": "WEBSTER LIMITED (WBA.AX)"},
+  {"id":"WBB", "name": "Westbury Bancorp, Inc. (WBB)"},
+  {"id":"WBC.AX", "name": "WESTPAC BANKING CORPORATION (WBC.AX)"},
+  {"id":"WBKC", "name": "Wolverine Bancorp, Inc. (WBKC)"},
+  {"id":"WBMD", "name": "WebMD Health Corp (WBMD)"},
+  {"id":"WBT.AX", "name": "WEEBIT NANO LTD (WBT.AX)"},
+  {"id":"WCFB", "name": "WCF Bancorp, Inc. (WCFB)"},
+  {"id":"WCN.AX", "name": "WHITE CLIFF MINERALS LIMITED (WCN.AX)"},
+  {"id":"WCP.AX", "name": "WCP RESOURCES LIMITED (WCP.AX)"},
+  {"id":"WCST", "name": "Wecast Network, Inc. (WCST)"},
+  {"id":"WDC", "name": "Western Digital Corporation (WDC)"},
+  {"id":"WDE.AX", "name": "WEALTH DEFENDER EQUITIES LIMITED (WDE.AX)"},
+  {"id":"WDFC", "name": "WD-40 Company (WDFC)"},
+  {"id":"WEB", "name": "Web.com Group, Inc. (WEB)"},
+  {"id":"WEB.AX", "name": "WEBJET LIMITED (WEB.AX)"},
+  {"id":"WEBK", "name": "Wellesley Bancorp, Inc. (WEBK)"},
+  {"id":"WEC.AX", "name": "WHITE ENERGY COMPANY LIMITED (WEC.AX)"},
+  {"id":"WEF.AX", "name": "WEA FINANCE LLC AND WESTFIELD UK & EUROPE FINANCE PLC (WEF.AX)"},
+  {"id":"WEJ.AX", "name": "SERIES 2015-1 WST TRUST (WEJ.AX)"},
+  {"id":"WEK.AX", "name": "SERIES 2014-2 WST TRUST (WEK.AX)"},
+  {"id":"WEL.AX", "name": "WINCHESTER ENERGY LTD (WEL.AX)"},
+  {"id":"WEN", "name": "Wendy&#39;s Company (The) (WEN)"},
+  {"id":"WERN", "name": "Werner Enterprises, Inc. (WERN)"},
+  {"id":"WES.AX", "name": "WESFARMERS LIMITED (WES.AX)"},
+  {"id":"WETF", "name": "WisdomTree Investments, Inc. (WETF)"},
+  {"id":"WEYS", "name": "Weyco Group, Inc. (WEYS)"},
+  {"id":"WFBI", "name": "WashingtonFirst Bankshares Inc (WFBI)"},
+  {"id":"WFD.AX", "name": "WESTFIELD CORPORATION (WFD.AX)"},
+  {"id":"WFE.AX", "name": "WINMAR RESOURCES LIMITED (WFE.AX)"},
+  {"id":"WFM", "name": "Whole Foods Market, Inc. (WFM)"},
+  {"id":"WGF.AX", "name": "WATERMARK GLOBAL LEADERS FUND LIMITED (WGF.AX)"},
+  {"id":"WGL.AX", "name": "WANGLE TECHNOLOGIES LIMITED (WGL.AX)"},
+  {"id":"WGO.AX", "name": "WARATAH RESOURCES LIMITED (WGO.AX)"},
+  {"id":"WGX.AX", "name": "WESTGOLD RESOURCES LIMITED. (WGX.AX)"},
+  {"id":"WHA.AX", "name": "WATTLE HEALTH AUSTRALIA LIMITED (WHA.AX)"},
+  {"id":"WHC.AX", "name": "WHITEHAVEN COAL LIMITED (WHC.AX)"},
+  {"id":"WHF", "name": "WhiteHorse Finance, Inc. (WHF)"},
+  {"id":"WHF.AX", "name": "WHITEFIELD LIMITED (WHF.AX)"},
+  {"id":"WHFBL", "name": "WhiteHorse Finance, Inc. (WHFBL)"},
+  {"id":"WHLM", "name": "Wilhelmina International, Inc. (WHLM)"},
+  {"id":"WHLR", "name": "Wheeler Real Estate Investment Trust, Inc. (WHLR)"},
+  {"id":"WHLRD", "name": "Wheeler Real Estate Investment Trust, Inc. (WHLRD)"},
+  {"id":"WHLRP", "name": "Wheeler Real Estate Investment Trust, Inc. (WHLRP)"},
+  {"id":"WHLRW", "name": "Wheeler Real Estate Investment Trust, Inc. (WHLRW)"},
+  {"id":"WIC.AX", "name": "WESTOZ INVESTMENT COMPANY LIMITED (WIC.AX)"},
+  {"id":"WIFI", "name": "Boingo Wireless, Inc. (WIFI)"},
+  {"id":"WILC", "name": "G. Willi-Food International,  Ltd. (WILC)"},
+  {"id":"WILN", "name": "Wi-LAN Inc (WILN)"},
+  {"id":"WIN", "name": "Windstream Holdings, Inc. (WIN)"},
+  {"id":"WINA", "name": "Winmark Corporation (WINA)"},
+  {"id":"WING", "name": "Wingstop Inc. (WING)"},
+  {"id":"WINS", "name": "Wins Finance Holdings Inc. (WINS)"},
+  {"id":"WINT", "name": "Windtree Therapeutics, Inc. (WINT)"},
+  {"id":"WIRE", "name": "Encore Wire Corporation (WIRE)"},
+  {"id":"WIX", "name": "Wix.com Ltd. (WIX)"},
+  {"id":"WKHS", "name": "Workhorse Group, Inc. (WKHS)"},
+  {"id":"WKT.AX", "name": "WALKABOUT RESOURCES LTD (WKT.AX)"},
+  {"id":"WLB", "name": "Westmoreland Coal Company (WLB)"},
+  {"id":"WLC.AX", "name": "WOLLONGONG COAL LIMITED (WLC.AX)"},
+  {"id":"WLD.AX", "name": "WELLARD LIMITED (WLD.AX)"},
+  {"id":"WLDN", "name": "Willdan Group, Inc. (WLDN)"},
+  {"id":"WLE.AX", "name": "WAM LEADERS LIMITED (WLE.AX)"},
+  {"id":"WLF.AX", "name": "WOLF MINERALS LIMITED (WLF.AX)"},
+  {"id":"WLFC", "name": "Willis Lease Finance Corporation (WLFC)"},
+  {"id":"WLL.AX", "name": "WELLCOM GROUP LIMITED (WLL.AX)"},
+  {"id":"WLTW", "name": "Willis Towers Watson Public Limited Company (WLTW)"},
+  {"id":"WMAR", "name": "West Marine, Inc. (WMAR)"},
+  {"id":"WMC.AX", "name": "WONHE MULTIMEDIA COMMERCE LTD (WMC.AX)"},
+  {"id":"WMGI", "name": "Wright Medical Group N.V. (WMGI)"},
+  {"id":"WMGIZ", "name": "Wright Medical Group N.V. (WMGIZ)"},
+  {"id":"WMIH", "name": "WMIH Corp. (WMIH)"},
+  {"id":"WMK.AX", "name": "WATERMARK MARKET NEUTRAL FUND LIMITED (WMK.AX)"},
+  {"id":"WMN.AX", "name": "WESTERN MINING NETWORK LIMITED (WMN.AX)"},
+  {"id":"WNEB", "name": "Western New England Bancorp, Inc. (WNEB)"},
+  {"id":"WNFM", "name": "Wayne Farms, Inc. (WNFM)"},
+  {"id":"WNR.AX", "name": "WINGARA AG LTD (WNR.AX)"},
+  {"id":"WNS.AX", "name": "WORLD.NET SERVICES LIMITED (WNS.AX)"},
+  {"id":"WOF.AX", "name": "WOLF PETROLEUM LTD (WOF.AX)"},
+  {"id":"WOOD", "name": "iShares S&P Global Timber & Forestry Index Fund (WOOD)"},
+  {"id":"WOOF", "name": "VCA Inc.  (WOOF)"},
+  {"id":"WOR.AX", "name": "WORLEYPARSONS LIMITED (WOR.AX)"},
+  {"id":"WOW.AX", "name": "WOOLWORTHS LIMITED (WOW.AX)"},
+  {"id":"WPCS", "name": "WPCS International Incorporated (WPCS)"},
+  {"id":"WPG.AX", "name": "WPG RESOURCES LTD (WPG.AX)"},
+  {"id":"WPL.AX", "name": "WOODSIDE PETROLEUM LIMITED (WPL.AX)"},
+  {"id":"WPP.AX", "name": "WPP AUNZ LTD (WPP.AX)"},
+  {"id":"WPPGY", "name": "WPP plc (WPPGY)"},
+  {"id":"WPRT", "name": "Westport Fuel Systems Inc (WPRT)"},
+  {"id":"WQW.AX", "name": "WINHA COMMERCE AND TRADE INTL LIMITED (WQW.AX)"},
+  {"id":"WRG.AX", "name": "WATER RESOURCES GROUP LIMITED (WRG.AX)"},
+  {"id":"WRLD", "name": "World Acceptance Corporation (WRLD)"},
+  {"id":"WRM.AX", "name": "WHITE ROCK MINERALS LIMITED (WRM.AX)"},
+  {"id":"WRR.AX", "name": "WORLD REACH LIMITED (WRR.AX)"},
+  {"id":"WSA.AX", "name": "WESTERN AREAS LIMITED (WSA.AX)"},
+  {"id":"WSBC", "name": "WesBanco, Inc. (WSBC)"},
+  {"id":"WSBF", "name": "Waterstone Financial, Inc. (WSBF)"},
+  {"id":"WSC.AX", "name": "SERIES 2009-1 WST TRUST (WSC.AX)"},
+  {"id":"WSCI", "name": "WSI Industries Inc. (WSCI)"},
+  {"id":"WSD.AX", "name": "SERIES 2013-2 WST TRUST (WSD.AX)"},
+  {"id":"WSFS", "name": "WSFS Financial Corporation (WSFS)"},
+  {"id":"WSFSL", "name": "WSFS Financial Corporation (WSFSL)"},
+  {"id":"WSG.AX", "name": "WOLFSTRIKE RENTALS GROUP LIMITED (WSG.AX)"},
+  {"id":"WSH.AX", "name": "SERIES 2011-1 WST TRUST (WSH.AX)"},
+  {"id":"WSI.AX", "name": "WESTSTAR INDUSTRIAL LIMITED (WSI.AX)"},
+  {"id":"WSJ.AX", "name": "SERIES 2011-2 WST TRUST (WSJ.AX)"},
+  {"id":"WSN.AX", "name": "SERIES 2011-3 WST TRUST (WSN.AX)"},
+  {"id":"WSO.AX", "name": "SERIES 2012-1 WST TRUST (WSO.AX)"},
+  {"id":"WSQ.AX", "name": "SERIES 2013-1 WST TRUST (WSQ.AX)"},
+  {"id":"WSTC", "name": "West Corporation (WSTC)"},
+  {"id":"WSTG", "name": "Wayside Technology Group, Inc. (WSTG)"},
+  {"id":"WSTL", "name": "Westell Technologies, Inc. (WSTL)"},
+  {"id":"WSZ.AX", "name": "SERIES 2014-1 WST TRUST (WSZ.AX)"},
+  {"id":"WTBA", "name": "West Bancorporation (WTBA)"},
+  {"id":"WTC.AX", "name": "WISETECH GLOBAL LIMITED (WTC.AX)"},
+  {"id":"WTFC", "name": "Wintrust Financial Corporation (WTFC)"},
+  {"id":"WTFCM", "name": "Wintrust Financial Corporation (WTFCM)"},
+  {"id":"WTFCW", "name": "Wintrust Financial Corporation (WTFCW)"},
+  {"id":"WTP.AX", "name": "WATPAC LIMITED (WTP.AX)"},
+  {"id":"WVE", "name": "WAVE Life Sciences Ltd. (WVE)"},
+  {"id":"WVFC", "name": "WVS Financial Corp. (WVFC)"},
+  {"id":"WVVI", "name": "Willamette Valley Vineyards, Inc. (WVVI)"},
+  {"id":"WVVIP", "name": "Willamette Valley Vineyards, Inc. (WVVIP)"},
+  {"id":"WWD", "name": "Woodward, Inc. (WWD)"},
+  {"id":"WWI.AX", "name": "WEST WITS MINING LIMITED (WWI.AX)"},
+  {"id":"WYIG", "name": "JM Global Holding Company (WYIG)"},
+  {"id":"WYIGU", "name": "JM Global Holding Company (WYIGU)"},
+  {"id":"WYIGW", "name": "JM Global Holding Company (WYIGW)"},
+  {"id":"WYNN", "name": "Wynn Resorts, Limited (WYNN)"},
+  {"id":"XAM.AX", "name": "XANADU MINES LTD (XAM.AX)"},
+  {"id":"XBIO", "name": "Xenetic Biosciences, Inc. (XBIO)"},
+  {"id":"XBIT", "name": "XBiotech Inc. (XBIT)"},
+  {"id":"XBKS", "name": "Xenith Bankshares, Inc. (XBKS)"},
+  {"id":"XCL.AX", "name": "AUSTRALIAN COMMONWEALTH GOVERNMENT LOANS (XCL.AX)"},
+  {"id":"XCRA", "name": "Xcerra Corporation (XCRA)"},
+  {"id":"XELB", "name": "Xcel Brands, Inc (XELB)"},
+  {"id":"XENE", "name": "Xenon Pharmaceuticals Inc. (XENE)"},
+  {"id":"XENT", "name": "Intersect ENT, Inc. (XENT)"},
+  {"id":"XF1.AX", "name": "XREF LIMITED (XF1.AX)"},
+  {"id":"XGTI", "name": "XG Technology, Inc (XGTI)"},
+  {"id":"XGTIW", "name": "XG Technology, Inc (XGTIW)"},
+  {"id":"XIP.AX", "name": "XENITH IP GROUP LIMITED (XIP.AX)"},
+  {"id":"XIV", "name": "VelocityShares Daily Inverse VIX Short Term ETN (XIV)"},
+  {"id":"XLNX", "name": "Xilinx, Inc. (XLNX)"},
+  {"id":"XLRN", "name": "Acceleron Pharma Inc. (XLRN)"},
+  {"id":"XNCR", "name": "Xencor, Inc. (XNCR)"},
+  {"id":"XNET", "name": "Xunlei Limited (XNET)"},
+  {"id":"XOG", "name": "Extraction Oil & Gas, Inc. (XOG)"},
+  {"id":"XOMA", "name": "XOMA Corporation (XOMA)"},
+  {"id":"XONE", "name": "The ExOne Company (XONE)"},
+  {"id":"XPD.AX", "name": "XPD SOCCER GEAR GROUP LIMITED (XPD.AX)"},
+  {"id":"XPE.AX", "name": "XPED LIMITED (XPE.AX)"},
+  {"id":"XPER", "name": "Xperi Corporation (XPER)"},
+  {"id":"XPLR", "name": "Xplore Technologies Corp (XPLR)"},
+  {"id":"XQL.AX", "name": "QUEENSLAND TREASURY CORPORATION (XQL.AX)"},
+  {"id":"XRAY", "name": "DENTSPLY SIRONA Inc. (XRAY)"},
+  {"id":"XRDC", "name": "Crossroads Capital, Inc. (XRDC)"},
+  {"id":"XRF.AX", "name": "XRF SCIENTIFIC LIMITED (XRF.AX)"},
+  {"id":"XRO.AX", "name": "XERO LIMITED (XRO.AX)"},
+  {"id":"XST.AX", "name": "XSTATE RESOURCES LIMITED (XST.AX)"},
+  {"id":"XTD.AX", "name": "XTD LTD (XTD.AX)"},
+  {"id":"XTE.AX", "name": "XTEK LIMITED. (XTE.AX)"},
+  {"id":"XTLB", "name": "XTL Biopharmaceuticals Ltd. (XTLB)"},
+  {"id":"XTV.AX", "name": "XTV NETWORKS LTD (XTV.AX)"},
+  {"id":"XVG.AX", "name": "TREASURY CORPORATION OF VICTORIA (XVG.AX)"},
+  {"id":"XXIA", "name": "Ixia (XXIA)"},
+  {"id":"YAL.AX", "name": "YANCOAL AUSTRALIA LIMITED (YAL.AX)"},
+  {"id":"YBR.AX", "name": "YELLOW BRICK ROAD HOLDINGS LIMITED (YBR.AX)"},
+  {"id":"YCN.AX", "name": "YANCOAL SCN LIMITED (YCN.AX)"},
+  {"id":"YDIV", "name": "First Trust International Multi-Asset Diversified Income Index (YDIV)"},
+  {"id":"YECO", "name": "Yulong Eco-Materials Limited (YECO)"},
+  {"id":"YHL.AX", "name": "YANGHAO INTERNATIONAL LIMITED (YHL.AX)"},
+  {"id":"YHOO", "name": "Yahoo! Inc. (YHOO)"},
+  {"id":"YIN", "name": "Yintech Investment Holdings Limited (YIN)"},
+  {"id":"YLCO", "name": "Global X Yieldco Index ETF (YLCO)"},
+  {"id":"YNB.AX", "name": "YONDER AND BEYOND GROUP LIMITED (YNB.AX)"},
+  {"id":"YNDX", "name": "Yandex N.V. (YNDX)"},
+  {"id":"YOJ.AX", "name": "YOJEE LIMITED (YOJ.AX)"},
+  {"id":"YORW", "name": "The York Water Company (YORW)"},
+  {"id":"YOW.AX", "name": "YOWIE GROUP LTD (YOW.AX)"},
+  {"id":"YPB.AX", "name": "YPB GROUP LTD (YPB.AX)"},
+  {"id":"YRCW", "name": "YRC Worldwide, Inc. (YRCW)"},
+  {"id":"YTEN", "name": "Yield10 Bioscience, Inc. (YTEN)"},
+  {"id":"YTRA", "name": "Yatra Online, Inc. (YTRA)"},
+  {"id":"YY", "name": "YY Inc. (YY)"},
+  {"id":"Z", "name": "Zillow Group, Inc. (Z)"},
+  {"id":"ZAGG", "name": "ZAGG Inc (ZAGG)"},
+  {"id":"ZAIS", "name": "ZAIS Group Holdings, Inc. (ZAIS)"},
+  {"id":"ZAM.AX", "name": "ZAMANCO MINERALS LIMITED (ZAM.AX)"},
+  {"id":"ZBIO", "name": "ProShares UltraPro Short NASDAQ Biotechnology (ZBIO)"},
+  {"id":"ZBRA", "name": "Zebra Technologies Corporation (ZBRA)"},
+  {"id":"ZEL.AX", "name": "Z ENERGY LIMITED. (ZEL.AX)"},
+  {"id":"ZER.AX", "name": "ZETA RESOURCES LIMITED (ZER.AX)"},
+  {"id":"ZEU.AX", "name": "ZEUS RESOURCES LIMITED (ZEU.AX)"},
+  {"id":"ZEUS", "name": "Olympic Steel, Inc. (ZEUS)"},
+  {"id":"ZFGN", "name": "Zafgen, Inc. (ZFGN)"},
+  {"id":"ZG", "name": "Zillow Group, Inc. (ZG)"},
+  {"id":"ZGL.AX", "name": "ZICOM GROUP LIMITED (ZGL.AX)"},
+  {"id":"ZGM.AX", "name": "ZAMIA METALS LIMITED (ZGM.AX)"},
+  {"id":"ZGNX", "name": "Zogenix, Inc. (ZGNX)"},
+  {"id":"ZIM.AX", "name": "ZIMPLATS HOLDINGS LIMITED (ZIM.AX)"},
+  {"id":"ZION", "name": "Zions Bancorporation (ZION)"},
+  {"id":"ZIONW", "name": "Zions Bancorporation (ZIONW)"},
+  {"id":"ZIONZ", "name": "Zions Bancorporation (ZIONZ)"},
+  {"id":"ZIOP", "name": "ZIOPHARM Oncology Inc (ZIOP)"},
+  {"id":"ZIP.AX", "name": "ZIPTEL LIMITED (ZIP.AX)"},
+  {"id":"ZIV", "name": "VelocityShares Daily Inverse VIX Medium Term ETN (ZIV)"},
+  {"id":"ZIXI", "name": "Zix Corporation (ZIXI)"},
+  {"id":"ZLD.AX", "name": "ZELDA THERAPEUTICS LIMITED (ZLD.AX)"},
+  {"id":"ZLTQ", "name": "ZELTIQ Aesthetics, Inc. (ZLTQ)"},
+  {"id":"ZMI.AX", "name": "ZINC OF IRELAND NL (ZMI.AX)"},
+  {"id":"ZML.AX", "name": "ZIPMONEY LTD (ZML.AX)"},
+  {"id":"ZN", "name": "Zion Oil & Gas Inc (ZN)"},
+  {"id":"ZNC.AX", "name": "ZENITH MINERALS LIMITED (ZNC.AX)"},
+  {"id":"ZNGA", "name": "Zynga Inc. (ZNGA)"},
+  {"id":"ZNT.AX", "name": "ZENITAS HEALTHCARE LIMITED (ZNT.AX)"},
+  {"id":"ZNWAA", "name": "Zion Oil & Gas Inc (ZNWAA)"},
+  {"id":"ZSAN", "name": "Zosano Pharma Corporation (ZSAN)"},
+  {"id":"ZTA.AX", "name": "ZETA PETROLEUM PLC (ZTA.AX)"},
+  {"id":"ZUMZ", "name": "Zumiez Inc. (ZUMZ)"},
+  {"id":"ZYB.AX", "name": "ZYBER HOLDINGS LTD (ZYB.AX)"},
+  {"id":"ZYNE", "name": "Zynerba Pharmaceuticals, Inc. (ZYNE)"},
   ]
 });

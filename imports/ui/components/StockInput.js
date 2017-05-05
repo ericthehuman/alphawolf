@@ -1,9 +1,9 @@
 import React from 'react';
 
-const StockInput = React.createClass({
+const StockInput extends React.Component ({
   render() {
     return (
-      
+
     )
   }
 })

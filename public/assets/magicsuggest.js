@@ -1072,7 +1072,7 @@
                 if(cfg.selectionPosition === 'inner' && !cfg.selectionContainer) {
                     ms.input.width(0);
                     inputOffset = ms.input.offset().left - ms.selectionContainer.offset().left;
-                    w = ms.container.width() - inputOffset - 42;
+                    w = ms.container.width() - inputOffset;
                     ms.input.width(w);
                 }
 

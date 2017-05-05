@@ -1,4 +1,9 @@
 $('#magicsuggest').magicSuggest({
+  allowFreeEntries: false,
+  hideTrigger: true,
+  maxSelection: 2,
+  placeholder: 'Add new stock (max. 2 per search)',
+  cls: 'main-input',
   data: [{"id":"1AD.AX", "name": "ADALTA LIMITED (1AD.AX)"},
   {"id":"1AG.AX", "name": "ALTERRA LIMITED (1AG.AX)"},
   {"id":"1AL.AX", "name": "ONEALL INTERNATIONAL LIMITED (1AL.AX)"},

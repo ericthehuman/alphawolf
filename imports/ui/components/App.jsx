@@ -2,12 +2,13 @@ import React, { Component, PropTypes } from 'react';
 import { Meteor } from 'meteor/meteor';
 import { HTTP } from 'meteor/http';
 import { createContainer } from 'meteor/react-meteor-data';
-import { Data, Companies, Stocks, SelectedStock } from '../api/data.js';
+import { Data, Companies, Stocks, SelectedStock } from '../../api/data.js';
 import Tile from './Tile.jsx';
 import Button from './Button.jsx';
 //import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend} from 'recharts';
 import ReactDOM from 'react-dom';
 import { ReactiveVar } from 'meteor/reactive-var';
+import { Button as BSButton, Form, FormControl, FormGroup, Nav, NavItem  } from 'react-bootstrap';
 
 
 
@@ -20,10 +21,12 @@ constructor(props){
   super(props);
   this.handleOptionChange = this.handleOptionChange.bind(this);
   this.handleSubmit = this.handleSubmit.bind(this);
+  this.addStock = this.addStock.bind(this);
   this.state = {
     selected: "",
     submitted: false,
   };
+
 }
 
 parseDataIntoGraph(result){
@@ -62,26 +65,6 @@ renderTile() {
   }
 
 }
-/*
-
-  renderData() {
-
-    console.log(this.props.ddata[0]);
-    if(this.props.ddata[0] != undefined){
-      return this.props.ddata[0].content;
-    }
-
-  }
-
-
-  renderData() {
-
-    console.log(this.props.selectedStock[0]);
-    if(this.props.ddata[0] != undefined){
-      return this.props.ddata[0].content;
-    }
-
-  }*/
 
 handleOptionChange(eventChange) {
 
@@ -142,7 +125,7 @@ renderStocks() {
     ));
 }
 
-
+// Old submit
 handleSubmit(event){
   event.preventDefault();
   const text = ReactDOM.findDOMNode(this.refs.textInput).value.trim();
@@ -156,30 +139,25 @@ handleSubmit(event){
 
 }
 
-/*
-handleSubmit(event){
-  event.preventDefault();
-  this.setState({
-    submitted: true,
-  });
-  Meteor.call('getData', this.state.selected, function(error, result){
-    if(error){
-      console.log(error);
-    }else{
-      //a heap of console.logs to debug
-      console.log(result.content);
-      var obj = JSON.parse(result.content);
-      var cum_return = obj.CompanyReturns[0].Data[7].CM_Return;
-      var ave_return = obj.CompanyReturns[0].Data[7].AV_Return;
-      var ave_ret_rounded = cum_return.toFixed(4);
-      console.log(cum_return.toFixed(4));
-      console.log(ave_ret_rounded);
+// New submit
+addStock() {
+  var newCompanies = JSON.parse(this.refs.inputVal.value);
+  console.log(newCompanies);
+  for (var i = 0; i < newCompanies.length; i++) {
+    var codeRegex = /\((.*)\)$/;
+    var companyName = newCompanies[i];
+    var companyCode = codeRegex.exec(companyName);
+    companyName.replace(/ \(.*\)$/, "");
+    console.log(companyName);
+    Stocks.insert({
+      name: companyName,
+      code: companyCode[1]
+    });
+    console.log("Stock added");
+  }
 
-      Data.update(1, {$set: {content: JSON.stringify(ave_ret_rounded)}});
-    }
-  })
+  this.forceUpdate();
 }
-*/
 
 //we can populate the radio button selection with a function later
 
@@ -196,14 +174,24 @@ handleSubmit(event){
           Choose a company from the list below to look at relevant statistics
         </div>
 */}
+
+        <Form inline id="stockInputForm">
+          <input id="magicsuggest"/>
+          {' '}
+          <BSButton bsStyle="success" onClick={ this.addStock } id="addBtn">Add</BSButton>
+          <input type="hidden" ref="inputVal" id="inputVal"/>
+        </Form>
+{/*
         <form>
           <input type="text" ref="textInput" className="searchBar" placeholder="Search for a company or keyword"/>
         </form>
+
 
         <form onSubmit={this.handleSubmit.bind(this)}>
           <input id="submit" type="submit"/>
           <label className="label-for-submit" htmlFor="submit">Add stock</label>
         </form>
+*/}
 
         <form>
 

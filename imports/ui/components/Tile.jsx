@@ -7,7 +7,7 @@ import Item from './Item.jsx';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend} from 'recharts';
 import ReactDOM from 'react-dom';
 
-import { Data, Companies, Stocks, SelectedStock } from '../api/data.js';
+import { Data, Companies, Stocks, SelectedStock } from '../../api/data.js';
 import Button from './Button.jsx';
 //import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend} from 'recharts';
 

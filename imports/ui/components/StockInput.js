@@ -40,7 +40,7 @@ class StockInput extends React.Component {
   render() {
     return (
       <div>
-        <Form inline id="stockInputForm" onChange={ this.refreshVal }>
+        <Form inline id="stockInputForm">
           <input id="magicsuggest"/>
           {' '}
           <Button bsStyle="success" onClick={ this.addStock } id="addBtn">Add</Button>

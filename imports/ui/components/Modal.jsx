@@ -1,13 +1,13 @@
 import React, { Component, PropTypes } from 'react';
 import { Meteor } from 'meteor/meteor';
-import { Data, Companies, Stocks} from '../api/data.js';
+import { Data, Companies, Stocks} from '../../api/data.js';
 
 
 
 export default class Modal extends Component {
 
 	render(){
-	
+
 		if(!this.props.show){
 			return null;
 		}

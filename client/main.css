@@ -49,9 +49,12 @@ header {
 
 
 /*defining style for radio buttons and submit button*/
-
+.radio-image {
+	height: 20px;
+	width: 20px;
+}
 .radio {
-	display: inline-block;
+	display: inline-block !important;
 	margin-right: 10px;
 }
 

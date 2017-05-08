@@ -25,5 +25,15 @@ Meteor.methods({
 				dateOfInterest: "07/4/2017",
 			}
 		});
+	},
+
+	'getNews': function(query) {
+		this.unblock();
+		return HTTP.call('GET', 'https://api.nytimes.com/svc/search/v2/articlesearch.json', {
+			params: {
+				'api-key': '591e19bb7d974693b30e645f3288102d',
+				q: query
+			}
+		});
 	}
 });

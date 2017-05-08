@@ -12,8 +12,7 @@ import Index from '../../ui/pages/Index.js';
 Meteor.startup(() => {
   render(
     <div>
-    <StockInput />
-      <StockButtonList />
+    <StockInput companies={[{companyCode: 'MSFT', companyName: 'Microsoft Corporation'}]}/>
       <Grid>
         <Index />
       </Grid>

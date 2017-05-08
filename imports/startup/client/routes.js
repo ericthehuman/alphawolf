@@ -5,6 +5,7 @@ import { Grid } from 'react-bootstrap';
 import StockInput from '../../ui/components/StockInput.js';
 import StockButtonList from '../../ui/components/StockButtonList.js';
 import Index from '../../ui/pages/Index.js';
+import App from '../../ui/App.jsx';
 
 //main file is here
 
@@ -15,6 +16,7 @@ Meteor.startup(() => {
     <StockInput companies={[{companyCode: 'MSFT', companyName: 'Microsoft Corporation'}]}/>
       <Grid>
         <Index />
+        <App />
       </Grid>
     </div>,
   document.getElementById('react-root'));

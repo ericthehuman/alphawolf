@@ -1,4 +1,4 @@
-import '/imports/startup/server';
+// import '/imports/startup/server';
 import { Meteor } from 'meteor/meteor';
 import { HTTP } from 'meteor/http';
 import { Session } from 'meteor/session';

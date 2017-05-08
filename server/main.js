@@ -2,13 +2,20 @@ import { Meteor } from 'meteor/meteor';
 import { HTTP } from 'meteor/http';
 import { Session } from 'meteor/session';
 import '../imports/api/data.js';
-import { Data } from '../imports/api/data.js';
+import { Data, Stocks, SelectedStock } from '../imports/api/data.js';
+import { ReactiveVar } from 'meteor/reactive-var';
 
 //stuff happening on the server side ... 
 
 Meteor.startup(() => {
   // code to run on server at startup
-    Data.update(1, {$set: {content: null}});
+//    Data.update(1, {$set: {content: null}});
+    Stocks.remove({});
+    Stocks.insert({name: "Home", code: "HOME", data:""})
+    Stocks.insert({name: "Apple", code: "AAPL", data: ""});
+    Stocks.insert({name: "Microsoft", code: "MSFT", data: ""});
+    Stocks.insert({name: "Blackberry", code: "BBRY", data: ""})
+
 
 });
 

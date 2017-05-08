@@ -9,7 +9,6 @@ import App from '../../ui/App.jsx';
 
 //main file is here
 
-
 Meteor.startup(() => {
   render(
     <div>

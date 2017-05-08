@@ -15,7 +15,6 @@ Meteor.startup(() => {
     Stocks.insert({name: "Microsoft", code: "MSFT", data: ""});
     Stocks.insert({name: "Blackberry", code: "BBRY", data: ""})
 
-
 });
 
 Meteor.methods({

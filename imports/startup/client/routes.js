@@ -2,13 +2,15 @@ import React from 'react';
 import { render } from 'react-dom';
 import { Meteor } from 'meteor/meteor';
 import { Grid } from 'react-bootstrap';
+import StockInput from '../../ui/components/StockInput.js';
+import StockButtonList from '../../ui/components/StockButtonList.js';
 import Index from '../../ui/pages/Index.js';
-import AppNavigation from '../../ui/components/AppNavigation.js';
-import { BrowserRouter, Route, browserHistory, IndexRoute } from 'react-router-dom';
 
 Meteor.startup(() => {
   render(
     <div>
+      <StockInput />
+      <StockButtonList companyCode="AAPL" companyName="Apple" />
       <Grid>
         <Index />
       </Grid>

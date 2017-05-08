@@ -5,7 +5,6 @@
 
 body {
 	margin: auto;
-	width: 33%;
 }
 
 /*title*/
@@ -15,7 +14,7 @@ header {
 	margin-top: 0px;
 }
 
-/*info*/ 
+/*info*/
 
 .font {
 	font-family: 'Pavanam', sans-serif;
@@ -97,4 +96,11 @@ header {
 
 label:hover {
 	cursor: pointer;
+}
+
+
+/* add stock input css */
+.main-input {
+	max-width: 500px;
+	min-width: 500px;
 }

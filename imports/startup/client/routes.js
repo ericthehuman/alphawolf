@@ -6,11 +6,14 @@ import StockInput from '../../ui/components/StockInput.js';
 import StockButtonList from '../../ui/components/StockButtonList.js';
 import Index from '../../ui/pages/Index.js';
 
+//main file is here
+
+
 Meteor.startup(() => {
   render(
     <div>
-      <StockInput />
-      <StockButtonList companyCode="AAPL" companyName="Apple" />
+    <StockInput />
+      <StockButtonList />
       <Grid>
         <Index />
       </Grid>

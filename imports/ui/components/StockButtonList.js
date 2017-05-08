@@ -2,6 +2,9 @@ import React from 'react';
 import { Meteor } from 'meteor/meteor';
 import { Button, Nav, NavItem } from 'react-bootstrap';
 
+//this is where the stockbutton do their stuff
+
+
 class StockButtonList extends React.Component {
   constructor(props) {
     super(props);
@@ -29,6 +32,7 @@ class StockButtonList extends React.Component {
         <Nav bsStyle="pills" activeKey={ this.state.selectedKey } onSelect={ this.handleSelect }>
           <NavItem eventKey="Dashboard">Dashboard</NavItem>
           <NavItem eventKey="Test">Test Item</NavItem>
+          //trigger a function here
           <NavItem eventKey="{ this.props.companyCode }">{ this.props.companyCode }</NavItem>
         </Nav>
         <div className={`tabs-data-container ${ this.setActiveClassOnTab( `'{ this.props.companyCode }'` )}`}>

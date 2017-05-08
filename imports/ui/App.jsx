@@ -64,7 +64,7 @@ handleSubmit(event){
   })
 }
 //we can populate the radio button selection with a function later
-
+//this is the part where it graphs stats on the home page
   render() {
     var graphData = [
       {name: 'Page A', cm: 4000, am: 2400, amt: 2400},
@@ -78,6 +78,7 @@ handleSubmit(event){
     return (
       <div className="container">
         <header>
+          <h2> something ugly af </h2>
           <h1>cubs of wall street</h1>
         </header>
         <AccountsUIWrapper />

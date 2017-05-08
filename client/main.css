@@ -104,6 +104,6 @@ label:hover {
 
 /* add stock input css */
 .main-input {
-	max-width: 500px;
-	min-width: 500px;
+	max-width: 600px;
+	min-width: 600px;
 }

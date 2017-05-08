@@ -1,4 +1,4 @@
-$('#magicsuggest').magicSuggest({
+var ms = $('#magicsuggest').magicSuggest({
   allowFreeEntries: false,
   hideTrigger: true,
   maxSelection: 2,
@@ -5397,4 +5397,14 @@ $('#magicsuggest').magicSuggest({
   {"id":"ZYB.AX", "name": "ZYBER HOLDINGS LTD (ZYB.AX)"},
   {"id":"ZYNE", "name": "Zynerba Pharmaceuticals, Inc. (ZYNE)"},
   ]
+});
+
+$(ms).on('selectionchange', function(){
+  var stockString = "";
+  this.getValue().forEach(function(stock) {
+    stockString += stock;
+    stockString += ";";
+  });
+  stockString = stockString.substring(0, stockString.length - 1);
+  $('#inputVal').val(stockString);
 });

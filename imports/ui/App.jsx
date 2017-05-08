@@ -86,26 +86,31 @@ handleSubmit(event){
         </div> 
         <form>
             <div className="radio">
-             
                 <input type="radio" id="AAPL" value="AAPL" onChange={this.handleOptionChange}
                              name="choice" className="radio-with-label" />
-                <label className="label-for-radio button" htmlFor="AAPL"> &nbsp; apple  &nbsp;</label>
+                <label className="label-for-radio button" htmlFor="AAPL">
+                    <img src="https://cdn1.iconfinder.com/data/icons/simple-icons/4096/apple-4096-black.png" className="radio-image" />
+                    &nbsp; Apple (AAPL)  &nbsp;</label>
             </div>
+
             <div className="radio">
-
-
-
                 <input type="radio" id="MSFT" value="MSFT" onChange={this.handleOptionChange}
                               name="choice" className="radio-with-label" />
-                             <label className="label-for-radio button" htmlFor="MSFT"> &nbsp; microsoft  &nbsp;</label>
+                <label className="label-for-radio button" htmlFor="MSFT">
+                <img src="http://www.freeiconspng.com/uploads/microsoft-new-logo-simple-0.png" className="radio-image"/>
+                    &nbsp; Microsoft (MSFT)  &nbsp;
+                </label>
             </div>
+
             <div className="radio">
                 <input type="radio" id="BBRY" value="BBRY" onChange={this.handleOptionChange}
                               name="choice" className="radio-with-label"  />
-                             <label className="label-for-radio button" htmlFor="BBRY"> &nbsp; blackberry  &nbsp;</label>
-
+                <label className="label-for-radio button" htmlFor="BBRY">
+                    <img src="http://simpleicon.com/wp-content/uploads/blackberry.svg" className="radio-image" />
+                    &nbsp; Blackberry (BBRY)  &nbsp;
+                </label>
             </div>
-          </form>
+        </form>
 
 
         <form onSubmit={this.handleSubmit.bind(this)}>
@@ -123,8 +128,6 @@ handleSubmit(event){
        <Line type="monotone" dataKey="am" stroke="#8884d8" activeDot={{r: 8}}/>
        <Line type="monotone" dataKey="cm" stroke="#82ca9d" />
       </LineChart>
-
-
       </div>
     );
   }

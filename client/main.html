@@ -1,41 +1,13 @@
 <head>
-<link rel="icon" sizes="16x16 32x32" href="/favicon.ico?v=2">
-	  <title>Todo List</title>
+  <meta charset="utf-8">
+  <title>Alpha Wolf</title>
+  <meta name="description" content="Test">
+  <meta name="viewport" content="initial-scale=1, minimal-ui, maximum-scale=1, minimum-scale=1" />
+  <!-- <link rel="shortcut icon" type="image/png" href="/favicon.png?v1" sizes="16x16 32x32 64x64">
+  <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-precomposed.png"> -->
 </head>
- 
+
 <body>
-  <div id="render-target"></div>
+  <div id="react-root"></div>
+	<div id="render-target"></div>
 </body>
-<template name="home">
-	{{> navigation}}
-</template>
-
-<template name="register">
-    <h2>Register</h2>
-    <form class="register">
-        <p>Email: <input type="email" name="email"></p>
-        <p>Password: <input type="password" name="password"></p>
-        <p><input type="submit" value="Register"></p>
-    </form>
-</template>
-
-<template name="navigation">
-	<ul>
-	    <li><a href="{{pathFor route='home'}}">Home</a></li>
-	    {{#if currentUser}}
-	        <li><a href="#" class="logout">Logout</a></li>
-	    {{else}}
-	        <li><a href="{{pathFor route='register'}}">Register</a></li>
-	        <li><a href="{{pathFor route='login'}}">Login</a></li>
-	    {{/if}}
-	</ul>
-</template>
-
-<template name="login">
-    <h2>Login</h2>
-    <form class="login">
-        <p>Email: <input type="email" name="email"></p>
-        <p>Password: <input type="password" name="password"></p>
-        <p><input type="submit" value="Login"></p>
-    </form>
-</template>

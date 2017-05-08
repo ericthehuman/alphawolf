@@ -16,6 +16,8 @@ import Button from './Button.jsx';
 
 export default class Tile extends Component {
 
+
+//converts raw api data into structure the graph component uses
 parseDataIntoGraph(result){
   if(result != null){
 	  var array = result.data.CompanyReturns[0].Data;
@@ -33,9 +35,10 @@ parseDataIntoGraph(result){
 	  console.log(data);
 	  return data;
 	}
-
-
 }
+
+
+	//renders a whole bunch of stats for the user
 	render() {
 		console.log("Tile rendered");
 

@@ -9,7 +9,6 @@ import AccountsUIWrapper from './AccountsUIWrapper.jsx';
 
 // App component - represents the whole app
 class App extends Component {
-
     constructor(props){
         super(props);
         this.handleOptionChange = this.handleOptionChange.bind(this);
@@ -18,6 +17,7 @@ class App extends Component {
             selected: "",
             submitted: false,
         };
+        this.testString = "test";
     }
 
     renderData() {
@@ -27,9 +27,6 @@ class App extends Component {
         if(this.props.ddata[0] != undefined){
             return this.props.ddata[0].content;
         }
-//    return this.props.ddata.map((n) =>(
-//    'content:' + n.content
-        //  ));
     }
 
     handleOptionChange(changeEvent) {
@@ -37,8 +34,6 @@ class App extends Component {
             selected: changeEvent.currentTarget.value
         });
     }
-
-
 
     handleSubmit(event){
         event.preventDefault();
@@ -49,7 +44,7 @@ class App extends Component {
         Meteor.call('getData', this.state.selected, function(error, result){
             if(error){
                 console.log(error);
-            }else{
+            } else{
                 //a heap of console.logs to debug
                 //console.log(result.content);
                 var obj = JSON.parse(result.content);
@@ -73,6 +68,26 @@ class App extends Component {
                 console.log(error);
             } else {
                 console.log(result.content);
+
+                var content = EJSON.parse(result.content);
+                //var doc = EJSON.parse(content["response"]);
+                //for (doc in content["response"]) {
+                    console.log((content["response"])["docs"]);
+                var docs = (content["response"])["docs"];
+                console.log(docs);
+                
+                for (const key of Object.keys(docs)) {
+                    console.log(docs[key]);
+                    // want to print abstract
+                    console.log((docs[key])["snippet"]);
+                }
+                //}
+                this.testString = "hello world";
+                console.log(content);
+                /*for(doc in content){
+                    console.log('inserting', doc);
+                    //Cities.insert({country: country, cities: content[country]});
+                }*/
             }
         });
     }
@@ -80,13 +95,13 @@ class App extends Component {
 
     render() {
         var graphData = [
-            {name: 'Page A', cm: 4000, am: 2400, amt: 2400},
-            {name: 'Page B', cm: 3000, am: 1398, amt: 2210},
-            {name: 'Page C', cm: 2000, am: 9800, amt: 2290},
-            {name: 'Page D', cm: 2780, am: 3908, amt: 2000},
-            {name: 'Page E', cm: 1890, am: 4800, amt: 2181},
-            {name: 'Page F', cm: 2390, am: 3800, amt: 2500},
-            {name: 'Page G', cm: 3490, am: 4300, amt: 2100},
+            {name: 'Page A', cm: 4000, am: 2400},
+            {name: 'Page B', cm: 3000, am: 1398},
+            {name: 'Page C', cm: 2000, am: 9800},
+            {name: 'Page D', cm: 2780, am: 3908},
+            {name: 'Page E', cm: 1890, am: 4800},
+            {name: 'Page F', cm: 2390, am: 3800},
+            {name: 'Page G', cm: 3490, am: 4300},
         ];
         return (
             <div className="container">
@@ -95,23 +110,7 @@ class App extends Component {
                 </header>
                 <AccountsUIWrapper />
                 <div className="info font">
-                    Choose a company from the list below to look at relevant statistics
-                </div>
-                <form>
-                    <div className="radio">
-
-                        <input type="radio" id="AAPL" value="AAPL" onChange={this.handleOptionChange}
-                               name="choice" className="radio-with-label" />
-                        <label className="label-for-radio button" htmlFor="AAPL"> &nbsp; apple  &nbsp;</label>
-                    </div>
-                    <div className="radio">
-
-
-
-                        <input type="radio" id="MSFT" value="MSFT" onChange={this.handleOptionChange}
-                               name="choice" className="radio-with-label" />
-                        <label className="label-for-radio button" htmlFor="MSFT"> &nbsp; microsoft  &nbsp;</label>
-                    </div>
+                    Choose a company from the list below to look at relevant statistics </div> <form> <div className="radio"> <input type="radio" id="AAPL" value="AAPL" onChange={this.handleOptionChange} name="choice" className="radio-with-label" /> <label className="label-for-radio button" htmlFor="AAPL"> &nbsp; apple  &nbsp;</label> </div> <div className="radio"> <input type="radio" id="MSFT" value="MSFT" onChange={this.handleOptionChange} name="choice" className="radio-with-label" /> <label className="label-for-radio button" htmlFor="MSFT"> &nbsp; microsoft  &nbsp;</label> </div>
                     <div className="radio">
                         <input type="radio" id="BBRY" value="BBRY" onChange={this.handleOptionChange}
                                name="choice" className="radio-with-label"  />
@@ -131,7 +130,7 @@ class App extends Component {
                     <XAxis dataKey="name"/>
                     <YAxis/>
                     <CartesianGrid strokeDasharray="3 3"/>
-                    <Tooltip/>
+                    <Tooltip content={<CustomTooltip />}/>
                     <Legend />
                     <Line type="monotone" dataKey="am" stroke="#8884d8" activeDot={{r: 8}}/>
                     <Line type="monotone" dataKey="cm" stroke="#82ca9d" />
@@ -142,6 +141,48 @@ class App extends Component {
         );
     }
 }
+
+const CustomTooltip  = React.createClass({
+  propTypes: {
+    type: PropTypes.string,
+    payload: PropTypes.array,
+    label: PropTypes.string,
+  },
+
+  getIntroOfPage(label) {
+    if (label === 'Page A') {
+        return "Edward Boryne of 138 West Forty-second Street and Miss Cornelia S. Penfield of 417 West 123d Street were struck and thrown twenty feet by an automobile as they were crossing Broadway at 120th Street at 10 o'clock last night....";
+    } else if (label === 'Page B') {
+      return "Stocks that moved substantially or traded heavily Friday on the New York Stock Exchange and the Nasdaq stock market:...";
+    } else if (label === 'Page C') {
+      return "No longer called Research in Motion, the BlackBerry maker will now go simply by BlackBerry. Some past corporate name changes have worked out, while others have not...";
+    } else if (label === 'Page D') {
+      return "Richard Branson’s announcement that he’ll offer employees unlimited time off has some wondering if the policy really helps workers....";
+    } else if (label === 'Page E') {
+      return "Edward Boryne of 138 West Forty-second Street and Miss Cornelia S. Penfield of 417 West 123d Street were struck and thrown twenty feet by an automobile as they were crossing Broadway at 120th Street at 10 o'clock last night....";
+    } else if (label === 'Page F') {
+      return "Deutsche Bank posts a $3 billion loss in the fourth quarter. | Facebook's earnings give investors reasons for optimism and some cause for concern. | A government lawyer who secured a conviction of Raj Rajaratnam is headed to a private firm. | Rese...";
+    } else if (label == 'Page G') {
+        return "Yields on six-month Treasury bills rose slightly yesterday, reaching their highest levels since December 1974. Three-month bill rates were the highest since January....";
+    }
+  },
+
+  render() {
+    const { active } = this.props;
+
+    if (active) {
+      const { payload, label } = this.props;
+      return (
+        <div className="custom-tooltip">
+          <p className="label">{`${label} : ${payload[0].value}`}</p>
+          <p className="intro">{this.getIntroOfPage(label)}</p>
+        </div>
+      );
+    }
+
+    return null;
+  }
+});
 
 App.propTypes = {
     ddata: PropTypes.array.isRequired,

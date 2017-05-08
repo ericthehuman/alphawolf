@@ -67,13 +67,13 @@ handleSubmit(event){
 
   render() {
     var graphData = [
-      {name: 'Page A', cm: 4000, am: 2400, amt: 2400},
-      {name: 'Page B', cm: 3000, am: 1398, amt: 2210},
-      {name: 'Page C', cm: 2000, am: 9800, amt: 2290},
-      {name: 'Page D', cm: 2780, am: 3908, amt: 2000},
-      {name: 'Page E', cm: 1890, am: 4800, amt: 2181},
-      {name: 'Page F', cm: 2390, am: 3800, amt: 2500},
-      {name: 'Page G', cm: 3490, am: 4300, amt: 2100},
+      {name: '10 Jan', cm: 4000, am: 2400, amt: 2400},
+      {name: '11 Jan', cm: 3000, am: 1398, amt: 2210},
+      {name: '12 Jan', cm: 2000, am: 9800, amt: 2290},
+      {name: '13 Jan', cm: 2780, am: 3908, amt: 2000},
+      {name: '14 Jan', cm: 1890, am: 4800, amt: 2181},
+      {name: '15 Jan', cm: 2390, am: 3800, amt: 2500},
+      {name: '16 Jan', cm: 3490, am: 4300, amt: 2100},
 ];
     return (
       <div className="container">
@@ -129,6 +129,8 @@ handleSubmit(event){
        <Line type="monotone" dataKey="cm" stroke="#82ca9d" />
       </LineChart>
       </div>
+
+    
     );
   }
 }

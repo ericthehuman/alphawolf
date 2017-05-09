@@ -89,10 +89,10 @@ parseDataIntoGraph(result, news){
       console.log("Array length: " + companyReturns.Data.length);
       // Get the lowest and highest values of the stock
       for (var i = 0; i < companyReturns.Data.length; i++) {
-        var currClose = parseFloat(companyReturns.Data[i].Close);
-        // console.log("Curr: " + currClose + " | high: " + highestClose + " | low: " + lowestClose + " | typeof(high): " + typeof(highestClose));
-        if (currClose > highestClose) highestClose = currClose;
-        if (currClose < lowestClose) lowestClose = currClose;
+        var compareClose = parseFloat(companyReturns.Data[i].Close);
+        // console.log("Curr: " + compareClose + " | high: " + highestClose + " | low: " + lowestClose + " | typeof(high): " + typeof(highestClose));
+        if (compareClose > highestClose) highestClose = compareClose;
+        if (compareClose < lowestClose) lowestClose = compareClose;
       }
 
 			return (
@@ -101,7 +101,7 @@ parseDataIntoGraph(result, news){
 					<div className="big">
           <h1>{this.props.stockData.name} ({this.props.stockData.code})</h1>
           <h2> <b>{parseFloat(currClose).toFixed(2)}</b> <span className={positiveSign === "+" ? "stock-positive" : "stock-negative"}>{positiveSign}
-          {currClose-prevClose} ({positiveSign}{(currClose-prevClose)/prevClose*100})</span></h2>
+          {parseFloat(currClose-prevClose).toFixed(2)} ({positiveSign}{parseFloat((currClose-prevClose)/prevClose*100).toFixed(2)})</span></h2>
           <Table>
             <thead>
               <tr>

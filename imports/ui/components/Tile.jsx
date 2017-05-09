@@ -174,7 +174,6 @@ export default class Tile extends Component {
        				<YAxis domain={['auto', 'auto']}/>
        				<CartesianGrid strokeDasharray="3 3" vertical={false}/>
        				<Tooltip content={ showTooltipData }/>
-       				<Legend />
        				<Line type="monotone" dataKey="value" dot={false}  stroke="#8884d8" activeDot={{r: 8}}/>
       				</LineChart>
 
@@ -186,7 +185,6 @@ export default class Tile extends Component {
 						<YAxis domain={['auto', 'auto']}/>
 						<CartesianGrid strokeDasharray="3 3" vertical={false}/>
 						<Tooltip content={ showTooltipData }/>
-						<Legend />
 						<Line type="monotone" dataKey="value" dot={false}  stroke="#8884d8" activeDot={{r: 8}}/>
 					</LineChart>
 
@@ -207,12 +205,18 @@ function showTooltipData (data) {
     	var info = data.payload[0].payload.info;
     	var url = data.payload[0].payload.url;
 
-		// return tooltip as url link if there exists an article, or just return share data
-		return <div id="tag">{date}<br/>
-							 Price: ${value/100}<br/>
-			                 <a href={(url !== "") ? url : ""} target="_blank">
-							 {(info !== "") ? "NEWS:" + info : ""}</a></div>;
+      if (typeof(info) != 'undefined') {
+        // return tooltip as url link if there exists an article, or just return share data
+    		return <div id="tag">{date}<br/>
+    							 Price: ${value/100}<br/>
+    			                 <a href={(url !== "") ? url : ""} target="_blank">
+    							 {(info !== "") ? "NEWS:" + info : ""}</a></div>;
+      } else {
+          return <div id="tag">{date}<br/>
+      							 Cumulative Return: {value}%<br/></div>;
+      }
     }
+
 }
 
 // const CustomTooltip  = React.createClass({

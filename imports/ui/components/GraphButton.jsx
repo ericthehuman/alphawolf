@@ -10,18 +10,19 @@ export default class dateButton extends Component {
 	render() {
 		return (
 			<div className="radio">
-                <input type="radio" id={this.props.stock.code} value={this.props.stock.code} onChange={this.props.}
+                <input type="radio" id={this.props.numDays} value={this.props.numDays} onChange={this.props.updateGraph}
                              name="choice" className="radio-with-label" />
-                <label className="label-for-radio button" htmlFor={this.props.stock.code}> &nbsp; {this.props.stock.code}  &nbsp;</label>
+                <label className="label-for-radio button" htmlFor={this.props.name}>{this.props.name}</label>
             </div>
 		);
 	}
 }
 
 
-Button.propTypes = {
+GraphButton.propTypes = {
 
-  stock: PropTypes.object.isRequired,
-  optionChange: PropTypes.func.isRequired,
+  numDays: PropTypes.number.isRequired,
+  name: PropTypes.string.isRequired,
+  updateGraph: PropTypes.func.isRequired,
 
 };

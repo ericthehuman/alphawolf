@@ -94,6 +94,8 @@ header {
 /*tile styling*/
 
 .tile {
+	padding: 20px;
+	overflow: auto;
 	background-color: white;
 	height: 80vh;
 	border-radius: 5px;

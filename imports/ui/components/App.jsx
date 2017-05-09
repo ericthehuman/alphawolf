@@ -9,7 +9,7 @@ import Button from './Button.jsx';
 import ReactDOM from 'react-dom';
 import { ReactiveVar } from 'meteor/reactive-var';
 import { Button as BSButton, Form, FormControl, FormGroup, Nav, NavItem  } from 'react-bootstrap';
-
+import moment from 'moment';
 
 
 
@@ -23,7 +23,7 @@ constructor(props){
   this.handleSubmit = this.handleSubmit.bind(this);
   this.addStock = this.addStock.bind(this);
   this.state = {
-    selected: "",
+    selected: "Home",
     submitted: false,
   };
   this.newsData = function () {
@@ -54,10 +54,10 @@ renderTile() {
 //if
   console.log("Code to pass: " + this.props.selectedStock.code);
   console.log("Name to pass: " + this.props.selectedStock.name);
-  if(this.props.selectedStock.code == "HOME"){
+  if(this.props.selectedStock.code == "Home"){
     return (
       <div>
-        <Tile stockData={this.props.selectedStock} display={"HOME"} />
+        <Tile stockData={this.props.selectedStock} display={"Home"} />
       </div>
     );
   }else{
@@ -84,7 +84,7 @@ handleOptionChange(eventChange) {
 
   console.log("option Changed to " + stockCode);
 
-  if(stockCode != "HOME"){
+  if(stockCode != "Home"){
     Meteor.call('getData', stockCode, function(error, result) {
       if(result){
         //get what i want from result
@@ -101,7 +101,11 @@ handleOptionChange(eventChange) {
     });
 
       // assume there is function to retrieve dates
-      var begin_date = "20161228"; // NYT dates must be in format YYYYMMDD
+
+      // var begin_date = moment().subtract(365, 'days').format('YYYYMMDD'); // NYT dates must be in format YYYYMMDD
+      // var end_date = moment().format('YYYYMMDD');
+      // console.log("Begin: " + begin_date + " | End: " + end_date);
+      var begin_date = "20161228";
       var end_date = "20170407";
       var companyName = "";
       if (stockCode === "MSFT")
@@ -124,7 +128,8 @@ handleOptionChange(eventChange) {
               var newsArray = [];
               console.log("Returning articles on " + companyName);
               var parsedresult = JSON.parse(result.content);
-              var length = Math.min(50, parsedresult.response.docs.length);
+              console.log(parsedresult.response.docs.length);
+              var length = Math.min(100, parsedresult.response.docs.length);
               for (var i = 0; i < length; i++) {
                   var article = parsedresult.response.docs[i];
                   newsArray[i] = article;
@@ -146,9 +151,9 @@ handleOptionChange(eventChange) {
       });
 
   } else {
-    console.log("HOME");
+    console.log("Home");
     SelectedStock.set({
-      code: "HOME",
+      code: "Home",
       data: "",
     })
   }

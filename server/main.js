@@ -10,7 +10,7 @@ import { ReactiveVar } from 'meteor/reactive-var';
 
 Meteor.startup(() => {
     Stocks.remove({});
-    Stocks.insert({name: "Home", code: "HOME", data:""})
+    Stocks.insert({name: "Home", code: "Home", data:""})
     Stocks.insert({name: "Apple Inc.", code: "AAPL", data: ""});
     Stocks.insert({name: "Microsoft Corporation", code: "MSFT", data: ""});
     Stocks.insert({name: "BlackBerry Limited", code: "BBRY", data: ""})

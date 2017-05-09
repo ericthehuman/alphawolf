@@ -1,6 +1,5 @@
 import React from 'react';
 import { Jumbotron } from 'react-bootstrap';
-import Chart from '../../ui/App.jsx';
 
 
 const Index = () => (
@@ -13,7 +12,6 @@ const Index = () => (
       <h3> Insert stock name</h3>
        <canvas id="stockchart" width="300" height="300"></canvas>
     </Jumbotron>
-    <Chart />
   </div>
 );
 

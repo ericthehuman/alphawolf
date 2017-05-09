@@ -2,7 +2,7 @@ var ms = $('#magicsuggest').magicSuggest({
   allowFreeEntries: false,
   hideTrigger: true,
   maxSelection: 2,
-  placeholder: 'Add new stock (max. 2 per search)',
+  placeholder: 'Search for a company by name or code (max. 2 per search)',
   cls: 'main-input',
   valueField: 'name',
   data: [{"id":"1AD.AX", "name": "ADALTA LIMITED (1AD.AX)"},
@@ -5411,3 +5411,10 @@ $(ms).on('selectionchange', function(){
   $('#inputVal').val(JSON.stringify(this.getValue()));
 
 });
+
+$('#addBtn').click(function() {
+  // The dumbest thing of all time
+  setTimeout(function() {
+    ms.clear();
+  }, 100);
+})

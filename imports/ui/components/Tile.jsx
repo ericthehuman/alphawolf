@@ -83,12 +83,16 @@ parseDataIntoGraph(result, news){
       var currClose = companyReturns.Data[NUMDAYS].Close;
       var prevClose = companyReturns.Data[NUMDAYS-1].Close;
       var positiveSign = (companyReturns.Data[NUMDAYS].Close-companyReturns.Data[0].Close) >= 0 ? "+" : "";
+      var highestClose = companyReturns.Data[0].Close;
+      var lowestClose = companyReturns.Data[0].Close;
 
-      // Stock went down in price
-      if (currClose - prevClose < 0) {
-        var currStockChange = "<span className=stock-negative>{parseFloat(companyReturns.Data[NUMDAYS].Close - companyReturns.Data[NUMDAYS-1].Close).toFixed(2)}</span>"
-      } else {
-        var currStockChange = "<span className=stock-positive>{parseFloat(companyReturns.Data[NUMDAYS].Close - companyReturns.Data[NUMDAYS-1].Close).toFixed(2)}</span>"
+      console.log("Array length: " + companyReturns.Data.length);
+      // Get the lowest and highest values of the stock
+      for (var i = 0; i < companyReturns.Data.length; i++) {
+        var currClose = companyReturns.Data[i].Close;
+        // console.log("Curr: " + currClose + " | high: " + highestClose + " | low: " + lowestClose);
+        if (currClose > highestClose) highestClose = currClose;
+        if (currClose < lowestClose) lowestClose = currClose;
       }
 
 			return (
@@ -96,6 +100,8 @@ parseDataIntoGraph(result, news){
 					<div className="inner">
 					<div className="big">
           <h1>{this.props.stockData.name} ({this.props.stockData.code})</h1>
+          <h2> <b>{parseFloat(currClose).toFixed(2)}</b> <span className={positiveSign === "+" ? "stock-positive" : "stock-negative"}>{positiveSign}
+          {currClose-prevClose} ({positiveSign}{(currClose-prevClose)/prevClose*100})</span></h2>
           <Table>
             <thead>
               <tr>
@@ -105,8 +111,7 @@ parseDataIntoGraph(result, news){
             <tbody>
               <tr>
                 <td>Yesterday's close</td>
-                <td className={positiveSign === "+" ? "stock-positive" : "stock-negative"}>{parseFloat(currClose).toFixed(2)} {positiveSign}
-                {currClose-prevClose} ({positiveSign}{(currClose-prevClose)/prevClose*100})</td>
+                <td>{parseFloat(currClose).toFixed(2)}</td>
               </tr>
               <tr>
                 <td>52-week change</td>
@@ -115,19 +120,14 @@ parseDataIntoGraph(result, news){
               </tr>
               <tr>
                 <td>52-week high</td>
-                <td>2</td>
+                <td>{parseFloat(highestClose).toFixed(2)}</td>
               </tr>
               <tr>
                 <td>52-week low</td>
-                <td>1</td>
+                <td>{parseFloat(lowestClose).toFixed(2)}</td>
               </tr>
             </tbody>
           </Table>
-          Current close = {parseFloat(companyReturns.Data[NUMDAYS-4].Close).toFixed(2)} +INSERT AMOUNT<br />
-          52-week change =
-          Average return = {companyReturns.Data[NUMDAYS].AV_Return.toFixed(4)} <br />
-					Cumulative return = {companyReturns.Data[NUMDAYS].CM_Return.toFixed(4)}<br />
-					365 days ago closing price = {parseFloat(companyReturns.Data[0].Close).toFixed(2)}<br />
 					Company Info <br />
 					<button id="thisweek">This week</button>
 					<button id="thismonth">This month</button>

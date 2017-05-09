@@ -1,9 +1,10 @@
-$('#magicsuggest').magicSuggest({
+var ms = $('#magicsuggest').magicSuggest({
   allowFreeEntries: false,
   hideTrigger: true,
   maxSelection: 2,
-  placeholder: 'Add new stock (max. 2 per search)',
+  placeholder: 'Search for a company by name or code (max. 2 per search)',
   cls: 'main-input',
+  valueField: 'name',
   data: [{"id":"1AD.AX", "name": "ADALTA LIMITED (1AD.AX)"},
   {"id":"1AG.AX", "name": "ALTERRA LIMITED (1AG.AX)"},
   {"id":"1AL.AX", "name": "ONEALL INTERNATIONAL LIMITED (1AL.AX)"},
@@ -5398,3 +5399,22 @@ $('#magicsuggest').magicSuggest({
   {"id":"ZYNE", "name": "Zynerba Pharmaceuticals, Inc. (ZYNE)"},
   ]
 });
+
+$(ms).on('selectionchange', function(){
+  // var stockString = "";
+  // this.getValue().forEach(function(stock) {
+  //   stockString += stock;
+  //   stockString += ";";
+  // });
+  // stockString = stockString.substring(0, stockString.length - 1);
+  // $('#inputVal').val(stockString);
+  $('#inputVal').val(JSON.stringify(this.getValue()));
+
+});
+
+$('#addBtn').click(function() {
+  // The dumbest thing of all time
+  setTimeout(function() {
+    ms.clear();
+  }, 100);
+})

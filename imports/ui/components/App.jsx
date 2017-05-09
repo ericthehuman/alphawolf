@@ -52,6 +52,8 @@ renderTile() {
 //if there are two selected things
 //if there is one selected thing max
 //if
+  console.log("Code to pass: " + this.props.selectedStock.code);
+  console.log("Name to pass: " + this.props.selectedStock.name);
   if(this.props.selectedStock.code == "HOME"){
     return (
       <div>
@@ -71,7 +73,9 @@ renderTile() {
 handleOptionChange(eventChange) {
 
   //this is necessary to display changes in UI state
-  var stockCode = eventChange.currentTarget.value;
+  var stockName = eventChange.currentTarget.value;
+  var stockCode = eventChange.currentTarget.id;
+  console.log("Stock name: " + stockName);
 
   this.setState({
     selected: stockCode
@@ -83,21 +87,20 @@ handleOptionChange(eventChange) {
 
   if(stockCode != "HOME"){
     console.log("Stock selected for viewing");
-
-      Meteor.call('getData', stockCode, function(error, result) {
-          if(result){
-              //get what i want from result
-              console.log("Meteor called " + stockCode);
-              console.log(result);
-              // console.log(SelectedStock.get());
-              SelectedStock.set({
-                  code: stockCode,
-                  data: result
-              });
-          } else {
-            console.log(error);
-          }
-      });
+    Meteor.call('getData', stockCode, function(error, result) {
+      if(result){
+        //get what i want from result
+        // console.log(result);
+        console.log("NAMe is still: " + stockName);
+        SelectedStock.set({
+          name: stockName,
+          code: stockCode,
+          data: result
+        });
+      } else {
+          console.log(error);
+      }
+    });
 
       // assume there is function to retrieve dates
       var begin_date = "20161228"; // NYT dates must be in format YYYYMMDD

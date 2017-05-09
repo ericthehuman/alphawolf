@@ -26,24 +26,26 @@ constructor(props){
     selected: "",
     submitted: false,
   };
-
-}
-
-parseDataIntoGraph(result){
-  var array = result.content.data.CompanyReturns.Data;
-  var data = [];
-  var i = 0;
-  while(i < array.length()){
-    data.push({
-      name: i-100,
-      value: array[i].Closing
-    });
-    i = i +1;
+  this.newsData = function () {
+    return Session.get('newsData');
   }
-
-  return data;
-
 }
+
+// parseDataIntoGraph(result){
+//   var array = result.content.data.CompanyReturns.Data;
+//   var data = [];
+//   var i = 0;
+//   while(i < array.length()){
+//     data.push({
+//       name: i-100,
+//       value: array[i].Closing
+//     });
+//     i = i +1;
+//   }
+//
+//   return data;
+//
+// }
 
 renderTile() {
 
@@ -97,13 +99,62 @@ handleOptionChange(eventChange) {
       }
     });
 
-  }else{
-    // console.log("HOME");
+      // assume there is function to retrieve dates
+      var begin_date = "20161228"; // NYT dates must be in format YYYYMMDD
+      var end_date = "20170407";
+      var companyName = "";
+      if (stockCode === "MSFT")
+        companyName = "Microsoft";
+      else if (stockCode === "AAPL")
+        companyName = "Apple Inc";
+      else if (stockCode === "BBRY")
+        companyName = "Blackberry";
+
+      Meteor.http.call('GET',
+          'https://api.nytimes.com/svc/search/v2/articlesearch.json?'
+          + 'api-key=' + "591e19bb7d974693b30e645f3288102d"
+          + '&q=' + companyName
+          + '&begin_date=' + begin_date
+          + '&end_date=' + end_date,
+          function (error, result) {
+          if (error) {
+              console.log(error);
+          } else {
+              var newsArray = [];
+              console.log("Returning articles on " + companyName);
+              var parsedresult = JSON.parse(result.content);
+              var length = Math.min(50, parsedresult.response.docs.length);
+              for (var i = 0; i < length; i++) {
+                  var article = parsedresult.response.docs[i];
+                  newsArray[i] = article;
+                  newsArray[i]['headline'] = (article.headline != null) ? article.headline.main : "";
+                  newsArray[i]['abstract'] = (article.snippet != null) ? article.snippet : article.lead_paragraph; // summary of article
+                  newsArray[i]['web_url'] = article.web_url; // url of article
+                  newsArray[i]['source'] = article.source; // name of news source i.e. NYT
+                  newsArray[i]['date'] = article.pub_date.substring(8,10)+"/"+article.pub_date.substring(5,7)+"/"+article.pub_date.substring(0,4); // publication date in YYYY-MM-DD'T'HH:MM:SS'Z' -> DD/MM/YYYY
+                  newsArray[i]['pic'] = (article.multimedia.length != 0) ? "http://www.nytimes.com" + article.multimedia["0"].url : "no pic"; // this may not necessarily be related to news, but also icons
+                  // console.log(newsArray[i].headline + " " + newsArray[i].abstract + " " + newsArray[i].web_url + " " + newsArray[i].source + " " + newsArray[i].date + " " + newsArray[i].pic);
+              }
+
+              console.log(newsArray);
+              // SelectedStock.set({
+              //   news: newsArray
+              // });
+              Session.set('newsData', newsArray);
+          }
+      });
+
+  } else {
+    console.log("HOME");
     SelectedStock.set({
       code: "HOME",
-      data: ""
+      data: "",
     })
   }
+
+}
+
+handleStockScope (event){
 
 }
 
@@ -167,6 +218,7 @@ addStock() {
   render() {
     // console.log("App rendered");
     // console.log(SelectedStock.get().code)
+    // console.log(SelectedStock.get().news)
     return (
       <div className="container">
         <header>
@@ -260,6 +312,7 @@ addStock() {
     );
   }
 }
+
 
 App.propTypes = {
   ddata: PropTypes.array.isRequired,

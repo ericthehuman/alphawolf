@@ -132,7 +132,7 @@ handleOptionChange(eventChange) {
                   newsArray[i] = article;
                   newsArray[i]['headline'] = (article.headline != null) ? article.headline.main : "";
                   newsArray[i]['abstract'] = (article.snippet != null) ? article.snippet : article.lead_paragraph; // summary of article
-                  newsArray[i]['web_url'] = article.web_url; // url of article
+                  newsArray[i]['url'] = article.web_url; // url of article
                   newsArray[i]['source'] = article.source; // name of news source i.e. NYT
                   newsArray[i]['date'] = article.pub_date.substring(8,10)+"/"+article.pub_date.substring(5,7)+"/"+article.pub_date.substring(0,4); // publication date in YYYY-MM-DD'T'HH:MM:SS'Z' -> DD/MM/YYYY
                   newsArray[i]['pic'] = (article.multimedia.length != 0) ? "http://www.nytimes.com" + article.multimedia["0"].url : "no pic"; // this may not necessarily be related to news, but also icons

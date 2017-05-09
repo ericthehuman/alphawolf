@@ -25,19 +25,22 @@ parseDataIntoGraph(result, news){
 	  var data = [];
 	  var i = 0;
 	  while(i < array.length){
-	  	var str = "";
+	  	var headline = "";
+	  	var url = "";
 	  	for (var j = 0; j < news.length; j++) {
 	  		// console.log("comparing articles' dates");
 	  		if (array[i].Date === news[j].date) {
 	  			console.log("found news match on " + news[j].date);
-				str = (news[j].headline != "") ? news[j].headline : news[j].abstract;
+				headline = (news[j].headline != "") ? news[j].headline : news[j].abstract;
+				url = (news[j].url != "") ? news[j].url : "";
 				break;
 			}
 		}
 	    data.push({
 	      name: array[i].Date,
 	      value: Math.round((array[i].Close)*100),
-		  info: str
+		  info: headline,
+		  url: url,
 	    });
 	    i = i +1;
 	  }
@@ -120,12 +123,17 @@ function showTooltipData (data) {
     	var date = data.payload[0].payload.name;
     	var value = data.payload[0].payload.value;
     	var info = data.payload[0].payload.info;
+    	var url = data.payload[0].payload.url;
 		// console.log(this.props.stockData.news);
 
 
         // console.log(Object.keys(data.payload[0]));
         // console.log(Object.values(data.payload[0]));
-        return <div id="tag">date: {date} price: {value} <br/> {(info !== "") ? "NEWS:" + info : ""}</div>;
+		// return tooltip as url link if there exists an article, or just return share data
+		return <div id="tag">{date}<br/>
+							 Price: ${value/100}<br/>
+			                 <a href={(url !== "") ? url : ""} target="_blank">
+							 {(info !== "") ? "NEWS:" + info : ""}</a></div>;
     }
 }
 

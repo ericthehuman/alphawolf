@@ -7,6 +7,8 @@ import Item from './Item.jsx';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend} from 'recharts';
 import ReactDOM from 'react-dom';
 
+import { Table } from 'react-bootstrap';
+
 import { Data, Companies, Stocks, SelectedStock } from '../../api/data.js';
 import Button from './Button.jsx';
 //import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend} from 'recharts';
@@ -80,7 +82,33 @@ parseDataIntoGraph(result){
 					<div className="inner">
 					<div className="big">
           <h1>{this.props.stockData.name} ({this.props.stockData.code})</h1>
-          Current close = {parseFloat(this.props.stockData.data.data.CompanyReturns[0].Data[NUMDAYS-4].Close).toFixed(2)} +
+          <Table>
+            <thead>
+              <tr>
+                <th colspan="2">Statistics</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Yesterday's close</td>
+                <td>{parseFloat(this.props.stockData.data.data.CompanyReturns[0].Data[NUMDAYS].Close).toFixed(2)} +INSERT AMOUNTfromdaybefore</td>
+              </tr>
+              <tr>
+                <td>52-week change</td>
+                <td>{parseFloat((this.props.stockData.data.data.CompanyReturns[0].Data[NUMDAYS].Close-this.props.stockData.data.data.CompanyReturns[0].Data[0].Close)/NUMDAYS*100).toFixed(2)}</td>
+              </tr>
+              <tr>
+                <td>52-week high</td>
+                <td>2</td>
+              </tr>
+              <tr>
+                <td>52-week low</td>
+                <td>1</td>
+              </tr>
+            </tbody>
+          </Table>
+          Current close = {parseFloat(this.props.stockData.data.data.CompanyReturns[0].Data[NUMDAYS-4].Close).toFixed(2)} +INSERT AMOUNT<br />
+          52-week change =
           Average return = {this.props.stockData.data.data.CompanyReturns[0].Data[NUMDAYS].AV_Return.toFixed(4)} <br />
 					Cumulative return = {this.props.stockData.data.data.CompanyReturns[0].Data[NUMDAYS].CM_Return.toFixed(4)}<br />
 					365 days ago closing price = {parseFloat(this.props.stockData.data.data.CompanyReturns[0].Data[0].Close).toFixed(2)}<br />

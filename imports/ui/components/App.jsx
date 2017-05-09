@@ -73,7 +73,7 @@ handleOptionChange(eventChange) {
   //this is necessary to display changes in UI state
   var stockName = eventChange.currentTarget.value;
   var stockCode = eventChange.currentTarget.id;
-  console.log("Stock name: " + stockName);
+  // console.log("Stock name: " + stockName);
 
   this.setState({
     selected: stockCode
@@ -81,25 +81,24 @@ handleOptionChange(eventChange) {
 
   console.log("option Changed to " + stockCode);
 
-
-
   if(stockCode != "HOME"){
-    console.log("Stock selected for viewing");
     Meteor.call('getData', stockCode, function(error, result) {
       if(result){
         //get what i want from result
         // console.log(result);
-        console.log("NAMe is still: " + stockName);
+        // console.log("Namee is still: " + stockName);
         SelectedStock.set({
           name: stockName,
           code: stockCode,
           data: result
         });
+      } else {
+        console.log(error);
       }
     });
 
   }else{
-    console.log("HOME");
+    // console.log("HOME");
     SelectedStock.set({
       code: "HOME",
       data: ""
@@ -166,8 +165,8 @@ addStock() {
 //we can populate the radio button selection with a function later
 
   render() {
-    console.log("App rendered");
-    console.log(SelectedStock.get().code)
+    // console.log("App rendered");
+    // console.log(SelectedStock.get().code)
     return (
       <div className="container">
         <header>

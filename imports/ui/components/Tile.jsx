@@ -41,6 +41,7 @@ parseDataIntoGraph(result){
 	//renders a whole bunch of stats for the user
 	render() {
 		console.log("Tile rendered");
+    console.log("NAME: " + this.props.stockData.name);
 
 		if(this.props.display == "HOME"){
 		return (
@@ -63,12 +64,13 @@ parseDataIntoGraph(result){
 			</div>
 			);
 		}else{
-			console.log(this.parseDataIntoGraph(this.props.stockData.data));
+			// console.log(this.parseDataIntoGraph(this.props.stockData.data));
 
 			return (
 				<div className="tile">
 					<div className="inner">
 					<div className="big">
+          <h1>{this.props.stockData.name}</h1>
 					InstrumentID = {this.props.stockData.code} <br />
 					Average return = {this.props.stockData.data.data.CompanyReturns[0].Data[100].AV_Return.toFixed(4)} <br />
 					Cumulative return = {this.props.stockData.data.data.CompanyReturns[0].Data[100].CM_Return.toFixed(4)}<br />

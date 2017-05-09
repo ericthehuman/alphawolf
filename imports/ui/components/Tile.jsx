@@ -6,6 +6,7 @@ import { ReactiveVar } from 'meteor/reactive-var';
 import Item from './Item.jsx';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend} from 'recharts';
 import ReactDOM from 'react-dom';
+import {Button as clickbutton} from 'react-bootstrap';
 
 import { Data, Companies, Stocks, SelectedStock } from '../../api/data.js';
 import Button from './Button.jsx';
@@ -71,6 +72,10 @@ parseDataIntoGraph(result){
 					<div className="big">
 					InstrumentID = {this.props.stockData.code} <br />
 					Company Info <br />
+					<button id="thisweek">This week</button>
+					<button id="thismonth">This month</button>
+					<button id="thisyear">This year</button>
+					<br />
 					Average return = {this.props.stockData.data.data.CompanyReturns[0].Data[100].AV_Return.toFixed(4)} <br />
 					Cumulative return = {this.props.stockData.data.data.CompanyReturns[0].Data[100].CM_Return.toFixed(4)}<br />
 					100 days ago closing price = {parseFloat(this.props.stockData.data.data.CompanyReturns[0].Data[0].Close).toFixed(2)}<br />

@@ -104,6 +104,10 @@ handleOptionChange(eventChange) {
 
 }
 
+handleStockScope (event){
+  
+}
+
 /*
 renderStocks(){
   return this.props.stocks.map((stock) => (

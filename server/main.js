@@ -10,7 +10,7 @@ import { ReactiveVar } from 'meteor/reactive-var';
 
 Meteor.startup(() => {
     Stocks.remove({});
-    Stocks.insert({name: "Home", code: "HOME", data:""})
+    Stocks.insert({name: "Home", code: "Home", data:""})
     Stocks.insert({name: "Apple Inc.", code: "AAPL", data: ""});
     Stocks.insert({name: "Microsoft Corporation", code: "MSFT", data: ""});
     Stocks.insert({name: "BlackBerry Limited", code: "BBRY", data: ""})
@@ -25,7 +25,7 @@ Meteor.methods({
     var year = new Date().getFullYear();
     var dateString = dateOfMonth + "/" + month + "/" + year;
 
-    console.log(dateString);
+    // console.log(dateString);
 
 		this.unblock();
 		return HTTP.call('GET', 'https://alphawolfwolf.herokuapp.com/api/finance?list_of_var=CM_Return,AV_Return', {

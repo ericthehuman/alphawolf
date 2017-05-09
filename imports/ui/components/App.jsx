@@ -23,7 +23,7 @@ constructor(props){
   this.handleSubmit = this.handleSubmit.bind(this);
   this.addStock = this.addStock.bind(this);
   this.state = {
-    selected: "",
+    selected: "Home",
     submitted: false,
   };
   this.newsData = function () {
@@ -54,10 +54,10 @@ renderTile() {
 //if
   console.log("Code to pass: " + this.props.selectedStock.code);
   console.log("Name to pass: " + this.props.selectedStock.name);
-  if(this.props.selectedStock.code == "HOME"){
+  if(this.props.selectedStock.code == "Home"){
     return (
       <div>
-        <Tile stockData={this.props.selectedStock} display={"HOME"} />
+        <Tile stockData={this.props.selectedStock} display={"Home"} />
       </div>
     );
   }else{
@@ -83,7 +83,7 @@ handleOptionChange(eventChange) {
 
   console.log("option Changed to " + stockCode);
 
-  if(stockCode != "HOME"){
+  if(stockCode != "Home"){
     Meteor.call('getData', stockCode, function(error, result) {
       if(result){
         //get what i want from result
@@ -145,9 +145,9 @@ handleOptionChange(eventChange) {
       });
 
   } else {
-    console.log("HOME");
+    console.log("Home");
     SelectedStock.set({
-      code: "HOME",
+      code: "Home",
       data: "",
     })
   }

@@ -20,13 +20,20 @@ Meteor.startup(() => {
 Meteor.methods({
 	//this function should put a http response into the server
 	'getData': function(id) {
+    var dateOfMonth = new Date().getDate();
+    var month = new Date().getMonth() + 1;
+    var year = new Date().getFullYear();
+    var dateString = dateOfMonth + "/" + month + "/" + year;
+
+    console.log(dateString);
+
 		this.unblock();
 		return HTTP.call('GET', 'https://alphawolfwolf.herokuapp.com/api/finance?list_of_var=CM_Return,AV_Return', {
 			params: {
 				instrumentID: id,
 				upper_window: 0,
 				lower_window: 100,
-				dateOfInterest: "07/4/2017",
+				dateOfInterest: dateString,
 			}
 		});
 	}

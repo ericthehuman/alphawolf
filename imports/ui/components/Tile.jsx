@@ -79,6 +79,7 @@ parseDataIntoGraph(result, news){
       var companyReturns = this.props.stockData.data.data.CompanyReturns[0];
       var currClose = companyReturns.Data[NUMDAYS].Close;
       var prevClose = companyReturns.Data[NUMDAYS-1].Close;
+      var positiveSign = (companyReturns.Data[NUMDAYS].Close-companyReturns.Data[0].Close) >= 0 ? "+" : "";
 
       // Stock went down in price
       if (currClose - prevClose < 0) {
@@ -101,11 +102,13 @@ parseDataIntoGraph(result, news){
             <tbody>
               <tr>
                 <td>Yesterday's close</td>
-                <td>{parseFloat(companyReturns.Data[NUMDAYS].Close).toFixed(2)} +INSERT AMOUNTfromdaybefore</td>
+                <td className={positiveSign === "+" ? "stock-positive" : "stock-negative"}>{parseFloat(currClose).toFixed(2)} {positiveSign}
+                {currClose-prevClose} ({positiveSign}{(currClose-prevClose)/prevClose*100})</td>
               </tr>
               <tr>
                 <td>52-week change</td>
-                <td>{parseFloat((companyReturns.Data[NUMDAYS].Close-companyReturns.Data[0].Close)/NUMDAYS*100).toFixed(2)}</td>
+                <td className={positiveSign === "+" ? "stock-positive" : "stock-negative"}>{parseFloat(currClose-companyReturns.Data[0].Close).toFixed(2)}{' '}
+                ({positiveSign}{parseFloat((currClose-companyReturns.Data[0].Close)/companyReturns.Data[0].Close*100).toFixed(2)}%)</td>
               </tr>
               <tr>
                 <td>52-week high</td>

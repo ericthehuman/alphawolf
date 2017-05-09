@@ -196,13 +196,13 @@ handleSubmit(event){
 // New submit
 addStock() {
   var newCompanies = JSON.parse(this.refs.inputVal.value);
-  console.log(newCompanies);
+  // console.log(newCompanies);
   for (var i = 0; i < newCompanies.length; i++) {
     var codeRegex = /\((.*)\)$/;
     var companyName = newCompanies[i];
     var companyCode = codeRegex.exec(companyName);
-    companyName.replace(/ \(.*\)$/, "");
-    console.log(companyName);
+    companyName = companyName.replace(/\s\(.*\)$/, "");
+    console.log("Regexed company name: " + companyName);
     Stocks.insert({
       name: companyName,
       code: companyCode[1]

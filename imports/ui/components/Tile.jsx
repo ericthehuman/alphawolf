@@ -6,7 +6,6 @@ import { ReactiveVar } from 'meteor/reactive-var';
 import Item from './Item.jsx';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend} from 'recharts';
 import ReactDOM from 'react-dom';
-import {button as clickbutton} from 'react-bootstrap';
 import { Table, Form } from 'react-bootstrap';
 
 import { Data, Companies, Stocks, SelectedStock } from '../../api/data.js';
@@ -70,24 +69,21 @@ export default class Tile extends Component {
 			return data;
 		}
 	}
-<<<<<<< HEAD
-}
-//get some info about the company
-getCompanySummary(Name){
-	console.log("the stock name to get summary from is"+ " "+Name);
-	var resultString;
-		//invoke the server method
-	if (Meteor.isClient){
-	    Meteor.call("getSummary", Name, function(error, results) {
-	    	resultString = results.content.toString();
-	    	resultString = /\"extract\"\:\"(.*)\"\}{4}/.exec(resultString);
-	    	console.log(resultString[1]);
-	    	return resultString[1];
-	    });
+  //get some info about the company
+  getCompanySummary(Name){
+  	console.log("the stock name to get summary from is"+ " "+Name);
+  	var resultString;
+  		//invoke the server method
+  	if (Meteor.isClient){
+  	    Meteor.call("getSummary", Name, function(error, results) {
+  	    	resultString = results.content.toString();
+  	    	resultString = /\"extract\"\:\"(.*)\"\}{4}/.exec(resultString);
+  	    	console.log(resultString[1]);
+  	    	return resultString[1];
+  	    });
 
-	}
-}
-=======
+  	}
+  }
 
 	parseCMDataIntoGraph(result){
 		if(result != null){
@@ -112,20 +108,14 @@ getCompanySummary(Name){
   handleUpdateGraph(eventChange) {
     console.log("Num days for graph will be: " + eventChange.currentTarget.value);
   }
->>>>>>> c266b8f4298c8c5559c870502e21591f686c10fe
 
 	//renders a whole bunch of stats for the user
 	render() {
 		console.log("Tile rendered");
-<<<<<<< HEAD
     	console.log("NAME: " + this.props.stockData.name);
     	var companySum = this.getCompanySummary(this.props.stockData.name);
-		if(this.props.display == "HOME"){
-=======
-    console.log("NAME: " + this.props.stockData.name);
 
 		if(this.props.display == "Home"){
->>>>>>> c266b8f4298c8c5559c870502e21591f686c10fe
 		return (
 			<div className="tile">
 				<Item news={"Uber stocks fall amidst scandals"}/>
@@ -154,44 +144,6 @@ getCompanySummary(Name){
 			return (
 				<div className="tile">
 					<div className="big">
-<<<<<<< HEAD
-          <h1>{this.props.stockData.name} ({this.props.stockData.code})</h1>
-          <h2> <b>{parseFloat(currClose).toFixed(2)}</b> <span className={positiveSign === "+" ? "stock-positive" : "stock-negative"}>{positiveSign}
-          {parseFloat(currClose-prevClose).toFixed(2)} ({positiveSign}{parseFloat((currClose-prevClose)/prevClose*100).toFixed(2)})</span></h2>
-          <Table>
-            <thead>
-              <tr>
-                <th colspan="2">Statistics</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Yesterday's close</td>
-                <td>{parseFloat(currClose).toFixed(2)}</td>
-              </tr>
-              <tr>
-                <td>52-week change</td>
-                <td className={positiveSign === "+" ? "stock-positive" : "stock-negative"}>{parseFloat(currClose-companyReturns.Data[0].Close).toFixed(2)}{' '}
-                ({positiveSign}{parseFloat((currClose-companyReturns.Data[0].Close)/companyReturns.Data[0].Close*100).toFixed(2)}%)</td>
-              </tr>
-              <tr>
-                <td>52-week high</td>
-                <td>{parseFloat(highestClose).toFixed(2)}</td>
-              </tr>
-              <tr>
-                <td>52-week low</td>
-                <td>{parseFloat(lowestClose).toFixed(2)}</td>
-              </tr>
-            </tbody>
-          </Table>
-					Company Info <br />
-					{this.getCompanySummary(this.props.stockData.name)}
-					<button id="thisweek">This week</button>
-					<button id="thismonth">This month</button>
-					<button id="thisyear">This year</button>
-					</div>
-
-=======
             <h1>{this.props.stockData.name} ({this.props.stockData.code})</h1>
             <h2> <b>{parseFloat(currClose).toFixed(2)}</b> <span className={positiveSign === "+" ? "stock-positive" : "stock-negative"}>{positiveSign}
             {parseFloat(currClose-prevClose).toFixed(2)} ({positiveSign}{parseFloat((currClose-prevClose)/prevClose*100).toFixed(2)})</span></h2>
@@ -221,7 +173,7 @@ getCompanySummary(Name){
                 </tr>
               </tbody>
             </Table>
->>>>>>> c266b8f4298c8c5559c870502e21591f686c10fe
+  					{this.getCompanySummary(this.props.stockData.name)}
 					</div>
 
           <Form>

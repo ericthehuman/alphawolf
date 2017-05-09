@@ -6,7 +6,7 @@ import { Data, Companies, Stocks} from '../../api/data.js';
 import Tile from './Tile.jsx';
 
 
-export default class dateButton extends Component {
+export default class GraphButton extends Component {
 	render() {
 		return (
 			<div className="radio">

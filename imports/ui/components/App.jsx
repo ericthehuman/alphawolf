@@ -81,6 +81,7 @@ handleOptionChange(eventChange) {
     selected: stockCode
   });
 
+
   console.log("option Changed to " + stockCode);
 
   if(stockCode != "HOME"){

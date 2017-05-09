@@ -20,12 +20,12 @@ Meteor.startup(() => {
 Meteor.methods({
 	//this function should put a http response into the server
 	'getData': function(id) {
-    var dateOfMonth = new Date().getDate();
-    var month = new Date().getMonth() + 1;
-    var year = new Date().getFullYear();
-    var dateString = dateOfMonth + "/" + month + "/" + year;
+	    var dateOfMonth = new Date().getDate();
+	    var month = new Date().getMonth() + 1;
+	    var year = new Date().getFullYear();
+	    var dateString = dateOfMonth + "/" + month + "/" + year;
 
-    console.log(dateString);
+    	console.log(dateString);
 
 		this.unblock();
 		return HTTP.call('GET', 'https://alphawolfwolf.herokuapp.com/api/finance?list_of_var=CM_Return,AV_Return', {
@@ -35,6 +35,16 @@ Meteor.methods({
 				lower_window: 365,
 				dateOfInterest: dateString,
 			}
+		});
+	},
+
+	//get data summary from wikipedia
+	'getSummary': function(name){
+		this.unblock();
+		return HTTP.call('GET', 'https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro=&explaintext=', {
+				params: {
+					titles: name
+				}
 		});
 	}
 });

@@ -6,7 +6,7 @@ import { ReactiveVar } from 'meteor/reactive-var';
 import Item from './Item.jsx';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend} from 'recharts';
 import ReactDOM from 'react-dom';
-import {Button as clickbutton} from 'react-bootstrap';
+import {button as clickbutton} from 'react-bootstrap';
 
 import { Table } from 'react-bootstrap';
 
@@ -51,12 +51,27 @@ parseDataIntoGraph(result, news){
 	  return data;
 	}
 }
+//get some info about the company
+getCompanySummary(Name){
+	console.log("the stock name to get summary from is"+ " "+Name);
+	var resultString;
+		//invoke the server method
+	if (Meteor.isClient){
+	    Meteor.call("getSummary", Name, function(error, results) {
+	    	resultString = results.content.toString();
+	    	resultString = /\"extract\"\:\"(.*)\"\}{4}/.exec(resultString);
+	    	console.log(resultString[1]);
+	    	return resultString[1];
+	    });
+
+	}
+}
 
 	//renders a whole bunch of stats for the user
 	render() {
 		console.log("Tile rendered");
-    console.log("NAME: " + this.props.stockData.name);
-
+    	console.log("NAME: " + this.props.stockData.name);
+    	var companySum = this.getCompanySummary(this.props.stockData.name);
 		if(this.props.display == "HOME"){
 		return (
 			<div className="tile">
@@ -94,7 +109,6 @@ parseDataIntoGraph(result, news){
         if (compareClose > highestClose) highestClose = compareClose;
         if (compareClose < lowestClose) lowestClose = compareClose;
       }
-
 			return (
 				<div className="tile">
 					<div className="inner">
@@ -129,6 +143,7 @@ parseDataIntoGraph(result, news){
             </tbody>
           </Table>
 					Company Info <br />
+					{this.getCompanySummary(this.props.stockData.name)}
 					<button id="thisweek">This week</button>
 					<button id="thismonth">This month</button>
 					<button id="thisyear">This year</button>

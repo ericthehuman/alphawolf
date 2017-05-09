@@ -157,15 +157,14 @@ parseDataIntoGraph(result, news){
 
 function showTooltipData (data) {
     if ( typeof data.payload[0] !== 'undefined') {
+        // console.log(this.props.stockData.news);
+        // console.log(Object.keys(data.payload[0]));
+        // console.log(Object.values(data.payload[0]));
     	var date = data.payload[0].payload.name;
     	var value = data.payload[0].payload.value;
     	var info = data.payload[0].payload.info;
     	var url = data.payload[0].payload.url;
-		// console.log(this.props.stockData.news);
 
-
-        // console.log(Object.keys(data.payload[0]));
-        // console.log(Object.values(data.payload[0]));
 		// return tooltip as url link if there exists an article, or just return share data
 		return <div id="tag">{date}<br/>
 							 Price: ${value/100}<br/>

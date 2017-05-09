@@ -83,14 +83,14 @@ parseDataIntoGraph(result, news){
       var currClose = companyReturns.Data[NUMDAYS].Close;
       var prevClose = companyReturns.Data[NUMDAYS-1].Close;
       var positiveSign = (companyReturns.Data[NUMDAYS].Close-companyReturns.Data[0].Close) >= 0 ? "+" : "";
-      var highestClose = companyReturns.Data[0].Close;
-      var lowestClose = companyReturns.Data[0].Close;
+      var highestClose = parseFloat(companyReturns.Data[0].Close);
+      var lowestClose = parseFloat(companyReturns.Data[0].Close);
 
       console.log("Array length: " + companyReturns.Data.length);
       // Get the lowest and highest values of the stock
       for (var i = 0; i < companyReturns.Data.length; i++) {
-        var currClose = companyReturns.Data[i].Close;
-        // console.log("Curr: " + currClose + " | high: " + highestClose + " | low: " + lowestClose);
+        var currClose = parseFloat(companyReturns.Data[i].Close);
+        // console.log("Curr: " + currClose + " | high: " + highestClose + " | low: " + lowestClose + " | typeof(high): " + typeof(highestClose));
         if (currClose > highestClose) highestClose = currClose;
         if (currClose < lowestClose) lowestClose = currClose;
       }

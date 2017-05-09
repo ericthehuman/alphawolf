@@ -9,7 +9,7 @@ import Button from './Button.jsx';
 import ReactDOM from 'react-dom';
 import { ReactiveVar } from 'meteor/reactive-var';
 import { Button as BSButton, Form, FormControl, FormGroup, Nav, NavItem  } from 'react-bootstrap';
-
+import moment from 'moment';
 
 
 
@@ -100,7 +100,11 @@ handleOptionChange(eventChange) {
     });
 
       // assume there is function to retrieve dates
-      var begin_date = "20161228"; // NYT dates must be in format YYYYMMDD
+
+      // var begin_date = moment().subtract(365, 'days').format('YYYYMMDD'); // NYT dates must be in format YYYYMMDD
+      // var end_date = moment().format('YYYYMMDD');
+      // console.log("Begin: " + begin_date + " | End: " + end_date);
+      var begin_date = "20161228";
       var end_date = "20170407";
       var companyName = "";
       if (stockCode === "MSFT")
@@ -123,7 +127,8 @@ handleOptionChange(eventChange) {
               var newsArray = [];
               console.log("Returning articles on " + companyName);
               var parsedresult = JSON.parse(result.content);
-              var length = Math.min(50, parsedresult.response.docs.length);
+              console.log(parsedresult.response.docs.length);
+              var length = Math.min(100, parsedresult.response.docs.length);
               for (var i = 0; i < length; i++) {
                   var article = parsedresult.response.docs[i];
                   newsArray[i] = article;

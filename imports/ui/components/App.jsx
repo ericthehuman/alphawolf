@@ -75,7 +75,7 @@ handleOptionChange(eventChange) {
   //this is necessary to display changes in UI state
   var stockName = eventChange.currentTarget.value;
   var stockCode = eventChange.currentTarget.id;
-  console.log("Stock name: " + stockName);
+  // console.log("Stock name: " + stockName);
 
   this.setState({
     selected: stockCode
@@ -83,22 +83,19 @@ handleOptionChange(eventChange) {
 
   console.log("option Changed to " + stockCode);
 
-
-
   if(stockCode != "HOME"){
-    console.log("Stock selected for viewing");
     Meteor.call('getData', stockCode, function(error, result) {
       if(result){
         //get what i want from result
         // console.log(result);
-        console.log("NAMe is still: " + stockName);
+        // console.log("Namee is still: " + stockName);
         SelectedStock.set({
           name: stockName,
           code: stockCode,
           data: result
         });
       } else {
-          console.log(error);
+        console.log(error);
       }
     });
 
@@ -157,6 +154,10 @@ handleOptionChange(eventChange) {
 
 }
 
+handleStockScope (event){
+
+}
+
 /*
 renderStocks(){
   return this.props.stocks.map((stock) => (
@@ -195,13 +196,13 @@ handleSubmit(event){
 // New submit
 addStock() {
   var newCompanies = JSON.parse(this.refs.inputVal.value);
-  console.log(newCompanies);
+  // console.log(newCompanies);
   for (var i = 0; i < newCompanies.length; i++) {
     var codeRegex = /\((.*)\)$/;
     var companyName = newCompanies[i];
     var companyCode = codeRegex.exec(companyName);
-    companyName.replace(/ \(.*\)$/, "");
-    console.log(companyName);
+    companyName = companyName.replace(/\s\(.*\)$/, "");
+    console.log("Regexed company name: " + companyName);
     Stocks.insert({
       name: companyName,
       code: companyCode[1]
@@ -215,7 +216,7 @@ addStock() {
 //we can populate the radio button selection with a function later
 
   render() {
-    console.log("App rendered");
+    // console.log("App rendered");
     // console.log(SelectedStock.get().code)
     // console.log(SelectedStock.get().news)
     return (

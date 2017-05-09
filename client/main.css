@@ -5,7 +5,6 @@
 
 body {
 	margin: auto;
-	width: 70%;
 }
 
 
@@ -78,6 +77,7 @@ img {
 header {
 	font-family: 'Pavanam', sans-serif;
 	margin-top: 0px;
+	font-size: 64px;
 }
 
 /*info*/
@@ -95,22 +95,20 @@ header {
 
 .tile {
 	background-color: white;
-	height: 700px;
-	width: 750px;
+	height: 80vh;
 	border-radius: 5px;
 	border: 2px solid black;
-	margin-top: 10px;
 	font-family: 'Pavanam', sans-serif;
+	font-size: 16px;
+}
+
+.tile h1 {
+	font-size: 40px;
 }
 
 .inner {
 	margin-left: 20px;
 	margin-top: 20px;
-}
-
-.big {
-	font-family: 'Pavanam', sans-serif;
-	font-size: 40px;
 }
 
 .stock-positive {

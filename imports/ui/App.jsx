@@ -111,11 +111,43 @@ handleOptionChange(eventChange) {
       }
     });
 
+    var newsArray = [];
+    Meteor.http.call('GET',
+      'https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=591e19bb7d974693b30e645f3288102d&q='+stockCode,
+      function (error,result) {
+        if (error) {
+          console.log(error);
+      } else {
+        console.log("Returning articles on " + stockCode);
+        var parsedresult = JSON.parse(result.content);
+        var length = parsedresult.response.docs.length;
+        for (var i = 0; i < length; i++) {
+          var article = parsedresult.response.docs[i];
+          newsArray[i] = article;
+          newsArray[i]['headline'] = article.headline.main;
+          newsArray[i]['abstract'] = (article.snippet != null) ? article.snippet : article.lead_paragraph; // summary of article
+          newsArray[i]['web_url'] = article.web_url; // url of article
+          newsArray[i]['source'] = article.source; // name of news source i.e. NYT
+          newsArray[i]['date'] = article.pub_date; // publication date in YYYY-MM-DD'T'HH:MM:SS'Z'
+          newsArray[i]['pic'] = (article.multimedia.length != 0) ? "http://www.nytimes.com" + article.multimedia["0"].url : "no pic"; // this may not necessarily be related to news, but also icons
+          // console.log(newsArray[i].headline + " " + newsArray[i].abstract + " " + newsArray[i].web_url + " " + newsArray[i].source + " " + newsArray[i].date + " " + newsArray[i].pic);
+        }
+
+        // console.log(newsArray);
+        // Session.set('newsData', newsArray);
+        SelectedStock.set({
+          news: newsArray
+        });
+      }
+    });
+
+
   }else{
     console.log("HOME");
     SelectedStock.set({
       code: "HOME",
-      data: ""
+      data: "",
+      news: ""
     })
   }
   
@@ -185,7 +217,8 @@ handleSubmit(event){
 
   render() {
     console.log("App rendered");
-    console.log(SelectedStock.get().code)
+    console.log(SelectedStock.get().code);
+    console.log(SelectedStock.get().news);
     return (
       <div className="container">
         <header>

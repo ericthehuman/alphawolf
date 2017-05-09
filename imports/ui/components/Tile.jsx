@@ -52,6 +52,45 @@ export default class Tile extends Component {
   	}
   }
 
+	parseAVDataIntoGraph(result){
+		if(result != null){
+			var array = result.data.CompanyReturns[0].Data;
+			console.log(array);
+			var data = [];
+			var i = 0;
+			while(i < array.length){
+				data.push({
+					name: array[i].Date,
+					value: Math.round((array[i].AV_Return)*100)
+				});
+				i = i +1;
+			}
+
+			console.log(data);
+			return data;
+		}
+	}
+
+	parseCMDataIntoGraph(result){
+		if(result != null){
+			var array = result.data.CompanyReturns[0].Data;
+			console.log(array);
+			var data = [];
+			var i = 0;
+			while(i < array.length){
+				data.push({
+					name: array[i].Date,
+					value: Math.round((array[i].CM_Return)*100)
+				});
+				i = i +1;
+			}
+
+			console.log(data);
+			return data;
+		}
+	}
+
+
   handleUpdateGraph(eventChange) {
     console.log("Num days for graph will be: " + eventChange.currentTarget.value);
   }
@@ -135,13 +174,14 @@ export default class Tile extends Component {
   					</div>
 					</div>
 
-          <h2>Closing Price</h2>
+
           <Form>
             <GraphButton name={"Last Year"} numDays={365} updateGraph={this.handleUpdateGraph.bind(this)}/>
             <GraphButton name={"Last Month"} numDays={30} updateGraph={this.handleUpdateGraph.bind(this)}/>
             <GraphButton name={"Last Week"} numDays={7} updateGraph={this.handleUpdateGraph.bind(this)}/>
             <GraphButton name={"Today"} numDays={1} updateGraph={this.handleUpdateGraph.bind(this)}/>
           </Form>
+					<h2>Closing Price</h2>
 					<LineChart width={600} height={300} data={this.parseDataIntoGraph(this.props.stockData.data, Session.get('newsData'))}
             margin={{top: 5, right: 30, left: 20, bottom: 5}}>
        				<XAxis dataKey="name"/>
@@ -153,6 +193,16 @@ export default class Tile extends Component {
       				</LineChart>
 
 
+					<h2>Cumulative Return</h2>
+					<LineChart width={600} height={300} data={this.parseCMDataIntoGraph(this.props.stockData.data)}
+							   margin={{top: 5, right: 30, left: 20, bottom: 5}}>
+						<XAxis dataKey="name"/>
+						<YAxis domain={['auto', 'auto']}/>
+						<CartesianGrid strokeDasharray="3 3" vertical={false}/>
+						<Tooltip content={ showTooltipData }/>
+						<Legend />
+						<Line type="monotone" dataKey="value" dot={false}  stroke="#8884d8" activeDot={{r: 8}}/>
+					</LineChart>
 
 				</div>
 

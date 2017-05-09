@@ -70,6 +70,7 @@ parseDataIntoGraph(result){
 					<div className="inner">
 					<div className="big">
 					InstrumentID = {this.props.stockData.code} <br />
+					Company Info <br />
 					Average return = {this.props.stockData.data.data.CompanyReturns[0].Data[100].AV_Return.toFixed(4)} <br />
 					Cumulative return = {this.props.stockData.data.data.CompanyReturns[0].Data[100].CM_Return.toFixed(4)}<br />
 					100 days ago closing price = {parseFloat(this.props.stockData.data.data.CompanyReturns[0].Data[0].Close).toFixed(2)}<br />

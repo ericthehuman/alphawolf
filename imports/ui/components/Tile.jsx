@@ -26,7 +26,7 @@ parseDataIntoGraph(result){
 	  var i = 0;
 	  while(i < array.length){
 	    data.push({
-	      name: i,
+	      name: array[i].Date,
 	      value: Math.round((array[i].Close)*100)
 	    });
 	    i = i +1;
@@ -82,11 +82,11 @@ parseDataIntoGraph(result){
 					 <LineChart width={600} height={300} data={this.parseDataIntoGraph(this.props.stockData.data)}
             margin={{top: 5, right: 30, left: 20, bottom: 5}}>
        				<XAxis dataKey="name"/>
-       				<YAxis domain={['dataMin', 'dataMax']}/>
-       				<CartesianGrid strokeDasharray="3 3"/>
+       				<YAxis domain={['auto', 'auto']}/>
+       				<CartesianGrid strokeDasharray="3 3" vertical={false}/>
        				<Tooltip/>
        				<Legend />
-       				<Line type="monotone" dataKey="value" stroke="#8884d8" activeDot={{r: 8}}/>
+       				<Line type="monotone" dataKey="value" dot={false} stroke="#8884d8" activeDot={{r: 8}}/>
       				</LineChart>
 
 

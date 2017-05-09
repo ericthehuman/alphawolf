@@ -74,7 +74,7 @@ export default class Tile extends Component {
 	parseCMDataIntoGraph(result){
 		if(result != null){
 			var array = result.data.CompanyReturns[0].Data;
-			console.log(array);
+			// console.log(array);
 			var data = [];
 			var i = 0;
 			while(i < array.length){
@@ -85,7 +85,7 @@ export default class Tile extends Component {
 				i = i +1;
 			}
 
-			console.log(data);
+			// console.log(data);
 			return data;
 		}
 	}
@@ -107,17 +107,6 @@ export default class Tile extends Component {
 				<Item news={"Oil does something"}/>
 				<Item news={"Oil does something"}/>
 				<Item news={"Oil does something"}/>
-				<div className="inner">
-					<div className="big">
-						{this.props.stockData.code}
-					</div>
-
-					<div className="big">
-
-					</div>
-
-				</div>
-
 			</div>
 			);
 		}else{
@@ -140,8 +129,7 @@ export default class Tile extends Component {
 
 			return (
 				<div className="tile">
-					<div className="inner">
-  					<div className="big">
+					<div className="big">
             <h1>{this.props.stockData.name} ({this.props.stockData.code})</h1>
             <h2> <b>{parseFloat(currClose).toFixed(2)}</b> <span className={positiveSign === "+" ? "stock-positive" : "stock-negative"}>{positiveSign}
             {parseFloat(currClose-prevClose).toFixed(2)} ({positiveSign}{parseFloat((currClose-prevClose)/prevClose*100).toFixed(2)})</span></h2>
@@ -171,9 +159,7 @@ export default class Tile extends Component {
                 </tr>
               </tbody>
             </Table>
-  					</div>
 					</div>
-
 
           <Form>
             <GraphButton name={"Last Year"} numDays={365} updateGraph={this.handleUpdateGraph.bind(this)}/>

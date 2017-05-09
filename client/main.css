@@ -113,6 +113,14 @@ header {
 	font-size: 40px;
 }
 
+.stock-positive {
+	color: #1d992f;
+}
+
+.stock-negative {
+	color: #a80a0a;
+}
+
 
 /*defining style for radio buttons and submit button*/
 .radio-image {

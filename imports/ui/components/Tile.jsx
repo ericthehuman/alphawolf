@@ -14,9 +14,9 @@ import Button from './Button.jsx';
 
 
 
+var NUMDAYS = 365;
 
 export default class Tile extends Component {
-
 
 //converts raw api data into structure the graph component uses
 parseDataIntoGraph(result){
@@ -28,7 +28,7 @@ parseDataIntoGraph(result){
 	  while(i < array.length){
 	    data.push({
 	      name: array[i].Date,
-	      value: Math.round((array[i].Close)*100)
+	      value: Math.round((array[i].Close)*NUMDAYS)
 	    });
 	    i = i +1;
 	  }
@@ -42,6 +42,7 @@ parseDataIntoGraph(result){
 	//renders a whole bunch of stats for the user
 	render() {
 		console.log("Tile rendered");
+    console.log("NAME: " + this.props.stockData.name);
 
 		if(this.props.display == "HOME"){
 		return (
@@ -64,12 +65,22 @@ parseDataIntoGraph(result){
 			</div>
 			);
 		}else{
-			console.log(this.parseDataIntoGraph(this.props.stockData.data));
+			// console.log(this.parseDataIntoGraph(this.props.stockData.data));
+      var currClose = this.props.stockData.data.data.CompanyReturns[0].Data[NUMDAYS].Close;
+      var prevClose = this.props.stockData.data.data.CompanyReturns[0].Data[NUMDAYS-1].Close;
+
+      // Stock went down in price
+      if (currClose - prevClose < 0) {
+        var currStockChange = "<span className=stock-negative>{parseFloat(this.props.stockData.data.data.CompanyReturns[0].Data[NUMDAYS].Close - this.props.stockData.data.data.CompanyReturns[0].Data[NUMDAYS-1].Close).toFixed(2)}</span>"
+      } else {
+        var currStockChange = "<span className=stock-positive>{parseFloat(this.props.stockData.data.data.CompanyReturns[0].Data[NUMDAYS].Close - this.props.stockData.data.data.CompanyReturns[0].Data[NUMDAYS-1].Close).toFixed(2)}</span>"
+      }
 
 			return (
 				<div className="tile">
 					<div className="inner">
 					<div className="big">
+<<<<<<< HEAD
 					InstrumentID = {this.props.stockData.code} <br />
 					Company Info <br />
 					<button id="thisweek">This week</button>
@@ -79,9 +90,14 @@ parseDataIntoGraph(result){
 					Average return = {this.props.stockData.data.data.CompanyReturns[0].Data[100].AV_Return.toFixed(4)} <br />
 					Cumulative return = {this.props.stockData.data.data.CompanyReturns[0].Data[100].CM_Return.toFixed(4)}<br />
 					100 days ago closing price = {parseFloat(this.props.stockData.data.data.CompanyReturns[0].Data[0].Close).toFixed(2)}<br />
+=======
+          <h1>{this.props.stockData.name} ({this.props.stockData.code})</h1>
+          Current close = {parseFloat(this.props.stockData.data.data.CompanyReturns[0].Data[NUMDAYS-4].Close).toFixed(2)} +
+          Average return = {this.props.stockData.data.data.CompanyReturns[0].Data[NUMDAYS].AV_Return.toFixed(4)} <br />
+					Cumulative return = {this.props.stockData.data.data.CompanyReturns[0].Data[NUMDAYS].CM_Return.toFixed(4)}<br />
+					365 days ago closing price = {parseFloat(this.props.stockData.data.data.CompanyReturns[0].Data[0].Close).toFixed(2)}<br />
+>>>>>>> ba5aa66e054cb0e8cebe9fb8e09f67b89d69e410
 					50 days ago closing price = {parseFloat(this.props.stockData.data.data.CompanyReturns[0].Data[50].Close).toFixed(2)}<br />
-
-					Final closing price = {parseFloat(this.props.stockData.data.data.CompanyReturns[0].Data[100].Close).toFixed(2)}<br />
 					</div>
 					</div>
 

@@ -8,7 +8,7 @@ import Button from './Button.jsx';
 //import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend} from 'recharts';
 import ReactDOM from 'react-dom';
 import { ReactiveVar } from 'meteor/reactive-var';
-import { Button as BSButton, Form, FormControl, FormGroup, Nav, NavItem  } from 'react-bootstrap';
+import { Button as BSButton, Form, FormControl, FormGroup, Nav, NavItem, Navbar  } from 'react-bootstrap';
 import moment from 'moment';
 
 
@@ -20,7 +20,6 @@ class App extends Component {
 constructor(props){
   super(props);
   this.handleOptionChange = this.handleOptionChange.bind(this);
-  this.handleSubmit = this.handleSubmit.bind(this);
   this.addStock = this.addStock.bind(this);
   this.state = {
     selected: "Home",
@@ -164,39 +163,10 @@ handleStockScope (event){
 
 }
 
-/*
-renderStocks(){
-  return this.props.stocks.map((stock) => (
-
-            <div className="radio">
-
-                <input type="radio" key ={stock._id} id={stock.code} value={stock.code} onChange={this.handleOptionChange}
-                             name="choice" className="radio-with-label" />
-                <label className="label-for-radio button" htmlFor={stock.code}> &nbsp; {stock.name}  &nbsp;</label>
-            </div>
-    ));
-}
-
-*/
-
 renderStocks() {
   return this.props.stocks.map((stock) => (
     <Button key={stock._id} stock={stock} optionChange={this.handleOptionChange.bind(this)} />
     ));
-}
-
-// Old submit
-handleSubmit(event){
-  event.preventDefault();
-  const text = ReactDOM.findDOMNode(this.refs.textInput).value.trim();
-  Stocks.insert({
-    name: text,
-    code: text
-  });
-  console.log("Stock added");
-
-  ReactDOM.findDOMNode(this.refs.textInput).value='';
-
 }
 
 // New submit
@@ -211,7 +181,8 @@ addStock() {
     console.log("Regexed company name: " + companyName);
     Stocks.insert({
       name: companyName,
-      code: companyCode[1]
+      code: companyCode[1],
+      new: true
     });
     console.log("Stock added");
   }
@@ -226,22 +197,28 @@ addStock() {
     // console.log(SelectedStock.get().code)
     // console.log(SelectedStock.get().news)
     return (
-      <div className="container">
-        <header>
-          <h1>cubs of wall street</h1>
-        </header>
-{/*
-        <div className="info font">
-          Choose a company from the list below to look at relevant statistics
-        </div>
-*/}
+      <div>
+        <div>
+          <Navbar fixedTop className="navbar-custom">
+            <Navbar.Header>
+              <Navbar.Brand>
+                <span id="title">cubs of wall street</span>
+              </Navbar.Brand>
+            </Navbar.Header>
+            <Navbar.Form inline id="stockInputForm">
+              <input id="magicsuggest"/>
+              {' '}
+              <BSButton bsStyle="success" onClick={ this.addStock } id="addBtn">Add</BSButton>
+              <input type="hidden" ref="inputVal" id="inputVal"/>
+            </Navbar.Form>
+            <Form>
 
-        <Form inline id="stockInputForm">
-          <input id="magicsuggest"/>
-          {' '}
-          <BSButton bsStyle="success" onClick={ this.addStock } id="addBtn">Add</BSButton>
-          <input type="hidden" ref="inputVal" id="inputVal"/>
-        </Form>
+              {this.renderStocks()}
+
+            </Form>
+          </Navbar>
+        </div>
+        <div className="container-fluid main-container">
 {/*
         <form>
           <input type="text" ref="textInput" className="searchBar" placeholder="Search for a company or keyword"/>
@@ -253,13 +230,9 @@ addStock() {
           <label className="label-for-submit" htmlFor="submit">Add stock</label>
         </form>
 */}
-
-        <form>
-
-          {this.renderStocks()}
-
-        </form>
-         {this.renderTile()}
+          <div className="tile-container">
+           {this.renderTile()}
+          </div>
 
 {/*
 
@@ -306,15 +279,8 @@ addStock() {
        <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
       </LineChart>
 */}
-
+        </div>
       </div>
-
-
-
-
-
-
-
     );
   }
 }

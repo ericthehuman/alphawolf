@@ -4,10 +4,32 @@
 }
 
 body {
+	padding-top: 120px;
 	margin: auto;
+	background: url('assets/bg.png') no-repeat center center fixed;
+	background-size: cover;
+	overflow-x: hidden;
 }
 
+/*title*/
 
+#title {
+	font-family: 'Pavanam', sans-serif;
+	font-weight: bold;
+	font-size: 32px;
+}
+
+.navbar-custom {
+	background-color: rgb(245, 245, 245);
+}
+
+.navbar {
+	background-image: none;
+}
+
+.main-container {
+	width: 90%;
+}
 
 /*form elements*/
 
@@ -72,13 +94,7 @@ img {
 	outline: none;
 }
 
-/*title*/
 
-header {
-	font-family: 'Pavanam', sans-serif;
-	margin-top: 0px;
-	font-size: 64px;
-}
 
 /*info*/
 
@@ -93,13 +109,15 @@ header {
 
 /*tile styling*/
 
-.tile {
-	padding: 20px;
-	overflow: auto;
-	background-color: white;
-	height: 80vh;
-	border-radius: 5px;
-	border: 2px solid black;
+.tile-container {
+	padding: 40px;
+	/*overflow: auto;*/
+	background-color: rgb(245, 245, 245);
+	/*height: 80vh;*/
+	margin-bottom: 5vh;
+	box-shadow: 0px 0px 15px 3px rgba(0, 0, 0, 0.56);
+	/*border-radius: 5px;
+	border: 2px solid black;*/
 	font-family: 'Pavanam', sans-serif;
 	font-size: 16px;
 }
@@ -108,17 +126,21 @@ header {
 	font-size: 40px;
 }
 
+.stock-code {
+	font-size: 36px;
+}
+
 .inner {
 	margin-left: 20px;
 	margin-top: 20px;
 }
 
 .stock-positive {
-	color: #1d992f;
+	color: #1cbb33;
 }
 
 .stock-negative {
-	color: #a80a0a;
+	color: #be0909;
 }
 
 

@@ -129,7 +129,8 @@ export default class Tile extends Component {
       var companyReturns = this.props.stockData.data.data.CompanyReturns[0];
       var currClose = companyReturns.Data[NUMDAYS].Close;
       var prevClose = companyReturns.Data[NUMDAYS-1].Close;
-      var positiveSign = (companyReturns.Data[NUMDAYS].Close-companyReturns.Data[0].Close) >= 0 ? "+" : "";
+      var positiveSignDay = (companyReturns.Data[NUMDAYS].Close-companyReturns.Data[NUMDAYS-1].Close) >= 0 ? "+" : "";
+      var positiveSignAnnual = (companyReturns.Data[NUMDAYS].Close-companyReturns.Data[0].Close) >= 0 ? "+" : "";
       var highestClose = parseFloat(companyReturns.Data[0].Close);
       var lowestClose = parseFloat(companyReturns.Data[0].Close);
 
@@ -146,9 +147,9 @@ export default class Tile extends Component {
 			return (
 				<div className="tile">
 					<div className="big">
-            <h1>{this.props.stockData.name} ({this.props.stockData.code})</h1>
-            <h2> <b>{parseFloat(currClose).toFixed(2)}</b> <span className={positiveSign === "+" ? "stock-positive" : "stock-negative"}>{positiveSign}
-            {parseFloat(currClose-prevClose).toFixed(2)} ({positiveSign}{parseFloat((currClose-prevClose)/prevClose*100).toFixed(2)}%)</span></h2>
+            <h1>{this.props.stockData.name} <span className="stock-code">({this.props.stockData.code})</span></h1>
+            <h2> <b>${parseFloat(currClose).toFixed(2)}</b> <span className={positiveSignDay === "+" ? "stock-positive" : "stock-negative"}>{positiveSignDay}
+            {parseFloat(currClose-prevClose).toFixed(2)} ({positiveSignDay}{parseFloat((currClose-prevClose)/prevClose*100).toFixed(2)}%)</span></h2>
             <Table>
               <thead>
                 <tr>
@@ -157,21 +158,21 @@ export default class Tile extends Component {
               </thead>
               <tbody>
                 <tr>
-                  <td>Yesterday's close</td>
-                  <td>{parseFloat(currClose).toFixed(2)}</td>
+                  <td>Previous close</td>
+                  <td><b>{parseFloat(prevClose).toFixed(2)}</b></td>
                 </tr>
                 <tr>
                   <td>52-week change</td>
-                  <td className={positiveSign === "+" ? "stock-positive" : "stock-negative"}>{parseFloat(currClose-companyReturns.Data[0].Close).toFixed(2)}{' '}
-                  ({positiveSign}{parseFloat((currClose-companyReturns.Data[0].Close)/companyReturns.Data[0].Close*100).toFixed(2)}%)</td>
+                  <td className={positiveSignAnnual === "+" ? "stock-positive" : "stock-negative"}><b>{parseFloat(currClose-companyReturns.Data[0].Close).toFixed(2)}{' '}
+                  ({positiveSignAnnual}{parseFloat((currClose-companyReturns.Data[0].Close)/companyReturns.Data[0].Close*100).toFixed(2)}%)</b></td>
                 </tr>
                 <tr>
                   <td>52-week high</td>
-                  <td>{parseFloat(highestClose).toFixed(2)}</td>
+                  <td><b>{parseFloat(highestClose).toFixed(2)}</b></td>
                 </tr>
                 <tr>
                   <td>52-week low</td>
-                  <td>{parseFloat(lowestClose).toFixed(2)}</td>
+                  <td><b>{parseFloat(lowestClose).toFixed(2)}</b></td>
                 </tr>
               </tbody>
             </Table>

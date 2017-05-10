@@ -23,7 +23,7 @@ export default class Item extends Component {
 		return (
 			<div className="item" onClick={this.handleClick}>
 				<div className="imageHolder">
-
+					<img src={this.props.imagef}></img>
 				</div>
 				<div className="titleBar">
 				{this.props.news}

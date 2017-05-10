@@ -116,10 +116,10 @@ export default class Tile extends Component {
 		if(this.props.display == "Home"){
 		return (
 			<div className="tile">
-				<Item news={"Uber stocks fall amidst scandals"}/>
-				<Item news={"Oil does something"}/>
-				<Item news={"Oil does something"}/>
-				<Item news={"Oil does something"}/>
+				<Item news={"Uber stocks fall amidst scandals"} imagef={"uber.jpg"}/>
+				<Item news={"Apple releases new software"} imagef={"apple.png"}/>
+				<Item news={"ThinkPad designs sleek computer"} imagef={"thinkpad.jpg"}/>
+				<Item news={"UNSW records record numbers"} imagef={"unsw.jpg"}/>
 			</div>
 			);
 		}else{

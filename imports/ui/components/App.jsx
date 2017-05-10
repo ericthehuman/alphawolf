@@ -51,9 +51,9 @@ renderTile() {
 
 //if there are two selected things
 //if there is one selected thing max
-//if
-  console.log("Code to pass: " + this.props.selectedStock.code);
-  console.log("Name to pass: " + this.props.selectedStock.name);
+
+  // console.log("Code to pass: " + this.props.selectedStock.code);
+  // console.log("Name to pass: " + this.props.selectedStock.name);
   if(this.props.selectedStock.code == "Home"){
     return (
       <div>

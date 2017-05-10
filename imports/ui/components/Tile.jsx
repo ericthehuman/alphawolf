@@ -15,7 +15,7 @@ import GraphButton from './GraphButton.jsx';
 
 
 
-var NUMDAYS = 365;
+var NUMDAYS = 364;
 
 export default class Tile extends Component {
 
@@ -74,7 +74,7 @@ export default class Tile extends Component {
   	console.log("the stock name to get summary from is"+ " "+Name);
   	var resultString;
   		//invoke the server method
-  	if (Meteor.isClient){
+  	if (Meteor.isClient && Name){
   	    Meteor.call("getSummary", Name, function(error, results) {
   	    	resultString = results.content.toString();
   	    	resultString = /\"extract\"\:\"(.*)\"\}{4}/.exec(resultString);
@@ -111,9 +111,7 @@ export default class Tile extends Component {
 
 	//renders a whole bunch of stats for the user
 	render() {
-		console.log("Tile rendered");
-    	console.log("NAME: " + this.props.stockData.name);
-    	var companySum = this.getCompanySummary(this.props.stockData.name);
+		// console.log("Tile rendered");
 
 		if(this.props.display == "Home"){
 		return (
@@ -125,6 +123,8 @@ export default class Tile extends Component {
 			</div>
 			);
 		}else{
+    	console.log("NAME: " + this.props.stockData.name);
+    	// var companySum = this.getCompanySummary(this.props.stockData.name);
 			// console.log(this.parseDataIntoGraph(this.props.stockData.data));
       var companyReturns = this.props.stockData.data.data.CompanyReturns[0];
       var currClose = companyReturns.Data[NUMDAYS].Close;
@@ -141,12 +141,14 @@ export default class Tile extends Component {
         if (compareClose > highestClose) highestClose = compareClose;
         if (compareClose < lowestClose) lowestClose = compareClose;
       }
+
+      console.log("Curr: " + currClose + " | Prev: " + prevClose + " | high: " + highestClose + " | low: " + lowestClose);
 			return (
 				<div className="tile">
 					<div className="big">
             <h1>{this.props.stockData.name} ({this.props.stockData.code})</h1>
             <h2> <b>{parseFloat(currClose).toFixed(2)}</b> <span className={positiveSign === "+" ? "stock-positive" : "stock-negative"}>{positiveSign}
-            {parseFloat(currClose-prevClose).toFixed(2)} ({positiveSign}{parseFloat((currClose-prevClose)/prevClose*100).toFixed(2)})</span></h2>
+            {parseFloat(currClose-prevClose).toFixed(2)} ({positiveSign}{parseFloat((currClose-prevClose)/prevClose*100).toFixed(2)}%)</span></h2>
             <Table>
               <thead>
                 <tr>
@@ -173,7 +175,7 @@ export default class Tile extends Component {
                 </tr>
               </tbody>
             </Table>
-  					{this.getCompanySummary(this.props.stockData.name)}
+  					{/*this.getCompanySummary(this.props.stockData.name)*/}
 					</div>
 
           <Form>

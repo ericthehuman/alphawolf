@@ -183,7 +183,7 @@ export default class Tile extends Component {
             <GraphButton name={"Today"} numDays={1} updateGraph={this.handleUpdateGraph.bind(this)}/>
           </Form>
 					<h2>Closing Price</h2>
-					<LineChart width={600} height={300} data={this.parseDataIntoGraph(this.props.stockData.data, Session.get('newsData'))}
+					<LineChart width={600} height={300} syncId="anyId" data={this.parseDataIntoGraph(this.props.stockData.data, Session.get('newsData'))}
             margin={{top: 5, right: 30, left: 20, bottom: 5}}>
        				<XAxis dataKey="name"/>
        				<YAxis domain={['auto', 'auto']}/>
@@ -194,7 +194,7 @@ export default class Tile extends Component {
 
 
 					<h2>Cumulative Return</h2>
-					<LineChart width={600} height={300} data={this.parseCMDataIntoGraph(this.props.stockData.data)}
+					<LineChart width={600} height={300} syncId="anyId" data={this.parseCMDataIntoGraph(this.props.stockData.data)}
 							   margin={{top: 5, right: 30, left: 20, bottom: 5}}>
 						<XAxis dataKey="name"/>
 						<YAxis domain={['auto', 'auto']}/>

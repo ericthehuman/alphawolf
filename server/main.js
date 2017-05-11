@@ -11,9 +11,19 @@ import { ReactiveVar } from 'meteor/reactive-var';
 Meteor.startup(() => {
     Stocks.remove({});
     Stocks.insert({name: "Home", code: "Home", data:"", new: false})
-    Stocks.insert({name: "Apple Inc.", code: "AAPL", data: "", new: false});
-    Stocks.insert({name: "Microsoft Corporation", code: "MSFT", data: "", new: false});
-    Stocks.insert({name: "BlackBerry Limited", code: "BBRY", data: "", new: false})
+
+    Meteor.call('getData', "AAPL", function(error, result) {
+      if (result) {
+        var res = JSON.parse(result.content);
+        if (res.Log.Success) {
+          var companyData = res.CompanyReturns[0].Data;
+          Stocks.insert({name: "Apple Inc. (AAPL)", code: "AAPL", data: companyData, new: false});
+          // console.log("Stock added");
+        }
+      } else {
+        console.log(error);
+      }
+    });
 
 });
 
@@ -28,7 +38,7 @@ Meteor.methods({
     	console.log(dateString);
 
 		this.unblock();
-		return HTTP.call('GET', 'https://alphawolfwolf.herokuapp.com/api/finance?list_of_var=CM_Return,AV_Return', {
+		return HTTP.call('GET', 'https://alphawolfwolf.herokuapp.com/api/finance?', {
 			params: {
 				instrumentID: id,
 				upper_window: 0,

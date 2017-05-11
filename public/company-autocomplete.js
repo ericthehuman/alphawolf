@@ -1,7 +1,7 @@
 var ms = $('#magicsuggest').magicSuggest({
   allowFreeEntries: false,
   hideTrigger: true,
-  maxSelection: 2,
+  maxSelection: 1,
   placeholder: 'Search for a company by name or code (max. 2 per search)',
   cls: 'main-input',
   valueField: 'name',

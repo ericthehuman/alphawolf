@@ -10,6 +10,7 @@ import ReactDOM from 'react-dom';
 import { ReactiveVar } from 'meteor/reactive-var';
 import { Button as BSButton, Form, FormControl, FormGroup, Nav, NavItem, Navbar  } from 'react-bootstrap';
 import moment from 'moment';
+import { Checkbox, CheckboxGroup } from 'react-checkbox-group';
 
 
 
@@ -66,30 +67,34 @@ renderTile() {
 
 }
 
-handleOptionChange(eventChange) {
-
-  //this is necessary to display changes in UI state
-  var stockName = eventChange.currentTarget.value;
-  var stockCode = eventChange.currentTarget.id;
-  // console.log("Stock name: " + stockName);
-
-  console.log("option Changed to " + stockCode);
-
+handleOptionChange(companiesList) {
   if(stockCode != "Home"){
-    Meteor.call('getData', stockCode, function(error, result) {
-      if(result){
-        //get what i want from result
-        // console.log(result);
-        // console.log("Namee is still: " + stockName);
-        SelectedStock.set([{
-          name: stockName,
-          code: stockCode,
-          data: result
-        }]);
-      } else {
-        console.log(error);
-      }
-    });
+
+    // Unnecessary stuff just here for the stockCode to be used for the news right now
+    for (var i = 0; i < companiesList.length; i++) {
+      var stockName = companiesList[i];
+      // console.log("Current company name: " + stockName);
+      var codeRegex = /\((.*)\)$/;
+      var stockCode = codeRegex.exec(stockName)[1];
+      stockName = stockName.replace(/\s\(.*\)$/, "");
+      // console.log("Regexed company code: " + stockCode);
+      // console.log("Regexed company name: " + stockName);
+    }
+
+    var stocksToShow = Stocks.find({name: { $in: companiesList } } ).fetch();
+    var dataArray = [];
+    for (var i = 0; i < stocksToShow.length; i++) {
+      var stockName = stocksToShow[i].name;
+      stockName = stockName.replace(/\s\(.*\)$/, "");
+      var data = {
+        code: stocksToShow[i].code,
+        name: stockName,
+        data: stocksToShow[i].data
+      };
+
+      dataArray.push(data);
+    }
+    SelectedStock.set(dataArray);
 
       // assume there is function to retrieve dates
 
@@ -164,19 +169,33 @@ renderStocks() {
 // New submit
 addStock() {
   var newCompanies = JSON.parse(this.refs.inputVal.value);
-  // console.log(newCompanies);
   for (var i = 0; i < newCompanies.length; i++) {
     var codeRegex = /\((.*)\)$/;
     var companyName = newCompanies[i];
-    var companyCode = codeRegex.exec(companyName);
-    companyName = companyName.replace(/\s\(.*\)$/, "");
-    console.log("Regexed company name: " + companyName);
-    Stocks.insert({
-      name: companyName,
-      code: companyCode[1],
-      new: true
+    var companyCode = codeRegex.exec(companyName)[1];
+    console.log("Curr company: " + companyCode);
+    // companyName = companyName.replace(/\s\(.*\)$/, "");
+    // console.log("Regexed company name: " + companyName);
+    Meteor.call('getData', companyCode, function(error, result) {
+      if (result) {
+        var res = JSON.parse(result.content);
+        if (res.Log.Success) {
+          var companyData = res.CompanyReturns[0].Data;
+
+          Stocks.insert({
+            name: companyName,
+            code: companyCode,
+            new: true,
+            data: companyData
+          });
+          console.log("Stock added");
+        } else {
+          console.log(res.Log.ErrorMessage);
+        }
+      } else {
+        console.log(error);
+      }
     });
-    console.log("Stock added");
   }
 
   this.forceUpdate();
@@ -203,11 +222,9 @@ addStock() {
               <BSButton bsStyle="success" onClick={ this.addStock } id="addBtn">Add</BSButton>
               <input type="hidden" ref="inputVal" id="inputVal"/>
             </Navbar.Form>
-            <Form>
-
+            <CheckboxGroup onChange={ this.handleOptionChange }>
               {this.renderStocks()}
-
-            </Form>
+            </CheckboxGroup>
           </Navbar>
         </div>
         <div className="container-fluid main-container">

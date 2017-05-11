@@ -15,7 +15,6 @@ import GraphButton from './GraphButton.jsx';
 
 
 
-var NUMDAYS = 364;
 
 export default class Tile extends Component {
 
@@ -24,20 +23,22 @@ export default class Tile extends Component {
     if(result != null){
         console.log(result);
         console.log(news);
-  	  var array = result.data.CompanyReturns[0].Data;
+  	  var array = result;
   	  var data = [];
   	  var i = 0;
   	  while(i < array.length){
   	  	var headline = "";
   	  	var url = "";
-  	  	for (var j = 0; j < news.length; j++) {
-  	  		// console.log("comparing articles' dates");
-  	  		if (array[i].Date === news[j].date) {
-  	  			console.log("found news match on " + news[j].date);
-  				headline = (news[j].headline != "") ? news[j].headline : news[j].abstract;
-  				url = (news[j].url != "") ? news[j].url : "";
-  				break;
-  			}
+        if (news) {
+          for (var j = 0; j < news.length; j++) {
+    	  		// console.log("comparing articles' dates");
+    	  		if (array[i].Date === news[j].date) {
+    	  			console.log("found news match on " + news[j].date);
+    				headline = (news[j].headline != "") ? news[j].headline : news[j].abstract;
+    				url = (news[j].url != "") ? news[j].url : "";
+    				break;
+    			}
+        }
   		}
   	    data.push({
   	      name: array[i].Date,
@@ -51,24 +52,24 @@ export default class Tile extends Component {
   	}
   }
 
-	parseAVDataIntoGraph(result){
-		if(result != null){
-			var array = result.data.CompanyReturns[0].Data;
-			console.log(array);
-			var data = [];
-			var i = 0;
-			while(i < array.length){
-				data.push({
-					name: array[i].Date,
-					value: Math.round((array[i].AV_Return)*100)
-				});
-				i = i +1;
-			}
-
-			console.log(data);
-			return data;
-		}
-	}
+	// parseAVDataIntoGraph(result){
+	// 	if(result != null){
+	// 		var array = result;
+	// 		console.log(array);
+	// 		var data = [];
+	// 		var i = 0;
+	// 		while(i < array.length){
+	// 			data.push({
+	// 				name: array[i].Date,
+	// 				value: Math.round((array[i].AV_Return)*100)
+	// 			});
+	// 			i = i +1;
+	// 		}
+  //
+	// 		console.log(data);
+	// 		return data;
+	// 	}
+	// }
   //get some info about the company
   getCompanySummary(Name){
   	console.log("the stock name to get summary from is"+ " "+Name);
@@ -85,24 +86,24 @@ export default class Tile extends Component {
   	}
   }
 
-	parseCMDataIntoGraph(result){
-		if(result != null){
-			var array = result.data.CompanyReturns[0].Data;
-			// console.log(array);
-			var data = [];
-			var i = 0;
-			while(i < array.length){
-				data.push({
-					name: array[i].Date,
-					value: Math.round((array[i].CM_Return)*100)
-				});
-				i = i +1;
-			}
-
-			// console.log(data);
-			return data;
-		}
-	}
+	// parseCMDataIntoGraph(result){
+	// 	if(result != null){
+	// 		var array = result;
+	// 		// console.log(array);
+	// 		var data = [];
+	// 		var i = 0;
+	// 		while(i < array.length){
+	// 			data.push({
+	// 				name: array[i].Date,
+	// 				value: Math.round((array[i].CM_Return)*100)
+	// 			});
+	// 			i = i +1;
+	// 		}
+  //
+	// 		// console.log(data);
+	// 		return data;
+	// 	}
+	// }
 
 
   handleUpdateGraph(eventChange) {
@@ -129,18 +130,20 @@ export default class Tile extends Component {
 		}else{
     	// var companySum = this.getCompanySummary(data.name);
 			// console.log(this.parseDataIntoGraph(data.data));
-      var companyReturns = data.data.data.CompanyReturns[0];
-      var currClose = companyReturns.Data[NUMDAYS].Close;
-      var prevClose = companyReturns.Data[NUMDAYS-1].Close;
-      var positiveSignDay = (companyReturns.Data[NUMDAYS].Close-companyReturns.Data[NUMDAYS-1].Close) >= 0 ? "+" : "";
-      var positiveSignAnnual = (companyReturns.Data[NUMDAYS].Close-companyReturns.Data[0].Close) >= 0 ? "+" : "";
-      var highestClose = parseFloat(companyReturns.Data[0].Close);
-      var lowestClose = parseFloat(companyReturns.Data[0].Close);
+      var companyReturns = data.data;
+      var NUMDAYS = companyReturns.length-2;
 
-      console.log("Array length: " + companyReturns.Data.length);
+      var currClose = companyReturns[NUMDAYS].Close;
+      var prevClose = companyReturns[NUMDAYS-1].Close;
+      var positiveSignDay = (companyReturns[NUMDAYS].Close-companyReturns[NUMDAYS-1].Close) >= 0 ? "+" : "";
+      var positiveSignAnnual = (companyReturns[NUMDAYS].Close-companyReturns[0].Close) >= 0 ? "+" : "";
+      var highestClose = parseFloat(companyReturns[0].Close);
+      var lowestClose = parseFloat(companyReturns[0].Close);
+
+      console.log("Array length: " + companyReturns.length);
       // Get the lowest and highest values of the stock
-      for (var i = 0; i < companyReturns.Data.length; i++) {
-        var compareClose = parseFloat(companyReturns.Data[i].Close);
+      for (var i = 0; i < companyReturns.length; i++) {
+        var compareClose = parseFloat(companyReturns[i].Close);
         // console.log("Curr: " + compareClose + " | high: " + highestClose + " | low: " + lowestClose + " | typeof(high): " + typeof(highestClose));
         if (compareClose > highestClose) highestClose = compareClose;
         if (compareClose < lowestClose) lowestClose = compareClose;
@@ -166,8 +169,8 @@ export default class Tile extends Component {
                 </tr>
                 <tr>
                   <td>52-week change</td>
-                  <td className={positiveSignAnnual === "+" ? "stock-positive" : "stock-negative"}><b>{parseFloat(currClose-companyReturns.Data[0].Close).toFixed(2)}{' '}
-                  ({positiveSignAnnual}{parseFloat((currClose-companyReturns.Data[0].Close)/companyReturns.Data[0].Close*100).toFixed(2)}%)</b></td>
+                  <td className={positiveSignAnnual === "+" ? "stock-positive" : "stock-negative"}><b>{parseFloat(currClose-companyReturns[0].Close).toFixed(2)}{' '}
+                  ({positiveSignAnnual}{parseFloat((currClose-companyReturns[0].Close)/companyReturns[0].Close*100).toFixed(2)}%)</b></td>
                 </tr>
                 <tr>
                   <td>52-week high</td>
@@ -199,7 +202,7 @@ export default class Tile extends Component {
       				</LineChart>
 
 
-					<h2>Cumulative Return</h2>
+					{/*<h2>Cumulative Return</h2>
 					<LineChart width={600} height={300} syncId="anyId" data={this.parseCMDataIntoGraph(data.data)}
 							   margin={{top: 5, right: 30, left: 20, bottom: 5}}>
 						<XAxis dataKey="name"/>
@@ -207,7 +210,7 @@ export default class Tile extends Component {
 						<CartesianGrid strokeDasharray="3 3" vertical={false}/>
 						<Tooltip content={ showTooltipData }/>
 						<Line type="monotone" dataKey="value" dot={false}  stroke="#8884d8" activeDot={{r: 8}}/>
-					</LineChart>
+					</LineChart>*/}
 
 				</div>
 

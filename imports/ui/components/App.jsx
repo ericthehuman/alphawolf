@@ -22,8 +22,8 @@ constructor(props){
   this.handleOptionChange = this.handleOptionChange.bind(this);
   this.addStock = this.addStock.bind(this);
   this.state = {
-    selected: "Home",
     submitted: false,
+    selectMultiple: false
   };
   this.newsData = function () {
     return Session.get('newsData');
@@ -48,21 +48,18 @@ constructor(props){
 
 renderTile() {
 
-//if there are two selected things
-//if there is one selected thing max
-
-  // console.log("Code to pass: " + this.props.selectedStock.code);
-  // console.log("Name to pass: " + this.props.selectedStock.name);
-  if(this.props.selectedStock.code == "Home"){
+  // console.log("Code to pass: " + this.props.selectedStocks.code);
+  // console.log("Name to pass: " + this.props.selectedStocks.name);
+  if(this.props.selectedStocks.code == "Home"){
     return (
       <div>
-        <Tile stockData={this.props.selectedStock} display={"Home"} />
+        <Tile stockData={this.props.selectedStocks} display={"Home"} />
       </div>
     );
   }else{
     return (
       <div>
-        <Tile stockData={this.props.selectedStock} />
+        <Tile stockData={this.props.selectedStocks} />
       </div>
     );
   }
@@ -76,11 +73,6 @@ handleOptionChange(eventChange) {
   var stockCode = eventChange.currentTarget.id;
   // console.log("Stock name: " + stockName);
 
-  this.setState({
-    selected: stockCode
-  });
-
-
   console.log("option Changed to " + stockCode);
 
   if(stockCode != "Home"){
@@ -89,11 +81,11 @@ handleOptionChange(eventChange) {
         //get what i want from result
         // console.log(result);
         // console.log("Namee is still: " + stockName);
-        SelectedStock.set({
+        SelectedStock.set([{
           name: stockName,
           code: stockCode,
           data: result
-        });
+        }]);
       } else {
         console.log(error);
       }
@@ -151,10 +143,10 @@ handleOptionChange(eventChange) {
 
   } else {
     console.log("Home");
-    SelectedStock.set({
+    SelectedStock.set([{
       code: "Home",
       data: "",
-    })
+    }])
   }
 
 }
@@ -290,7 +282,7 @@ App.propTypes = {
   ddata: PropTypes.array.isRequired,
   comps: PropTypes.array.isRequired,
   stocks: PropTypes.array.isRequired,
-  selectedStock: PropTypes.object,
+  selectedStocks: PropTypes.array,
 };
 
 export default createContainer(() => {
@@ -298,6 +290,6 @@ export default createContainer(() => {
     ddata: Data.find({}).fetch(),
     comps: Companies.find({}).fetch(),
     stocks: Stocks.find({}).fetch(),
-    selectedStock: SelectedStock.get()
+    selectedStocks: SelectedStock.get()
   };
 }, App);

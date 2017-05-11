@@ -121,7 +121,11 @@ export default class Tile extends Component {
 	render() {
 		// console.log("Tile rendered");
 
-		if(this.props.display == "Home"){
+    // While we only have functionality for 1 stock
+    var data = this.props.stockData[0];
+    console.log("NAME: " + data.name);
+    console.log("CODE: " + data.code);
+		if(data.code === "Home"){
 		return (
 			<div className="tile">
 				<Item news={"Uber stocks fall amidst scandals"} imagef={"uber.jpg"}/>
@@ -131,10 +135,9 @@ export default class Tile extends Component {
 			</div>
 			);
 		}else{
-    	console.log("NAME: " + this.props.stockData.name);
-    	// var companySum = this.getCompanySummary(this.props.stockData.name);
-			// console.log(this.parseDataIntoGraph(this.props.stockData.data));
-      var companyReturns = this.props.stockData.data.data.CompanyReturns[0];
+    	// var companySum = this.getCompanySummary(data.name);
+			// console.log(this.parseDataIntoGraph(data.data));
+      var companyReturns = data.data.data.CompanyReturns[0];
       var currClose = companyReturns.Data[NUMDAYS].Close;
       var prevClose = companyReturns.Data[NUMDAYS-1].Close;
       var positiveSignDay = (companyReturns.Data[NUMDAYS].Close-companyReturns.Data[NUMDAYS-1].Close) >= 0 ? "+" : "";
@@ -155,7 +158,7 @@ export default class Tile extends Component {
 			return (
 				<div className="tile">
 					<div className="big">
-            <h1>{this.props.stockData.name} <span className="stock-code">({this.props.stockData.code})</span></h1>
+            <h1>{data.name} <span className="stock-code">({data.code})</span></h1>
             <h2> <b>${parseFloat(currClose).toFixed(2)}</b> <span className={positiveSignDay === "+" ? "stock-positive" : "stock-negative"}>{positiveSignDay}
             {parseFloat(currClose-prevClose).toFixed(2)} ({positiveSignDay}{parseFloat((currClose-prevClose)/prevClose*100).toFixed(2)}%)</span></h2>
             <Table>
@@ -184,7 +187,7 @@ export default class Tile extends Component {
                 </tr>
               </tbody>
             </Table>
-  					{/*this.getCompanySummary(this.props.stockData.name)*/}
+  					{/*this.getCompanySummary(data.name)*/}
 					</div>
 
           <Form>
@@ -194,7 +197,7 @@ export default class Tile extends Component {
             <GraphButton name={"Today"} numDays={1} updateGraph={this.handleUpdateGraph.bind(this)}/>
           </Form>
 					<h2>Closing Price</h2>
-					<LineChart width={600} height={300} syncId="anyId" data={this.parseDataIntoGraph(this.props.stockData.data, Session.get('newsData'), Session.get('sectionNewsData'))}
+					<LineChart width={600} height={300} syncId="anyId" data={this.parseDataIntoGraph(data.data, Session.get('newsData'))}
             margin={{top: 5, right: 30, left: 20, bottom: 5}}>
        				<XAxis dataKey="name"/>
        				<YAxis domain={['auto', 'auto']}/>
@@ -205,7 +208,7 @@ export default class Tile extends Component {
 
 
 					<h2>Cumulative Return</h2>
-					<LineChart width={600} height={300} syncId="anyId" data={this.parseCMDataIntoGraph(this.props.stockData.data)}
+					<LineChart width={600} height={300} syncId="anyId" data={this.parseCMDataIntoGraph(data.data)}
 							   margin={{top: 5, right: 30, left: 20, bottom: 5}}>
 						<XAxis dataKey="name"/>
 						<YAxis domain={['auto', 'auto']}/>
@@ -223,7 +226,7 @@ export default class Tile extends Component {
 
 function showTooltipData (data) {
     if ( typeof data.payload[0] !== 'undefined') {
-        // console.log(this.props.stockData.news);
+        // console.log(data.news);
         // console.log(Object.keys(data.payload[0]));
         // console.log(Object.values(data.payload[0]));
     	var date = data.payload[0].payload.name;
@@ -253,7 +256,7 @@ function showTooltipData (data) {
 //     },
 //
 //     getIntroOfPage(label) {
-//         this.props.stockData.news.forEach ( function (news) {
+//         data.news.forEach ( function (news) {
 // 			if (news.date === label) {
 // 				return news.headline;
 // 			}
@@ -282,5 +285,5 @@ function showTooltipData (data) {
 Tile.propTypes = {
   // This component gets the return figure to display through a React prop.
   // We can use propTypes to indicate it is required
-  stockData: PropTypes.object.isRequired,
+  stockData: PropTypes.array.isRequired,
 };

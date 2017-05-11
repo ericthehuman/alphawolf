@@ -46,5 +46,21 @@ Meteor.methods({
 					titles: name
 				}
 		});
+	},
+
+	//get company data from intrino, this function ain't connecting and i can't figure out why zz
+	'retrieveCompanyData': function (stockCode) {
+        this.unblock();
+        console.log("CALLING retrieveCompanyData " + stockCode);
+        return HTTP.call('GET', 'https://api.intrinio.com/companies?', {
+            headers: {
+                Authorization: "a6d9f89537dd393dff3caf7d6982efb1:e827c3b2db95358452d09c6e8512a2de"
+                // Authorization: "Basic $BASE64_ENCODED(a6d9f89537dd393dff3caf7d6982efb1:e827c3b2db95358452d09c6e8512a2de)"
+            },
+       		params: {
+                identifier: stockCode,
+				// query: {query-string} // optional
+        	}
+        });
 	}
 });

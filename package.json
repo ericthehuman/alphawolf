@@ -14,6 +14,7 @@
     "react": "^15.5.4",
     "react-addons-pure-render-mixin": "^15.5.2",
     "react-bootstrap": "^0.31.0",
+    "react-checkbox-group": "^3.1.1",
     "react-dom": "^15.5.4",
     "react-highcharts": "^12.0.0",
     "react-router": "^4.1.1",

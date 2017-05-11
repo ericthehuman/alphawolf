@@ -23,9 +23,9 @@ export default class Tile extends Component {
     if(result != null){
         console.log(result);
         console.log(news);
-  	  // var array = result;
+  	  var array = result;
         console.log(section);
-        var array = result.data.CompanyReturns[0].Data;
+        // var array = result.data.CompanyReturns[0].Data;
   	  var data = [];
   	  var i = 0;
   	  var numMatches = 0;

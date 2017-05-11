@@ -105,7 +105,6 @@ handleOptionChange(companiesList) {
       // retrieve company information from Intrinio
       this.callIntrinioAPI(stockCode, function (result) {
 
-          console.log("should trigger this function???");
           console.log(result);
 
           // assume there is function to retrieve dates

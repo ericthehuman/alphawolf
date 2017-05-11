@@ -23,9 +23,8 @@ export default class Tile extends Component {
     if(result != null){
         console.log(result);
         console.log(news);
-  	  var array = result;
         console.log(section);
-        // var array = result.data.CompanyReturns[0].Data;
+  	  var array = result;
   	  var data = [];
   	  var i = 0;
   	  var numMatches = 0;
@@ -199,7 +198,7 @@ export default class Tile extends Component {
             <GraphButton name={"Today"} numDays={1} updateGraph={this.handleUpdateGraph.bind(this)}/>
           </Form>
 					<h2>Closing Price</h2>
-					<LineChart width={600} height={300} syncId="anyId" data={this.parseDataIntoGraph(this.props.stockData.data, Session.get('newsData'), Session.get('sectionNewsData'))}
+					<LineChart width={600} height={300} syncId="anyId" data={this.parseDataIntoGraph(data.data, Session.get('newsData'), Session.get('sectionNewsData'))}
             margin={{top: 5, right: 30, left: 20, bottom: 5}}>
        				<XAxis dataKey="name"/>
        				<YAxis domain={['auto', 'auto']}/>

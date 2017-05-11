@@ -19,27 +19,33 @@ import GraphButton from './GraphButton.jsx';
 export default class Tile extends Component {
 
   //converts raw api data into structure the graph component uses
-  parseDataIntoGraph(result, news){
+  parseDataIntoGraph(result, news, section){
     if(result != null){
         console.log(result);
         console.log(news);
-  	  var array = result;
+  	  // var array = result;
+        console.log(section);
+        var array = result.data.CompanyReturns[0].Data;
   	  var data = [];
   	  var i = 0;
+  	  var numMatches = 0;
   	  while(i < array.length){
   	  	var headline = "";
   	  	var url = "";
-        if (news) {
-          for (var j = 0; j < news.length; j++) {
-    	  		// console.log("comparing articles' dates");
-    	  		if (array[i].Date === news[j].date) {
-    	  			console.log("found news match on " + news[j].date);
-    				headline = (news[j].headline != "") ? news[j].headline : news[j].abstract;
-    				url = (news[j].url != "") ? news[j].url : "";
-    				break;
-    			}
+  	  	for (var j = 0; j < news.length; j++) {
+  	  		// add news or industry per date, but limited to one article per day?? -- to avoid same news? fix for now (otherwise should compare article number or something)
+  	  		if (news[j] !== undefined && array[i].Date === news[j].date) {
+				numMatches++;
+  				headline = news[j].headline;
+  				url = news[j].url;
+                break;
+  			} else if (section[j] !== undefined && array[i].Date === section[j].date) {
+                numMatches++;
+                headline = section[j].headline;
+                url = section[j].url;
+                break;
+            }
         }
-  		}
   	    data.push({
   	      name: array[i].Date,
   	      value: Math.round((array[i].Close)*100),
@@ -48,6 +54,7 @@ export default class Tile extends Component {
   	    });
   	    i = i +1;
   	  }
+        console.log("num of article matches " + numMatches);
   	  return data;
   	}
   }
@@ -192,7 +199,7 @@ export default class Tile extends Component {
             <GraphButton name={"Today"} numDays={1} updateGraph={this.handleUpdateGraph.bind(this)}/>
           </Form>
 					<h2>Closing Price</h2>
-					<LineChart width={600} height={300} syncId="anyId" data={this.parseDataIntoGraph(data.data, Session.get('newsData'))}
+					<LineChart width={600} height={300} syncId="anyId" data={this.parseDataIntoGraph(this.props.stockData.data, Session.get('newsData'), Session.get('sectionNewsData'))}
             margin={{top: 5, right: 30, left: 20, bottom: 5}}>
        				<XAxis dataKey="name"/>
        				<YAxis domain={['auto', 'auto']}/>

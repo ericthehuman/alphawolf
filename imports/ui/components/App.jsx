@@ -27,7 +27,13 @@ constructor(props){
     selectMultiple: false
   };
   this.newsData = function () {
-    return Session.get('newsData');
+      return Session.get('newsData');
+  }
+  this.sectionNewsData = function () {
+      return Session.get('sectionNewsData');
+  }
+  this.companyData = function() {
+      return Session.get('companyData');
   }
 }
 
@@ -96,54 +102,25 @@ handleOptionChange(companiesList) {
     }
     SelectedStock.set(dataArray);
 
-      // assume there is function to retrieve dates
+      // retrieve company information from Intrinio
+      this.callIntrinioAPI(stockCode, function (result) {
 
-      // var begin_date = moment().subtract(365, 'days').format('YYYYMMDD'); // NYT dates must be in format YYYYMMDD
-      // var end_date = moment().format('YYYYMMDD');
-      // console.log("Begin: " + begin_date + " | End: " + end_date);
-      var begin_date = "20161228";
-      var end_date = "20170407";
-      var companyName = "";
-      if (stockCode === "MSFT")
-        companyName = "Microsoft";
-      else if (stockCode === "AAPL")
-        companyName = "Apple Inc";
-      else if (stockCode === "BBRY")
-        companyName = "Blackberry";
+          console.log("should trigger this function???");
+          console.log(result);
 
-      Meteor.http.call('GET',
-          'https://api.nytimes.com/svc/search/v2/articlesearch.json?'
-          + 'api-key=' + "591e19bb7d974693b30e645f3288102d"
-          + '&q=' + companyName
-          + '&begin_date=' + begin_date
-          + '&end_date=' + end_date,
-          function (error, result) {
-          if (error) {
-              console.log(error);
-          } else {
-              var newsArray = [];
-              console.log("Returning articles on " + companyName);
-              var parsedresult = JSON.parse(result.content);
-              console.log(parsedresult.response.docs.length);
-              var length = Math.min(100, parsedresult.response.docs.length);
-              for (var i = 0; i < length; i++) {
-                  var article = parsedresult.response.docs[i];
-                  newsArray[i] = article;
-                  newsArray[i]['headline'] = (article.headline != null) ? article.headline.main : "";
-                  newsArray[i]['abstract'] = (article.snippet != null) ? article.snippet : article.lead_paragraph; // summary of article
-                  newsArray[i]['url'] = article.web_url; // url of article
-                  newsArray[i]['source'] = article.source; // name of news source i.e. NYT
-                  newsArray[i]['date'] = article.pub_date.substring(8,10)+"/"+article.pub_date.substring(5,7)+"/"+article.pub_date.substring(0,4); // publication date in YYYY-MM-DD'T'HH:MM:SS'Z' -> DD/MM/YYYY
-                  newsArray[i]['pic'] = (article.multimedia.length != 0) ? "http://www.nytimes.com" + article.multimedia["0"].url : "no pic"; // this may not necessarily be related to news, but also icons
-                  // console.log(newsArray[i].headline + " " + newsArray[i].abstract + " " + newsArray[i].web_url + " " + newsArray[i].source + " " + newsArray[i].date + " " + newsArray[i].pic);
-              }
+          // assume there is function to retrieve dates
+          // var begin_date = moment().subtract(365, 'days').format('YYYYMMDD');
+          // var end_date = moment().format('YYYYMMDD');
+          // console.log("Begin: " + begin_date + " | End: " + end_date);
+          var begin_date = "2016-12-28";
+          var end_date = "2017-04-07";
 
-              console.log(newsArray);
-              // SelectedStock.set({
-              //   news: newsArray
-              // });
-              Session.set('newsData', newsArray);
-          }
+          // The Guardian date must be in format YYYY-MM-DD
+          // NYT dates must be in format YYYYMMDD
+          // switch number of articles returned by specifying 2nd param in this call
+          callGuardianAPI(stockName, 100, begin_date, end_date, 'newsData');
+          callGuardianAPI(result.sector, 100, begin_date, end_date, 'sectionNewsData');
+
       });
 
   } else {
@@ -154,6 +131,92 @@ handleOptionChange(companiesList) {
     }])
   }
 
+    // guardian API call to get x num of articles between certain dates (but hard cap at 100; change below if needed)
+    function callGuardianAPI(queryTopic, x, begin_date, end_date, sessionKeyword) {
+        console.log("callGuarddianAPI " + queryTopic + " " + x + " " + begin_date + " " + end_date);
+        if (sessionKeyword === "sectionNewsData") {
+            queryTopic += "%20major%20news";
+        }
+
+        HTTP.call('GET',
+            'http://content.guardianapis.com/search?'
+            + 'from-date=' + begin_date
+            + '&to-date=' + end_date
+            + '&page-size=' + x // retrieve x articles
+            + '&q=' + queryTopic
+            + '&api-key=' + 'test', //'59ce1afb-ea95-4ab7-971e-dc59c7189718', //'test'
+            function (error, result) {
+                if (error) {
+                    console.log(error);
+                    return null;
+                } else {
+
+                    var newsArray = [];
+                    var sectionId = []; // to determine company's main sector
+                    sectionId["maxNum"] = 0;
+                    sectionId["name"] = "";
+
+                    var parsedResult = JSON.parse(result.content);
+                    var length = Math.min(100, parsedResult.response.results.length); // hard cap set here
+
+                    for (var i = 0; i < length; i++) {
+                        var article = parsedResult.response.results[i];
+                        newsArray[i] = article;
+                        newsArray[i]['headline'] = (article.webTitle === undefined) ? "" : article.webTitle;
+                        newsArray[i]['url'] = article.webUrl;
+                        newsArray[i]['source'] = "The Guardian UK"; // name of news source i.e. Guardian UK
+                        // publication date in YYYY-MM-DD'T'HH:MM:SS'Z' -> DD/MM/YYYY
+                        newsArray[i]['date'] = article.webPublicationDate.substring(8, 10) + "/" + article.webPublicationDate.substring(5, 7) + "/" + article.webPublicationDate.substring(0, 4);
+                        // newsArray[i]['pic'] = (article.multimedia.length != 0) ? "http://www.nytimes.com" + article.multimedia["0"].url : "no pic"; // icons/pics only exist in NYT
+                        // newsArray[i]['abstract'] = (article.snippet !== undefined) ? article.snippet : article.lead_paragraph; // snippets only exist in NYT
+                    }
+
+                    console.log(newsArray);
+                    Session.set(sessionKeyword, newsArray);
+                }
+            });
+    };
+
+}
+
+// calls Intrinio API to get company information from its stockCode
+callIntrinioAPI(stockCode, callback) {
+    HTTP.call('GET', 'https://api.intrinio.com/companies?', {
+        headers: {
+            // Authorization: "Basic $BASE64_ENCODED(a6d9f89537dd393dff3caf7d6982efb1:e827c3b2db95358452d09c6e8512a2de)"
+            // manually converting the API_KEY:API_PASSWORD into base64 because meteor is shite and this took fucking hours
+            Authorization: "Basic YTZkOWY4OTUzN2RkMzkzZGZmM2NhZjdkNjk4MmVmYjE6ZTgyN2MzYjJkYjk1MzU4NDUyZDA5YzZlODUxMmEyZGU="
+        },
+        // auth : "YTZkOWY4OTUzN2RkMzkzZGZmM2NhZjdkNjk4MmVmYjE=:ZTgyN2MzYjJkYjk1MzU4NDUyZDA5YzZlODUxMmEyZGU=",
+        params: {
+            identifier: stockCode,
+            // query: {query-string} // optional
+        }
+    }, function(error, result) {
+        if (result) {
+            var company = JSON.parse(result.content);
+            console.log(company);
+
+            var companyData = [];
+            companyData["name"] = company.name;
+            companyData["short_description"] = company.short_description;
+            companyData["ceo"] = company.ceo;
+            companyData["url"] = company.company_url;
+            companyData["address"] = company.business_address;
+            companyData["phone"] = company.business_phone_no;
+            companyData["securities"] = company.securities; // can have multiple stocks, so this is an array
+            companyData["sector"] = company.sector;
+            companyData["industry_category"] = company.industry_category;
+
+            Session.set('companyData', companyData);
+            console.log(companyData);
+            return callback(companyData);
+
+        } else {
+            console.log("Shites not working");
+            console.log(error);
+        }
+    });
 }
 
 handleStockScope (event){

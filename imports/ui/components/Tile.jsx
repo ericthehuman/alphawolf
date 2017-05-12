@@ -31,7 +31,7 @@ export default class Tile extends Component {
   	  while(i < array.length){
   	  	var headline = "";
   	  	var url = "";
-  	  	for (var j = 0; j < news.length; j++) {
+  	  	/*for (var j = 0; j < news.length; j++) {
   	  		// add news or industry per date, but limited to one article per day?? -- to avoid same news? fix for now (otherwise should compare article number or something)
   	  		if (news[j] !== undefined && array[i].Date === news[j].date) {
 				numMatches++;
@@ -44,7 +44,7 @@ export default class Tile extends Component {
                 url = section[j].url;
                 break;
             }
-        }
+        }*/
   	    data.push({
   	      name: array[i].Date,
   	      value: Math.round((array[i].Close)*100),
@@ -206,17 +206,6 @@ export default class Tile extends Component {
        				<Tooltip content={ showTooltipData }/>
        				<Line type="monotone" dataKey="value" dot={false}  stroke="#8884d8" activeDot={{r: 8}}/>
       				</LineChart>
-
-
-					{/*<h2>Cumulative Return</h2>
-					<LineChart width={600} height={300} syncId="anyId" data={this.parseCMDataIntoGraph(data.data)}
-							   margin={{top: 5, right: 30, left: 20, bottom: 5}}>
-						<XAxis dataKey="name"/>
-						<YAxis domain={['auto', 'auto']}/>
-						<CartesianGrid strokeDasharray="3 3" vertical={false}/>
-						<Tooltip content={ showTooltipData }/>
-						<Line type="monotone" dataKey="value" dot={false}  stroke="#8884d8" activeDot={{r: 8}}/>
-					</LineChart>*/}
 
 				</div>
 

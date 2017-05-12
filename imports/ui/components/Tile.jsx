@@ -13,6 +13,8 @@ import Button from './Button.jsx';
 import GraphButton from './GraphButton.jsx';
 //import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend} from 'recharts';
 
+var Highcharts = require('highcharts');
+
 
 
 
@@ -21,6 +23,7 @@ export default class Tile extends Component {
   //converts raw api data into structure the graph component uses
   parseDataIntoGraph(result, news, section){
     if(result != null){
+
         console.log(result);
         console.log(news);
         console.log(section);
@@ -28,6 +31,8 @@ export default class Tile extends Component {
   	  var data = [];
   	  var i = 0;
   	  var numMatches = 0;
+      var dates = [];
+      var values = [];
   	  while(i < array.length){
   	  	var headline = "";
   	  	var url = "";
@@ -45,6 +50,8 @@ export default class Tile extends Component {
                 break;
             }
         }*/
+        dates.push(array[i].Date);
+        values.push(Math.round((array[i].Close)*100));
   	    data.push({
   	      name: array[i].Date,
   	      value: Math.round((array[i].Close)*100),
@@ -52,9 +59,22 @@ export default class Tile extends Component {
   		  url: url,
   	    });
   	    i = i +1;
-  	  }
-        console.log("num of article matches " + numMatches);
-  	  return data;
+  	  }        console.log("num of article matches " + numMatches);
+  	
+       var chart = Highcharts.chart('container', {
+        xAxis: {
+          categories: dates
+        },
+        series: [{
+          data: values,
+          name: "Closing Price"
+        }],
+        title: {
+          text: "Closing Price"
+        }
+        // ... more options - see http://api.highcharts.com/highcharts
+        });
+        return data;
   	}
   }
 
@@ -121,9 +141,12 @@ export default class Tile extends Component {
 		// console.log("Tile rendered");
 
     // While we only have functionality for 1 stock
+
     var data = this.props.stockData[0];
+    console.log(data);
     console.log("NAME: " + data.name);
     console.log("CODE: " + data.code);
+
 		if(data.code === "Home"){
 		return (
 			<div className="tile">
@@ -189,6 +212,7 @@ export default class Tile extends Component {
               </tbody>
             </Table>
   					{/*this.getCompanySummary(data.name)*/}
+
 					</div>
 
           <Form>
@@ -198,6 +222,7 @@ export default class Tile extends Component {
             <GraphButton name={"Today"} numDays={1} updateGraph={this.handleUpdateGraph.bind(this)}/>
           </Form>
 					<h2>Closing Price</h2>
+
 					<LineChart width={600} height={300} syncId="anyId" data={this.parseDataIntoGraph(data.data, Session.get('newsData'), Session.get('sectionNewsData'))}
             margin={{top: 5, right: 30, left: 20, bottom: 5}}>
        				<XAxis dataKey="name"/>
@@ -206,6 +231,17 @@ export default class Tile extends Component {
        				<Tooltip content={ showTooltipData }/>
        				<Line type="monotone" dataKey="value" dot={false}  stroke="#8884d8" activeDot={{r: 8}}/>
       				</LineChart>
+
+              <div id="container"></div>
+					{/*<h2>Cumulative Return</h2>
+					<LineChart width={600} height={300} syncId="anyId" data={this.parseCMDataIntoGraph(data.data)}
+							   margin={{top: 5, right: 30, left: 20, bottom: 5}}>
+						<XAxis dataKey="name"/>
+						<YAxis domain={['auto', 'auto']}/>
+						<CartesianGrid strokeDasharray="3 3" vertical={false}/>
+						<Tooltip content={ showTooltipData }/>
+						<Line type="monotone" dataKey="value" dot={false}  stroke="#8884d8" activeDot={{r: 8}}/>
+					</LineChart>*/}
 
 				</div>
 
@@ -238,7 +274,8 @@ function showTooltipData (data) {
 
 }
 
-// const CustomTooltip  = React.createClass({
+// style={{marginRight: spacing + 'em'}} ,  style="height: 500px; min-width: 310px; max-width: 600px; margin: 0 auto"
+//const CustomTooltip  = React.createClass({
 //     propTypes: {
 //         type: PropTypes.string,
 //         payload: PropTypes.array,

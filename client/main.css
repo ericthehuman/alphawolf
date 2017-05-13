@@ -2,7 +2,9 @@
 .stylethis {
 	font-size: 13px;
 }
-
+#fake-graph {
+	display: none;
+}
 body {
 	padding-top: 120px;
 	margin: auto;

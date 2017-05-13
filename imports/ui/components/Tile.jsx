@@ -8,12 +8,13 @@ import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend} from 're
 import ReactDOM from 'react-dom';
 import { Table, Form } from 'react-bootstrap';
 
-import { Data, Companies, Stocks, SelectedStock } from '../../api/data.js';
+import { Data, Companies, Stocks, SelectedStock, News } from '../../api/data.js';
 import Button from './Button.jsx';
 import GraphButton from './GraphButton.jsx';
 //import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend} from 'recharts';
-
-var Highcharts = require('highcharts');
+var Highcharts = require('highcharts/highstock');
+//var Highcharts = require('highcharts');
+//var Highstock = require('react-highstock');
 
 
 
@@ -33,9 +34,47 @@ export default class Tile extends Component {
   	  var numMatches = 0;
       var dates = [];
       var values = [];
+      var stockData = [];
+      var newsData = [];
+      // convert data for graphing on high stocks
+      // format:
+      // [[timestamp, stockValue], [timestamp, stockValue] ....] 
+      for (i = 0; i < array.length; i ++) {
+        var datestr = array[i].Date;
+        datestr = datestr.split("/");
+        var dd = datestr[0];
+        var mm = datestr[1];
+        var yyyy = datestr[2];
+        var timestamp = (new Date(yyyy,mm, dd).getTime());
+        var currStockData = [];
+        currStockData.push(timestamp);
+        dates.push(timestamp);
+        currStockData.push(Math.round((array[i].Close)*100));
+        stockData.push(currStockData);
+      }
+      
+      // parse data for displaying news
+      for (var j = 0; j < news.length; j++) {
+        var currNewsItem = news[j];
+        var newsDate = currNewsItem["date"];
+
+        var datestr = newsDate.split("/");
+        var dd = datestr[0];
+        var mm = datestr[1];
+        var yyyy = datestr[2];
+        var timestamp = (new Date(yyyy,mm, dd).getTime());
+
+        var newsHeadline = currNewsItem["headline"];
+        var currNewsData = {x: timestamp, title: newsHeadline};
+
+        newsData.push(currNewsData);
+      }
+
+      i = 0;
   	  while(i < array.length){
   	  	var headline = "";
   	  	var url = "";
+
   	  	/*for (var j = 0; j < news.length; j++) {
   	  		// add news or industry per date, but limited to one article per day?? -- to avoid same news? fix for now (otherwise should compare article number or something)
   	  		if (news[j] !== undefined && array[i].Date === news[j].date) {
@@ -50,25 +89,30 @@ export default class Tile extends Component {
                 break;
             }
         }*/
-        dates.push(array[i].Date);
         values.push(Math.round((array[i].Close)*100));
   	    data.push({
   	      name: array[i].Date,
   	      value: Math.round((array[i].Close)*100),
-  		  info: headline,
-  		  url: url,
-  	    });
+  		    info: headline,
+  		    url: url,
+  	     });
   	    i = i +1;
   	  }        console.log("num of article matches " + numMatches);
   	
-       var chart = Highcharts.chart('container', {
-        xAxis: {
-          categories: dates
-        },
+       var chart = Highcharts.stockChart('container', {
+        
         series: [{
-          data: values,
-          name: "Closing Price"
-        }],
+          data: stockData,//values,
+          name: "Closing Price",
+          id: "stockData"
+        },{
+            type: 'flags',
+            name: 'Flags on series',
+            data: newsData,
+            onSeries: 'stockData',
+            shape: 'squarepin'
+        }
+        ],
         title: {
           text: "Closing Price"
         }
@@ -143,7 +187,10 @@ export default class Tile extends Component {
     // While we only have functionality for 1 stock
 
     var data = this.props.stockData[0];
+    var news = this.props.newsData[0];
     console.log(data);
+    console.log(news);
+    //console.log(this.props.newsData);
     console.log("NAME: " + data.name);
     console.log("CODE: " + data.code);
 
@@ -223,7 +270,7 @@ export default class Tile extends Component {
           </Form>
 					<h2>Closing Price</h2>
 
-					<LineChart width={600} height={300} syncId="anyId" data={this.parseDataIntoGraph(data.data, Session.get('newsData'), Session.get('sectionNewsData'))}
+					<LineChart width={600} height={300} syncId="anyId" data={this.parseDataIntoGraph(data.data, news.data, Session.get('sectionNewsData'))}
             margin={{top: 5, right: 30, left: 20, bottom: 5}}>
        				<XAxis dataKey="name"/>
        				<YAxis domain={['auto', 'auto']}/>
@@ -313,4 +360,5 @@ Tile.propTypes = {
   // This component gets the return figure to display through a React prop.
   // We can use propTypes to indicate it is required
   stockData: PropTypes.array.isRequired,
+  newsData: PropTypes.array.isRequired,
 };

@@ -2,7 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import { Meteor } from 'meteor/meteor';
 import { HTTP } from 'meteor/http';
 import { createContainer } from 'meteor/react-meteor-data';
-import { Data, Companies, Stocks, SelectedStock } from '../../api/data.js';
+import { Data, Companies, Stocks, SelectedStock, News } from '../../api/data.js';
 import Tile from './Tile.jsx';
 import Button from './Button.jsx';
 //import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend} from 'recharts';
@@ -66,7 +66,7 @@ renderTile() {
   }else{
     return (
       <div>
-        <Tile stockData={this.props.selectedStocks} />
+        <Tile stockData={this.props.selectedStocks} newsData={this.props.newsData}/>
       </div>
     );
   }
@@ -104,7 +104,7 @@ handleOptionChange(companiesList) {
 
       // retrieve company information from Intrinio
       this.callIntrinioAPI(stockCode, function (result) {
-
+          
           console.log(result);
 
           // assume there is function to retrieve dates
@@ -172,6 +172,10 @@ handleOptionChange(companiesList) {
 
                     console.log(newsArray);
                     Session.set(sessionKeyword, newsArray);
+                    News.set([{
+                      code: "News",
+                      data: newsArray,
+                    }])
                 }
             });
     };
@@ -362,6 +366,7 @@ App.propTypes = {
   comps: PropTypes.array.isRequired,
   stocks: PropTypes.array.isRequired,
   selectedStocks: PropTypes.array,
+  newsData: PropTypes.array,
 };
 
 export default createContainer(() => {
@@ -369,6 +374,7 @@ export default createContainer(() => {
     ddata: Data.find({}).fetch(),
     comps: Companies.find({}).fetch(),
     stocks: Stocks.find({}).fetch(),
-    selectedStocks: SelectedStock.get()
+    selectedStocks: SelectedStock.get(),
+    newsData: News.get(),
   };
 }, App);

@@ -1,6 +1,6 @@
 {
   "version": "4.2.1",
-  "base": "highcharts.js",
+  "base": "highstock.js", //"highcharts.js",
   "adapter": "default",
   "modules": [
     "highcharts-3d.src.js",
@@ -8,6 +8,8 @@
     "modules/heatmap.js",
     "modules/drilldown.js",
     "modules/map.js",
-    "themes/gray.js"
+    "themes/gray.js",
+    "highstock.js",
+    "modules/data.js"
   ]
 }

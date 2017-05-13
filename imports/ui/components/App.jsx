@@ -183,10 +183,9 @@ callIntrinioAPI(stockCode, callback) {
     HTTP.call('GET', 'https://api.intrinio.com/companies?', {
         headers: {
             // Authorization: "Basic $BASE64_ENCODED(a6d9f89537dd393dff3caf7d6982efb1:e827c3b2db95358452d09c6e8512a2de)"
-            // manually converting the API_KEY:API_PASSWORD into base64 because meteor is shite and this took fucking hours
+            // manually converting the API_KEY:API_PASSWORD into base64
             Authorization: "Basic YTZkOWY4OTUzN2RkMzkzZGZmM2NhZjdkNjk4MmVmYjE6ZTgyN2MzYjJkYjk1MzU4NDUyZDA5YzZlODUxMmEyZGU="
         },
-        // auth : "YTZkOWY4OTUzN2RkMzkzZGZmM2NhZjdkNjk4MmVmYjE=:ZTgyN2MzYjJkYjk1MzU4NDUyZDA5YzZlODUxMmEyZGU=",
         params: {
             identifier: stockCode,
             // query: {query-string} // optional

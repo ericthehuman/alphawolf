@@ -13,7 +13,7 @@ import Button from './Button.jsx';
 import GraphButton from './GraphButton.jsx';
 //import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend} from 'recharts';
 
-var Highcharts = require('highcharts');
+var Highcharts = require('highcharts/highstock');
 
 
 
@@ -21,60 +21,89 @@ var Highcharts = require('highcharts');
 export default class Tile extends Component {
 
   //converts raw api data into structure the graph component uses
-  parseDataIntoGraph(result, news, section){
+  parseDataIntoGraph(result){
+
     if(result != null){
 
-        console.log(result);
-        console.log(news);
-        console.log(section);
-  	  var array = result;
-  	  var data = [];
-  	  var i = 0;
-  	  var numMatches = 0;
+    console.log(result);
+
+      var array = result;
+      // this is data for original graph
+      var data = [];
+
+      // data for new graph
       var dates = [];
       var values = [];
-  	  while(i < array.length){
-  	  	var headline = "";
-  	  	var url = "";
-  	  	/*for (var j = 0; j < news.length; j++) {
-  	  		// add news or industry per date, but limited to one article per day?? -- to avoid same news? fix for now (otherwise should compare article number or something)
-  	  		if (news[j] !== undefined && array[i].Date === news[j].date) {
-				numMatches++;
-  				headline = news[j].headline;
-  				url = news[j].url;
-                break;
-  			} else if (section[j] !== undefined && array[i].Date === section[j].date) {
-                numMatches++;
-                headline = section[j].headline;
-                url = section[j].url;
-                break;
-            }
-        }*/
-        dates.push(array[i].Date);
-        values.push(Math.round((array[i].Close)*100));
+
+  	  for (var i = 0; i < result.length; i++) {
+        dates.push(result[i].Date); // x axis
+        values.push(Math.round((result[i].Close))); // y axis (in whole dollars)
+
   	    data.push({
-  	      name: array[i].Date,
-  	      value: Math.round((array[i].Close)*100),
-  		  info: headline,
-  		  url: url,
+  	      name: result[i].Date,
+  	      value: Math.round((result[i].Close)*100),
   	    });
-  	    i = i +1;
-  	  }        console.log("num of article matches " + numMatches);
-  	
-       var chart = Highcharts.chart('container', {
-        xAxis: {
-          categories: dates
-        },
-        series: [{
-          data: values,
-          name: "Closing Price"
-        }],
+  	  }
+
+        var newsDataArray = [];
+        var newsData = Session.get('newsData');
+        // console.log("UPDATED NEWSDATA");
+
+        for (var k = 0; k < newsData.length; k++) { //newsData.length
+            var y = 0;
+            for (var n = 0; n < dates.length; n++) {
+                if (dates[n] === newsData[k].date) {
+                    y = n;
+                    console.log("match index " + n);
+                    break;
+                }
+            };
+            newsDataArray.push({
+                x: Date.UTC(newsData[k].date.substring(6.10), newsData[k].date.substring(3,5), newsData[k].date.substring(0,2)),
+                y: values[y],
+                text: newsData[k].headline,
+                title: "News",
+                shape: 'squarepin'
+            })
+        }
+
+        // data for new graph
+      var options = {
         title: {
           text: "Closing Price"
-        }
+        },
+        xAxis: {
+          type: 'datetime',
+        },
+        yAxis: { // yaxis doesn't seem to work..
+          text: "Price",
+          enabled: true,
+          allowDecimals: true
+        },
+        series: [ // series of data to show
+          // first data set, share prices
+          {
+            data: values,
+            pointStart: Date.UTC(dates[0].substring(6.10), dates[0].substring(3,5), dates[0].substring(0,2)), // change format to Dates; this is start date to match value data
+            pointInterval: 24 * 3600 * 1000, // one day
+            name: "Closing Price"
+          },
+          { // second data set, news flags
+            type: 'flags',
+            name: "Company News",
+            color: '#333333',
+            shape: 'squarepin',
+            data: newsDataArray, // actual data for news flags
+            showInLegend: true
+          },
+          // insert more data sets if you wish
+        ],
         // ... more options - see http://api.highcharts.com/highcharts
-        });
-        return data;
+      };
+
+      var chart = Highcharts.chart('container', options); // draw new graph
+
+      return data; // return data to draw original graph
   	}
   }
 
@@ -223,14 +252,15 @@ export default class Tile extends Component {
           </Form>
 					<h2>Closing Price</h2>
 
-					<LineChart width={600} height={300} syncId="anyId" data={this.parseDataIntoGraph(data.data, Session.get('newsData'), Session.get('sectionNewsData'))}
+					<LineChart width={600} height={300} syncId="anyId" data={this.parseDataIntoGraph(data.data)}
             margin={{top: 5, right: 30, left: 20, bottom: 5}}>
        				<XAxis dataKey="name"/>
        				<YAxis domain={['auto', 'auto']}/>
        				<CartesianGrid strokeDasharray="3 3" vertical={false}/>
-       				<Tooltip content={ showTooltipData }/>
+       				<Tooltip />
        				<Line type="monotone" dataKey="value" dot={false}  stroke="#8884d8" activeDot={{r: 8}}/>
       				</LineChart>
+
 
               <div id="container"></div>
 					{/*<h2>Cumulative Return</h2>
@@ -243,13 +273,17 @@ export default class Tile extends Component {
 						<Line type="monotone" dataKey="value" dot={false}  stroke="#8884d8" activeDot={{r: 8}}/>
 					</LineChart>*/}
 
-				</div>
+					{/*trying to test a button to trigger an insertion into graph... -> connected to event trigger in routes.js but doens't work*/}
+				<div id="testButton"><button class="btn btn-primary">News</button></div>
+					</div>
 
 				);
 		}
 	}
 }
 
+
+/* right now redundant
 function showTooltipData (data) {
     if ( typeof data.payload[0] !== 'undefined') {
         // console.log(data.news);
@@ -272,7 +306,7 @@ function showTooltipData (data) {
       }
     }
 
-}
+}*/
 
 // style={{marginRight: spacing + 'em'}} ,  style="height: 500px; min-width: 310px; max-width: 600px; margin: 0 auto"
 //const CustomTooltip  = React.createClass({

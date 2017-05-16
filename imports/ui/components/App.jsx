@@ -74,61 +74,206 @@ renderTile() {
 }
 
 handleOptionChange(companiesList) {
-  if(stockCode != "Home"){
+    if (stockCode != "Home") {
 
-    // Unnecessary stuff just here for the stockCode to be used for the news right now
-    for (var i = 0; i < companiesList.length; i++) {
-      var stockName = companiesList[i];
-      // console.log("Current company name: " + stockName);
-      var codeRegex = /\((.*)\)$/;
-      var stockCode = codeRegex.exec(stockName)[1];
-      stockName = stockName.replace(/\s\(.*\)$/, "");
-      // console.log("Regexed company code: " + stockCode);
-      // console.log("Regexed company name: " + stockName);
+        // Unnecessary stuff just here for the stockCode to be used for the news right now
+        for (var i = 0; i < companiesList.length; i++) {
+            var stockName = companiesList[i];
+            // console.log("Current company name: " + stockName);
+            var codeRegex = /\((.*)\)$/;
+            var stockCode = codeRegex.exec(stockName)[1];
+            stockName = stockName.replace(/\s\(.*\)$/, "");
+            // console.log("Regexed company code: " + stockCode);
+            // console.log("Regexed company name: " + stockName);
+        }
+
+        var stocksToShow = Stocks.find({name: {$in: companiesList}}).fetch();
+        var dataArray = [];
+        for (var i = 0; i < stocksToShow.length; i++) {
+            var stockName = stocksToShow[i].name;
+            stockName = stockName.replace(/\s\(.*\)$/, "");
+            var data = {
+                code: stocksToShow[i].code,
+                name: stockName,
+                data: stocksToShow[i].data
+            };
+
+            dataArray.push(data);
+        }
+        SelectedStock.set(dataArray);
+
+        // retrieve company information from ASX -> fail -> 2. Intrinio
+        var begin_date = "2016-12-28";
+        var end_date = "2017-04-07";
+        callCompanyInfo(stockCode, end_date, function (result) {
+            // assume there is function to retrieve dates
+            // var begin_date = moment().subtract(365, 'days').format('YYYYMMDD');
+            // var end_date = moment().format('YYYYMMDD');
+            // console.log("Begin: " + begin_date + " | End: " + end_date);
+
+            // The Guardian date must be in format YYYY-MM-DD
+            // NYT dates must be in format YYYYMMDD
+            // switch number of articles returned by specifying 2nd param in this call
+            callGuardianAPI(stockName, 100, begin_date, end_date, 'newsData');
+            callGuardianAPI(result.sector, 100, begin_date, end_date, 'sectionNewsData');
+
+        });
+
+    } else {
+        console.log("Home");
+        SelectedStock.set([{
+            code: "Home",
+            data: "",
+        }])
     }
 
-    var stocksToShow = Stocks.find({name: { $in: companiesList } } ).fetch();
-    var dataArray = [];
-    for (var i = 0; i < stocksToShow.length; i++) {
-      var stockName = stocksToShow[i].name;
-      stockName = stockName.replace(/\s\(.*\)$/, "");
-      var data = {
-        code: stocksToShow[i].code,
-        name: stockName,
-        data: stocksToShow[i].data
-      };
+    function callCompanyInfo(stockCode, end_date, callback) {
+        callASXCompanyInfo(stockCode, end_date, function(result) {
+            if (result == null) {
 
-      dataArray.push(data);
+            } else {
+                console.log(result);
+                callback(result);
+            }
+        });
     }
-    SelectedStock.set(dataArray);
 
-      // retrieve company information from Intrinio
-      this.callIntrinioAPI(stockCode, function (result) {
-          
-          console.log(result);
+    // calls ASX API to get company information from AUSTRALIAN stockCode (without .AX)
+    function callASXCompanyInfo(stockCode, end_date, callback) {
+        console.log("calling ASX API...");
+        HTTP.call('GET',
+            'http://data.asx.com.au/data/1/company/' + stockCode, function(error, result) {
+                if (error) {
+                    console.log("ASX did not find " + stockCode);
+                    callIntrinioCompanyInfo(stockCode, callback);
 
-          // assume there is function to retrieve dates
-          // var begin_date = moment().subtract(365, 'days').format('YYYYMMDD');
-          // var end_date = moment().format('YYYYMMDD');
-          // console.log("Begin: " + begin_date + " | End: " + end_date);
-          var begin_date = "2016-12-28";
-          var end_date = "2017-04-07";
+                } else if (result) {
+                    var companyData = [];
 
-          // The Guardian date must be in format YYYY-MM-DD
-          // NYT dates must be in format YYYYMMDD
-          // switch number of articles returned by specifying 2nd param in this call
-          callGuardianAPI(stockName, 100, begin_date, end_date, 'newsData');
-          callGuardianAPI(result.sector, 100, begin_date, end_date, 'sectionNewsData');
+                    var company = JSON.parse(result.content);
+                    console.log(company);
 
-      });
+                    companyData["dividends"] = [];
+                    callASXAnnualDividends(stockCode, function(dividends) {
+                        callASXAnnouncements(stockCode, end_date, function(announcements) {
+                            companyData["announcements"] = announcements;
+                            companyData["dividends"] = result;
+                            companyData["name"] = company.name_full;
+                            companyData["short_description"] = company.principal_activities;
+                            companyData["ceo"] = "";
+                            companyData["url"] = company.web_address;
+                            companyData["address"] = company.mailing_address;
+                            companyData["logo_img_url"] = company.logo_image_url;
+                            companyData["phone"] = company.phone_number;
+                            companyData["mailing_address"] = company.mailing_address;
+                            companyData["phone_number"] = company.phone_number;
+                            companyData["sector"] = company.sector_name;
+                            companyData["announcements"] = announcements;
 
-  } else {
-    console.log("Home");
-    SelectedStock.set([{
-      code: "Home",
-      data: "",
-    }])
-  }
+                            Session.set('companyData', companyData);
+                            callback(companyData);
+                        });
+                    });
+                }
+            });
+    }
+
+    function callASXAnnualDividends(stockCode, callback) {
+        console.log("Calling ASX dividends info...");
+        HTTP.call('GET',
+            'http://data.asx.com.au/data/1/company/' + stockCode + '/dividends/history', function(error, result) {
+                if (error) {
+                    console.log("ASX did not find dividends for " + stockCode);
+                    callback(null);
+                } else if (result) {
+                    var raw = JSON.parse(result.content);
+                    console.log(raw);
+
+                    var dividends = [];
+                    for (var i = 0; i < raw.length; i++) {
+                        var dividend_date = Date(raw[i].year, 12, 31);
+                        var dividend_amount = raw[i].amount;
+                        dividends.push({
+                            date: dividend_date,
+                            amount: dividend_amount
+                        });
+                    }
+                    callback(dividends);
+                }
+            });
+    }
+
+    // maximum market sensitive announcements this API can call at a time is 20
+    function callASXAnnouncements(stockCode, end_date, callback) {
+        console.log("Calling ASX dividends info...");
+        return HTTP.call('GET',
+            'http://data.asx.com.au/data/1/company/' + stockCode + '/announcements?market_sensitive=true&count=20&before_time=' + end_date, function(error, result) {
+                if (error) {
+                    console.log("ASX did not find announcements for " + stockCode);
+                    callback(null);
+                    return;
+                }
+
+                if (result) {
+                    var raw = JSON.parse(result.content);
+                    console.log(raw);
+
+                    var announcements = [];
+                    for (var i = 0; i < raw.length; i++) {
+                        var date = Date(raw[i].document_date.substring(0, 4), raw[i].document_date.substring(5,7), raw[i].document_date.substring(8, 10));
+                        announcements.push({
+                            date: date,
+                            url: raw[i].url,
+                            title: raw[i].header,
+                            page_num: raw[i].number_of_pages,
+                            size: raw[i].size
+                        });
+                    }
+                    callback(announcements);
+                    return;
+                }
+            });
+    }
+
+    // calls USA API to get USA company information (fallback from ASX not containing code)
+    function callIntrinioCompanyInfo(stockCode, callback) {
+        console.log("calling Intrinio API...");
+        HTTP.call('GET', 'https://api.intrinio.com/companies?', {
+            headers: {
+                // Authorization: "Basic $BASE64_ENCODED(a6d9f89537dd393dff3caf7d6982efb1:e827c3b2db95358452d09c6e8512a2de)"
+                // manually converting the API_KEY:API_PASSWORD into base64 because meteor is shite and this took fucking hours
+                Authorization: "Basic YTZkOWY4OTUzN2RkMzkzZGZmM2NhZjdkNjk4MmVmYjE6ZTgyN2MzYjJkYjk1MzU4NDUyZDA5YzZlODUxMmEyZGU="
+            },
+            // auth : "YTZkOWY4OTUzN2RkMzkzZGZmM2NhZjdkNjk4MmVmYjE=:ZTgyN2MzYjJkYjk1MzU4NDUyZDA5YzZlODUxMmEyZGU=",
+            params: {
+                identifier: stockCode,
+                // query: {query-string} // optional
+            }
+        }, function (error, result) {
+            if (error) {
+                console.log("Shites not working");
+                callback(null);
+
+            } else if (result) {
+                var company = JSON.parse(result.content);
+                console.log(company);
+
+                var companyData = [];
+                companyData["name"] = company.name;
+                companyData["short_description"] = company.short_description;
+                companyData["ceo"] = company.ceo;
+                companyData["url"] = company.company_url;
+                companyData["address"] = company.business_address;
+                companyData["logo_img_url"] = "";
+                companyData["phone_number"] = company.business_phone_no;
+                companyData["mailing_address"] = company.business_address;
+                companyData["sector"] = company.sector;
+
+                Session.set('companyData', companyData);
+                callback(companyData);
+            }
+        });
+    }
 
     // guardian API call to get x num of articles between certain dates (but hard cap at 100; change below if needed)
     function callGuardianAPI(queryTopic, x, begin_date, end_date, sessionKeyword) {
@@ -173,55 +318,14 @@ handleOptionChange(companiesList) {
                     console.log(newsArray);
                     Session.set(sessionKeyword, newsArray);
                     News.set([{
-                      code: "News",
-                      data: newsArray,
+                        code: "News",
+                        data: newsArray,
                     }])
                 }
             });
     };
 
 }
-
-// calls Intrinio API to get company information from its stockCode
-callIntrinioAPI(stockCode, callback) {
-    HTTP.call('GET', 'https://api.intrinio.com/companies?', {
-        headers: {
-            // Authorization: "Basic $BASE64_ENCODED(a6d9f89537dd393dff3caf7d6982efb1:e827c3b2db95358452d09c6e8512a2de)"
-            // manually converting the API_KEY:API_PASSWORD into base64 because meteor is shite and this took fucking hours
-            Authorization: "Basic YTZkOWY4OTUzN2RkMzkzZGZmM2NhZjdkNjk4MmVmYjE6ZTgyN2MzYjJkYjk1MzU4NDUyZDA5YzZlODUxMmEyZGU="
-        },
-        // auth : "YTZkOWY4OTUzN2RkMzkzZGZmM2NhZjdkNjk4MmVmYjE=:ZTgyN2MzYjJkYjk1MzU4NDUyZDA5YzZlODUxMmEyZGU=",
-        params: {
-            identifier: stockCode,
-            // query: {query-string} // optional
-        }
-    }, function(error, result) {
-        if (result) {
-            var company = JSON.parse(result.content);
-            console.log(company);
-
-            var companyData = [];
-            companyData["name"] = company.name;
-            companyData["short_description"] = company.short_description;
-            companyData["ceo"] = company.ceo;
-            companyData["url"] = company.company_url;
-            companyData["address"] = company.business_address;
-            companyData["phone"] = company.business_phone_no;
-            companyData["securities"] = company.securities; // can have multiple stocks, so this is an array
-            companyData["sector"] = company.sector;
-            companyData["industry_category"] = company.industry_category;
-
-            Session.set('companyData', companyData);
-            console.log(companyData);
-            return callback(companyData);
-
-        } else {
-            console.log("Shites not working");
-            console.log(error);
-        }
-    });
-}
-
 handleStockScope (event){
 
 }

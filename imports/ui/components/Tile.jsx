@@ -10,7 +10,6 @@ import { Table, Form } from 'react-bootstrap';
 
 import { Data, Companies, Stocks, SelectedStock, News } from '../../api/data.js';
 import Button from './Button.jsx';
-import GraphButton from './GraphButton.jsx';
 //import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend} from 'recharts';
 var Highcharts = require('highcharts/highstock');
 //var Highcharts = require('highcharts');
@@ -139,25 +138,14 @@ export default class Tile extends Component {
   	}
   }
 
-
-  handleUpdateGraph(eventChange) {
-    console.log("Num days for graph will be: " + eventChange.currentTarget.value);
-  }
-
 	//renders a whole bunch of stats for the user
 	render() {
 
     // While we only have functionality for 1 stock
 
     var data = this.props.stockData[0];
-    var news = this.props.newsData[0];
-    // console.log(data);
-    // console.log(news);
-    //console.log(this.props.newsData);
-    // console.log("NAME: " + data.name);
     console.log("CODE: " + data.code);
 
-    this.parseDataIntoGraph(data.data, news.data, Session.get('sectionNewsData'));
 		if(data.code === "Home") {
   		return (
   			<div className="tile">
@@ -168,6 +156,8 @@ export default class Tile extends Component {
   			</div>
   			);
 		} else {
+      var news = this.props.newsData[0];
+      this.parseDataIntoGraph(data.data, news.data, Session.get('sectionNewsData'));
     	// var companySum = this.getCompanySummary(data.name);
 			// console.log(this.parseDataIntoGraph(data.data));
       var companyReturns = data.data;

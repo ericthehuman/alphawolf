@@ -53,19 +53,56 @@ Meteor.startup(() => {
         console.log("Error from GETDATA");
       }
     });
-    // Meteor.call('getNews', "CBA.AX", function(error, result) {
-    // 	console.log("get news react");
-    //   if (result) {
-    //     var res = JSON.parse(result.content);
-    //     if (res.Log.Success) {
-    //       var companyData = res.CompanyReturns[0].Data;
-    //       //Stocks.insert({name: "Apple Inc. (AAPL)", code: "AAPL", data: companyData, new: false});
-    //       // console.log("Stock added");
-    //     }
-    //   } else {
-    //     console.log(error);
-    //   }
-    // });
+
+    Meteor.call('getData', "ABP.AX", function(error, result) {
+    	// console.log("get data");
+      if (result) {
+        var res = JSON.parse(result.content);
+        if (res.Log.Success) {
+          var companyData = res.CompanyReturns[0].Data;
+          var stockToUpdate = Stocks.findOne({code: "ABP"});
+          // console.log(stockToUpdate);
+          Stocks.update(stockToUpdate, {
+            name: stockToUpdate.name,
+            code: stockToUpdate.code,
+            sector: stockToUpdate.sector,
+            market_cap: stockToUpdate.market_cap,
+            weight_percent: stockToUpdate.weight_percent,
+            data: companyData,
+          });
+          ActiveStocks.insert({name: stockToUpdate.name, code: stockToUpdate.code, new: false});
+          // console.log("Stock added");
+        }
+      } else {
+        console.log(error);
+        console.log("Error from GETDATA");
+      }
+    });
+
+    Meteor.call('getData', "BHP.AX", function(error, result) {
+    	// console.log("get data");
+      if (result) {
+        var res = JSON.parse(result.content);
+        if (res.Log.Success) {
+          var companyData = res.CompanyReturns[0].Data;
+          var stockToUpdate = Stocks.findOne({code: "BHP"});
+          // console.log(stockToUpdate);
+          Stocks.update(stockToUpdate, {
+            name: stockToUpdate.name,
+            code: stockToUpdate.code,
+            sector: stockToUpdate.sector,
+            market_cap: stockToUpdate.market_cap,
+            weight_percent: stockToUpdate.weight_percent,
+            data: companyData,
+          });
+          ActiveStocks.insert({name: stockToUpdate.name, code: stockToUpdate.code, new: false});
+          // console.log("Stock added");
+        }
+      } else {
+        console.log(error);
+        console.log("Error from GETDATA");
+      }
+    });
 });
 
 Meteor.methods({

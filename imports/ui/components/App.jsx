@@ -23,6 +23,7 @@ constructor(props){
   this.handleOptionChange = this.handleOptionChange.bind(this);
   this.addStock = this.addStock.bind(this);
   this.state = {
+    currSelectedStocks: [],
     submitted: false,
     selectMultiple: false
   };
@@ -37,43 +38,26 @@ constructor(props){
   }
 }
 
-// parseDataIntoGraph(result){
-//   var array = result.content.data.CompanyReturns.Data;
-//   var data = [];
-//   var i = 0;
-//   while(i < array.length()){
-//     data.push({
-//       name: i-100,
-//       value: array[i].Closing
-//     });
-//     i = i +1;
-//   }
-//
-//   return data;
-//
-// }
-
 renderTile() {
+  return (
+    <div>
+      <Tile stockData={this.props.selectedStocks} newsData={this.props.newsData}/>
+    </div>
+  );
+}
 
-  // console.log("Code to pass: " + this.props.selectedStocks.code);
-  // console.log("Name to pass: " + this.props.selectedStocks.name);
-  if(this.props.selectedStocks.code == "Home"){
-    return (
-      <div>
-        <Tile stockData={this.props.selectedStocks} display={"Home"} />
-      </div>
-    );
-  }else{
-    return (
-      <div>
-        <Tile stockData={this.props.selectedStocks} newsData={this.props.newsData}/>
-      </div>
-    );
-  }
-
+// Reset the tile back to the home page
+resetTile() {
+  SelectedStock.set([{ code: "Home" }]);
 }
 
 handleOptionChange(companiesList) {
+  if (companiesList.length > 2) {
+    // Take the most recent stock only if more than 2 are selected
+    companiesList = [companiesList[2]];
+  }
+
+  this.setState({ currSelectedStocks: companiesList });
 
   var stocksToShow = Stocks.find({name: { $in: companiesList } } ).fetch();
   var stockCode = stocksToShow[0].code;
@@ -81,6 +65,7 @@ handleOptionChange(companiesList) {
   var dataArray = [];
   for (var i = 0; i < stocksToShow.length; i++) {
     var stockName = stocksToShow[i].name;
+    console.log("Curr stock to show: " + stockName);
     // stockName = stockName.replace(/\s\(.*\)$/, "");
     var data = {
       code: stocksToShow[i].code,
@@ -117,7 +102,7 @@ handleOptionChange(companiesList) {
             if (result == null) {
 
             } else {
-                console.log(result);
+                // console.log(result);
                 callback(result);
             }
         });
@@ -128,16 +113,16 @@ handleOptionChange(companiesList) {
         console.log("calling ASX API...");
         Meteor.call('getASXCompanyInfo', stockCode, function(error, result) {
           if (result) {
-            console.log(result);
+            // console.log(result);
           } else {
-            console.log(error);
+            // console.log(error);
           }
         });
 
         HTTP.call('GET',
             'http://data.asx.com.au/data/1/company/' + stockCode, function(error, result) {
                 if (error) {
-                  console.log(error);
+                  // console.log(error);
                     console.log("ASX did not find " + stockCode);
                     callIntrinioCompanyInfo(stockCode, callback);
 
@@ -145,7 +130,7 @@ handleOptionChange(companiesList) {
                     var companyData = [];
 
                     var company = JSON.parse(result.content);
-                    console.log(company);
+                    // console.log(company);
 
                     companyData["dividends"] = [];
                     callASXAnnualDividends(stockCode, function(dividends) {
@@ -391,7 +376,11 @@ addStock() {
               <BSButton bsStyle="success" onClick={ this.addStock } id="addBtn">Add</BSButton>
               <input type="hidden" ref="inputVal" id="inputVal"/>
             </Navbar.Form>
-            <CheckboxGroup onChange={ this.handleOptionChange }>
+            <Navbar.Form inline>
+            <BSButton onClick={ this.resetTile }>View Sectors</BSButton>
+
+            </Navbar.Form>
+            <CheckboxGroup value={ this.state.currSelectedStocks } onChange={ this.handleOptionChange }>
               {this.renderStocks()}
             </CheckboxGroup>
           </Navbar>

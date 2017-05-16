@@ -38,7 +38,7 @@ export default class Tile extends Component {
       var newsData = [];
       // convert data for graphing on high stocks
       // format:
-      // [[timestamp, stockValue], [timestamp, stockValue] ....] 
+      // [[timestamp, stockValue], [timestamp, stockValue] ....]
       for (i = 0; i < array.length; i ++) {
         var datestr = array[i].Date;
         datestr = datestr.split("/");
@@ -52,7 +52,7 @@ export default class Tile extends Component {
         currStockData.push(Math.round((array[i].Close)*100));
         stockData.push(currStockData);
       }
-      
+
       // parse data for displaying news
       for (var j = 0; j < news.length; j++) {
         var currNewsItem = news[j];
@@ -98,9 +98,9 @@ export default class Tile extends Component {
   	     });
   	    i = i +1;
   	  }        console.log("num of article matches " + numMatches);
-  	
+
        var chart = Highcharts.stockChart('container', {
-        
+
         series: [{
           data: stockData,//values,
           name: "Closing Price",
@@ -188,10 +188,10 @@ export default class Tile extends Component {
 
     var data = this.props.stockData[0];
     var news = this.props.newsData[0];
-    console.log(data);
-    console.log(news);
+    // console.log(data);
+    // console.log(news);
     //console.log(this.props.newsData);
-    console.log("NAME: " + data.name);
+    // console.log("NAME: " + data.name);
     console.log("CODE: " + data.code);
 
 		if(data.code === "Home"){

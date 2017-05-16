@@ -3,41 +3,69 @@ import { Meteor } from 'meteor/meteor';
 import { HTTP } from 'meteor/http';
 import { Session } from 'meteor/session';
 import '../imports/api/data.js';
-import { Data, Stocks, SelectedStock, News } from '../imports/api/data.js';
+import { Data, Stocks, SelectedStock, ActiveStocks, News } from '../imports/api/data.js';
 import { ReactiveVar } from 'meteor/reactive-var';
 
 //stuff happening on the server side ...
 
 Meteor.startup(() => {
+    ActiveStocks.remove({});
     Stocks.remove({});
-    Stocks.insert({name: "Home", code: "Home", data:"", new: false})
 
-    Meteor.call('getData', "AAPL", function(error, result) {
-    	console.log("get data");
+    Meteor.call('get300Companies', function(error, result) {
+      if (result) {
+        var res = JSON.parse(result.content);
+        for (var i = 0; i < res.query.results.row.length; i++) {
+          var code = res.query.results.row[i].code;
+          var name = res.query.results.row[i].name;
+          var sector = res.query.results.row[i].sector;
+          var market_cap = res.query.results.row[i].market_cap;
+          var weight_percent = res.query.results.row[i].weight_percent;
+          Stocks.insert({name: name, code: code, sector: sector, market_cap: market_cap, weight_percent: weight_percent});
+        }
+      } else {
+        console.log(error);
+        console.log("Error from GET300COMPANIES");
+      }
+    })
+
+    Meteor.call('getData', "CBA.AX", function(error, result) {
+    	// console.log("get data");
       if (result) {
         var res = JSON.parse(result.content);
         if (res.Log.Success) {
           var companyData = res.CompanyReturns[0].Data;
-          Stocks.insert({name: "Apple Inc. (AAPL)", code: "AAPL", data: companyData, new: false});
+          var stockToUpdate = Stocks.findOne({name: "Commonwealth Bank of Australia"});
+          // console.log(stockToUpdate);
+          Stocks.update(stockToUpdate, {
+            name: stockToUpdate.name,
+            code: stockToUpdate.code,
+            sector: stockToUpdate.sector,
+            market_cap: stockToUpdate.market_cap,
+            weight_percent: stockToUpdate.weight_percent,
+            data: companyData,
+          });
+          ActiveStocks.insert({name: "Commonwealth Bank of Australia", code: "CBA", new: false});
           // console.log("Stock added");
         }
       } else {
         console.log(error);
+        console.log("Error from GETDATA");
       }
     });
-    Meteor.call('getNews', "AAPL", function(error, result) {
-    	console.log("get news react");
-      if (result) {
-        var res = JSON.parse(result.content);
-        if (res.Log.Success) {
-          var companyData = res.CompanyReturns[0].Data;
-          //Stocks.insert({name: "Apple Inc. (AAPL)", code: "AAPL", data: companyData, new: false});
-          // console.log("Stock added");
-        }
-      } else {
-        console.log(error);
-      }
-    });
+    // Meteor.call('getNews', "CBA.AX", function(error, result) {
+    // 	console.log("get news react");
+    //   if (result) {
+    //     var res = JSON.parse(result.content);
+    //     if (res.Log.Success) {
+    //       var companyData = res.CompanyReturns[0].Data;
+    //       //Stocks.insert({name: "Apple Inc. (AAPL)", code: "AAPL", data: companyData, new: false});
+    //       // console.log("Stock added");
+    //     }
+    //   } else {
+    //     console.log(error);
+    //   }
+    // });
 });
 
 Meteor.methods({
@@ -66,7 +94,7 @@ Meteor.methods({
 	    var year = new Date().getFullYear();
 	    var dateString = dateOfMonth + "/" + month + "/" + year;
 
-    	console.log(dateString);
+    	// console.log(dateString);
 
 		this.unblock();
 		return HTTP.call('GET', 'https://alphawolfwolf.herokuapp.com/api/finance?', {
@@ -103,5 +131,11 @@ Meteor.methods({
 				// query: {query-string} // optional
         	}
         });
-	}
+	},
+
+  // Get list of top 300 ASX companies
+  'get300Companies': function() {
+    this.unblock();
+		return HTTP.call('GET', "https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20csv%20where%20url%3D'https%3A%2F%2Fwww.asx300list.com%2Fwp-content%2Fuploads%2Fcsv%2F20170501-asx300.csv'%20and%20columns%3D'code%2Cname%2Csector%2Cmarket_cap%2Cweight_percent%2Ccol1%2Ctotal_market_cap%2Ccol2'&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys");
+  }
 });

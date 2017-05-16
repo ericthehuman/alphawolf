@@ -2,7 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import { Meteor } from 'meteor/meteor';
 import { HTTP } from 'meteor/http';
 import { createContainer } from 'meteor/react-meteor-data';
-import { Data, Companies, Stocks, SelectedStock, News } from '../../api/data.js';
+import { Data, Companies, Stocks, ActiveStocks, SelectedStock, News } from '../../api/data.js';
 import Tile from './Tile.jsx';
 import Button from './Button.jsx';
 //import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend} from 'recharts';
@@ -74,61 +74,55 @@ renderTile() {
 }
 
 handleOptionChange(companiesList) {
-  if(stockCode != "Home"){
 
-    // Unnecessary stuff just here for the stockCode to be used for the news right now
-    for (var i = 0; i < companiesList.length; i++) {
-      var stockName = companiesList[i];
-      // console.log("Current company name: " + stockName);
-      var codeRegex = /\((.*)\)$/;
-      var stockCode = codeRegex.exec(stockName)[1];
-      stockName = stockName.replace(/\s\(.*\)$/, "");
-      // console.log("Regexed company code: " + stockCode);
-      // console.log("Regexed company name: " + stockName);
-    }
+  // Unnecessary stuff just here for the stockCode to be used for the news right now
+  // for (var i = 0; i < companiesList.length; i++) {
+  //   var stockName = companiesList[i];
+  //   console.log("Current company name: " + stockName);
+  //   var codeRegex = /\((.*)\)$/;
+  //   var stockCode = codeRegex.exec(stockName)[1];
+  //   stockName = stockName.replace(/\s\(.*\)$/, "");
+  //   // console.log("Regexed company code: " + stockCode);
+  //   // console.log("Regexed company name: " + stockName);
+  // }
 
-    var stocksToShow = Stocks.find({name: { $in: companiesList } } ).fetch();
-    var dataArray = [];
-    for (var i = 0; i < stocksToShow.length; i++) {
-      var stockName = stocksToShow[i].name;
-      stockName = stockName.replace(/\s\(.*\)$/, "");
-      var data = {
-        code: stocksToShow[i].code,
-        name: stockName,
-        data: stocksToShow[i].data
-      };
+  var stocksToShow = Stocks.find({name: { $in: companiesList } } ).fetch();
+  var dataArray = [];
+  for (var i = 0; i < stocksToShow.length; i++) {
+    var stockName = stocksToShow[i].name;
+    // stockName = stockName.replace(/\s\(.*\)$/, "");
+    var data = {
+      code: stocksToShow[i].code,
+      name: stockName,
+      sector: stocksToShow[i].sector,
+      market_cap: stocksToShow[i].market_cap,
+      weight_percent: stocksToShow[i].weight_percent,
+      data: stocksToShow[i].data
+    };
 
-      dataArray.push(data);
-    }
-    SelectedStock.set(dataArray);
-
-      // retrieve company information from Intrinio
-      this.callIntrinioAPI(stockCode, function (result) {
-          
-          console.log(result);
-
-          // assume there is function to retrieve dates
-          // var begin_date = moment().subtract(365, 'days').format('YYYYMMDD');
-          // var end_date = moment().format('YYYYMMDD');
-          // console.log("Begin: " + begin_date + " | End: " + end_date);
-          var begin_date = "2016-12-28";
-          var end_date = "2017-04-07";
-
-          // The Guardian date must be in format YYYY-MM-DD
-          // NYT dates must be in format YYYYMMDD
-          // switch number of articles returned by specifying 2nd param in this call
-          callGuardianAPI(stockName, 100, begin_date, end_date, 'newsData');
-          callGuardianAPI(result.sector, 100, begin_date, end_date, 'sectionNewsData');
-
-      });
-
-  } else {
-    console.log("Home");
-    SelectedStock.set([{
-      code: "Home",
-      data: "",
-    }])
+    dataArray.push(data);
   }
+  SelectedStock.set(dataArray);
+
+    // retrieve company information from Intrinio
+    // this.callIntrinioAPI(stockCode, function (result) {
+    //
+    //     console.log(result);
+    //
+    //     // assume there is function to retrieve dates
+    //     // var begin_date = moment().subtract(365, 'days').format('YYYYMMDD');
+    //     // var end_date = moment().format('YYYYMMDD');
+    //     // console.log("Begin: " + begin_date + " | End: " + end_date);
+    //     var begin_date = "2016-12-28";
+    //     var end_date = "2017-04-07";
+    //
+    //     // The Guardian date must be in format YYYY-MM-DD
+    //     // NYT dates must be in format YYYYMMDD
+    //     // switch number of articles returned by specifying 2nd param in this call
+    //     callGuardianAPI(stockName, 100, begin_date, end_date, 'newsData');
+    //     callGuardianAPI(result.sector, 100, begin_date, end_date, 'sectionNewsData');
+    //
+    // });
 
     // guardian API call to get x num of articles between certain dates (but hard cap at 100; change below if needed)
     function callGuardianAPI(queryTopic, x, begin_date, end_date, sessionKeyword) {
@@ -227,7 +221,7 @@ handleStockScope (event){
 }
 
 renderStocks() {
-  return this.props.stocks.map((stock) => (
+  return this.props.activeStocks.map((stock) => (
     <Button key={stock._id} stock={stock} optionChange={this.handleOptionChange.bind(this)} />
     ));
 }
@@ -235,25 +229,30 @@ renderStocks() {
 // New submit
 addStock() {
   var newCompanies = JSON.parse(this.refs.inputVal.value);
+  console.log("Company name is: " + newCompanies[0]);
   for (var i = 0; i < newCompanies.length; i++) {
-    var codeRegex = /\((.*)\)$/;
-    var companyName = newCompanies[i];
-    var companyCode = codeRegex.exec(companyName)[1];
-    console.log("Curr company: " + companyCode);
-    // companyName = companyName.replace(/\s\(.*\)$/, "");
-    // console.log("Regexed company name: " + companyName);
-    Meteor.call('getData', companyCode, function(error, result) {
+    Meteor.call('getData', newCompanies[i], function(error, result) {
       if (result) {
         var res = JSON.parse(result.content);
         if (res.Log.Success) {
           var companyData = res.CompanyReturns[0].Data;
 
-          Stocks.insert({
-            name: companyName,
-            code: companyCode,
-            new: true,
-            data: companyData
+          console.log(newCompanies[i])
+          var companyCode = newCompanies[i].replace(/\.AX$/, "");
+          var stockToUpdate = Stocks.findOne({code: companyCode});
+          console.log("Stock to update: " + stockToUpdate);
+
+          Stocks.update(stockToUpdate, {
+            name: stockToUpdate.name,
+            code: stockToUpdate.code,
+            sector: stockToUpdate.sector,
+            market_cap: stockToUpdate.market_cap,
+            weight_percent: stockToUpdate.weight_percent,
+            data: companyData,
           });
+
+          companyCode = companyCode.replace(/\.AX$/, "");
+          ActiveStocks.insert({name: companyName, code: companyCode, new: true});
           console.log("Stock added");
         } else {
           console.log(res.Log.ErrorMessage);
@@ -294,66 +293,9 @@ addStock() {
           </Navbar>
         </div>
         <div className="container-fluid main-container">
-{/*
-        <form>
-          <input type="text" ref="textInput" className="searchBar" placeholder="Search for a company or keyword"/>
-        </form>
-
-
-        <form onSubmit={this.handleSubmit.bind(this)}>
-          <input id="submit" type="submit"/>
-          <label className="label-for-submit" htmlFor="submit">Add stock</label>
-        </form>
-*/}
           <div className="tile-container">
            {this.renderTile()}
           </div>
-
-{/*
-
-            <div className="radio">
-
-                <input type="radio" id="AAPL" value="AAPL" onChange={this.handleOptionChange}
-                             name="choice" className="radio-with-label" />
-                <label className="label-for-radio button" htmlFor="AAPL"> &nbsp; xxx  &nbsp;</label>
-            </div>
-
-            <div className="radio">
-
-
-
-                <input type="radio" id="MSFT" value="MSFT" onChange={this.handleOptionChange}
-                              name="choice" className="radio-with-label" />
-                             <label className="label-for-radio button" htmlFor="MSFT"> &nbsp; yyy  &nbsp;</label>
-            </div>
-            <div className="radio">
-                <input type="radio" id="BBRY" value="BBRY" onChange={this.handleOptionChange}
-                              name="choice" className="radio-with-label"  />
-                             <label className="label-for-radio button" htmlFor="BBRY"> &nbsp; zzz  &nbsp;</label>
-
-            </div>
-          </form>
-
-
-*/}
-
-
-
-{/*
-
-           <Tile someData={this.renderData()}/>
-
-      <LineChart width={600} height={300} data={graphData}
-            margin={{top: 5, right: 30, left: 20, bottom: 5}}>
-       <XAxis dataKey="name"/>
-       <YAxis/>
-       <CartesianGrid strokeDasharray="3 3"/>
-       <Tooltip/>
-       <Legend />
-       <Line type="monotone" dataKey="pv" stroke="#8884d8" activeDot={{r: 8}}/>
-       <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
-      </LineChart>
-*/}
         </div>
       </div>
     );
@@ -365,6 +307,7 @@ App.propTypes = {
   ddata: PropTypes.array.isRequired,
   comps: PropTypes.array.isRequired,
   stocks: PropTypes.array.isRequired,
+  activeStocks: PropTypes.array.isRequired,
   selectedStocks: PropTypes.array,
   newsData: PropTypes.array,
 };
@@ -374,6 +317,7 @@ export default createContainer(() => {
     ddata: Data.find({}).fetch(),
     comps: Companies.find({}).fetch(),
     stocks: Stocks.find({}).fetch(),
+    activeStocks: ActiveStocks.find({}).fetch(),
     selectedStocks: SelectedStock.get(),
     newsData: News.get(),
   };

@@ -137,5 +137,10 @@ Meteor.methods({
   'get300Companies': function() {
     this.unblock();
 		return HTTP.call('GET', "https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20csv%20where%20url%3D'https%3A%2F%2Fwww.asx300list.com%2Fwp-content%2Fuploads%2Fcsv%2F20170501-asx300.csv'%20and%20columns%3D'code%2Cname%2Csector%2Cmarket_cap%2Cweight_percent%2Ccol1%2Ctotal_market_cap%2Ccol2'&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys");
+  },
+
+  'getASXCompanyInfo': function(stockCode) {
+    this.unblock();
+    return HTTP.call('GET', 'http://data.asx.com.au/data/1/company/' + stockCode);
   }
 });

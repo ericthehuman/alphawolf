@@ -157,7 +157,7 @@ export default class Tile extends Component {
   			);
 		} else {
       var news = this.props.newsData[0];
-      this.parseDataIntoGraph(data.data, news.data, Session.get('sectionNewsData'));
+      this.parseDataIntoGraph(data.data, news.data, data.sectionNewsData);
     	// var companySum = this.getCompanySummary(data.name);
 			// console.log(this.parseDataIntoGraph(data.data));
       var companyReturns = data.data;

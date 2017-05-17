@@ -3,11 +3,18 @@ import { Meteor } from 'meteor/meteor';
 import { Data, Companies, Stocks, ModalVar} from '../../api/data.js';
 import Modal from './Modal.jsx';
 import { ReactiveVar } from 'meteor/reactive-var';
+import styles from '../style/tiles.css';
 
 
 
 export default class Item extends Component {
 
+
+	/*div.transbox p {
+	  text-align: center;
+	  font-weight: bold;
+	  color: #ffffff ;
+	}*/
 
 	handleClick(e){
 
@@ -21,14 +28,8 @@ export default class Item extends Component {
 
 	render() {
 		return (
-			<div className="item" onClick={this.handleClick}>
-				<div className="imageHolder">
-					<img src={this.props.imagef}></img>
-				</div>
-				<div className="titleBar">
-				{this.props.news}
-				</div>
-
+			<div background={this.props.imagef} className="item" onClick={this.handleClick} value={this.props.value}>
+				<div className={styles.transbox}>{this.props.news}</div>
 			</div>
 		);
 	}

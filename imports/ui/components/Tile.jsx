@@ -145,15 +145,25 @@ export default class Tile extends Component {
 
     var data = this.props.stockData[0];
     console.log("CODE: " + data.code);
-
+    //rendering news page here
+    //value consponds to data code which will be used as a switch function
 		if(data.code === "Home") {
   		return (
   			<div className="tile">
-  				<Item news={"Uber stocks fall amidst scandals"} imagef={"uber.jpg"}/>
-  				<Item news={"Apple releases new software"} imagef={"apple.png"}/>
-  				<Item news={"ThinkPad designs sleek computer"} imagef={"thinkpad.jpg"}/>
-  				<Item news={"UNSW records record numbers"} imagef={"unsw.jpg"}/>
-  			</div>
+  				<Item news={"Consumer Discretionary"} imagef={"uber.jpg"} value={"consumer1"}/>
+  				<Item news={"Consumer Staples"} imagef={"apple.png"} value={"consumer2"}/>
+  				<Item news={"Energy"} imagef={"thinkpad.jpg"} value={"Energy"}/>
+  				<Item news={"Financial"} imagef={"http://static.memrise.com/uploads/course_photos/3146044000150629230223.jpg"} value={"financial"}/>
+          <Item news={"Health Care"} imagef={"thinkpad.jpg"} value={"health"}/>
+          <Item news={"Industrials"} imagef={"unsw.jpg"} value={"industrials"}/>
+          <Item news={"IT- Information Technology"} imagef={"thinkpad.jpg"} value={"it"}/>
+          <Item news={"Materials"} imagef={"unsw.jpg"} value={"materials"}/>
+          <Item news={"Metals and Minning"} imagef={"thinkpad.jpg"} value={"metalmine"}/>
+          <Item news={"Resources"} imagef={"unsw.jpg"} value={"resource"}/>
+          <Item news={"Telecommunications Services"} imagef={"thinkpad.jpg"} value={"telecom"}/>
+          <Item news={"Utilities"} imagef={"unsw.jpg"} value={"util"}/>
+          <Item news={"Bank"} imagef={"thinkpad.jpg"} value={"bank"}/>
+          </div>
   			);
 		} else {
       var news = this.props.newsData[0];

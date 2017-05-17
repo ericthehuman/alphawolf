@@ -21,11 +21,11 @@ var Highcharts = require('highcharts/highstock');
 export default class Tile extends Component {
 
   //converts raw api data into structure the graph component uses
-  parseDataIntoGraph(result, news, section){
+  parseDataIntoGraph(result, news){
     if(result != null){
 
         // console.log(result);
-        // console.log(news);
+        // console.log("NEWS: " + JSON.stringify(news));
         // console.log(section);
   	  var array = result;
   	  var data = [];
@@ -40,6 +40,7 @@ export default class Tile extends Component {
       // [[timestamp, stockValue], [timestamp, stockValue] ....]
       for (i = 0; i < array.length; i ++) {
         var datestr = array[i].Date;
+        console.log("DATESTR:" + datestr);
         datestr = datestr.split("/");
         var dd = datestr[0];
         var mm = datestr[1];
@@ -66,40 +67,43 @@ export default class Tile extends Component {
         var newsHeadline = currNewsItem["headline"];
         var currNewsData = {x: timestamp, title: newsHeadline};
 
+        // console.log(currNewsData);
         newsData.push(currNewsData);
       }
 
-      i = 0;
-  	  while(i < array.length){
-  	  	var headline = "";
-  	  	var url = "";
+      // i = 0;
+  	  // while(i < array.length){
+  	  // 	var headline = "";
+  	  // 	var url = "";
+      //
+  	  // 	/*for (var j = 0; j < news.length; j++) {
+  	  // 		// add news or industry per date, but limited to one article per day?? -- to avoid same news? fix for now (otherwise should compare article number or something)
+  	  // 		if (news[j] !== undefined && array[i].Date === news[j].date) {
+			// 	numMatches++;
+  		// 		headline = news[j].headline;
+  		// 		url = news[j].url;
+      //           break;
+  		// 	} else if (section[j] !== undefined && array[i].Date === section[j].date) {
+      //           numMatches++;
+      //           headline = section[j].headline;
+      //           url = section[j].url;
+      //           break;
+      //       }
+      //   }*/
+      //   values.push(Math.round((array[i].Close)*100));
+  	  //   data.push({
+  	  //     name: array[i].Date,
+  	  //     value: Math.round((array[i].Close)*100),
+  		//     info: headline,
+  		//     url: url,
+  	  //    });
+  	  //   i = i +1;
+  	  // }
 
-  	  	/*for (var j = 0; j < news.length; j++) {
-  	  		// add news or industry per date, but limited to one article per day?? -- to avoid same news? fix for now (otherwise should compare article number or something)
-  	  		if (news[j] !== undefined && array[i].Date === news[j].date) {
-				numMatches++;
-  				headline = news[j].headline;
-  				url = news[j].url;
-                break;
-  			} else if (section[j] !== undefined && array[i].Date === section[j].date) {
-                numMatches++;
-                headline = section[j].headline;
-                url = section[j].url;
-                break;
-            }
-        }*/
-        values.push(Math.round((array[i].Close)*100));
-  	    data.push({
-  	      name: array[i].Date,
-  	      value: Math.round((array[i].Close)*100),
-  		    info: headline,
-  		    url: url,
-  	     });
-  	    i = i +1;
-  	  }        console.log("num of article matches " + numMatches);
-
-       var chart = Highcharts.stockChart('container', {
-
+      console.log("AAAAA");
+      console.log(stockData);
+      console.log(newsData);
+      var chart = Highcharts.stockChart('container', {
         series: [{
           data: stockData,//values,
           name: "Closing Price",
@@ -116,8 +120,9 @@ export default class Tile extends Component {
           text: "Closing Price"
         }
         // ... more options - see http://api.highcharts.com/highcharts
-        });
-        return data;
+      });
+      // return data;
+      console.log("AAAA2");
   	}
   }
 
@@ -156,11 +161,11 @@ export default class Tile extends Component {
   			</div>
   			);
 		} else {
-      var news = this.props.newsData[0];
-      this.parseDataIntoGraph(data.data, news.data, data.sectionNewsData);
+      var news = data.companyNews;
+      console.log("news is: " + news);
+      this.parseDataIntoGraph(data.stock_data, news);
     	// var companySum = this.getCompanySummary(data.name);
-			// console.log(this.parseDataIntoGraph(data.data));
-      var companyReturns = data.data;
+      var companyReturns = data.stock_data;
       var NUMDAYS = companyReturns.length-2;
 
       var currClose = companyReturns[NUMDAYS].Close;
@@ -251,5 +256,4 @@ Tile.propTypes = {
   // This component gets the return figure to display through a React prop.
   // We can use propTypes to indicate it is required
   stockData: PropTypes.array.isRequired,
-  newsData: PropTypes.array.isRequired,
 };

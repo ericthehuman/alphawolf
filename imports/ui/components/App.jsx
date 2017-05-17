@@ -2,7 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import { Meteor } from 'meteor/meteor';
 import { HTTP } from 'meteor/http';
 import { createContainer } from 'meteor/react-meteor-data';
-import { Data, Companies, Stocks, ActiveStocks, SelectedStock, News } from '../../api/data.js';
+import { Data, Companies, Stocks, ActiveStocks, SelectedStock } from '../../api/data.js';
 import Tile from './Tile.jsx';
 import Button from './Button.jsx';
 //import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend} from 'recharts';
@@ -27,21 +27,21 @@ constructor(props){
     submitted: false,
     selectMultiple: false
   };
-  this.newsData = function () {
-      return Session.get('newsData');
-  }
-  this.sectionNewsData = function () {
-      return Session.get('sectionNewsData');
-  }
-  this.companyData = function() {
-      return Session.get('companyData');
-  }
+  // this.newsData = function () {
+  //     return Session.get('newsData');
+  // }
+  // this.sectionNewsData = function () {
+  //     return Session.get('sectionNewsData');
+  // }
+  // this.companyData = function() {
+  //     return Session.get('companyData');
+  // }
 }
 
 renderTile() {
   return (
     <div>
-      <Tile stockData={this.props.selectedStocks} newsData={this.props.newsData}/>
+      <Tile stockData={this.props.selectedStocks}/>
     </div>
   );
 }
@@ -61,28 +61,33 @@ handleOptionChange(companiesList) {
   this.setState({ currSelectedStocks: companiesList });
 
   var stocksToShow = Stocks.find({name: { $in: companiesList } } ).fetch();
-  var stockCode = stocksToShow[0].code;
 
-  // console.log("stockCode is: " + stockCode);
   var dataArray = [];
   for (var i = 0; i < stocksToShow.length; i++) {
-    var stockName = stocksToShow[i].name;
-    console.log("Curr stock to show: " + stockName);
-    // stockName = stockName.replace(/\s\(.*\)$/, "");
+    console.log("Curr stock to show: " + stocksToShow[i].name + " (" + stocksToShow[i].code + ")");
     var data = {
       code: stocksToShow[i].code,
-      name: stockName,
+      name: stocksToShow[i].name,
       sector: stocksToShow[i].sector,
       market_cap: stocksToShow[i].market_cap,
       weight_percent: stocksToShow[i].weight_percent,
-      data: stocksToShow[i].data
+      stock_data: stocksToShow[i].stock_data,
+      short_description: stocksToShow[i].short_description,
+      url: stocksToShow[i].url,
+      address: stocksToShow[i].address,
+      logo_img_url: stocksToShow[i].logo_img_url,
+      phone: stocksToShow[i].phone,
+      dividends: stocksToShow[i].dividends,
+      announcements: stocksToShow[i].announcements,
+      // sectionNewsData: stocksToShow[i].sectionNewsData,
+      companyNews: stocksToShow[i].companyNews,
     };
-
     dataArray.push(data);
   }
   SelectedStock.set(dataArray);
 
 }
+
 handleStockScope (event){
 
 }
@@ -105,7 +110,112 @@ addStock() {
     var stockToUpdate = Stocks.findOne({code: companyCode});
     var companyName = stockToUpdate.name;
 
-    console.log("Stock to update: " + stockToUpdate);
+    // retrieve company information from ASX -> fail -> 2. Intrinio
+    var begin_date = moment().subtract(365, 'days').format('YYYY-MM-DD');
+    var end_date = moment().format('YYYY-MM-DD');
+
+    Meteor.call('getASXCompanyInfo', companyCode, function(error, result) {
+      if (result) {
+        var company = JSON.parse(result.content);
+        companyData.name = company.name_full;
+        companyData.short_description = company.principal_activities;
+        companyData.ceo = "";
+        companyData.url = company.web_address;
+        companyData.address = company.mailing_address;
+        companyData.logo_img_url = company.logo_image_url;
+        companyData.phone = company.phone_number;
+        companyData.mailing_address = company.mailing_address;
+        companyData.phone_number = company.phone_number;
+        companyData.sector = company.sector_name;
+      } else {
+        console.log(error);
+        console.log("ASX did not find " + stockCode);
+      }
+    });
+
+    Meteor.call('getASXDividends', companyCode, function(error, result) {
+      if (result) {
+        var raw = JSON.parse(result.content);
+        var dividends = [];
+
+        for (var i = 0; i < raw.length; i++) {
+            var dividend_date = Date(raw[i].year, 12, 31);
+            var dividend_amount = raw[i].amount;
+            dividends.push({
+                date: dividend_date,
+                amount: dividend_amount
+            });
+        }
+        companyData.dividends = dividends;
+      } else {
+        console.log(error);
+        console.log("in dividends");
+      }
+    });
+
+    Meteor.call('getASXAnnouncements', companyCode, end_date, function(error, result) {
+      if (result) {
+        var raw = JSON.parse(result.content);
+        raw = raw.data;
+        var announcements = [];
+        console.log(raw);
+        for (var i = 0; i < raw.length; i++) {
+            var date = moment(raw[i].document_date).format('DD/MM/YYYY');
+            announcements.push({
+                date: date,
+                url: raw[i].url,
+                title: raw[i].header,
+                page_num: raw[i].number_of_pages,
+                size: raw[i].size
+            });
+        }
+        companyData.announcements = announcements;
+      } else {
+        console.log(error);
+        console.log("in announcements");
+      }
+    });
+
+    var sector = stockToUpdate.sector.replace(/&/, "AND");
+
+    Meteor.call('getGuardianNews', "business", begin_date, end_date, 20, companyName, function (error, result) {
+        if (error) {
+            console.log(error);
+            console.log("in news");
+            return null;
+        } else {
+
+            var newsArray = [];
+            var sectionId = []; // to determine company's main sector
+            sectionId["maxNum"] = 0;
+            sectionId["name"] = "";
+
+            var parsedResult = JSON.parse(result.content);
+            var length = Math.min(10, parsedResult.response.results.length); // hard cap set here
+
+            for (var i = 0; i < length; i++) {
+                var article = parsedResult.response.results[i];
+                if (article.type !== "article") continue;
+
+                // newsArray[i] = article;
+                var newsData = {
+                  headline: (article.webTitle === undefined) ? "" : article.webTitle,
+                  url: article.webUrl,
+                  source: "The Guardian UK",
+                  // publication date in YYYY-MM-DD'T'HH:MM:SS'Z' -> DD/MM/YYYY
+                  date: article.webPublicationDate.substring(8, 10) + "/" + article.webPublicationDate.substring(5, 7) + "/" + article.webPublicationDate.substring(0, 4),
+                }
+
+                newsArray.push(newsData);
+            }
+
+            companyData.companyNews = newsArray;
+            // Session.set(sessionKeyword, newsArray);
+        }
+    });
+    callGuardianAPI(companyName, sector, 20, begin_date, end_date, 'newsData', companyData);
+    // callGuardianAPI(companyName, sector, 20, begin_date, end_date, 'sectionNewsData', companyData);
+
     Meteor.call('getData', newCompanies[i], function(error, result) {
       if (result) {
         var res = JSON.parse(result.content);
@@ -115,162 +225,29 @@ addStock() {
           companyData.stock_data = stockData;
 
           companyCode = companyCode.replace(/\.AX$/, "");
-          ActiveStocks.insert({name: companyName, code: companyCode, new: true});
-          console.log("Stock added");
         } else {
           console.log(res.Log.ErrorMessage);
         }
       } else {
         console.log(error);
       }
+      ActiveStocks.insert({name: companyName, code: companyCode, new: true});
+      Stocks.update({_id:Stocks.findOne({code: companyCode})['_id']},
+      {$set: {stock_data: companyData.stock_data,
+        short_description: companyData.short_description,
+        url: companyData.url,
+        address: companyData.address,
+        logo_img_url: companyData.logo_img_url,
+        phone: companyData.phone,
+        dividends: companyData.dividends,
+        announcements: companyData.announcements,
+        // sectionNewsData: companyData.sectionNewsData,
+        companyNews: companyData.companyNews,
+      }});
+
+      // var stockToUpdate = Stocks.findOne({code: companyCode});
+      // console.log("Stock added: " + JSON.stringify(stockToUpdate));
     });
-
-    // retrieve company information from ASX -> fail -> 2. Intrinio
-    var begin_date = moment().subtract(365, 'days').format('YYYY-MM-DD');
-    var end_date = moment().format('YYYY-MM-DD');
-    callASXCompanyInfo(companyCode, end_date);
-    var sector = stockToUpdate.sector.replace(/&/, "AND");
-    callGuardianAPI(companyName, sector, 20, begin_date, end_date, 'newsData');
-    callGuardianAPI(companyName, sector, 20, begin_date, end_date, 'sectionNewsData');
-
-    Stocks.update(stockToUpdate, {
-      name: stockToUpdate.name,
-      code: stockToUpdate.code,
-      sector: stockToUpdate.sector,
-      market_cap: stockToUpdate.market_cap,
-      weight_percent: stockToUpdate.weight_percent,
-      stock_data: companyData.stock_data,
-      short_description: companyData.short_description,
-      url: companyData.url,
-      address: companyData.address,
-      logo_img_url: companyData.logo_img_url,
-      phone: companyData.phone,
-      dividends: companyData.dividends,
-      announcements: companyData.announcements,
-      sectionNewsData: companyData.sectionNewsData,
-      otherNews: companyData.otherNews,
-    });
-      // calls ASX API to get company information from AUSTRALIAN stockCode (without .AX)
-      function callASXCompanyInfo(stockCode, end_date) {
-
-          console.log("calling ASX API...");
-          Meteor.call('getASXCompanyInfo', stockCode, function(error, result) {
-            if (result) {
-              var company = JSON.parse(result.content);
-              companyData.name = company.name_full;
-              companyData.short_description = company.principal_activities;
-              companyData.ceo = "";
-              companyData.url = company.web_address;
-              companyData.address = company.mailing_address;
-              companyData.logo_img_url = company.logo_image_url;
-              companyData.phone = company.phone_number;
-              companyData.mailing_address = company.mailing_address;
-              companyData.phone_number = company.phone_number;
-              companyData.sector = company.sector_name;
-            } else {
-              console.log(error);
-              console.log("ASX did not find " + stockCode);
-            }
-          });
-
-          console.log("calling ASX dividends...");
-          Meteor.call('getASXDividends', stockCode, function(error, result) {
-            if (result) {
-              var raw = JSON.parse(result.content);
-              var dividends = [];
-
-              for (var i = 0; i < raw.length; i++) {
-                  var dividend_date = Date(raw[i].year, 12, 31);
-                  var dividend_amount = raw[i].amount;
-                  dividends.push({
-                      date: dividend_date,
-                      amount: dividend_amount
-                  });
-              }
-              companyData.dividends = dividends;
-            } else {
-              console.log(error);
-            }
-          })
-
-          console.log("calling ASX announcements...");
-          Meteor.call('getASXAnnouncements', stockCode, endDate, function(error, result) {
-            if (result) {
-              var raw = JSON.parse(result.content);
-              var announcements = [];
-
-              for (var i = 0; i < raw.length; i++) {
-                  var date = Date(raw[i].document_date.substring(0, 4), raw[i].document_date.substring(5,7), raw[i].document_date.substring(8, 10));
-                  announcements.push({
-                      date: date,
-                      url: raw[i].url,
-                      title: raw[i].header,
-                      page_num: raw[i].number_of_pages,
-                      size: raw[i].size
-                  });
-              }
-              companyData.announcements = announcements;
-            } else {
-              console.log(error);
-            }
-          })
-      }
-
-      // guardian API call to get x num of articles between certain dates (but hard cap at 100; change below if needed)
-      function callGuardianAPI(queryString, sector, x, begin_date, end_date, sessionKeyword) {
-          console.log("callGuarddianAPI " + queryTopic + " " + x + " " + begin_date + " " + end_date);
-
-          if (sessionKeyword === "sectionNewsData") {
-            var section = "australia-news";
-          } else {
-            queryString = queryString + " AND " + sector + " AND shares";
-            var section = "business";
-          }
-
-          Meteor.call('getGuardianNews', section, begin_date, end_date, x, queryString, function (error, result) {
-                  if (error) {
-                      console.log(error);
-                      return null;
-                  } else {
-
-                      var newsArray = [];
-                      var sectionId = []; // to determine company's main sector
-                      sectionId["maxNum"] = 0;
-                      sectionId["name"] = "";
-
-                      var parsedResult = JSON.parse(result.content);
-                      var length = Math.min(10, parsedResult.response.results.length); // hard cap set here
-
-                      for (var i = 0; i < length; i++) {
-                          var article = parsedResult.response.results[i];
-                          if (article.type !== "article") continue;
-
-                          // newsArray[i] = article;
-                          var newsData = {
-                            headline: (article.webTitle === undefined) ? "" : article.webTitle,
-                            url: article.webUrl,
-                            source: "The Guardian UK",
-                            // publication date in YYYY-MM-DD'T'HH:MM:SS'Z' -> DD/MM/YYYY
-                            date: article.webPublicationDate.substring(8, 10) + "/" + article.webPublicationDate.substring(5, 7) + "/" + article.webPublicationDate.substring(0, 4),
-                          }
-
-                          newsArray.push(newsData);
-                      }
-
-                      // console.log(newsArray);
-                      if (sessionKeyword === "sectionNewsData") {
-                        companyData.sectionNewsData = newsArray;
-                      } else {
-                        companyData.otherNews = newsArray;
-                      }
-                      // Session.set(sessionKeyword, newsArray);
-                      // News.set([{
-                      //     code: "News",
-                      //     data: newsArray,
-                      // }])
-                  }
-              });
-      };
   }
 
   this.forceUpdate();
@@ -279,9 +256,6 @@ addStock() {
 //we can populate the radio button selection with a function later
 
   render() {
-    // console.log("App rendered");
-    // console.log(SelectedStock.get().code)
-    // console.log(SelectedStock.get().news)
     return (
       <div>
         <div>
@@ -316,6 +290,59 @@ addStock() {
   }
 }
 
+// guardian API call to get x num of articles between certain dates (but hard cap at 100; change below if needed)
+function callGuardianAPI(queryString, sector, x, begin_date, end_date, sessionKeyword, companyData) {
+
+    var companyData = {};
+    if (sessionKeyword === "sectionNewsData") {
+      var section = "australia-news";
+    } else {
+      queryString = queryString + " AND " + sector + " AND shares";
+      var section = "business";
+    }
+
+    Meteor.call('getGuardianNews', section, begin_date, end_date, x, queryString, function (error, result) {
+        if (error) {
+            console.log(error);
+            return null;
+        } else {
+
+            var newsArray = [];
+            var sectionId = []; // to determine company's main sector
+            sectionId["maxNum"] = 0;
+            sectionId["name"] = "";
+
+            var parsedResult = JSON.parse(result.content);
+            var length = Math.min(10, parsedResult.response.results.length); // hard cap set here
+
+            for (var i = 0; i < length; i++) {
+                var article = parsedResult.response.results[i];
+                if (article.type !== "article") continue;
+
+                // newsArray[i] = article;
+                var newsData = {
+                  headline: (article.webTitle === undefined) ? "" : article.webTitle,
+                  url: article.webUrl,
+                  source: "The Guardian UK",
+                  // publication date in YYYY-MM-DD'T'HH:MM:SS'Z' -> DD/MM/YYYY
+                  date: article.webPublicationDate.substring(8, 10) + "/" + article.webPublicationDate.substring(5, 7) + "/" + article.webPublicationDate.substring(0, 4),
+                }
+
+                newsArray.push(newsData);
+            }
+
+            // console.log(newsArray);
+            if (sessionKeyword === "sectionNewsData") {
+              companyData.sectionNewsData = newsArray;
+            } else {
+              companyData.companyNews = newsArray;
+            }
+            // Session.set(sessionKeyword, newsArray);
+        }
+    });
+
+    return companyData;
+};
 
 App.propTypes = {
   ddata: PropTypes.array.isRequired,
@@ -333,6 +360,5 @@ export default createContainer(() => {
     stocks: Stocks.find({}).fetch(),
     activeStocks: ActiveStocks.find({}).fetch(),
     selectedStocks: SelectedStock.get(),
-    newsData: News.get(),
   };
 }, App);

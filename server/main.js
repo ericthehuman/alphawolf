@@ -192,13 +192,14 @@ Meteor.methods({
     return HTTP.call('GET', 'http://data.asx.com.au/data/1/company/' + stockCode + '/announcements?market_sensitive=true&count=20&before_time=' + end_date);
   },
 
-  'getGuardianNews': function(beginDate, endDate, x, queryTopic) {
+  'getGuardianNews': function(section, beginDate, endDate, x, queryString) {
     this.unblock();
     return HTTP.call('GET', 'http://content.guardianapis.com/search?'
+    + 'section=' + section
     + 'from-date=' + beginDate
     + '&to-date=' + endDate
     + '&page-size=' + x // retrieve x articles
-    + '&q=' + queryTopic
+    + '&q=' + queryString
     + '&api-key=59ce1afb-ea95-4ab7-971e-dc59c7189718');
   }
 });

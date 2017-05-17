@@ -62,6 +62,7 @@ handleOptionChange(companiesList) {
 
   var stocksToShow = Stocks.find({name: { $in: companiesList } } ).fetch();
   var stockCode = stocksToShow[0].code;
+
   // console.log("stockCode is: " + stockCode);
   var dataArray = [];
   for (var i = 0; i < stocksToShow.length; i++) {
@@ -103,8 +104,6 @@ addStock() {
     var companyCode = newCompanies[i].replace(/\.AX$/, "");
     var stockToUpdate = Stocks.findOne({code: companyCode});
     var companyName = stockToUpdate.name;
-    callGuardianAPI(stockName, 100, begin_date, end_date, 'newsData');
-    callGuardianAPI(result.sector, 100, begin_date, end_date, 'sectionNewsData');
 
     console.log("Stock to update: " + stockToUpdate);
     Meteor.call('getData', newCompanies[i], function(error, result) {
@@ -130,8 +129,9 @@ addStock() {
     var begin_date = moment().subtract(365, 'days').format('YYYY-MM-DD');
     var end_date = moment().format('YYYY-MM-DD');
     callASXCompanyInfo(companyCode, end_date);
-    callGuardianAPI(companyName, 100, begin_date, end_date, 'newsData');
-    callGuardianAPI(companyData.sector, 100, begin_date, end_date, 'sectionNewsData');
+    var sector = stockToUpdate.sector.replace(/&/, "AND");
+    callGuardianAPI(companyName, sector, 20, begin_date, end_date, 'newsData');
+    callGuardianAPI(companyName, sector, 20, begin_date, end_date, 'sectionNewsData');
 
     Stocks.update(stockToUpdate, {
       name: stockToUpdate.name,
@@ -147,7 +147,8 @@ addStock() {
       phone: companyData.phone,
       dividends: companyData.dividends,
       announcements: companyData.announcements,
-
+      sectionNewsData: companyData.sectionNewsData,
+      otherNews: companyData.otherNews,
     });
       // calls ASX API to get company information from AUSTRALIAN stockCode (without .AX)
       function callASXCompanyInfo(stockCode, end_date) {
@@ -216,13 +217,17 @@ addStock() {
       }
 
       // guardian API call to get x num of articles between certain dates (but hard cap at 100; change below if needed)
-      function callGuardianAPI(queryTopic, x, begin_date, end_date, sessionKeyword) {
+      function callGuardianAPI(queryString, sector, x, begin_date, end_date, sessionKeyword) {
           console.log("callGuarddianAPI " + queryTopic + " " + x + " " + begin_date + " " + end_date);
+
           if (sessionKeyword === "sectionNewsData") {
-              queryTopic += "%20major%20news";
+            var section = "australia-news";
+          } else {
+            queryString = queryString + " AND " + sector + " AND shares";
+            var section = "business";
           }
 
-          Meteor.call('getGuardianNews', begin_date, end_date, x, queryTopic, function (error, result) {
+          Meteor.call('getGuardianNews', section, begin_date, end_date, x, queryString, function (error, result) {
                   if (error) {
                       console.log(error);
                       return null;
@@ -234,18 +239,22 @@ addStock() {
                       sectionId["name"] = "";
 
                       var parsedResult = JSON.parse(result.content);
-                      var length = Math.min(100, parsedResult.response.results.length); // hard cap set here
+                      var length = Math.min(10, parsedResult.response.results.length); // hard cap set here
 
                       for (var i = 0; i < length; i++) {
                           var article = parsedResult.response.results[i];
-                          newsArray[i] = article;
-                          newsArray[i]['headline'] = (article.webTitle === undefined) ? "" : article.webTitle;
-                          newsArray[i]['url'] = article.webUrl;
-                          newsArray[i]['source'] = "The Guardian UK"; // name of news source i.e. Guardian UK
-                          // publication date in YYYY-MM-DD'T'HH:MM:SS'Z' -> DD/MM/YYYY
-                          newsArray[i]['date'] = article.webPublicationDate.substring(8, 10) + "/" + article.webPublicationDate.substring(5, 7) + "/" + article.webPublicationDate.substring(0, 4);
-                          // newsArray[i]['pic'] = (article.multimedia.length != 0) ? "http://www.nytimes.com" + article.multimedia["0"].url : "no pic"; // icons/pics only exist in NYT
-                          // newsArray[i]['abstract'] = (article.snippet !== undefined) ? article.snippet : article.lead_paragraph; // snippets only exist in NYT
+                          if (article.type !== "article") continue;
+
+                          // newsArray[i] = article;
+                          var newsData = {
+                            headline: (article.webTitle === undefined) ? "" : article.webTitle,
+                            url: article.webUrl,
+                            source: "The Guardian UK",
+                            // publication date in YYYY-MM-DD'T'HH:MM:SS'Z' -> DD/MM/YYYY
+                            date: article.webPublicationDate.substring(8, 10) + "/" + article.webPublicationDate.substring(5, 7) + "/" + article.webPublicationDate.substring(0, 4),
+                          }
+
+                          newsArray.push(newsData);
                       }
 
                       // console.log(newsArray);
@@ -255,10 +264,10 @@ addStock() {
                         companyData.otherNews = newsArray;
                       }
                       // Session.set(sessionKeyword, newsArray);
-                      News.set([{
-                          code: "News",
-                          data: newsArray,
-                      }])
+                      // News.set([{
+                      //     code: "News",
+                      //     data: newsArray,
+                      // }])
                   }
               });
       };

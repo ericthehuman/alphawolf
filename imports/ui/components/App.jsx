@@ -62,10 +62,12 @@ handleOptionChange(companiesList) {
 
   var stocksToShow = Stocks.find({name: { $in: companiesList } } ).fetch();
   var stockCode = stocksToShow[0].code;
+
   // console.log("stockCode is: " + stockCode);
   var dataArray = [];
   for (var i = 0; i < stocksToShow.length; i++) {
     var stockName = stocksToShow[i].name;
+    stockName = stockName.replace(/(\.*)$/, "");
     console.log("Curr stock to show: " + stockName);
     // stockName = stockName.replace(/\s\(.*\)$/, "");
     var data = {
@@ -93,8 +95,14 @@ handleOptionChange(companiesList) {
       // The Guardian date must be in format YYYY-MM-DD
       // NYT dates must be in format YYYYMMDD
       // switch number of articles returned by specifying 2nd param in this call
-      callGuardianAPI(stockName, 100, begin_date, end_date, 'newsData');
-      callGuardianAPI(result.sector, 100, begin_date, end_date, 'sectionNewsData');
+      if (result.length > 0) {
+          var company = result.name;
+          var sector = result.sector.replace(/&/, "AND"); this doens't seem very effective
+          callGuardianAPI(company, sector, 20, begin_date, end_date, 'newsData');
+          callGuardianAPI(company, sector, 20, begin_date, end_date, 'sectionNewsData');
+      } else {
+          console.log("callASXCompanyInfo error");
+      }
 
   });
     // calls ASX API to get company information from AUSTRALIAN stockCode (without .AX)
@@ -258,18 +266,24 @@ handleOptionChange(companiesList) {
     }
 
     // guardian API call to get x num of articles between certain dates (but hard cap at 100; change below if needed)
-    function callGuardianAPI(queryTopic, x, begin_date, end_date, sessionKeyword) {
-        console.log("callGuarddianAPI " + queryTopic + " " + x + " " + begin_date + " " + end_date);
+    function callGuardianAPI(queryString, sector, x, begin_date, end_date, sessionKeyword) {
+        console.log("callGuarddianAPI for '" + queryString + "' #articles: " + x + " from " + begin_date + " to " + end_date);
+
+        var section = "";
         if (sessionKeyword === "sectionNewsData") {
-            queryTopic += "%20major%20news";
+            section = "australia-news"; // set to australia/political news?
+        } else {
+            queryString = queryString + " AND " + sector + " AND shares";
+            section = "business";
         }
 
         HTTP.call('GET',
             'http://content.guardianapis.com/search?'
+            + 'section=' + section // search only business related news?
             + 'from-date=' + begin_date
             + '&to-date=' + end_date
             + '&page-size=' + x // retrieve x articles
-            + '&q=' + queryTopic
+            + '&q=' + queryString
             + '&api-key=' + 'test', //'59ce1afb-ea95-4ab7-971e-dc59c7189718', //'test'
             function (error, result) {
                 if (error) {
@@ -283,21 +297,21 @@ handleOptionChange(companiesList) {
                     sectionId["name"] = "";
 
                     var parsedResult = JSON.parse(result.content);
-                    var length = Math.min(100, parsedResult.response.results.length); // hard cap set here
+                    var length = Math.min(10, parsedResult.response.results.length); // hard cap set here
 
                     for (var i = 0; i < length; i++) {
                         var article = parsedResult.response.results[i];
+                        if (article.type !== "article") {
+                            continue;
+                        }
                         newsArray[i] = article;
                         newsArray[i]['headline'] = (article.webTitle === undefined) ? "" : article.webTitle;
                         newsArray[i]['url'] = article.webUrl;
                         newsArray[i]['source'] = "The Guardian UK"; // name of news source i.e. Guardian UK
                         // publication date in YYYY-MM-DD'T'HH:MM:SS'Z' -> DD/MM/YYYY
                         newsArray[i]['date'] = article.webPublicationDate.substring(8, 10) + "/" + article.webPublicationDate.substring(5, 7) + "/" + article.webPublicationDate.substring(0, 4);
-                        // newsArray[i]['pic'] = (article.multimedia.length != 0) ? "http://www.nytimes.com" + article.multimedia["0"].url : "no pic"; // icons/pics only exist in NYT
-                        // newsArray[i]['abstract'] = (article.snippet !== undefined) ? article.snippet : article.lead_paragraph; // snippets only exist in NYT
                     }
 
-                    // console.log(newsArray);
                     Session.set(sessionKeyword, newsArray);
                     News.set([{
                         code: "News",

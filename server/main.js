@@ -30,7 +30,6 @@ Meteor.startup(() => {
     })
 
     Meteor.call('getData', "CBA.AX", function(error, result) {
-    	// console.log("get data");
       if (result) {
         var res = JSON.parse(result.content);
         if (res.Log.Success) {
@@ -46,7 +45,9 @@ Meteor.startup(() => {
             data: companyData,
           });
           ActiveStocks.insert({name: "Commonwealth Bank of Australia", code: "CBA", new: false});
-          // console.log("Stock added");
+          console.log("Stock added");
+        } else {
+          console.log(res.Log.ErrorMessage);
         }
       } else {
         console.log(error);
@@ -179,5 +180,15 @@ Meteor.methods({
   'getASXCompanyInfo': function(stockCode) {
     this.unblock();
     return HTTP.call('GET', 'http://data.asx.com.au/data/1/company/' + stockCode);
+  },
+
+  'getASXDividends': function(stockCode) {
+    this.unblock();
+    return HTTP.call('GET', 'http://data.asx.com.au/data/1/company/' + stockCode + '/dividends/history');
+  },
+
+  'getASXAnnouncements': function(stockCode, endDate) {
+    this.unblock();
+    return HTTP.call('GET', 'http://data.asx.com.au/data/1/company/' + stockCode + '/announcements?market_sensitive=true&count=20&before_time=' + end_date);
   }
 });

@@ -49,6 +49,7 @@ renderTile() {
 // Reset the tile back to the home page
 resetTile() {
   SelectedStock.set([{ code: "Home" }]);
+  this.setState({ currSelectedStocks: [] });
 }
 
 handleOptionChange(companiesList) {
@@ -85,7 +86,7 @@ handleOptionChange(companiesList) {
   // var end_date = "2017-04-07";
   var begin_date = moment().subtract(365, 'days').format('YYYY-MM-DD');
   var end_date = moment().format('YYYY-MM-DD');
-  callCompanyInfo(stockCode, end_date, function (result) {
+  callASXCompanyInfo(stockCode, end_date, function (result) {
       // assume there is function to retrieve dates
       // console.log("Begin: " + begin_date + " | End: " + end_date);
 
@@ -96,123 +97,125 @@ handleOptionChange(companiesList) {
       callGuardianAPI(result.sector, 100, begin_date, end_date, 'sectionNewsData');
 
   });
-
-    function callCompanyInfo(stockCode, end_date, callback) {
-        callASXCompanyInfo(stockCode, end_date, function(result) {
-            if (result == null) {
-
-            } else {
-                // console.log(result);
-                callback(result);
-            }
-        });
-    }
-
     // calls ASX API to get company information from AUSTRALIAN stockCode (without .AX)
     function callASXCompanyInfo(stockCode, end_date, callback) {
+        var companyData = [];
+
         console.log("calling ASX API...");
         Meteor.call('getASXCompanyInfo', stockCode, function(error, result) {
           if (result) {
-            // console.log(result);
+            var company = JSON.parse(result.content);
+            companyData["name"] = company.name_full;
+            companyData["short_description"] = company.principal_activities;
+            companyData["ceo"] = "";
+            companyData["url"] = company.web_address;
+            companyData["address"] = company.mailing_address;
+            companyData["logo_img_url"] = company.logo_image_url;
+            companyData["phone"] = company.phone_number;
+            companyData["mailing_address"] = company.mailing_address;
+            companyData["phone_number"] = company.phone_number;
+            companyData["sector"] = company.sector_name;
           } else {
-            // console.log(error);
+            console.log(error);
+            console.log("ASX did not find " + stockCode);
+            // callIntrinioCompanyInfo(stockCode, callback);
           }
         });
 
-        HTTP.call('GET',
-            'http://data.asx.com.au/data/1/company/' + stockCode, function(error, result) {
-                if (error) {
-                  // console.log(error);
-                    console.log("ASX did not find " + stockCode);
-                    callIntrinioCompanyInfo(stockCode, callback);
+        console.log("calling ASX dividends...");
+        Meteor.call('getASXDividends', stockCode, function(error, result) {
+          if (result) {
+            var raw = JSON.parse(result.content);
+            var dividends = [];
 
-                } else if (result) {
-                    var companyData = [];
+            for (var i = 0; i < raw.length; i++) {
+                var dividend_date = Date(raw[i].year, 12, 31);
+                var dividend_amount = raw[i].amount;
+                dividends.push({
+                    date: dividend_date,
+                    amount: dividend_amount
+                });
+            }
+            companyData["divdends"] = dividends;
+          } else {
+            console.log(error);
+          }
+        })
 
-                    var company = JSON.parse(result.content);
-                    // console.log(company);
+        console.log("calling ASX announcements...");
+        Meteor.call('getASXAnnouncements', stockCode, endDate, function(error, result) {
+          if (result) {
+            var raw = JSON.parse(result.content);
+            var announcements = [];
 
-                    companyData["dividends"] = [];
-                    callASXAnnualDividends(stockCode, function(dividends) {
-                        callASXAnnouncements(stockCode, end_date, function(announcements) {
-                            companyData["announcements"] = announcements;
-                            companyData["dividends"] = result;
-                            companyData["name"] = company.name_full;
-                            companyData["short_description"] = company.principal_activities;
-                            companyData["ceo"] = "";
-                            companyData["url"] = company.web_address;
-                            companyData["address"] = company.mailing_address;
-                            companyData["logo_img_url"] = company.logo_image_url;
-                            companyData["phone"] = company.phone_number;
-                            companyData["mailing_address"] = company.mailing_address;
-                            companyData["phone_number"] = company.phone_number;
-                            companyData["sector"] = company.sector_name;
-                            companyData["announcements"] = announcements;
+            for (var i = 0; i < raw.length; i++) {
+                var date = Date(raw[i].document_date.substring(0, 4), raw[i].document_date.substring(5,7), raw[i].document_date.substring(8, 10));
+                announcements.push({
+                    date: date,
+                    url: raw[i].url,
+                    title: raw[i].header,
+                    page_num: raw[i].number_of_pages,
+                    size: raw[i].size
+                });
+            }
+            companyData["announcements"] = announcements;
+          } else {
+            console.log(error);
+          }
+        })
 
-                            Session.set('companyData', companyData);
-                            callback(companyData);
-                        });
-                    });
-                }
-            });
+        Session.set('companyData', companyData);
+        callback(companyData);
     }
 
-    function callASXAnnualDividends(stockCode, callback) {
-        console.log("Calling ASX dividends info...");
-        HTTP.call('GET',
-            'http://data.asx.com.au/data/1/company/' + stockCode + '/dividends/history', function(error, result) {
-                if (error) {
-                    console.log("ASX did not find dividends for " + stockCode);
-                    callback(null);
-                } else if (result) {
-                    var raw = JSON.parse(result.content);
-                    console.log(raw);
-
-                    var dividends = [];
-                    for (var i = 0; i < raw.length; i++) {
-                        var dividend_date = Date(raw[i].year, 12, 31);
-                        var dividend_amount = raw[i].amount;
-                        dividends.push({
-                            date: dividend_date,
-                            amount: dividend_amount
-                        });
-                    }
-                    callback(dividends);
-                }
-            });
-    }
-
-    // maximum market sensitive announcements this API can call at a time is 20
-    function callASXAnnouncements(stockCode, end_date, callback) {
-        console.log("Calling ASX dividends info...");
-        return HTTP.call('GET',
-            'http://data.asx.com.au/data/1/company/' + stockCode + '/announcements?market_sensitive=true&count=20&before_time=' + end_date, function(error, result) {
-                if (error) {
-                    console.log("ASX did not find announcements for " + stockCode);
-                    callback(null);
-                    return;
-                }
-
-                if (result) {
-                    var raw = JSON.parse(result.content);
-                    console.log(raw);
-
-                    var announcements = [];
-                    for (var i = 0; i < raw.length; i++) {
-                        var date = Date(raw[i].document_date.substring(0, 4), raw[i].document_date.substring(5,7), raw[i].document_date.substring(8, 10));
-                        announcements.push({
-                            date: date,
-                            url: raw[i].url,
-                            title: raw[i].header,
-                            page_num: raw[i].number_of_pages,
-                            size: raw[i].size
-                        });
-                    }
-                    callback(announcements);
-                    return;
-                }
-            });
-    }
+    // function callASXAnnualDividends(stockCode, callback) {
+    //     console.log("Calling ASX dividends info...");
+    //     HTTP.call('GET',
+    //         'http://data.asx.com.au/data/1/company/' + stockCode + '/dividends/history', function(error, result) {
+    //             if (error) {
+    //                 console.log("ASX did not find dividends for " + stockCode);
+    //                 callback(null);
+    //             } else if (result) {
+    //                 var raw = JSON.parse(result.content);
+    //                 console.log(raw);
+    //
+    //
+    //                 callback(dividends);
+    //             }
+    //         });
+    // }
+    //
+    // // maximum market sensitive announcements this API can call at a time is 20
+    // function callASXAnnouncements(stockCode, end_date, callback) {
+    //     console.log("Calling ASX dividends info...");
+    //     return HTTP.call('GET',
+    //         'http://data.asx.com.au/data/1/company/' + stockCode + '/announcements?market_sensitive=true&count=20&before_time=' + end_date, function(error, result) {
+    //             if (error) {
+    //                 console.log("ASX did not find announcements for " + stockCode);
+    //                 callback(null);
+    //                 return;
+    //             }
+    //
+    //             if (result) {
+    //                 var raw = JSON.parse(result.content);
+    //                 console.log(raw);
+    //
+    //                 var announcements = [];
+    //                 for (var i = 0; i < raw.length; i++) {
+    //                     var date = Date(raw[i].document_date.substring(0, 4), raw[i].document_date.substring(5,7), raw[i].document_date.substring(8, 10));
+    //                     announcements.push({
+    //                         date: date,
+    //                         url: raw[i].url,
+    //                         title: raw[i].header,
+    //                         page_num: raw[i].number_of_pages,
+    //                         size: raw[i].size
+    //                     });
+    //                 }
+    //                 callback(announcements);
+    //                 return;
+    //             }
+    //         });
+    // }
 
     // calls USA API to get USA company information (fallback from ASX not containing code)
     function callIntrinioCompanyInfo(stockCode, callback) {
@@ -310,6 +313,7 @@ handleStockScope (event){
 }
 
 renderStocks() {
+  console.log(this.props.activeStocks);
   return this.props.activeStocks.map((stock) => (
     <Button key={stock._id} stock={stock} optionChange={this.handleOptionChange.bind(this)} />
     ));

@@ -168,24 +168,36 @@ export default class Tile extends Component {
       var companyReturns = data.stock_data;
       var NUMDAYS = companyReturns.length-1;
       var yearBefore = Math.max(NUMDAYS-365, 0);
+      var monthBefore = Math.max(NUMDAYS-30, 0);
 
       var currClose = companyReturns[NUMDAYS].Close;
       var prevClose = companyReturns[NUMDAYS-1].Close;
       var positiveSignDay = (companyReturns[NUMDAYS].Close-companyReturns[NUMDAYS-1].Close) >= 0 ? "+" : "";
+      var positiveSignMonth = (companyReturns[NUMDAYS].Close-companyReturns[monthBefore].Close) >= 0 ? "+" : "";
       var positiveSignAnnual = (companyReturns[NUMDAYS].Close-companyReturns[yearBefore].Close) >= 0 ? "+" : "";
-      var highestClose = parseFloat(companyReturns[yearBefore].Close);
-      var lowestClose = parseFloat(companyReturns[yearBefore].Close);
+      var highestCloseMonth = parseFloat(companyReturns[monthBefore].Close);
+      var lowestCloseMonth = parseFloat(companyReturns[monthBefore].Close);
+      var highestCloseAnnual = parseFloat(companyReturns[yearBefore].Close);
+      var lowestCloseAnnual = parseFloat(companyReturns[yearBefore].Close);
 
       console.log("Array length: " + companyReturns.length);
-      // Get the lowest and highest values of the stock
-      for (var i = 0; i < companyReturns.length; i++) {
+
+      // Get the lowest and highest values of the stock for year, month
+      for (var i = monthBefore; i < companyReturns.length; i++) {
         var compareClose = parseFloat(companyReturns[i].Close);
-        // console.log("Curr: " + compareClose + " | high: " + highestClose + " | low: " + lowestClose + " | typeof(high): " + typeof(highestClose));
-        if (compareClose > highestClose) highestClose = compareClose;
-        if (compareClose < lowestClose) lowestClose = compareClose;
+        // console.log("Curr: " + compareClose + " | high: " + highestCloseAnnual + " | low: " + lowestCloseAnnual + " | typeof(high): " + typeof(highestCloseAnnual));
+        if (compareClose > highestCloseMonth) highestCloseMonth = compareClose;
+        if (compareClose < lowestCloseMonth) lowestCloseMonth = compareClose;
       }
 
-      console.log("Curr: " + currClose + " | Prev: " + prevClose + " | high: " + highestClose + " | low: " + lowestClose);
+      for (var i = yearBefore; i < companyReturns.length; i++) {
+        var compareClose = parseFloat(companyReturns[i].Close);
+        // console.log("Curr: " + compareClose + " | high: " + highestCloseAnnual + " | low: " + lowestCloseAnnual + " | typeof(high): " + typeof(highestCloseAnnual));
+        if (compareClose > highestCloseAnnual) highestCloseAnnual = compareClose;
+        if (compareClose < lowestCloseAnnual) lowestCloseAnnual = compareClose;
+      }
+
+      console.log("Curr: " + currClose + " | Prev: " + prevClose + " | high: " + highestCloseAnnual + " | low: " + lowestCloseAnnual);
 			return (
 				<div className="tile">
 					<div className="big">
@@ -195,7 +207,7 @@ export default class Tile extends Component {
             <Table>
               <thead>
                 <tr>
-                  <th colspan="2">Statistics</th>
+                  <th colSpan="2">Statistics</th>
                 </tr>
               </thead>
               <tbody>
@@ -204,17 +216,30 @@ export default class Tile extends Component {
                   <td><b>{parseFloat(prevClose).toFixed(2)}</b></td>
                 </tr>
                 <tr>
-                  <td>52-week change</td>
+                  <td>Monthly change</td>
+                  <td className={positiveSignMonth === "+" ? "stock-positive" : "stock-negative"}><b>{parseFloat(currClose-companyReturns[monthBefore].Close).toFixed(2)}{' '}
+                  ({positiveSignMonth}{parseFloat((currClose-companyReturns[monthBefore].Close)/companyReturns[monthBefore].Close*100).toFixed(2)}%)</b></td>
+                </tr>
+                <tr>
+                  <td>Monthly high</td>
+                  <td><b>{parseFloat(highestCloseMonth).toFixed(2)}</b></td>
+                </tr>
+                <tr>
+                  <td>Monthly low</td>
+                  <td><b>{parseFloat(lowestCloseMonth).toFixed(2)}</b></td>
+                </tr>
+                <tr>
+                  <td>Annual change</td>
                   <td className={positiveSignAnnual === "+" ? "stock-positive" : "stock-negative"}><b>{parseFloat(currClose-companyReturns[yearBefore].Close).toFixed(2)}{' '}
                   ({positiveSignAnnual}{parseFloat((currClose-companyReturns[yearBefore].Close)/companyReturns[yearBefore].Close*100).toFixed(2)}%)</b></td>
                 </tr>
                 <tr>
-                  <td>52-week high</td>
-                  <td><b>{parseFloat(highestClose).toFixed(2)}</b></td>
+                  <td>Annual high</td>
+                  <td><b>{parseFloat(highestCloseAnnual).toFixed(2)}</b></td>
                 </tr>
                 <tr>
-                  <td>52-week low</td>
-                  <td><b>{parseFloat(lowestClose).toFixed(2)}</b></td>
+                  <td>Annual low</td>
+                  <td><b>{parseFloat(lowestCloseAnnual).toFixed(2)}</b></td>
                 </tr>
               </tbody>
             </Table>

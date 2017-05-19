@@ -201,7 +201,10 @@ export default class Tile extends Component {
 			return (
 				<div className="tile">
 					<div className="big">
-            <h1>{data.name} <span className="stock-code">({data.code})</span></h1>
+            <img src={data.logo_img_url} className="company-logo"/><h1>{data.name} <span className="stock-code">({data.code})</span></h1>
+            <p>{data.short_description}</p>
+            <br/>
+            <p><a href={data.url}>{data.url}</a> {data.phone}</p>
             <h2> <b>${parseFloat(currClose).toFixed(2)}</b> <span className={positiveSignDay === "+" ? "stock-positive" : "stock-negative"}>{positiveSignDay}
             {parseFloat(currClose-prevClose).toFixed(2)} ({positiveSignDay}{parseFloat((currClose-prevClose)/prevClose*100).toFixed(2)}%)</span></h2>
             <Table>

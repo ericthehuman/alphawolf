@@ -124,8 +124,6 @@ addStock() {
         companyData.address = company.mailing_address;
         companyData.logo_img_url = company.logo_image_url;
         companyData.phone = company.phone_number;
-        companyData.mailing_address = company.mailing_address;
-        companyData.phone_number = company.phone_number;
         companyData.sector = company.sector_name;
       } else {
         console.log(error);

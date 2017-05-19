@@ -174,6 +174,7 @@ Meteor.startup(() => {
 
     console.log("Updating");
     var stockToUpdate = Stocks.findOne({name: "Commonwealth Bank of Australia"});
+    console.log("Logo: " + companyData.logo_img_url);
     Stocks.update(stockToUpdate, {
       name: stockToUpdate.name,
       code: stockToUpdate.code,

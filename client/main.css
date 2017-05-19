@@ -128,6 +128,11 @@ img {
 	font-size: 40px;
 }
 
+.company-logo {
+	width: 80px;
+	height: auto;
+}
+
 .stock-code {
 	font-size: 36px;
 }

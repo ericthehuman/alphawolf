@@ -166,14 +166,15 @@ export default class Tile extends Component {
       this.parseDataIntoGraph(data.stock_data, news);
     	// var companySum = this.getCompanySummary(data.name);
       var companyReturns = data.stock_data;
-      var NUMDAYS = companyReturns.length-2;
+      var NUMDAYS = companyReturns.length-1;
+      var yearBefore = Math.max(NUMDAYS-365, 0);
 
       var currClose = companyReturns[NUMDAYS].Close;
       var prevClose = companyReturns[NUMDAYS-1].Close;
       var positiveSignDay = (companyReturns[NUMDAYS].Close-companyReturns[NUMDAYS-1].Close) >= 0 ? "+" : "";
-      var positiveSignAnnual = (companyReturns[NUMDAYS].Close-companyReturns[0].Close) >= 0 ? "+" : "";
-      var highestClose = parseFloat(companyReturns[0].Close);
-      var lowestClose = parseFloat(companyReturns[0].Close);
+      var positiveSignAnnual = (companyReturns[NUMDAYS].Close-companyReturns[yearBefore].Close) >= 0 ? "+" : "";
+      var highestClose = parseFloat(companyReturns[yearBefore].Close);
+      var lowestClose = parseFloat(companyReturns[yearBefore].Close);
 
       console.log("Array length: " + companyReturns.length);
       // Get the lowest and highest values of the stock
@@ -204,8 +205,8 @@ export default class Tile extends Component {
                 </tr>
                 <tr>
                   <td>52-week change</td>
-                  <td className={positiveSignAnnual === "+" ? "stock-positive" : "stock-negative"}><b>{parseFloat(currClose-companyReturns[0].Close).toFixed(2)}{' '}
-                  ({positiveSignAnnual}{parseFloat((currClose-companyReturns[0].Close)/companyReturns[0].Close*100).toFixed(2)}%)</b></td>
+                  <td className={positiveSignAnnual === "+" ? "stock-positive" : "stock-negative"}><b>{parseFloat(currClose-companyReturns[yearBefore].Close).toFixed(2)}{' '}
+                  ({positiveSignAnnual}{parseFloat((currClose-companyReturns[yearBefore].Close)/companyReturns[yearBefore].Close*100).toFixed(2)}%)</b></td>
                 </tr>
                 <tr>
                   <td>52-week high</td>

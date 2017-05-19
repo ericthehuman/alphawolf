@@ -172,7 +172,7 @@ Meteor.startup(() => {
       }
     });
 
-
+    console.log("Updating");
     var stockToUpdate = Stocks.findOne({name: "Commonwealth Bank of Australia"});
     Stocks.update(stockToUpdate, {
       name: stockToUpdate.name,
@@ -180,7 +180,7 @@ Meteor.startup(() => {
       sector: stockToUpdate.sector,
       market_cap: stockToUpdate.market_cap,
       weight_percent: stockToUpdate.weight_percent,
-      stock_data: stockToUpdate.stock_data,
+      stock_data: companyData.stock_data,
       short_description: companyData.short_description,
       url: companyData.url,
       address: companyData.address,

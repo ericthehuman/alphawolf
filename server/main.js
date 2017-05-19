@@ -67,14 +67,10 @@ Meteor.methods({
 	    var dateString = dateOfMonth + "/" + month + "/" + year;
 
     	console.log(dateString);
-
 		this.unblock();
-		return HTTP.call('GET', 'https://alphawolfwolf.herokuapp.com/api/finance?', {
+		return HTTP.call('GET', 'https://alphawolfwolf.herokuapp.com/api/finance2?', {
 			params: {
-				instrumentID: id,
-				upper_window: 0,
-				lower_window: 365,
-				dateOfInterest: dateString,
+				instrumentID: "RIO",
 			}
 		});
 	},

@@ -11,9 +11,8 @@ export default class Button extends Component {
 	render() {
 		return (
 			<div className={this.props.stock.new ? "radio animated slideInRight" : "radio"}>
-				<label><Checkbox value={this.props.stock.name}/>
-					{this.props.stock.code}
-				</label>
+				<Checkbox id={this.props.stock.code} className="hide-checkbox" value={this.props.stock.name}/>
+				<label htmlFor={this.props.stock.code}>{this.props.stock.code}</label>
 			</div>
 		);
 	}

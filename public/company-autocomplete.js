@@ -4,7 +4,6 @@ var ms = $('#magicsuggest').magicSuggest({
   maxSelection: 1,
   placeholder: 'Search for a company by name or code (max. 1 per search)',
   cls: 'main-input',
-  valueField: 'name',
   data: [{"id": "IJH", "name": "ISHARES S&P MID-CAP ETF (IJH)"},
 {"id": "MOQ", "name": "MOQ LIMITED (MOQ)"},
 {"id": "1PG", "name": "1-PAGE LIMITED (1PG)"},

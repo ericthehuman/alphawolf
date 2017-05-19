@@ -47,7 +47,7 @@ export default class Tile extends Component {
       // [[timestamp, stockValue], [timestamp, stockValue] ....]
       for (i = 0; i < array.length; i ++) {
         var datestr = array[i].Date;
-        console.log("DATESTR:" + datestr);
+        // console.log("DATESTR:" + datestr);
         datestr = datestr.split("/");
         var dd = datestr[0];
         var mm = datestr[1];
@@ -118,7 +118,6 @@ export default class Tile extends Component {
         // ... more options - see http://api.highcharts.com/highcharts
       });
       // return data;
-      console.log("AAAA2");
   	}
   }
 

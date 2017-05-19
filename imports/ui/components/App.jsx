@@ -22,6 +22,7 @@ constructor(props){
   super(props);
   this.handleOptionChange = this.handleOptionChange.bind(this);
   this.addStock = this.addStock.bind(this);
+  this.resetTile = this.resetTile.bind(this);
   this.state = {
     currSelectedStocks: [],
     submitted: false,
@@ -93,7 +94,7 @@ handleStockScope (event){
 }
 
 renderStocks() {
-  console.log(this.props.activeStocks);
+  console.log("Current stocks in list: " + this.props.activeStocks);
   return this.props.activeStocks.map((stock) => (
     <Button key={stock._id} stock={stock} optionChange={this.handleOptionChange.bind(this)} />
     ));
@@ -101,12 +102,15 @@ renderStocks() {
 
 // New submit
 addStock() {
+  if (!this.refs.inputVal.value) {
+    return;
+  }
   var newCompanies = JSON.parse(this.refs.inputVal.value);
-  console.log("Company name is: " + newCompanies[0]);
+  console.log("Company code is: " + newCompanies[0]);
   for (var i = 0; i < newCompanies.length; i++) {
     var companyData = {};
 
-    var companyCode = newCompanies[i].replace(/\.AX$/, "");
+    var companyCode = newCompanies[i];
     var stockToUpdate = Stocks.findOne({code: companyCode});
     var companyName = stockToUpdate.name;
 
@@ -191,6 +195,7 @@ addStock() {
             var parsedResult = JSON.parse(result.content);
             var length = Math.min(10, parsedResult.response.results.length); // hard cap set here
 
+            console.log(parsedResult);
             for (var i = 0; i < length; i++) {
                 var article = parsedResult.response.results[i];
                 if (article.type !== "article") continue;
@@ -249,8 +254,6 @@ addStock() {
   this.forceUpdate();
 }
 
-//we can populate the radio button selection with a function later
-
   render() {
     return (
       <div>
@@ -267,13 +270,15 @@ addStock() {
               <BSButton bsStyle="success" onClick={ this.addStock } id="addBtn">Add</BSButton>
               <input type="hidden" ref="inputVal" id="inputVal"/>
             </Navbar.Form>
-            <Navbar.Form inline>
-            <BSButton onClick={ this.resetTile }>View Sectors</BSButton>
+            <div className="row nav-bottom-row">
+              <Navbar.Form inline>
+              <BSButton className="col-md-2" onClick={ this.resetTile }>View Sectors</BSButton>
 
-            </Navbar.Form>
-            <CheckboxGroup value={ this.state.currSelectedStocks } onChange={ this.handleOptionChange }>
-              {this.renderStocks()}
-            </CheckboxGroup>
+              <CheckboxGroup className="col-md-10" value={ this.state.currSelectedStocks } onChange={ this.handleOptionChange }>
+                {this.renderStocks()}
+              </CheckboxGroup>
+              </Navbar.Form>
+            </div>
           </Navbar>
         </div>
         <div className="container-fluid main-container">

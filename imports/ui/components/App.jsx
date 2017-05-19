@@ -112,7 +112,7 @@ addStock() {
 
     var companyCode = newCompanies[i];
     var stockToUpdate = Stocks.findOne({code: companyCode});
-    var companyName = stockToUpdate.name;
+    var companyName = "";//stockToUpdate.name;
 
     // retrieve company information from ASX -> fail -> 2. Intrinio
     var begin_date = moment().subtract(365, 'days').format('YYYY-MM-DD');

@@ -216,15 +216,13 @@ addStock() {
     callGuardianAPI(companyName, sector, 20, begin_date, end_date, 'newsData', companyData);
     // callGuardianAPI(companyName, sector, 20, begin_date, end_date, 'sectionNewsData', companyData);
 
-    Meteor.call('getData', newCompanies[i], function(error, result) {
+    Meteor.call('getData', companyCode, function(error, result) {
       if (result) {
         var res = JSON.parse(result.content);
         if (res.Log.Success) {
           var stockData = res.CompanyReturns[0].Data;
 
           companyData.stock_data = stockData;
-
-          companyCode = companyCode.replace(/\.AX$/, "");
         } else {
           console.log(res.Log.ErrorMessage);
         }

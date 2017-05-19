@@ -30,68 +30,55 @@ Meteor.startup(() => {
       }
     })
 
-    Meteor.call('getData', "CBA.AX", function(error, result) {
+    var companyData = {};
+
+    Meteor.call('getData', "CBA", function(error, result) {
       if (result) {
         var res = JSON.parse(result.content);
         if (res.Log.Success) {
-          var companyData = res.CompanyReturns[0].Data;
-          var stockToUpdate = Stocks.findOne({name: "Commonwealth Bank of Australia"});
+          var stockData = res.CompanyReturns[0].Data;
           // console.log(stockToUpdate);
-          Stocks.update(stockToUpdate, {
-            name: stockToUpdate.name,
-            code: stockToUpdate.code,
-            sector: stockToUpdate.sector,
-            market_cap: stockToUpdate.market_cap,
-            weight_percent: stockToUpdate.weight_percent,
-            data: companyData,
-          });
+          companyData.stock_data = stockData;
           ActiveStocks.insert({name: "Commonwealth Bank of Australia", code: "CBA", new: false});
           console.log("Stock added");
         } else {
           console.log(res.Log.ErrorMessage);
-          // While cse is down get test data
-          var stockToUpdate = Stocks.findOne({name: "Commonwealth Bank of Australia"});
-          Stocks.update(stockToUpdate, {
-            name: stockToUpdate.name,
-            code: stockToUpdate.code,
-            sector: stockToUpdate.sector,
-            market_cap: stockToUpdate.market_cap,
-            weight_percent: stockToUpdate.weight_percent,
-            stock_data: [
-              {
-                "RelativeDate": -3,
-                "Date": "14/07/2017",
-                "Close": 0.2,
-                "Return": 0,
-                "CM_Return": 0.010189818707924127,
-                "AV_Return": 0.0012737273384905159
-              },
-              {
-                "RelativeDate": -2,
-                "Date": "15/07/2017",
-                "Close": 0.3,
-                "Return": 0,
-                "CM_Return": 0.010189818707924127,
-                "AV_Return": 0.0012737273384905159
-              },
-              {
-                "RelativeDate": -1,
-                "Date": "16/07/2017",
-                "Close": 0.4,
-                "Return": 0,
-                "CM_Return": 0.010189818707924127,
-                "AV_Return": 0.0012737273384905159
-              },
-              {
-                "RelativeDate": 0,
-                "Date": "17/07/2017",
-                "Close": 0.5,
-                "Return": 0,
-                "CM_Return": 0.010189818707924127,
-                "AV_Return": 0.0012737273384905159
-              },
-            ]
-          })
+          // If something goes wrong
+
+          companyData.stock_data = [
+            {
+              "RelativeDate": -3,
+              "Date": "14/07/2017",
+              "Close": 0.2,
+              "Return": 0,
+              "CM_Return": 0.010189818707924127,
+              "AV_Return": 0.0012737273384905159
+            },
+            {
+              "RelativeDate": -2,
+              "Date": "15/07/2017",
+              "Close": 0.3,
+              "Return": 0,
+              "CM_Return": 0.010189818707924127,
+              "AV_Return": 0.0012737273384905159
+            },
+            {
+              "RelativeDate": -1,
+              "Date": "16/07/2017",
+              "Close": 0.4,
+              "Return": 0,
+              "CM_Return": 0.010189818707924127,
+              "AV_Return": 0.0012737273384905159
+            },
+            {
+              "RelativeDate": 0,
+              "Date": "17/07/2017",
+              "Close": 0.5,
+              "Return": 0,
+              "CM_Return": 0.010189818707924127,
+              "AV_Return": 0.0012737273384905159
+            },
+          ]
           ActiveStocks.insert({name: "Commonwealth Bank of Australia", code: "CBA", new: false});
         }
       } else {
@@ -100,7 +87,6 @@ Meteor.startup(() => {
       }
     });
 
-    var companyData = {};
     Meteor.call('getASXCompanyInfo', "CBA", function(error, result) {
       if (result) {
         var company = JSON.parse(result.content);
@@ -211,12 +197,9 @@ Meteor.methods({
     var dateString = moment().subtract(1, 'days').format('DD/MM/YYYY');
 
 		this.unblock();
-		return HTTP.call('GET', 'https://alphawolfwolf.herokuapp.com/api/finance?', {
+		return HTTP.call('GET', 'https://alphawolfwolf.herokuapp.com/api/finance2?', {
 			params: {
 				instrumentID: id,
-				upper_window: 0,
-				lower_window: 365,
-				dateOfInterest: dateString,
 			}
 		});
 	},

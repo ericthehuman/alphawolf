@@ -2,7 +2,7 @@ var ms = $('#magicsuggest').magicSuggest({
   allowFreeEntries: false,
   hideTrigger: true,
   maxSelection: 1,
-  placeholder: 'Search for a company by name or code (max. 2 per search)',
+  placeholder: 'Search for a company by name or code (max. 1 per search)',
   cls: 'main-input',
   valueField: 'name',
   data: [{"id": "IJH", "name": "ISHARES S&P MID-CAP ETF (IJH)"},

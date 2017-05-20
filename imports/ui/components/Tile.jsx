@@ -121,6 +121,137 @@ export default class Tile extends Component {
   	}
   }
 
+  renderStocksInfo() {
+    return this.props.stockData.map((data) => {
+      var companyReturns = data.stock_data;
+      var NUMDAYS = companyReturns.length-1;
+
+      var currClose = companyReturns[NUMDAYS].Close;
+      var prevClose = companyReturns[NUMDAYS-1].Close;
+      var positiveSignDay = (companyReturns[NUMDAYS].Close-companyReturns[NUMDAYS-1].Close) >= 0 ? "+" : "";
+
+      const tooltip_ticker = (
+          <Toolitip id="tooltip"><strong>Ticker symbol</strong><br />An abbreviation used to uniquely identify publicly traded shares of a particular stock</Toolitip>
+          //<font size="2"><OverlayTrigger placement="top" overlay={tooltip_ticker}><Glyphicon glyph="info-sign" /></OverlayTrigger></font>
+      );
+      const tooltip_close = (
+          <Toolitip id="tooltip"><strong>$Close, Change in Price, % Change in price </strong><br /><div align="left">Close: The close is the last trading price recorded when the market closed on the day<br />Change: the dollar value change in the stock price from the previous day's closing price<br />% Change: The percentage change from yesterday's closing price</div></Toolitip>
+
+          //<font size="2"><OverlayTrigger placement="top" overlay={tooltip_ticker}><Glyphicon glyph="info-sign" /></OverlayTrigger></font>
+      );
+      return (
+      <div className="big col-md-6">
+        <img src={data.logo_img_url} className="company-logo"/><h1>{data.name} <span className="stock-code">({data.code}<font size="2"><OverlayTrigger placement="top" overlay={tooltip_ticker}><Glyphicon glyph="info-sign" /></OverlayTrigger></font>)</span></h1>
+        <p>{data.short_description}</p>
+        <br/>
+        <p><a href={data.url}>{data.url}</a><br />{data.phone}</p>
+        <h2> <b>${parseFloat(currClose).toFixed(2)}</b> <span className={positiveSignDay === "+" ? "stock-positive" : "stock-negative"}>{positiveSignDay}
+        {parseFloat(currClose-prevClose).toFixed(2)} ({positiveSignDay}{parseFloat((currClose-prevClose)/prevClose*100).toFixed(2)}%)</span><font size="2"><OverlayTrigger placement="top" overlay={tooltip_close}><Glyphicon glyph="info-sign" /></OverlayTrigger></font></h2>
+
+        {/*this.getCompanySummary(data.name)*/}
+      </div>)
+    });
+  }
+
+  renderPreviousClose() {
+    return this.props.stockData.map((data) => {
+      var companyReturns = data.stock_data;
+      var NUMDAYS = companyReturns.length-1;
+      var prevClose = companyReturns[NUMDAYS-1].Close;
+      return (<td><b>{parseFloat(prevClose).toFixed(2)}</b></td>)
+    })
+  }
+
+  renderMonthlyChange() {
+    return this.props.stockData.map((data) => {
+      var companyReturns = data.stock_data;
+      var NUMDAYS = companyReturns.length-1;
+      var monthBefore = Math.max(NUMDAYS-30, 0);
+
+      var currClose = companyReturns[NUMDAYS].Close;
+      var positiveSignMonth = (companyReturns[NUMDAYS].Close-companyReturns[monthBefore].Close) >= 0 ? "+" : "";
+      return (<td className={positiveSignMonth === "+" ? "stock-positive" : "stock-negative"}><b>{parseFloat(currClose-companyReturns[monthBefore].Close).toFixed(2)}{' '}
+      ({positiveSignMonth}{parseFloat((currClose-companyReturns[monthBefore].Close)/companyReturns[monthBefore].Close*100).toFixed(2)}%)</b></td>)
+    })
+  }
+
+  renderMonthlyHigh() {
+    return this.props.stockData.map((data) => {
+      var companyReturns = data.stock_data;
+      var NUMDAYS = companyReturns.length-1;
+      var monthBefore = Math.max(NUMDAYS-30, 0);
+      var highestCloseMonth = parseFloat(companyReturns[monthBefore].Close);
+
+      for (var i = monthBefore; i < companyReturns.length; i++) {
+        var compareClose = parseFloat(companyReturns[i].Close);
+        // console.log("Curr: " + compareClose + " | high: " + highestCloseAnnual + " | low: " + lowestCloseAnnual + " | typeof(high): " + typeof(highestCloseAnnual));
+        if (compareClose > highestCloseMonth) highestCloseMonth = compareClose;
+      }
+      return (<td><b>{parseFloat(highestCloseMonth).toFixed(2)}</b></td>)
+    })
+  }
+
+  renderMonthlyLow() {
+    return this.props.stockData.map((data) => {
+      var companyReturns = data.stock_data;
+      var NUMDAYS = companyReturns.length-1;
+      var monthBefore = Math.max(NUMDAYS-30, 0);
+      var lowestCloseMonth = parseFloat(companyReturns[monthBefore].Close);
+
+      for (var i = monthBefore; i < companyReturns.length; i++) {
+        var compareClose = parseFloat(companyReturns[i].Close);
+        // console.log("Curr: " + compareClose + " | high: " + highestCloseAnnual + " | low: " + lowestCloseAnnual + " | typeof(high): " + typeof(highestCloseAnnual));
+        if (compareClose < lowestCloseMonth) lowestCloseMonth = compareClose;
+      }
+      return (<td><b>{parseFloat(lowestCloseMonth).toFixed(2)}</b></td>)
+    })
+  }
+
+  renderYearlyChange() {
+    return this.props.stockData.map((data) => {
+      var companyReturns = data.stock_data;
+      var NUMDAYS = companyReturns.length-1;
+      var yearBefore = Math.max(NUMDAYS-365, 0);
+
+      var currClose = companyReturns[NUMDAYS].Close;
+      var positiveSignAnnual = (companyReturns[NUMDAYS].Close-companyReturns[yearBefore].Close) >= 0 ? "+" : "";
+      return (<td className={positiveSignAnnual === "+" ? "stock-positive" : "stock-negative"}><b>{parseFloat(currClose-companyReturns[yearBefore].Close).toFixed(2)}{' '}
+      ({positiveSignAnnual}{parseFloat((currClose-companyReturns[yearBefore].Close)/companyReturns[yearBefore].Close*100).toFixed(2)}%)</b></td>)
+    })
+  }
+
+  renderYearlyHigh() {
+    return this.props.stockData.map((data) => {
+      var companyReturns = data.stock_data;
+      var NUMDAYS = companyReturns.length-1;
+      var yearBefore = Math.max(NUMDAYS-365, 0);
+      var highestCloseYear = parseFloat(companyReturns[yearBefore].Close);
+
+      for (var i = yearBefore; i < companyReturns.length; i++) {
+        var compareClose = parseFloat(companyReturns[i].Close);
+        // console.log("Curr: " + compareClose + " | high: " + highestCloseAnnual + " | low: " + lowestCloseAnnual + " | typeof(high): " + typeof(highestCloseAnnual));
+        if (compareClose > highestCloseYear) highestCloseYear = compareClose;
+      }
+      return (<td><b>{parseFloat(highestCloseYear).toFixed(2)}</b></td>)
+    })
+  }
+
+  renderYearlyLow() {
+    return this.props.stockData.map((data) => {
+      var companyReturns = data.stock_data;
+      var NUMDAYS = companyReturns.length-1;
+      var yearBefore = Math.max(NUMDAYS-365, 0);
+      var lowestCloseYear = parseFloat(companyReturns[yearBefore].Close);
+
+      for (var i = yearBefore; i < companyReturns.length; i++) {
+        var compareClose = parseFloat(companyReturns[i].Close);
+        // console.log("Curr: " + compareClose + " | high: " + highestCloseAnnual + " | low: " + lowestCloseAnnual + " | typeof(high): " + typeof(highestCloseAnnual));
+        if (compareClose < lowestCloseYear) lowestCloseYear = compareClose;
+      }
+      return (<td><b>{parseFloat(lowestCloseYear).toFixed(2)}</b></td>)
+    })
+  }
+
 
   //get some info about the company
   getCompanySummary(Name){
@@ -174,10 +305,12 @@ export default class Tile extends Component {
     });
   };
 
-    var data = this.props.stockData[0];
-    console.log("CODE: " + data.code);
+    var data = this.props.stockData;
+    data.forEach(function(c) {
+      console.log("CODES: " + c.code);
+    })
 
-		if(data.code === "Home") {
+		if(data[0].code === "Home") {
   		return (
   			<div className="tile">
   				<Item news={"Uber stocks fall amidst scandals"} imagef={"uber.jpg"}/>
@@ -187,123 +320,53 @@ export default class Tile extends Component {
   			</div>
   			);
 		} else {
-      var news = data.companyNews;
+      var news = data[0].companyNews;
       console.log("news is: " + news);
       this.parseDataIntoGraph(data.stock_data, news);
     	// var companySum = this.getCompanySummary(data.name);
-      var companyReturns = data.stock_data;
-      var NUMDAYS = companyReturns.length-1;
-      var yearBefore = Math.max(NUMDAYS-365, 0);
-      var monthBefore = Math.max(NUMDAYS-30, 0);
 
-      var currClose = companyReturns[NUMDAYS].Close;
-      var prevClose = companyReturns[NUMDAYS-1].Close;
-      var positiveSignDay = (companyReturns[NUMDAYS].Close-companyReturns[NUMDAYS-1].Close) >= 0 ? "+" : "";
-      var positiveSignMonth = (companyReturns[NUMDAYS].Close-companyReturns[monthBefore].Close) >= 0 ? "+" : "";
-      var positiveSignAnnual = (companyReturns[NUMDAYS].Close-companyReturns[yearBefore].Close) >= 0 ? "+" : "";
-      var highestCloseMonth = parseFloat(companyReturns[monthBefore].Close);
-      var lowestCloseMonth = parseFloat(companyReturns[monthBefore].Close);
-      var highestCloseAnnual = parseFloat(companyReturns[yearBefore].Close);
-      var lowestCloseAnnual = parseFloat(companyReturns[yearBefore].Close);
-
-      console.log("Array length: " + companyReturns.length);
-
-      // Get the lowest and highest values of the stock for year, month
-      for (var i = monthBefore; i < companyReturns.length; i++) {
-        var compareClose = parseFloat(companyReturns[i].Close);
-        // console.log("Curr: " + compareClose + " | high: " + highestCloseAnnual + " | low: " + lowestCloseAnnual + " | typeof(high): " + typeof(highestCloseAnnual));
-        if (compareClose > highestCloseMonth) highestCloseMonth = compareClose;
-        if (compareClose < lowestCloseMonth) lowestCloseMonth = compareClose;
-      }
-
-      for (var i = yearBefore; i < companyReturns.length; i++) {
-        var compareClose = parseFloat(companyReturns[i].Close);
-        // console.log("Curr: " + compareClose + " | high: " + highestCloseAnnual + " | low: " + lowestCloseAnnual + " | typeof(high): " + typeof(highestCloseAnnual));
-        if (compareClose > highestCloseAnnual) highestCloseAnnual = compareClose;
-        if (compareClose < lowestCloseAnnual) lowestCloseAnnual = compareClose;
-      }
-            const tooltip_ticker = (
-                <Toolitip id="tooltip"><strong>Ticker symbol</strong><br />An abbreviation used to uniquely identify publicly traded shares of a particular stock</Toolitip>
-                //<font size="2"><OverlayTrigger placement="top" overlay={tooltip_ticker}><Glyphicon glyph="info-sign" /></OverlayTrigger></font>
-            );
-            const tooltip_close = (
-                <Toolitip id="tooltip"><strong>$Close, Change in Price, % Change in price </strong><br /><div align="left">Close: The close is the last trading price recorded when the market closed on the day<br />Change: the dollar value change in the stock price from the previous day's closing price<br />% Change: The percentage change from yesterday's closing price</div></Toolitip>
-                
-                //<font size="2"><OverlayTrigger placement="top" overlay={tooltip_ticker}><Glyphicon glyph="info-sign" /></OverlayTrigger></font>
-            );
-            console.log("Curr: " + currClose + " | Prev: " + prevClose + " | high: " + highestCloseAnnual + " | low: " + lowestCloseAnnual);
+      var columnSpan = data.length+1;
 			return (
 				<div className="tile">
-					<div className="big">
-            <img src={data.logo_img_url} className="company-logo"/><h1>{data.name} <span className="stock-code">({data.code}<font size="2"><OverlayTrigger placement="top" overlay={tooltip_ticker}><Glyphicon glyph="info-sign" /></OverlayTrigger></font>)</span></h1>
-            <p>{data.short_description}</p>
-            <br/>
-            <p><a href={data.url}>{data.url}</a><br />{data.phone}</p>
-            <h2> <b>${parseFloat(currClose).toFixed(2)}</b> <span className={positiveSignDay === "+" ? "stock-positive" : "stock-negative"}>{positiveSignDay}
-            {parseFloat(currClose-prevClose).toFixed(2)} ({positiveSignDay}{parseFloat((currClose-prevClose)/prevClose*100).toFixed(2)}%)</span><font size="2"><OverlayTrigger placement="top" overlay={tooltip_close}><Glyphicon glyph="info-sign" /></OverlayTrigger></font></h2>
-            <Table>
-              <thead>
-                <tr>
-                  <th colSpan="2">Statistics</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Previous close</td>
-                  <td><b>{parseFloat(prevClose).toFixed(2)}</b></td>
-                </tr>
-                <tr>
-                  <td>Monthly change</td>
-                  <td className={positiveSignMonth === "+" ? "stock-positive" : "stock-negative"}><b>{parseFloat(currClose-companyReturns[monthBefore].Close).toFixed(2)}{' '}
-                  ({positiveSignMonth}{parseFloat((currClose-companyReturns[monthBefore].Close)/companyReturns[monthBefore].Close*100).toFixed(2)}%)</b></td>
-                </tr>
-                <tr>
-                  <td>Monthly high</td>
-                  <td><b>{parseFloat(highestCloseMonth).toFixed(2)}</b></td>
-                </tr>
-                <tr>
-                  <td>Monthly low</td>
-                  <td><b>{parseFloat(lowestCloseMonth).toFixed(2)}</b></td>
-                </tr>
-                <tr>
-                  <td>Annual change</td>
-                  <td className={positiveSignAnnual === "+" ? "stock-positive" : "stock-negative"}><b>{parseFloat(currClose-companyReturns[yearBefore].Close).toFixed(2)}{' '}
-                  ({positiveSignAnnual}{parseFloat((currClose-companyReturns[yearBefore].Close)/companyReturns[yearBefore].Close*100).toFixed(2)}%)</b></td>
-                </tr>
-                <tr>
-                  <td>Annual high</td>
-                  <td><b>{parseFloat(highestCloseAnnual).toFixed(2)}</b></td>
-                </tr>
-                <tr>
-                  <td>Annual low</td>
-                  <td><b>{parseFloat(lowestCloseAnnual).toFixed(2)}</b></td>
-                </tr>
-              </tbody>
-            </Table>
-  					{/*this.getCompanySummary(data.name)*/}
-					</div>
-					<h2>Closing Price</h2>
-
-					<LineChart width={600} height={300} syncId="anyId" data={this.parseDataIntoGraph(data.data, news.data, Session.get('sectionNewsData'))}
-            margin={{top: 5, right: 30, left: 20, bottom: 5}}>
-       				<XAxis dataKey="name"/>
-       				<YAxis domain={['auto', 'auto']}/>
-       				<CartesianGrid strokeDasharray="3 3" vertical={false}/>
-       				<Line type="monotone" dataKey="value" dot={false}  stroke="#8884d8" activeDot={{r: 8}}/>
-      				</LineChart>
-
-              <div id="container"></div>
-					{/*<h2>Cumulative Return</h2>
-					<LineChart width={600} height={300} syncId="anyId" data={this.parseCMDataIntoGraph(data.data)}
-							   margin={{top: 5, right: 30, left: 20, bottom: 5}}>
-						<XAxis dataKey="name"/>
-						<YAxis domain={['auto', 'auto']}/>
-						<CartesianGrid strokeDasharray="3 3" vertical={false}/>
-						<Tooltip content={ showTooltipData }/>
-						<Line type="monotone" dataKey="value" dot={false}  stroke="#8884d8" activeDot={{r: 8}}/>
-					</LineChart>*/}
-
-            <div id="container"></div>
+					{ this.renderStocksInfo() }
+          <Table>
+            <thead>
+              <tr>
+                <th colSpan={columnSpan}>Statistics</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Previous close</td>
+                { this.renderPreviousClose() }
+              </tr>
+              <tr>
+                <td>Monthly change</td>
+                { this.renderMonthlyChange() }
+              </tr>
+              <tr>
+                <td>Monthly high</td>
+                { this.renderMonthlyHigh() }
+              </tr>
+              <tr>
+                <td>Monthly low</td>
+                { this.renderMonthlyLow() }
+              </tr>
+              <tr>
+                <td>Annual change</td>
+                { this.renderYearlyChange() }
+              </tr>
+              <tr>
+                <td>Annual high</td>
+                { this.renderYearlyHigh() }
+              </tr>
+              <tr>
+                <td>Annual low</td>
+                { this.renderYearlyLow() }
+              </tr>
+            </tbody>
+          </Table>
+          <div id="container"></div>
 				</div>
 
 				);

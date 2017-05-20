@@ -61,6 +61,7 @@ handleOptionChange(companiesList) {
 
   this.setState({ currSelectedStocks: companiesList });
 
+  console.log(companiesList);
   var stocksToShow = Stocks.find({name: { $in: companiesList } } ).fetch();
 
   var dataArray = [];
@@ -94,11 +95,6 @@ handleStockScope (event){
 }
 
 renderStocks() {
-  if (this.props.activeStocks.length > 8) {
-    var oldest = this.props.activeStocks[0];
-    console.log("Current stocks in list: " + this.props.activeStocks);
-    ActiveStocks.remove({code: oldest.code});
-  }
   return this.props.activeStocks.map((stock) => (
     <Button key={stock._id} stock={stock} optionChange={this.handleOptionChange.bind(this)} />
     ));
@@ -116,7 +112,7 @@ addStock() {
 
     var companyCode = newCompanies[i].replace(/\.AX$/, "");
     var stockToUpdate = Stocks.findOne({code: companyCode});
-    var companyName = "";//stockToUpdate.name;
+    var companyName = stockToUpdate.name;
 
     // retrieve company information from ASX -> fail -> 2. Intrinio
     var begin_date = moment().subtract(365, 'days').format('YYYY-MM-DD');

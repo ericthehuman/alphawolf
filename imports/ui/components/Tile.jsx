@@ -6,7 +6,7 @@ import { ReactiveVar } from 'meteor/reactive-var';
 import Item from './Item.jsx';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend} from 'recharts';
 import ReactDOM from 'react-dom';
-import { Table, Form } from 'react-bootstrap';
+import { Table, Form, Glyphicon, Tooltip as Toolitip,OverlayTrigger } from 'react-bootstrap';
 
 import { Data, Companies, Stocks, SelectedStock, News } from '../../api/data.js';
 import Button from './Button.jsx';
@@ -222,17 +222,25 @@ export default class Tile extends Component {
         if (compareClose > highestCloseAnnual) highestCloseAnnual = compareClose;
         if (compareClose < lowestCloseAnnual) lowestCloseAnnual = compareClose;
       }
-
-      console.log("Curr: " + currClose + " | Prev: " + prevClose + " | high: " + highestCloseAnnual + " | low: " + lowestCloseAnnual);
+            const tooltip_ticker = (
+                <Toolitip id="tooltip"><strong>Ticker symbol</strong><br />An abbreviation used to uniquely identify publicly traded shares of a particular stock</Toolitip>
+                //<font size="2"><OverlayTrigger placement="top" overlay={tooltip_ticker}><Glyphicon glyph="info-sign" /></OverlayTrigger></font>
+            );
+            const tooltip_close = (
+                <Toolitip id="tooltip"><strong>$Close, Change in Price, % Change in price </strong><br /><div align="left">Close: The close is the last trading price recorded when the market closed on the day<br />Change: the dollar value change in the stock price from the previous day's closing price<br />% Change: The percentage change from yesterday's closing price</div></Toolitip>
+                
+                //<font size="2"><OverlayTrigger placement="top" overlay={tooltip_ticker}><Glyphicon glyph="info-sign" /></OverlayTrigger></font>
+            );
+            console.log("Curr: " + currClose + " | Prev: " + prevClose + " | high: " + highestCloseAnnual + " | low: " + lowestCloseAnnual);
 			return (
 				<div className="tile">
 					<div className="big">
-            <img src={data.logo_img_url} className="company-logo"/><h1>{data.name} <span className="stock-code">({data.code})</span></h1>
+            <img src={data.logo_img_url} className="company-logo"/><h1>{data.name} <span className="stock-code">({data.code}<font size="2"><OverlayTrigger placement="top" overlay={tooltip_ticker}><Glyphicon glyph="info-sign" /></OverlayTrigger></font>)</span></h1>
             <p>{data.short_description}</p>
             <br/>
             <p><a href={data.url}>{data.url}</a><br />{data.phone}</p>
             <h2> <b>${parseFloat(currClose).toFixed(2)}</b> <span className={positiveSignDay === "+" ? "stock-positive" : "stock-negative"}>{positiveSignDay}
-            {parseFloat(currClose-prevClose).toFixed(2)} ({positiveSignDay}{parseFloat((currClose-prevClose)/prevClose*100).toFixed(2)}%)</span></h2>
+            {parseFloat(currClose-prevClose).toFixed(2)} ({positiveSignDay}{parseFloat((currClose-prevClose)/prevClose*100).toFixed(2)}%)</span><font size="2"><OverlayTrigger placement="top" overlay={tooltip_close}><Glyphicon glyph="info-sign" /></OverlayTrigger></font></h2>
             <Table>
               <thead>
                 <tr>

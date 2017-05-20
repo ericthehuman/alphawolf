@@ -250,3 +250,8 @@ input:checked + label {
 	max-width: 600px;
 	min-width: 600px;
 }
+.tooltip-inner {
+	max-width: 1000px;
+	/* If max-width does not work, try using width instead */
+	width: 1000px;
+}

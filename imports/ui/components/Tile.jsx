@@ -141,7 +141,7 @@ export default class Tile extends Component {
       );
       return (
       <div className="big col-md-6">
-        <img src={data.logo_img_url} className="company-logo"/><h1>{data.name} <span className="stock-code">({data.code}<font size="2"><OverlayTrigger placement="top" overlay={tooltip_ticker}><Glyphicon glyph="info-sign" /></OverlayTrigger></font>)</span></h1>
+        <h1>{data.name} <span className="stock-code">({data.code}<font size="2"><OverlayTrigger placement="top" overlay={tooltip_ticker}><Glyphicon glyph="info-sign" /></OverlayTrigger></font>)</span></h1>
         <p>{data.short_description}</p>
         <br/>
         <p><a href={data.url}>{data.url}</a><br />{data.phone}</p>
@@ -322,17 +322,17 @@ export default class Tile extends Component {
 		} else {
       var news = data[0].companyNews;
       console.log("news is: " + news);
-      this.parseDataIntoGraph(data.stock_data, news);
+      this.parseDataIntoGraph(data[0].stock_data, news);
     	// var companySum = this.getCompanySummary(data.name);
 
       var columnSpan = data.length+1;
 			return (
 				<div className="tile">
 					{ this.renderStocksInfo() }
-          <Table>
+          <Table bordered hover>
             <thead>
               <tr>
-                <th colSpan={columnSpan}>Statistics</th>
+                <th colSpan={columnSpan} className="firstCol">Statistics</th>
               </tr>
             </thead>
             <tbody>

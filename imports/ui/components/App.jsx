@@ -94,7 +94,11 @@ handleStockScope (event){
 }
 
 renderStocks() {
-  console.log("Current stocks in list: " + this.props.activeStocks);
+  if (this.props.activeStocks.length > 8) {
+    var oldest = this.props.activeStocks[0];
+    console.log("Current stocks in list: " + this.props.activeStocks);
+    ActiveStocks.remove({code: oldest.code});
+  }
   return this.props.activeStocks.map((stock) => (
     <Button key={stock._id} stock={stock} optionChange={this.handleOptionChange.bind(this)} />
     ));
@@ -110,7 +114,7 @@ addStock() {
   for (var i = 0; i < newCompanies.length; i++) {
     var companyData = {};
 
-    var companyCode = newCompanies[i];
+    var companyCode = newCompanies[i].replace(/\.AX$/, "");
     var stockToUpdate = Stocks.findOne({code: companyCode});
     var companyName = "";//stockToUpdate.name;
 

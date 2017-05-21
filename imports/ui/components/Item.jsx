@@ -7,32 +7,20 @@ import { ReactiveVar } from 'meteor/reactive-var';
 
 //some styles, too lazy to figure how to import style sheets
 
-var fancy = {
-	 "border": "2px solid black"
-
-}
 export default class Item extends Component {
 
-
-	/*div.transbox p {
-	  text-align: center;
-	  font-weight: bold;
-	  color: #ffffff ;
-	}*/
-
 	handleClick(e){
-
-		console.log("You clicked on " + this.props.value);
 		var isOpen = ModalVar.get().isOpen;
 		ModalVar.set({
           isOpen: !isOpen,
         });
 	}
-
 	render() {
+		var test = "url(" + this.props.imagef + ")";
+		console.log("test image: " + test);
 		return (
-			<div className="item" onClick={this.handleClick} value={this.props.value} >
-				<h2 style={{fancy.textstyle}} >{this.props.news}</h2>
+			<div className="item" style={{"background-image": test}} onClick={this.handleClick} value={this.props.value} >
+				<h2 style={{"font-weigth": "bold", "text-align": "center", color: "#ffffff"}} >{this.props.news}</h2>
 			</div>
 		);
 	}

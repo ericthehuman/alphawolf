@@ -138,7 +138,7 @@ Meteor.startup(() => {
       }
     });
 
-    Meteor.call('getGuardianNews', "australia-news", "2017-05-14", "2017-05-17", 10, "Commonwealth", function(error, result) {
+    Meteor.call('getGuardianNews', "australia-news", "2017-04-14", "2017-05-21", 20, "Commonwealth Bank of Australia AND finance", function(error, result) {
       if (result) {
         var newsArray = [];
         var sectionId = []; // to determine company's main sector
@@ -147,7 +147,7 @@ Meteor.startup(() => {
 
         var parsedResult = JSON.parse(result.content);
         // console.log("parsedResult is: " + parsedResult);
-        var length = Math.min(10, parsedResult.response.results.length); // hard cap set here
+        var length = Math.min(20, parsedResult.response.results.length); // hard cap set here
 
         for (var i = 0; i < length; i++) {
             var article = parsedResult.response.results[i];

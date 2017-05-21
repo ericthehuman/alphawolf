@@ -155,7 +155,12 @@ img {
 }
 
 .firstCol {
-	width: 15%;
+	width: 8%;
+}
+
+.align-right {
+	text-align: right;
+	border-right: 1px solid #000;
 }
 
 

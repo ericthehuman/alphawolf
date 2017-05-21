@@ -53,17 +53,30 @@ export default class Tile extends Component {
         var mm = datestr[1];
         var yyyy = datestr[2];
         var timestamp = (new Date(yyyy,mm, dd).getTime());
+
+        if (i > 0) {
+          var oldDate = array[i-1].Date.split("/");
+          var oldTime = (new Date(oldDate[2], oldDate[1], oldDate[0]).getTime());
+          if (oldTime >= timestamp) console.log("OLD: " + oldDate + " | VS NEW: "+ datestr);
+        }
+
         var currStockData = [];
         currStockData.push(timestamp);
         dates.push(timestamp);
         currStockData.push(Math.round((array[i].Close)*100));
         stockData.push(currStockData);
       }
+
+      console.log(news);
       var currNewsItem;
       // parse data for displaying news
       for (var j = 0; j < news.length; j++) {
         currNewsItem = news[j];
         var newsDate = currNewsItem["date"];
+        if (j > 0 && news[j].date === news[j-1].date) {
+          console.log("aaa");
+          continue;
+        }
 
         var datestr = newsDate.split("/");
         var dd = datestr[0];
@@ -72,14 +85,13 @@ export default class Tile extends Component {
         var timestamp = (new Date(yyyy,mm, dd).getTime());
 
         var newsHeadline = currNewsItem["headline"];
-        var currNewsData = {x: timestamp, title: newsHeadline};
+        var newsUrl = "<a href=" + currNewsItem.url + ">Link</a>";
+        var currNewsData = {x: timestamp, title: newsUrl, text: newsHeadline};
 
         // console.log(currNewsData);
         newsData.push(currNewsData);
       }
 
-      console.log("currNews:");
-      console.log(currNewsItem);
       i = 0;
   	  while(i < array.length){
   	  	var headline = "";
@@ -104,10 +116,11 @@ export default class Tile extends Component {
         },{
             type: 'flags',
             name: 'Flags on series',
-            data: [{
-              x : dates[10],
-              title: "<button className='btn btn-primary' onClick={this.openModal}>Open Modal</button>",
-            }],//newsData,
+            // data: [{
+            //   x : dates[10],
+            //   title: "<button className='btn btn-primary' onClick={this.openModal}>Open Modal</button>",
+            // }],//newsData,
+            data: newsData,
             onSeries: 'stockData',
             shape: 'squarepin',
             useHTML: true,
@@ -117,7 +130,7 @@ export default class Tile extends Component {
         }
         // ... more options - see http://api.highcharts.com/highcharts
       });
-      // return data;
+      return data;
   	}
   }
 
@@ -130,6 +143,9 @@ export default class Tile extends Component {
       var prevClose = companyReturns[NUMDAYS-1].Close;
       var positiveSignDay = (companyReturns[NUMDAYS].Close-companyReturns[NUMDAYS-1].Close) >= 0 ? "+" : "";
 
+      if (!data.short_description) data.short_description = "No description available."
+      if (!data.url) data.url = "No website URL available."
+      if (!data.phone) data.phone = "No phone no. available."
       const tooltip_ticker = (
           <Toolitip id="tooltip"><strong>Ticker symbol</strong><br />An abbreviation used to uniquely identify publicly traded shares of a particular stock</Toolitip>
           //<font size="2"><OverlayTrigger placement="top" overlay={tooltip_ticker}><Glyphicon glyph="info-sign" /></OverlayTrigger></font>
@@ -140,7 +156,7 @@ export default class Tile extends Component {
           //<font size="2"><OverlayTrigger placement="top" overlay={tooltip_ticker}><Glyphicon glyph="info-sign" /></OverlayTrigger></font>
       );
       return (
-      <div className="big col-md-6">
+      <div className={data.firstStock ? "col-md-6 align-right" : "col-md-6"}>
         <h1>{data.name} <span className="stock-code">({data.code}<font size="2"><OverlayTrigger placement="top" overlay={tooltip_ticker}><Glyphicon glyph="info-sign" /></OverlayTrigger></font>)</span></h1>
         <p>{data.short_description}</p>
         <br/>
@@ -321,7 +337,6 @@ export default class Tile extends Component {
   			);
 		} else {
       var news = data[0].companyNews;
-      console.log("news is: " + news);
       this.parseDataIntoGraph(data[0].stock_data, news);
     	// var companySum = this.getCompanySummary(data.name);
 
@@ -332,12 +347,12 @@ export default class Tile extends Component {
           <Table bordered hover>
             <thead>
               <tr>
-                <th colSpan={columnSpan} className="firstCol">Statistics</th>
+                <th colSpan={columnSpan}>Statistics</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>Previous close</td>
+                <td className="firstCol">Previous close</td>
                 { this.renderPreviousClose() }
               </tr>
               <tr>

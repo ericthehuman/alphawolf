@@ -5,30 +5,22 @@ import Modal from './Modal.jsx';
 import { ReactiveVar } from 'meteor/reactive-var';
 
 
+//some styles, too lazy to figure how to import style sheets
 
 export default class Item extends Component {
 
-
 	handleClick(e){
-
-		console.log("You clicked this item");
 		var isOpen = ModalVar.get().isOpen;
 		ModalVar.set({
           isOpen: !isOpen,
         });
-
 	}
-
 	render() {
+		var test = "url(" + this.props.imagef + ")";
+		console.log("test image: " + test);
 		return (
-			<div className="item" onClick={this.handleClick}>
-				<div className="imageHolder">
-					<img src={this.props.imagef}></img>
-				</div>
-				<div className="titleBar">
-				{this.props.news}
-				</div>
-
+			<div className="item" style={{"background-image": test}} onClick={this.handleClick} value={this.props.value} >
+				<h2 style={{"font-weigth": "bold", "text-align": "center", color: "#ffffff"}} >{this.props.news}</h2>
 			</div>
 		);
 	}

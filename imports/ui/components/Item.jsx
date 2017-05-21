@@ -17,7 +17,7 @@ export default class Item extends Component {
 	}
 	render() {
 		var test = "url(" + this.props.imagef + ")";
-		console.log("test image: " + test);
+		// console.log("test image: " + test);
 		return (
 			<div className="item" style={{"background-image": test}} onClick={this.handleClick} value={this.props.value} >
 				<h2 style={{"font-weigth": "bold", "text-align": "center", color: "#ffffff"}} >{this.props.news}</h2>

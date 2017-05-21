@@ -54,16 +54,17 @@ export default class Tile extends Component {
         var datestr = array[i].Date;
         // console.log("DATESTR:" + datestr);
         datestr = datestr.split("/");
-        var dd = datestr[0];
-        var mm = datestr[1];
-        var yyyy = datestr[2];
-        var timestamp = (new Date(yyyy,mm, dd).getTime());
+        var dd = parseInt(datestr[0]);
+        var mm = parseInt(datestr[1])-1;
+        var yyyy = parseInt(datestr[2]);
+        // console.log("SPLIT:" + dd + "/" + mm + "/" + yyyy);
+        var timestamp = Date.UTC(yyyy,mm,dd);
 
-        if (i > 0) {
-          var oldDate = array[i-1].Date.split("/");
-          var oldTime = (new Date(oldDate[2], oldDate[1], oldDate[0]).getTime());
-          if (oldTime >= timestamp) console.log("OLD: " + oldDate + " | VS NEW: "+ datestr);
-        }
+        // if (i > 0) {
+        //   var oldDate = array[i-1].Date.split("/");
+        //   var oldTime = Date.UTC(oldDate[2], oldDate[1]-1, oldDate[0]);
+        //   if (oldTime >= timestamp) console.log("OLD: " + oldDate + "NUM: " + oldTime + " | VS NEW: "+ datestr + " NUM: " + timestamp);
+        // }
 
         var currStockData = [];
         currStockData.push(timestamp);
@@ -78,16 +79,22 @@ export default class Tile extends Component {
       for (var j = 0; j < news.length; j++) {
         currNewsItem = news[j];
         var newsDate = currNewsItem["date"];
-        if (j > 0 && news[j].date === news[j-1].date) {
-          console.log("aaa");
-          continue;
-        }
 
         var datestr = newsDate.split("/");
-        var dd = datestr[0];
-        var mm = datestr[1];
-        var yyyy = datestr[2];
-        var timestamp = (new Date(yyyy,mm, dd).getTime());
+        var dd = parseInt(datestr[0]);
+        var mm = parseInt(datestr[1])-1;
+        var yyyy = parseInt(datestr[2]);
+        var timestamp = Date.UTC(yyyy,mm,dd);
+
+        var newsExistsForDate = false;
+        for (var k = 0; k < newsData.length; k++) {
+          if (newsData[k].x === timestamp) {
+            newsExistsForDate = true;
+            break;
+          }
+        }
+
+        if (newsExistsForDate) continue;
 
         var newsHeadline = currNewsItem["headline"];
         var newsUrl = "<a href=" + currNewsItem.url + ">Link</a>";
@@ -96,6 +103,10 @@ export default class Tile extends Component {
         // console.log(currNewsData);
         newsData.push(currNewsData);
       }
+
+      newsData.sort(function(a, b) {
+          return parseFloat(a.x) - parseFloat(b.x);
+      });
 
       i = 0;
   	  while(i < array.length){
@@ -111,7 +122,6 @@ export default class Tile extends Component {
   	     });
   	    i = i +1;
   	  }
-      console.log("num of article matches " + numMatches);
 
       var chart = Highcharts.stockChart('container', {
         series: [{
@@ -135,7 +145,7 @@ export default class Tile extends Component {
         }
         // ... more options - see http://api.highcharts.com/highcharts
       });
-      return data;
+      // return data;
   	}
   }
 
@@ -295,11 +305,11 @@ export default class Tile extends Component {
 
     // While we only have functionality for 1 stock
 
-    var data = this.props.stockData[0];
-    console.log("CODE: " + data.code);
+    var data = this.props.stockData;
+    console.log("CODE: " + data[0].code);
     //rendering news page here
     //value consponds to data code which will be used as a switch function
-		if(data.code === "Home") {
+		if(data[0].code === "Home") {
   		return (
   			<div className="tile">
   				<Item optionChange={this.handleClickItem.bind(this)} news={"Consumer Discretionary"} imagef={"http://www.sharesinv.com/wp-content/uploads/articles/consumer-ETFs.jpg"} value={"consumer1"}/>

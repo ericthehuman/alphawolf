@@ -20,6 +20,11 @@ var Highcharts = require('highcharts/highstock');
 
 export default class Tile extends Component {
 
+  handleClickItem (){
+    //re-renders tiles
+    console.log("something is pressed!\n");
+  }
+
   //converts raw api data into structure the graph component uses
   parseDataIntoGraph(result, news, section){
     if(result != null){
@@ -150,19 +155,19 @@ export default class Tile extends Component {
 		if(data.code === "Home") {
   		return (
   			<div className="tile">
-  				<Item news={"Consumer Discretionary"} imagef={"uber.jpg"} value={"consumer1"}/>
-  				<Item news={"Consumer Staples"} imagef={"apple.png"} value={"consumer2"}/>
-  				<Item news={"Energy"} imagef={"thinkpad.jpg"} value={"Energy"}/>
-  				<Item news={"Financial"} imagef={"http://static.memrise.com/uploads/course_photos/3146044000150629230223.jpg"} value={"financial"}/>
-          <Item news={"Health Care"} imagef={"thinkpad.jpg"} value={"health"}/>
-          <Item news={"Industrials"} imagef={"unsw.jpg"} value={"industrials"}/>
-          <Item news={"IT- Information Technology"} imagef={"thinkpad.jpg"} value={"it"}/>
-          <Item news={"Materials"} imagef={"unsw.jpg"} value={"materials"}/>
-          <Item news={"Metals and Minning"} imagef={"thinkpad.jpg"} value={"metalmine"}/>
-          <Item news={"Resources"} imagef={"unsw.jpg"} value={"resource"}/>
-          <Item news={"Telecommunications Services"} imagef={"thinkpad.jpg"} value={"telecom"}/>
-          <Item news={"Utilities"} imagef={"unsw.jpg"} value={"util"}/>
-          <Item news={"Bank"} imagef={"thinkpad.jpg"} value={"bank"}/>
+  				<Item optionChange={this.handleClickItem.bind(this)} news={"Consumer Discretionary"} imagef={"http://www.sharesinv.com/wp-content/uploads/articles/consumer-ETFs.jpg"} value={"consumer1"}/>
+  				<Item optionChange={this.handleClickItem.bind(this)} news={"Consumer Staples"} imagef={"http://www.etftrends.com/wp-content/uploads/2012/10/consumer-staples-etfs.png"} value={"consumer2"}/>
+  				<Item optionChange={this.handleClickItem.bind(this)} news={"Energy"} imagef={"https://www.dentons.com/-/media/images/website/background-images/industry-sectors/energy/energy-2.jpg  "} value={"Energy"}/>
+  				<Item optionChange={this.handleClickItem.bind(this)} news={"Financial"} imagef={"http://static.memrise.com/uploads/course_photos/3146044000150629230223.jpg"} value={"financial"}/>
+          <Item optionChange={this.handleClickItem.bind(this)} news={"Health Care"} imagef={"http://www.philips.com.au/c-dam/b2bhc/us/homepage-rebranded/specialties_heartmonitor.png"} value={"health"}/>
+          <Item optionChange={this.handleClickItem.bind(this)} news={"Industrials"} imagef={"http://relaypowersystems.com/wp-content/uploads/2011/10/refinery.jpg"} value={"industrials"}/>
+          <Item optionChange={this.handleClickItem.bind(this)} news={"IT- Information Technology"} imagef={"https://i.ytimg.com/vi/GyfPJ1i1Y5Y/maxresdefault.jpg "} value={"it"}/>
+          <Item optionChange={this.handleClickItem.bind(this)} news={"Materials"} imagef={"http://cambabest.co.uk/wp-content/uploads/2015/02/Building-banner1.jpg"} value={"materials"}/>
+          <Item optionChange={this.handleClickItem.bind(this)} news={"Metals and Minning"} imagef={"http://rsb-industries.com/images/Metal_Mining.jpg"} value={"metalmine"}/>
+          <Item optionChange={this.handleClickItem.bind(this)} news={"Resources"} imagef={"http://psychology.berkeley.edu/sites/default/files/styles/1000x400sc/public/Resources%20page%20photo_0.jpg?itok=dLdmH90P"} value={"resource"}/>
+          <Item optionChange={this.handleClickItem.bind(this)} news={"Telecommunications Services"} imagef={"https://www.sevone.com/sites/default/files/images/telecommunications-map.jpg"} value={"telecom"}/>
+          <Item optionChange={this.handleClickItem.bind(this)} news={"Utilities"} imagef={"http://allentownboronj.com/vertical/Sites/%7B7748EEEB-2391-4653-8B6A-4A64C85A6D79%7D/uploads/8329283_orig.jpg"} value={"util"}/>
+          <Item optionChange={this.handleClickItem.bind(this)} news={"Bank"} imagef={"https://cdn.pixabay.com/photo/2015/10/14/18/43/bank-988164_960_720.png"} value={"bank"}/>
           </div>
   			);
 		} else {

@@ -3,10 +3,14 @@ import { Meteor } from 'meteor/meteor';
 import { Data, Companies, Stocks, ModalVar} from '../../api/data.js';
 import Modal from './Modal.jsx';
 import { ReactiveVar } from 'meteor/reactive-var';
-import styles from '../style/tiles.css';
 
 
+//some styles, too lazy to figure how to import style sheets
 
+var fancy = {
+	 "border": "2px solid black"
+
+}
 export default class Item extends Component {
 
 
@@ -18,18 +22,17 @@ export default class Item extends Component {
 
 	handleClick(e){
 
-		console.log("You clicked this item");
+		console.log("You clicked on " + this.props.value);
 		var isOpen = ModalVar.get().isOpen;
 		ModalVar.set({
           isOpen: !isOpen,
         });
-
 	}
 
 	render() {
 		return (
-			<div background={this.props.imagef} className="item" onClick={this.handleClick} value={this.props.value}>
-				<div className={styles.transbox}>{this.props.news}</div>
+			<div className="item" onClick={this.handleClick} value={this.props.value} >
+				<h2 style={{fancy.textstyle}} >{this.props.news}</h2>
 			</div>
 		);
 	}

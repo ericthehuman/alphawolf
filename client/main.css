@@ -29,6 +29,10 @@ body {
 	background-image: none;
 }
 
+.nav-bottom-row {
+	padding-bottom: 10px;
+}
+
 .main-container {
 	width: 90%;
 }
@@ -128,6 +132,11 @@ img {
 	font-size: 40px;
 }
 
+.company-logo {
+	width: 80px;
+	height: auto;
+}
+
 .stock-code {
 	font-size: 36px;
 }
@@ -145,12 +154,18 @@ img {
 	color: #be0909;
 }
 
+.firstCol {
+	width: 15%;
+}
+
+
 
 /*defining style for radio buttons and submit button*/
 .radio-image {
 	height: 20px;
 	width: 20px;
 }
+
 .radio {
 	display: inline-block !important;
 	margin-right: 10px;
@@ -198,8 +213,39 @@ img {
 	background-color: black;
 }
 
-label:hover {
-	cursor: pointer;
+.hide-checkbox {
+	display: none;
+}
+
+label {
+	font-weight: bold;
+	font-family: 'Pavanam', sans-serif;
+	font-size: 18px;
+	width: 80px;
+  display: inline-block;
+  position: relative;
+  /*margin: 10px;*/
+	text-align: center;
+  padding-top: 5px;
+	padding-bottom: 5px;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  color: #bebebe;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+	/*white-space: nowrap;*/
+  cursor: pointer;
+  user-select: none;
+  transition: background-color .2s, box-shadow .2s;
+}
+
+label:hover, input:focus + label {
+  box-shadow: 0 0 15px rgba(0, 0, 0, .4);
+}
+
+input:checked + label {
+  background-color: #82f490;
+  color: #424242;
 }
 
 
@@ -207,4 +253,9 @@ label:hover {
 .main-input {
 	max-width: 600px;
 	min-width: 600px;
+}
+.tooltip-inner {
+	max-width: 1000px;
+	/* If max-width does not work, try using width instead */
+	width: 1000px;
 }

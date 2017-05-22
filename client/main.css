@@ -148,7 +148,13 @@ img {
 }
 
 .borderless td, .borderless th {
-  border: none !important;
+  border-top: none !important;
+  border-bottom: none !important;
+}
+
+.add-borders {
+  border-left: 1px solid #d6d6d6 !important;
+  border-right: 1px solid #d6d6d6 !important;
 }
 
 .stock-code {
@@ -173,7 +179,7 @@ img {
 }
 
 .equal-col {
-  width: 45%;
+  width: 46%;
 }
 
 

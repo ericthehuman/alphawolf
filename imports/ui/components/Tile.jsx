@@ -215,7 +215,7 @@ export default class Tile extends Component {
   renderStocksName() {
     return this.props.stockData.map((data, i, stockData) => {
       if (data.name === " ") {
-        return (<td className="small-col"> </td>);
+        return (<td className="small-col add-borders"> </td>);
       }
 
       const tooltip_ticker = (
@@ -238,11 +238,26 @@ export default class Tile extends Component {
     })
   }
 
+  renderStocksSector() {
+    return this.props.stockData.map((data, i, stockData) => {
+      if (!data.sector) data.sector = "Unknown sector"
+      if (data.sector === "Sector") {
+        return (<td className="align-center add-borders"><b>{data.sector}</b></td>);
+      }
+      if (stockData.length === 3) {
+        if (i === 0) {
+          return (<td className="align-right">{data.sector}</td>);
+        }
+      }
+      return (<td>{data.sector}</td>);
+    })
+  }
+
   renderStocksDescription() {
     return this.props.stockData.map((data, i, stockData) => {
       if (!data.short_description) data.short_description = "No description available.";
       if (data.short_description === "Summary") {
-        return (<td className="align-center"><b>{data.short_description}</b></td>);
+        return (<td className="align-center add-borders"><b>{data.short_description}</b></td>);
       }
       if (stockData.length === 3) {
         if (i === 0) {
@@ -255,9 +270,11 @@ export default class Tile extends Component {
 
   renderStocksUrl() {
     return this.props.stockData.map((data, i, stockData) => {
-      if (!data.url) data.url = "No website URL available."
+      if (!data.url) {
+        return (<td>No website URL available</td>);
+      }
       if (data.url === "Company Website") {
-        return (<td className="align-center"><b>{data.url}</b></td>);
+        return (<td className="align-center add-borders"><b>{data.url}</b></td>);
       }
       if (stockData.length === 3) {
         if (i === 0) {
@@ -272,7 +289,7 @@ export default class Tile extends Component {
     return this.props.stockData.map((data, i, stockData) => {
       if (!data.phone) data.phone = "No phone no. available."
       if (data.phone === "Phone no.") {
-        return (<td className="align-center"><b>{data.phone}</b></td>);
+        return (<td className="align-center add-borders"><b>{data.phone}</b></td>);
       }
       if (stockData.length === 3) {
         if (i === 0) {
@@ -286,7 +303,7 @@ export default class Tile extends Component {
   renderStocksClose() {
     return this.props.stockData.map((data, i, stockData) => {
       if (data.yesterdayClose) {
-        return (<td className="align-center"><h2><b>{data.yesterdayClose}</b></h2></td>);
+        return (<td className="align-center add-borders"><h2><b>{data.yesterdayClose}</b></h2></td>);
       }
 
       var companyReturns = data.stock_data;
@@ -605,6 +622,9 @@ export default class Tile extends Component {
             <tbody>
               <tr>
               { this.renderStocksName() }
+              </tr>
+              <tr>
+              { this.renderStocksSector() }
               </tr>
               <tr>
               { this.renderStocksDescription() }

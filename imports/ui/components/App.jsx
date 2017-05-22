@@ -192,11 +192,14 @@ addStock() {
       }
     });
 
-    var sector = stockToUpdate.sector.replace(/&/, "AND");
-    var nameWithoutCode = companyName.replace(/\s\(.*\)$/, "");
-    console.log("Sector: " + sector);
+    // var sector = stockToUpdate.sector.replace(/&/, "AND");
+    // var nameWithoutCode = companyName.replace(/\s\(.*\)$/, "");
+    // console.log("Sector: " + sector);
 
-    Meteor.call('getGuardianNews', "australia-news", begin_date, end_date, 20, nameWithoutCode + " AND " + sector, function (error, result) {
+    companyNameEdited = companyName.replace(/\(.*\)/, "").replace(" ", " AND ");
+    console.log("COMPANY TO GET NEWS FROM :" + companyNameEdited);
+    // Meteor.call('getGuardianNews', "australia-news", begin_date, end_date, 100, nameWithoutCode + " AND " + sector, function (error, result) {
+    Meteor.call('getGuardianNews', companyCode, function (error, result) {
         if (error) {
             console.log(error);
             console.log("in news");
@@ -204,12 +207,12 @@ addStock() {
         } else {
 
             var newsArray = [];
-            var sectionId = []; // to determine company's main sector
-            sectionId["maxNum"] = 0;
-            sectionId["name"] = "";
+            // var sectionId = []; // to determine company's main sector
+            // sectionId["maxNum"] = 0;
+            // sectionId["name"] = "";
 
             var parsedResult = JSON.parse(result.content);
-            var length = Math.min(20, parsedResult.response.results.length); // hard cap set here
+            var length = Math.min(100, parsedResult.response.results.length); // hard cap set here
 
             console.log(parsedResult);
             for (var i = 0; i < length; i++) {
@@ -223,6 +226,7 @@ addStock() {
                   source: "The Guardian UK",
                   // publication date in YYYY-MM-DD'T'HH:MM:SS'Z' -> DD/MM/YYYY
                   date: article.webPublicationDate.substring(8, 10) + "/" + article.webPublicationDate.substring(5, 7) + "/" + article.webPublicationDate.substring(0, 4),
+                  section: article.sectionId
                 }
 
                 newsArray.push(newsData);
@@ -308,58 +312,58 @@ addStock() {
 }
 
 // guardian API call to get x num of articles between certain dates (but hard cap at 100; change below if needed)
-function callGuardianAPI(queryString, sector, x, begin_date, end_date, sessionKeyword, companyData) {
-
-    var companyData = {};
-    if (sessionKeyword === "sectionNewsData") {
-      var section = "australia-news";
-    } else {
-      queryString = queryString + " AND " + sector + " AND shares";
-      var section = "business";
-    }
-
-    Meteor.call('getGuardianNews', section, begin_date, end_date, x, queryString, function (error, result) {
-        if (error) {
-            console.log(error);
-            return null;
-        } else {
-
-            var newsArray = [];
-            var sectionId = []; // to determine company's main sector
-            sectionId["maxNum"] = 0;
-            sectionId["name"] = "";
-
-            var parsedResult = JSON.parse(result.content);
-            var length = Math.min(10, parsedResult.response.results.length); // hard cap set here
-
-            for (var i = 0; i < length; i++) {
-                var article = parsedResult.response.results[i];
-                if (article.type !== "article") continue;
-
-                // newsArray[i] = article;
-                var newsData = {
-                  headline: (article.webTitle === undefined) ? "" : article.webTitle,
-                  url: article.webUrl,
-                  source: "The Guardian UK",
-                  // publication date in YYYY-MM-DD'T'HH:MM:SS'Z' -> DD/MM/YYYY
-                  date: article.webPublicationDate.substring(8, 10) + "/" + article.webPublicationDate.substring(5, 7) + "/" + article.webPublicationDate.substring(0, 4),
-                }
-
-                newsArray.push(newsData);
-            }
-
-            // console.log(newsArray);
-            if (sessionKeyword === "sectionNewsData") {
-              companyData.sectionNewsData = newsArray;
-            } else {
-              companyData.companyNews = newsArray;
-            }
-            // Session.set(sessionKeyword, newsArray);
-        }
-    });
-
-    return companyData;
-};
+// function callGuardianAPI(queryString, sector, x, begin_date, end_date, sessionKeyword, companyData) {
+//
+//     var companyData = {};
+//     if (sessionKeyword === "sectionNewsData") {
+//       var section = "australia-news";
+//     } else {
+//       queryString = queryString + " AND " + sector + " AND shares";
+//       var section = "business";
+//     }
+//
+//     Meteor.call('getGuardianNews', section, begin_date, end_date, x, queryString, function (error, result) {
+//         if (error) {
+//             console.log(error);
+//             return null;
+//         } else {
+//
+//             var newsArray = [];
+//             var sectionId = []; // to determine company's main sector
+//             sectionId["maxNum"] = 0;
+//             sectionId["name"] = "";
+//
+//             var parsedResult = JSON.parse(result.content);
+//             var length = Math.min(10, parsedResult.response.results.length); // hard cap set here
+//
+//             for (var i = 0; i < length; i++) {
+//                 var article = parsedResult.response.results[i];
+//                 if (article.type !== "article") continue;
+//
+//                 // newsArray[i] = article;
+//                 var newsData = {
+//                   headline: (article.webTitle === undefined) ? "" : article.webTitle,
+//                   url: article.webUrl,
+//                   source: "The Guardian UK",
+//                   // publication date in YYYY-MM-DD'T'HH:MM:SS'Z' -> DD/MM/YYYY
+//                   date: article.webPublicationDate.substring(8, 10) + "/" + article.webPublicationDate.substring(5, 7) + "/" + article.webPublicationDate.substring(0, 4),
+//                 }
+//
+//                 newsArray.push(newsData);
+//             }
+//
+//             // console.log(newsArray);
+//             if (sessionKeyword === "sectionNewsData") {
+//               companyData.sectionNewsData = newsArray;
+//             } else {
+//               companyData.companyNews = newsArray;
+//             }
+//             // Session.set(sessionKeyword, newsArray);
+//         }
+//     });
+//
+//     return companyData;
+// };
 
 App.propTypes = {
   ddata: PropTypes.array.isRequired,

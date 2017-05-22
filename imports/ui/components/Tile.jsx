@@ -478,7 +478,14 @@ export default class Tile extends Component {
       var news = data[0].companyNews;
       this.parseDataIntoGraph(data[0].stock_data, news);
     	// var companySum = this.getCompanySummary(data.name);
+      const tooltip_statistics = (
+          <Toolitip id="tooltip"><strong>Statistics</strong><br /><strong>Previous close: </strong>A security's closing price on the preceding day of trading<br /><br />
+            <strong>Monthly/Annual Change: </strong> Difference in price between the last closing price and the closing price a month/year ago.<br /><br />
+            <strong>Monthly/Annual High/Low: </strong> A 1-month/52-week high/low is the highest and lowest price that a stock has traded at during the previous year.<br /><br />
 
+          </Toolitip>
+          //<font size="2"><OverlayTrigger placement="top" overlay={tooltip_ticker}><Glyphicon glyph="info-sign" /></OverlayTrigger></font>
+      );
       var columnSpan = data.length+1;
 			return (
 				<div className="tile">
@@ -486,7 +493,7 @@ export default class Tile extends Component {
           <Table bordered hover>
             <thead>
               <tr>
-                <th colSpan={columnSpan}>Statistics</th>
+                <th colSpan={columnSpan}>Statistics<font size="2"><OverlayTrigger placement="top" overlay={tooltip_statistics}><Glyphicon glyph="info-sign" /></OverlayTrigger></font></th>
               </tr>
             </thead>
             <tbody>

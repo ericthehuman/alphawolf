@@ -228,7 +228,7 @@ addStock() {
   var words = companyName.split(/\s/);
   var queryString = words[0] + "%20AND%20" + words[1] + "%20AND%20markets";
   console.log("queryString " + queryString);
-  Meteor.call('getGuardianNews', queryString, null, function (error, result) {
+  Meteor.call('getGuardianNews', queryString, function (error, result) {
     if (error) {
       console.log(error);
       console.log("in news");

@@ -243,16 +243,10 @@ Meteor.methods({
   },
 
   // 'getGuardianNews': function(section, beginDate, endDate, x, queryString) {
-  'getGuardianNews': function(queryString, section) {
+  'getGuardianNews': function(queryString) {
     this.unblock();
-    var sectionId = "";
-    if (section === null)
-      sectionId = "australia-news"
-    else
-      sectionId = section;
-
     return HTTP.call('GET', 'http://content.guardianapis.com/search?'
-    + 'section=' + sectionId
+    + 'section=(business|australia-news)'
     + '&from-date=' + '2015-01-01' //beginDate
     + '&to-date=' + '2017-12-30' //endDate
     + '&page-size=' + 50 //x // retrieve x articles

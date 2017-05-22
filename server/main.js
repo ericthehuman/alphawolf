@@ -119,7 +119,7 @@ Meteor.startup(() => {
         companyData.dividends = dividends;
       }
     });
-        Meteor.call('getASXAnnouncements', "CBA", "2017-05-17", function(error, result) {
+        Meteor.call('getASXAnnouncements', "CBA", function(error, result) {
       if (result) {
         var raw = JSON.parse(result.content);
         var announcements = [];
@@ -237,9 +237,9 @@ Meteor.methods({
     return HTTP.call('GET', 'http://data.asx.com.au/data/1/company/' + stockCode + '/dividends/history');
   },
 
-  'getASXAnnouncements': function(stockCode, endDate) {
+  'getASXAnnouncements': function(stockCode) {
     this.unblock();
-    return HTTP.call('GET', 'http://data.asx.com.au/data/1/company/' + stockCode + '/announcements?market_sensitive=true&count=20&before_time=' + endDate);
+    return HTTP.call('GET', 'http://data.asx.com.au/data/1/company/' + stockCode + '/announcements?market_sensitive=true&count=100');
   },
 
   // 'getGuardianNews': function(section, beginDate, endDate, x, queryString) {
@@ -251,6 +251,6 @@ Meteor.methods({
     + '&to-date=' + '2017-12-30' //endDate
     + '&page-size=' + 50 //x // retrieve x articles
     + '&q=' + queryString
-    + '&api-key=59ce1afb-ea95-4ab7-971e-dc59c7189718');
+    + '&api-key=59ce1afb-ea95-4ab7-971e-dc59c7189718'); //59ce1afb-ea95-4ab7-971e-dc59c7189718');
   }
 });

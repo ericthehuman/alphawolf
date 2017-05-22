@@ -200,13 +200,12 @@ addStock() {
     }
   });
 
-
   Meteor.call('getASXAnnouncements', companyCode, function(error, result) {
     if (result) {
       var raw = JSON.parse(result.content);
       raw = raw.data;
       var announcements = [];
-      console.log(raw);
+      // console.log(raw);
       // console.log("IS THIS HAPPENING");
       for (var i = 0; i < raw.length; i++) {
         var date = moment(raw[i].document_date).format('DD/MM/YYYY');
@@ -225,7 +224,11 @@ addStock() {
     }
   });
 
-  Meteor.call('getGuardianNews', companyCode, function (error, result) {
+  console.log("START GUARDIAN CALL " + companyName);
+  var words = companyName.split(/\s/);
+  var queryString = words[0] + "%20AND%20" + words[1] + "%20AND%20markets";
+  console.log("queryString " + queryString);
+  Meteor.call('getGuardianNews', queryString, null, function (error, result) {
     if (error) {
       console.log(error);
       console.log("in news");

@@ -179,7 +179,10 @@ export default class Tile extends Component {
 
         var currNewsData = {  x: timestamp,
                               title: "",
-                              style: { color: 'rgba(0,0,0,0)' },
+                              style: {
+                                color: 'rgba(0,0,0,0)',
+                                borderColor: "#FA6C61",
+                              },
                               text: "<b>Related news</b><br>" + currNewsItem.headline,
                               url: currNewsItem.url
                            };
@@ -193,8 +196,6 @@ export default class Tile extends Component {
 
       // parse data for announcements
       for (var j = 0; j < announcements.length; j++) {
-        // var currAnnouncement = announcements[j];
-        console.log(announcements[j]);
         var date = announcements[j].date;
 
         var datestr = date.split("/");
@@ -262,14 +263,18 @@ export default class Tile extends Component {
         ],
         // set title of graph
         title: {
-          text: "Closing Price"
+          text: "Closing Price",
+          style: {
+            'font-weight': 'bold',
+            // 'color': "#7cb5ec"
+          }
         },
         // set tooltip format
         tooltip: {
           style: {
             width: '250px',
             backgroundColor: '#FCFFC5',
-            borderColor: 'black',
+            // borderColor: 'black',
             borderRadius: 10,
             borderWidth: 3
           }
@@ -286,6 +291,16 @@ export default class Tile extends Component {
           borderColor: "#c4c4c4",
           borderWidth: 2,
           borderRadius: 2,
+        },
+        yAxis: {
+          title: {
+            text: 'Dollars',
+            enabled: true,
+            style: {
+              'font-weight': 'bold',
+              'color': "#7cb5ec"
+            }
+          },
         }
         // ... more options - see http://api.highcharts.com/highcharts
       });

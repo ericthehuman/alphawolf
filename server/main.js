@@ -243,14 +243,20 @@ Meteor.methods({
   },
 
   // 'getGuardianNews': function(section, beginDate, endDate, x, queryString) {
-  'getGuardianNews': function(queryString) {
+  'getGuardianNews': function(queryString, section) {
     this.unblock();
+    var sectionId = "";
+    if (section === null)
+      sectionId = "australia-news"
+    else
+      sectionId = section;
+
     return HTTP.call('GET', 'http://content.guardianapis.com/search?'
-    + 'section=' + 'australia-news' //section
-    + '&from-date=' + '2016-05-01' //beginDate
+    + 'section=' + sectionId
+    + '&from-date=' + '2015-01-01' //beginDate
     + '&to-date=' + '2017-12-30' //endDate
     + '&page-size=' + 50 //x // retrieve x articles
     + '&q=' + queryString
-    + '&api-key=59ce1afb-ea95-4ab7-971e-dc59c7189718'); //59ce1afb-ea95-4ab7-971e-dc59c7189718');
+    + '&api-key=test'); //59ce1afb-ea95-4ab7-971e-dc59c7189718');
   }
 });

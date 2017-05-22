@@ -229,7 +229,9 @@ addStock() {
   // var nameWithoutCode = companyName.replace(/\s\(.*\)$/, "");
   // console.log("Sector: " + sector);
 
-  companyNameEdited = companyName.replace(/\s*\(.*\)/, "").replace(/\s*Limited\s*$/, "").replace(/\s/g, " AND ");
+  // Remove a bunch of useless words from the company names
+  companyNameEdited = companyName.replace(/\s*\(.*\)/, "").replace(/\s*Limited\s*$/, "").replace(/\s*Holdings\s*/, "")
+  companyNameEdited.replace(/\s*Corporation\s*/, "").replace(/\s*Group\s*/, "").replace(/\s/g, " AND ");
   console.log("COMPANY TO GET NEWS FROM :" + companyNameEdited);
   // Meteor.call('getGuardianNews', "australia-news", begin_date, end_date, 100, nameWithoutCode + " AND " + sector, function (error, result) {
   Meteor.call('getGuardianNews', companyNameEdited, function (error, result) {

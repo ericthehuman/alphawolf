@@ -108,16 +108,26 @@ export default class Tile extends Component {
         var datestr = array[i].Date;
         // console.log("DATESTR:" + datestr);
         datestr = datestr.split("/");
-        var dd = datestr[0];
-        var mm = datestr[1];
-        var yyyy = datestr[2];
-        var timestamp = (new Date(yyyy,mm, dd).getTime());
+        var dd = parseInt(datestr[0]);
+        var mm = parseInt(datestr[1])-1;
+        var yyyy = parseInt(datestr[2]);
+        // console.log("SPLIT:" + dd + "/" + mm + "/" + yyyy);
+        var timestamp = Date.UTC(yyyy,mm,dd);
+
+        // if (i > 0) {
+        //   var oldDate = array[i-1].Date.split("/");
+        //   var oldTime = Date.UTC(oldDate[2], oldDate[1]-1, oldDate[0]);
+        //   if (oldTime >= timestamp) console.log("OLD: " + oldDate + "NUM: " + oldTime + " | VS NEW: "+ datestr + " NUM: " + timestamp);
+        // }
+
         var currStockData = [];
         currStockData.push(timestamp);
         dates.push(timestamp);
         currStockData.push(Math.round((array[i].Close)*100));
         stockData.push(currStockData);
       }
+
+      console.log(news);
       var currNewsItem;
       // parse data for displaying news
       for (var j = 0; j < news.length; j++) {
@@ -125,20 +135,33 @@ export default class Tile extends Component {
         var newsDate = currNewsItem["date"];
 
         var datestr = newsDate.split("/");
-        var dd = datestr[0];
-        var mm = datestr[1];
-        var yyyy = datestr[2];
-        var timestamp = (new Date(yyyy,mm, dd).getTime());
+        var dd = parseInt(datestr[0]);
+        var mm = parseInt(datestr[1])-1;
+        var yyyy = parseInt(datestr[2]);
+        var timestamp = Date.UTC(yyyy,mm,dd);
+
+        var newsExistsForDate = false;
+        for (var k = 0; k < newsData.length; k++) {
+          if (newsData[k].x === timestamp) {
+            newsExistsForDate = true;
+            break;
+          }
+        }
+
+        if (newsExistsForDate) continue;
 
         var newsHeadline = currNewsItem["headline"];
-        var currNewsData = {x: timestamp, title: newsHeadline};
+        var newsUrl = "<a href=" + currNewsItem.url + ">Link</a>";
+        var currNewsData = {x: timestamp, title: newsUrl, text: newsHeadline};
 
         // console.log(currNewsData);
         newsData.push(currNewsData);
       }
 
-      console.log("currNews:");
-      console.log(currNewsItem);
+      newsData.sort(function(a, b) {
+          return parseFloat(a.x) - parseFloat(b.x);
+      });
+
       i = 0;
   	  while(i < array.length){
   	  	var headline = "";
@@ -153,7 +176,6 @@ export default class Tile extends Component {
   	     });
   	    i = i +1;
   	  }
-      console.log("num of article matches " + numMatches);
 
       var chart = Highcharts.stockChart('container', {
         series: [{
@@ -163,10 +185,11 @@ export default class Tile extends Component {
         },{
             type: 'flags',
             name: 'Flags on series',
-            data: [{
-              x : dates[10],
-              title: "<button className='btn btn-primary' onClick={this.openModal}>Open Modal</button>",
-            }],//newsData,
+            // data: [{
+            //   x : dates[10],
+            //   title: "<button className='btn btn-primary' onClick={this.openModal}>Open Modal</button>",
+            // }],//newsData,
+            data: newsData,
             onSeries: 'stockData',
             shape: 'squarepin',
             useHTML: true,
@@ -189,6 +212,9 @@ export default class Tile extends Component {
       var prevClose = companyReturns[NUMDAYS-1].Close;
       var positiveSignDay = (companyReturns[NUMDAYS].Close-companyReturns[NUMDAYS-1].Close) >= 0 ? "+" : "";
 
+      if (!data.short_description) data.short_description = "No description available."
+      if (!data.url) data.url = "No website URL available."
+      if (!data.phone) data.phone = "No phone no. available."
       const tooltip_ticker = (
           <Toolitip id="tooltip"><strong>Ticker symbol</strong><br />An abbreviation used to uniquely identify publicly traded shares of a particular stock</Toolitip>
           //<font size="2"><OverlayTrigger placement="top" overlay={tooltip_ticker}><Glyphicon glyph="info-sign" /></OverlayTrigger></font>
@@ -199,7 +225,7 @@ export default class Tile extends Component {
           //<font size="2"><OverlayTrigger placement="top" overlay={tooltip_ticker}><Glyphicon glyph="info-sign" /></OverlayTrigger></font>
       );
       return (
-      <div className="big col-md-6">
+      <div className={data.firstStock ? "col-md-6 align-right" : "col-md-6"}>
         <h1>{data.name} <span className="stock-code">({data.code}<font size="2"><OverlayTrigger placement="top" overlay={tooltip_ticker}><Glyphicon glyph="info-sign" /></OverlayTrigger></font>)</span></h1>
         <p>{data.short_description}</p>
         <br/>
@@ -333,11 +359,11 @@ export default class Tile extends Component {
 
     // While we only have functionality for 1 stock
 
-    var data = this.props.stockData[0];
-    console.log("CODE: " + data.code);
+    var data = this.props.stockData;
+    console.log("CODE: " + data[0].code);
     //rendering news page here
     //value consponds to data code which will be used as a switch function
-		if(data.code === "Home") {
+		if(data[0].code === "Home") {
   		return (
   			<div className="tile">
   				<Item optionChange={this.handleClickItem.bind(this)} news={"Consumer Discretionary"} imagef={"http://www.sharesinv.com/wp-content/uploads/articles/consumer-ETFs.jpg"} value={"consumer1"}/>
@@ -409,7 +435,6 @@ export default class Tile extends Component {
       return(renderCat(data.code));
     }else {
       var news = data[0].companyNews;
-      console.log("news is: " + news);
       this.parseDataIntoGraph(data[0].stock_data, news);
     	// var companySum = this.getCompanySummary(data.name);
 
@@ -420,12 +445,12 @@ export default class Tile extends Component {
           <Table bordered hover>
             <thead>
               <tr>
-                <th colSpan={columnSpan} className="firstCol">Statistics</th>
+                <th colSpan={columnSpan}>Statistics</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>Previous close</td>
+                <td className="firstCol">Previous close</td>
                 { this.renderPreviousClose() }
               </tr>
               <tr>

@@ -84,8 +84,22 @@ handleOptionChange(companiesList) {
       // sectionNewsData: stocksToShow[i].sectionNewsData,
       companyNews: stocksToShow[i].companyNews,
     };
+
+    if (i === 0 && stocksToShow.length > 1) {
+      data.firstStock = true;
+    } else {
+      data.firstStock = false;
+    }
     dataArray.push(data);
   }
+  var info = {
+    name: " ",
+    sector: "Sector",
+    short_description: "Summary",
+    url: "Company Website",
+    phone: "Phone no."
+  }
+
   SelectedStock.set(dataArray);
 
 }
@@ -115,7 +129,7 @@ addStock() {
     var companyName = stockToUpdate.name;
 
     // retrieve company information from ASX -> fail -> 2. Intrinio
-    var begin_date = moment().subtract(365, 'days').format('YYYY-MM-DD');
+    var begin_date = moment().subtract(30, 'days').format('YYYY-MM-DD');
     var end_date = moment().format('YYYY-MM-DD');
 
     Meteor.call('getASXCompanyInfo', companyCode, function(error, result) {
@@ -179,8 +193,10 @@ addStock() {
     });
 
     var sector = stockToUpdate.sector.replace(/&/, "AND");
+    var nameWithoutCode = companyName.replace(/\s\(.*\)$/, "");
+    console.log("Sector: " + sector);
 
-    Meteor.call('getGuardianNews', "business", begin_date, end_date, 20, companyName, function (error, result) {
+    Meteor.call('getGuardianNews', "australia-news", begin_date, end_date, 20, nameWithoutCode + " AND " + sector, function (error, result) {
         if (error) {
             console.log(error);
             console.log("in news");
@@ -193,7 +209,7 @@ addStock() {
             sectionId["name"] = "";
 
             var parsedResult = JSON.parse(result.content);
-            var length = Math.min(10, parsedResult.response.results.length); // hard cap set here
+            var length = Math.min(20, parsedResult.response.results.length); // hard cap set here
 
             console.log(parsedResult);
             for (var i = 0; i < length; i++) {
@@ -216,7 +232,7 @@ addStock() {
             // Session.set(sessionKeyword, newsArray);
         }
     });
-    callGuardianAPI(companyName, sector, 20, begin_date, end_date, 'newsData', companyData);
+    // callGuardianAPI(companyName, sector, 20, begin_date, end_date, 'newsData', companyData);
     // callGuardianAPI(companyName, sector, 20, begin_date, end_date, 'sectionNewsData', companyData);
 
     Meteor.call('getData', companyCode, function(error, result) {

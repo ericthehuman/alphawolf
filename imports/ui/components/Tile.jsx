@@ -254,7 +254,7 @@ export default class Tile extends Component {
       }
 
       const tooltip_ticker = (
-          <Toolitip id="tooltip"><strong>Ticker symbol</strong><br />An abbreviation used to uniquely identify publicly traded shares of a particular stock</Toolitip>
+          <Toolitip id="tooltip"><strong>ASX Code</strong><br />An abbreviation used to uniquely identify publicly traded shares in Australian Stock Exchange of a particular company</Toolitip>
           //<font size="2"><OverlayTrigger placement="top" overlay={tooltip_ticker}><Glyphicon glyph="info-sign" /></OverlayTrigger></font>
       );
 
@@ -275,9 +275,12 @@ export default class Tile extends Component {
 
   renderStocksSector() {
     return this.props.stockData.map((data, i, stockData) => {
-      if (!data.sector) data.sector = "Unknown sector"
+      if (!data.sector) data.sector = "Unknown sector";
+      var tooltip = (
+        <Toolitip id="tooltip"><strong>Company sector</strong><br />The business sector or corporate sector that this company operates in the economy</Toolitip>
+      );
       if (data.sector === "Sector") {
-        return (<td className="align-center add-borders"><b>{data.sector}</b></td>);
+        return (<td className="align-center add-borders"><b>{data.sector }</b> <OverlayTrigger placement="top" overlay={tooltip}><Glyphicon glyph="info-sign" /></OverlayTrigger></td>);
       }
       if (stockData.length === 3) {
         if (i === 0) {
@@ -291,8 +294,12 @@ export default class Tile extends Component {
   renderStocksDescription() {
     return this.props.stockData.map((data, i, stockData) => {
       if (!data.short_description) data.short_description = "No description available.";
+      var tooltip = (
+        <Toolitip id="tooltip"><strong>Company activities</strong><br />The main activities that this company engages in</Toolitip>
+      );
+
       if (data.short_description === "Summary") {
-        return (<td className="align-center add-borders"><b>{data.short_description}</b></td>);
+        return (<td className="align-center add-borders"><b>{data.short_description}</b> <OverlayTrigger placement="top" overlay={tooltip}><Glyphicon glyph="info-sign" /></OverlayTrigger></td>);
       }
       if (stockData.length === 3) {
         if (i === 0) {
@@ -337,8 +344,11 @@ export default class Tile extends Component {
 
   renderStocksClose() {
     return this.props.stockData.map((data, i, stockData) => {
+      var tooltip = (
+        <Toolitip id="tooltip"><strong>Close</strong><br /><div align="left">This is the last trading price recorded when the market closed on the day</div></Toolitip>);
+
       if (data.yesterdayClose) {
-        return (<td className="align-center add-borders"><h2><b>{data.yesterdayClose}</b></h2></td>);
+          return (<td className="align-center add-borders"><h2><b>{data.yesterdayClose + " "}</b><OverlayTrigger placement="top" overlay={tooltip}><font size="2"><Glyphicon glyph="info-sign" /></font></OverlayTrigger></h2></td>);
       }
 
       var companyReturns = data.stock_data;
@@ -348,30 +358,44 @@ export default class Tile extends Component {
       var prevClose = companyReturns[NUMDAYS-1].Close;
       var positiveSignDay = (companyReturns[NUMDAYS].Close-companyReturns[NUMDAYS-1].Close) >= 0 ? "+" : "";
 
-      const tooltip_close = (
-          <Toolitip id="tooltip"><strong>$Close, Change in Price, % Change in price </strong><br /><div align="left">Close: The close is the last trading price recorded when the market closed on the day<br />Change: the dollar value change in the stock price from the previous day's closing price<br />% Change: The percentage change from yesterday's closing price</div></Toolitip>
+      // const tooltip_close = (
+      //     <Toolitip id="tooltip"><strong>$Close, Change in Price, % Change in price </strong><br /><div align="left">Close: The close is the last trading price recorded when the market closed on the day<br />Change: the dollar value change in the stock price from the previous day's closing price<br />% Change: The percentage change from yesterday's closing price</div></Toolitip>
+      //     //<font size="2"><OverlayTrigger placement="top" overlay={tooltip_ticker}><Glyphicon glyph="info-sign" /></OverlayTrigger></font>
+      // );
+      var tooltip_change = (<Toolitip id="tooltip"><strong>Change in price</strong><br /><div align="left">The dollar value change in the stock price from the previous day's closing price</div></Toolitip>);
+      var tooltip_pchange = (<Toolitip id="tooltip"><strong>Percentage change in price </strong><br /><div align="left">The change in the stock price calculated as a percentage of the previous day's closing price</div></Toolitip>);
 
-          //<font size="2"><OverlayTrigger placement="top" overlay={tooltip_ticker}><Glyphicon glyph="info-sign" /></OverlayTrigger></font>
-      );
-      if (stockData.length === 3) {
+        if (stockData.length === 3) {
         if (i === 0) {
           return (
-            <td className="align-right"><h2><b>${parseFloat(currClose).toFixed(2)}</b> <span className={positiveSignDay === "+" ? "stock-positive" : "stock-negative"}>{positiveSignDay}
-            {parseFloat(currClose-prevClose).toFixed(2)} ({positiveSignDay}{parseFloat((currClose-prevClose)/prevClose*100).toFixed(2)}%)</span><font size="2"><OverlayTrigger placement="top" overlay={tooltip_close}><Glyphicon glyph="info-sign" /></OverlayTrigger></font></h2></td>
+            <td className="align-right"><h2><b>
+              <span>${parseFloat(currClose).toFixed(2)}</span>
+              <OverlayTrigger placement="top" overlay={tooltip_change}><span className={positiveSignDay === "+" ? "stock-positive" : "stock-negative"}>{" " + positiveSignDay}
+                {parseFloat(currClose-prevClose).toFixed(2) + " "}</span></OverlayTrigger>
+              <OverlayTrigger placement="top" overlay={tooltip_pchange}><span className={positiveSignDay === "+" ? "stock-positive" : "stock-negative"}>
+                ({positiveSignDay}{parseFloat((currClose-prevClose)/prevClose*100).toFixed(2)}%)</span></OverlayTrigger>
+            </b></h2></td>
           );
         }
       }
       return (
-        <td><h2><b>${parseFloat(currClose).toFixed(2)}</b> <span className={positiveSignDay === "+" ? "stock-positive" : "stock-negative"}>{positiveSignDay}
-        {parseFloat(currClose-prevClose).toFixed(2)} ({positiveSignDay}{parseFloat((currClose-prevClose)/prevClose*100).toFixed(2)}%)</span><font size="2"><OverlayTrigger placement="top" overlay={tooltip_close}><Glyphicon glyph="info-sign" /></OverlayTrigger></font></h2></td>
+        <td><h2><b>
+          <span>${parseFloat(currClose).toFixed(2)}</span>
+          <OverlayTrigger placement="top" overlay={tooltip_change}><span className={positiveSignDay === "+" ? "stock-positive" : "stock-negative"}>{" " + positiveSignDay}
+              {parseFloat(currClose-prevClose).toFixed(2) + " "}</span></OverlayTrigger>
+          <OverlayTrigger placement="top" overlay={tooltip_pchange}><span className={positiveSignDay === "+" ? "stock-positive" : "stock-negative"}>
+            ({positiveSignDay}{parseFloat((currClose-prevClose)/prevClose*100).toFixed(2)}%)</span></OverlayTrigger>
+        </b></h2></td>
       );
     });
   }
 
   renderPreviousClose() {
     return this.props.stockData.map((data, i, stockData) => {
+      var tooltip = (
+        <Toolitip id="tooltip"><strong>Previous close</strong><br /><div align="left">A security's closing price on the preceding day of trading</div></Toolitip>);
       if (data.prevClose) {
-        return (<td className="small-col align-center">{ data.prevClose }</td>);
+        return (<td className="small-col align-center">{data.prevClose + " "} <OverlayTrigger placement="top" overlay={tooltip}><Glyphicon glyph="info-sign" /></OverlayTrigger></td>);
       }
 
       var companyReturns = data.stock_data;
@@ -388,8 +412,10 @@ export default class Tile extends Component {
 
   renderMonthlyChange() {
     return this.props.stockData.map((data, i, stockData) => {
+      var tooltip = (
+        <Toolitip id="tooltip"><strong>Monthly change</strong><br /><div align="left">Difference in price between the last closing price and the closing price a month ago</div></Toolitip>);
       if (data.monthlyChange) {
-        return (<td className="align-center">{ data.monthlyChange }</td>);
+        return (<td className="align-center">{ data.monthlyChange + " " } <OverlayTrigger placement="top" overlay={tooltip}><Glyphicon glyph="info-sign" /></OverlayTrigger></td>);
       }
       var companyReturns = data.stock_data;
       var NUMDAYS = companyReturns.length-1;
@@ -410,8 +436,10 @@ export default class Tile extends Component {
 
   renderMonthlyHigh() {
     return this.props.stockData.map((data, i, stockData) => {
-      if (data.monthlyHigh) {
-        return (<td className="align-center">{ data.monthlyHigh }</td>);
+        var tooltip = (
+          <Toolitip id="tooltip"><strong>Monthly high</strong><br /><div align="left">The highest intra-day price during the preceding month</div></Toolitip>);
+        if (data.monthlyHigh) {
+        return (<td className="align-center">{ data.monthlyHigh + " " }  <OverlayTrigger placement="top" overlay={tooltip}><Glyphicon glyph="info-sign" /></OverlayTrigger></td>);
       }
       var companyReturns = data.stock_data;
       var NUMDAYS = companyReturns.length-1;
@@ -435,8 +463,10 @@ export default class Tile extends Component {
 
   renderMonthlyLow() {
     return this.props.stockData.map((data, i, stockData) => {
+      var tooltip = (
+        <Toolitip id="tooltip"><strong>Monthly low</strong><br /><div align="left">The lowest intra-day price during the preceding month</div></Toolitip>);
       if (data.monthlyLow) {
-        return (<td className="align-center">{ data.monthlyLow }</td>);
+        return (<td className="align-center">{ data.monthlyLow + " " } <OverlayTrigger placement="top" overlay={tooltip}><Glyphicon glyph="info-sign" /></OverlayTrigger></td>);
       }
       var companyReturns = data.stock_data;
       var NUMDAYS = companyReturns.length-1;
@@ -459,8 +489,10 @@ export default class Tile extends Component {
 
   renderYearlyChange() {
     return this.props.stockData.map((data, i, stockData) => {
+      var tooltip = (
+        <Toolitip id="tooltip"><strong>Annual change</strong><br /><div align="left">Difference in price between the last closing price and the closing price a year ago</div></Toolitip>);
       if (data.annualChange) {
-        return (<td className="align-center">{ data.annualChange }</td>);
+        return (<td className="align-center">{ data.annualChange + " " } <OverlayTrigger placement="top" overlay={tooltip}><Glyphicon glyph="info-sign" /></OverlayTrigger> </td>);
       }
       var companyReturns = data.stock_data;
       var NUMDAYS = companyReturns.length-1;
@@ -482,8 +514,10 @@ export default class Tile extends Component {
 
   renderYearlyHigh() {
     return this.props.stockData.map((data, i, stockData) => {
+      var tooltip = (
+        <Toolitip id="tooltip"><strong>Yearly high</strong><br /><div align="left">The highest intra-day price during the preceding 52 weeks</div></Toolitip>);
       if (data.annualHigh) {
-        return (<td className="align-center">{ data.annualHigh }</td>);
+        return (<td className="align-center">{ data.annualHigh + " " } <OverlayTrigger placement="top" overlay={tooltip}><Glyphicon glyph="info-sign" /></OverlayTrigger> </td>);
       }
       var companyReturns = data.stock_data;
       var NUMDAYS = companyReturns.length-1;
@@ -507,8 +541,10 @@ export default class Tile extends Component {
 
   renderYearlyLow() {
     return this.props.stockData.map((data, i, stockData) => {
+      var tooltip = (
+        <Toolitip id="tooltip"><strong>Yearly low</strong><br /><div align="left">The lowest intra-day price during the preceding 52 weeks</div></Toolitip>);
       if (data.annualLow) {
-        return (<td className="align-center">{ data.annualLow }</td>);
+        return (<td className="align-center">{ data.annualLow + " " } <OverlayTrigger placement="top" overlay={tooltip}><Glyphicon glyph="info-sign" /></OverlayTrigger> </td>);
       }
       var companyReturns = data.stock_data;
       var NUMDAYS = companyReturns.length-1;
@@ -638,14 +674,14 @@ export default class Tile extends Component {
       	// var companySum = this.getCompanySummary(data.name);
         this.parseDataIntoGraph(data[0].stock_data, news, data[0].announcements);
       }
-      const tooltip_statistics = (
-          <Toolitip id="tooltip"><strong>Statistics</strong><br /><strong>Previous close: </strong>A security's closing price on the preceding day of trading<br /><br />
-            <strong>Monthly/Annual Change: </strong> Difference in price between the last closing price and the closing price a month/year ago.<br /><br />
-            <strong>Monthly/Annual High/Low: </strong> A 1-month/52-week high/low is the highest and lowest price that a stock has traded at during the previous year.<br /><br />
-
-          </Toolitip>
-          //<font size="2"><OverlayTrigger placement="top" overlay={tooltip_ticker}><Glyphicon glyph="info-sign" /></OverlayTrigger></font>
-      );
+      // const tooltip_statistics = (
+      //     <Toolitip id="tooltip"><strong>Statistics</strong><br /><strong>Previous close: </strong>A security's closing price on the preceding day of trading<br /><br />
+      //       <strong>Monthly/Annual Change: </strong> Difference in price between the last closing price and the closing price a month/year ago.<br /><br />
+      //       <strong>Monthly/Annual High/Low: </strong> A 1-month/52-week high/low is the highest and lowest price that a stock has traded at during the previous year.<br /><br />
+      //
+      //     </Toolitip>
+      //     //<font size="2"><OverlayTrigger placement="top" overlay={tooltip_ticker}><Glyphicon glyph="info-sign" /></OverlayTrigger></font>
+      // );
       var columnSpan = data.length+1;
       if (data.length === 3) {
         console.log("Got 2 stocks");
@@ -679,7 +715,8 @@ export default class Tile extends Component {
           <Table bordered hover>
             <thead>
               <tr>
-                <th colSpan={columnSpan}>Statistics<font size="2"><OverlayTrigger placement="top" overlay={tooltip_statistics}><Glyphicon glyph="info-sign" /></OverlayTrigger></font></th>
+                <th colSpan={columnSpan}>Statistics</th>
+                {/*<th colSpan={columnSpan}>Statistics<font size="2"><OverlayTrigger placement="top" overlay={tooltip_statistics}><Glyphicon glyph="info-sign" /></OverlayTrigger></font></th>*/}
               </tr>
             </thead>
             <tbody>

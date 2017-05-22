@@ -131,6 +131,9 @@ handleStockScope (event){
 }
 
 renderStocks() {
+  // if (this.props.activeStocks.length > 8) {
+  //   ActiveStocks.remove({_id:Stocks.findOne({code: this.props.activeStocks[0].code})['_id']});
+  // }
   return this.props.activeStocks.map((stock) => (
     <Button key={stock._id} stock={stock} optionChange={this.handleOptionChange.bind(this)} />
     ));
@@ -229,7 +232,7 @@ addStock() {
   companyNameEdited = companyName.replace(/\s*\(.*\)/, "").replace(/\s*Limited\s*$/, "").replace(/\s/g, " AND ");
   console.log("COMPANY TO GET NEWS FROM :" + companyNameEdited);
   // Meteor.call('getGuardianNews', "australia-news", begin_date, end_date, 100, nameWithoutCode + " AND " + sector, function (error, result) {
-  Meteor.call('getGuardianNews', companyCode, function (error, result) {
+  Meteor.call('getGuardianNews', companyNameEdited, function (error, result) {
       if (error) {
           console.log(error);
           console.log("in news");
@@ -280,7 +283,7 @@ addStock() {
         console.log(res.Log.ErrorMessage);
       }
     } else {
-      console.log(error);
+      alert(error);
     }
     ActiveStocks.insert({name: companyName, code: companyCode, new: true});
     Stocks.update({_id:Stocks.findOne({code: companyCode})['_id']},

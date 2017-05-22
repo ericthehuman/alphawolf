@@ -344,7 +344,7 @@ export default class Tile extends Component {
       var prevClose = companyReturns[NUMDAYS-1].Close;
       if (stockData.length === 3) {
         if (i === 0) {
-          return (<td className="align-right"><b>{parseFloat(prevClose).toFixed(2)}</b></td>);
+          return (<td className="equal-col align-right"><b>{parseFloat(prevClose).toFixed(2)}</b></td>);
         }
       }
       return (<td><b>{parseFloat(prevClose).toFixed(2)}</b></td>)

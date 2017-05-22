@@ -138,7 +138,7 @@ Meteor.startup(() => {
       }
     });
 
-    Meteor.call('getGuardianNews', "australia-news", "2017-04-14", "2017-05-21", 20, "Commonwealth Bank of Australia AND finance", function(error, result) {
+    Meteor.call('getGuardianNews', "Commonwealth AND Bank AND of AND Australia", function(error, result) {
       if (result) {
         var newsArray = [];
         var sectionId = []; // to determine company's main sector
@@ -147,7 +147,7 @@ Meteor.startup(() => {
 
         var parsedResult = JSON.parse(result.content);
         // console.log("parsedResult is: " + parsedResult);
-        var length = Math.min(20, parsedResult.response.results.length); // hard cap set here
+        var length = Math.min(50, parsedResult.response.results.length); // hard cap set here
 
         for (var i = 0; i < length; i++) {
             var article = parsedResult.response.results[i];
@@ -241,9 +241,9 @@ Meteor.methods({
     this.unblock();
     return HTTP.call('GET', 'http://content.guardianapis.com/search?'
     + 'section=' + 'australia-news' //section
-    + '&from-date=' + '2010-01-01' //beginDate
+    + '&from-date=' + '2016-05-01' //beginDate
     + '&to-date=' + '2017-12-30' //endDate
-    + '&page-size=' + 100 //x // retrieve x articles
+    + '&page-size=' + 50 //x // retrieve x articles
     + '&q=' + queryString
     + '&api-key=59ce1afb-ea95-4ab7-971e-dc59c7189718');
   }

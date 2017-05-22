@@ -196,7 +196,7 @@ addStock() {
     // var nameWithoutCode = companyName.replace(/\s\(.*\)$/, "");
     // console.log("Sector: " + sector);
 
-    companyNameEdited = companyName.replace(/\(.*\)/, "").replace(" ", " AND ");
+    companyNameEdited = companyName.replace(/\s*\(.*\)/, "").replace(/\s*Limited\s*$/, "").replace(/\s/g, " AND ");
     console.log("COMPANY TO GET NEWS FROM :" + companyNameEdited);
     // Meteor.call('getGuardianNews', "australia-news", begin_date, end_date, 100, nameWithoutCode + " AND " + sector, function (error, result) {
     Meteor.call('getGuardianNews', companyCode, function (error, result) {

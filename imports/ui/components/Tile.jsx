@@ -22,8 +22,6 @@ import {
 
 //import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend} from 'recharts';
 var Highcharts = require('highcharts/highstock');
-//var Highcharts = require('highcharts');
-//var Highstock = require('react-highstock');
 
 
 export default class Tile extends Component {
@@ -87,20 +85,15 @@ export default class Tile extends Component {
   }
 
   //converts raw api data into structure the graph component uses
-  parseDataIntoGraph(result, news) {
+  parseDataIntoGraph(result, news, announcements) {
     if(result != null) {
+      // console.log(announcements);
 
-        // console.log(result);
-        // console.log("NEWS: " + JSON.stringify(news));
-        // console.log(section);
   	  var array = result;
-  	  var data = [];
-  	  var i = 0;
-  	  var numMatches = 0;
-      var dates = [];
-      var values = [];
       var stockData = [];
       var newsData = [];
+      var announcementData = [];
+
       // convert data for graphing on high stocks
       // format:
       // [[timestamp, stockValue], [timestamp, stockValue] ....]
@@ -111,27 +104,16 @@ export default class Tile extends Component {
         var dd = parseInt(datestr[0]);
         var mm = parseInt(datestr[1])-1;
         var yyyy = parseInt(datestr[2]);
-        // console.log("SPLIT:" + dd + "/" + mm + "/" + yyyy);
         var timestamp = Date.UTC(yyyy,mm,dd);
+        // console.log("SPLIT:" + dd + "/" + mm + "/" + yyyy);
 
-        // if (i > 0) {
-        //   var oldDate = array[i-1].Date.split("/");
-        //   var oldTime = Date.UTC(oldDate[2], oldDate[1]-1, oldDate[0]);
-        //   if (oldTime >= timestamp) console.log("OLD: " + oldDate + "NUM: " + oldTime + " | VS NEW: "+ datestr + " NUM: " + timestamp);
-        // }
-
-        var currStockData = [];
-        currStockData.push(timestamp);
-        dates.push(timestamp);
-        currStockData.push(Math.round((array[i].Close)*100));
-        stockData.push(currStockData);
+        stockData.push({ x: timestamp, y: array[i].Close });
       }
 
       console.log(news);
-      var currNewsItem;
       // parse data for displaying news
       for (var j = 0; j < news.length; j++) {
-        currNewsItem = news[j];
+        var currNewsItem = news[j];
         var newsDate = currNewsItem["date"];
 
         var datestr = newsDate.split("/");
@@ -150,10 +132,12 @@ export default class Tile extends Component {
 
         if (newsExistsForDate) continue;
 
-        var newsHeadline = currNewsItem["headline"];
-        var newsUrl = "<a target='_blank' href=" + currNewsItem.url + ">Link</a>";
-        var currNewsData = {x: timestamp, title: newsUrl, text: newsHeadline};
-
+        var currNewsData = {  x: timestamp,
+                              title: "",
+                              style: { color: 'rgba(0,0,0,0)' },
+                              text: "<b>Related news</b><br>" + currNewsItem.headline,
+                              url: currNewsItem.url
+                           };
         // console.log(currNewsData);
         newsData.push(currNewsData);
       }
@@ -162,44 +146,95 @@ export default class Tile extends Component {
           return parseFloat(a.x) - parseFloat(b.x);
       });
 
-      i = 0;
-  	  while(i < array.length){
-  	  	var headline = "";
-  	  	var url = "";
+      // parse data for announcements
+      for (var j = 0; j < announcements.length; j++) {
+        // var currAnnouncement = announcements[j];
+        console.log(announcements[j]);
+        var date = announcements[j].date;
 
-        values.push(Math.round((array[i].Close)*100));
-  	    data.push({
-  	      name: array[i].Date,
-  	      value: Math.round((array[i].Close)*100),
-  		    info: headline,
-  		    url: url,
-  	     });
-  	    i = i +1;
-  	  }
+        var datestr = date.split("/");
+        var dd = parseInt(datestr[0]);
+        var mm = parseInt(datestr[1])-1;
+        var yyyy = parseInt(datestr[2]);
+        var timestamp = Date.UTC(yyyy,mm,dd);
+
+        announcementData.push ({ x: timestamp,
+                                 y: null,
+                                 title: "",
+                                 style: { color: 'rgba(0,0,0,0)' },
+                                 text: "<b>Company announcement</b><br>" + announcements[j].title,
+                                 url: announcements[j].url });
+      }
+      announcementData.sort(function(a, b) {
+        return parseFloat(a.x) - parseFloat(b.x);
+      });
+      // console.log(announcementData);
 
       var chart = Highcharts.stockChart('container', {
-        series: [{
-          data: stockData,//values,
-          name: "Closing Price",
-          id: "stockData"
-        },{
+        series: [
+          // stock data graph
+          {
+            data: stockData,
+            name: "Closing Price",
+            id: "stockData"
+          },
+          // news data graph
+          {
             type: 'flags',
-            name: 'Flags on series',
-            // data: [{
-            //   x : dates[10],
-            //   title: "<button className='btn btn-primary' onClick={this.openModal}>Open Modal</button>",
-            // }],//newsData,
+            name: 'News',
             data: newsData,
-            onSeries: 'stockData',
-            shape: 'squarepin',
             useHTML: true,
-        }],
+            shape: 'url(assets/news-icon2.png)', //'circlepin',
+            events: { // upon click, it will launch another tab
+              click: function (event) {
+                console.log(event);
+                event.preventDefault();
+                window.open(event.point.url, '_blank');
+              }
+            },
+            width: 14,
+            y: 10, // position relative to graph
+          },
+          // announcement data graph
+          {
+            type: 'flags',
+            name: 'Annnoucements',
+            data: announcementData,
+            onSeries: 'stockData',
+            useHTML: true,
+            shape: 'url(assets/announcement.png)',
+            events: {
+              click: function (event) {
+                console.log(event);
+                event.preventDefault();
+                window.open(event.point.url, '_blank');
+              }
+            },
+            width: 30,
+            // states: { hover: { halo: { attributes: { fill: Highcharts.getOptions().colors[2], 'stroke-width': 1, stroke: Highcharts.getOptions().colors[1] }, opacity: 0.25, size: 10 } } } // leave here for future maybe
+          },
+          // set more options here for graph or more graph data
+        ],
+        // set title of graph
         title: {
           text: "Closing Price"
-        }
+        },
+        // set tooltip format
+        tooltip: {
+          style: {
+            width: '250px',
+            backgroundColor: '#FCFFC5',
+            borderColor: 'black',
+            borderRadius: 10,
+            borderWidth: 3
+          }
+        },
+        // initial range selected
+        rangeSelector: {
+          selected: 1
+        },
         // ... more options - see http://api.highcharts.com/highcharts
       });
-      // return data;
   	}
   }
 
@@ -360,7 +395,8 @@ export default class Tile extends Component {
     // While we only have functionality for 1 stock
 
     var data = this.props.stockData;
-    console.log("CODE: " + data[0].code);
+    console.log("PROS.STOCKDATA: ");
+    console.log(data);
     //rendering news page here
     //value consponds to data code which will be used as a switch function
 		if(data[0].code === "Home") {
@@ -435,7 +471,7 @@ export default class Tile extends Component {
       return(renderCat(data.code));
     }else {
       var news = data[0].companyNews;
-      this.parseDataIntoGraph(data[0].stock_data, news);
+      this.parseDataIntoGraph(data[0].stock_data, news, data[0].announcements);
     	// var companySum = this.getCompanySummary(data.name);
 
       var columnSpan = data.length+1;
@@ -486,31 +522,6 @@ export default class Tile extends Component {
 		}
 	}
 }
-
-// function showTooltipData (data) {
-//     if ( typeof data.payload[0] !== 'undefined') {
-//         // console.log(data.news);
-//         // console.log(Object.keys(data.payload[0]));
-//         // console.log(Object.values(data.payload[0]));
-//     	var date = data.payload[0].payload.name;
-//     	var value = data.payload[0].payload.value;
-//     	var info = data.payload[0].payload.info;
-//     	var url = data.payload[0].payload.url;
-//
-//       if (typeof(info) != 'undefined') {
-//         // return tooltip as url link if there exists an article, or just return share data
-//     		return <div id="tag">{date}<br/>
-//     							 Price: ${value/100}<br/>
-//     			                 <a href={(url !== "") ? url : ""} target="_blank">
-//     							 {(info !== "") ? "NEWS:" + info : ""}</a></div>;
-//       } else {
-//           return <div id="tag">{date}<br/>
-//       							 Cumulative Return: {value}%<br/></div>;
-//       }
-//     }
-//
-// }
-
 
 Tile.propTypes = {
   // This component gets the return figure to display through a React prop.

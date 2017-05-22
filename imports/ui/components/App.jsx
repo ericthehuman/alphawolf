@@ -169,12 +169,13 @@ addStock() {
       }
     });
 
-    Meteor.call('getASXAnnouncements', companyCode, end_date, function(error, result) {
+    Meteor.call('getASXAnnouncements', companyCode, function(error, result) {
       if (result) {
         var raw = JSON.parse(result.content);
         raw = raw.data;
         var announcements = [];
         console.log(raw);
+        // console.log("IS THIS HAPPENING");
         for (var i = 0; i < raw.length; i++) {
             var date = moment(raw[i].document_date).format('DD/MM/YYYY');
             announcements.push({

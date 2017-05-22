@@ -42,7 +42,7 @@ constructor(props){
 renderTile() {
   return (
     <div>
-      <Tile stockData={this.props.selectedStocks}/>
+      <Tile stockData={this.props.selectedStocks} onChange={this.changeToSector.bind(this)}/>
     </div>
   );
 }
@@ -50,6 +50,13 @@ renderTile() {
 // Reset the tile back to the home page
 resetTile() {
   SelectedStock.set([{ code: "Home" }]);
+  this.setState({ currSelectedStocks: [] });
+}
+
+// Reset the tile back to the home page
+changeToSector(sectorName) {
+  console.log(sectorName.currentTarget.value);
+  SelectedStock.set([{ code: sectorName.currentTarget.value }]);
   this.setState({ currSelectedStocks: [] });
 }
 

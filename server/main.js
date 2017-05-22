@@ -214,6 +214,12 @@ Meteor.methods({
 		});
 	},
 
+  //get hot stocks
+  'getHotStock': function(){
+    this.unblock();
+    return HTTP.call('GET', 'https://hotcopper.com.au/');
+  },
+
   // Get list of top 300 ASX companies
   'get300Companies': function() {
     this.unblock();

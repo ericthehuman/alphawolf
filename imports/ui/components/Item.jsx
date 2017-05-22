@@ -20,9 +20,14 @@ export default class Item extends Component {
 		//console.log("test image: " + test);
 
 		return (
-			<div className="item" style={{"backgroundImage": test, "backgroundSize": "300px 300px", "backgroundRepeat": "no-repeat", "backgroundPosition": "50% 75%"}} onClick={this.props.optionChange} value={this.props.value} >
-				<div style={{"fontSize": "36px","fontWeigth": "bold", "textAlign": "center", color: "#000000"}} >{this.props.news}</div>
-			</div>
+			<button type="button" className="item" style={{"backgroundImage": test, 
+			"backgroundSize": "300px 300px", "backgroundRepeat": "no-repeat", "backgroundPosition": "50% 75%",
+			"backgroundColor": "white"}} onClick={this.props.optionChange} value={this.props.value}>
+			<p style={{"textAlign": "left !important", "verticalAlign": "top !important"}}>{this.props.news}</p>
+			</button>
+			//*<span style={{"display": "block", "position": "absolute", "top": "0", "left": "0"}}>*/
+			// 	<div style={{"fontSize": "36px","fontWeigth": "bold", "textAlign": "center", color: "#000000"}} >{this.props.news}</div>
+			// </div>
 		);
 	}
 }
@@ -31,5 +36,7 @@ export default class Item extends Component {
 Item.PropTypes = {
 
 	//put proptypes here
+
+	stockVal: PropTypes.object.isRequired
 
 };

@@ -28,66 +28,111 @@ export default class Tile extends Component {
 
   handleClickItem(itemVal){
     //re-renders tiles, need to somehow get itemVal
-    console.log("something is pressed!\n" + itemVal);
+    //console.log("something is pressed!\n" + JSON.stringify(itemVal.value));
+    console.log(itemVal.currentTarget.value);
 
     switch (itemVal) {
+      case "hot":
+          data[0].code = "hot";
+          break;
       case "consumer1":
-          data.code = "consumer1";
+          data[0].code = "consumer1";
           break;
       case "consumer2":
-          data.code = "consumer2";
+          data[0].code = "consumer2";
           break;
       case "energy":
-          data.code = "energy";
+          data[0].code = "energy";
           break;
       case "financial":
-          data.code = "financial";
+          data[0].code = "financial";
           break;
       case "health":
-          data.code = "health";
+          data[0].code = "health";
           break;
       case "industrials":
-          data.code = "industrials";
+          data[0].code = "industrials";
           break;
       case "it":
-          data.code = "it";
+          data[0].code = "it";
           break;
       case "materials":
-        data.code = "materials";
+        data[0].code = "materials";
         break;
       case "metalmine":
-        data.code = "metalmine";
+        data[0].code = "metalmine";
         break;
       case "resource":
-        data.code = "resource";
+        data[0].code = "resource";
         break;
       case "telecom":
-        data.code = "telecom";
+        data[0].code = "telecom";
         break;
       default:
-        data.code = "Home";
+        data[0].code = "Home";
         break;
       }
   }
 
   //return a render page based on the catergory selected
-  renderCat(catergory){
-    //a really long string
-    var returnHtml;
+  renderCat(category){
     //debugging statement:
     console.log("the category trying to be render is: "+ category);
+    var returnHtml;
 
-    //another switch board:
+    //arr of results
+    var hotStocks;
 
+    //regrex goes here
+    //https://hotcopper.com.au/
+    Meteor.call('getHotStock', function(error, result) {
 
-    //returns a cat :D
-    return returnHtml;
+      if (result){
+        console.log("hi2");
+        console.log(result);
+      }
+    });
+
+    if (category == "hot"){
+    return(<h2>Hot Stocks</h2>);
+    }else if(category == "consumer1"){
+    return (<h2>Consumer Discretionary</h2>);
+    }else if (category == "consumer2"){
+      return(<h2>Consumer Staples</h2>);
+    }else if (category == "energy"){
+      return(<h2>Energy</h2>);
+    }else if (category == "financial"){
+      return(<h2>Financial</h2>);
+    }else if (category == "health"){
+      return(<h2>Health</h2>);
+    }else if (category == "industrials"){
+      return(<h2>Industrial</h2>);
+    }else if (category == "it"){
+      return(<h2>Information Technology</h2>);
+    }else if (category == "materials"){
+      return(<h2>Materials</h2>);
+    }else if (category == "metalmine"){
+      return(<h2>Metals and Mining</h2>);
+    }else if (category == "resource"){
+      return(<h2>Resources</h2>);
+    }else if (category == "telecom"){
+      return(<h2>Telecommunications</h2>);
+    }else if (category == "util"){
+      return(<h2>{}"=ujyew"}</h2>);
+    }else if(category == "bank"){
+      return(<h2>Bank</h2>);
+    }
   }
 
   //converts raw api data into structure the graph component uses
   parseDataIntoGraph(result, news, announcements) {
     if(result != null) {
       // console.log(announcements);
+
+
+        // console.log(result);
+        // console.log("NEWS: " + JSON.stringify(news));
+       // console.log(section);
 
   	  var array = result;
       var stockData = [];
@@ -596,73 +641,78 @@ export default class Tile extends Component {
 		if(data[0].code === "Home") {
   		return (
   			<div className="tile">
-  				<Item optionChange={this.handleClickItem.bind(this)} news={"Consumer Discretionary"} imagef={"http://www.sharesinv.com/wp-content/uploads/articles/consumer-ETFs.jpg"} value={"consumer1"}/>
-  				<Item optionChange={this.handleClickItem.bind(this)} news={"Consumer Staples"} imagef={"http://www.etftrends.com/wp-content/uploads/2012/10/consumer-staples-etfs.png"} value={"consumer2"}/>
-  				<Item optionChange={this.handleClickItem.bind(this)} news={"Energy"} imagef={"https://www.dentons.com/-/media/images/website/background-images/industry-sectors/energy/energy-2.jpg  "} value={"energy"}/>
-  				<Item optionChange={this.handleClickItem.bind(this)} news={"Financial"} imagef={"http://static.memrise.com/uploads/course_photos/3146044000150629230223.jpg"} value={"financial"}/>
-          <Item optionChange={this.handleClickItem.bind(this)} news={"Health Care"} imagef={"http://www.philips.com.au/c-dam/b2bhc/us/homepage-rebranded/specialties_heartmonitor.png"} value={"health"}/>
-          <Item optionChange={this.handleClickItem.bind(this)} news={"Industrials"} imagef={"http://relaypowersystems.com/wp-content/uploads/2011/10/refinery.jpg"} value={"industrials"}/>
-          <Item optionChange={this.handleClickItem.bind(this)} news={"IT- Information Technology"} imagef={"https://i.ytimg.com/vi/GyfPJ1i1Y5Y/maxresdefault.jpg "} value={"it"}/>
-          <Item optionChange={this.handleClickItem.bind(this)} news={"Materials"} imagef={"http://cambabest.co.uk/wp-content/uploads/2015/02/Building-banner1.jpg"} value={"materials"}/>
-          <Item optionChange={this.handleClickItem.bind(this)} news={"Metals and Minning"} imagef={"http://rsb-industries.com/images/Metal_Mining.jpg"} value={"metalmine"}/>
-          <Item optionChange={this.handleClickItem.bind(this)} news={"Resources"} imagef={"http://psychology.berkeley.edu/sites/default/files/styles/1000x400sc/public/Resources%20page%20photo_0.jpg?itok=dLdmH90P"} value={"resource"}/>
-          <Item optionChange={this.handleClickItem.bind(this)} news={"Telecommunications Services"} imagef={"https://www.sevone.com/sites/default/files/images/telecommunications-map.jpg"} value={"telecom"}/>
-          <Item optionChange={this.handleClickItem.bind(this)} news={"Utilities"} imagef={"http://allentownboronj.com/vertical/Sites/%7B7748EEEB-2391-4653-8B6A-4A64C85A6D79%7D/uploads/8329283_orig.jpg"} value={"util"}/>
-          <Item optionChange={this.handleClickItem.bind(this)} news={"Banking"} imagef={"http://keravnoslaw.com/images/banking.jpg"} value={"bank"}/>
+          <Item optionChange={this.props.onChange} news={"Hot Stocks"} imagef={"http://www.sharesinv.com/wp-content/uploads/articles/consumer-ETFs.jpg"} value={"hot"}/>
+  				<Item optionChange={this.props.onChange} news={"Consumer Discretionary"} imagef={"http://www.sharesinv.com/wp-content/uploads/articles/consumer-ETFs.jpg"} value={"consumer1"}/>
+  				<Item optionChange={this.props.onChange} news={"Consumer Staples"} imagef={"http://www.etftrends.com/wp-content/uploads/2012/10/consumer-staples-etfs.png"} value={"consumer2"}/>
+  				<Item optionChange={this.props.onChange} news={"Energy"} imagef={"https://www.dentons.com/-/media/images/website/background-images/industry-sectors/energy/energy-2.jpg  "} value={"energy"}/>
+  				<Item optionChange={this.props.onChange} news={"Financial"} imagef={"http://static.memrise.com/uploads/course_photos/3146044000150629230223.jpg"} value={"financial"}/>
+          <Item optionChange={this.props.onChange} news={"Health Care"} imagef={"http://www.philips.com.au/c-dam/b2bhc/us/homepage-rebranded/specialties_heartmonitor.png"} value={"health"}/>
+          <Item optionChange={this.props.onChange} news={"Industrials"} imagef={"http://relaypowersystems.com/wp-content/uploads/2011/10/refinery.jpg"} value={"industrials"}/>
+          <Item optionChange={this.props.onChange} news={"IT- Information Technology"} imagef={"https://i.ytimg.com/vi/GyfPJ1i1Y5Y/maxresdefault.jpg "} value={"it"}/>
+          <Item optionChange={this.props.onChange} news={"Materials"} imagef={"http://cambabest.co.uk/wp-content/uploads/2015/02/Building-banner1.jpg"} value={"materials"}/>
+          <Item optionChange={this.props.onChange} news={"Metals and Minning"} imagef={"http://rsb-industries.com/images/Metal_Mining.jpg"} value={"metalmine"}/>
+          <Item optionChange={this.props.onChange} news={"Resources"} imagef={"http://psychology.berkeley.edu/sites/default/files/styles/1000x400sc/public/Resources%20page%20photo_0.jpg?itok=dLdmH90P"} value={"resource"}/>
+          <Item optionChange={this.props.onChange} news={"Telecommunications Services"} imagef={"https://www.sevone.com/sites/default/files/images/telecommunications-map.jpg"} value={"telecom"}/>
+          <Item optionChange={this.props.onChange} news={"Utilities"} imagef={"http://allentownboronj.com/vertical/Sites/%7B7748EEEB-2391-4653-8B6A-4A64C85A6D79%7D/uploads/8329283_orig.jpg"} value={"util"}/>
+          <Item optionChange={this.props.onChange} news={"Banking"} imagef={"http://keravnoslaw.com/images/banking.jpg"} value={"bank"}/>
           </div>
   			);
-		} else if (data.code === "consumer1"){
+		}else if (data[0].code === "hot"){
+      return(this.renderCat(data[0].code));
+
+    }else if (data[0].code === "consumer1"){
       //render consumer1 tile
       //make an all in one rendering function for shares
-      return(renderCat(data.code));
+      console.log(this.renderCat(data[0].code));
+      return(this.renderCat(data[0].code));
 
-    }else if (data.code === "consumer2"){
+    }else if (data[0].code === "consumer2"){
       //render consumer2 tiles
-      return(renderCat(data.code));
+      return(this.renderCat(data[0].code));
 
-    }else if (data.code === "energy"){
+    }else if (data[0].code === "energy"){
       //render energy tiles
-      return(renderCat(data.code));
+      return(this.renderCat(data[0].code));
 
-    }else if (data.code === "financial"){
+    }else if (data[0].code === "financial"){
       //render financial tiles
-      return(renderCat(data.code));
+      return(this.renderCat(data[0].code));
 
-    }else if (data.code === "health"){
+    }else if (data[0].code === "health"){
       //render health tiles
-      return(renderCat(data.code));
+      return(this.renderCat(data[0].code));
 
-    }else if (data.code === "industrials"){
+    }else if (data[0].code === "industrials"){
       //render industrials tiles
-      return(renderCat(data.code));
+      return(this.renderCat(data[0].code));
 
-    }else if (data.code === "it"){
+    }else if (data[0].code === "it"){
       //render it tiles
-      return(renderCat(data.code));
+      return(this.renderCat(data[0].code));
 
-    }else if (data.code === "materials"){
+    }else if (data[0].code === "materials"){
       //render materials tiles
-      return(renderCat(data.code));
+      return(this.renderCat(data[0].code));
 
-    }else if (data.code === "metalmine"){
+    }else if (data[0].code === "metalmine"){
       //render metals and mining tiles
-      return(renderCat(data.code));
+      return(this.renderCat(data[0].code));
 
-    }else if (data.code === "resource"){
+    }else if (data[0].code === "resource"){
       //render resource tiles
-      return(renderCat(data.code));
+      return(this.renderCat(data[0].code));
 
-    }else if (data.code === "telecom"){
+    }else if (data[0].code === "telecom"){
       //render telecommunication tiles
-      return(renderCat(data.code));
+      return(this.renderCat(data[0].code));
 
-    }else if (data.code === "util"){
+    }else if (data[0].code === "util"){
       //render utilities tiles
-      return(renderCat(data.code));
+      return(this.renderCat(data[0].code));
 
-    }else if (data.code === "bank"){
+    }else if (data[0].code === "bank"){
       //render bank tiles
-      return(renderCat(data.code));
+      return(this.renderCat(data[0].code));
     }else {
       // While graph only works with one company
       if (data[0].code === "dontshowthisever") {

@@ -151,7 +151,7 @@ export default class Tile extends Component {
         if (newsExistsForDate) continue;
 
         var newsHeadline = currNewsItem["headline"];
-        var newsUrl = "<a href=" + currNewsItem.url + ">Link</a>";
+        var newsUrl = "<a target='_blank' href=" + currNewsItem.url + ">Link</a>";
         var currNewsData = {x: timestamp, title: newsUrl, text: newsHeadline};
 
         // console.log(currNewsData);

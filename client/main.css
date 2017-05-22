@@ -1,3 +1,12 @@
+@font-face {
+  font-family: 'Glyphicons Halflings';
+  src: url('node_modules/bootstrap/dist/fonts/glyphicons-halflings-regular.eot');
+  src: url('node_modules/bootstrap/dist/fonts/glyphicons-halflings-regular.eot?') format('embedded-opentype'),
+    url('node_modules/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2') format('woff2'),
+    url('node_modules/bootstrap/dist/fonts/glyphicons-halflings-regular.woff') format('woff'),
+    url('node_modules/bootstrap/dist/fonts/glyphicons-halflings-regular.ttf') format('truetype'),
+    url('node_modules/bootstrap/dist/fonts/glyphicons-halflings-regular.svg') format('svg');
+}
 /* CSS declarations go here */
 .stylethis {
 	font-size: 13px;
@@ -118,7 +127,7 @@ img {
 .tile-container {
 	padding: 40px;
 	/*overflow: auto;*/
-	background-color: rgb(245, 245, 245);
+	background-color: #f5f5f5;
 	/*height: 80vh;*/
 	margin-bottom: 5vh;
 	box-shadow: 0px 0px 15px 3px rgba(0, 0, 0, 0.56);
@@ -135,6 +144,17 @@ img {
 .company-logo {
 	width: 80px;
 	height: auto;
+  display: inline;
+}
+
+.borderless td, .borderless th {
+  border-top: none !important;
+  border-bottom: none !important;
+}
+
+.add-borders {
+  border-left: 1px solid #d6d6d6 !important;
+  border-right: 1px solid #d6d6d6 !important;
 }
 
 .stock-code {
@@ -154,13 +174,22 @@ img {
 	color: #be0909;
 }
 
-.firstCol {
-	width: 8%;
+.small-col {
+	width: 10%;
 }
+
+.equal-col {
+  width: 45%;
+}
+
+
 
 .align-right {
 	text-align: right;
-	border-right: 1px solid #000;
+}
+
+.align-center {
+  text-align: center;
 }
 
 
@@ -252,6 +281,7 @@ input:checked + label {
   background-color: #82f490;
   color: #424242;
 }
+
 
 
 /* add stock input css */

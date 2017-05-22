@@ -138,16 +138,16 @@ Meteor.startup(() => {
       }
     });
 
-    Meteor.call('getGuardianNews', "australia-news", "2017-04-14", "2017-05-21", 20, "Commonwealth Bank of Australia AND finance", function(error, result) {
+    Meteor.call('getGuardianNews', "Commonwealth AND Bank AND of AND Australia", function(error, result) {
       if (result) {
         var newsArray = [];
         var sectionId = []; // to determine company's main sector
-        sectionId["maxNum"] = 0;
-        sectionId["name"] = "";
+        // sectionId["maxNum"] = 0;
+        // sectionId["name"] = "";
 
         var parsedResult = JSON.parse(result.content);
         // console.log("parsedResult is: " + parsedResult);
-        var length = Math.min(20, parsedResult.response.results.length); // hard cap set here
+        var length = Math.min(50, parsedResult.response.results.length); // hard cap set here
 
         for (var i = 0; i < length; i++) {
             var article = parsedResult.response.results[i];
@@ -160,6 +160,7 @@ Meteor.startup(() => {
               source: "The Guardian UK",
               // publication date in YYYY-MM-DD'T'HH:MM:SS'Z' -> DD/MM/YYYY
               date: article.webPublicationDate.substring(8, 10) + "/" + article.webPublicationDate.substring(5, 7) + "/" + article.webPublicationDate.substring(0, 4),
+              section: article.sectionId
             }
 
             newsArray.push(newsData);
@@ -241,13 +242,14 @@ Meteor.methods({
     return HTTP.call('GET', 'http://data.asx.com.au/data/1/company/' + stockCode + '/announcements?market_sensitive=true&count=20&before_time=' + endDate);
   },
 
-  'getGuardianNews': function(section, beginDate, endDate, x, queryString) {
+  // 'getGuardianNews': function(section, beginDate, endDate, x, queryString) {
+  'getGuardianNews': function(queryString) {
     this.unblock();
     return HTTP.call('GET', 'http://content.guardianapis.com/search?'
-    + 'section=' + section
-    + '&from-date=' + beginDate
-    + '&to-date=' + endDate
-    + '&page-size=' + x // retrieve x articles
+    + 'section=' + 'australia-news' //section
+    + '&from-date=' + '2016-05-01' //beginDate
+    + '&to-date=' + '2017-12-30' //endDate
+    + '&page-size=' + 50 //x // retrieve x articles
     + '&q=' + queryString
     + '&api-key=59ce1afb-ea95-4ab7-971e-dc59c7189718');
   }

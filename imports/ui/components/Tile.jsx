@@ -28,10 +28,64 @@ var Highcharts = require('highcharts/highstock');
 
 export default class Tile extends Component {
 
-  handleClickItem (){
-    //re-renders tiles
-    console.log("something is pressed!\n");
+  handleClickItem(itemVal){
+    //re-renders tiles, need to somehow get itemVal
+    console.log("something is pressed!\n" + itemVal);
+
+    switch (itemVal) {
+      case "consumer1":
+          data.code = "consumer1";
+          break;
+      case "consumer2":
+          data.code = "consumer2";
+          break;
+      case "energy":
+          data.code = "energy";
+          break;
+      case "financial":
+          data.code = "financial";
+          break;
+      case "health":
+          data.code = "health";
+          break;
+      case "industrials":
+          data.code = "industrials";
+          break;
+      case "it":
+          data.code = "it";
+          break;
+      case "materials":
+        data.code = "materials";
+        break;
+      case "metalmine":
+        data.code = "metalmine";
+        break;
+      case "resource":
+        data.code = "resource";
+        break;
+      case "telecom":
+        data.code = "telecom";
+        break;
+      default:
+        data.code = "Home";
+        break;
+      } 
   }
+
+  //return a render page based on the catergory selected
+  renderCat(catergory){
+    //a really long string
+    var returnHtml;
+    //debugging statement:
+    console.log("the category trying to be render is: "+ category);
+
+    //another switch board:
+
+
+    //returns a cat :D
+    return returnHtml;
+  }
+
   //converts raw api data into structure the graph component uses
   parseDataIntoGraph(result, news) {
     if(result != null) {
@@ -288,7 +342,7 @@ export default class Tile extends Component {
   			<div className="tile">
   				<Item optionChange={this.handleClickItem.bind(this)} news={"Consumer Discretionary"} imagef={"http://www.sharesinv.com/wp-content/uploads/articles/consumer-ETFs.jpg"} value={"consumer1"}/>
   				<Item optionChange={this.handleClickItem.bind(this)} news={"Consumer Staples"} imagef={"http://www.etftrends.com/wp-content/uploads/2012/10/consumer-staples-etfs.png"} value={"consumer2"}/>
-  				<Item optionChange={this.handleClickItem.bind(this)} news={"Energy"} imagef={"https://www.dentons.com/-/media/images/website/background-images/industry-sectors/energy/energy-2.jpg  "} value={"Energy"}/>
+  				<Item optionChange={this.handleClickItem.bind(this)} news={"Energy"} imagef={"https://www.dentons.com/-/media/images/website/background-images/industry-sectors/energy/energy-2.jpg  "} value={"energy"}/>
   				<Item optionChange={this.handleClickItem.bind(this)} news={"Financial"} imagef={"http://static.memrise.com/uploads/course_photos/3146044000150629230223.jpg"} value={"financial"}/>
           <Item optionChange={this.handleClickItem.bind(this)} news={"Health Care"} imagef={"http://www.philips.com.au/c-dam/b2bhc/us/homepage-rebranded/specialties_heartmonitor.png"} value={"health"}/>
           <Item optionChange={this.handleClickItem.bind(this)} news={"Industrials"} imagef={"http://relaypowersystems.com/wp-content/uploads/2011/10/refinery.jpg"} value={"industrials"}/>
@@ -298,10 +352,62 @@ export default class Tile extends Component {
           <Item optionChange={this.handleClickItem.bind(this)} news={"Resources"} imagef={"http://psychology.berkeley.edu/sites/default/files/styles/1000x400sc/public/Resources%20page%20photo_0.jpg?itok=dLdmH90P"} value={"resource"}/>
           <Item optionChange={this.handleClickItem.bind(this)} news={"Telecommunications Services"} imagef={"https://www.sevone.com/sites/default/files/images/telecommunications-map.jpg"} value={"telecom"}/>
           <Item optionChange={this.handleClickItem.bind(this)} news={"Utilities"} imagef={"http://allentownboronj.com/vertical/Sites/%7B7748EEEB-2391-4653-8B6A-4A64C85A6D79%7D/uploads/8329283_orig.jpg"} value={"util"}/>
-          <Item optionChange={this.handleClickItem.bind(this)} news={"Bank"} imagef={"https://cdn.pixabay.com/photo/2015/10/14/18/43/bank-988164_960_720.png"} value={"bank"}/>
+          <Item optionChange={this.handleClickItem.bind(this)} news={"Banking"} imagef={"http://keravnoslaw.com/images/banking.jpg"} value={"bank"}/>
           </div>
   			);
-		} else {
+		} else if (data.code === "consumer1"){
+      //render consumer1 tile
+      //make an all in one rendering function for shares
+      return(renderCat(data.code));
+
+    }else if (data.code === "consumer2"){
+      //render consumer2 tiles
+      return(renderCat(data.code));
+
+    }else if (data.code === "energy"){
+      //render energy tiles
+      return(renderCat(data.code));
+
+    }else if (data.code === "financial"){
+      //render financial tiles
+      return(renderCat(data.code));
+
+    }else if (data.code === "health"){
+      //render health tiles
+      return(renderCat(data.code));
+
+    }else if (data.code === "industrials"){
+      //render industrials tiles
+      return(renderCat(data.code));
+
+    }else if (data.code === "it"){
+      //render it tiles
+      return(renderCat(data.code));
+
+    }else if (data.code === "materials"){
+      //render materials tiles
+      return(renderCat(data.code));
+
+    }else if (data.code === "metalmine"){
+      //render metals and mining tiles
+      return(renderCat(data.code));
+
+    }else if (data.code === "resource"){
+      //render resource tiles
+      return(renderCat(data.code));
+
+    }else if (data.code === "telecom"){
+      //render telecommunication tiles
+      return(renderCat(data.code));
+
+    }else if (data.code === "util"){
+      //render utilities tiles
+      return(renderCat(data.code));
+
+    }else if (data.code === "bank"){
+      //render bank tiles
+      return(renderCat(data.code));
+    }else {
       var news = data[0].companyNews;
       console.log("news is: " + news);
       this.parseDataIntoGraph(data[0].stock_data, news);

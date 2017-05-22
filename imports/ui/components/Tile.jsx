@@ -80,7 +80,29 @@ export default class Tile extends Component {
     console.log("the category trying to be render is: "+ category);
 
     //another switch board:
-
+    if (category == "consumer1"){
+      returnHtml = "<h2>Consumer Discretionary</h2>";
+    }else if (category == "consumer2"){
+      returnHtml = "<h2>Consumer Staples</h2>";
+    }else if (category == "energy"){
+      returnHtml = "<h2>Energy</h2>";
+    }else if (category == "financial"){
+      returnHtml = "<h2>Financial</h2>";
+    }else if (category == "health"){
+      returnHtml = "<h2>Health</h2>";
+    }else if (category == "industrials"){
+      returnHtml = "<h2>Industrial</h2>";
+    }else if (category == "it"){
+      returnHtml = "<h2>Information Technology</h2>";
+    }else if (category == "materials"){
+      returnHtml = "<h2>Materials</h2>";
+    }else if (category == "metalmine"){
+      returnHtml = "<h2>Metals and Mining</h2>";
+    }else if (category == "resource"){
+      returnHtml = "<h2>Resources/h2>";
+    }else if (category == "telecom"){
+      returnHtml = "<h2>Telecommunications</h2>";
+    }
 
     //returns a cat :D
     return returnHtml;
@@ -366,7 +388,7 @@ export default class Tile extends Component {
 		if(data[0].code === "Home") {
   		return (
   			<div className="tile">
-  				<Item optionChange={this.handleClickItem.bind(this)} news={"Consumer Discretionary"} imagef={"http://www.sharesinv.com/wp-content/uploads/articles/consumer-ETFs.jpg"} value={"consumer1"}/>
+  				<Item optionChange={this.handleClickItem.bind("consumer1")} news={"Consumer Discretionary"} imagef={"http://www.sharesinv.com/wp-content/uploads/articles/consumer-ETFs.jpg"} value={"consumer1"}/>
   				<Item optionChange={this.handleClickItem.bind(this)} news={"Consumer Staples"} imagef={"http://www.etftrends.com/wp-content/uploads/2012/10/consumer-staples-etfs.png"} value={"consumer2"}/>
   				<Item optionChange={this.handleClickItem.bind(this)} news={"Energy"} imagef={"https://www.dentons.com/-/media/images/website/background-images/industry-sectors/energy/energy-2.jpg  "} value={"energy"}/>
   				<Item optionChange={this.handleClickItem.bind(this)} news={"Financial"} imagef={"http://static.memrise.com/uploads/course_photos/3146044000150629230223.jpg"} value={"financial"}/>

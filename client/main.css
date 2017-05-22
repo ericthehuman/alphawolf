@@ -8,9 +8,6 @@
     url('node_modules/bootstrap/dist/fonts/glyphicons-halflings-regular.svg') format('svg');
 }
 /* CSS declarations go here */
-#companyImage {
-	width: 40px;
-}
 .stylethis {
 	font-size: 13px;
 }
@@ -147,6 +144,11 @@ img {
 .company-logo {
 	width: 80px;
 	height: auto;
+  display: inline;
+}
+
+.borderless td, .borderless th {
+  border: none !important;
 }
 
 .stock-code {
@@ -166,13 +168,22 @@ img {
 	color: #be0909;
 }
 
-.firstCol {
-	width: 8%;
+.small-col {
+	width: 10%;
 }
+
+.equal-col {
+  width: 45%;
+}
+
+
 
 .align-right {
 	text-align: right;
-	border-right: 1px solid #000;
+}
+
+.align-center {
+  text-align: center;
 }
 
 

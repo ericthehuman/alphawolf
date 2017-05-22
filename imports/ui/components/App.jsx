@@ -54,6 +54,11 @@ resetTile() {
 }
 
 handleOptionChange(companiesList) {
+  if (companiesList.length === 0) {
+    this.resetTile();
+    return;
+  }
+
   if (companiesList.length > 2) {
     // Take the most recent stock only if more than 2 are selected
     companiesList = [companiesList[2]];
@@ -93,11 +98,28 @@ handleOptionChange(companiesList) {
     dataArray.push(data);
   }
   var info = {
+    code: "dontshowthisever",
     name: " ",
     sector: "Sector",
     short_description: "Summary",
     url: "Company Website",
-    phone: "Phone no."
+    phone: "Phone no.",
+    yesterdayClose: "Close",
+    prevClose: "Previous close",
+    monthlyChange: "Monthly change",
+    monthlyHigh: "Monthly high",
+    monthlyLow: "Monthly low",
+    annualChange: "Annual change",
+    annualHigh: "Annual high",
+    annualLow: "Annual low"
+  }
+
+  // If we are comparing stocks we want these labels in the middle
+  if (dataArray.length === 2) {
+    dataArray.splice(1, 0, info);
+  // Otherwise have them upfront
+  } else {
+    dataArray.splice(0, 0, info);
   }
 
   SelectedStock.set(dataArray);
@@ -281,7 +303,7 @@ addStock() {
           <Navbar fixedTop className="navbar-custom">
             <Navbar.Header>
               <Navbar.Brand>
-                <span id="title">cubs of wall street</span>
+                <span id="title">COWS</span>
               </Navbar.Brand>
             </Navbar.Header>
             <Navbar.Form inline id="stockInputForm">

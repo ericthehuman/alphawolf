@@ -205,6 +205,47 @@ export default class Tile extends Component {
 
   renderStocksInfo() {
     return this.props.stockData.map((data) => {
+
+      // look at sectors 
+      // Telecommunication Services glyphicon glyphicon-phone
+      // Utilities glyphicon glyphicon-wrench
+      // one thing thats applicable, but turning it into something. broad thing
+      // some knowledge in a small part
+
+      var companySector = data.sector;
+      var imgUrl = data.logo_img_url;
+      var img = "";
+      if (imgUrl) {
+
+      } else {
+        // necessary to find image
+        // set the image by checking industry
+        var icon = "";
+        if (companySector === "Consumer Discretionary") { // 1
+          icon = "assets/staples.png";
+        } else if (companySector === "Consumer Staples") { // 2
+          icon = "assets/staples.png";
+        } else if (companySector === "Energy") { //
+          icon = "assets/energy.png";
+        } else if (companySector === "Financials") { // 4
+          icon = "assets/banking.png";
+        } else if (companySector === "Health Care") { // 5
+          icon = "assets/healthcare.png";
+        } else if (companySector === "Industrials") { // 6
+          icon = "assets/industry.png";
+        } else if (companySector === "Information Technology") { // 7
+          icon = "assets/it.png";
+        } else if (companySector === "Materials") { // 8
+          icon = "assets/meterials.png";
+        } else if (companySector === "Metals and Mining") { // 9
+          icon = "assets/materials.png";
+        } else if (companySector === "Telecommunication Services") { // 10
+          icon = "assets/tele.png";
+        } else if (companySector === "Utilities") { // 11
+          icon = "assets/utilities.png";
+        }
+        data.logo_img_url = icon;
+      }
       var companyReturns = data.stock_data;
       var NUMDAYS = companyReturns.length-1;
 
@@ -226,7 +267,7 @@ export default class Tile extends Component {
       );
       return (
       <div className={data.firstStock ? "col-md-6 align-right" : "col-md-6"}>
-        <h1>{data.name} <span className="stock-code">({data.code}<font size="2"><OverlayTrigger placement="top" overlay={tooltip_ticker}><Glyphicon glyph="info-sign" /></OverlayTrigger></font>)</span></h1>
+        <img id="companyImage" src={data.logo_img_url} /><h1>{data.name} <span className="stock-code">({data.code}<font size="2"><OverlayTrigger placement="top" overlay={tooltip_ticker}><Glyphicon glyph="info-sign" /></OverlayTrigger></font>)</span></h1>
         <p>{data.short_description}</p>
         <br/>
         <p><a href={data.url}>{data.url}</a><br />{data.phone}</p>

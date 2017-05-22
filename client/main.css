@@ -1,4 +1,16 @@
+@font-face {
+  font-family: 'Glyphicons Halflings';
+  src: url('node_modules/bootstrap/dist/fonts/glyphicons-halflings-regular.eot');
+  src: url('node_modules/bootstrap/dist/fonts/glyphicons-halflings-regular.eot?') format('embedded-opentype'),
+    url('node_modules/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2') format('woff2'),
+    url('node_modules/bootstrap/dist/fonts/glyphicons-halflings-regular.woff') format('woff'),
+    url('node_modules/bootstrap/dist/fonts/glyphicons-halflings-regular.ttf') format('truetype'),
+    url('node_modules/bootstrap/dist/fonts/glyphicons-halflings-regular.svg') format('svg');
+}
 /* CSS declarations go here */
+#companyImage {
+	width: 40px;
+}
 .stylethis {
 	font-size: 13px;
 }

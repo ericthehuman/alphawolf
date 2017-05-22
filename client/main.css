@@ -130,7 +130,7 @@ img {
 .tile-container {
 	padding: 40px;
 	/*overflow: auto;*/
-	background-color: rgb(245, 245, 245);
+	background-color: #f5f5f5;
 	/*height: 80vh;*/
 	margin-bottom: 5vh;
 	box-shadow: 0px 0px 15px 3px rgba(0, 0, 0, 0.56);
@@ -264,6 +264,7 @@ input:checked + label {
   background-color: #82f490;
   color: #424242;
 }
+
 
 
 /* add stock input css */

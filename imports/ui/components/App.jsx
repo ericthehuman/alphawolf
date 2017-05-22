@@ -304,6 +304,7 @@ addStock() {
         <div className="container-fluid main-container">
           <div className="tile-container">
            {this.renderTile()}
+           <div id="container"> </div>
           </div>
         </div>
       </div>

@@ -69,7 +69,7 @@ export default class Tile extends Component {
       default:
         data.code = "Home";
         break;
-      } 
+      }
   }
 
   //return a render page based on the catergory selected
@@ -196,6 +196,15 @@ export default class Tile extends Component {
         }],
         title: {
           text: "Closing Price"
+        },
+        scrollbar: {
+          enabled: false
+        },
+        chart: {
+          backgroundColor: "#f5f5f5",
+          borderColor: "#c4c4c4",
+          borderWidth: 2,
+          borderRadius: 2,
         }
         // ... more options - see http://api.highcharts.com/highcharts
       });
@@ -206,7 +215,7 @@ export default class Tile extends Component {
   renderStocksInfo() {
     return this.props.stockData.map((data) => {
 
-      // look at sectors 
+      // look at sectors
       // Telecommunication Services glyphicon glyphicon-phone
       // Utilities glyphicon glyphicon-wrench
       // one thing thats applicable, but turning it into something. broad thing
@@ -476,8 +485,8 @@ export default class Tile extends Component {
       return(renderCat(data.code));
     }else {
       var news = data[0].companyNews;
-      this.parseDataIntoGraph(data[0].stock_data, news);
     	// var companySum = this.getCompanySummary(data.name);
+      this.parseDataIntoGraph(data[0].stock_data, news);
       const tooltip_statistics = (
           <Toolitip id="tooltip"><strong>Statistics</strong><br /><strong>Previous close: </strong>A security's closing price on the preceding day of trading<br /><br />
             <strong>Monthly/Annual Change: </strong> Difference in price between the last closing price and the closing price a month/year ago.<br /><br />
@@ -527,7 +536,7 @@ export default class Tile extends Component {
               </tr>
             </tbody>
           </Table>
-          <div id="container"></div>
+          {  }
 				</div>
 
 				);

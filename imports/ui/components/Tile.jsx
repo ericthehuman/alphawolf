@@ -26,6 +26,54 @@ var Highcharts = require('highcharts/highstock');
 
 export default class Tile extends Component {
 
+  handleClickItem(itemVal){
+    //re-renders tiles, need to somehow get itemVal
+    //console.log("something is pressed!\n" + JSON.stringify(itemVal.value));
+    console.log(itemVal.currentTarget.value);
+
+    switch (itemVal) {
+      case "hot":
+          data[0].code = "hot";
+          break;
+      case "consumer1":
+          data[0].code = "consumer1";
+          break;
+      case "consumer2":
+          data[0].code = "consumer2";
+          break;
+      case "energy":
+          data[0].code = "energy";
+          break;
+      case "financial":
+          data[0].code = "financial";
+          break;
+      case "health":
+          data[0].code = "health";
+          break;
+      case "industrials":
+          data[0].code = "industrials";
+          break;
+      case "it":
+          data[0].code = "it";
+          break;
+      case "materials":
+        data[0].code = "materials";
+        break;
+      case "metalmine":
+        data[0].code = "metalmine";
+        break;
+      case "resource":
+        data[0].code = "resource";
+        break;
+      case "telecom":
+        data[0].code = "telecom";
+        break;
+      default:
+        data[0].code = "Home";
+        break;
+      }
+  }
+
   //return a render page based on the catergory selected
   renderCat(category){
     //debugging statement:
@@ -37,18 +85,13 @@ export default class Tile extends Component {
 
     //regrex goes here
     //https://hotcopper.com.au/
-    Meteor.call('getHotStock', function(error, result) {
 
-      if (result){
-        console.log("hi2");
-        console.log(result);
-      }
-    });
 
     if (category == "hot"){
-    return(<h2>Hot Stocks</h2>);
+      return(<h2>Hot Stocks</h2>);
     }else if(category == "tutorial"){
       return (
+
           <p>
             <h2>Beginners guide to the Stock Market</h2>
             <b>Welcome to Investing Basics!</b> If you've found your way here, chances are you've either got some money socked away or you're planning to do so. But first things first. Why is investing a smart idea?
@@ -75,11 +118,25 @@ export default class Tile extends Component {
 
             <br />
             <h3>Reading a COWS stocks sheet</h3>
+            The COWS stocks page list only the crucial information needed to invest in stocks. We leave out the unimportant and irrelevant data. Below is a guide as to what each piece of information means, and how it should affect your investment decisions.
+            <ul>
+              <li><strong>Stock Code</strong>: An abbreviation used to uniquely identify publicly traded shares of a particular stock on a particular stock market</li>
+              <li><strong>Sector</strong>: The sector of the stock defines the industry that the company is mostly involved in. Sector analysis provides the investor with an idea of how well a group of companies in the same sector could be expected to perform as a whole. Generally, a group of stocks within a sector tend to move together because companies within the same industry group are affected in similar ways by market and economic conditions.</li>
+              <li><strong>Summary</strong>: A general company description. It is advisable to research/invest instocks that you can understand their business model.</li>
+              <li><strong>Close</strong>: The closing price is the final price at which a stock is traded on a given trading day. The closing price represents the most up-to-date valuation of a security until trading commences again on the next trading day. Although closing prices do not reflect the after-hours price or corporate actions, they may still act as useful markers for investors to assess changes in stock prices over time — the closing price of one day can be compared to the previous closing price to measure market sentiment for a given security over a trading day</li>
+              <li><strong>Previous Close</strong>: The stock's closing price on the preceding day of trading.</li>
+              <li><strong>Monthly Change</strong>: Monthly change is the difference between the closing price of a stock on the day's trading and the previous month's closing price. It shows the companies performance over the past month and provides a short term illustration of the companies performance.</li>
+              <li><strong>Monthly High</strong>: The highest price that the stock has traded at in the previous month. This can give an indication of the possible future benefits of the stock.</li>
+              <li><strong>Monthly Low</strong>: The lowest price that the stock has traded at in the previous month. This can give an indication of the possible future flaws of the stock. </li>
+              <li><strong>Annual Change</strong>: Annual change is the difference between the closing price of a stock on the day's trading and the previous year's closing price. It shows the companies performance over the past year and provides a long term illustration of the companies performance.</li>
+              <li><strong>Annual High</strong>: The highest price that the stock has traded at in the previous year. This can give an indication of the possible future benefits of the stock.</li>
+              <li><strong>Annual Low</strong>: The lowest price that the stock has traded at in the previous year. This can give an indication of the possible future flaws of the stock. </li>
 
+            </ul>
           </p>
       );
     }else if(category == "consumer1"){
-    return (<h2>Consumer Discretionary</h2>);
+      return (<h2>Consumer Discretionary</h2>);
     }else if (category == "consumer2"){
       return(<h2>Consumer Staples</h2>);
     }else if (category == "energy"){
@@ -117,8 +174,6 @@ export default class Tile extends Component {
     if(result != null) {
       console.log("ANNOUNCEMENTS");
       console.log(announcements);
-
-
         // console.log(result);
         // console.log("NEWS: " + JSON.stringify(news));
        // console.log(section);
@@ -285,7 +340,7 @@ export default class Tile extends Component {
         },
         yAxis: {
           title: {
-            text: 'Dollars',
+            text: '$AU',
             enabled: true,
             style: {
               'font-weight': 'bold',

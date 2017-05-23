@@ -20,116 +20,78 @@ import {
     ModalFooter
 } from 'react-modal-bootstrap';
 
-//import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend} from 'recharts';
 var Highcharts = require('highcharts/highstock');
 
 
 export default class Tile extends Component {
 
-    handleClickItem(itemVal){
-        //re-renders tiles, need to somehow get itemVal
-        //console.log("something is pressed!\n" + JSON.stringify(itemVal.value));
-        console.log(itemVal.currentTarget.value);
+    renderCat(category) {
 
-        switch (itemVal) {
-            case "hot":
-                data[0].code = "hot";
-                break;
-            case "consumer1":
-                data[0].code = "consumer1";
-                break;
-            case "consumer2":
-                data[0].code = "consumer2";
-                break;
-            case "energy":
-                data[0].code = "energy";
-                break;
-            case "financial":
-                data[0].code = "financial";
-                break;
-            case "health":
-                data[0].code = "health";
-                break;
-            case "industrials":
-                data[0].code = "industrials";
-                break;
-            case "it":
-                data[0].code = "it";
-                break;
-            case "materials":
-                data[0].code = "materials";
-                break;
-            case "metalmine":
-                data[0].code = "metalmine";
-                break;
-            case "resource":
-                data[0].code = "resource";
-                break;
-            case "telecom":
-                data[0].code = "telecom";
-                break;
-            default:
-                data[0].code = "Home";
-                break;
-        }
-    }
-
-    //return a render page based on the catergory selected
-    renderCat(category){
-        //debugging statement:
-        console.log("the category trying to be render is: "+ category);
-        var returnHtml;
-
-        //arr of results
-        var hotStocks;
-
-        //regrex goes here
-        //https://hotcopper.com.au/
-
-
-        if (category == "hot"){
-            return(<h2>Hot Stocks</h2>);
-        }else if(category == "consumer1"){
-            return (<h2>Consumer Discretionary</h2>);
-        }else if (category == "consumer2"){
-            return(<h2>Consumer Staples</h2>);
-        }else if (category == "energy"){
-            return(<h2>Energy</h2>);
-        }else if (category == "financial"){
-            return(<h2>Financial</h2>);
-        }else if (category == "health"){
-            return(<h2>Health</h2>);
-        }else if (category == "industrials"){
-            return(<h2>Industrial</h2>);
-        }else if (category == "it"){
-            return(<h2>Information Technology</h2>);
-        }else if (category == "materials"){
+        if (category === "financial") {
+            return(<h2>Financials</h2>);
+        } else if (category === "materials") {
             return(<h2>Materials</h2>);
-        }else if (category == "metalmine"){
-            return(<h2>Metals and Mining</h2>);
-        }else if (category == "resource"){
-            return(<h2>Resources</h2>);
-        }else if (category == "telecom"){
-            return(<h2>Telecommunications</h2>);
-        }else if (category == "util"){
-            return(<h2>{}"=ujyew"}</h2>);
-        }else if(category == "bank"){
-            return(<h2>Bank</h2>);
+        } else if (category === "consumer2") {
+            return(<h2>Consumer Staples</h2>);
+        } else if (category === "energy") {
+            return(<h2>Energy</h2>);
+        } else if (category === "industrials") {
+            return(<h2>Industrial</h2>);
+        } else if (category === "it") {
+            return(<h2>Information Technology</h2>);
+        } else if (category === "util") {
+            return(<h2>Utilities</h2>);
+        } else if (category === "tutorial") {
+          return (
+
+              <p>
+                <h2>Beginners guide to the Stock Market</h2>
+                <b>Welcome to Investing Basics!</b> If you've found your way here, chances are you've either got some money socked away or you're planning to do so. But first things first. Why is investing a smart idea?
+
+                <br /><br />
+                Simply put, you want to invest in order to create wealth. It's relatively painless, and the rewards are plentiful. By investing in the stock market, you'll have a lot more money for things like retirement, education, recreation -- or you could pass on your riches to the next generation so that you become your family's Most Cherished Ancestor. Whether you're starting from scratch or have a few thousand dollars saved, Investing Basics will help get you going on the road to financial (and Foolish!) well-being.
+
+                <br /><br />
+                It can be very challenging for someone who does not understand the financial lingo to confidently asses and make investments based on data that they do not understand. Thats where COWS comes in. A revolutionary new website, redefining how a stocks portfolio should look.
+
+                <br />
+                <h3>Buying shares on a share exchange</h3>
+                There are five public share exchanges in Australia. Four of them directly supervise the companies that issue the shares that trade on their markets. The fifth exchange, Chi-X, currently only provides the infrastructure for trading shares already quoted on the ASX.
+                <br /><br />
+                The five exchanges are:
+                <ul>
+                  <li><a href="http://www.asx.com.au">Australian Securities Exchange (ASX)</a> - the main stock exchange in Australia</li>
+                  <li><a href="http://www.chi-x.com.au">Chi-X</a> - an exchange that trades company shares already quoted on the ASX, but does not list or supervise the companies</li>
+                  <li><a href="http://www.nsxa.com.au">National Stock Exchange of Australia (NSXA)</a> - a securities exchange that lists about 70 small to medium sized companies</li>
+                  <li><a href="http://simvse.com.au">SIM Venture Securities Exchange (SIM VSE)</a> - an exchange for innovative companies involved in the clean technology, renewable energy and bio science field</li>
+                  <li><a href="http://www.apx.com.au/APX/Public/EN/Default.aspx">Asia Pacific Stock Exchange (APX)</a> - a stock exchange with a focus on growth oriented companies from the Asia-Pacific region</li>
+                </ul>
+                To start buying and selling shares on any of these exchanges, simply visit their link.
+
+                <br />
+                <h3>Reading a COWS stocks sheet</h3>
+                The COWS stocks page list only the crucial information needed to invest in stocks. We leave out the unimportant and irrelevant data. Below is a guide as to what each piece of information means, and how it should affect your investment decisions.
+                <ul>
+                  <li><strong>Stock Code</strong>: An abbreviation used to uniquely identify publicly traded shares of a particular stock on a particular stock market</li>
+                  <li><strong>Sector</strong>: The sector of the stock defines the industry that the company is mostly involved in. Sector analysis provides the investor with an idea of how well a group of companies in the same sector could be expected to perform as a whole. Generally, a group of stocks within a sector tend to move together because companies within the same industry group are affected in similar ways by market and economic conditions.</li>
+                  <li><strong>Summary</strong>: A general company description. It is advisable to research/invest instocks that you can understand their business model.</li>
+                  <li><strong>Close</strong>: The closing price is the final price at which a stock is traded on a given trading day. The closing price represents the most up-to-date valuation of a security until trading commences again on the next trading day. Although closing prices do not reflect the after-hours price or corporate actions, they may still act as useful markers for investors to assess changes in stock prices over time — the closing price of one day can be compared to the previous closing price to measure market sentiment for a given security over a trading day</li>
+                  <li><strong>Previous Close</strong>: The stock's closing price on the preceding day of trading.</li>
+                  <li><strong>Monthly Change</strong>: Monthly change is the difference between the closing price of a stock on the day's trading and the previous month's closing price. It shows the companies performance over the past month and provides a short term illustration of the companies performance.</li>
+                  <li><strong>Monthly High</strong>: The highest price that the stock has traded at in the previous month. This can give an indication of the possible future benefits of the stock.</li>
+                  <li><strong>Monthly Low</strong>: The lowest price that the stock has traded at in the previous month. This can give an indication of the possible future flaws of the stock. </li>
+                  <li><strong>Annual Change</strong>: Annual change is the difference between the closing price of a stock on the day's trading and the previous year's closing price. It shows the companies performance over the past year and provides a long term illustration of the companies performance.</li>
+                  <li><strong>Annual High</strong>: The highest price that the stock has traded at in the previous year. This can give an indication of the possible future benefits of the stock.</li>
+                  <li><strong>Annual Low</strong>: The lowest price that the stock has traded at in the previous year. This can give an indication of the possible future flaws of the stock. </li>
+
+                </ul>
+              </p>
+          );
         }
     }
 
 
-
-
-
-
-
-
-
-
-
-
-
+/** PARSE DATA STUFF **/
 
 
   parseDataIntoPercentGraphTwo(company1,company2) {
@@ -944,23 +906,30 @@ export default class Tile extends Component {
         }
     }
 
-    //renders a whole bunch of stats for the user
+
     render() {
 
-        // While we only have functionality for 1 stock
+      // Destroy any old charts
+      // console.log("CHARTS:");
+      // console.log(Highcharts.charts);
+      for (var i = 0; i < Highcharts.charts.length; i++) {
+        if (Highcharts.charts[i]) {
+          console.log("Destroying chart");
+          var chart = Highcharts.charts[i];
+          chart.destroy();
+        }
+      }
 
         var data = this.props.stockData;
-        console.log("PROS.STOCKDATA: ");
-        console.log(data);
-        //rendering news page here
+
         //value consponds to data code which will be used as a switch function
         if(data[0].code === "Home") {
             return (
-                <div className="tile">
+                <div className="invis-tile">
                   <Item optionChange={this.props.onChange} news={"Tutorial"} imagef={"http://keravnoslaw.com/images/banking.jpg"} value={"tutorial"}/>
+                  <Item optionChange={this.props.onChange} news={"Financials"} imagef={"http://static.memrise.com/uploads/course_photos/3146044000150629230223.jpg"} value={"financial"}/>
                   <Item optionChange={this.props.onChange} news={"Consumer Staples"} imagef={"http://www.etftrends.com/wp-content/uploads/2012/10/consumer-staples-etfs.png"} value={"consumer2"}/>
                   <Item optionChange={this.props.onChange} news={"Energy"} imagef={"https://www.dentons.com/-/media/images/website/background-images/industry-sectors/energy/energy-2.jpg  "} value={"energy"}/>
-                  <Item optionChange={this.props.onChange} news={"Financials"} imagef={"http://static.memrise.com/uploads/course_photos/3146044000150629230223.jpg"} value={"financial"}/>
                   <Item optionChange={this.props.onChange} news={"Industrials"} imagef={"http://relaypowersystems.com/wp-content/uploads/2011/10/refinery.jpg"} value={"industrials"}/>
                   <Item optionChange={this.props.onChange} news={"Information Technology"} imagef={"https://i.ytimg.com/vi/GyfPJ1i1Y5Y/maxresdefault.jpg "} value={"it"}/>
                   <Item optionChange={this.props.onChange} news={"Materials"} imagef={"http://cambabest.co.uk/wp-content/uploads/2015/02/Building-banner1.jpg"} value={"materials"}/>
@@ -968,139 +937,24 @@ export default class Tile extends Component {
 
                 </div>
             );
-        }else if (data[0].code === "hot"){
+        }else if (data[0].code === "tutorial" || data[0].code === "energy" || data[0].code === "consumer2" ||
+                  data[0].code === "util" || data[0].code === "financial" || data[0].code === "industrials" ||
+                  data[0].code === "it" || data[0].code === "materials") {
             return(this.renderCat(data[0].code));
-
-        }else if (data[0].code === "consumer1"){
-            //render consumer1 tile
-            //make an all in one rendering function for shares
-            console.log(this.renderCat(data[0].code));
-            return(this.renderCat(data[0].code));
-
-        }else if (data[0].code === "tutorial"){
-          //render consumer2 tiles
-          return(
-
-
-              <p>
-                <h2>Beginners guide to the Stock Market</h2>
-                <b>Welcome to Investing Basics!</b> If you've found your way here, chances are you've either got some money socked away or you're planning to do so. But first things first. Why is investing a smart idea?
-
-                <br /><br />
-                Simply put, you want to invest in order to create wealth. It's relatively painless, and the rewards are plentiful. By investing in the stock market, you'll have a lot more money for things like retirement, education, recreation -- or you could pass on your riches to the next generation so that you become your family's Most Cherished Ancestor. Whether you're starting from scratch or have a few thousand dollars saved, Investing Basics will help get you going on the road to financial (and Foolish!) well-being.
-
-                <br /><br />
-                It can be very challenging for someone who does not understand the financial lingo to confidently asses and make investments based on data that they do not understand. Thats where COWS comes in. A revolutionary new website, redefining how a stocks portfolio should look.
-
-                <br />
-                <h3>Buying shares on a share exchange</h3>
-                There are five public share exchanges in Australia. Four of them directly supervise the companies that issue the shares that trade on their markets. The fifth exchange, Chi-X, currently only provides the infrastructure for trading shares already quoted on the ASX.
-                <br /><br />
-                The five exchanges are:
-                <ul>
-                  <li><a href="http://www.asx.com.au">Australian Securities Exchange (ASX)</a> - the main stock exchange in Australia</li>
-                  <li><a href="http://www.chi-x.com.au">Chi-X</a> - an exchange that trades company shares already quoted on the ASX, but does not list or supervise the companies</li>
-                  <li><a href="http://www.nsxa.com.au">National Stock Exchange of Australia (NSXA)</a> - a securities exchange that lists about 70 small to medium sized companies</li>
-                  <li><a href="http://simvse.com.au">SIM Venture Securities Exchange (SIM VSE)</a> - an exchange for innovative companies involved in the clean technology, renewable energy and bio science field</li>
-                  <li><a href="http://www.apx.com.au/APX/Public/EN/Default.aspx">Asia Pacific Stock Exchange (APX)</a> - a stock exchange with a focus on growth oriented companies from the Asia-Pacific region</li>
-                </ul>
-                To start buying and selling shares on any of these exchanges, simply visit their link.
-
-                <br />
-                <h3>Reading a COWS stocks sheet</h3>
-                The COWS stocks page list only the crucial information needed to invest in stocks. We leave out the unimportant and irrelevant data. Below is a guide as to what each piece of information means, and how it should affect your investment decisions.
-                <ul>
-                  <li><strong>Stock Code</strong>: An abbreviation used to uniquely identify publicly traded shares of a particular stock on a particular stock market</li>
-                  <li><strong>Sector</strong>: The sector of the stock defines the industry that the company is mostly involved in. Sector analysis provides the investor with an idea of how well a group of companies in the same sector could be expected to perform as a whole. Generally, a group of stocks within a sector tend to move together because companies within the same industry group are affected in similar ways by market and economic conditions.</li>
-                  <li><strong>Summary</strong>: A general company description. It is advisable to research/invest instocks that you can understand their business model.</li>
-                  <li><strong>Close</strong>: The closing price is the final price at which a stock is traded on a given trading day. The closing price represents the most up-to-date valuation of a security until trading commences again on the next trading day. Although closing prices do not reflect the after-hours price or corporate actions, they may still act as useful markers for investors to assess changes in stock prices over time — the closing price of one day can be compared to the previous closing price to measure market sentiment for a given security over a trading day</li>
-                  <li><strong>Previous Close</strong>: The stock's closing price on the preceding day of trading.</li>
-                  <li><strong>Monthly Change</strong>: Monthly change is the difference between the closing price of a stock on the day's trading and the previous month's closing price. It shows the companies performance over the past month and provides a short term illustration of the companies performance.</li>
-                  <li><strong>Monthly High</strong>: The highest price that the stock has traded at in the previous month. This can give an indication of the possible future benefits of the stock.</li>
-                  <li><strong>Monthly Low</strong>: The lowest price that the stock has traded at in the previous month. This can give an indication of the possible future flaws of the stock. </li>
-                  <li><strong>Annual Change</strong>: Annual change is the difference between the closing price of a stock on the day's trading and the previous year's closing price. It shows the companies performance over the past year and provides a long term illustration of the companies performance.</li>
-                  <li><strong>Annual High</strong>: The highest price that the stock has traded at in the previous year. This can give an indication of the possible future benefits of the stock.</li>
-                  <li><strong>Annual Low</strong>: The lowest price that the stock has traded at in the previous year. This can give an indication of the possible future flaws of the stock. </li>
-
-                </ul>
-              </p>
-
-          );
-        }else if (data[0].code === "consumer2"){
-            //render consumer2 tiles
-            return(this.renderCat(data[0].code));
-        }else if (data[0].code === "tutorial"){
-            //render consumer2 tiles
-            return(this.renderCat(data[0].code));
-
-        }else if (data[0].code === "energy"){
-            //render energy tiles
-            return(this.renderCat(data[0].code));
-
-        }else if (data[0].code === "financial"){
-            //render financial tiles
-            return(this.renderCat(data[0].code));
-
-        }else if (data[0].code === "health"){
-            //render health tiles
-            return(this.renderCat(data[0].code));
-
-        }else if (data[0].code === "industrials"){
-            //render industrials tiles
-            return(this.renderCat(data[0].code));
-
-        }else if (data[0].code === "it"){
-            //render it tiles
-            return(this.renderCat(data[0].code));
-
-        }else if (data[0].code === "materials"){
-            //render materials tiles
-            return(this.renderCat(data[0].code));
-
-        }else if (data[0].code === "metalmine"){
-            //render metals and mining tiles
-            return(this.renderCat(data[0].code));
-
-        }else if (data[0].code === "resource"){
-            //render resource tiles
-            return(this.renderCat(data[0].code));
-
-        }else if (data[0].code === "telecom"){
-            //render telecommunication tiles
-            return(this.renderCat(data[0].code));
-
-        }else if (data[0].code === "util"){
-            //render utilities tiles
-            return(this.renderCat(data[0].code));
-
-        }else if (data[0].code === "bank"){
-            //render bank tiles
-            return(this.renderCat(data[0].code));
-        }else {
+        } else {
             // While graph only works with one company
             console.log("WHAT IS THIS DATA");
             console.log(data);
             if (data[0].code === "dontshowthisever") {
-                // var news = data[1].companyNews;
-                // var companySum = this.getCompanySummary(data.name);
                 this.parseDataIntoGraph(1, data[1], null);
                 this.parseDataIntoPercentGraph(data[1].stock_data);
 
             } else {
-                // var news = data[0].companyNews;
-                // var companySum = this.getCompanySummary(data.name);
                 this.parseDataIntoGraph(2, data[0], data[2]);
                 this.parseDataIntoPercentGraphTwo(data[0],data[2]);
 
             }
-            // const tooltip_statistics = (
-            //     <Toolitip id="tooltip"><strong>Statistics</strong><br /><strong>Previous close: </strong>A security's closing price on the preceding day of trading<br /><br />
-            //       <strong>Monthly/Annual Change: </strong> Difference in price between the last closing price and the closing price a month/year ago.<br /><br />
-            //       <strong>Monthly/Annual High/Low: </strong> A 1-month/52-week high/low is the highest and lowest price that a stock has traded at during the previous year.<br /><br />
-            //
-            //     </Toolitip>
-            //     //<font size="2"><OverlayTrigger placement="top" overlay={tooltip_ticker}><Glyphicon glyph="info-sign" /></OverlayTrigger></font>
-            // );
+
             var columnSpan = data.length+1;
             if (data.length === 3) {
                 console.log("Got 2 stocks");
@@ -1135,7 +989,6 @@ export default class Tile extends Component {
                     <thead>
                     <tr>
                       <th colSpan={columnSpan}>Statistics</th>
-                        {/*<th colSpan={columnSpan}>Statistics<font size="2"><OverlayTrigger placement="top" overlay={tooltip_statistics}><Glyphicon glyph="info-sign" /></OverlayTrigger></font></th>*/}
                     </tr>
                     </thead>
                     <tbody>
@@ -1162,7 +1015,6 @@ export default class Tile extends Component {
                     </tr>
                     </tbody>
                   </Table>
-                    {  }
                 </div>
 
             );

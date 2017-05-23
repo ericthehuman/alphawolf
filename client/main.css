@@ -89,6 +89,36 @@ body {
 	box-shadow: 0px 0px 30px 5px rgba(0, 0, 0, 0.9);
 }
 
+.sector-btn-container {
+  text-align: center;
+}
+
+.sector-stock {
+  height: 100px;
+	width: 300px;
+	display: inline-block;
+	padding: 20px;
+	margin: 40px 40px 40px 40px;
+  border: none;
+  border-radius: 5px;
+	box-shadow: 0px 0px 15px 3px rgba(0, 0, 0, 0.56);
+  transition: box-shadow .2s;
+}
+
+.sector-stock:hover{
+	cursor: pointer;
+	box-shadow: 0px 0px 30px 5px rgba(0, 0, 0, 0.9);
+}
+
+.thirty-col {
+  width: 30%
+}
+
+.sector-news {
+	font-family: 'Pavanam', sans-serif;
+  font-size: 20px;
+}
+
 /*search bar*/
 
 .searchBar {
@@ -217,11 +247,11 @@ label {
   position: relative;
   /*margin: 10px;*/
 	text-align: center;
-  padding-top: 5px;
-	padding-bottom: 5px;
+  padding-top: 3px;
+	padding-bottom: 3px;
   border: 2px solid #fff;
   border-radius: 10px;
-  color: #bebebe;
+  color: #acacac;
   background-color: #fff;
   box-shadow: 0 0 10px rgba(0, 0, 0, .2);
 	/*white-space: nowrap;*/

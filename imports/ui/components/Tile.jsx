@@ -28,19 +28,248 @@ export default class Tile extends Component {
     renderCat(category) {
 
         if (category === "financial") {
-            return(<h2>Financials</h2>);
+            return(
+              <div>
+                <h2>Financials</h2>
+                <h3>Top Stocks This Month</h3>
+                <div className="sector-btn-container">
+                  <button type="button" className="sector-stock" onClick={this.props.sectorAddFunction} value="CBA">
+                    <span className="item-text">Commonwealth Bank of Australia (CBA)</span>
+                  </button>
+                  <button type="button" className="sector-stock" onClick={this.props.sectorAddFunction} value="WBC">
+                    <span className="item-text">Westpac Banking Corporation (WBC)</span>
+                  </button>
+                  <button type="button" className="sector-stock" onClick={this.props.sectorAddFunction} value="NAB">
+                    <span className="item-text">National Australia Bank Limited (NAB)</span>
+                  </button>
+                  <button type="button" className="sector-stock" onClick={this.props.sectorAddFunction} value="ANZ">
+                    <span className="item-text">Australia And New Zealand Banking Group Limited (ANZ)</span>
+                  </button>
+                  <button type="button" className="sector-stock" onClick={this.props.sectorAddFunction} value="BOQ">
+                    <span className="item-text">Bank of Queensland Limited (BOQ)</span>
+                  </button>
+                  <button type="button" className="sector-stock" onClick={this.props.sectorAddFunction} value="BEN">
+                    <span className="item-text">Bendigo And Adelaide Bank Limited (BEN)</span>
+                  </button>
+                  <button type="button" className="sector-stock" onClick={this.props.sectorAddFunction} value="IAG">
+                    <span className="item-text">Insurance Australia Group Limited (IAG)</span>
+                  </button>
+                  <button type="button" className="sector-stock" onClick={this.props.sectorAddFunction} value="GMA">
+                    <span className="item-text">Genworth Mortgage Insurance Australia Limited (GMA)</span>
+                  </button>
+                </div>
+                <h3>Top Headlines</h3>
+                <Table>
+                  <tbody>
+                    { this.renderCurrentSectorNews() }
+                  </tbody>
+                </Table>
+              </div>
+            );
         } else if (category === "materials") {
-            return(<h2>Materials</h2>);
+          return(
+            <div>
+              <h2>Materials</h2>
+              <h3>Top Stocks This Month</h3>
+              <div className="sector-btn-container">
+                <button type="button" className="sector-stock" onClick={this.props.sectorAddFunction} value="BHP">
+                  <span className="item-text">BHP Billiton Limited (BHP)</span>
+                </button>
+                <button type="button" className="sector-stock" onClick={this.props.sectorAddFunction} value="RIO">
+                  <span className="item-text">RIO Tinto Limited (RIO)</span>
+                </button>
+                <button type="button" className="sector-stock" onClick={this.props.sectorAddFunction} value="OZL">
+                  <span className="item-text">Oz Minerals Limited (OZL)</span>
+                </button>
+                <button type="button" className="sector-stock" onClick={this.props.sectorAddFunction} value="BSL">
+                  <span className="item-text">Bluescope Steel Limited (BSL)</span>
+                </button>
+                <button type="button" className="sector-stock" onClick={this.props.sectorAddFunction} value="ORI">
+                  <span className="item-text">Orica Limited (ORI)</span>
+                </button>
+                <button type="button" className="sector-stock" onClick={this.props.sectorAddFunction} value="CSR">
+                  <span className="item-text">CSR Limited (CSR)</span>
+                </button>
+                <button type="button" className="sector-stock" onClick={this.props.sectorAddFunction} value="EVN">
+                  <span className="item-text">Evolution Mining Limited (EVN)</span>
+                </button>
+                <button type="button" className="sector-stock" onClick={this.props.sectorAddFunction} value="ABC">
+                  <span className="item-text">Adelaide Brighton Limited (ABC)</span>
+                </button>
+              </div>
+              <h3>Top Headlines</h3>
+              <Table>
+                <tbody>
+                  { this.renderCurrentSectorNews() }
+                </tbody>
+              </Table>
+            </div>
+          );
         } else if (category === "consumer2") {
-            return(<h2>Consumer Staples</h2>);
+          return(
+            <div>
+              <h2>Consumer Staples</h2>
+              <h3>Top Stocks This Month</h3>
+              <div className="sector-btn-container">
+                <button type="button" className="sector-stock" onClick={this.props.sectorAddFunction} value="CBA">
+                  <span className="item-text">Commonwealth Bank of Australia (CBA)</span>
+                </button>
+                <button type="button" className="sector-stock" onClick={this.props.sectorAddFunction} value="WBC">
+                  <span className="item-text">Westpac Banking Corporation (WBC)</span>
+                </button>
+                <button type="button" className="sector-stock" onClick={this.props.sectorAddFunction} value="NAB">
+                  <span className="item-text">National Australia Bank Limited (NAB)</span>
+                </button>
+                <button type="button" className="sector-stock" onClick={this.props.sectorAddFunction} value="ANZ">
+                  <span className="item-text">Australia And New Zealand Banking Group Limited (ANZ)</span>
+                </button>
+                <button type="button" className="sector-stock" onClick={this.props.sectorAddFunction} value="BOQ">
+                  <span className="item-text">Bank of Queensland Limited (BOQ)</span>
+                </button>
+                <button type="button" className="sector-stock" onClick={this.props.sectorAddFunction} value="BEN">
+                  <span className="item-text">Bendigo And Adelaide Bank Limited (BEN)</span>
+                </button>
+                <button type="button" className="sector-stock" onClick={this.props.sectorAddFunction} value="IAG">
+                  <span className="item-text">Insurance Australia Group Limited (IAG)</span>
+                </button>
+                <button type="button" className="sector-stock" onClick={this.props.sectorAddFunction} value="MQG">
+                  <span className="item-text">Macquarie Group Limited (MQG)</span>
+                </button>
+              </div>
+            </div>
+          );
         } else if (category === "energy") {
-            return(<h2>Energy</h2>);
+          return(
+            <div>
+              <h2>Energy</h2>
+              <h3>Top Stocks This Month</h3>
+              <div className="sector-btn-container">
+                <button type="button" className="sector-stock" onClick={this.props.sectorAddFunction} value="CBA">
+                  <span className="item-text">Commonwealth Bank of Australia (CBA)</span>
+                </button>
+                <button type="button" className="sector-stock" onClick={this.props.sectorAddFunction} value="WBC">
+                  <span className="item-text">Westpac Banking Corporation (WBC)</span>
+                </button>
+                <button type="button" className="sector-stock" onClick={this.props.sectorAddFunction} value="NAB">
+                  <span className="item-text">National Australia Bank Limited (NAB)</span>
+                </button>
+                <button type="button" className="sector-stock" onClick={this.props.sectorAddFunction} value="ANZ">
+                  <span className="item-text">Australia And New Zealand Banking Group Limited (ANZ)</span>
+                </button>
+                <button type="button" className="sector-stock" onClick={this.props.sectorAddFunction} value="BOQ">
+                  <span className="item-text">Bank of Queensland Limited (BOQ)</span>
+                </button>
+                <button type="button" className="sector-stock" onClick={this.props.sectorAddFunction} value="BEN">
+                  <span className="item-text">Bendigo And Adelaide Bank Limited (BEN)</span>
+                </button>
+                <button type="button" className="sector-stock" onClick={this.props.sectorAddFunction} value="IAG">
+                  <span className="item-text">Insurance Australia Group Limited (IAG)</span>
+                </button>
+                <button type="button" className="sector-stock" onClick={this.props.sectorAddFunction} value="MQG">
+                  <span className="item-text">Macquarie Group Limited (MQG)</span>
+                </button>
+              </div>
+            </div>
+          );
         } else if (category === "industrials") {
-            return(<h2>Industrial</h2>);
+          return(
+            <div>
+              <h2>Industrials</h2>
+              <h3>Top Stocks This Month</h3>
+              <div className="sector-btn-container">
+                <button type="button" className="sector-stock" onClick={this.props.sectorAddFunction} value="CBA">
+                  <span className="item-text">Commonwealth Bank of Australia (CBA)</span>
+                </button>
+                <button type="button" className="sector-stock" onClick={this.props.sectorAddFunction} value="WBC">
+                  <span className="item-text">Westpac Banking Corporation (WBC)</span>
+                </button>
+                <button type="button" className="sector-stock" onClick={this.props.sectorAddFunction} value="NAB">
+                  <span className="item-text">National Australia Bank Limited (NAB)</span>
+                </button>
+                <button type="button" className="sector-stock" onClick={this.props.sectorAddFunction} value="ANZ">
+                  <span className="item-text">Australia And New Zealand Banking Group Limited (ANZ)</span>
+                </button>
+                <button type="button" className="sector-stock" onClick={this.props.sectorAddFunction} value="BOQ">
+                  <span className="item-text">Bank of Queensland Limited (BOQ)</span>
+                </button>
+                <button type="button" className="sector-stock" onClick={this.props.sectorAddFunction} value="BEN">
+                  <span className="item-text">Bendigo And Adelaide Bank Limited (BEN)</span>
+                </button>
+                <button type="button" className="sector-stock" onClick={this.props.sectorAddFunction} value="IAG">
+                  <span className="item-text">Insurance Australia Group Limited (IAG)</span>
+                </button>
+                <button type="button" className="sector-stock" onClick={this.props.sectorAddFunction} value="MQG">
+                  <span className="item-text">Macquarie Group Limited (MQG)</span>
+                </button>
+              </div>
+            </div>
+          );
         } else if (category === "it") {
-            return(<h2>Information Technology</h2>);
+          return(
+            <div>
+              <h2>Information Technology</h2>
+              <h3>Top Stocks This Month</h3>
+              <div className="sector-btn-container">
+                <button type="button" className="sector-stock" onClick={this.props.sectorAddFunction} value="CBA">
+                  <span className="item-text">Commonwealth Bank of Australia (CBA)</span>
+                </button>
+                <button type="button" className="sector-stock" onClick={this.props.sectorAddFunction} value="WBC">
+                  <span className="item-text">Westpac Banking Corporation (WBC)</span>
+                </button>
+                <button type="button" className="sector-stock" onClick={this.props.sectorAddFunction} value="NAB">
+                  <span className="item-text">National Australia Bank Limited (NAB)</span>
+                </button>
+                <button type="button" className="sector-stock" onClick={this.props.sectorAddFunction} value="ANZ">
+                  <span className="item-text">Australia And New Zealand Banking Group Limited (ANZ)</span>
+                </button>
+                <button type="button" className="sector-stock" onClick={this.props.sectorAddFunction} value="BOQ">
+                  <span className="item-text">Bank of Queensland Limited (BOQ)</span>
+                </button>
+                <button type="button" className="sector-stock" onClick={this.props.sectorAddFunction} value="BEN">
+                  <span className="item-text">Bendigo And Adelaide Bank Limited (BEN)</span>
+                </button>
+                <button type="button" className="sector-stock" onClick={this.props.sectorAddFunction} value="IAG">
+                  <span className="item-text">Insurance Australia Group Limited (IAG)</span>
+                </button>
+                <button type="button" className="sector-stock" onClick={this.props.sectorAddFunction} value="MQG">
+                  <span className="item-text">Macquarie Group Limited (MQG)</span>
+                </button>
+              </div>
+            </div>
+          );
         } else if (category === "util") {
-            return(<h2>Utilities</h2>);
+          return(
+            <div>
+              <h2>Utilities</h2>
+              <h3>Top Stocks This Month</h3>
+              <div className="sector-btn-container">
+                <button type="button" className="sector-stock" onClick={this.props.sectorAddFunction} value="CBA">
+                  <span className="item-text">Commonwealth Bank of Australia (CBA)</span>
+                </button>
+                <button type="button" className="sector-stock" onClick={this.props.sectorAddFunction} value="WBC">
+                  <span className="item-text">Westpac Banking Corporation (WBC)</span>
+                </button>
+                <button type="button" className="sector-stock" onClick={this.props.sectorAddFunction} value="NAB">
+                  <span className="item-text">National Australia Bank Limited (NAB)</span>
+                </button>
+                <button type="button" className="sector-stock" onClick={this.props.sectorAddFunction} value="ANZ">
+                  <span className="item-text">Australia And New Zealand Banking Group Limited (ANZ)</span>
+                </button>
+                <button type="button" className="sector-stock" onClick={this.props.sectorAddFunction} value="BOQ">
+                  <span className="item-text">Bank of Queensland Limited (BOQ)</span>
+                </button>
+                <button type="button" className="sector-stock" onClick={this.props.sectorAddFunction} value="BEN">
+                  <span className="item-text">Bendigo And Adelaide Bank Limited (BEN)</span>
+                </button>
+                <button type="button" className="sector-stock" onClick={this.props.sectorAddFunction} value="IAG">
+                  <span className="item-text">Insurance Australia Group Limited (IAG)</span>
+                </button>
+                <button type="button" className="sector-stock" onClick={this.props.sectorAddFunction} value="MQG">
+                  <span className="item-text">Macquarie Group Limited (MQG)</span>
+                </button>
+              </div>
+            </div>
+          );
         } else if (category === "tutorial") {
           return (
 
@@ -451,6 +680,9 @@ export default class Tile extends Component {
             for (var j = 0; j < announcements.length; j++) {
                 var date = announcements[j].date.split("/");
                 var timestamp = Date.UTC(date[2], date[1]-1, date[0]);
+                var oldestTime = Date.UTC(2016, 3, 10);
+                // Ignore announcements outside of graph range
+                if (timestamp < oldestTime) continue;
 
                 announcementData.push ({  x: timestamp,
                     y: null,
@@ -887,20 +1119,10 @@ export default class Tile extends Component {
     }
 
 
-    //get some info about the company
-    getCompanySummary(Name){
-        console.log("the stock name to get summary from is"+ " "+Name);
-        var resultString;
-        //invoke the server method
-        if (Meteor.isClient && Name){
-            Meteor.call("getSummary", Name, function(error, results) {
-                resultString = results.content.toString();
-                resultString = /\"extract\"\:\"(.*)\"\}{4}/.exec(resultString);
-                console.log(resultString[1]);
-                return resultString[1];
-            });
-
-        }
+    renderCurrentSectorNews() {
+        return this.props.stockData[0].news.map((data, i, stockData) => {
+            return (<tr className="sector-news"><td className="thirty-col"><i>{data.date}</i></td><td><b><a href={data.url}>{data.headline}</a></b></td></tr>);
+        })
     }
 
 
@@ -939,7 +1161,6 @@ export default class Tile extends Component {
                   data[0].code === "it" || data[0].code === "materials") {
             return(this.renderCat(data[0].code));
         } else {
-            // While graph only works with one company
             console.log("WHAT IS THIS DATA");
             console.log(data);
             if (data[0].code === "dontshowthisever") {
@@ -949,7 +1170,6 @@ export default class Tile extends Component {
             } else {
                 this.parseDataIntoGraph(2, data[0], data[2]);
                 this.parseDataIntoPercentGraphTwo(data[0],data[2]);
-
             }
 
             var columnSpan = data.length+1;

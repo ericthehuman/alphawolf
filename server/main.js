@@ -193,6 +193,74 @@ Meteor.startup(() => {
       announcements: companyData.announcements,
       companyNews: companyData.companyNews,
     });
+
+    Meteor.call('getGuardianNews', "finance AND market", function(error, result) {
+      if (result) {
+        var newsArray = [];
+        var sectionId = []; // to determine company's main sector
+        // sectionId["maxNum"] = 0;
+        // sectionId["name"] = "";
+
+        var parsedResult = JSON.parse(result.content);
+        // console.log("parsedResult is: " + parsedResult);
+        var length = Math.min(10, parsedResult.response.results.length); // hard cap set here
+
+        for (var i = 0; i < length; i++) {
+            var article = parsedResult.response.results[i];
+            if (article.type !== "article") continue;
+
+            // newsArray[i] = article;
+            var newsData = {
+              headline: (article.webTitle === undefined) ? "" : article.webTitle,
+              url: article.webUrl,
+              source: "The Guardian UK",
+              // publication date in YYYY-MM-DD'T'HH:MM:SS'Z' -> DD/MM/YYYY
+              date: article.webPublicationDate.substring(8, 10) + "/" + article.webPublicationDate.substring(5, 7) + "/" + article.webPublicationDate.substring(0, 4),
+              section: article.sectionId
+            }
+
+            newsArray.push(newsData);
+        }
+
+        Stocks.insert({name: "Financials", code: "FINANCIALS", news: newsArray});
+      } else {
+        console.log(error);
+      }
+    });
+
+    Meteor.call('getGuardianNews', "materials AND market", function(error, result) {
+      if (result) {
+        var newsArray = [];
+        var sectionId = []; // to determine company's main sector
+        // sectionId["maxNum"] = 0;
+        // sectionId["name"] = "";
+
+        var parsedResult = JSON.parse(result.content);
+        // console.log("parsedResult is: " + parsedResult);
+        var length = Math.min(10, parsedResult.response.results.length); // hard cap set here
+
+        for (var i = 0; i < length; i++) {
+            var article = parsedResult.response.results[i];
+            if (article.type !== "article") continue;
+
+            // newsArray[i] = article;
+            var newsData = {
+              headline: (article.webTitle === undefined) ? "" : article.webTitle,
+              url: article.webUrl,
+              source: "The Guardian UK",
+              // publication date in YYYY-MM-DD'T'HH:MM:SS'Z' -> DD/MM/YYYY
+              date: article.webPublicationDate.substring(8, 10) + "/" + article.webPublicationDate.substring(5, 7) + "/" + article.webPublicationDate.substring(0, 4),
+              section: article.sectionId
+            }
+
+            newsArray.push(newsData);
+        }
+
+        Stocks.insert({name: "Materials", code: "MATERIALS", news: newsArray});
+      } else {
+        console.log(error);
+      }
+    });
 });
 
 Meteor.methods({

@@ -95,6 +95,37 @@ export default class Tile extends Component {
 
     if (category == "hot"){
     return(<h2>Hot Stocks</h2>);
+    }else if(category == "tutorial"){
+      return (
+          <p>
+            <h2>Beginners guide to the Stock Market</h2>
+            <b>Welcome to Investing Basics!</b> If you've found your way here, chances are you've either got some money socked away or you're planning to do so. But first things first. Why is investing a smart idea?
+
+            <br /><br />
+            Simply put, you want to invest in order to create wealth. It's relatively painless, and the rewards are plentiful. By investing in the stock market, you'll have a lot more money for things like retirement, education, recreation -- or you could pass on your riches to the next generation so that you become your family's Most Cherished Ancestor. Whether you're starting from scratch or have a few thousand dollars saved, Investing Basics will help get you going on the road to financial (and Foolish!) well-being.
+
+            <br /><br />
+            It can be very challenging for someone who does not understand the financial lingo to confidently asses and make investments based on data that they do not understand. Thats where COWS comes in. A revolutionary new website, redefining how a stocks portfolio should look.
+
+            <br />
+            <h3>Buying shares on a share exchange</h3>
+            There are five public share exchanges in Australia. Four of them directly supervise the companies that issue the shares that trade on their markets. The fifth exchange, Chi-X, currently only provides the infrastructure for trading shares already quoted on the ASX.
+            <br /><br />
+            The five exchanges are:
+            <ul>
+              <li><a href="http://www.asx.com.au">Australian Securities Exchange (ASX)</a> - the main stock exchange in Australia</li>
+              <li><a href="http://www.chi-x.com.au">Chi-X</a> - an exchange that trades company shares already quoted on the ASX, but does not list or supervise the companies</li>
+              <li><a href="http://www.nsxa.com.au">National Stock Exchange of Australia (NSXA)</a> - a securities exchange that lists about 70 small to medium sized companies</li>
+              <li><a href="http://simvse.com.au">SIM Venture Securities Exchange (SIM VSE)</a> - an exchange for innovative companies involved in the clean technology, renewable energy and bio science field</li>
+              <li><a href="http://www.apx.com.au/APX/Public/EN/Default.aspx">Asia Pacific Stock Exchange (APX)</a> - a stock exchange with a focus on growth oriented companies from the Asia-Pacific region</li>
+            </ul>
+            To start buying and selling shares on any of these exchanges, simply visit their link.
+
+            <br />
+            <h3>Reading a COWS stocks sheet</h3>
+
+          </p>
+      );
     }else if(category == "consumer1"){
     return (<h2>Consumer Discretionary</h2>);
     }else if (category == "consumer2"){
@@ -656,7 +687,9 @@ export default class Tile extends Component {
 		if(data[0].code === "Home") {
   		return (
   			<div className="tile">
-          <Item optionChange={this.props.onChange} news={"Hot Stocks"} imagef={"http://www.sharesinv.com/wp-content/uploads/articles/consumer-ETFs.jpg"} value={"hot"}/>
+              <Item optionChange={this.props.onChange} news={"Tutorial"} imagef={"http://keravnoslaw.com/images/banking.jpg"} value={"tutorial"}/>
+
+              <Item optionChange={this.props.onChange} news={"Hot Stocks"} imagef={"http://www.sharesinv.com/wp-content/uploads/articles/consumer-ETFs.jpg"} value={"hot"}/>
   				<Item optionChange={this.props.onChange} news={"Consumer Discretionary"} imagef={"http://www.sharesinv.com/wp-content/uploads/articles/consumer-ETFs.jpg"} value={"consumer1"}/>
   				<Item optionChange={this.props.onChange} news={"Consumer Staples"} imagef={"http://www.etftrends.com/wp-content/uploads/2012/10/consumer-staples-etfs.png"} value={"consumer2"}/>
   				<Item optionChange={this.props.onChange} news={"Energy"} imagef={"https://www.dentons.com/-/media/images/website/background-images/industry-sectors/energy/energy-2.jpg  "} value={"energy"}/>
@@ -670,6 +703,8 @@ export default class Tile extends Component {
           <Item optionChange={this.props.onChange} news={"Telecommunications Services"} imagef={"https://www.sevone.com/sites/default/files/images/telecommunications-map.jpg"} value={"telecom"}/>
           <Item optionChange={this.props.onChange} news={"Utilities"} imagef={"http://allentownboronj.com/vertical/Sites/%7B7748EEEB-2391-4653-8B6A-4A64C85A6D79%7D/uploads/8329283_orig.jpg"} value={"util"}/>
           <Item optionChange={this.props.onChange} news={"Banking"} imagef={"http://keravnoslaw.com/images/banking.jpg"} value={"bank"}/>
+              <Item optionChange={this.props.onChange} news={"Tutorial"} imagef={"http://keravnoslaw.com/images/banking.jpg"} value={"tute"}/>
+
           </div>
   			);
 		}else if (data[0].code === "hot"){
@@ -682,6 +717,9 @@ export default class Tile extends Component {
       return(this.renderCat(data[0].code));
 
     }else if (data[0].code === "consumer2"){
+      //render consumer2 tiles
+      return(this.renderCat(data[0].code));
+    }else if (data[0].code === "tutorial"){
       //render consumer2 tiles
       return(this.renderCat(data[0].code));
 

@@ -319,7 +319,7 @@ Meteor.methods({
     + 'section=(business|australia-news)'
     + '&from-date=' + '2016-04-10' //beginDate
     + '&to-date=' + '2017-12-30' //endDate
-    + '&page-size=' + 10 //x // retrieve x articles
+    + '&page-size=' + 50 //x // retrieve x articles
     + '&q=' + queryString
     + '&api-key=test'); //59ce1afb-ea95-4ab7-971e-dc59c7189718');
   }

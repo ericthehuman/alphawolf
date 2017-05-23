@@ -401,12 +401,14 @@ export default class Tile extends Component {
           {
             data: stockData1,
             name: "Percentage Returns: " + company1.code,
-            id: "stockData1"
+            id: "stockData1",
+            color: "#6AA5E7"
           },
           {
             data: stockData2,
             name: "Percentage Returns: " + company2.code,
-            id: "stockData2"
+            id: "stockData2",
+            color: "#F3924A"
           },
 
           // set more options here for graph or more graph data
@@ -518,7 +520,8 @@ export default class Tile extends Component {
           {
             data: stockData,
             name: "Percentage Returns",
-            id: "stockData"
+            id: "stockData",
+            color: "#6AA5E7"
           },
 
 

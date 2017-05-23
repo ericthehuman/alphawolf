@@ -336,7 +336,7 @@ export default class Tile extends Component {
         },
         yAxis: {
           title: {
-            text: 'Dollars',
+            text: '$AU',
             enabled: true,
             style: {
               'font-weight': 'bold',

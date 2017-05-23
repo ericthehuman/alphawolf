@@ -142,7 +142,7 @@ export default class Tile extends Component {
         }
 
         function parseData(company, callback) {
-            console.log("PARSE STOCKS");
+            console.log("PARSE DATA");
             var stocks = company.stock_data;
             var news = company.companyNews;
             var announcements = company.announcements;
@@ -158,14 +158,8 @@ export default class Tile extends Component {
             }
 
             for (var j = 0; j < news.length; j++) {
-                var currNewsItem = news[j];
-                var newsDate = currNewsItem["date"];
-
-                var datestr = newsDate.split("/");
-                var dd = parseInt(datestr[0]);
-                var mm = parseInt(datestr[1])-1;
-                var yyyy = parseInt(datestr[2]);
-                var timestamp = Date.UTC(yyyy,mm,dd);
+                var date = news[j].date.split("/");
+                var timestamp = Date.UTC(date[2], date[1]-1, date[0]);
 
                 var newsExistsForDate = false;
                 for (var k = 0; k < newsData.length; k++) {
@@ -176,18 +170,16 @@ export default class Tile extends Component {
                 }
 
                 if (newsExistsForDate) continue;
-
                 var currNewsData = {  x: timestamp,
                     title: "",
                     style: {
                         color: 'rgba(0,0,0,0)',
                         borderColor: "#FA6C61",
                     },
-                    text: "<b>Related news</b><br>" + currNewsItem.headline + "<br>" +
+                    text: "<b>Related news</b><br>" + news[j].headline + "<br>" +
                     "<span class='tooltip-link'><i>Click to read more!</i></span>",
-                    url: currNewsItem.url
+                    url: news[j].url
                 };
-                // console.log(currNewsData);
                 newsData.push(currNewsData);
             }
             newsData.sort(function(a, b) {
@@ -212,6 +204,7 @@ export default class Tile extends Component {
                 return parseFloat(a.x) - parseFloat(b.x);
             });
 
+            // finished parsing, call return function with the results
             callback(stockData, newsData, announcementData);
         }
 
@@ -291,6 +284,7 @@ export default class Tile extends Component {
                     borderColor: "#c4c4c4",
                     borderWidth: 2,
                     borderRadius: 2,
+                    height: 500
                 },
                 yAxis: {
                     title: {
@@ -311,7 +305,7 @@ export default class Tile extends Component {
                 },
                 // ... more options - see http://api.highcharts.com/highcharts
             });
-            console.log("IS THE BLOODY GRAPH DRAWN YET?");
+            // console.log("IS THE BLOODY GRAPH DRAWN YET?");
         }
     }
 
@@ -734,26 +728,14 @@ export default class Tile extends Component {
             //render bank tiles
             return(this.renderCat(data[0].code));
         }else {
-            // While graph only works with one company
-            console.log("WHAT IS THIS DATA");
-            console.log(data);
             if (data[0].code === "dontshowthisever") {
-                // var news = data[1].companyNews;
-                // var companySum = this.getCompanySummary(data.name);
+                // graph with one company
                 this.parseDataIntoGraph(1, data[1], null);
             } else {
-                // var news = data[0].companyNews;
-                // var companySum = this.getCompanySummary(data.name);
+                // graph with two companies
                 this.parseDataIntoGraph(2, data[0], data[2]);
             }
-            // const tooltip_statistics = (
-            //     <Toolitip id="tooltip"><strong>Statistics</strong><br /><strong>Previous close: </strong>A security's closing price on the preceding day of trading<br /><br />
-            //       <strong>Monthly/Annual Change: </strong> Difference in price between the last closing price and the closing price a month/year ago.<br /><br />
-            //       <strong>Monthly/Annual High/Low: </strong> A 1-month/52-week high/low is the highest and lowest price that a stock has traded at during the previous year.<br /><br />
-            //
-            //     </Toolitip>
-            //     //<font size="2"><OverlayTrigger placement="top" overlay={tooltip_ticker}><Glyphicon glyph="info-sign" /></OverlayTrigger></font>
-            // );
+
             var columnSpan = data.length+1;
             if (data.length === 3) {
                 console.log("Got 2 stocks");
@@ -788,7 +770,6 @@ export default class Tile extends Component {
                     <thead>
                     <tr>
                       <th colSpan={columnSpan}>Statistics</th>
-                        {/*<th colSpan={columnSpan}>Statistics<font size="2"><OverlayTrigger placement="top" overlay={tooltip_statistics}><Glyphicon glyph="info-sign" /></OverlayTrigger></font></th>*/}
                     </tr>
                     </thead>
                     <tbody>

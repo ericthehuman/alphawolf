@@ -97,7 +97,7 @@ handleOptionChange(companiesList) {
   }
   var info = {
     code: "dontshowthisever",
-    name: " ",
+    name: "Company",
     sector: "Sector",
     short_description: "Summary",
     url: "Company Website",

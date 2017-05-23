@@ -85,49 +85,12 @@ export default class Tile extends Component {
 
     //regrex goes here
     //https://hotcopper.com.au/
-    Meteor.call('getHotStock', function(error, result) {
 
-      if (result){
-        console.log("hi2");
-        console.log(result);
-      }
-    });
 
     if (category == "hot"){
-    return(<h2>Hot Stocks</h2>);
-    }else if(category == "tutorial"){
-      return (
-          <p>
-            <h2>Beginners guide to the Stock Market</h2>
-            <b>Welcome to Investing Basics!</b> If you've found your way here, chances are you've either got some money socked away or you're planning to do so. But first things first. Why is investing a smart idea?
-
-            <br /><br />
-            Simply put, you want to invest in order to create wealth. It's relatively painless, and the rewards are plentiful. By investing in the stock market, you'll have a lot more money for things like retirement, education, recreation -- or you could pass on your riches to the next generation so that you become your family's Most Cherished Ancestor. Whether you're starting from scratch or have a few thousand dollars saved, Investing Basics will help get you going on the road to financial (and Foolish!) well-being.
-
-            <br /><br />
-            It can be very challenging for someone who does not understand the financial lingo to confidently asses and make investments based on data that they do not understand. Thats where COWS comes in. A revolutionary new website, redefining how a stocks portfolio should look.
-
-            <br />
-            <h3>Buying shares on a share exchange</h3>
-            There are five public share exchanges in Australia. Four of them directly supervise the companies that issue the shares that trade on their markets. The fifth exchange, Chi-X, currently only provides the infrastructure for trading shares already quoted on the ASX.
-            <br /><br />
-            The five exchanges are:
-            <ul>
-              <li><a href="http://www.asx.com.au">Australian Securities Exchange (ASX)</a> - the main stock exchange in Australia</li>
-              <li><a href="http://www.chi-x.com.au">Chi-X</a> - an exchange that trades company shares already quoted on the ASX, but does not list or supervise the companies</li>
-              <li><a href="http://www.nsxa.com.au">National Stock Exchange of Australia (NSXA)</a> - a securities exchange that lists about 70 small to medium sized companies</li>
-              <li><a href="http://simvse.com.au">SIM Venture Securities Exchange (SIM VSE)</a> - an exchange for innovative companies involved in the clean technology, renewable energy and bio science field</li>
-              <li><a href="http://www.apx.com.au/APX/Public/EN/Default.aspx">Asia Pacific Stock Exchange (APX)</a> - a stock exchange with a focus on growth oriented companies from the Asia-Pacific region</li>
-            </ul>
-            To start buying and selling shares on any of these exchanges, simply visit their link.
-
-            <br />
-            <h3>Reading a COWS stocks sheet</h3>
-
-          </p>
-      );
+      return(<h2>Hot Stocks</h2>);
     }else if(category == "consumer1"){
-    return (<h2>Consumer Discretionary</h2>);
+      return (<h2>Consumer Discretionary</h2>);
     }else if (category == "consumer2"){
       return(<h2>Consumer Staples</h2>);
     }else if (category == "energy"){
@@ -155,12 +118,12 @@ export default class Tile extends Component {
     }
   }
 
+
+
   //converts raw api data into structure the graph component uses
   parseDataIntoGraph(result, news, announcements) {
     if(result != null) {
       // console.log(announcements);
-
-
         // console.log(result);
         // console.log("NEWS: " + JSON.stringify(news));
        // console.log(section);
@@ -349,25 +312,24 @@ export default class Tile extends Component {
 
   renderStocksName() {
     return this.props.stockData.map((data, i, stockData) => {
-      if (data.name === " ") {
-        return (<td className="small-col add-borders"> </td>);
+      if (data.name === "Company") {
+        const tooltip_ticker = (
+            <Toolitip id="tooltip"><strong>ASX Code</strong><br />An abbreviation used to uniquely identify publicly traded shares in Australian Stock Exchange of a particular company</Toolitip>
+            //<font size="2"><OverlayTrigger placement="top" overlay={tooltip_ticker}><Glyphicon glyph="info-sign" /></OverlayTrigger></font>
+        );
+        return (<td className="small-col add-borders align-center"><h1>{ data.name }<font size="2"><OverlayTrigger placement="top" overlay={tooltip_ticker}><Glyphicon glyph="info-sign" /></OverlayTrigger></font></h1></td>);
       }
-
-      const tooltip_ticker = (
-          <Toolitip id="tooltip"><strong>ASX Code</strong><br />An abbreviation used to uniquely identify publicly traded shares in Australian Stock Exchange of a particular company</Toolitip>
-          //<font size="2"><OverlayTrigger placement="top" overlay={tooltip_ticker}><Glyphicon glyph="info-sign" /></OverlayTrigger></font>
-      );
 
       var companySector = data.sector;
 
       if (stockData.length === 3) {
         if (i === 0) {
-          return (<td className="equal-col align-right"><h1>{data.name} <span className="stock-code">({data.code}<font size="2"><OverlayTrigger placement="top" overlay={tooltip_ticker}><Glyphicon glyph="info-sign" /></OverlayTrigger></font>)</span></h1></td>);
+          return (<td className="equal-col align-right"><h1>{data.name} <span className="stock-code">({data.code})</span></h1></td>);
         } else {
-          return (<td className="equal-col"><h1>{data.name} <span className="stock-code">({data.code}<font size="2"><OverlayTrigger placement="top" overlay={tooltip_ticker}><Glyphicon glyph="info-sign" /></OverlayTrigger></font>)</span></h1></td>);
+          return (<td className="equal-col"><h1>{data.name} <span className="stock-code">({data.code})</span></h1></td>);
         }
       } else {
-        return (<td><h1>{data.name} <span className="stock-code">({data.code}<font size="2"><OverlayTrigger placement="top" overlay={tooltip_ticker}><Glyphicon glyph="info-sign" /></OverlayTrigger></font>)</span></h1></td>);
+        return (<td><h1>{data.name} <span className="stock-code">({data.code})</span></h1></td>);
       }
 
     })
@@ -696,25 +658,16 @@ export default class Tile extends Component {
 		if(data[0].code === "Home") {
   		return (
   			<div className="tile">
-              <Item optionChange={this.props.onChange} news={"Tutorial"} imagef={"http://keravnoslaw.com/images/banking.jpg"} value={"tutorial"}/>
-
-              <Item optionChange={this.props.onChange} news={"Hot Stocks"} imagef={"http://www.sharesinv.com/wp-content/uploads/articles/consumer-ETFs.jpg"} value={"hot"}/>
-  				<Item optionChange={this.props.onChange} news={"Consumer Discretionary"} imagef={"http://www.sharesinv.com/wp-content/uploads/articles/consumer-ETFs.jpg"} value={"consumer1"}/>
+          <Item optionChange={this.props.onChange} news={"Tutorial"} imagef={"http://keravnoslaw.com/images/banking.jpg"} value={"tutorial"}/>
   				<Item optionChange={this.props.onChange} news={"Consumer Staples"} imagef={"http://www.etftrends.com/wp-content/uploads/2012/10/consumer-staples-etfs.png"} value={"consumer2"}/>
   				<Item optionChange={this.props.onChange} news={"Energy"} imagef={"https://www.dentons.com/-/media/images/website/background-images/industry-sectors/energy/energy-2.jpg  "} value={"energy"}/>
-  				<Item optionChange={this.props.onChange} news={"Financial"} imagef={"http://static.memrise.com/uploads/course_photos/3146044000150629230223.jpg"} value={"financial"}/>
-          <Item optionChange={this.props.onChange} news={"Health Care"} imagef={"http://www.philips.com.au/c-dam/b2bhc/us/homepage-rebranded/specialties_heartmonitor.png"} value={"health"}/>
+  				<Item optionChange={this.props.onChange} news={"Financials"} imagef={"http://static.memrise.com/uploads/course_photos/3146044000150629230223.jpg"} value={"financial"}/>
           <Item optionChange={this.props.onChange} news={"Industrials"} imagef={"http://relaypowersystems.com/wp-content/uploads/2011/10/refinery.jpg"} value={"industrials"}/>
-          <Item optionChange={this.props.onChange} news={"IT- Information Technology"} imagef={"https://i.ytimg.com/vi/GyfPJ1i1Y5Y/maxresdefault.jpg "} value={"it"}/>
+          <Item optionChange={this.props.onChange} news={"Information Technology"} imagef={"https://i.ytimg.com/vi/GyfPJ1i1Y5Y/maxresdefault.jpg "} value={"it"}/>
           <Item optionChange={this.props.onChange} news={"Materials"} imagef={"http://cambabest.co.uk/wp-content/uploads/2015/02/Building-banner1.jpg"} value={"materials"}/>
-          <Item optionChange={this.props.onChange} news={"Metals and Minning"} imagef={"http://rsb-industries.com/images/Metal_Mining.jpg"} value={"metalmine"}/>
-          <Item optionChange={this.props.onChange} news={"Resources"} imagef={"http://psychology.berkeley.edu/sites/default/files/styles/1000x400sc/public/Resources%20page%20photo_0.jpg?itok=dLdmH90P"} value={"resource"}/>
-          <Item optionChange={this.props.onChange} news={"Telecommunications Services"} imagef={"https://www.sevone.com/sites/default/files/images/telecommunications-map.jpg"} value={"telecom"}/>
           <Item optionChange={this.props.onChange} news={"Utilities"} imagef={"http://allentownboronj.com/vertical/Sites/%7B7748EEEB-2391-4653-8B6A-4A64C85A6D79%7D/uploads/8329283_orig.jpg"} value={"util"}/>
-          <Item optionChange={this.props.onChange} news={"Banking"} imagef={"http://keravnoslaw.com/images/banking.jpg"} value={"bank"}/>
-              <Item optionChange={this.props.onChange} news={"Tutorial"} imagef={"http://keravnoslaw.com/images/banking.jpg"} value={"tute"}/>
 
-          </div>
+        </div>
   			);
 		}else if (data[0].code === "hot"){
       return(this.renderCat(data[0].code));

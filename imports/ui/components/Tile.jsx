@@ -6,7 +6,7 @@ import { ReactiveVar } from 'meteor/reactive-var';
 import Item from './Item.jsx';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend} from 'recharts';
 import ReactDOM from 'react-dom';
-import { Table, Form, Glyphicon, Tooltip as Toolitip,OverlayTrigger } from 'react-bootstrap';
+import { Table, Form, Glyphicon, Tooltip as Toolitip, OverlayTrigger } from 'react-bootstrap';
 
 import { Data, Companies, Stocks, SelectedStock, News } from '../../api/data.js';
 import Button from './Button.jsx';
@@ -73,7 +73,6 @@ export default class Tile extends Component {
         break;
       }
   }
-
 
   //return a render page based on the catergory selected
   renderCat(category){
@@ -174,22 +173,23 @@ export default class Tile extends Component {
 
         var currNewsData = {  x: timestamp,
                               title: "",
-                              style: { color: 'rgba(0,0,0,0)' },
-                              text: "<b>Related news</b><br>" + currNewsItem.headline,
+                              style: {
+                                color: 'rgba(0,0,0,0)',
+                                borderColor: "#FA6C61",
+                              },
+                              text: "<b>Related news</b><br>" + currNewsItem.headline + "<br>" +
+                                    "<span class='tooltip-link'><i>Click to read more!</i></span>",
                               url: currNewsItem.url
                            };
         // console.log(currNewsData);
         newsData.push(currNewsData);
       }
-
       newsData.sort(function(a, b) {
           return parseFloat(a.x) - parseFloat(b.x);
       });
 
       // parse data for announcements
       for (var j = 0; j < announcements.length; j++) {
-        // var currAnnouncement = announcements[j];
-        console.log(announcements[j]);
         var date = announcements[j].date;
 
         var datestr = date.split("/");
@@ -202,8 +202,10 @@ export default class Tile extends Component {
                                  y: null,
                                  title: "",
                                  style: { color: 'rgba(0,0,0,0)' },
-                                 text: "<b>Company announcement</b><br>" + announcements[j].title,
-                                 url: announcements[j].url });
+                                 text: "<b>Company announcement</b><br>" + announcements[j].title + "<br>" +
+                                       "<span class='tooltip-link'><i>Click to read more!</i></span>",
+                                 url: announcements[j].url
+                              });
       }
       announcementData.sort(function(a, b) {
         return parseFloat(a.x) - parseFloat(b.x);
@@ -221,7 +223,7 @@ export default class Tile extends Component {
           // news data graph
           {
             type: 'flags',
-            name: 'News',
+            name: 'Company News',
             data: newsData,
             useHTML: true,
             shape: 'url(assets/news-icon2.png)', //'circlepin',
@@ -257,31 +259,52 @@ export default class Tile extends Component {
         ],
         // set title of graph
         title: {
-          text: "Closing Price"
+          text: "Closing Price",
+          style: {
+            'font-weight': 'bold',
+            // 'color': "#7cb5ec"
+          }
         },
         // set tooltip format
         tooltip: {
           style: {
             width: '250px',
             backgroundColor: '#FCFFC5',
-            borderColor: 'black',
+            // borderColor: 'black',
             borderRadius: 10,
             borderWidth: 3
-          }
+          },
         },
         // initial range selected
         rangeSelector: {
           selected: 1
         },
-        scrollbar: {
-          enabled: false
-        },
+        // scrollbar: {
+        //   enabled: false
+        // },
         chart: {
           backgroundColor: "#f5f5f5",
           borderColor: "#c4c4c4",
           borderWidth: 2,
           borderRadius: 2,
-        }
+        },
+        yAxis: {
+          title: {
+            text: 'Dollars',
+            enabled: true,
+            style: {
+              'font-weight': 'bold',
+              'color': "#7cb5ec"
+            }
+          },
+        },
+        legend: {
+          layout: 'horizontal',
+          enabled: true,
+          // borderRadius: 5,
+          // borderWidth: 1,
+          // borderColor: 'darkgrey'
+        },
         // ... more options - see http://api.highcharts.com/highcharts
       });
   	}
@@ -289,25 +312,24 @@ export default class Tile extends Component {
 
   renderStocksName() {
     return this.props.stockData.map((data, i, stockData) => {
-      if (data.name === " ") {
-        return (<td className="small-col add-borders"> </td>);
+      if (data.name === "Company") {
+        const tooltip_ticker = (
+            <Toolitip id="tooltip"><strong>ASX Code</strong><br />An abbreviation used to uniquely identify publicly traded shares in Australian Stock Exchange of a particular company</Toolitip>
+            //<font size="2"><OverlayTrigger placement="top" overlay={tooltip_ticker}><Glyphicon glyph="info-sign" /></OverlayTrigger></font>
+        );
+        return (<td className="small-col add-borders align-center"><h1>{ data.name }<font size="2"><OverlayTrigger placement="top" overlay={tooltip_ticker}><Glyphicon glyph="info-sign" /></OverlayTrigger></font></h1></td>);
       }
-
-      const tooltip_ticker = (
-          <Toolitip id="tooltip"><strong>Ticker symbol</strong><br />An abbreviation used to uniquely identify publicly traded shares of a particular stock</Toolitip>
-          //<font size="2"><OverlayTrigger placement="top" overlay={tooltip_ticker}><Glyphicon glyph="info-sign" /></OverlayTrigger></font>
-      );
 
       var companySector = data.sector;
 
       if (stockData.length === 3) {
         if (i === 0) {
-          return (<td className="equal-col align-right"><h1>{data.name} <span className="stock-code">({data.code}<font size="2"><OverlayTrigger placement="top" overlay={tooltip_ticker}><Glyphicon glyph="info-sign" /></OverlayTrigger></font>)</span></h1></td>);
+          return (<td className="equal-col align-right"><h1>{data.name} <span className="stock-code">({data.code})</span></h1></td>);
         } else {
-          return (<td className="equal-col"><h1>{data.name} <span className="stock-code">({data.code}<font size="2"><OverlayTrigger placement="top" overlay={tooltip_ticker}><Glyphicon glyph="info-sign" /></OverlayTrigger></font>)</span></h1></td>);
+          return (<td className="equal-col"><h1>{data.name} <span className="stock-code">({data.code})</span></h1></td>);
         }
       } else {
-        return (<td><h1>{data.name} <span className="stock-code">({data.code}<font size="2"><OverlayTrigger placement="top" overlay={tooltip_ticker}><Glyphicon glyph="info-sign" /></OverlayTrigger></font>)</span></h1></td>);
+        return (<td><h1>{data.name} <span className="stock-code">({data.code})</span></h1></td>);
       }
 
     })
@@ -315,9 +337,12 @@ export default class Tile extends Component {
 
   renderStocksSector() {
     return this.props.stockData.map((data, i, stockData) => {
-      if (!data.sector) data.sector = "Unknown sector"
+      if (!data.sector) data.sector = "Unknown sector";
+      var tooltip = (
+        <Toolitip id="tooltip"><strong>Company sector</strong><br />The business sector or corporate sector that this company operates in the economy</Toolitip>
+      );
       if (data.sector === "Sector") {
-        return (<td className="align-center add-borders"><b>{data.sector}</b></td>);
+        return (<td className="align-center add-borders"><b>{data.sector }</b> <OverlayTrigger placement="top" overlay={tooltip}><Glyphicon glyph="info-sign" /></OverlayTrigger></td>);
       }
       if (stockData.length === 3) {
         if (i === 0) {
@@ -331,8 +356,12 @@ export default class Tile extends Component {
   renderStocksDescription() {
     return this.props.stockData.map((data, i, stockData) => {
       if (!data.short_description) data.short_description = "No description available.";
+      var tooltip = (
+        <Toolitip id="tooltip"><strong>Company activities</strong><br />The main activities that this company engages in</Toolitip>
+      );
+
       if (data.short_description === "Summary") {
-        return (<td className="align-center add-borders"><b>{data.short_description}</b></td>);
+        return (<td className="align-center add-borders"><b>{data.short_description}</b> <OverlayTrigger placement="top" overlay={tooltip}><Glyphicon glyph="info-sign" /></OverlayTrigger></td>);
       }
       if (stockData.length === 3) {
         if (i === 0) {
@@ -377,8 +406,11 @@ export default class Tile extends Component {
 
   renderStocksClose() {
     return this.props.stockData.map((data, i, stockData) => {
+      var tooltip = (
+        <Toolitip id="tooltip"><strong>Close</strong><br /><div align="left">This is the last trading price recorded when the market closed on the day</div></Toolitip>);
+
       if (data.yesterdayClose) {
-        return (<td className="align-center add-borders"><h2><b>{data.yesterdayClose}</b></h2></td>);
+          return (<td className="align-center add-borders"><h2><b>{data.yesterdayClose + " "}</b><OverlayTrigger placement="top" overlay={tooltip}><font size="2"><Glyphicon glyph="info-sign" /></font></OverlayTrigger></h2></td>);
       }
 
       var companyReturns = data.stock_data;
@@ -388,30 +420,44 @@ export default class Tile extends Component {
       var prevClose = companyReturns[NUMDAYS-1].Close;
       var positiveSignDay = (companyReturns[NUMDAYS].Close-companyReturns[NUMDAYS-1].Close) >= 0 ? "+" : "";
 
-      const tooltip_close = (
-          <Toolitip id="tooltip"><strong>$Close, Change in Price, % Change in price </strong><br /><div align="left">Close: The close is the last trading price recorded when the market closed on the day<br />Change: the dollar value change in the stock price from the previous day's closing price<br />% Change: The percentage change from yesterday's closing price</div></Toolitip>
+      // const tooltip_close = (
+      //     <Toolitip id="tooltip"><strong>$Close, Change in Price, % Change in price </strong><br /><div align="left">Close: The close is the last trading price recorded when the market closed on the day<br />Change: the dollar value change in the stock price from the previous day's closing price<br />% Change: The percentage change from yesterday's closing price</div></Toolitip>
+      //     //<font size="2"><OverlayTrigger placement="top" overlay={tooltip_ticker}><Glyphicon glyph="info-sign" /></OverlayTrigger></font>
+      // );
+      var tooltip_change = (<Toolitip id="tooltip"><strong>Change in price</strong><br /><div align="left">The dollar value change in the stock price from the previous day's closing price</div></Toolitip>);
+      var tooltip_pchange = (<Toolitip id="tooltip"><strong>Percentage change in price </strong><br /><div align="left">The change in the stock price calculated as a percentage of the previous day's closing price</div></Toolitip>);
 
-          //<font size="2"><OverlayTrigger placement="top" overlay={tooltip_ticker}><Glyphicon glyph="info-sign" /></OverlayTrigger></font>
-      );
-      if (stockData.length === 3) {
+        if (stockData.length === 3) {
         if (i === 0) {
           return (
-            <td className="align-right"><h2><b>${parseFloat(currClose).toFixed(2)}</b> <span className={positiveSignDay === "+" ? "stock-positive" : "stock-negative"}>{positiveSignDay}
-            {parseFloat(currClose-prevClose).toFixed(2)} ({positiveSignDay}{parseFloat((currClose-prevClose)/prevClose*100).toFixed(2)}%)</span><font size="2"><OverlayTrigger placement="top" overlay={tooltip_close}><Glyphicon glyph="info-sign" /></OverlayTrigger></font></h2></td>
+            <td className="align-right"><h2><b>
+              <span>${parseFloat(currClose).toFixed(2)}</span>
+              <OverlayTrigger placement="top" overlay={tooltip_change}><span className={positiveSignDay === "+" ? "stock-positive" : "stock-negative"}>{" " + positiveSignDay}
+                {parseFloat(currClose-prevClose).toFixed(2) + " "}</span></OverlayTrigger>
+              <OverlayTrigger placement="top" overlay={tooltip_pchange}><span className={positiveSignDay === "+" ? "stock-positive" : "stock-negative"}>
+                ({positiveSignDay}{parseFloat((currClose-prevClose)/prevClose*100).toFixed(2)}%)</span></OverlayTrigger>
+            </b></h2></td>
           );
         }
       }
       return (
-        <td><h2><b>${parseFloat(currClose).toFixed(2)}</b> <span className={positiveSignDay === "+" ? "stock-positive" : "stock-negative"}>{positiveSignDay}
-        {parseFloat(currClose-prevClose).toFixed(2)} ({positiveSignDay}{parseFloat((currClose-prevClose)/prevClose*100).toFixed(2)}%)</span><font size="2"><OverlayTrigger placement="top" overlay={tooltip_close}><Glyphicon glyph="info-sign" /></OverlayTrigger></font></h2></td>
+        <td><h2><b>
+          <span>${parseFloat(currClose).toFixed(2)}</span>
+          <OverlayTrigger placement="top" overlay={tooltip_change}><span className={positiveSignDay === "+" ? "stock-positive" : "stock-negative"}>{" " + positiveSignDay}
+              {parseFloat(currClose-prevClose).toFixed(2) + " "}</span></OverlayTrigger>
+          <OverlayTrigger placement="top" overlay={tooltip_pchange}><span className={positiveSignDay === "+" ? "stock-positive" : "stock-negative"}>
+            ({positiveSignDay}{parseFloat((currClose-prevClose)/prevClose*100).toFixed(2)}%)</span></OverlayTrigger>
+        </b></h2></td>
       );
     });
   }
 
   renderPreviousClose() {
     return this.props.stockData.map((data, i, stockData) => {
+      var tooltip = (
+        <Toolitip id="tooltip"><strong>Previous close</strong><br /><div align="left">A security's closing price on the preceding day of trading</div></Toolitip>);
       if (data.prevClose) {
-        return (<td className="small-col align-center">{ data.prevClose }</td>);
+        return (<td className="small-col align-center">{data.prevClose + " "} <br /> <OverlayTrigger placement="top" overlay={tooltip}><Glyphicon glyph="info-sign" /></OverlayTrigger></td>);
       }
 
       var companyReturns = data.stock_data;
@@ -419,17 +465,19 @@ export default class Tile extends Component {
       var prevClose = companyReturns[NUMDAYS-1].Close;
       if (stockData.length === 3) {
         if (i === 0) {
-          return (<td className="equal-col align-right"><b>{parseFloat(prevClose).toFixed(2)}</b></td>);
+          return (<td className="equal-col align-right"><b>${parseFloat(prevClose).toFixed(2)}</b></td>);
         }
       }
-      return (<td><b>{parseFloat(prevClose).toFixed(2)}</b></td>)
+      return (<td><b>${parseFloat(prevClose).toFixed(2)}</b></td>)
     })
   }
 
   renderMonthlyChange() {
     return this.props.stockData.map((data, i, stockData) => {
+      var tooltip = (
+        <Toolitip id="tooltip"><strong>Monthly change</strong><br /><div align="left">Difference in price between the last closing price and the closing price a month ago</div></Toolitip>);
       if (data.monthlyChange) {
-        return (<td className="align-center">{ data.monthlyChange }</td>);
+        return (<td className="align-center">{ data.monthlyChange + " " }<br />  <OverlayTrigger placement="top" overlay={tooltip}><Glyphicon glyph="info-sign" /></OverlayTrigger></td>);
       }
       var companyReturns = data.stock_data;
       var NUMDAYS = companyReturns.length-1;
@@ -439,7 +487,7 @@ export default class Tile extends Component {
       var positiveSignMonth = (companyReturns[NUMDAYS].Close-companyReturns[monthBefore].Close) >= 0 ? "+" : "";
       if (stockData.length === 3) {
         if (i === 0) {
-          return (<td className={positiveSignMonth === "+" ? "stock-positive align-right" : "stock-negative align-right"}><b>{parseFloat(currClose-companyReturns[monthBefore].Close).toFixed(2)}{' '}
+          return (<td className={positiveSignMonth === "+" ? "stock-positive align-right" : "stock-negative align-right"}><b>${parseFloat(currClose-companyReturns[monthBefore].Close).toFixed(2)}{' '}
           ({positiveSignMonth}{parseFloat((currClose-companyReturns[monthBefore].Close)/companyReturns[monthBefore].Close*100).toFixed(2)}%)</b></td>);
         }
       }
@@ -450,8 +498,10 @@ export default class Tile extends Component {
 
   renderMonthlyHigh() {
     return this.props.stockData.map((data, i, stockData) => {
-      if (data.monthlyHigh) {
-        return (<td className="align-center">{ data.monthlyHigh }</td>);
+        var tooltip = (
+          <Toolitip id="tooltip"><strong>Monthly high</strong><br /><div align="left">The highest intra-day price during the preceding month</div></Toolitip>);
+        if (data.monthlyHigh) {
+        return (<td className="align-center">{ data.monthlyHigh + " " } <br />  <OverlayTrigger placement="top" overlay={tooltip}><Glyphicon glyph="info-sign" /></OverlayTrigger></td>);
       }
       var companyReturns = data.stock_data;
       var NUMDAYS = companyReturns.length-1;
@@ -466,17 +516,19 @@ export default class Tile extends Component {
 
       if (stockData.length === 3) {
         if (i === 0) {
-          return (<td className="align-right"><b>{parseFloat(highestCloseMonth).toFixed(2)}</b></td>);
+          return (<td className="align-right"><b>${parseFloat(highestCloseMonth).toFixed(2)}</b></td>);
         }
       }
-      return (<td><b>{parseFloat(highestCloseMonth).toFixed(2)}</b></td>)
+      return (<td><b>${parseFloat(highestCloseMonth).toFixed(2)}</b></td>)
     })
   }
 
   renderMonthlyLow() {
     return this.props.stockData.map((data, i, stockData) => {
+      var tooltip = (
+        <Toolitip id="tooltip"><strong>Monthly low</strong><br /><div align="left">The lowest intra-day price during the preceding month</div></Toolitip>);
       if (data.monthlyLow) {
-        return (<td className="align-center">{ data.monthlyLow }</td>);
+        return (<td className="align-center">{ data.monthlyLow + " " }<br /> <OverlayTrigger placement="top" overlay={tooltip}><Glyphicon glyph="info-sign" /></OverlayTrigger></td>);
       }
       var companyReturns = data.stock_data;
       var NUMDAYS = companyReturns.length-1;
@@ -490,17 +542,19 @@ export default class Tile extends Component {
       }
       if (stockData.length === 3) {
         if (i === 0) {
-          return (<td className="align-right"><b>{parseFloat(lowestCloseMonth).toFixed(2)}</b></td>);
+          return (<td className="align-right"><b>${parseFloat(lowestCloseMonth).toFixed(2)}</b></td>);
         }
       }
-      return (<td><b>{parseFloat(lowestCloseMonth).toFixed(2)}</b></td>)
+      return (<td><b>${parseFloat(lowestCloseMonth).toFixed(2)}</b></td>)
     })
   }
 
   renderYearlyChange() {
     return this.props.stockData.map((data, i, stockData) => {
+      var tooltip = (
+        <Toolitip id="tooltip"><strong>Annual change</strong><br /><div align="left">Difference in price between the last closing price and the closing price a year ago</div></Toolitip>);
       if (data.annualChange) {
-        return (<td className="align-center">{ data.annualChange }</td>);
+        return (<td className="align-center">{ data.annualChange + " " } <br /> <OverlayTrigger placement="top" overlay={tooltip}><Glyphicon glyph="info-sign" /></OverlayTrigger> </td>);
       }
       var companyReturns = data.stock_data;
       var NUMDAYS = companyReturns.length-1;
@@ -522,8 +576,10 @@ export default class Tile extends Component {
 
   renderYearlyHigh() {
     return this.props.stockData.map((data, i, stockData) => {
+      var tooltip = (
+        <Toolitip id="tooltip"><strong>Yearly high</strong><br /><div align="left">The highest intra-day price during the preceding 52 weeks</div></Toolitip>);
       if (data.annualHigh) {
-        return (<td className="align-center">{ data.annualHigh }</td>);
+        return (<td className="align-center">{ data.annualHigh + " " } <br /> <OverlayTrigger placement="top" overlay={tooltip}><Glyphicon glyph="info-sign" /></OverlayTrigger> </td>);
       }
       var companyReturns = data.stock_data;
       var NUMDAYS = companyReturns.length-1;
@@ -538,17 +594,19 @@ export default class Tile extends Component {
 
       if (stockData.length === 3) {
         if (i === 0) {
-          return (<td className="align-right"><b>{parseFloat(highestCloseYear).toFixed(2)}</b></td>);
+          return (<td className="align-right"><b>${parseFloat(highestCloseYear).toFixed(2)}</b></td>);
         }
       }
-      return (<td><b>{parseFloat(highestCloseYear).toFixed(2)}</b></td>);
+      return (<td><b>${parseFloat(highestCloseYear).toFixed(2)}</b></td>);
     })
   }
 
   renderYearlyLow() {
     return this.props.stockData.map((data, i, stockData) => {
+      var tooltip = (
+        <Toolitip id="tooltip"><strong>Yearly low</strong><br /><div align="left">The lowest intra-day price during the preceding 52 weeks</div></Toolitip>);
       if (data.annualLow) {
-        return (<td className="align-center">{ data.annualLow }</td>);
+        return (<td className="align-center">{ data.annualLow + " " } <br /> <OverlayTrigger placement="top" overlay={tooltip}><Glyphicon glyph="info-sign" /></OverlayTrigger> </td>);
       }
       var companyReturns = data.stock_data;
       var NUMDAYS = companyReturns.length-1;
@@ -563,10 +621,10 @@ export default class Tile extends Component {
       if (stockData.length === 3) {
         if (i === 0) {
           console.log("This should work");
-          return (<td className="align-right"><b>{parseFloat(lowestCloseYear).toFixed(2)}</b></td>);
+          return (<td className="align-right"><b>${parseFloat(lowestCloseYear).toFixed(2)}</b></td>);
         }
       }
-      return (<td><b>{parseFloat(lowestCloseYear).toFixed(2)}</b></td>);
+      return (<td><b>${parseFloat(lowestCloseYear).toFixed(2)}</b></td>);
     })
   }
 
@@ -600,21 +658,16 @@ export default class Tile extends Component {
 		if(data[0].code === "Home") {
   		return (
   			<div className="tile">
-          <Item optionChange={this.props.onChange} news={"Hot Stocks"} imagef={"http://www.sharesinv.com/wp-content/uploads/articles/consumer-ETFs.jpg"} value={"hot"}/>
-  				<Item optionChange={this.props.onChange} news={"Consumer Discretionary"} imagef={"http://www.sharesinv.com/wp-content/uploads/articles/consumer-ETFs.jpg"} value={"consumer1"}/>
+          <Item optionChange={this.props.onChange} news={"Tutorial"} imagef={"http://keravnoslaw.com/images/banking.jpg"} value={"tutorial"}/>
   				<Item optionChange={this.props.onChange} news={"Consumer Staples"} imagef={"http://www.etftrends.com/wp-content/uploads/2012/10/consumer-staples-etfs.png"} value={"consumer2"}/>
   				<Item optionChange={this.props.onChange} news={"Energy"} imagef={"https://www.dentons.com/-/media/images/website/background-images/industry-sectors/energy/energy-2.jpg  "} value={"energy"}/>
-  				<Item optionChange={this.props.onChange} news={"Financial"} imagef={"http://static.memrise.com/uploads/course_photos/3146044000150629230223.jpg"} value={"financial"}/>
-          <Item optionChange={this.props.onChange} news={"Health Care"} imagef={"http://www.philips.com.au/c-dam/b2bhc/us/homepage-rebranded/specialties_heartmonitor.png"} value={"health"}/>
+  				<Item optionChange={this.props.onChange} news={"Financials"} imagef={"http://static.memrise.com/uploads/course_photos/3146044000150629230223.jpg"} value={"financial"}/>
           <Item optionChange={this.props.onChange} news={"Industrials"} imagef={"http://relaypowersystems.com/wp-content/uploads/2011/10/refinery.jpg"} value={"industrials"}/>
-          <Item optionChange={this.props.onChange} news={"IT- Information Technology"} imagef={"https://i.ytimg.com/vi/GyfPJ1i1Y5Y/maxresdefault.jpg "} value={"it"}/>
+          <Item optionChange={this.props.onChange} news={"Information Technology"} imagef={"https://i.ytimg.com/vi/GyfPJ1i1Y5Y/maxresdefault.jpg "} value={"it"}/>
           <Item optionChange={this.props.onChange} news={"Materials"} imagef={"http://cambabest.co.uk/wp-content/uploads/2015/02/Building-banner1.jpg"} value={"materials"}/>
-          <Item optionChange={this.props.onChange} news={"Metals and Minning"} imagef={"http://rsb-industries.com/images/Metal_Mining.jpg"} value={"metalmine"}/>
-          <Item optionChange={this.props.onChange} news={"Resources"} imagef={"http://psychology.berkeley.edu/sites/default/files/styles/1000x400sc/public/Resources%20page%20photo_0.jpg?itok=dLdmH90P"} value={"resource"}/>
-          <Item optionChange={this.props.onChange} news={"Telecommunications Services"} imagef={"https://www.sevone.com/sites/default/files/images/telecommunications-map.jpg"} value={"telecom"}/>
           <Item optionChange={this.props.onChange} news={"Utilities"} imagef={"http://allentownboronj.com/vertical/Sites/%7B7748EEEB-2391-4653-8B6A-4A64C85A6D79%7D/uploads/8329283_orig.jpg"} value={"util"}/>
-          <Item optionChange={this.props.onChange} news={"Banking"} imagef={"http://keravnoslaw.com/images/banking.jpg"} value={"bank"}/>
-          </div>
+
+        </div>
   			);
 		}else if (data[0].code === "hot"){
       return(this.renderCat(data[0].code));
@@ -626,6 +679,9 @@ export default class Tile extends Component {
       return(this.renderCat(data[0].code));
 
     }else if (data[0].code === "consumer2"){
+      //render consumer2 tiles
+      return(this.renderCat(data[0].code));
+    }else if (data[0].code === "tutorial"){
       //render consumer2 tiles
       return(this.renderCat(data[0].code));
 
@@ -683,14 +739,14 @@ export default class Tile extends Component {
       	// var companySum = this.getCompanySummary(data.name);
         this.parseDataIntoGraph(data[0].stock_data, news, data[0].announcements);
       }
-      const tooltip_statistics = (
-          <Toolitip id="tooltip"><strong>Statistics</strong><br /><strong>Previous close: </strong>A security's closing price on the preceding day of trading<br /><br />
-            <strong>Monthly/Annual Change: </strong> Difference in price between the last closing price and the closing price a month/year ago.<br /><br />
-            <strong>Monthly/Annual High/Low: </strong> A 1-month/52-week high/low is the highest and lowest price that a stock has traded at during the previous year.<br /><br />
-
-          </Toolitip>
-          //<font size="2"><OverlayTrigger placement="top" overlay={tooltip_ticker}><Glyphicon glyph="info-sign" /></OverlayTrigger></font>
-      );
+      // const tooltip_statistics = (
+      //     <Toolitip id="tooltip"><strong>Statistics</strong><br /><strong>Previous close: </strong>A security's closing price on the preceding day of trading<br /><br />
+      //       <strong>Monthly/Annual Change: </strong> Difference in price between the last closing price and the closing price a month/year ago.<br /><br />
+      //       <strong>Monthly/Annual High/Low: </strong> A 1-month/52-week high/low is the highest and lowest price that a stock has traded at during the previous year.<br /><br />
+      //
+      //     </Toolitip>
+      //     //<font size="2"><OverlayTrigger placement="top" overlay={tooltip_ticker}><Glyphicon glyph="info-sign" /></OverlayTrigger></font>
+      // );
       var columnSpan = data.length+1;
       if (data.length === 3) {
         console.log("Got 2 stocks");
@@ -724,7 +780,8 @@ export default class Tile extends Component {
           <Table bordered hover>
             <thead>
               <tr>
-                <th colSpan={columnSpan}>Statistics<font size="2"><OverlayTrigger placement="top" overlay={tooltip_statistics}><Glyphicon glyph="info-sign" /></OverlayTrigger></font></th>
+                <th colSpan={columnSpan}>Statistics</th>
+                {/*<th colSpan={columnSpan}>Statistics<font size="2"><OverlayTrigger placement="top" overlay={tooltip_statistics}><Glyphicon glyph="info-sign" /></OverlayTrigger></font></th>*/}
               </tr>
             </thead>
             <tbody>

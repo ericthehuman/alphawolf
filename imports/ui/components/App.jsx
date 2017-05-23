@@ -28,15 +28,6 @@ constructor(props){
     submitted: false,
     selectMultiple: false
   };
-  // this.newsData = function () {
-  //     return Session.get('newsData');
-  // }
-  // this.sectionNewsData = function () {
-  //     return Session.get('sectionNewsData');
-  // }
-  // this.companyData = function() {
-  //     return Session.get('companyData');
-  // }
 }
 
 renderTile() {
@@ -106,7 +97,7 @@ handleOptionChange(companiesList) {
   }
   var info = {
     code: "dontshowthisever",
-    name: " ",
+    name: "Company",
     sector: "Sector",
     short_description: "Summary",
     url: "Company Website",
@@ -169,8 +160,8 @@ addStock() {
   var companyName = stockToUpdate.name;
 
   // retrieve company information from ASX -> fail -> 2. Intrinio
-  var begin_date = moment().subtract(30, 'days').format('YYYY-MM-DD');
-  var end_date = moment().format('YYYY-MM-DD');
+  // var begin_date = moment().subtract(30, 'days').format('YYYY-MM-DD');
+  // var end_date = moment().format('YYYY-MM-DD');
 
   Meteor.call('getASXCompanyInfo', companyCode, function(error, result) {
     if (result) {
@@ -209,13 +200,12 @@ addStock() {
     }
   });
 
-
   Meteor.call('getASXAnnouncements', companyCode, function(error, result) {
     if (result) {
       var raw = JSON.parse(result.content);
       raw = raw.data;
       var announcements = [];
-      console.log(raw);
+      // console.log(raw);
       // console.log("IS THIS HAPPENING");
       for (var i = 0; i < raw.length; i++) {
         var date = moment(raw[i].document_date).format('DD/MM/YYYY');
@@ -234,12 +224,11 @@ addStock() {
     }
   });
 
-  // Remove a bunch of useless words from the company names
-  // companyNameEdited = companyName.replace(/\s*\(.*\)/, "").replace(/\s*Limited\s*$/, "").replace(/\s*Holdings\s*/, "")
-  // companyNameEdited.replace(/\s*Corporation\s*/, "").replace(/\s*Group\s*/, "").replace(/\s/g, " AND ");
-  // console.log("COMPANY TO GET NEWS FROM :" + companyNameEdited);
-  // Meteor.call('getGuardianNews', "australia-news", begin_date, end_date, 100, nameWithoutCode + " AND " + sector, function (error, result) {
-  Meteor.call('getGuardianNews', function (error, result) {
+  console.log("START GUARDIAN CALL " + companyName);
+  var words = companyName.split(/\s/);
+  var queryString = words[0] + "%20AND%20" + words[1] + "%20AND%20markets";
+  console.log("queryString " + queryString);
+  Meteor.call('getGuardianNews', queryString, function (error, result) {
     if (error) {
       console.log(error);
       console.log("in news");
@@ -342,60 +331,6 @@ addStock() {
     );
   }
 }
-
-// guardian API call to get x num of articles between certain dates (but hard cap at 100; change below if needed)
-// function callGuardianAPI(queryString, sector, x, begin_date, end_date, sessionKeyword, companyData) {
-//
-//     var companyData = {};
-//     if (sessionKeyword === "sectionNewsData") {
-//       var section = "australia-news";
-//     } else {
-//       queryString = queryString + " AND " + sector + " AND shares";
-//       var section = "business";
-//     }
-//
-//     Meteor.call('getGuardianNews', section, begin_date, end_date, x, queryString, function (error, result) {
-//         if (error) {
-//             console.log(error);
-//             return null;
-//         } else {
-//
-//             var newsArray = [];
-//             var sectionId = []; // to determine company's main sector
-//             sectionId["maxNum"] = 0;
-//             sectionId["name"] = "";
-//
-//             var parsedResult = JSON.parse(result.content);
-//             var length = Math.min(10, parsedResult.response.results.length); // hard cap set here
-//
-//             for (var i = 0; i < length; i++) {
-//                 var article = parsedResult.response.results[i];
-//                 if (article.type !== "article") continue;
-//
-//                 // newsArray[i] = article;
-//                 var newsData = {
-//                   headline: (article.webTitle === undefined) ? "" : article.webTitle,
-//                   url: article.webUrl,
-//                   source: "The Guardian UK",
-//                   // publication date in YYYY-MM-DD'T'HH:MM:SS'Z' -> DD/MM/YYYY
-//                   date: article.webPublicationDate.substring(8, 10) + "/" + article.webPublicationDate.substring(5, 7) + "/" + article.webPublicationDate.substring(0, 4),
-//                 }
-//
-//                 newsArray.push(newsData);
-//             }
-//
-//             // console.log(newsArray);
-//             if (sessionKeyword === "sectionNewsData") {
-//               companyData.sectionNewsData = newsArray;
-//             } else {
-//               companyData.companyNews = newsArray;
-//             }
-//             // Session.set(sessionKeyword, newsArray);
-//         }
-//     });
-//
-//     return companyData;
-// };
 
 App.propTypes = {
   ddata: PropTypes.array.isRequired,

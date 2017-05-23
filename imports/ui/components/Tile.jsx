@@ -89,6 +89,52 @@ export default class Tile extends Component {
 
     if (category == "hot"){
       return(<h2>Hot Stocks</h2>);
+    }else if(category == "tutorial"){
+      return (
+
+          <p>
+            <h2>Beginners guide to the Stock Market</h2>
+            <b>Welcome to Investing Basics!</b> If you've found your way here, chances are you've either got some money socked away or you're planning to do so. But first things first. Why is investing a smart idea?
+
+            <br /><br />
+            Simply put, you want to invest in order to create wealth. It's relatively painless, and the rewards are plentiful. By investing in the stock market, you'll have a lot more money for things like retirement, education, recreation -- or you could pass on your riches to the next generation so that you become your family's Most Cherished Ancestor. Whether you're starting from scratch or have a few thousand dollars saved, Investing Basics will help get you going on the road to financial (and Foolish!) well-being.
+
+            <br /><br />
+            It can be very challenging for someone who does not understand the financial lingo to confidently asses and make investments based on data that they do not understand. Thats where COWS comes in. A revolutionary new website, redefining how a stocks portfolio should look.
+
+            <br />
+            <h3>Buying shares on a share exchange</h3>
+            There are five public share exchanges in Australia. Four of them directly supervise the companies that issue the shares that trade on their markets. The fifth exchange, Chi-X, currently only provides the infrastructure for trading shares already quoted on the ASX.
+            <br /><br />
+            The five exchanges are:
+            <ul>
+              <li><a href="http://www.asx.com.au">Australian Securities Exchange (ASX)</a> - the main stock exchange in Australia</li>
+              <li><a href="http://www.chi-x.com.au">Chi-X</a> - an exchange that trades company shares already quoted on the ASX, but does not list or supervise the companies</li>
+              <li><a href="http://www.nsxa.com.au">National Stock Exchange of Australia (NSXA)</a> - a securities exchange that lists about 70 small to medium sized companies</li>
+              <li><a href="http://simvse.com.au">SIM Venture Securities Exchange (SIM VSE)</a> - an exchange for innovative companies involved in the clean technology, renewable energy and bio science field</li>
+              <li><a href="http://www.apx.com.au/APX/Public/EN/Default.aspx">Asia Pacific Stock Exchange (APX)</a> - a stock exchange with a focus on growth oriented companies from the Asia-Pacific region</li>
+            </ul>
+            To start buying and selling shares on any of these exchanges, simply visit their link.
+
+            <br />
+            <h3>Reading a COWS stocks sheet</h3>
+            The COWS stocks page list only the crucial information needed to invest in stocks. We leave out the unimportant and irrelevant data. Below is a guide as to what each piece of information means, and how it should affect your investment decisions.
+            <ul>
+              <li><strong>Stock Code</strong>: An abbreviation used to uniquely identify publicly traded shares of a particular stock on a particular stock market</li>
+              <li><strong>Sector</strong>: The sector of the stock defines the industry that the company is mostly involved in. Sector analysis provides the investor with an idea of how well a group of companies in the same sector could be expected to perform as a whole. Generally, a group of stocks within a sector tend to move together because companies within the same industry group are affected in similar ways by market and economic conditions.</li>
+              <li><strong>Summary</strong>: A general company description. It is advisable to research/invest instocks that you can understand their business model.</li>
+              <li><strong>Close</strong>: The closing price is the final price at which a stock is traded on a given trading day. The closing price represents the most up-to-date valuation of a security until trading commences again on the next trading day. Although closing prices do not reflect the after-hours price or corporate actions, they may still act as useful markers for investors to assess changes in stock prices over time — the closing price of one day can be compared to the previous closing price to measure market sentiment for a given security over a trading day</li>
+              <li><strong>Previous Close</strong>: The stock's closing price on the preceding day of trading.</li>
+              <li><strong>Monthly Change</strong>: Monthly change is the difference between the closing price of a stock on the day's trading and the previous month's closing price. It shows the companies performance over the past month and provides a short term illustration of the companies performance.</li>
+              <li><strong>Monthly High</strong>: The highest price that the stock has traded at in the previous month. This can give an indication of the possible future benefits of the stock.</li>
+              <li><strong>Monthly Low</strong>: The lowest price that the stock has traded at in the previous month. This can give an indication of the possible future flaws of the stock. </li>
+              <li><strong>Annual Change</strong>: Annual change is the difference between the closing price of a stock on the day's trading and the previous year's closing price. It shows the companies performance over the past year and provides a long term illustration of the companies performance.</li>
+              <li><strong>Annual High</strong>: The highest price that the stock has traded at in the previous year. This can give an indication of the possible future benefits of the stock.</li>
+              <li><strong>Annual Low</strong>: The lowest price that the stock has traded at in the previous year. This can give an indication of the possible future flaws of the stock. </li>
+
+            </ul>
+          </p>
+      );
     }else if(category == "consumer1"){
       return (<h2>Consumer Discretionary</h2>);
     }else if (category == "consumer2"){

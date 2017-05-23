@@ -234,15 +234,13 @@ addStock() {
   });
 
   console.log("START GUARDIAN CALL " + companyName);
-  // var words = companyName.split(/\s/);
-  // var queryString = words[0] + "%20AND%20" + words[1] + "%20AND%20markets";
-  companyNameEdited = companyName.replace(/\s*\(.*\)/, "").replace(/\sLimited/, "").replace(/\sHoldings/, "").replace(/\s*Australia/, "");
-  companyNameEdited = companyNameEdited.replace(/\sCorporation/, "").replace(/\sGroup/, "").replace(/\sNew Zealand/, "");
-  companyNameEdited = companyNameEdited.replace(/\sAnd/, "").replace(/\sOf/, "").replace(/^\s*/, "").replace(/\s+/g, " AND ");
+  companySplitName = companyName.split(/\s/);
+  var queryString = companySplitName[0] + " OR (australian AND stock AND market)";
+  // companyNameEdited = companyName.replace(/\s*\(.*\)/, "").replace(/\sLimited/, "").replace(/\sHoldings/, "").replace(/\s*Australia/, "");
+  // companyNameEdited = companyNameEdited.replace(/\sCorporation/, "").replace(/\sGroup/, "").replace(/\sNew Zealand/, "");
+  // companyNameEdited = companyNameEdited.replace(/\sAnd/, "").replace(/\sOf/, "").replace(/^\s*/, "").replace(/\s+/g, " AND ");
   if (companyCode === "ANZ") {
     var queryString = companyCode + " AND bank";
-  } else {
-    var queryString = companyCode + " " + companyNameEdited;
   }
   console.log("queryString " + queryString);
   Meteor.call('getGuardianNews', queryString, function (error, result) {

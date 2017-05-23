@@ -643,34 +643,38 @@ export default class Tile extends Component {
                 stockData.push({ x: timestamp, y: stocks[i].Close });
             }
 
-            for (var j = 0; j < news.length; j++) {
-              var date = news[j].date.split("/");
-              var timestamp = Date.UTC(date[2], date[1]-1, date[0]);
+            if (news !== undefined) {
+                for (var j = 0; j < news.length; j++) {
+                    var date = news[j].date.split("/");
+                    var timestamp = Date.UTC(date[2], date[1]-1, date[0]);
 
-                var newsExistsForDate = false;
-                for (var k = 0; k < newsData.length; k++) {
-                    if (newsData[k].x === timestamp) {
-                        newsExistsForDate = true;
-                        break;
+                    var newsExistsForDate = false;
+                    for (var k = 0; k < newsData.length; k++) {
+                        if (newsData[k].x === timestamp) {
+                            newsExistsForDate = true;
+                            break;
+                        }
                     }
-                }
 
-                if (newsExistsForDate) continue;
-                var currNewsData = {  x: timestamp,
-                    title: "",
-                    style: {
-                        color: 'rgba(0,0,0,0)',
-                        borderColor: "#FA6C61",
-                    },
-                    text: "<b>Related news</b><br>" + news[j].headline + "<br>" +
-                    "<span class='tooltip-link'><i>Click to read more!</i></span>",
-                    url: news[j].url
-                };
-                newsData.push(currNewsData);
+                    if (newsExistsForDate) continue;
+                    var currNewsData = {  x: timestamp,
+                        title: "",
+                        style: {
+                            color: 'rgba(0,0,0,0)',
+                            borderColor: "#FA6C61",
+                        },
+                        text: "<b>Related news</b><br>" + news[j].headline + "<br>" +
+                        "<span class='tooltip-link'><i>Click to read more!</i></span>",
+                        url: news[j].url
+                    };
+                    newsData.push(currNewsData);
+                    if (newsData.length === 10) break; // max 10 news
+                }
+                newsData.sort(function(a, b) {
+                    return parseFloat(a.x) - parseFloat(b.x);
+                });
+
             }
-            newsData.sort(function(a, b) {
-                return parseFloat(a.x) - parseFloat(b.x);
-            });
 
             // parse data for announcements
             for (var j = 0; j < announcements.length; j++) {

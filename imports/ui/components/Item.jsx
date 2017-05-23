@@ -9,12 +9,6 @@ import { ReactiveVar } from 'meteor/reactive-var';
 
 export default class Item extends Component {
 
-	handleClick(e){
-		var isOpen = ModalVar.get().isOpen;
-		ModalVar.set({
-          isOpen: !isOpen,
-        });
-	}
 	render() {
 		var test = "url(" + this.props.imagef + ")";
 		//console.log("test image: " + test);

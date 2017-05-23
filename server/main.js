@@ -249,7 +249,7 @@ Meteor.methods({
     this.unblock();
     return HTTP.call('GET', 'http://content.guardianapis.com/search?'
     + 'section=(business|australia-news)'
-    + '&from-date=' + '2015-01-01' //beginDate
+    + '&from-date=' + '2016-04-10' //beginDate
     + '&to-date=' + '2017-12-30' //endDate
     + '&page-size=' + 50 //x // retrieve x articles
     + '&q=' + queryString

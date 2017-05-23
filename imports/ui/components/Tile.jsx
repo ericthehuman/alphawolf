@@ -557,6 +557,7 @@ export default class Tile extends Component {
           borderColor: "#c4c4c4",
           borderWidth: 2,
           borderRadius: 2,
+          height: 300
         },
         yAxis: {
           title: {
@@ -643,14 +644,8 @@ export default class Tile extends Component {
             }
 
             for (var j = 0; j < news.length; j++) {
-                var currNewsItem = news[j];
-                var newsDate = currNewsItem["date"];
-
-                var datestr = newsDate.split("/");
-                var dd = parseInt(datestr[0]);
-                var mm = parseInt(datestr[1])-1;
-                var yyyy = parseInt(datestr[2]);
-                var timestamp = Date.UTC(yyyy,mm,dd);
+              var date = news[j].date.split("/");
+              var timestamp = Date.UTC(date[2], date[1]-1, date[0]);
 
                 var newsExistsForDate = false;
                 for (var k = 0; k < newsData.length; k++) {
@@ -661,18 +656,16 @@ export default class Tile extends Component {
                 }
 
                 if (newsExistsForDate) continue;
-
                 var currNewsData = {  x: timestamp,
                     title: "",
                     style: {
                         color: 'rgba(0,0,0,0)',
                         borderColor: "#FA6C61",
                     },
-                    text: "<b>Related news</b><br>" + currNewsItem.headline + "<br>" +
+                    text: "<b>Related news</b><br>" + news[j].headline + "<br>" +
                     "<span class='tooltip-link'><i>Click to read more!</i></span>",
-                    url: currNewsItem.url
+                    url: news[j].url
                 };
-                // console.log(currNewsData);
                 newsData.push(currNewsData);
             }
             newsData.sort(function(a, b) {
@@ -700,6 +693,7 @@ export default class Tile extends Component {
                 return parseFloat(a.x) - parseFloat(b.x);
             });
 
+            // finished parsing, call return function with the results
             callback(stockData, newsData, announcementData);
         }
 
@@ -779,6 +773,7 @@ export default class Tile extends Component {
                     borderColor: "#c4c4c4",
                     borderWidth: 2,
                     borderRadius: 2,
+                    height: 480
                 },
                 yAxis: {
                     title: {
@@ -799,7 +794,7 @@ export default class Tile extends Component {
                 },
                 // ... more options - see http://api.highcharts.com/highcharts
             });
-            console.log("IS THE BLOODY GRAPH DRAWN YET?");
+            // console.log("IS THE BLOODY GRAPH DRAWN YET?");
         }
     }
 
@@ -1171,6 +1166,7 @@ export default class Tile extends Component {
                 this.parseDataIntoPercentGraph(data[1].stock_data);
 
             } else {
+                // graph with two companies
                 this.parseDataIntoGraph(2, data[0], data[2]);
                 this.parseDataIntoPercentGraphTwo(data[0],data[2]);
             }

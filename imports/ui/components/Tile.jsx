@@ -166,6 +166,271 @@ export default class Tile extends Component {
 
 
 
+
+
+
+  parseDataIntoPercentGraphTwo(company1,company2) {
+    //console.log("herere");
+    if ((company1 != null) && (company2 != null)) {
+      // console.log(result);
+      // console.log("NEWS: " + JSON.stringify(news));
+      // console.log(section);
+
+      var array1 = company1.stock_data;
+      var array2 = company2.stock_data;
+
+      var stockData1 = [];
+      var stockData2 = [];
+
+      var newsData = [];
+      var announcementData = [];
+      var returns = []
+      // convert data for graphing on high stocks
+      // format:
+      // [[timestamp, stockValue], [timestamp, stockValue] ....]
+
+
+      for (i = 0; i < array1.length; i ++) {
+        var datestr = array1[i].Date;
+        // console.log("DATESTR:" + datestr);
+        datestr = datestr.split("/");
+        var dd = parseInt(datestr[0]);
+        var mm = parseInt(datestr[1])-1;
+        var yyyy = parseInt(datestr[2]);
+        var timestamp = Date.UTC(yyyy,mm,dd);
+        // console.log("SPLIT:" + dd + "/" + mm + "/" + yyyy);
+        if (i == 0) {
+          returns[i] = 0;
+
+        } else {
+
+          returns[i] = Math.round((100 * (array1[i].Close - array1[i-1].Close)/array1[i-1].Close)*100)/100;
+
+        }
+
+        stockData1.push({ x: timestamp, y: returns[i] });
+      }
+
+
+
+
+
+      for (i = 0; i < array2.length; i ++) {
+        var datestr = array2[i].Date;
+        // console.log("DATESTR:" + datestr);
+        datestr = datestr.split("/");
+        var dd = parseInt(datestr[0]);
+        var mm = parseInt(datestr[1])-1;
+        var yyyy = parseInt(datestr[2]);
+        var timestamp = Date.UTC(yyyy,mm,dd);
+        // console.log("SPLIT:" + dd + "/" + mm + "/" + yyyy);
+        if (i == 0) {
+          returns[i] = 0;
+
+        } else {
+
+          returns[i] = Math.round((100 * (array2[i].Close - array2[i-1].Close)/array2[i-1].Close)*100)/100;
+
+        }
+
+        stockData2.push({ x: timestamp, y: returns[i] });
+      }
+
+
+
+
+      console.log("here");
+
+      var chart = Highcharts.stockChart('container', {
+        series: [
+          // stock data graph
+          {
+            data: stockData1,
+            name: "Percentage Returns: " + company1.code,
+            id: "stockData1"
+          },
+          {
+            data: stockData2,
+            name: "Percentage Returns: " + company2.code,
+            id: "stockData2"
+          },
+
+          // set more options here for graph or more graph data
+        ],
+        // set title of graph
+        title: {
+          text: "Daily Percentage Returns",
+          style: {
+            'font-weight': 'bold',
+            // 'color': "#7cb5ec"
+          }
+        },
+        // set tooltip format
+        tooltip: {
+          style: {
+            width: '250px',
+            backgroundColor: '#FCFFC5',
+            // borderColor: 'black',
+            borderRadius: 10,
+            borderWidth: 3
+          },
+        },
+        // initial range selected
+        rangeSelector: {
+          selected: 1
+        },
+        // scrollbar: {
+        //   enabled: false
+        // },
+        chart: {
+          backgroundColor: "#f5f5f5",
+          borderColor: "#c4c4c4",
+          borderWidth: 2,
+          borderRadius: 2,
+        },
+        yAxis: {
+          title: {
+            text: '%',
+            enabled: true,
+            style: {
+              'font-weight': 'bold',
+              'color': "#7cb5ec"
+            }
+          },
+        },
+        legend: {
+          layout: 'horizontal',
+          enabled: true,
+          // borderRadius: 5,
+          // borderWidth: 1,
+          // borderColor: 'darkgrey'
+        },
+        // ... more options - see http://api.highcharts.com/highcharts
+      });
+    }
+  }
+
+
+
+
+
+
+
+  parseDataIntoPercentGraph(result) {
+    //console.log("herere");
+    if(result != null) {
+      console.log("ANNOUNCEMENTS");
+      // console.log(result);
+      // console.log("NEWS: " + JSON.stringify(news));
+      // console.log(section);
+
+      var array = result;
+      var stockData = [];
+      var newsData = [];
+      var announcementData = [];
+      var returns = []
+      // convert data for graphing on high stocks
+      // format:
+      // [[timestamp, stockValue], [timestamp, stockValue] ....]
+
+      for (i = 0; i < array.length; i ++) {
+        var datestr = array[i].Date;
+        // console.log("DATESTR:" + datestr);
+        datestr = datestr.split("/");
+        var dd = parseInt(datestr[0]);
+        var mm = parseInt(datestr[1])-1;
+        var yyyy = parseInt(datestr[2]);
+        var timestamp = Date.UTC(yyyy,mm,dd);
+        // console.log("SPLIT:" + dd + "/" + mm + "/" + yyyy);
+        if (i == 0) {
+          returns[i] = 0;
+
+        } else {
+
+          returns[i] = Math.round((100 * (array[i].Close - array[i-1].Close)/array[i-1].Close)*100)/100;
+
+        }
+
+        stockData.push({ x: timestamp, y: returns[i] });
+      }
+
+
+
+       console.log("here");
+
+      var chart = Highcharts.stockChart('container', {
+        series: [
+          // stock data graph
+          {
+            data: stockData,
+            name: "Percentage Returns",
+            id: "stockData"
+          },
+
+
+          // set more options here for graph or more graph data
+        ],
+        // set title of graph
+        title: {
+          text: "Daily Percentage Returns",
+          style: {
+            'font-weight': 'bold',
+            // 'color': "#7cb5ec"
+          }
+        },
+        // set tooltip format
+        tooltip: {
+          style: {
+            width: '250px',
+            backgroundColor: '#FCFFC5',
+            // borderColor: 'black',
+            borderRadius: 10,
+            borderWidth: 3
+          },
+        },
+        // initial range selected
+        rangeSelector: {
+          selected: 1
+        },
+        // scrollbar: {
+        //   enabled: false
+        // },
+        chart: {
+          backgroundColor: "#f5f5f5",
+          borderColor: "#c4c4c4",
+          borderWidth: 2,
+          borderRadius: 2,
+        },
+        yAxis: {
+          title: {
+            text: '%',
+            enabled: true,
+            style: {
+              'font-weight': 'bold',
+              'color': "#7cb5ec"
+            }
+          },
+        },
+        legend: {
+          layout: 'horizontal',
+          enabled: true,
+          // borderRadius: 5,
+          // borderWidth: 1,
+          // borderColor: 'darkgrey'
+        },
+        // ... more options - see http://api.highcharts.com/highcharts
+      });
+    }
+  }
+
+
+
+
+
+
+
+
+
   /**** AAAAAAAAAAAAAAAAAAAAAA PARSE GRAPH IS HERE *******/
 
 
@@ -262,7 +527,7 @@ export default class Tile extends Component {
       });
       // console.log(announcementData);
 
-      var chart = Highcharts.stockChart('container', {
+      var chart = Highcharts.stockChart('container2', {
         series: [
           // stock data graph
           {
@@ -771,14 +1036,28 @@ export default class Tile extends Component {
       return(this.renderCat(data[0].code));
     }else {
       // While graph only works with one company
+      console.log("data.length = " + data.length);
+      console.log("data is: ");
+      for (var i = 0; i < data.length; i++){
+        console.log("Company " + i + " = " + data[i].code);
+      }
+
       if (data[0].code === "dontshowthisever") {
         var news = data[1].companyNews;
-      	// var companySum = this.getCompanySummary(data.name);
+        console.log("in first");
+        //console.log("herere");
+        // var companySum = this.getCompanySummary(data.name);
+        console.log("sending: " + data[1].code);
         this.parseDataIntoGraph(data[1].stock_data, news, data[1].announcements);
+        this.parseDataIntoPercentGraph(data[1].stock_data);
+
       } else {
         var news = data[0].companyNews;
+        console.log("in second");
       	// var companySum = this.getCompanySummary(data.name);
         this.parseDataIntoGraph(data[0].stock_data, news, data[0].announcements);
+        console.log("sending: " + data[0].code + " and " + data[2].code);
+        this.parseDataIntoPercentGraphTwo(data[0],data[2]);
       }
       // const tooltip_statistics = (
       //     <Toolitip id="tooltip"><strong>Statistics</strong><br /><strong>Previous close: </strong>A security's closing price on the preceding day of trading<br /><br />

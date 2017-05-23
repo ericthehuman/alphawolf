@@ -668,7 +668,7 @@ export default class Tile extends Component {
                         url: news[j].url
                     };
                     newsData.push(currNewsData);
-                    if (newsData.length === 10) break; // max 10 news
+                    if (newsData.length === 25) break; // max 25 news
                 }
                 newsData.sort(function(a, b) {
                     return parseFloat(a.x) - parseFloat(b.x);

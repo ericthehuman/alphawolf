@@ -74,6 +74,7 @@ export default class Tile extends Component {
       }
   }
 
+
   //return a render page based on the catergory selected
   renderCat(category){
     //debugging statement:
@@ -85,18 +86,12 @@ export default class Tile extends Component {
 
     //regrex goes here
     //https://hotcopper.com.au/
-    Meteor.call('getHotStock', function(error, result) {
 
-      if (result){
-        console.log("hi2");
-        console.log(result);
-      }
-    });
 
     if (category == "hot"){
-    return(<h2>Hot Stocks</h2>);
+      return(<h2>Hot Stocks</h2>);
     }else if(category == "consumer1"){
-    return (<h2>Consumer Discretionary</h2>);
+      return (<h2>Consumer Discretionary</h2>);
     }else if (category == "consumer2"){
       return(<h2>Consumer Staples</h2>);
     }else if (category == "energy"){
@@ -124,12 +119,12 @@ export default class Tile extends Component {
     }
   }
 
+
+
   //converts raw api data into structure the graph component uses
   parseDataIntoGraph(result, news, announcements) {
     if(result != null) {
       // console.log(announcements);
-
-
         // console.log(result);
         // console.log("NEWS: " + JSON.stringify(news));
        // console.log(section);

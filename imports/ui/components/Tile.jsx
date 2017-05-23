@@ -120,7 +120,298 @@ export default class Tile extends Component {
 
 
 
-    //converts raw api data into structure the graph component uses
+
+
+
+
+
+
+
+
+
+
+
+
+  parseDataIntoPercentGraphTwo(company1,company2) {
+    //console.log("herere");
+    if ((company1 != null) && (company2 != null)) {
+      // console.log(result);
+      // console.log("NEWS: " + JSON.stringify(news));
+      // console.log(section);
+
+      var array1 = company1.stock_data;
+      var array2 = company2.stock_data;
+
+      var stockData1 = [];
+      var stockData2 = [];
+
+      var newsData = [];
+      var announcementData = [];
+      var returns = []
+      // convert data for graphing on high stocks
+      // format:
+      // [[timestamp, stockValue], [timestamp, stockValue] ....]
+
+
+      for (i = 0; i < array1.length; i ++) {
+        var datestr = array1[i].Date;
+        // console.log("DATESTR:" + datestr);
+        datestr = datestr.split("/");
+        var dd = parseInt(datestr[0]);
+        var mm = parseInt(datestr[1])-1;
+        var yyyy = parseInt(datestr[2]);
+        var timestamp = Date.UTC(yyyy,mm,dd);
+        // console.log("SPLIT:" + dd + "/" + mm + "/" + yyyy);
+        if (i == 0) {
+          returns[i] = 0;
+
+        } else {
+
+          returns[i] = Math.round((100 * (array1[i].Close - array1[i-1].Close)/array1[i-1].Close)*100)/100;
+
+        }
+
+        stockData1.push({ x: timestamp, y: returns[i] });
+      }
+
+
+
+
+
+      for (i = 0; i < array2.length; i ++) {
+        var datestr = array2[i].Date;
+        // console.log("DATESTR:" + datestr);
+        datestr = datestr.split("/");
+        var dd = parseInt(datestr[0]);
+        var mm = parseInt(datestr[1])-1;
+        var yyyy = parseInt(datestr[2]);
+        var timestamp = Date.UTC(yyyy,mm,dd);
+        // console.log("SPLIT:" + dd + "/" + mm + "/" + yyyy);
+        if (i == 0) {
+          returns[i] = 0;
+
+        } else {
+
+          returns[i] = Math.round((100 * (array2[i].Close - array2[i-1].Close)/array2[i-1].Close)*100)/100;
+
+        }
+
+        stockData2.push({ x: timestamp, y: returns[i] });
+      }
+
+
+
+
+      console.log("here");
+
+      var chart = Highcharts.stockChart('container2', {
+        series: [
+          // stock data graph
+          {
+            data: stockData1,
+            name: "Percentage Returns: " + company1.code,
+            id: "stockData1"
+          },
+          {
+            data: stockData2,
+            name: "Percentage Returns: " + company2.code,
+            id: "stockData2"
+          },
+
+          // set more options here for graph or more graph data
+        ],
+        // set title of graph
+        title: {
+          text: "Daily Percentage Returns",
+          style: {
+            'font-weight': 'bold',
+            // 'color': "#7cb5ec"
+          }
+        },
+        // set tooltip format
+        tooltip: {
+          style: {
+            width: '250px',
+            backgroundColor: '#FCFFC5',
+            // borderColor: 'black',
+            borderRadius: 10,
+            borderWidth: 3
+          },
+        },
+        // initial range selected
+        rangeSelector: {
+          selected: 1
+        },
+        // scrollbar: {
+        //   enabled: false
+        // },
+        chart: {
+          backgroundColor: "#f5f5f5",
+          borderColor: "#c4c4c4",
+          borderWidth: 2,
+          borderRadius: 2,
+        },
+        yAxis: {
+          title: {
+            text: '%',
+            enabled: true,
+            style: {
+              'font-weight': 'bold',
+              'color': "#7cb5ec"
+            }
+          },
+        },
+        legend: {
+          layout: 'horizontal',
+          enabled: true,
+          // borderRadius: 5,
+          // borderWidth: 1,
+          // borderColor: 'darkgrey'
+        },
+        // ... more options - see http://api.highcharts.com/highcharts
+      });
+    }
+  }
+
+
+
+
+
+
+
+  parseDataIntoPercentGraph(result) {
+    //console.log("herere");
+    if(result != null) {
+      console.log("ANNOUNCEMENTS");
+      // console.log(result);
+      // console.log("NEWS: " + JSON.stringify(news));
+      // console.log(section);
+
+      var array = result;
+      var stockData = [];
+      var newsData = [];
+      var announcementData = [];
+      var returns = []
+      // convert data for graphing on high stocks
+      // format:
+      // [[timestamp, stockValue], [timestamp, stockValue] ....]
+
+      for (i = 0; i < array.length; i ++) {
+        var datestr = array[i].Date;
+        // console.log("DATESTR:" + datestr);
+        datestr = datestr.split("/");
+        var dd = parseInt(datestr[0]);
+        var mm = parseInt(datestr[1])-1;
+        var yyyy = parseInt(datestr[2]);
+        var timestamp = Date.UTC(yyyy,mm,dd);
+        // console.log("SPLIT:" + dd + "/" + mm + "/" + yyyy);
+        if (i == 0) {
+          returns[i] = 0;
+
+        } else {
+
+          returns[i] = Math.round((100 * (array[i].Close - array[i-1].Close)/array[i-1].Close)*100)/100;
+
+        }
+
+        stockData.push({ x: timestamp, y: returns[i] });
+      }
+
+
+
+      console.log("here");
+
+      var chart = Highcharts.stockChart('container2', {
+        series: [
+          // stock data graph
+          {
+            data: stockData,
+            name: "Percentage Returns",
+            id: "stockData"
+          },
+
+
+          // set more options here for graph or more graph data
+        ],
+        // set title of graph
+        title: {
+          text: "Daily Percentage Returns",
+          style: {
+            'font-weight': 'bold',
+            // 'color': "#7cb5ec"
+          }
+        },
+        // set tooltip format
+        tooltip: {
+          style: {
+            width: '250px',
+            backgroundColor: '#FCFFC5',
+            // borderColor: 'black',
+            borderRadius: 10,
+            borderWidth: 3
+          },
+        },
+        // initial range selected
+        rangeSelector: {
+          selected: 1
+        },
+        // scrollbar: {
+        //   enabled: false
+        // },
+        chart: {
+          backgroundColor: "#f5f5f5",
+          borderColor: "#c4c4c4",
+          borderWidth: 2,
+          borderRadius: 2,
+        },
+        yAxis: {
+          title: {
+            text: '%',
+            enabled: true,
+            style: {
+              'font-weight': 'bold',
+              'color': "#7cb5ec"
+            }
+          },
+        },
+        legend: {
+          layout: 'horizontal',
+          enabled: true,
+          // borderRadius: 5,
+          // borderWidth: 1,
+          // borderColor: 'darkgrey'
+        },
+        // ... more options - see http://api.highcharts.com/highcharts
+      });
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  //converts raw api data into structure the graph component uses
     parseDataIntoGraph(num, company1, company2) {
         console.log("SHOWING DATA FOR RESULT FOR " + num);
         // console.log(company1);
@@ -683,6 +974,55 @@ export default class Tile extends Component {
             console.log(this.renderCat(data[0].code));
             return(this.renderCat(data[0].code));
 
+        }else if (data[0].code === "tutorial"){
+          //render consumer2 tiles
+          return(
+
+
+              <p>
+                <h2>Beginners guide to the Stock Market</h2>
+                <b>Welcome to Investing Basics!</b> If you've found your way here, chances are you've either got some money socked away or you're planning to do so. But first things first. Why is investing a smart idea?
+
+                <br /><br />
+                Simply put, you want to invest in order to create wealth. It's relatively painless, and the rewards are plentiful. By investing in the stock market, you'll have a lot more money for things like retirement, education, recreation -- or you could pass on your riches to the next generation so that you become your family's Most Cherished Ancestor. Whether you're starting from scratch or have a few thousand dollars saved, Investing Basics will help get you going on the road to financial (and Foolish!) well-being.
+
+                <br /><br />
+                It can be very challenging for someone who does not understand the financial lingo to confidently asses and make investments based on data that they do not understand. Thats where COWS comes in. A revolutionary new website, redefining how a stocks portfolio should look.
+
+                <br />
+                <h3>Buying shares on a share exchange</h3>
+                There are five public share exchanges in Australia. Four of them directly supervise the companies that issue the shares that trade on their markets. The fifth exchange, Chi-X, currently only provides the infrastructure for trading shares already quoted on the ASX.
+                <br /><br />
+                The five exchanges are:
+                <ul>
+                  <li><a href="http://www.asx.com.au">Australian Securities Exchange (ASX)</a> - the main stock exchange in Australia</li>
+                  <li><a href="http://www.chi-x.com.au">Chi-X</a> - an exchange that trades company shares already quoted on the ASX, but does not list or supervise the companies</li>
+                  <li><a href="http://www.nsxa.com.au">National Stock Exchange of Australia (NSXA)</a> - a securities exchange that lists about 70 small to medium sized companies</li>
+                  <li><a href="http://simvse.com.au">SIM Venture Securities Exchange (SIM VSE)</a> - an exchange for innovative companies involved in the clean technology, renewable energy and bio science field</li>
+                  <li><a href="http://www.apx.com.au/APX/Public/EN/Default.aspx">Asia Pacific Stock Exchange (APX)</a> - a stock exchange with a focus on growth oriented companies from the Asia-Pacific region</li>
+                </ul>
+                To start buying and selling shares on any of these exchanges, simply visit their link.
+
+                <br />
+                <h3>Reading a COWS stocks sheet</h3>
+                The COWS stocks page list only the crucial information needed to invest in stocks. We leave out the unimportant and irrelevant data. Below is a guide as to what each piece of information means, and how it should affect your investment decisions.
+                <ul>
+                  <li><strong>Stock Code</strong>: An abbreviation used to uniquely identify publicly traded shares of a particular stock on a particular stock market</li>
+                  <li><strong>Sector</strong>: The sector of the stock defines the industry that the company is mostly involved in. Sector analysis provides the investor with an idea of how well a group of companies in the same sector could be expected to perform as a whole. Generally, a group of stocks within a sector tend to move together because companies within the same industry group are affected in similar ways by market and economic conditions.</li>
+                  <li><strong>Summary</strong>: A general company description. It is advisable to research/invest instocks that you can understand their business model.</li>
+                  <li><strong>Close</strong>: The closing price is the final price at which a stock is traded on a given trading day. The closing price represents the most up-to-date valuation of a security until trading commences again on the next trading day. Although closing prices do not reflect the after-hours price or corporate actions, they may still act as useful markers for investors to assess changes in stock prices over time — the closing price of one day can be compared to the previous closing price to measure market sentiment for a given security over a trading day</li>
+                  <li><strong>Previous Close</strong>: The stock's closing price on the preceding day of trading.</li>
+                  <li><strong>Monthly Change</strong>: Monthly change is the difference between the closing price of a stock on the day's trading and the previous month's closing price. It shows the companies performance over the past month and provides a short term illustration of the companies performance.</li>
+                  <li><strong>Monthly High</strong>: The highest price that the stock has traded at in the previous month. This can give an indication of the possible future benefits of the stock.</li>
+                  <li><strong>Monthly Low</strong>: The lowest price that the stock has traded at in the previous month. This can give an indication of the possible future flaws of the stock. </li>
+                  <li><strong>Annual Change</strong>: Annual change is the difference between the closing price of a stock on the day's trading and the previous year's closing price. It shows the companies performance over the past year and provides a long term illustration of the companies performance.</li>
+                  <li><strong>Annual High</strong>: The highest price that the stock has traded at in the previous year. This can give an indication of the possible future benefits of the stock.</li>
+                  <li><strong>Annual Low</strong>: The lowest price that the stock has traded at in the previous year. This can give an indication of the possible future flaws of the stock. </li>
+
+                </ul>
+              </p>
+
+          );
         }else if (data[0].code === "consumer2"){
             //render consumer2 tiles
             return(this.renderCat(data[0].code));
@@ -741,10 +1081,14 @@ export default class Tile extends Component {
                 // var news = data[1].companyNews;
                 // var companySum = this.getCompanySummary(data.name);
                 this.parseDataIntoGraph(1, data[1], null);
+                this.parseDataIntoPercentGraph(data[1].stock_data);
+
             } else {
                 // var news = data[0].companyNews;
                 // var companySum = this.getCompanySummary(data.name);
                 this.parseDataIntoGraph(2, data[0], data[2]);
+                this.parseDataIntoPercentGraphTwo(data[0],data[2]);
+
             }
             // const tooltip_statistics = (
             //     <Toolitip id="tooltip"><strong>Statistics</strong><br /><strong>Previous close: </strong>A security's closing price on the preceding day of trading<br /><br />

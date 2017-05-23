@@ -26,54 +26,6 @@ var Highcharts = require('highcharts/highstock');
 
 export default class Tile extends Component {
 
-  handleClickItem(itemVal){
-    //re-renders tiles, need to somehow get itemVal
-    //console.log("something is pressed!\n" + JSON.stringify(itemVal.value));
-    console.log(itemVal.currentTarget.value);
-
-    switch (itemVal) {
-      case "hot":
-          data[0].code = "hot";
-          break;
-      case "consumer1":
-          data[0].code = "consumer1";
-          break;
-      case "consumer2":
-          data[0].code = "consumer2";
-          break;
-      case "energy":
-          data[0].code = "energy";
-          break;
-      case "financial":
-          data[0].code = "financial";
-          break;
-      case "health":
-          data[0].code = "health";
-          break;
-      case "industrials":
-          data[0].code = "industrials";
-          break;
-      case "it":
-          data[0].code = "it";
-          break;
-      case "materials":
-        data[0].code = "materials";
-        break;
-      case "metalmine":
-        data[0].code = "metalmine";
-        break;
-      case "resource":
-        data[0].code = "resource";
-        break;
-      case "telecom":
-        data[0].code = "telecom";
-        break;
-      default:
-        data[0].code = "Home";
-        break;
-      }
-  }
-
   //return a render page based on the catergory selected
   renderCat(category){
     //debugging statement:
@@ -349,25 +301,24 @@ export default class Tile extends Component {
 
   renderStocksName() {
     return this.props.stockData.map((data, i, stockData) => {
-      if (data.name === " ") {
-        return (<td className="small-col add-borders"> </td>);
+      if (data.name === "Company") {
+        const tooltip_ticker = (
+            <Toolitip id="tooltip"><strong>ASX Code</strong><br />An abbreviation used to uniquely identify publicly traded shares in Australian Stock Exchange of a particular company</Toolitip>
+            //<font size="2"><OverlayTrigger placement="top" overlay={tooltip_ticker}><Glyphicon glyph="info-sign" /></OverlayTrigger></font>
+        );
+        return (<td className="small-col add-borders align-center"><h1>{ data.name }<font size="2"><OverlayTrigger placement="top" overlay={tooltip_ticker}><Glyphicon glyph="info-sign" /></OverlayTrigger></font></h1></td>);
       }
-
-      const tooltip_ticker = (
-          <Toolitip id="tooltip"><strong>ASX Code</strong><br />An abbreviation used to uniquely identify publicly traded shares in Australian Stock Exchange of a particular company</Toolitip>
-          //<font size="2"><OverlayTrigger placement="top" overlay={tooltip_ticker}><Glyphicon glyph="info-sign" /></OverlayTrigger></font>
-      );
 
       var companySector = data.sector;
 
       if (stockData.length === 3) {
         if (i === 0) {
-          return (<td className="equal-col align-right"><h1>{data.name} <span className="stock-code">({data.code}<font size="2"><OverlayTrigger placement="top" overlay={tooltip_ticker}><Glyphicon glyph="info-sign" /></OverlayTrigger></font>)</span></h1></td>);
+          return (<td className="equal-col align-right"><h1>{data.name} <span className="stock-code">({data.code})</span></h1></td>);
         } else {
-          return (<td className="equal-col"><h1>{data.name} <span className="stock-code">({data.code}<font size="2"><OverlayTrigger placement="top" overlay={tooltip_ticker}><Glyphicon glyph="info-sign" /></OverlayTrigger></font>)</span></h1></td>);
+          return (<td className="equal-col"><h1>{data.name} <span className="stock-code">({data.code})</span></h1></td>);
         }
       } else {
-        return (<td><h1>{data.name} <span className="stock-code">({data.code}<font size="2"><OverlayTrigger placement="top" overlay={tooltip_ticker}><Glyphicon glyph="info-sign" /></OverlayTrigger></font>)</span></h1></td>);
+        return (<td><h1>{data.name} <span className="stock-code">({data.code})</span></h1></td>);
       }
 
     })
@@ -696,25 +647,16 @@ export default class Tile extends Component {
 		if(data[0].code === "Home") {
   		return (
   			<div className="tile">
-              <Item optionChange={this.props.onChange} news={"Tutorial"} imagef={"http://keravnoslaw.com/images/banking.jpg"} value={"tutorial"}/>
-
-              <Item optionChange={this.props.onChange} news={"Hot Stocks"} imagef={"http://www.sharesinv.com/wp-content/uploads/articles/consumer-ETFs.jpg"} value={"hot"}/>
-  				<Item optionChange={this.props.onChange} news={"Consumer Discretionary"} imagef={"http://www.sharesinv.com/wp-content/uploads/articles/consumer-ETFs.jpg"} value={"consumer1"}/>
+          <Item optionChange={this.props.onChange} news={"Tutorial"} imagef={"http://keravnoslaw.com/images/banking.jpg"} value={"tutorial"}/>
   				<Item optionChange={this.props.onChange} news={"Consumer Staples"} imagef={"http://www.etftrends.com/wp-content/uploads/2012/10/consumer-staples-etfs.png"} value={"consumer2"}/>
   				<Item optionChange={this.props.onChange} news={"Energy"} imagef={"https://www.dentons.com/-/media/images/website/background-images/industry-sectors/energy/energy-2.jpg  "} value={"energy"}/>
-  				<Item optionChange={this.props.onChange} news={"Financial"} imagef={"http://static.memrise.com/uploads/course_photos/3146044000150629230223.jpg"} value={"financial"}/>
-          <Item optionChange={this.props.onChange} news={"Health Care"} imagef={"http://www.philips.com.au/c-dam/b2bhc/us/homepage-rebranded/specialties_heartmonitor.png"} value={"health"}/>
+  				<Item optionChange={this.props.onChange} news={"Financials"} imagef={"http://static.memrise.com/uploads/course_photos/3146044000150629230223.jpg"} value={"financial"}/>
           <Item optionChange={this.props.onChange} news={"Industrials"} imagef={"http://relaypowersystems.com/wp-content/uploads/2011/10/refinery.jpg"} value={"industrials"}/>
-          <Item optionChange={this.props.onChange} news={"IT- Information Technology"} imagef={"https://i.ytimg.com/vi/GyfPJ1i1Y5Y/maxresdefault.jpg "} value={"it"}/>
+          <Item optionChange={this.props.onChange} news={"Information Technology"} imagef={"https://i.ytimg.com/vi/GyfPJ1i1Y5Y/maxresdefault.jpg "} value={"it"}/>
           <Item optionChange={this.props.onChange} news={"Materials"} imagef={"http://cambabest.co.uk/wp-content/uploads/2015/02/Building-banner1.jpg"} value={"materials"}/>
-          <Item optionChange={this.props.onChange} news={"Metals and Minning"} imagef={"http://rsb-industries.com/images/Metal_Mining.jpg"} value={"metalmine"}/>
-          <Item optionChange={this.props.onChange} news={"Resources"} imagef={"http://psychology.berkeley.edu/sites/default/files/styles/1000x400sc/public/Resources%20page%20photo_0.jpg?itok=dLdmH90P"} value={"resource"}/>
-          <Item optionChange={this.props.onChange} news={"Telecommunications Services"} imagef={"https://www.sevone.com/sites/default/files/images/telecommunications-map.jpg"} value={"telecom"}/>
           <Item optionChange={this.props.onChange} news={"Utilities"} imagef={"http://allentownboronj.com/vertical/Sites/%7B7748EEEB-2391-4653-8B6A-4A64C85A6D79%7D/uploads/8329283_orig.jpg"} value={"util"}/>
-          <Item optionChange={this.props.onChange} news={"Banking"} imagef={"http://keravnoslaw.com/images/banking.jpg"} value={"bank"}/>
-              <Item optionChange={this.props.onChange} news={"Tutorial"} imagef={"http://keravnoslaw.com/images/banking.jpg"} value={"tute"}/>
 
-          </div>
+        </div>
   			);
 		}else if (data[0].code === "hot"){
       return(this.renderCat(data[0].code));

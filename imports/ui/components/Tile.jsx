@@ -107,10 +107,16 @@ export default class Tile extends Component {
     }
   }
 
+
+
+  /**** AAAAAAAAAAAAAAAAAAAAAA PARSE GRAPH IS HERE *******/
+
+
   //converts raw api data into structure the graph component uses
   parseDataIntoGraph(result, news, announcements) {
     if(result != null) {
-      // console.log(announcements);
+      console.log("ANNOUNCEMENTS");
+      console.log(announcements);
 
 
         // console.log(result);
@@ -301,6 +307,8 @@ export default class Tile extends Component {
 
   renderStocksName() {
     return this.props.stockData.map((data, i, stockData) => {
+      console.log("Data name is:" + data.name + "endname");
+      console.log(data);
       if (data.name === "Company") {
         const tooltip_ticker = (
             <Toolitip id="tooltip"><strong>ASX Code</strong><br />An abbreviation used to uniquely identify publicly traded shares in Australian Stock Exchange of a particular company</Toolitip>
@@ -308,8 +316,6 @@ export default class Tile extends Component {
         );
         return (<td className="small-col add-borders align-center"><h1>{ data.name }<font size="2"><OverlayTrigger placement="top" overlay={tooltip_ticker}><Glyphicon glyph="info-sign" /></OverlayTrigger></font></h1></td>);
       }
-
-      var companySector = data.sector;
 
       if (stockData.length === 3) {
         if (i === 0) {
@@ -618,35 +624,26 @@ export default class Tile extends Component {
   }
 
 
-  //get some info about the company
-  getCompanySummary(Name){
-  	console.log("the stock name to get summary from is"+ " "+Name);
-  	var resultString;
-  		//invoke the server method
-  	if (Meteor.isClient && Name){
-  	    Meteor.call("getSummary", Name, function(error, results) {
-  	    	resultString = results.content.toString();
-  	    	resultString = /\"extract\"\:\"(.*)\"\}{4}/.exec(resultString);
-  	    	console.log(resultString[1]);
-  	    	return resultString[1];
-  	    });
-
-  	}
-  }
-
-	//renders a whole bunch of stats for the user
 	render() {
 
-    // While we only have functionality for 1 stock
+    // Destroy any old charts
+    // console.log("CHARTS:");
+    // console.log(Highcharts.charts);
+    for (var i = 0; i < Highcharts.charts.length; i++) {
+      if (Highcharts.charts[i]) {
+        console.log("Destroying chart");
+        var chart = Highcharts.charts[i];
+        chart.destroy();
+      }
+    }
 
     var data = this.props.stockData;
-    console.log("PROS.STOCKDATA: ");
-    console.log(data);
-    //rendering news page here
+    // console.log("PROS.STOCKDATA: ");
+    // console.log(data);
     //value consponds to data code which will be used as a switch function
 		if(data[0].code === "Home") {
   		return (
-  			<div className="tile">
+  			<div className="invis-tile">
           <Item optionChange={this.props.onChange} news={"Tutorial"} imagef={"http://keravnoslaw.com/images/banking.jpg"} value={"tutorial"}/>
   				<Item optionChange={this.props.onChange} news={"Consumer Staples"} imagef={"http://www.etftrends.com/wp-content/uploads/2012/10/consumer-staples-etfs.png"} value={"consumer2"}/>
   				<Item optionChange={this.props.onChange} news={"Energy"} imagef={"https://www.dentons.com/-/media/images/website/background-images/industry-sectors/energy/energy-2.jpg  "} value={"energy"}/>

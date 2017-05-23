@@ -119,13 +119,16 @@ Meteor.startup(() => {
         companyData.dividends = dividends;
       }
     });
-        Meteor.call('getASXAnnouncements', "CBA", function(error, result) {
+
+    Meteor.call('getASXAnnouncements', "CBA", function(error, result) {
       if (result) {
         var raw = JSON.parse(result.content);
+        // console.log(raw);
+        raw = raw.data;
         var announcements = [];
 
         for (var i = 0; i < raw.length; i++) {
-            var date = Date(raw[i].document_date.substring(0, 4), raw[i].document_date.substring(5,7), raw[i].document_date.substring(8, 10));
+            var date = moment(raw[i].document_date).format('DD/MM/YYYY');
             announcements.push({
                 date: date,
                 url: raw[i].url,
@@ -174,7 +177,6 @@ Meteor.startup(() => {
 
     console.log("Updating");
     var stockToUpdate = Stocks.findOne({name: "Commonwealth Bank of Australia"});
-    console.log("Logo: " + companyData.logo_img_url);
     Stocks.update(stockToUpdate, {
       name: stockToUpdate.name,
       code: stockToUpdate.code,

@@ -301,7 +301,7 @@ addStock() {
           <Navbar fixedTop className="navbar-custom">
             <Navbar.Header>
               <Navbar.Brand>
-                <span id="title">COWS</span>
+                <span id="title"><a href="../" style={{'text-decoration':'none'}}>COWS</a></span>
               </Navbar.Brand>
             </Navbar.Header>
             <Navbar.Form inline id="stockInputForm">

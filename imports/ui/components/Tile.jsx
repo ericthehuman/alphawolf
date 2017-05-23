@@ -455,7 +455,7 @@ export default class Tile extends Component {
       var tooltip = (
         <Toolitip id="tooltip"><strong>Previous close</strong><br /><div align="left">A security's closing price on the preceding day of trading</div></Toolitip>);
       if (data.prevClose) {
-        return (<td className="small-col align-center">{data.prevClose + " "} <OverlayTrigger placement="top" overlay={tooltip}><Glyphicon glyph="info-sign" /></OverlayTrigger></td>);
+        return (<td className="small-col align-center">{data.prevClose + " "} <br /> <OverlayTrigger placement="top" overlay={tooltip}><Glyphicon glyph="info-sign" /></OverlayTrigger></td>);
       }
 
       var companyReturns = data.stock_data;
@@ -463,10 +463,10 @@ export default class Tile extends Component {
       var prevClose = companyReturns[NUMDAYS-1].Close;
       if (stockData.length === 3) {
         if (i === 0) {
-          return (<td className="equal-col align-right"><b>{parseFloat(prevClose).toFixed(2)}</b></td>);
+          return (<td className="equal-col align-right"><b>${parseFloat(prevClose).toFixed(2)}</b></td>);
         }
       }
-      return (<td><b>{parseFloat(prevClose).toFixed(2)}</b></td>)
+      return (<td><b>${parseFloat(prevClose).toFixed(2)}</b></td>)
     })
   }
 
@@ -475,7 +475,7 @@ export default class Tile extends Component {
       var tooltip = (
         <Toolitip id="tooltip"><strong>Monthly change</strong><br /><div align="left">Difference in price between the last closing price and the closing price a month ago</div></Toolitip>);
       if (data.monthlyChange) {
-        return (<td className="align-center">{ data.monthlyChange + " " } <OverlayTrigger placement="top" overlay={tooltip}><Glyphicon glyph="info-sign" /></OverlayTrigger></td>);
+        return (<td className="align-center">{ data.monthlyChange + " " }<br />  <OverlayTrigger placement="top" overlay={tooltip}><Glyphicon glyph="info-sign" /></OverlayTrigger></td>);
       }
       var companyReturns = data.stock_data;
       var NUMDAYS = companyReturns.length-1;
@@ -485,7 +485,7 @@ export default class Tile extends Component {
       var positiveSignMonth = (companyReturns[NUMDAYS].Close-companyReturns[monthBefore].Close) >= 0 ? "+" : "";
       if (stockData.length === 3) {
         if (i === 0) {
-          return (<td className={positiveSignMonth === "+" ? "stock-positive align-right" : "stock-negative align-right"}><b>{parseFloat(currClose-companyReturns[monthBefore].Close).toFixed(2)}{' '}
+          return (<td className={positiveSignMonth === "+" ? "stock-positive align-right" : "stock-negative align-right"}><b>${parseFloat(currClose-companyReturns[monthBefore].Close).toFixed(2)}{' '}
           ({positiveSignMonth}{parseFloat((currClose-companyReturns[monthBefore].Close)/companyReturns[monthBefore].Close*100).toFixed(2)}%)</b></td>);
         }
       }
@@ -499,7 +499,7 @@ export default class Tile extends Component {
         var tooltip = (
           <Toolitip id="tooltip"><strong>Monthly high</strong><br /><div align="left">The highest intra-day price during the preceding month</div></Toolitip>);
         if (data.monthlyHigh) {
-        return (<td className="align-center">{ data.monthlyHigh + " " }  <OverlayTrigger placement="top" overlay={tooltip}><Glyphicon glyph="info-sign" /></OverlayTrigger></td>);
+        return (<td className="align-center">{ data.monthlyHigh + " " } <br />  <OverlayTrigger placement="top" overlay={tooltip}><Glyphicon glyph="info-sign" /></OverlayTrigger></td>);
       }
       var companyReturns = data.stock_data;
       var NUMDAYS = companyReturns.length-1;
@@ -514,10 +514,10 @@ export default class Tile extends Component {
 
       if (stockData.length === 3) {
         if (i === 0) {
-          return (<td className="align-right"><b>{parseFloat(highestCloseMonth).toFixed(2)}</b></td>);
+          return (<td className="align-right"><b>${parseFloat(highestCloseMonth).toFixed(2)}</b></td>);
         }
       }
-      return (<td><b>{parseFloat(highestCloseMonth).toFixed(2)}</b></td>)
+      return (<td><b>${parseFloat(highestCloseMonth).toFixed(2)}</b></td>)
     })
   }
 
@@ -526,7 +526,7 @@ export default class Tile extends Component {
       var tooltip = (
         <Toolitip id="tooltip"><strong>Monthly low</strong><br /><div align="left">The lowest intra-day price during the preceding month</div></Toolitip>);
       if (data.monthlyLow) {
-        return (<td className="align-center">{ data.monthlyLow + " " } <OverlayTrigger placement="top" overlay={tooltip}><Glyphicon glyph="info-sign" /></OverlayTrigger></td>);
+        return (<td className="align-center">{ data.monthlyLow + " " }<br /> <OverlayTrigger placement="top" overlay={tooltip}><Glyphicon glyph="info-sign" /></OverlayTrigger></td>);
       }
       var companyReturns = data.stock_data;
       var NUMDAYS = companyReturns.length-1;
@@ -540,10 +540,10 @@ export default class Tile extends Component {
       }
       if (stockData.length === 3) {
         if (i === 0) {
-          return (<td className="align-right"><b>{parseFloat(lowestCloseMonth).toFixed(2)}</b></td>);
+          return (<td className="align-right"><b>${parseFloat(lowestCloseMonth).toFixed(2)}</b></td>);
         }
       }
-      return (<td><b>{parseFloat(lowestCloseMonth).toFixed(2)}</b></td>)
+      return (<td><b>${parseFloat(lowestCloseMonth).toFixed(2)}</b></td>)
     })
   }
 
@@ -552,7 +552,7 @@ export default class Tile extends Component {
       var tooltip = (
         <Toolitip id="tooltip"><strong>Annual change</strong><br /><div align="left">Difference in price between the last closing price and the closing price a year ago</div></Toolitip>);
       if (data.annualChange) {
-        return (<td className="align-center">{ data.annualChange + " " } <OverlayTrigger placement="top" overlay={tooltip}><Glyphicon glyph="info-sign" /></OverlayTrigger> </td>);
+        return (<td className="align-center">{ data.annualChange + " " } <br /> <OverlayTrigger placement="top" overlay={tooltip}><Glyphicon glyph="info-sign" /></OverlayTrigger> </td>);
       }
       var companyReturns = data.stock_data;
       var NUMDAYS = companyReturns.length-1;
@@ -577,7 +577,7 @@ export default class Tile extends Component {
       var tooltip = (
         <Toolitip id="tooltip"><strong>Yearly high</strong><br /><div align="left">The highest intra-day price during the preceding 52 weeks</div></Toolitip>);
       if (data.annualHigh) {
-        return (<td className="align-center">{ data.annualHigh + " " } <OverlayTrigger placement="top" overlay={tooltip}><Glyphicon glyph="info-sign" /></OverlayTrigger> </td>);
+        return (<td className="align-center">{ data.annualHigh + " " } <br /> <OverlayTrigger placement="top" overlay={tooltip}><Glyphicon glyph="info-sign" /></OverlayTrigger> </td>);
       }
       var companyReturns = data.stock_data;
       var NUMDAYS = companyReturns.length-1;
@@ -592,10 +592,10 @@ export default class Tile extends Component {
 
       if (stockData.length === 3) {
         if (i === 0) {
-          return (<td className="align-right"><b>{parseFloat(highestCloseYear).toFixed(2)}</b></td>);
+          return (<td className="align-right"><b>${parseFloat(highestCloseYear).toFixed(2)}</b></td>);
         }
       }
-      return (<td><b>{parseFloat(highestCloseYear).toFixed(2)}</b></td>);
+      return (<td><b>${parseFloat(highestCloseYear).toFixed(2)}</b></td>);
     })
   }
 
@@ -604,7 +604,7 @@ export default class Tile extends Component {
       var tooltip = (
         <Toolitip id="tooltip"><strong>Yearly low</strong><br /><div align="left">The lowest intra-day price during the preceding 52 weeks</div></Toolitip>);
       if (data.annualLow) {
-        return (<td className="align-center">{ data.annualLow + " " } <OverlayTrigger placement="top" overlay={tooltip}><Glyphicon glyph="info-sign" /></OverlayTrigger> </td>);
+        return (<td className="align-center">{ data.annualLow + " " } <br /> <OverlayTrigger placement="top" overlay={tooltip}><Glyphicon glyph="info-sign" /></OverlayTrigger> </td>);
       }
       var companyReturns = data.stock_data;
       var NUMDAYS = companyReturns.length-1;
@@ -619,10 +619,10 @@ export default class Tile extends Component {
       if (stockData.length === 3) {
         if (i === 0) {
           console.log("This should work");
-          return (<td className="align-right"><b>{parseFloat(lowestCloseYear).toFixed(2)}</b></td>);
+          return (<td className="align-right"><b>${parseFloat(lowestCloseYear).toFixed(2)}</b></td>);
         }
       }
-      return (<td><b>{parseFloat(lowestCloseYear).toFixed(2)}</b></td>);
+      return (<td><b>${parseFloat(lowestCloseYear).toFixed(2)}</b></td>);
     })
   }
 

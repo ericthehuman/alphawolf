@@ -20,19 +20,12 @@ import {
     ModalFooter
 } from 'react-modal-bootstrap';
 
-//import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend} from 'recharts';
 var Highcharts = require('highcharts/highstock');
 
 
 export default class Tile extends Component {
 
-    //return a render page based on the catergory selected
-    renderCat(category){
-        console.log("the category trying to be render is: "+ category);
-        var returnHtml;
-
-        //arr of results
-        var hotStocks;
+    renderCat(category) {
 
         if (category === "financial") {
             return(<h2>Financials</h2>);
@@ -98,8 +91,289 @@ export default class Tile extends Component {
     }
 
 
+/** PARSE DATA STUFF **/
 
-    //converts raw api data into structure the graph component uses
+
+  parseDataIntoPercentGraphTwo(company1,company2) {
+    //console.log("herere");
+    if ((company1 != null) && (company2 != null)) {
+      // console.log(result);
+      // console.log("NEWS: " + JSON.stringify(news));
+      // console.log(section);
+
+      var array1 = company1.stock_data;
+      var array2 = company2.stock_data;
+
+      var stockData1 = [];
+      var stockData2 = [];
+
+      var newsData = [];
+      var announcementData = [];
+      var returns = []
+      // convert data for graphing on high stocks
+      // format:
+      // [[timestamp, stockValue], [timestamp, stockValue] ....]
+
+
+      for (i = 0; i < array1.length; i ++) {
+        var datestr = array1[i].Date;
+        // console.log("DATESTR:" + datestr);
+        datestr = datestr.split("/");
+        var dd = parseInt(datestr[0]);
+        var mm = parseInt(datestr[1])-1;
+        var yyyy = parseInt(datestr[2]);
+        var timestamp = Date.UTC(yyyy,mm,dd);
+        // console.log("SPLIT:" + dd + "/" + mm + "/" + yyyy);
+        if (i == 0) {
+          returns[i] = 0;
+
+        } else {
+
+          returns[i] = Math.round((100 * (array1[i].Close - array1[i-1].Close)/array1[i-1].Close)*100)/100;
+
+        }
+
+        stockData1.push({ x: timestamp, y: returns[i] });
+      }
+
+
+
+
+
+      for (i = 0; i < array2.length; i ++) {
+        var datestr = array2[i].Date;
+        // console.log("DATESTR:" + datestr);
+        datestr = datestr.split("/");
+        var dd = parseInt(datestr[0]);
+        var mm = parseInt(datestr[1])-1;
+        var yyyy = parseInt(datestr[2]);
+        var timestamp = Date.UTC(yyyy,mm,dd);
+        // console.log("SPLIT:" + dd + "/" + mm + "/" + yyyy);
+        if (i == 0) {
+          returns[i] = 0;
+
+        } else {
+
+          returns[i] = Math.round((100 * (array2[i].Close - array2[i-1].Close)/array2[i-1].Close)*100)/100;
+
+        }
+
+        stockData2.push({ x: timestamp, y: returns[i] });
+      }
+
+
+
+
+      console.log("here");
+
+      var chart = Highcharts.stockChart('container2', {
+        series: [
+          // stock data graph
+          {
+            data: stockData1,
+            name: "Percentage Returns: " + company1.code,
+            id: "stockData1"
+          },
+          {
+            data: stockData2,
+            name: "Percentage Returns: " + company2.code,
+            id: "stockData2"
+          },
+
+          // set more options here for graph or more graph data
+        ],
+        // set title of graph
+        title: {
+          text: "Daily Percentage Returns",
+          style: {
+            'font-weight': 'bold',
+            // 'color': "#7cb5ec"
+          }
+        },
+        // set tooltip format
+        tooltip: {
+          style: {
+            width: '250px',
+            backgroundColor: '#FCFFC5',
+            // borderColor: 'black',
+            borderRadius: 10,
+            borderWidth: 3
+          },
+        },
+        // initial range selected
+        rangeSelector: {
+          selected: 1
+        },
+        // scrollbar: {
+        //   enabled: false
+        // },
+        chart: {
+          backgroundColor: "#f5f5f5",
+          borderColor: "#c4c4c4",
+          borderWidth: 2,
+          borderRadius: 2,
+        },
+        yAxis: {
+          title: {
+            text: '%',
+            enabled: true,
+            style: {
+              'font-weight': 'bold',
+              'color': "#7cb5ec"
+            }
+          },
+        },
+        legend: {
+          layout: 'horizontal',
+          enabled: true,
+          // borderRadius: 5,
+          // borderWidth: 1,
+          // borderColor: 'darkgrey'
+        },
+        // ... more options - see http://api.highcharts.com/highcharts
+      });
+    }
+  }
+
+
+
+
+
+
+
+  parseDataIntoPercentGraph(result) {
+    //console.log("herere");
+    if(result != null) {
+      console.log("ANNOUNCEMENTS");
+      // console.log(result);
+      // console.log("NEWS: " + JSON.stringify(news));
+      // console.log(section);
+
+      var array = result;
+      var stockData = [];
+      var newsData = [];
+      var announcementData = [];
+      var returns = []
+      // convert data for graphing on high stocks
+      // format:
+      // [[timestamp, stockValue], [timestamp, stockValue] ....]
+
+      for (i = 0; i < array.length; i ++) {
+        var datestr = array[i].Date;
+        // console.log("DATESTR:" + datestr);
+        datestr = datestr.split("/");
+        var dd = parseInt(datestr[0]);
+        var mm = parseInt(datestr[1])-1;
+        var yyyy = parseInt(datestr[2]);
+        var timestamp = Date.UTC(yyyy,mm,dd);
+        // console.log("SPLIT:" + dd + "/" + mm + "/" + yyyy);
+        if (i == 0) {
+          returns[i] = 0;
+
+        } else {
+
+          returns[i] = Math.round((100 * (array[i].Close - array[i-1].Close)/array[i-1].Close)*100)/100;
+
+        }
+
+        stockData.push({ x: timestamp, y: returns[i] });
+      }
+
+
+
+      console.log("here");
+
+      var chart = Highcharts.stockChart('container2', {
+        series: [
+          // stock data graph
+          {
+            data: stockData,
+            name: "Percentage Returns",
+            id: "stockData"
+          },
+
+
+          // set more options here for graph or more graph data
+        ],
+        // set title of graph
+        title: {
+          text: "Daily Percentage Returns",
+          style: {
+            'font-weight': 'bold',
+            // 'color': "#7cb5ec"
+          }
+        },
+        // set tooltip format
+        tooltip: {
+          style: {
+            width: '250px',
+            backgroundColor: '#FCFFC5',
+            // borderColor: 'black',
+            borderRadius: 10,
+            borderWidth: 3
+          },
+        },
+        // initial range selected
+        rangeSelector: {
+          selected: 1
+        },
+        // scrollbar: {
+        //   enabled: false
+        // },
+        chart: {
+          backgroundColor: "#f5f5f5",
+          borderColor: "#c4c4c4",
+          borderWidth: 2,
+          borderRadius: 2,
+        },
+        yAxis: {
+          title: {
+            text: '%',
+            enabled: true,
+            style: {
+              'font-weight': 'bold',
+              'color': "#7cb5ec"
+            }
+          },
+        },
+        legend: {
+          layout: 'horizontal',
+          enabled: true,
+          // borderRadius: 5,
+          // borderWidth: 1,
+          // borderColor: 'darkgrey'
+        },
+        // ... more options - see http://api.highcharts.com/highcharts
+      });
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  //converts raw api data into structure the graph component uses
     parseDataIntoGraph(num, company1, company2) {
         console.log("SHOWING DATA FOR RESULT FOR " + num);
         // console.log(company1);
@@ -662,30 +936,22 @@ export default class Tile extends Component {
             );
         }else if (data[0].code === "tutorial" || data[0].code === "energy" || data[0].code === "consumer2" ||
                   data[0].code === "util" || data[0].code === "financial" || data[0].code === "industrials" ||
-                  data[0].code === "it" || data[0].code === "materials"){
-            //render consumer2 tiles
+                  data[0].code === "it" || data[0].code === "materials") {
             return(this.renderCat(data[0].code));
         } else {
             // While graph only works with one company
             console.log("WHAT IS THIS DATA");
             console.log(data);
             if (data[0].code === "dontshowthisever") {
-                // var news = data[1].companyNews;
-                // var companySum = this.getCompanySummary(data.name);
                 this.parseDataIntoGraph(1, data[1], null);
+                this.parseDataIntoPercentGraph(data[1].stock_data);
+
             } else {
-                // var news = data[0].companyNews;
-                // var companySum = this.getCompanySummary(data.name);
                 this.parseDataIntoGraph(2, data[0], data[2]);
+                this.parseDataIntoPercentGraphTwo(data[0],data[2]);
+
             }
-            // const tooltip_statistics = (
-            //     <Toolitip id="tooltip"><strong>Statistics</strong><br /><strong>Previous close: </strong>A security's closing price on the preceding day of trading<br /><br />
-            //       <strong>Monthly/Annual Change: </strong> Difference in price between the last closing price and the closing price a month/year ago.<br /><br />
-            //       <strong>Monthly/Annual High/Low: </strong> A 1-month/52-week high/low is the highest and lowest price that a stock has traded at during the previous year.<br /><br />
-            //
-            //     </Toolitip>
-            //     //<font size="2"><OverlayTrigger placement="top" overlay={tooltip_ticker}><Glyphicon glyph="info-sign" /></OverlayTrigger></font>
-            // );
+
             var columnSpan = data.length+1;
             if (data.length === 3) {
                 console.log("Got 2 stocks");
@@ -720,7 +986,6 @@ export default class Tile extends Component {
                     <thead>
                     <tr>
                       <th colSpan={columnSpan}>Statistics</th>
-                        {/*<th colSpan={columnSpan}>Statistics<font size="2"><OverlayTrigger placement="top" overlay={tooltip_statistics}><Glyphicon glyph="info-sign" /></OverlayTrigger></font></th>*/}
                     </tr>
                     </thead>
                     <tbody>

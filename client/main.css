@@ -294,3 +294,15 @@ input:checked + label {
 	/* If max-width does not work, try using width instead */
 	width: 1000px;
 }
+
+
+/* graph tooltip css */
+.tooltip-link {
+	font-size: small;
+	color: #66afe9;
+}
+
+.glyphicon-info-sign {
+	color: darkgrey;
+	font-size: small;
+}

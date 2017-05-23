@@ -6,7 +6,7 @@ import { ReactiveVar } from 'meteor/reactive-var';
 import Item from './Item.jsx';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend} from 'recharts';
 import ReactDOM from 'react-dom';
-import { Table, Form, Glyphicon, Tooltip as Toolitip,OverlayTrigger } from 'react-bootstrap';
+import { Table, Form, Glyphicon, Tooltip as Toolitip, OverlayTrigger } from 'react-bootstrap';
 
 import { Data, Companies, Stocks, SelectedStock, News } from '../../api/data.js';
 import Button from './Button.jsx';
@@ -183,13 +183,13 @@ export default class Tile extends Component {
                                 color: 'rgba(0,0,0,0)',
                                 borderColor: "#FA6C61",
                               },
-                              text: "<b>Related news</b><br>" + currNewsItem.headline,
+                              text: "<b>Related news</b><br>" + currNewsItem.headline + "<br>" +
+                                    "<span class='tooltip-link'><i>Click to read more!</i></span>",
                               url: currNewsItem.url
                            };
         // console.log(currNewsData);
         newsData.push(currNewsData);
       }
-
       newsData.sort(function(a, b) {
           return parseFloat(a.x) - parseFloat(b.x);
       });
@@ -208,8 +208,10 @@ export default class Tile extends Component {
                                  y: null,
                                  title: "",
                                  style: { color: 'rgba(0,0,0,0)' },
-                                 text: "<b>Company announcement</b><br>" + announcements[j].title,
-                                 url: announcements[j].url });
+                                 text: "<b>Company announcement</b><br>" + announcements[j].title + "<br>" +
+                                       "<span class='tooltip-link'><i>Click to read more!</i></span>",
+                                 url: announcements[j].url
+                              });
       }
       announcementData.sort(function(a, b) {
         return parseFloat(a.x) - parseFloat(b.x);
@@ -227,7 +229,7 @@ export default class Tile extends Component {
           // news data graph
           {
             type: 'flags',
-            name: 'News',
+            name: 'Company News',
             data: newsData,
             useHTML: true,
             shape: 'url(assets/news-icon2.png)', //'circlepin',
@@ -277,15 +279,15 @@ export default class Tile extends Component {
             // borderColor: 'black',
             borderRadius: 10,
             borderWidth: 3
-          }
+          },
         },
         // initial range selected
         rangeSelector: {
           selected: 1
         },
-        scrollbar: {
-          enabled: false
-        },
+        // scrollbar: {
+        //   enabled: false
+        // },
         chart: {
           backgroundColor: "#f5f5f5",
           borderColor: "#c4c4c4",
@@ -301,7 +303,14 @@ export default class Tile extends Component {
               'color': "#7cb5ec"
             }
           },
-        }
+        },
+        legend: {
+          layout: 'horizontal',
+          enabled: true,
+          // borderRadius: 5,
+          // borderWidth: 1,
+          // borderColor: 'darkgrey'
+        },
         // ... more options - see http://api.highcharts.com/highcharts
       });
   	}
